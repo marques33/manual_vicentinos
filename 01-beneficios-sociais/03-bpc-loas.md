@@ -1,15 +1,15 @@
-# BPC/LOAS -- Beneficio de Prestacao Continuada
+# BPC/LOAS -- Benefício de Prestação Continuada
 
 ## O Que E o BPC?
 
-O Beneficio de Prestacao Continuada (BPC) e um pagamento mensal de **1 salario minimo (R$ 1.621,00 em 2026)** feito pelo governo federal a duas categorias de pessoas:
+O Benefício de Prestação Continuada (BPC) é um pagamento mensal de **1 salário mínimo (R$ 1.621,00 em 2026)** feito pelo governo federal a duas categorias de pessoas:
 
-- **Idosos com 65 anos ou mais** que nao tem como se manter
-- **Pessoas com deficiencia de qualquer idade** que nao tem como se manter
+- **Idosos com 65 anos ou mais** que não tem como se manter
+- **Pessoas com deficiência de qualquer idade** que não tem como se manter
 
-O BPC esta previsto na **Lei Organica da Assistencia Social (LOAS -- Lei 8.742/1993, artigo 20)** e na **Constituicao Federal (artigo 203, inciso V)**.
+O BPC está previsto na **Lei Organica da Assistência Social (LOAS -- Lei 8.742/1993, artigo 20)** e na **Constituição Federal (artigo 203, inciso V)**.
 
-> **Atencao:** O BPC **nao e aposentadoria**. Voce nao precisa ter contribuido para o INSS para receber. E um beneficio assistencial -- ou seja, e para quem realmente precisa, independentemente de ter trabalhado com carteira assinada.
+> **Atenção:** O BPC **não e aposentadoria**. Você não precisa ter contribuido para o INSS para receber. E um benefício assistencial -- ou seja, e para quem realmente precisa, independentemente de ter trabalhado com carteira assinada.
 
 ---
 
@@ -19,15 +19,15 @@ O BPC esta previsto na **Lei Organica da Assistencia Social (LOAS -- Lei 8.742/1
 
 - Ter **65 anos ou mais**
 - Ter renda familiar por pessoa dentro do criterio (veja abaixo)
-- Estar inscrita no **Cadastro Unico (CadUnico)**
+- Estar inscrita no **Cadastro Único (CadUnico)**
 
-### Pessoa com Deficiencia
+### Pessoa com Deficiência
 
-- Ter deficiencia de **qualquer tipo** -- fisica, mental, intelectual ou sensorial
-- A deficiencia deve ser de **longo prazo** (2 anos ou mais) e deve impedir a participacao plena na sociedade
+- Ter deficiência de **qualquer tipo** -- física, mental, intelectual ou sensorial
+- A deficiência deve ser de **longo prazo** (2 anos ou mais) e deve impedir a participação plena na sociedade
 - Ter renda familiar por pessoa dentro do criterio (veja abaixo)
 - Estar inscrita no **CadUnico**
-- A deficiencia sera avaliada por **pericia do INSS** (avaliacao medica e social)
+- A deficiência será avaliada por **pericia do INSS** (avaliação médica e social)
 
 ---
 
@@ -35,159 +35,159 @@ O BPC esta previsto na **Lei Organica da Assistencia Social (LOAS -- Lei 8.742/1
 
 ### Regra Oficial
 
-A renda familiar por pessoa (per capita) deve ser de **ate 1/4 do salario minimo**, ou seja, ate **R$ 405,25 por pessoa em 2026**.
+A renda familiar por pessoa (per capita) deve ser de **até 1/4 do salário mínimo**, ou seja, até **R$ 405,25 por pessoa em 2026**.
 
-**Como calcular:** Some toda a renda de todas as pessoas que moram na mesma casa e divida pelo numero de moradores.
+**Como calcular:** Some toda a renda de todas as pessoas que moram na mesma casa e divida pelo número de moradores.
 
-> **Exemplo:** Uma familia de 3 pessoas (a idosa de 67 anos, o filho e a nora) com renda total de R$ 1.200,00. A renda per capita e R$ 400,00 (1.200 dividido por 3). Como R$ 400,00 e menor que R$ 405,25, a idosa pode ter direito ao BPC.
+> **Exemplo:** Uma família de 3 pessoas (a idosa de 67 anos, o filho é a nora) com renda total de R$ 1.200,00. A renda per capita e R$ 400,00 (1.200 dividido por 3). Como R$ 400,00 e menor que R$ 405,25, a idosa pode ter direito ao BPC.
 
 ### O Que Entra no Calculo da Renda
 
 - Salarios e rendimentos de todos os moradores da casa
-- Aposentadorias e pensoes
+- Aposentadorias e pensões
 - Alugueis recebidos
 
 ### O Que NAO Entra no Calculo
 
-- Bolsa Familia e outros beneficios de transferencia de renda
-- BPC recebido por outro idoso da familia
-- Beneficio previdenciario de 1 salario minimo recebido por idoso da familia
+- Bolsa Família e outros benefícios de transferencia de renda
+- BPC recebido por outro idoso da família
+- Benefício previdenciário de 1 salário mínimo recebido por idoso da família
 - Rendimentos de estagio supervisionado e aprendizagem
 
-> **Regra de protecao:** O BPC continua garantido se a renda do ultimo mes analisado **ou** a media dos ultimos 12 meses ficar dentro do limite. Isso protege a familia em caso de variacao temporaria de renda (por exemplo, um filho que fez um bico em um mes).
+> **Regra de proteção:** O BPC contínua garantido se a renda do ultimo mês analisado **ou** a media dos ultimos 12 meses ficar dentro do limite. Isso protege a família em caso de variacao temporária de renda (por exemplo, um filho que fez um bico em um mês).
 
 ---
 
 ## E Se a Renda Ultrapassar o Limite? (Flexibilizacao pela Justica)
 
-Se o INSS negar o BPC porque a renda da familia ultrapassa um pouco o limite de 1/4 do salario minimo, **ainda ha esperanca**. A Justica brasileira tem uma posicao favoravel:
+Se o INSS negar o BPC porque a renda da família ultrapassa um pouco o limite de 1/4 do salário mínimo, **ainda ha esperanca**. A Justica brasileira tem uma posicao favoravel:
 
 ### O Que Decidiu o Supremo Tribunal Federal (STF)
 
-O STF decidiu (Tema 27 -- RE 567.985/MT, em 2013) que o criterio de 1/4 do salario minimo **nao pode ser um limite absoluto**. Isso quer dizer que mesmo quem tem renda um pouco acima pode conseguir o BPC, se provar que vive em condicao de necessidade.
+O STF decidiu (Tema 27 -- RE 567.985/MT, em 2013) que o criterio de 1/4 do salário mínimo **não pode ser um limite absoluto**. Isso quer dizer que mesmo quem tem renda um pouco acima pode conseguir o BPC, se provar que vive em condição de necessidade.
 
 ### O Que Decidiu o Superior Tribunal de Justica (STJ)
 
-O STJ (Tema 185) confirmou que o juiz pode analisar a situacao real da familia e conceder o BPC mesmo quando a renda ultrapassa o criterio legal, se ficar comprovada a vulnerabilidade.
+O STJ (Tema 185) confirmou que o juiz pode analisar a situação real da família e conceder o BPC mesmo quando a renda ultrapassa o criterio legal, se ficar comprovada a vulnerabilidade.
 
-### Na Pratica, O Que Isso Significa?
+### Na Prática, O Que Isso Significa?
 
-Se o INSS negou seu BPC por causa da renda, voce pode entrar na Justica e apresentar provas de que, mesmo com a renda acima do limite, a familia vive em situacao dificil. Exemplos de provas que ajudam:
+Se o INSS negou seu BPC por causa da renda, você pode entrar na Justica e apresentar provas de que, mesmo com a renda acima do limite, a família vive em situação difícil. Exemplos de provas que ajudam:
 
-- Gastos altos com medicamentos e tratamentos de saude
+- Gastos altos com medicamentos e tratamentos de saúde
 - Moradia precaria
 - Dividas essenciais
 - Outros fatores que mostrem vulnerabilidade
 
-> **Importante:** Para entrar na Justica, voce pode procurar a **Defensoria Publica do DF** -- telefone (61) 3105-9200. O servico e gratuito. Tambem e possivel procurar o **Juizado Especial Federal** sem advogado, para causas de ate 60 salarios minimos.
+> **Importante:** Para entrar na Justica, você pode procurar a **Defensoria Pública do DF** -- telefone (61) 3105-9200. O serviço é gratuito. Também é possível procurar o **Juizado Especial Federal** sem advogado, para causas de até 60 salários minimos.
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
 Reuna os seguintes documentos antes de solicitar o BPC:
 
-1. **Documento de identificacao com foto** (RG, CNH ou outro documento oficial) do requerente
-2. **CPF de todos os membros da familia** -- todos devem ter CPF regular
-3. **Comprovante de residencia** (conta de luz, agua ou correspondencia oficial)
-4. **Inscricao atualizada no CadUnico** -- e OBRIGATORIO fazer o CadUnico antes de pedir o BPC
-5. **Cadastro biometrico** -- preferencialmente pela Carteira de Identidade Nacional (CIN), ou titulo de eleitor, ou Policia Federal
-6. **Laudos e relatorios medicos** (para pessoa com deficiencia) -- leve todos os laudos, relatorios de tratamento, exames e documentos que comprovem a deficiencia e suas limitacoes
-7. **Comprovantes de renda de todos os moradores da casa** -- holerites, declaracao de imposto de renda, Carteira de Trabalho, etc.
+1. **Documento de identificação com foto** (RG, CNH ou outro documento oficial) do requerente
+2. **CPF de todos os membros da família** -- todos devem ter CPF regular
+3. **Comprovante de residência** (conta de luz, agua ou correspondencia oficial)
+4. **Inscrição atualizada no CadUnico** -- e OBRIGATORIO fazer o CadUnico antes de pedir o BPC
+5. **Cadastro biometrico** -- preferencialmente pela Carteira de Identidade Nacional (CIN), ou título de eleitor, ou Polícia Federal
+6. **Laudos e relatorios médicos** (para pessoa com deficiência) -- leve todos os laudos, relatorios de tratamento, exames e documentos que comprovem a deficiência e suas limitacoes
+7. **Comprovantes de renda de todos os moradores da casa** -- holerites, declaração de imposto de renda, Carteira de Trabalho, etc.
 
 ---
 
 ## Passo a Passo: Como Solicitar o BPC
 
-### PASSO 1 -- Faca o Cadastro Unico
+### PASSO 1 -- Faca o Cadastro Único
 
-- Va ao CRAS mais proximo da sua casa (veja a lista no capitulo [01 - Cadastro Unico](01-cadastro-unico.md))
-- Faca ou atualize o CadUnico com os documentos de **todos** os membros da familia
-- **Sem CadUnico, o INSS nao aceita o pedido de BPC**
+- Va ao CRAS mais proximo da sua casa (veja a lista no capítulo [01 - Cadastro Único](01-cadastro-único.md))
+- Faca ou atualize o CadUnico com os documentos de **todos** os membros da família
+- **Sem CadUnico, o INSS não aceita o pedido de BPC**
 
 ### PASSO 2 -- Providencie o Cadastro Biometrico
 
-- Faca a Carteira de Identidade Nacional (CIN) em um posto de identificacao
-- Ou certifique-se de ter biometria cadastrada no titulo de eleitor ou na Policia Federal
+- Faca a Carteira de Identidade Nacional (CIN) em um posto de identificação
+- Ou certifique-se de ter biometria cadastrada no título de eleitor ou na Polícia Federal
 
 ### PASSO 3 -- Faca o Pedido no INSS
 
-Voce pode pedir o BPC de tres formas:
+Você pode pedir o BPC de três formas:
 
 **a) Pela internet (Meu INSS):**
 - Acesse https://meu.inss.gov.br ou baixe o aplicativo "Meu INSS"
 - Faca login com sua conta gov.br
 - Clique em "Novo Pedido"
-- Escolha "Beneficio Assistencial a Pessoa com Deficiencia" ou "Beneficio Assistencial ao Idoso"
+- Escolha "Benefício Assistencial a Pessoa com Deficiência" ou "Benefício Assistencial ao Idoso"
 
 **b) Por telefone:**
 - Ligue para o **135** (ligacao gratuita de telefone fixo)
 - Funciona de segunda a sabado, das 7h as 22h
 
-**c) Presencialmente na agencia do INSS:**
+**c) Presencialmente na agência do INSS:**
 - Agende pelo 135 ou pelo Meu INSS
 - Compareca com todos os documentos na data agendada
 
-### PASSO 4 -- Pericia (somente para pessoa com deficiencia)
+### PASSO 4 -- Pericia (somente para pessoa com deficiência)
 
-- O INSS vai agendar uma avaliacao chamada **pericia biopsicossocial**
-- Essa avaliacao analisa tanto os aspectos medicos quanto os aspectos sociais da deficiencia
-- Leve todos os laudos, relatorios e exames medicos que tiver
+- O INSS vai agendar uma avaliação chamada **pericia biopsicossocial**
+- Essa avaliação analisa tanto os aspectos médicos quanto os aspectos sociais da deficiência
+- Leve todos os laudos, relatorios e exames médicos que tiver
 
 ---
 
-## Prazo de Analise e O Que Fazer Se For Negado
+## Prazo de Análise e O Que Fazer Se For Negado
 
 ### Prazo
 
-O INSS tem ate **90 dias** para analisar o pedido. Na pratica, pode demorar mais.
+O INSS tem até **90 dias** para analisar o pedido. Na prática, pode demorar mais.
 
-Se houver pendencias nos documentos, voce tera **30 dias** para resolver a partir do momento em que for notificado.
+Se houver pendencias nos documentos, você terá **30 dias** para resolver a partir do momento em que for notificado.
 
 ### Se o BPC For Negado
 
 **1. Recurso administrativo:**
-- Voce pode recorrer ao Conselho de Recursos do Seguro Social (CRSS)
-- O prazo para recorrer e de **30 dias** apos tomar conhecimento da decisao
-- O recurso e feito pelo Meu INSS ou pelo telefone 135
+- Você pode recorrer ao Conselho de Recursos do Seguro Social (CRSS)
+- O prazo para recorrer e de **30 dias** após tomar conhecimento da decisão
+- O recurso é feito pelo Meu INSS ou pelo telefone 135
 
-**2. Acao judicial:**
-- Se o recurso administrativo tambem for negado, voce pode entrar na Justica
-- Procure a **Defensoria Publica do DF** -- telefone (61) 3105-9200
-- Ou va diretamente ao **Juizado Especial Federal** -- nao precisa de advogado para causas de ate 60 salarios minimos
-
----
-
-## Informacoes Importantes
-
-- O BPC **nao pode ser acumulado** com aposentadoria, pensao por morte ou outros beneficios previdenciarios
-- Pessoa com deficiencia que recebe BPC **nao pode estar trabalhando** (exceto quem recebe o auxilio-inclusao, que permite atividade remunerada)
-- O BPC **nao paga 13o salario**
-- O BPC **nao gera pensao por morte** para os dependentes
-- O beneficio e **revisado a cada 2 anos** pelo INSS -- mantenha o CadUnico sempre atualizado para nao perder o beneficio
+**2. Ação judicial:**
+- Se o recurso administrativo também for negado, você pode entrar na Justica
+- Procure a **Defensoria Pública do DF** -- telefone (61) 3105-9200
+- Ou va diretamente ao **Juizado Especial Federal** -- não precisa de advogado para causas de até 60 salários minimos
 
 ---
 
-## Onde Ir e Telefones Uteis
+## Informações Importantes
 
-| Servico | Telefone / Canal |
+- O BPC **não pode ser acumulado** com aposentadoria, pensão por morte ou outros benefícios previdenciários
+- Pessoa com deficiência que recebe BPC **não pode estar trabalhando** (exceto quem recebe o auxílio-inclusao, que permite atividade remunerada)
+- O BPC **não paga 13o salário**
+- O BPC **não gera pensão por morte** para os dependentes
+- O benefício e **revisado a cada 2 anos** pelo INSS -- mantenha o CadUnico sempre atualizado para não perder o benefício
+
+---
+
+## Onde Ir e Telefones Úteis
+
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | INSS (agendar, tirar duvidas, fazer pedido) | 135 |
 | Meu INSS (internet) | https://meu.inss.gov.br |
-| CRAS (fazer CadUnico) | Veja lista em [01 - Cadastro Unico](01-cadastro-unico.md) |
-| Defensoria Publica do DF (ajuda juridica gratuita) | (61) 3105-9200 |
+| CRAS (fazer CadUnico) | Veja lista em [01 - Cadastro Único](01-cadastro-único.md) |
+| Defensoria Pública do DF (ajuda jurídica gratuita) | (61) 3105-9200 |
 | Disque Social | 121 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - Lei 8.742/1993 (LOAS), artigo 20: https://www.planalto.gov.br/ccivil_03/leis/l8742.htm
 - Decreto 12.064/2024 (regulamentacao do BPC): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12064.htm
-- Ministerio do Desenvolvimento e Assistencia Social -- BPC: https://www.gov.br/mds/pt-br/acoes-e-programas/suas/beneficios-assistenciais/beneficio-assistencial-ao-idoso-e-a-pessoa-com-deficiencia-bpc
+- Ministerio do Desenvolvimento e Assistência Social -- BPC: https://www.gov.br/mds/pt-br/ações-e-programas/suas/benefícios-assistenciais/benefício-assistencial-ao-idoso-e-a-pessoa-com-deficiência-bpc
 - STF -- Tema 27 (flexibilizacao do criterio de renda): https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=27
 - Perguntas frequentes sobre BPC/LOAS: https://www.jusbrasil.com.br/artigos/as-perguntas-mais-comuns-sobre-o-bpc-loas-respostas-atualizadas-para-2026/5370448380
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*

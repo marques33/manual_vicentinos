@@ -1,97 +1,97 @@
-# Bolsa Familia
+# Bolsa Família
 
-## O Que E o Bolsa Familia?
+## O Que E o Bolsa Família?
 
-O Bolsa Familia e um programa do governo federal que transfere dinheiro diretamente para familias em situacao de pobreza e extrema pobreza. O objetivo e garantir uma renda minima para que essas familias possam se alimentar e viver com mais dignidade.
+O Bolsa Família é um programa do governo federal que transfere dinheiro diretamente para famílias em situação de pobreza e extrema pobreza. O objetivo e garantir uma renda mínima para que essas famílias possam se alimentar e viver com mais dignidade.
 
-O programa esta previsto na **Lei 14.601/2023** e garante um valor minimo de **R$ 600,00 por familia por mes**.
+O programa está previsto na **Lei 14.601/2023** e garante um valor mínimo de **R$ 600,00 por família por mês**.
 
-> **Em resumo:** Se sua familia tem renda muito baixa, o governo deposita um valor todo mes na sua conta da Caixa Economica Federal. O valor pode ser maior que R$ 600,00, dependendo de quantas criancas e gestantes tem na familia.
+> **Em resumo:** Se sua família tem renda muito baixa, o governo deposita um valor todo mês na sua conta da Caixa Econômica Federal. O valor pode ser maior que R$ 600,00, dependendo de quantas crianças e gestantes tem na família.
 
 ---
 
 ## Quem Tem Direito?
 
-Para receber o Bolsa Familia, a familia precisa cumprir **dois requisitos:**
+Para receber o Bolsa Família, a família precisa cumprir **dois requisitos:**
 
-1. **Renda familiar por pessoa de ate R$ 218,00 por mes** -- para calcular, some toda a renda da familia e divida pelo numero de pessoas que moram na casa
-2. **Estar inscrita no Cadastro Unico (CadUnico)** -- veja como fazer no capitulo [01 - Cadastro Unico](01-cadastro-unico.md)
+1. **Renda familiar por pessoa de até R$ 218,00 por mês** -- para calcular, some toda a renda da família e divida pelo número de pessoas que moram na casa
+2. **Estar inscrita no Cadastro Único (CadUnico)** -- veja como fazer no capítulo [01 - Cadastro Único](01-cadastro-único.md)
 
-> **Exemplo:** Uma familia de 4 pessoas (mae, pai e dois filhos) com renda total de R$ 800,00 por mes tem renda per capita de R$ 200,00 (800 dividido por 4). Como R$ 200,00 e menor que R$ 218,00, essa familia pode receber o Bolsa Familia.
+> **Exemplo:** Uma família de 4 pessoas (mae, pai e dois filhos) com renda total de R$ 800,00 por mês tem renda per capita de R$ 200,00 (800 dividido por 4). Como R$ 200,00 e menor que R$ 218,00, essa família pode receber o Bolsa Família.
 
 ---
 
 ## Quanto Vou Receber?
 
-O valor do Bolsa Familia depende do tamanho e da composicao da familia. Veja como funciona:
+O valor do Bolsa Família depende do tamanho e da composicao da família. Veja como funciona:
 
-| Parcela do Beneficio | Valor | Quem Recebe |
+| Parcela do Benefício | Valor | Quem Recebe |
 |---------------------|-------|-------------|
-| **Renda de Cidadania** | R$ 142,00 | Cada pessoa da familia |
-| **Complementar** | Variavel | Completa o valor ate chegar ao minimo de R$ 600,00 |
-| **Primeira Infancia** | R$ 150,00 | Cada crianca de 0 a 6 anos |
-| **Variavel Familiar** | R$ 50,00 | Cada gestante, nutriz (mae que amamenta), crianca ou adolescente de 7 a 17 anos |
-| **Extraordinario de Transicao** | Variavel | Garante que ninguem receba menos do que recebia antes |
+| **Renda de Cidadania** | R$ 142,00 | Cada pessoa da família |
+| **Complementar** | Variavel | Completa o valor até chegar ao mínimo de R$ 600,00 |
+| **Primeira Infância** | R$ 150,00 | Cada criança de 0 a 6 anos |
+| **Variavel Familiar** | R$ 50,00 | Cada gestante, nutriz (mae que amamenta), criança ou adolescente de 7 a 17 anos |
+| **Extraordinario de Transicao** | Variavel | Garante que ninguém receba menos do que recebia antes |
 
-### Exemplo Pratico
+### Exemplo Prático
 
-Uma familia com mae, pai, um bebe de 2 anos e uma crianca de 8 anos:
+Uma família com mae, pai, um bebe de 2 anos é uma criança de 8 anos:
 
 - 4 pessoas x R$ 142,00 (Renda de Cidadania) = **R$ 568,00**
-- 1 crianca de 0 a 6 anos x R$ 150,00 (Primeira Infancia) = **R$ 150,00**
-- 1 crianca de 7 a 17 anos x R$ 50,00 (Variavel Familiar) = **R$ 50,00**
-- **Total: R$ 768,00 por mes**
+- 1 criança de 0 a 6 anos x R$ 150,00 (Primeira Infância) = **R$ 150,00**
+- 1 criança de 7 a 17 anos x R$ 50,00 (Variavel Familiar) = **R$ 50,00**
+- **Total: R$ 768,00 por mês**
 
-> **Valor minimo garantido:** Nenhuma familia recebe menos de R$ 600,00 por mes. Se a soma das parcelas der menos que isso, o governo complementa ate chegar a R$ 600,00.
+> **Valor mínimo garantido:** Nenhuma família recebe menos de R$ 600,00 por mês. Se a soma das parcelas der menos que isso, o governo complementa até chegar a R$ 600,00.
 
 ---
 
-## O Que a Familia Precisa Cumprir (Condicionalidades)
+## O Que a Família Precisa Cumprir (Condicionalidades)
 
-Para continuar recebendo o Bolsa Familia, a familia precisa cumprir algumas obrigacoes. Isso nao e para punir -- e para garantir que criancas e gestantes tenham acesso a saude e educacao.
+Para continuar recebendo o Bolsa Família, a família precisa cumprir algumas obrigações. Isso não e para punir -- e para garantir que crianças e gestantes tenham acesso a saúde e educação.
 
-### Na Educacao
+### Na Educação
 
-- Criancas de **4 e 5 anos**: frequencia escolar minima de **60%**
-- Estudantes de **6 a 17 anos**: frequencia escolar minima de **75%**
+- Crianças de **4 e 5 anos**: frequência escolar mínima de **60%**
+- Estudantes de **6 a 17 anos**: frequência escolar mínima de **75%**
 
-### Na Saude
+### Na Saúde
 
 - **Gestantes** devem fazer o pre-natal
-- **Criancas** devem manter a vacinacao em dia
-- **Criancas ate 7 anos** devem fazer acompanhamento nutricional (peso e altura)
+- **Crianças** devem manter a vacinacao em dia
+- **Crianças até 7 anos** devem fazer acompanhamento nutricional (peso e altura)
 
-> **Atencao:** Se a familia nao cumprir essas obrigacoes, o beneficio pode ser bloqueado, suspenso ou ate cancelado. Mas isso acontece de forma gradual -- primeiro vem um aviso, depois o bloqueio temporario, e so depois a suspensao. Se voce esta com dificuldade para cumprir alguma condicionalidade, procure o CRAS para pedir orientacao.
+> **Atenção:** Se a família não cumprir essas obrigações, o benefício pode ser bloqueado, suspenso ou até cancelado. Mas isso acontece de forma gradual -- primeiro vem um aviso, depois o bloqueio temporário, e só depois a suspensão. Se você está com dificuldade para cumprir alguma condicionalidade, procure o CRAS para pedir orientação.
 
 ---
 
 ## Passo a Passo: Como Se Cadastrar
 
-**PASSO 1** -- Procure o **CRAS** (Centro de Referencia de Assistencia Social) mais proximo da sua casa. Veja a lista completa no capitulo [01 - Cadastro Unico](01-cadastro-unico.md)
+**PASSO 1** -- Procure o **CRAS** (Centro de Referência de Assistência Social) mais proximo da sua casa. Veja a lista completa no capítulo [01 - Cadastro Único](01-cadastro-único.md)
 
-**PASSO 2** -- O **Responsavel Familiar** (preferencialmente uma mulher, maior de 16 anos) deve comparecer ao CRAS com os documentos de **toda** a familia
+**PASSO 2** -- O **Responsável Familiar** (preferencialmente uma mulher, maior de 16 anos) deve comparecer ao CRAS com os documentos de **toda** a família
 
-**PASSO 3** -- Faca a inscricao no **Cadastro Unico (CadUnico)**
+**PASSO 3** -- Faca a inscrição no **Cadastro Único (CadUnico)**
 
-**PASSO 4** -- Apos o cadastro, **nao e preciso pedir o Bolsa Familia separadamente**. O sistema do governo analisa automaticamente se a familia se enquadra nos criterios. Se tiver direito, a familia sera selecionada.
+**PASSO 4** -- Após o cadastro, **não é preciso pedir o Bolsa Família separadamente**. O sistema do governo analisa automaticamente se a família se enquadra nos criterios. Se tiver direito, a família será selecionada.
 
-**PASSO 5** -- Se aprovada, a familia recebe o beneficio pela **conta poupanca social digital da Caixa Economica Federal**, pelo aplicativo **Caixa Tem**
+**PASSO 5** -- Se aprovada, a família recebe o benefício pela **conta poupanca social digital da Caixa Econômica Federal**, pelo aplicativo **Caixa Tem**
 
-> **Importante:** O cadastro no CadUnico nao garante automaticamente o recebimento do Bolsa Familia. O sistema do Ministerio do Desenvolvimento Social (MDS) e que faz a selecao com base na renda e na situacao da familia.
+> **Importante:** O cadastro no CadUnico não garante automaticamente o recebimento do Bolsa Família. O sistema do Ministerio do Desenvolvimento Social (MDS) é que faz a selecao com base na renda e na situação da família.
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
-O Responsavel Familiar deve levar ao CRAS:
+O Responsável Familiar deve levar ao CRAS:
 
 **Documentos obrigatorios:**
-- CPF de **todos** os membros da familia
-- Documento de identificacao com foto do responsavel (RG, CNH ou Carteira de Trabalho)
+- CPF de **todos** os membros da família
+- Documento de identificação com foto do responsável (RG, CNH ou Carteira de Trabalho)
 
 **Documentos importantes:**
-- Certidao de nascimento das criancas
-- Comprovante de residencia (conta de luz, agua ou correspondencia oficial)
+- Certidao de nascimento das crianças
+- Comprovante de residência (conta de luz, agua ou correspondencia oficial)
 - Carteira de Trabalho
 - Comprovantes de renda (se houver)
 
@@ -99,46 +99,46 @@ O Responsavel Familiar deve levar ao CRAS:
 
 ## Onde e Como Receber o Dinheiro
 
-O pagamento do Bolsa Familia e feito pela **Caixa Economica Federal**, por meio da **conta poupanca social digital**. Voce pode movimentar o dinheiro pelo aplicativo **Caixa Tem**.
+O pagamento do Bolsa Família é feito pela **Caixa Econômica Federal**, por meio da **conta poupanca social digital**. Você pode movimentar o dinheiro pelo aplicativo **Caixa Tem**.
 
-### Calendario de Pagamento
+### Calendário de Pagamento
 
-Os pagamentos seguem um calendario mensal, com base no **ultimo digito do NIS** (Numero de Identificacao Social). O calendario de cada ano e divulgado pelo MDS no site https://www.gov.br/mds.
+Os pagamentos seguem um calendário mensal, com base no **ultimo digito do NIS** (Número de Identificação Social). O calendário de cada ano e divulgado pelo MDS no site https://www.gov.br/mds.
 
-> **Dica:** Voce pode consultar seu NIS no cartao do Bolsa Familia, no aplicativo CadUnico ou ligando para o Disque Social (121).
+> **Dica:** Você pode consultar seu NIS no cartao do Bolsa Família, no aplicativo CadUnico ou ligando para o Disque Social (121).
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| Disque Social (duvidas sobre Bolsa Familia e CadUnico) | 121 |
+| Disque Social (duvidas sobre Bolsa Família e CadUnico) | 121 |
 | Central do GDF | 156 |
-| Caixa Economica Federal | 111 |
-| Aplicativo Caixa Tem | Disponivel para Android e iPhone |
+| Caixa Econômica Federal | 111 |
+| Aplicativo Caixa Tem | Disponível para Android e iPhone |
 
 ---
 
 ## Perguntas Frequentes
 
-**Quem decide se minha familia vai receber o Bolsa Familia?**
-O sistema do Ministerio do Desenvolvimento Social (MDS) faz a selecao automaticamente, com base nas informacoes do CadUnico. Nao e o CRAS que decide.
+**Quem decide se minha família vai receber o Bolsa Família?**
+O sistema do Ministerio do Desenvolvimento Social (MDS) faz a selecao automaticamente, com base nas informações do CadUnico. Não é o CRAS que decide.
 
-**Se eu comecei a trabalhar, vou perder o beneficio?**
-Nao necessariamente. Se a renda per capita continuar dentro do limite de R$ 218,00, voce continua recebendo. E existe uma regra de protecao que permite manter o beneficio por um periodo mesmo que a renda aumente um pouco.
+**Se eu comecei a trabalhar, vou perder o benefício?**
+Não necessariamente. Se a renda per capita continuar dentro do limite de R$ 218,00, você contínua recebendo. E existe uma regra de proteção que permite manter o benefício por um período mesmo que a renda aumente um pouco.
 
-**Posso receber o Bolsa Familia e o BPC ao mesmo tempo?**
-O BPC recebido por um membro da familia nao entra no calculo da renda para o Bolsa Familia. Portanto, em muitos casos, e possivel sim receber os dois.
-
----
-
-## Fontes e Referencias
-
-- Lei 14.601/2023 (Lei do Bolsa Familia): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm
-- Ministerio do Desenvolvimento e Assistencia Social (MDS) -- Bolsa Familia: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/fala-mds-ministerio-esclarece-as-principais-duvidas-sobre-o-bolsa-familia
-- Calendario de pagamentos do Bolsa Familia 2026: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/confira-o-calendario-de-pagamentos-do-bolsa-familia-de-2026
+**Posso receber o Bolsa Família é o BPC ao mesmo tempo?**
+O BPC recebido por um membro da família não entra no calculo da renda para o Bolsa Família. Portanto, em muitos casos, é possível sim receber os dois.
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+## Fontes e Referências
+
+- Lei 14.601/2023 (Lei do Bolsa Família): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm
+- Ministerio do Desenvolvimento e Assistência Social (MDS) -- Bolsa Família: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/fala-mds-ministerio-esclarece-as-principais-duvidas-sobre-o-bolsa-família
+- Calendário de pagamentos do Bolsa Família 2026: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/confira-o-calendário-de-pagamentos-do-bolsa-família-de-2026
+
+---
+
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*

@@ -17,74 +17,74 @@ Este manual foi elaborado para orientar voluntários vicentinos e as pessoas ass
 
 ## Sumário
 
-### 1. [Benefícios Sociais](01-beneficios-sociais/README.md)
+### 1. [Benefícios Sociais](01-benefícios-sociais/README.md)
 Como se cadastrar e solicitar benefícios assistenciais federais e do DF.
-- [Cadastro Único (CadÚnico)](01-beneficios-sociais/01-cadastro-unico.md)
-- [Bolsa Família](01-beneficios-sociais/02-bolsa-familia.md)
-- [BPC/LOAS](01-beneficios-sociais/03-bpc-loas.md)
-- [Seguro-Desemprego](01-beneficios-sociais/04-seguro-desemprego.md)
-- [Auxílio-Reclusão](01-beneficios-sociais/05-auxilio-reclusao.md)
-- [Benefícios do Distrito Federal](01-beneficios-sociais/06-beneficios-df.md)
+- [Cadastro Único (CadÚnico)](01-benefícios-sociais/01-cadastro-único.md)
+- [Bolsa Família](01-benefícios-sociais/02-bolsa-família.md)
+- [BPC/LOAS](01-benefícios-sociais/03-bpc-loas.md)
+- [Seguro-Desemprego](01-benefícios-sociais/04-seguro-desemprego.md)
+- [Auxílio-Reclusão](01-benefícios-sociais/05-auxílio-reclusão.md)
+- [Benefícios do Distrito Federal](01-benefícios-sociais/06-benefícios-df.md)
 
-### 2. [Violência Doméstica](02-violencia-domestica/README.md)
+### 2. [Violência Doméstica](02-violência-doméstica/README.md)
 Como proceder, denunciar e buscar proteção em casos de violência.
-- [Lei Maria da Penha](02-violencia-domestica/01-lei-maria-da-penha.md)
-- [Como Denunciar](02-violencia-domestica/02-como-denunciar.md)
-- [Medidas Protetivas](02-violencia-domestica/03-medidas-protetivas.md)
-- [Rede de Proteção no DF](02-violencia-domestica/04-rede-protecao-df.md)
-- [Violência contra Idosos e Crianças](02-violencia-domestica/05-violencia-idosos-criancas.md)
-- [Feminicídio e Stalking](02-violencia-domestica/06-feminicidio-stalking.md)
+- [Lei Maria da Penha](02-violência-doméstica/01-lei-maria-da-penha.md)
+- [Como Denunciar](02-violência-doméstica/02-como-denunciar.md)
+- [Medidas Protetivas](02-violência-doméstica/03-medidas-protetivas.md)
+- [Rede de Proteção no DF](02-violência-doméstica/04-rede-proteção-df.md)
+- [Violência contra Idosos e Crianças](02-violência-doméstica/05-violência-idosos-crianças.md)
+- [Feminicídio e Stalking](02-violência-doméstica/06-feminicidio-stalking.md)
 
-### 3. [Crianças e Adolescentes](03-criancas-adolescentes/README.md)
+### 3. [Crianças e Adolescentes](03-crianças-adolescentes/README.md)
 Direitos, deveres, pensão alimentícia e proteção.
-- [Direitos no ECA](03-criancas-adolescentes/01-direitos-eca.md)
-- [Guarda e Adoção](03-criancas-adolescentes/02-guarda-adocao.md)
-- [Pensão Alimentícia](03-criancas-adolescentes/03-pensao-alimenticia.md)
-- [Alienação Parental](03-criancas-adolescentes/04-alienacao-parental.md)
-- [Bullying e Cyberbullying](03-criancas-adolescentes/05-bullying.md)
-- [Conselho Tutelar no DF](03-criancas-adolescentes/06-conselho-tutelar-df.md)
+- [Direitos no ECA](03-crianças-adolescentes/01-direitos-eca.md)
+- [Guarda e Adoção](03-crianças-adolescentes/02-guarda-adocao.md)
+- [Pensão Alimentícia](03-crianças-adolescentes/03-pensão-alimentícia.md)
+- [Alienação Parental](03-crianças-adolescentes/04-alienação-parental.md)
+- [Bullying e Cyberbullying](03-crianças-adolescentes/05-bullying.md)
+- [Conselho Tutelar no DF](03-crianças-adolescentes/06-conselho-tutelar-df.md)
 
-### 4. [Direito à Saúde](04-direito-saude/README.md)
+### 4. [Direito à Saúde](04-direito-saúde/README.md)
 SUS, cirurgias, emergência obrigatória e medicamentos.
-- [Direitos do Paciente no SUS](04-direito-saude/01-direitos-paciente-sus.md)
-- [Emergência Obrigatória](04-direito-saude/02-emergencia-obrigatoria.md)
-- [Vasectomia e Laqueadura pelo SUS](04-direito-saude/03-vasectomia-laqueadura.md)
-- [Cirurgia de Miomas](04-direito-saude/04-cirurgia-miomas.md)
-- [Medicamentos pelo SUS](04-direito-saude/05-medicamentos.md)
-- [Saúde Mental](04-direito-saude/06-saude-mental.md)
-- [Ouvidoria do SUS](04-direito-saude/07-ouvidoria-sus.md)
+- [Direitos do Paciente no SUS](04-direito-saúde/01-direitos-paciente-sus.md)
+- [Emergência Obrigatória](04-direito-saúde/02-emergência-obrigatória.md)
+- [Vasectomia e Laqueadura pelo SUS](04-direito-saúde/03-vasectomia-laqueadura.md)
+- [Cirurgia de Miomas](04-direito-saúde/04-cirurgia-miomas.md)
+- [Medicamentos pelo SUS](04-direito-saúde/05-medicamentos.md)
+- [Saúde Mental](04-direito-saúde/06-saúde-mental.md)
+- [Ouvidoria do SUS](04-direito-saúde/07-ouvidoria-sus.md)
 
-### 5. [Previdência Social](05-previdencia-social/README.md)
+### 5. [Previdência Social](05-previdência-social/README.md)
 Aposentadorias, auxílios e pensões do INSS.
-- [Aposentadorias](05-previdencia-social/01-aposentadorias.md)
-- [Auxílio por Incapacidade](05-previdencia-social/02-auxilio-incapacidade.md)
-- [Pensão por Morte](05-previdencia-social/03-pensao-por-morte.md)
-- [Salário-Maternidade](05-previdencia-social/04-salario-maternidade.md)
-- [Como Acessar o INSS](05-previdencia-social/05-acesso-inss.md)
+- [Aposentadorias](05-previdência-social/01-aposentadorias.md)
+- [Auxílio por Incapacidade](05-previdência-social/02-auxílio-incapacidade.md)
+- [Pensão por Morte](05-previdência-social/03-pensão-por-morte.md)
+- [Salário-Maternidade](05-previdência-social/04-salário-maternidade.md)
+- [Como Acessar o INSS](05-previdência-social/05-acesso-inss.md)
 
 ### 6. [Direito do Consumidor](06-direito-consumidor/README.md)
 Proteção nas relações de consumo e superendividamento.
-- [Direitos Básicos (CDC)](06-direito-consumidor/01-direitos-basicos-cdc.md)
+- [Direitos Básicos (CDC)](06-direito-consumidor/01-direitos-básicos-cdc.md)
 - [Superendividamento](06-direito-consumidor/02-superendividamento.md)
 - [PROCON-DF](06-direito-consumidor/03-procon-df.md)
-- [Serviços Essenciais](06-direito-consumidor/04-servicos-essenciais.md)
+- [Serviços Essenciais](06-direito-consumidor/04-serviços-essenciais.md)
 
 ### 7. [Noções de Direito Penal](07-nocoes-direito-penal/README.md)
-Quando procurar a delegacia e crimes comuns contra vulneráveis.
+Quando procurar a delegacia é crimes comuns contra vulneráveis.
 - [Quando Ir à Delegacia](07-nocoes-direito-penal/01-quando-ir-delegacia.md)
 - [Crimes Comuns contra Vulneráveis](07-nocoes-direito-penal/02-crimes-comuns.md)
-- [Direitos do Preso e da Família](07-nocoes-direito-penal/03-direitos-preso-familia.md)
+- [Direitos do Preso e da Família](07-nocoes-direito-penal/03-direitos-preso-família.md)
 
 ### 8. [Acesso à Justiça](08-acesso-justica/README.md)
 Como buscar assistência jurídica gratuita.
-- [Defensoria Pública do DF](08-acesso-justica/01-defensoria-publica-df.md)
+- [Defensoria Pública do DF](08-acesso-justica/01-defensoria-pública-df.md)
 - [Justiça Gratuita](08-acesso-justica/02-justica-gratuita.md)
 - [Juizados Especiais](08-acesso-justica/03-juizados-especiais.md)
 - [Núcleos de Universidades](08-acesso-justica/04-nucleos-universidades.md)
 
 ### 9. [Direitos Fundamentais](09-direitos-fundamentais/README.md)
 Constituição Federal e Lei Orgânica do DF.
-- [Constituição — Direitos Sociais](09-direitos-fundamentais/01-constituicao-direitos-sociais.md)
+- [Constituição — Direitos Sociais](09-direitos-fundamentais/01-constituição-direitos-sociais.md)
 - [Lei Orgânica do DF](09-direitos-fundamentais/02-lei-organica-df.md)
 
 ---
@@ -128,69 +128,69 @@ Constituição Federal e Lei Orgânica do DF.
   },
   sections: [
     {
-      id: `01-beneficios-sociais`,
-      title: `Beneficios Sociais -- Guia Completo`,
+      id: `01-benefícios-sociais`,
+      title: `Benefícios Sociais -- Guia Completo`,
       icon: `hands-helping`,
-      readme: `# Beneficios Sociais -- Guia Completo
+      readme: `# Benefícios Sociais -- Guia Completo
 
-Bem-vindo a secao de **Beneficios Sociais** do Manual Vicentino. Aqui voce encontra informacoes claras e praticas sobre os principais programas de ajuda do governo federal e do Distrito Federal para pessoas e familias em situacao de vulnerabilidade.
+Bem-vindo a seção de **Benefícios Sociais** do Manual Vicentino. Aqui você encontra informações claras e práticas sobre os principais programas de ajuda do governo federal e do Distrito Federal para pessoas e famílias em situação de vulnerabilidade.
 
 ---
 
-## O Que Voce Vai Encontrar Nesta Secao
+## O Que Você Vai Encontrar Nesta Seção
 
 | N. | Tema | Descricao |
 |----|------|-----------|
-| 01 | [Cadastro Unico (CadUnico)](01-cadastro-unico.md) | O primeiro passo para acessar quase todos os beneficios sociais. Saiba o que e, como se cadastrar e onde ir no DF. |
-| 02 | [Bolsa Familia](02-bolsa-familia.md) | Programa de transferencia de renda para familias em situacao de pobreza. Veja criterios, valores e como receber. |
-| 03 | [BPC/LOAS](03-bpc-loas.md) | Beneficio de um salario minimo para idosos (65+) e pessoas com deficiencia de baixa renda. |
-| 04 | [Seguro-Desemprego](04-seguro-desemprego.md) | Ajuda financeira temporaria para quem foi demitido sem justa causa. |
-| 05 | [Auxilio-Reclusao](05-auxilio-reclusao.md) | Beneficio pago a familia de segurado do INSS que esta preso. |
-| 06 | [Beneficios do Distrito Federal](06-beneficios-df.md) | Cartao Material Escolar, Passe Livre, programas habitacionais, tarifas sociais e outros beneficios do GDF. |
+| 01 | [Cadastro Único (CadUnico)](01-cadastro-único.md) | O primeiro passo para acessar quase todos os benefícios sociais. Saiba o que é, como se cadastrar e onde ir no DF. |
+| 02 | [Bolsa Família](02-bolsa-família.md) | Programa de transferencia de renda para famílias em situação de pobreza. Veja criterios, valores e como receber. |
+| 03 | [BPC/LOAS](03-bpc-loas.md) | Benefício de um salário mínimo para idosos (65+) e pessoas com deficiência de baixa renda. |
+| 04 | [Seguro-Desemprego](04-seguro-desemprego.md) | Ajuda financeira temporária para quem foi demitido sem justa causa. |
+| 05 | [Auxílio-Reclusão](05-auxílio-reclusão.md) | Benefício pago a família de segurado do INSS que está preso. |
+| 06 | [Benefícios do Distrito Federal](06-benefícios-df.md) | Cartao Material Escolar, Passe Livre, programas habitacionais, tarifas sociais e outros benefícios do GDF. |
 
 ---
 
 ## Por Onde Comecar?
 
-Se voce esta em situacao dificil e nao sabe por onde comecar, siga estes passos:
+Se você está em situação difícil e não sabe por onde comecar, siga estes passos:
 
-1. **Va ao CRAS mais proximo da sua casa** -- o CRAS e o lugar certo para pedir orientacao sobre todos os beneficios
-2. **Faca ou atualize seu Cadastro Unico (CadUnico)** -- leve o CPF e os documentos de toda a familia
-3. **Conte sua situacao completa** ao assistente social do CRAS -- ele vai orientar sobre os programas que voce pode receber
+1. **Va ao CRAS mais proximo da sua casa** -- o CRAS é o lugar certo para pedir orientação sobre todos os benefícios
+2. **Faca ou atualize seu Cadastro Único (CadUnico)** -- leve o CPF e os documentos de toda a família
+3. **Conte sua situação completa** ao assistente social do CRAS -- ele vai orientar sobre os programas que você pode receber
 
-> **Dica importante:** O CadUnico e a porta de entrada para quase todos os programas sociais. Comece por ele. Leia o capitulo [01 - Cadastro Unico](01-cadastro-unico.md) para saber tudo o que precisa.
+> **Dica importante:** O CadUnico é a porta de entrada para quase todos os programas sociais. Comece por ele. Leia o capítulo [01 - Cadastro Único](01-cadastro-único.md) para saber tudo o que precisa.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | Central do GDF | 156 |
 | Disque Social (programas federais) | 121 |
-| INSS (BPC, Auxilio-Reclusao) | 135 |
+| INSS (BPC, Auxílio-Reclusão) | 135 |
 | Neoenergia Brasilia (Tarifa Social de Energia) | 116 |
 | CAESB (Tarifa Social de Agua) | 156 (opcao 1) |
 | BRB Mobilidade (Passe Livre) | (61) 3120-9500 |
-| Defensoria Publica do DF | (61) 3105-9200 |
+| Defensoria Pública do DF | (61) 3105-9200 |
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
 `,
       pages: [
         {
-          id: `01-cadastro-unico`,
-          title: `Cadastro Unico (CadUnico)`,
-          content: `# Cadastro Unico (CadUnico)
+          id: `01-cadastro-único`,
+          title: `Cadastro Único (CadUnico)`,
+          content: `# Cadastro Único (CadUnico)
 
 ## O Que E o CadUnico?
 
-O Cadastro Unico para Programas Sociais do Governo Federal -- conhecido como **CadUnico** -- e um registro que reune informacoes sobre as familias de baixa renda do Brasil. Ele funciona como a **porta de entrada** para quase todos os programas sociais, tanto do governo federal quanto do governo do Distrito Federal.
+O Cadastro Único para Programas Sociais do Governo Federal -- conhecido como **CadUnico** -- é um registro que reune informações sobre as famílias de baixa renda do Brasil. Ele funciona como a **porta de entrada** para quase todos os programas sociais, tanto do governo federal quanto do governo do Distrito Federal.
 
-Quando voce faz o CadUnico, o governo passa a conhecer a situacao da sua familia: onde mora, quantas pessoas vivem na casa, qual a renda, se ha criancas, idosos ou pessoas com deficiencia. Com essas informacoes, o governo avalia automaticamente se a familia tem direito a receber beneficios.
+Quando você faz o CadUnico, o governo passa a conhecer a situação da sua família: onde mora, quantas pessoas vivem na casa, qual a renda, se ha crianças, idosos ou pessoas com deficiência. Com essas informações, o governo avalia automaticamente se a família tem direito a receber benefícios.
 
-> **Resumo:** Sem CadUnico, voce nao consegue acessar o Bolsa Familia, o BPC/LOAS, a Tarifa Social de energia e agua, o Cartao Material Escolar e dezenas de outros programas. Faca o seu o quanto antes.
+> **Resumo:** Sem CadUnico, você não consegue acessar o Bolsa Família, o BPC/LOAS, a Tarifa Social de energia e agua, o Cartao Material Escolar e dezenas de outros programas. Faca o seu o quanto antes.
 
 ---
 
@@ -198,12 +198,12 @@ Quando voce faz o CadUnico, o governo passa a conhecer a situacao da sua familia
 
 Podem se cadastrar no CadUnico:
 
-- Familias com **renda mensal por pessoa de ate meio salario minimo** (ate R$ 810,50 em 2026)
-- Familias com **renda total de ate 3 salarios minimos** (ate R$ 4.863,00 em 2026)
+- Famílias com **renda mensal por pessoa de até meio salário mínimo** (até R$ 810,50 em 2026)
+- Famílias com **renda total de até 3 salários minimos** (até R$ 4.863,00 em 2026)
 
-Tambem podem se cadastrar, **independentemente da renda:**
+Também podem se cadastrar, **independentemente da renda:**
 
-- Pessoas em situacao de rua
+- Pessoas em situação de rua
 - Indigenas
 - Quilombolas
 - Ribeirinhos
@@ -211,69 +211,69 @@ Tambem podem se cadastrar, **independentemente da renda:**
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
-O cadastro deve ser feito pelo **Responsavel Familiar** -- preferencialmente uma mulher, maior de 16 anos. Ela deve levar os documentos de todos os membros da familia.
+O cadastro deve ser feito pelo **Responsável Familiar** -- preferencialmente uma mulher, maior de 16 anos. Ela deve levar os documentos de todos os membros da família.
 
-### Documentos do Responsavel Familiar (obrigatorios)
+### Documentos do Responsável Familiar (obrigatorios)
 
-- **CPF** (obrigatorio)
-- **Documento de identificacao com foto** (RG, CNH ou Carteira de Trabalho)
+- **CPF** (obrigatório)
+- **Documento de identificação com foto** (RG, CNH ou Carteira de Trabalho)
 
-### Documentos de Cada Membro da Familia
+### Documentos de Cada Membro da Família
 
-| Documento | Obrigatorio? |
+| Documento | Obrigatório? |
 |-----------|-------------|
 | CPF | Sim, para todos |
 | Certidao de nascimento ou casamento | Desejavel |
 | RG | Desejavel |
 | Carteira de Trabalho (CTPS) | Desejavel |
-| Titulo de eleitor | Desejavel |
+| Título de eleitor | Desejavel |
 
-### Comprovante de Residencia
+### Comprovante de Residência
 
 - Conta de luz (preferencial), conta de agua ou correspondencia oficial recente
 
-### Em Situacoes Especiais
+### Em Situações Especiais
 
-- Declaracao escolar dos filhos
-- Laudos medicos (se houver pessoa com deficiencia na familia)
+- Declaração escolar dos filhos
+- Laudos médicos (se houver pessoa com deficiência na família)
 
-> **Atencao:** Leve o maximo de documentos que tiver. Quanto mais informacoes voce levar, mais rapido o cadastro sera concluido. Mas se faltar algum documento, va assim mesmo -- o CRAS pode orientar sobre como resolver.
+> **Atenção:** Leve o máximo de documentos que tiver. Quanto mais informações você levar, mais rapido o cadastro será concluido. Mas se faltar algum documento, va assim mesmo -- o CRAS pode orientar sobre como resolver.
 
 ---
 
 ## Passo a Passo: Como Fazer o Cadastro no DF
 
-**PASSO 1** -- Va ao CRAS mais proximo da sua residencia (veja a lista completa abaixo)
+**PASSO 1** -- Va ao CRAS mais proximo da sua residência (veja a lista completa abaixo)
 
-**PASSO 2** -- Leve os documentos de **todos** os membros da familia
+**PASSO 2** -- Leve os documentos de **todos** os membros da família
 
-**PASSO 3** -- O atendente do CRAS fara o registro de todas as informacoes da sua familia
+**PASSO 3** -- O atendente do CRAS fara o registro de todas as informações da sua família
 
-**PASSO 4** -- Apos o cadastro, voce recebera o **NIS** (Numero de Identificacao Social). Guarde esse numero com cuidado -- voce vai precisar dele para acessar varios programas
+**PASSO 4** -- Após o cadastro, você receberá o **NIS** (Número de Identificação Social). Guarde esse número com cuidado -- você vai precisar dele para acessar varios programas
 
-**PASSO 5** -- Mantenha o cadastro **sempre atualizado**. Volte ao CRAS sempre que houver mudanca de endereco, de renda ou na composicao da familia (nascimento, falecimento, casamento, separacao, etc.)
+**PASSO 5** -- Mantenha o cadastro **sempre atualizado**. Volte ao CRAS sempre que houver mudança de endereço, de renda ou na composicao da família (nascimento, falecimento, casamento, separacao, etc.)
 
-> **Importante:** O CadUnico precisa ser atualizado a cada 2 anos, no minimo. Se o cadastro ficar desatualizado, voce pode perder beneficios.
+> **Importante:** O CadUnico precisa ser atualizado a cada 2 anos, no mínimo. Se o cadastro ficar desatualizado, você pode perder benefícios.
 
 ---
 
 ## Como Consultar Seu Cadastro
 
-Voce pode consultar sua situacao no CadUnico de duas formas:
+Você pode consultar sua situação no CadUnico de duas formas:
 
 - **Pela internet:** Acesse https://cadunico.dataprev.gov.br
-- **Pelo aplicativo:** Baixe o app "CadUnico" no celular (disponivel para Android e iPhone)
+- **Pelo aplicativo:** Baixe o app "CadUnico" no celular (disponível para Android e iPhone)
 - **Por telefone:** Ligue para o Disque Social **121** ou para a Central **156** do GDF
 
 ---
 
 ## Lista de CRAS no Distrito Federal
 
-Abaixo voce encontra o endereco e os telefones de todos os CRAS do DF. Procure o mais proximo da sua casa.
+Abaixo você encontra o endereço e os telefones de todos os CRAS do DF. Procure o mais proximo da sua casa.
 
-| CRAS | Endereco | Telefones |
+| CRAS | Endereço | Telefones |
 |------|----------|-----------|
 | **Brasilia** | Av. L2 Sul - SGAS 614/615, Asa Sul | (61) 3773-7356 / 7357 / 7358 |
 | **Brazlandia Veredas** | Area Especial II, Qd 35/36, Vila Sao Jose | (61) 3773-7361 / 7362 / 7363 |
@@ -287,7 +287,7 @@ Abaixo voce encontra o endereco e os telefones de todos os CRAS do DF. Procure o
 | **Gama** | Area Especial 11/13 Setor Central | (61) 3773-7396 / 7397 / 7398 |
 | **Guara** | EQ 15/26 - Area Comunal 01 | (61) 3773-7401 / 7402 / 7403 |
 | **Itapoa** | Quadra 61 - Area Especial 03 - Del Lago | (61) 3773-7406 / 7407 / 7408 |
-| **Itapoa Parque** | Avenida Itapoa Parque, QD 502 AE 03 | Nao informado |
+| **Itapoa Parque** | Avenida Itapoa Parque, QD 502 AE 03 | Não informado |
 | **Nucleo Bandeirante** | Avenida Central A/E - Lote E | (61) 3773-7411 / 7412 / 7413 |
 | **Paranoa** | Quadra 03, Area Especial 07, S/N | (61) 3773-7416 / 7417 / 7418 / 7699 |
 | **Planaltina** | Area Especial H, Lote 6 - Setor Educacional | (61) 3773-7419 / 7420 / 7421 |
@@ -313,34 +313,34 @@ Abaixo voce encontra o endereco e os telefones de todos os CRAS do DF. Procure o
 
 ## Programas Vinculados ao CadUnico
 
-Com o CadUnico atualizado, voce pode ter acesso aos seguintes programas:
+Com o CadUnico atualizado, você pode ter acesso aos seguintes programas:
 
 ### Programas Federais
 
-- **Bolsa Familia** -- transferencia de renda para familias em situacao de pobreza
-- **BPC/LOAS** -- beneficio de um salario minimo para idosos e pessoas com deficiencia
-- **Tarifa Social de Energia Eletrica** -- desconto de ate 65% na conta de luz
-- **Auxilio Gas** -- ajuda para compra de gas de cozinha
+- **Bolsa Família** -- transferencia de renda para famílias em situação de pobreza
+- **BPC/LOAS** -- benefício de um salário mínimo para idosos e pessoas com deficiência
+- **Tarifa Social de Energia Elétrica** -- desconto de até 65% na conta de luz
+- **Auxílio Gas** -- ajuda para compra de gas de cozinha
 - **Minha Casa Minha Vida** -- programa de moradia popular
 - **Pe-de-Meia** -- poupanca para estudantes do ensino medio
 - **Carteira da Pessoa Idosa** -- desconto de 50% em passagens interestaduais
-- **Isencao de taxas em concursos publicos**
+- **Isenção de taxas em concursos públicos**
 - **ID Jovem** -- meia-entrada em eventos culturais e esportivos
 
 ### Programas do Distrito Federal
 
 - **Cartao Material Escolar** -- credito para compra de material escolar
-- **Programa DF Social** -- R$ 150,00 por mes para familias de baixa renda
-- **Passe Livre Estudantil** -- transporte publico gratuito para estudantes
+- **Programa DF Social** -- R$ 150,00 por mês para famílias de baixa renda
+- **Passe Livre Estudantil** -- transporte público gratuito para estudantes
 - **Tarifa Social da CAESB** -- desconto de 50% na conta de agua
 - **Programas habitacionais da CODHAB** -- moradia popular no DF
-- **Beneficios Eventuais** -- auxilio natalidade, por morte e vulnerabilidade temporaria
+- **Benefícios Eventuais** -- auxílio natalidade, por morte e vulnerabilidade temporária
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
 | Disque Social (duvidas sobre CadUnico) | 121 |
 | Central do GDF | 156 |
@@ -348,114 +348,114 @@ Com o CadUnico atualizado, voce pode ter acesso aos seguintes programas:
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Ministerio do Desenvolvimento e Assistencia Social (MDS) -- Cadastro Unico: https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico
+- Ministerio do Desenvolvimento e Assistência Social (MDS) -- Cadastro Único: https://www.gov.br/mds/pt-br/ações-e-programas/cadastro-único
 - Secretaria de Desenvolvimento Social do DF (SEDES) -- CRAS: https://www.sedes.df.gov.br/cras
 - CadUnico Brasil -- Lista de CRAS em Brasilia: https://cadunicobrasil.com.br/cras-brasilia/
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
 `
         },
         {
-          id: `02-bolsa-familia`,
-          title: `Bolsa Familia`,
-          content: `# Bolsa Familia
+          id: `02-bolsa-família`,
+          title: `Bolsa Família`,
+          content: `# Bolsa Família
 
-## O Que E o Bolsa Familia?
+## O Que E o Bolsa Família?
 
-O Bolsa Familia e um programa do governo federal que transfere dinheiro diretamente para familias em situacao de pobreza e extrema pobreza. O objetivo e garantir uma renda minima para que essas familias possam se alimentar e viver com mais dignidade.
+O Bolsa Família é um programa do governo federal que transfere dinheiro diretamente para famílias em situação de pobreza e extrema pobreza. O objetivo e garantir uma renda mínima para que essas famílias possam se alimentar e viver com mais dignidade.
 
-O programa esta previsto na **Lei 14.601/2023** e garante um valor minimo de **R$ 600,00 por familia por mes**.
+O programa está previsto na **Lei 14.601/2023** e garante um valor mínimo de **R$ 600,00 por família por mês**.
 
-> **Em resumo:** Se sua familia tem renda muito baixa, o governo deposita um valor todo mes na sua conta da Caixa Economica Federal. O valor pode ser maior que R$ 600,00, dependendo de quantas criancas e gestantes tem na familia.
+> **Em resumo:** Se sua família tem renda muito baixa, o governo deposita um valor todo mês na sua conta da Caixa Econômica Federal. O valor pode ser maior que R$ 600,00, dependendo de quantas crianças e gestantes tem na família.
 
 ---
 
 ## Quem Tem Direito?
 
-Para receber o Bolsa Familia, a familia precisa cumprir **dois requisitos:**
+Para receber o Bolsa Família, a família precisa cumprir **dois requisitos:**
 
-1. **Renda familiar por pessoa de ate R$ 218,00 por mes** -- para calcular, some toda a renda da familia e divida pelo numero de pessoas que moram na casa
-2. **Estar inscrita no Cadastro Unico (CadUnico)** -- veja como fazer no capitulo [01 - Cadastro Unico](01-cadastro-unico.md)
+1. **Renda familiar por pessoa de até R$ 218,00 por mês** -- para calcular, some toda a renda da família e divida pelo número de pessoas que moram na casa
+2. **Estar inscrita no Cadastro Único (CadUnico)** -- veja como fazer no capítulo [01 - Cadastro Único](01-cadastro-único.md)
 
-> **Exemplo:** Uma familia de 4 pessoas (mae, pai e dois filhos) com renda total de R$ 800,00 por mes tem renda per capita de R$ 200,00 (800 dividido por 4). Como R$ 200,00 e menor que R$ 218,00, essa familia pode receber o Bolsa Familia.
+> **Exemplo:** Uma família de 4 pessoas (mae, pai e dois filhos) com renda total de R$ 800,00 por mês tem renda per capita de R$ 200,00 (800 dividido por 4). Como R$ 200,00 e menor que R$ 218,00, essa família pode receber o Bolsa Família.
 
 ---
 
 ## Quanto Vou Receber?
 
-O valor do Bolsa Familia depende do tamanho e da composicao da familia. Veja como funciona:
+O valor do Bolsa Família depende do tamanho e da composicao da família. Veja como funciona:
 
-| Parcela do Beneficio | Valor | Quem Recebe |
+| Parcela do Benefício | Valor | Quem Recebe |
 |---------------------|-------|-------------|
-| **Renda de Cidadania** | R$ 142,00 | Cada pessoa da familia |
-| **Complementar** | Variavel | Completa o valor ate chegar ao minimo de R$ 600,00 |
-| **Primeira Infancia** | R$ 150,00 | Cada crianca de 0 a 6 anos |
-| **Variavel Familiar** | R$ 50,00 | Cada gestante, nutriz (mae que amamenta), crianca ou adolescente de 7 a 17 anos |
-| **Extraordinario de Transicao** | Variavel | Garante que ninguem receba menos do que recebia antes |
+| **Renda de Cidadania** | R$ 142,00 | Cada pessoa da família |
+| **Complementar** | Variavel | Completa o valor até chegar ao mínimo de R$ 600,00 |
+| **Primeira Infância** | R$ 150,00 | Cada criança de 0 a 6 anos |
+| **Variavel Familiar** | R$ 50,00 | Cada gestante, nutriz (mae que amamenta), criança ou adolescente de 7 a 17 anos |
+| **Extraordinario de Transicao** | Variavel | Garante que ninguém receba menos do que recebia antes |
 
-### Exemplo Pratico
+### Exemplo Prático
 
-Uma familia com mae, pai, um bebe de 2 anos e uma crianca de 8 anos:
+Uma família com mae, pai, um bebe de 2 anos é uma criança de 8 anos:
 
 - 4 pessoas x R$ 142,00 (Renda de Cidadania) = **R$ 568,00**
-- 1 crianca de 0 a 6 anos x R$ 150,00 (Primeira Infancia) = **R$ 150,00**
-- 1 crianca de 7 a 17 anos x R$ 50,00 (Variavel Familiar) = **R$ 50,00**
-- **Total: R$ 768,00 por mes**
+- 1 criança de 0 a 6 anos x R$ 150,00 (Primeira Infância) = **R$ 150,00**
+- 1 criança de 7 a 17 anos x R$ 50,00 (Variavel Familiar) = **R$ 50,00**
+- **Total: R$ 768,00 por mês**
 
-> **Valor minimo garantido:** Nenhuma familia recebe menos de R$ 600,00 por mes. Se a soma das parcelas der menos que isso, o governo complementa ate chegar a R$ 600,00.
+> **Valor mínimo garantido:** Nenhuma família recebe menos de R$ 600,00 por mês. Se a soma das parcelas der menos que isso, o governo complementa até chegar a R$ 600,00.
 
 ---
 
-## O Que a Familia Precisa Cumprir (Condicionalidades)
+## O Que a Família Precisa Cumprir (Condicionalidades)
 
-Para continuar recebendo o Bolsa Familia, a familia precisa cumprir algumas obrigacoes. Isso nao e para punir -- e para garantir que criancas e gestantes tenham acesso a saude e educacao.
+Para continuar recebendo o Bolsa Família, a família precisa cumprir algumas obrigações. Isso não e para punir -- e para garantir que crianças e gestantes tenham acesso a saúde e educação.
 
-### Na Educacao
+### Na Educação
 
-- Criancas de **4 e 5 anos**: frequencia escolar minima de **60%**
-- Estudantes de **6 a 17 anos**: frequencia escolar minima de **75%**
+- Crianças de **4 e 5 anos**: frequência escolar mínima de **60%**
+- Estudantes de **6 a 17 anos**: frequência escolar mínima de **75%**
 
-### Na Saude
+### Na Saúde
 
 - **Gestantes** devem fazer o pre-natal
-- **Criancas** devem manter a vacinacao em dia
-- **Criancas ate 7 anos** devem fazer acompanhamento nutricional (peso e altura)
+- **Crianças** devem manter a vacinacao em dia
+- **Crianças até 7 anos** devem fazer acompanhamento nutricional (peso e altura)
 
-> **Atencao:** Se a familia nao cumprir essas obrigacoes, o beneficio pode ser bloqueado, suspenso ou ate cancelado. Mas isso acontece de forma gradual -- primeiro vem um aviso, depois o bloqueio temporario, e so depois a suspensao. Se voce esta com dificuldade para cumprir alguma condicionalidade, procure o CRAS para pedir orientacao.
+> **Atenção:** Se a família não cumprir essas obrigações, o benefício pode ser bloqueado, suspenso ou até cancelado. Mas isso acontece de forma gradual -- primeiro vem um aviso, depois o bloqueio temporário, e só depois a suspensão. Se você está com dificuldade para cumprir alguma condicionalidade, procure o CRAS para pedir orientação.
 
 ---
 
 ## Passo a Passo: Como Se Cadastrar
 
-**PASSO 1** -- Procure o **CRAS** (Centro de Referencia de Assistencia Social) mais proximo da sua casa. Veja a lista completa no capitulo [01 - Cadastro Unico](01-cadastro-unico.md)
+**PASSO 1** -- Procure o **CRAS** (Centro de Referência de Assistência Social) mais proximo da sua casa. Veja a lista completa no capítulo [01 - Cadastro Único](01-cadastro-único.md)
 
-**PASSO 2** -- O **Responsavel Familiar** (preferencialmente uma mulher, maior de 16 anos) deve comparecer ao CRAS com os documentos de **toda** a familia
+**PASSO 2** -- O **Responsável Familiar** (preferencialmente uma mulher, maior de 16 anos) deve comparecer ao CRAS com os documentos de **toda** a família
 
-**PASSO 3** -- Faca a inscricao no **Cadastro Unico (CadUnico)**
+**PASSO 3** -- Faca a inscrição no **Cadastro Único (CadUnico)**
 
-**PASSO 4** -- Apos o cadastro, **nao e preciso pedir o Bolsa Familia separadamente**. O sistema do governo analisa automaticamente se a familia se enquadra nos criterios. Se tiver direito, a familia sera selecionada.
+**PASSO 4** -- Após o cadastro, **não é preciso pedir o Bolsa Família separadamente**. O sistema do governo analisa automaticamente se a família se enquadra nos criterios. Se tiver direito, a família será selecionada.
 
-**PASSO 5** -- Se aprovada, a familia recebe o beneficio pela **conta poupanca social digital da Caixa Economica Federal**, pelo aplicativo **Caixa Tem**
+**PASSO 5** -- Se aprovada, a família recebe o benefício pela **conta poupanca social digital da Caixa Econômica Federal**, pelo aplicativo **Caixa Tem**
 
-> **Importante:** O cadastro no CadUnico nao garante automaticamente o recebimento do Bolsa Familia. O sistema do Ministerio do Desenvolvimento Social (MDS) e que faz a selecao com base na renda e na situacao da familia.
+> **Importante:** O cadastro no CadUnico não garante automaticamente o recebimento do Bolsa Família. O sistema do Ministerio do Desenvolvimento Social (MDS) é que faz a selecao com base na renda e na situação da família.
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
-O Responsavel Familiar deve levar ao CRAS:
+O Responsável Familiar deve levar ao CRAS:
 
 **Documentos obrigatorios:**
-- CPF de **todos** os membros da familia
-- Documento de identificacao com foto do responsavel (RG, CNH ou Carteira de Trabalho)
+- CPF de **todos** os membros da família
+- Documento de identificação com foto do responsável (RG, CNH ou Carteira de Trabalho)
 
 **Documentos importantes:**
-- Certidao de nascimento das criancas
-- Comprovante de residencia (conta de luz, agua ou correspondencia oficial)
+- Certidao de nascimento das crianças
+- Comprovante de residência (conta de luz, agua ou correspondencia oficial)
 - Carteira de Trabalho
 - Comprovantes de renda (se houver)
 
@@ -463,66 +463,66 @@ O Responsavel Familiar deve levar ao CRAS:
 
 ## Onde e Como Receber o Dinheiro
 
-O pagamento do Bolsa Familia e feito pela **Caixa Economica Federal**, por meio da **conta poupanca social digital**. Voce pode movimentar o dinheiro pelo aplicativo **Caixa Tem**.
+O pagamento do Bolsa Família é feito pela **Caixa Econômica Federal**, por meio da **conta poupanca social digital**. Você pode movimentar o dinheiro pelo aplicativo **Caixa Tem**.
 
-### Calendario de Pagamento
+### Calendário de Pagamento
 
-Os pagamentos seguem um calendario mensal, com base no **ultimo digito do NIS** (Numero de Identificacao Social). O calendario de cada ano e divulgado pelo MDS no site https://www.gov.br/mds.
+Os pagamentos seguem um calendário mensal, com base no **ultimo digito do NIS** (Número de Identificação Social). O calendário de cada ano e divulgado pelo MDS no site https://www.gov.br/mds.
 
-> **Dica:** Voce pode consultar seu NIS no cartao do Bolsa Familia, no aplicativo CadUnico ou ligando para o Disque Social (121).
+> **Dica:** Você pode consultar seu NIS no cartao do Bolsa Família, no aplicativo CadUnico ou ligando para o Disque Social (121).
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| Disque Social (duvidas sobre Bolsa Familia e CadUnico) | 121 |
+| Disque Social (duvidas sobre Bolsa Família e CadUnico) | 121 |
 | Central do GDF | 156 |
-| Caixa Economica Federal | 111 |
-| Aplicativo Caixa Tem | Disponivel para Android e iPhone |
+| Caixa Econômica Federal | 111 |
+| Aplicativo Caixa Tem | Disponível para Android e iPhone |
 
 ---
 
 ## Perguntas Frequentes
 
-**Quem decide se minha familia vai receber o Bolsa Familia?**
-O sistema do Ministerio do Desenvolvimento Social (MDS) faz a selecao automaticamente, com base nas informacoes do CadUnico. Nao e o CRAS que decide.
+**Quem decide se minha família vai receber o Bolsa Família?**
+O sistema do Ministerio do Desenvolvimento Social (MDS) faz a selecao automaticamente, com base nas informações do CadUnico. Não é o CRAS que decide.
 
-**Se eu comecei a trabalhar, vou perder o beneficio?**
-Nao necessariamente. Se a renda per capita continuar dentro do limite de R$ 218,00, voce continua recebendo. E existe uma regra de protecao que permite manter o beneficio por um periodo mesmo que a renda aumente um pouco.
+**Se eu comecei a trabalhar, vou perder o benefício?**
+Não necessariamente. Se a renda per capita continuar dentro do limite de R$ 218,00, você contínua recebendo. E existe uma regra de proteção que permite manter o benefício por um período mesmo que a renda aumente um pouco.
 
-**Posso receber o Bolsa Familia e o BPC ao mesmo tempo?**
-O BPC recebido por um membro da familia nao entra no calculo da renda para o Bolsa Familia. Portanto, em muitos casos, e possivel sim receber os dois.
-
----
-
-## Fontes e Referencias
-
-- Lei 14.601/2023 (Lei do Bolsa Familia): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm
-- Ministerio do Desenvolvimento e Assistencia Social (MDS) -- Bolsa Familia: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/fala-mds-ministerio-esclarece-as-principais-duvidas-sobre-o-bolsa-familia
-- Calendario de pagamentos do Bolsa Familia 2026: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/confira-o-calendario-de-pagamentos-do-bolsa-familia-de-2026
+**Posso receber o Bolsa Família é o BPC ao mesmo tempo?**
+O BPC recebido por um membro da família não entra no calculo da renda para o Bolsa Família. Portanto, em muitos casos, é possível sim receber os dois.
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+## Fontes e Referências
+
+- Lei 14.601/2023 (Lei do Bolsa Família): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm
+- Ministerio do Desenvolvimento e Assistência Social (MDS) -- Bolsa Família: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/fala-mds-ministerio-esclarece-as-principais-duvidas-sobre-o-bolsa-família
+- Calendário de pagamentos do Bolsa Família 2026: https://www.gov.br/mds/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/confira-o-calendário-de-pagamentos-do-bolsa-família-de-2026
+
+---
+
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
 `
         },
         {
           id: `03-bpc-loas`,
-          title: `BPC/LOAS -- Beneficio de Prestacao Continuada`,
-          content: `# BPC/LOAS -- Beneficio de Prestacao Continuada
+          title: `BPC/LOAS -- Benefício de Prestação Continuada`,
+          content: `# BPC/LOAS -- Benefício de Prestação Continuada
 
 ## O Que E o BPC?
 
-O Beneficio de Prestacao Continuada (BPC) e um pagamento mensal de **1 salario minimo (R$ 1.621,00 em 2026)** feito pelo governo federal a duas categorias de pessoas:
+O Benefício de Prestação Continuada (BPC) é um pagamento mensal de **1 salário mínimo (R$ 1.621,00 em 2026)** feito pelo governo federal a duas categorias de pessoas:
 
-- **Idosos com 65 anos ou mais** que nao tem como se manter
-- **Pessoas com deficiencia de qualquer idade** que nao tem como se manter
+- **Idosos com 65 anos ou mais** que não tem como se manter
+- **Pessoas com deficiência de qualquer idade** que não tem como se manter
 
-O BPC esta previsto na **Lei Organica da Assistencia Social (LOAS -- Lei 8.742/1993, artigo 20)** e na **Constituicao Federal (artigo 203, inciso V)**.
+O BPC está previsto na **Lei Organica da Assistência Social (LOAS -- Lei 8.742/1993, artigo 20)** e na **Constituição Federal (artigo 203, inciso V)**.
 
-> **Atencao:** O BPC **nao e aposentadoria**. Voce nao precisa ter contribuido para o INSS para receber. E um beneficio assistencial -- ou seja, e para quem realmente precisa, independentemente de ter trabalhado com carteira assinada.
+> **Atenção:** O BPC **não e aposentadoria**. Você não precisa ter contribuido para o INSS para receber. E um benefício assistencial -- ou seja, e para quem realmente precisa, independentemente de ter trabalhado com carteira assinada.
 
 ---
 
@@ -532,15 +532,15 @@ O BPC esta previsto na **Lei Organica da Assistencia Social (LOAS -- Lei 8.742/1
 
 - Ter **65 anos ou mais**
 - Ter renda familiar por pessoa dentro do criterio (veja abaixo)
-- Estar inscrita no **Cadastro Unico (CadUnico)**
+- Estar inscrita no **Cadastro Único (CadUnico)**
 
-### Pessoa com Deficiencia
+### Pessoa com Deficiência
 
-- Ter deficiencia de **qualquer tipo** -- fisica, mental, intelectual ou sensorial
-- A deficiencia deve ser de **longo prazo** (2 anos ou mais) e deve impedir a participacao plena na sociedade
+- Ter deficiência de **qualquer tipo** -- física, mental, intelectual ou sensorial
+- A deficiência deve ser de **longo prazo** (2 anos ou mais) e deve impedir a participação plena na sociedade
 - Ter renda familiar por pessoa dentro do criterio (veja abaixo)
 - Estar inscrita no **CadUnico**
-- A deficiencia sera avaliada por **pericia do INSS** (avaliacao medica e social)
+- A deficiência será avaliada por **pericia do INSS** (avaliação médica e social)
 
 ---
 
@@ -548,162 +548,162 @@ O BPC esta previsto na **Lei Organica da Assistencia Social (LOAS -- Lei 8.742/1
 
 ### Regra Oficial
 
-A renda familiar por pessoa (per capita) deve ser de **ate 1/4 do salario minimo**, ou seja, ate **R$ 405,25 por pessoa em 2026**.
+A renda familiar por pessoa (per capita) deve ser de **até 1/4 do salário mínimo**, ou seja, até **R$ 405,25 por pessoa em 2026**.
 
-**Como calcular:** Some toda a renda de todas as pessoas que moram na mesma casa e divida pelo numero de moradores.
+**Como calcular:** Some toda a renda de todas as pessoas que moram na mesma casa e divida pelo número de moradores.
 
-> **Exemplo:** Uma familia de 3 pessoas (a idosa de 67 anos, o filho e a nora) com renda total de R$ 1.200,00. A renda per capita e R$ 400,00 (1.200 dividido por 3). Como R$ 400,00 e menor que R$ 405,25, a idosa pode ter direito ao BPC.
+> **Exemplo:** Uma família de 3 pessoas (a idosa de 67 anos, o filho é a nora) com renda total de R$ 1.200,00. A renda per capita e R$ 400,00 (1.200 dividido por 3). Como R$ 400,00 e menor que R$ 405,25, a idosa pode ter direito ao BPC.
 
 ### O Que Entra no Calculo da Renda
 
 - Salarios e rendimentos de todos os moradores da casa
-- Aposentadorias e pensoes
+- Aposentadorias e pensões
 - Alugueis recebidos
 
 ### O Que NAO Entra no Calculo
 
-- Bolsa Familia e outros beneficios de transferencia de renda
-- BPC recebido por outro idoso da familia
-- Beneficio previdenciario de 1 salario minimo recebido por idoso da familia
+- Bolsa Família e outros benefícios de transferencia de renda
+- BPC recebido por outro idoso da família
+- Benefício previdenciário de 1 salário mínimo recebido por idoso da família
 - Rendimentos de estagio supervisionado e aprendizagem
 
-> **Regra de protecao:** O BPC continua garantido se a renda do ultimo mes analisado **ou** a media dos ultimos 12 meses ficar dentro do limite. Isso protege a familia em caso de variacao temporaria de renda (por exemplo, um filho que fez um bico em um mes).
+> **Regra de proteção:** O BPC contínua garantido se a renda do ultimo mês analisado **ou** a media dos ultimos 12 meses ficar dentro do limite. Isso protege a família em caso de variacao temporária de renda (por exemplo, um filho que fez um bico em um mês).
 
 ---
 
 ## E Se a Renda Ultrapassar o Limite? (Flexibilizacao pela Justica)
 
-Se o INSS negar o BPC porque a renda da familia ultrapassa um pouco o limite de 1/4 do salario minimo, **ainda ha esperanca**. A Justica brasileira tem uma posicao favoravel:
+Se o INSS negar o BPC porque a renda da família ultrapassa um pouco o limite de 1/4 do salário mínimo, **ainda ha esperanca**. A Justica brasileira tem uma posicao favoravel:
 
 ### O Que Decidiu o Supremo Tribunal Federal (STF)
 
-O STF decidiu (Tema 27 -- RE 567.985/MT, em 2013) que o criterio de 1/4 do salario minimo **nao pode ser um limite absoluto**. Isso quer dizer que mesmo quem tem renda um pouco acima pode conseguir o BPC, se provar que vive em condicao de necessidade.
+O STF decidiu (Tema 27 -- RE 567.985/MT, em 2013) que o criterio de 1/4 do salário mínimo **não pode ser um limite absoluto**. Isso quer dizer que mesmo quem tem renda um pouco acima pode conseguir o BPC, se provar que vive em condição de necessidade.
 
 ### O Que Decidiu o Superior Tribunal de Justica (STJ)
 
-O STJ (Tema 185) confirmou que o juiz pode analisar a situacao real da familia e conceder o BPC mesmo quando a renda ultrapassa o criterio legal, se ficar comprovada a vulnerabilidade.
+O STJ (Tema 185) confirmou que o juiz pode analisar a situação real da família e conceder o BPC mesmo quando a renda ultrapassa o criterio legal, se ficar comprovada a vulnerabilidade.
 
-### Na Pratica, O Que Isso Significa?
+### Na Prática, O Que Isso Significa?
 
-Se o INSS negou seu BPC por causa da renda, voce pode entrar na Justica e apresentar provas de que, mesmo com a renda acima do limite, a familia vive em situacao dificil. Exemplos de provas que ajudam:
+Se o INSS negou seu BPC por causa da renda, você pode entrar na Justica e apresentar provas de que, mesmo com a renda acima do limite, a família vive em situação difícil. Exemplos de provas que ajudam:
 
-- Gastos altos com medicamentos e tratamentos de saude
+- Gastos altos com medicamentos e tratamentos de saúde
 - Moradia precaria
 - Dividas essenciais
 - Outros fatores que mostrem vulnerabilidade
 
-> **Importante:** Para entrar na Justica, voce pode procurar a **Defensoria Publica do DF** -- telefone (61) 3105-9200. O servico e gratuito. Tambem e possivel procurar o **Juizado Especial Federal** sem advogado, para causas de ate 60 salarios minimos.
+> **Importante:** Para entrar na Justica, você pode procurar a **Defensoria Pública do DF** -- telefone (61) 3105-9200. O serviço é gratuito. Também é possível procurar o **Juizado Especial Federal** sem advogado, para causas de até 60 salários minimos.
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
 Reuna os seguintes documentos antes de solicitar o BPC:
 
-1. **Documento de identificacao com foto** (RG, CNH ou outro documento oficial) do requerente
-2. **CPF de todos os membros da familia** -- todos devem ter CPF regular
-3. **Comprovante de residencia** (conta de luz, agua ou correspondencia oficial)
-4. **Inscricao atualizada no CadUnico** -- e OBRIGATORIO fazer o CadUnico antes de pedir o BPC
-5. **Cadastro biometrico** -- preferencialmente pela Carteira de Identidade Nacional (CIN), ou titulo de eleitor, ou Policia Federal
-6. **Laudos e relatorios medicos** (para pessoa com deficiencia) -- leve todos os laudos, relatorios de tratamento, exames e documentos que comprovem a deficiencia e suas limitacoes
-7. **Comprovantes de renda de todos os moradores da casa** -- holerites, declaracao de imposto de renda, Carteira de Trabalho, etc.
+1. **Documento de identificação com foto** (RG, CNH ou outro documento oficial) do requerente
+2. **CPF de todos os membros da família** -- todos devem ter CPF regular
+3. **Comprovante de residência** (conta de luz, agua ou correspondencia oficial)
+4. **Inscrição atualizada no CadUnico** -- e OBRIGATORIO fazer o CadUnico antes de pedir o BPC
+5. **Cadastro biometrico** -- preferencialmente pela Carteira de Identidade Nacional (CIN), ou título de eleitor, ou Polícia Federal
+6. **Laudos e relatorios médicos** (para pessoa com deficiência) -- leve todos os laudos, relatorios de tratamento, exames e documentos que comprovem a deficiência e suas limitacoes
+7. **Comprovantes de renda de todos os moradores da casa** -- holerites, declaração de imposto de renda, Carteira de Trabalho, etc.
 
 ---
 
 ## Passo a Passo: Como Solicitar o BPC
 
-### PASSO 1 -- Faca o Cadastro Unico
+### PASSO 1 -- Faca o Cadastro Único
 
-- Va ao CRAS mais proximo da sua casa (veja a lista no capitulo [01 - Cadastro Unico](01-cadastro-unico.md))
-- Faca ou atualize o CadUnico com os documentos de **todos** os membros da familia
-- **Sem CadUnico, o INSS nao aceita o pedido de BPC**
+- Va ao CRAS mais proximo da sua casa (veja a lista no capítulo [01 - Cadastro Único](01-cadastro-único.md))
+- Faca ou atualize o CadUnico com os documentos de **todos** os membros da família
+- **Sem CadUnico, o INSS não aceita o pedido de BPC**
 
 ### PASSO 2 -- Providencie o Cadastro Biometrico
 
-- Faca a Carteira de Identidade Nacional (CIN) em um posto de identificacao
-- Ou certifique-se de ter biometria cadastrada no titulo de eleitor ou na Policia Federal
+- Faca a Carteira de Identidade Nacional (CIN) em um posto de identificação
+- Ou certifique-se de ter biometria cadastrada no título de eleitor ou na Polícia Federal
 
 ### PASSO 3 -- Faca o Pedido no INSS
 
-Voce pode pedir o BPC de tres formas:
+Você pode pedir o BPC de três formas:
 
 **a) Pela internet (Meu INSS):**
 - Acesse https://meu.inss.gov.br ou baixe o aplicativo "Meu INSS"
 - Faca login com sua conta gov.br
 - Clique em "Novo Pedido"
-- Escolha "Beneficio Assistencial a Pessoa com Deficiencia" ou "Beneficio Assistencial ao Idoso"
+- Escolha "Benefício Assistencial a Pessoa com Deficiência" ou "Benefício Assistencial ao Idoso"
 
 **b) Por telefone:**
 - Ligue para o **135** (ligacao gratuita de telefone fixo)
 - Funciona de segunda a sabado, das 7h as 22h
 
-**c) Presencialmente na agencia do INSS:**
+**c) Presencialmente na agência do INSS:**
 - Agende pelo 135 ou pelo Meu INSS
 - Compareca com todos os documentos na data agendada
 
-### PASSO 4 -- Pericia (somente para pessoa com deficiencia)
+### PASSO 4 -- Pericia (somente para pessoa com deficiência)
 
-- O INSS vai agendar uma avaliacao chamada **pericia biopsicossocial**
-- Essa avaliacao analisa tanto os aspectos medicos quanto os aspectos sociais da deficiencia
-- Leve todos os laudos, relatorios e exames medicos que tiver
+- O INSS vai agendar uma avaliação chamada **pericia biopsicossocial**
+- Essa avaliação analisa tanto os aspectos médicos quanto os aspectos sociais da deficiência
+- Leve todos os laudos, relatorios e exames médicos que tiver
 
 ---
 
-## Prazo de Analise e O Que Fazer Se For Negado
+## Prazo de Análise e O Que Fazer Se For Negado
 
 ### Prazo
 
-O INSS tem ate **90 dias** para analisar o pedido. Na pratica, pode demorar mais.
+O INSS tem até **90 dias** para analisar o pedido. Na prática, pode demorar mais.
 
-Se houver pendencias nos documentos, voce tera **30 dias** para resolver a partir do momento em que for notificado.
+Se houver pendencias nos documentos, você terá **30 dias** para resolver a partir do momento em que for notificado.
 
 ### Se o BPC For Negado
 
 **1. Recurso administrativo:**
-- Voce pode recorrer ao Conselho de Recursos do Seguro Social (CRSS)
-- O prazo para recorrer e de **30 dias** apos tomar conhecimento da decisao
-- O recurso e feito pelo Meu INSS ou pelo telefone 135
+- Você pode recorrer ao Conselho de Recursos do Seguro Social (CRSS)
+- O prazo para recorrer e de **30 dias** após tomar conhecimento da decisão
+- O recurso é feito pelo Meu INSS ou pelo telefone 135
 
-**2. Acao judicial:**
-- Se o recurso administrativo tambem for negado, voce pode entrar na Justica
-- Procure a **Defensoria Publica do DF** -- telefone (61) 3105-9200
-- Ou va diretamente ao **Juizado Especial Federal** -- nao precisa de advogado para causas de ate 60 salarios minimos
-
----
-
-## Informacoes Importantes
-
-- O BPC **nao pode ser acumulado** com aposentadoria, pensao por morte ou outros beneficios previdenciarios
-- Pessoa com deficiencia que recebe BPC **nao pode estar trabalhando** (exceto quem recebe o auxilio-inclusao, que permite atividade remunerada)
-- O BPC **nao paga 13o salario**
-- O BPC **nao gera pensao por morte** para os dependentes
-- O beneficio e **revisado a cada 2 anos** pelo INSS -- mantenha o CadUnico sempre atualizado para nao perder o beneficio
+**2. Ação judicial:**
+- Se o recurso administrativo também for negado, você pode entrar na Justica
+- Procure a **Defensoria Pública do DF** -- telefone (61) 3105-9200
+- Ou va diretamente ao **Juizado Especial Federal** -- não precisa de advogado para causas de até 60 salários minimos
 
 ---
 
-## Onde Ir e Telefones Uteis
+## Informações Importantes
 
-| Servico | Telefone / Canal |
+- O BPC **não pode ser acumulado** com aposentadoria, pensão por morte ou outros benefícios previdenciários
+- Pessoa com deficiência que recebe BPC **não pode estar trabalhando** (exceto quem recebe o auxílio-inclusao, que permite atividade remunerada)
+- O BPC **não paga 13o salário**
+- O BPC **não gera pensão por morte** para os dependentes
+- O benefício e **revisado a cada 2 anos** pelo INSS -- mantenha o CadUnico sempre atualizado para não perder o benefício
+
+---
+
+## Onde Ir e Telefones Úteis
+
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | INSS (agendar, tirar duvidas, fazer pedido) | 135 |
 | Meu INSS (internet) | https://meu.inss.gov.br |
-| CRAS (fazer CadUnico) | Veja lista em [01 - Cadastro Unico](01-cadastro-unico.md) |
-| Defensoria Publica do DF (ajuda juridica gratuita) | (61) 3105-9200 |
+| CRAS (fazer CadUnico) | Veja lista em [01 - Cadastro Único](01-cadastro-único.md) |
+| Defensoria Pública do DF (ajuda jurídica gratuita) | (61) 3105-9200 |
 | Disque Social | 121 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - Lei 8.742/1993 (LOAS), artigo 20: https://www.planalto.gov.br/ccivil_03/leis/l8742.htm
 - Decreto 12.064/2024 (regulamentacao do BPC): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12064.htm
-- Ministerio do Desenvolvimento e Assistencia Social -- BPC: https://www.gov.br/mds/pt-br/acoes-e-programas/suas/beneficios-assistenciais/beneficio-assistencial-ao-idoso-e-a-pessoa-com-deficiencia-bpc
+- Ministerio do Desenvolvimento e Assistência Social -- BPC: https://www.gov.br/mds/pt-br/ações-e-programas/suas/benefícios-assistenciais/benefício-assistencial-ao-idoso-e-a-pessoa-com-deficiência-bpc
 - STF -- Tema 27 (flexibilizacao do criterio de renda): https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=27
 - Perguntas frequentes sobre BPC/LOAS: https://www.jusbrasil.com.br/artigos/as-perguntas-mais-comuns-sobre-o-bpc-loas-respostas-atualizadas-para-2026/5370448380
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
 `
         },
         {
@@ -713,34 +713,34 @@ Se houver pendencias nos documentos, voce tera **30 dias** para resolver a parti
 
 ## O Que E o Seguro-Desemprego?
 
-O Seguro-Desemprego e uma ajuda financeira temporaria paga pelo governo federal ao trabalhador que foi **demitido sem justa causa**. O objetivo e garantir uma renda enquanto a pessoa procura um novo emprego.
+O Seguro-Desemprego é uma ajuda financeira temporária paga pelo governo federal ao trabalhador que foi **demitido sem justa causa**. O objetivo e garantir uma renda enquanto a pessoa procura um novo emprego.
 
-O beneficio e pago em parcelas mensais, por um periodo limitado, e o valor depende do salario que o trabalhador recebia.
+O benefício é pago em parcelas mensais, por um período limitado, é o valor depende do salário que o trabalhador recebia.
 
-> **Em resumo:** Se voce foi mandado embora do trabalho sem ter cometido falta grave, tem direito a receber um dinheiro por alguns meses ate conseguir um novo emprego.
+> **Em resumo:** Se você foi mandado embora do trabalho sem ter cometido falta grave, tem direito a receber um dinheiro por alguns meses até conseguir um novo emprego.
 
 ---
 
 ## Quem Tem Direito?
 
-Para receber o Seguro-Desemprego, voce precisa cumprir **todas** estas condicoes:
+Para receber o Seguro-Desemprego, você precisa cumprir **todas** estas condições:
 
 - Ter sido dispensado **sem justa causa** (incluindo dispensa indireta)
 - Estar **desempregado** no momento do pedido
-- Nao ter renda propria suficiente para se manter
-- Nao estar recebendo beneficio previdenciario de prestacao continuada (exceto auxilio-acidente ou pensao por morte)
+- Não ter renda própria suficiente para se manter
+- Não estar recebendo benefício previdenciário de prestação continuada (exceto auxílio-acidente ou pensão por morte)
 
-### Tempo Minimo de Trabalho Exigido
+### Tempo Mínimo de Trabalho Exigido
 
-A quantidade de meses que voce precisa ter trabalhado depende de quantas vezes ja pediu o Seguro-Desemprego:
+A quantidade de meses que você precisa ter trabalhado depende de quantas vezes já pediu o Seguro-Desemprego:
 
-| Situacao | Tempo Minimo de Trabalho |
+| Situação | Tempo Mínimo de Trabalho |
 |----------|------------------------|
-| **1a vez** que pede | 12 meses nos ultimos 18 meses antes da demissao |
-| **2a vez** que pede | 9 meses nos ultimos 12 meses antes da demissao |
-| **3a vez em diante** | 6 meses seguidos antes da demissao |
+| **1a vez** que pede | 12 meses nos ultimos 18 meses antes da demissão |
+| **2a vez** que pede | 9 meses nos ultimos 12 meses antes da demissão |
+| **3a vez em diante** | 6 meses seguidos antes da demissão |
 
-> **Exemplo:** Se e a primeira vez que voce pede o Seguro-Desemprego, precisa ter trabalhado pelo menos 12 meses nos ultimos 18 meses. Na segunda vez, bastam 9 meses nos ultimos 12 meses.
+> **Exemplo:** Se é a primeira vez que você pede o Seguro-Desemprego, precisa ter trabalhado pelo menos 12 meses nos ultimos 18 meses. Na segunda vez, bastam 9 meses nos ultimos 12 meses.
 
 ---
 
@@ -748,24 +748,24 @@ A quantidade de meses que voce precisa ter trabalhado depende de quantas vezes j
 
 ### Valores em 2026
 
-- **Valor minimo:** R$ 1.621,00 (salario minimo)
-- **Valor maximo (teto):** R$ 2.518,65
+- **Valor mínimo:** R$ 1.621,00 (salário mínimo)
+- **Valor máximo (teto):** R$ 2.518,65
 
-O valor e calculado com base na **media dos 3 ultimos salarios** antes da demissao:
+O valor é calculado com base na **media dos 3 ultimos salários** antes da demissão:
 
-| Media Salarial | Como Calcular o Beneficio |
+| Media Salarial | Como Calcular o Benefício |
 |---------------|--------------------------|
-| Ate R$ 2.138,76 | Multiplica a media por 0,8 (ou seja, 80% do salario) |
+| Até R$ 2.138,76 | Multiplica a media por 0,8 (ou seja, 80% do salário) |
 | De R$ 2.138,77 a R$ 3.563,52 | O que passar de R$ 2.138,76 multiplica por 0,5 (50%) e soma R$ 1.711,01 |
 | Acima de R$ 3.563,52 | Recebe o teto: R$ 2.518,65 |
 
-> **Exemplo pratico:** Se a media dos seus 3 ultimos salarios foi de R$ 2.000,00, o calculo e: R$ 2.000,00 x 0,8 = **R$ 1.600,00**. Como o minimo e R$ 1.621,00, voce receberia **R$ 1.621,00**.
+> **Exemplo prático:** Se a media dos seus 3 ultimos salários foi de R$ 2.000,00, o calculo e: R$ 2.000,00 x 0,8 = **R$ 1.600,00**. Como o mínimo e R$ 1.621,00, você receberia **R$ 1.621,00**.
 
 ### Quantas Parcelas Vou Receber?
 
-O numero de parcelas depende de quanto tempo voce trabalhou:
+O número de parcelas depende de quanto tempo você trabalhou:
 
-| Tempo Trabalhado | Numero de Parcelas |
+| Tempo Trabalhado | Número de Parcelas |
 |-----------------|-------------------|
 | 6 a 11 meses | 3 parcelas |
 | 12 a 23 meses | 4 parcelas |
@@ -777,55 +777,55 @@ O numero de parcelas depende de quanto tempo voce trabalhou:
 
 ### Prazo Para Pedir
 
-Voce deve solicitar o Seguro-Desemprego dentro do seguinte prazo:
+Você deve solicitar o Seguro-Desemprego dentro do seguinte prazo:
 
-- **Trabalhador formal:** do **7o ao 120o dia** apos a demissao
-- **Empregado domestico:** do **7o ao 90o dia** apos a demissao
+- **Trabalhador formal:** do **7o ao 120o dia** após a demissão
+- **Empregado doméstico:** do **7o ao 90o dia** após a demissão
 
-> **Atencao:** Se voce perder o prazo, perde o direito ao beneficio. Nao deixe para a ultima hora.
+> **Atenção:** Se você perder o prazo, perde o direito ao benefício. Não deixe para a ultima hora.
 
 ### Onde Solicitar
 
-Voce pode pedir o Seguro-Desemprego de tres formas:
+Você pode pedir o Seguro-Desemprego de três formas:
 
 **a) Pela internet (Gov.br):**
-- Acesse https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego
+- Acesse https://www.gov.br/pt-br/serviços/solicitar-o-seguro-desemprego
 - Faca login com sua conta gov.br
-- Siga as instrucoes na tela
+- Siga as instruções na tela
 
 **b) Pelo aplicativo Carteira de Trabalho Digital:**
 - Baixe o app "Carteira de Trabalho Digital" no celular (Android ou iPhone)
 - Faca login com sua conta gov.br
-- Selecione "Seguro-Desemprego" e siga as instrucoes
+- Selecione "Seguro-Desemprego" e siga as instruções
 
 **c) Presencialmente:**
-- Va a uma **Agencia do Trabalhador** ou posto do **SINE** (Sistema Nacional de Emprego)
+- Va a uma **Agência do Trabalhador** ou posto do **SINE** (Sistema Nacional de Emprego)
 - No DF, a principal unidade fica em: **SIA Trecho 02, Edificio SIA Center**
-- Tambem e possivel solicitar nas unidades do **Na Hora** no DF
+- Também é possível solicitar nas unidades do **Na Hora** no DF
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
 Leve os seguintes documentos ao fazer o pedido:
 
-- **Documento de identificacao** (RG ou CNH)
+- **Documento de identificação** (RG ou CNH)
 - **CPF**
-- **Carteira de Trabalho** (fisica ou digital)
-- **Termo de Rescisao do Contrato de Trabalho (TRCT)** -- documento que voce recebe quando e demitido
-- **Comprovante de requerimento do Seguro-Desemprego** -- formulario fornecido pelo empregador no momento da demissao
+- **Carteira de Trabalho** (física ou digital)
+- **Termo de Rescisão do Contrato de Trabalho (TRCT)** -- documento que você recebe quando e demitido
+- **Comprovante de requerimento do Seguro-Desemprego** -- formulário fornecido pelo empregador no momento da demissão
 - **Ultimos 3 contracheques** (holerites)
-- **Dados de conta bancaria** (preferencialmente Caixa Economica Federal ou Banco do Brasil)
+- **Dados de conta bancaria** (preferencialmente Caixa Econômica Federal ou Banco do Brasil)
 
-> **Dica:** Se voce fez a solicitacao pela internet ou pelo aplicativo, pode nao ser necessario apresentar documentos fisicos. Mas tenha tudo em maos para o caso de ser solicitado.
+> **Dica:** Se você fez a solicitação pela internet ou pelo aplicativo, pode não ser necessário apresentar documentos fisicos. Mas tenha tudo em maos para o caso de ser solicitado.
 
 ---
 
 ## Onde Ir no Distrito Federal
 
-| Local | Endereco | Contato |
+| Local | Endereço | Contato |
 |-------|----------|---------|
-| Agencia do Trabalhador (sede) | SIA Trecho 02, Edificio SIA Center | Central 156 |
+| Agência do Trabalhador (sede) | SIA Trecho 02, Edificio SIA Center | Central 156 |
 | Unidades Na Hora | Diversas localizacoes no DF | Central 156 |
 
 Para encontrar a unidade mais proxima, ligue para a Central **156** do GDF.
@@ -834,63 +834,63 @@ Para encontrar a unidade mais proxima, ligue para a Central **156** do GDF.
 
 ## Perguntas Frequentes
 
-**Se eu arranjar um emprego durante o periodo do Seguro-Desemprego, o que acontece?**
-O beneficio e cancelado a partir do momento em que voce comecar a trabalhar com carteira assinada. Voce recebe as parcelas ate o mes em que foi contratado.
+**Se eu arranjar um emprego durante o período do Seguro-Desemprego, o que acontece?**
+O benefício e cancelado a partir do momento em que você comecar a trabalhar com carteira assinada. Você recebe as parcelas até o mês em que foi contratado.
 
-**Posso receber o Seguro-Desemprego e o Bolsa Familia ao mesmo tempo?**
-O Seguro-Desemprego entra no calculo da renda familiar. Se a renda per capita da familia ultrapassar o limite do Bolsa Familia (R$ 218,00), o Bolsa Familia pode ser suspenso temporariamente. Quando o Seguro-Desemprego terminar e a renda baixar, o Bolsa Familia pode ser restabelecido.
+**Posso receber o Seguro-Desemprego é o Bolsa Família ao mesmo tempo?**
+O Seguro-Desemprego entra no calculo da renda familiar. Se a renda per capita da família ultrapassar o limite do Bolsa Família (R$ 218,00), o Bolsa Família pode ser suspenso temporariamente. Quando o Seguro-Desemprego terminar é a renda baixar, o Bolsa Família pode ser restabelecido.
 
 **Fui demitido por justa causa. Tenho direito?**
-Nao. O Seguro-Desemprego e apenas para quem foi demitido **sem justa causa**.
+Não. O Seguro-Desemprego e apenas para quem foi demitido **sem justa causa**.
 
 **Posso pedir mais de uma vez?**
-Sim, desde que cumpra os prazos de carencia (tempo minimo de trabalho) para cada solicitacao.
+Sim, desde que cumpra os prazos de carência (tempo mínimo de trabalho) para cada solicitação.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| Central do GDF (localizar Agencia do Trabalhador) | 156 |
-| Portal Gov.br (solicitar online) | https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego |
-| Aplicativo Carteira de Trabalho Digital | Disponivel para Android e iPhone |
+| Central do GDF (localizar Agência do Trabalhador) | 156 |
+| Portal Gov.br (solicitar online) | https://www.gov.br/pt-br/serviços/solicitar-o-seguro-desemprego |
+| Aplicativo Carteira de Trabalho Digital | Disponível para Android e iPhone |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Ministerio do Trabalho e Emprego -- Reajuste do Seguro-Desemprego 2026: https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2026/janeiro/mte-reajusta-valores-do-beneficio-seguro-desemprego
+- Ministerio do Trabalho e Emprego -- Reajuste do Seguro-Desemprego 2026: https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2026/janeiro/mte-reajusta-valores-do-benefício-seguro-desemprego
 - Governo Federal -- Reajuste do Seguro-Desemprego: https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/01/governo-do-brasil-reajusta-valores-do-seguro-desemprego
-- Portal Gov.br -- Solicitar o Seguro-Desemprego: https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego
+- Portal Gov.br -- Solicitar o Seguro-Desemprego: https://www.gov.br/pt-br/serviços/solicitar-o-seguro-desemprego
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
 `
         },
         {
-          id: `05-auxilio-reclusao`,
-          title: `Auxilio-Reclusao`,
-          content: `# Auxilio-Reclusao
+          id: `05-auxílio-reclusão`,
+          title: `Auxílio-Reclusão`,
+          content: `# Auxílio-Reclusão
 
-## O Que E o Auxilio-Reclusao?
+## O Que E o Auxílio-Reclusão?
 
-O Auxilio-Reclusao e um beneficio pago pelo INSS aos **dependentes** (familiares) de um trabalhador segurado que esta preso em regime fechado. O valor e de **1 salario minimo por mes (R$ 1.621,00 em 2026)**.
+O Auxílio-Reclusão é um benefício pago pelo INSS aos **dependentes** (familiares) de um trabalhador segurado que está preso em regime fechado. O valor e de **1 salário mínimo por mês (R$ 1.621,00 em 2026)**.
 
-> **Atencao:** O dinheiro nao e pago ao preso. E pago a **familia** dele -- esposa, marido, companheiro(a), filhos ou outros dependentes. O objetivo e ajudar a familia que perdeu a renda do segurado preso.
+> **Atenção:** O dinheiro não é pago ao preso. E pago a **família** dele -- esposa, marido, companheiro(a), filhos ou outros dependentes. O objetivo e ajudar a família que perdeu a renda do segurado preso.
 
 ---
 
 ## Quem Pode Receber? (Os Dependentes)
 
-Os dependentes do segurado preso podem receber o Auxilio-Reclusao, na seguinte ordem de prioridade:
+Os dependentes do segurado preso podem receber o Auxílio-Reclusão, na seguinte ordem de prioridade:
 
-### Classe 1 -- Nao precisam provar dependencia economica
+### Classe 1 -- Não precisam provar dependência econômica
 
 - Esposo(a) ou companheiro(a)
 - Filhos menores de 21 anos
-- Filhos invalidos ou com deficiencia (sem limite de idade)
+- Filhos invalidos ou com deficiência (sem limite de idade)
 
 ### Classe 2 -- Precisam provar que dependiam economicamente do preso
 
@@ -899,52 +899,52 @@ Os dependentes do segurado preso podem receber o Auxilio-Reclusao, na seguinte o
 ### Classe 3 -- Precisam provar que dependiam economicamente do preso
 
 - Irmaos menores de 21 anos
-- Irmaos invalidos ou com deficiencia (sem limite de idade)
+- Irmaos invalidos ou com deficiência (sem limite de idade)
 
-> **Regra importante:** Se existirem dependentes da Classe 1, os dependentes das Classes 2 e 3 nao recebem. A prioridade e sempre da classe anterior.
+> **Regra importante:** Se existirem dependentes da Classe 1, os dependentes das Classes 2 e 3 não recebem. A prioridade e sempre da classe anterior.
 
 ---
 
 ## Quais Sao os Requisitos?
 
-Para que a familia tenha direito ao Auxilio-Reclusao, o preso precisa cumprir **todos** estes requisitos:
+Para que a família tenha direito ao Auxílio-Reclusão, o preso precisa cumprir **todos** estes requisitos:
 
-1. **Ser segurado do INSS** -- ou seja, estava contribuindo (trabalhando com carteira assinada ou pagando como contribuinte individual) no momento da prisao
-2. **Ter pelo menos 24 meses de contribuicao** antes da prisao
-3. **Ser de baixa renda** -- a media dos 12 ultimos salarios de contribuicao nao pode ultrapassar **R$ 1.754,18** (referencia 2025 -- valor atualizado anualmente)
+1. **Ser segurado do INSS** -- ou seja, estava contribuindo (trabalhando com carteira assinada ou pagando como contribuinte individual) no momento da prisão
+2. **Ter pelo menos 24 meses de contribuição** antes da prisão
+3. **Ser de baixa renda** -- a media dos 12 ultimos salários de contribuição não pode ultrapassar **R$ 1.754,18** (referência 2025 -- valor atualizado anualmente)
 4. **Estar preso em regime fechado** (ou semiaberto em colonia agricola/industrial)
-5. **Nao estar recebendo** salario da empresa, auxilio-doenca, aposentadoria ou outro beneficio do INSS
+5. **Não estar recebendo** salário da empresa, auxílio-doenca, aposentadoria ou outro benefício do INSS
 
 ---
 
-## Qual o Valor do Beneficio?
+## Qual o Valor do Benefício?
 
-O valor e fixo em **1 salario minimo** (R$ 1.621,00 em 2026), independentemente de quanto o segurado ganhava.
+O valor e fixo em **1 salário mínimo** (R$ 1.621,00 em 2026), independentemente de quanto o segurado ganhava.
 
-Se houver mais de um dependente, o valor e dividido entre todos igualmente.
+Se houver mais de um dependente, o valor é dividido entre todos igualmente.
 
 ---
 
-## Por Quanto Tempo a Familia Recebe?
+## Por Quanto Tempo a Família Recebe?
 
 ### Para Esposo(a) ou Companheiro(a)
 
-A duracao depende da idade do conjuge no momento da prisao:
+A duração depende da idade do cônjuge no momento da prisão:
 
-| Idade do Conjuge na Data da Prisao | Duracao do Beneficio |
+| Idade do Cônjuge na Data da Prisão | Duração do Benefício |
 |-----------------------------------|---------------------|
 | Menos de 22 anos | 3 anos |
 | 22 a 27 anos | 6 anos |
 | 28 a 30 anos | 10 anos |
 | 31 a 41 anos | 15 anos |
 | 42 a 44 anos | 20 anos |
-| 45 anos ou mais | Vitalicio (enquanto durar a prisao) |
+| 45 anos ou mais | Vitalício (enquanto durar a prisão) |
 
-> **Atencao:** Se o casamento ou uniao estavel tiver menos de 2 anos antes da prisao, a duracao do beneficio e de apenas **4 meses**.
+> **Atenção:** Se o casamento ou uniao estável tiver menos de 2 anos antes da prisão, a duração do benefício e de apenas **4 meses**.
 
 ### Para Filhos
 
-O beneficio e pago ate o filho completar **21 anos**. Se o filho for invalido ou tiver deficiencia, nao ha limite de idade.
+O benefício é pago até o filho completar **21 anos**. Se o filho for inválido ou tiver deficiência, não ha limite de idade.
 
 ---
 
@@ -952,16 +952,16 @@ O beneficio e pago ate o filho completar **21 anos**. Se o filho for invalido ou
 
 ### PASSO 1 -- Reuna os documentos
 
-Veja a lista completa na secao "Documentos Necessarios" abaixo.
+Veja a lista completa na seção "Documentos Necessários" abaixo.
 
 ### PASSO 2 -- Faca o pedido no INSS
 
-Voce pode solicitar de duas formas:
+Você pode solicitar de duas formas:
 
 **a) Pela internet (Meu INSS):**
 - Acesse https://meu.inss.gov.br ou baixe o aplicativo "Meu INSS"
 - Faca login com sua conta gov.br
-- Clique em "Novo Pedido" e selecione "Auxilio-Reclusao"
+- Clique em "Novo Pedido" e selecione "Auxílio-Reclusão"
 
 **b) Por telefone:**
 - Ligue para o **135** (ligacao gratuita de telefone fixo)
@@ -975,90 +975,90 @@ Voce pode solicitar de duas formas:
 
 ### Prazo Importante Para Solicitar
 
-- Se o pedido for feito dentro de **90 dias** apos a prisao: o pagamento retroage a data da prisao (voce recebe desde o dia em que o segurado foi preso)
-- Se o pedido for feito apos 90 dias: o pagamento comeca apenas na data do pedido
+- Se o pedido for feito dentro de **90 dias** após a prisão: o pagamento retroage a data da prisão (você recebe desde o dia em que o segurado foi preso)
+- Se o pedido for feito após 90 dias: o pagamento comeca apenas na data do pedido
 
-> **Dica:** Nao demore para pedir. Quanto antes voce fizer o pedido, antes a familia comeca a receber.
+> **Dica:** Não demore para pedir. Quanto antes você fizer o pedido, antes a família comeca a receber.
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
-- **Documento de identificacao** do dependente que esta pedindo (RG ou CNH)
+- **Documento de identificação** do dependente que está pedindo (RG ou CNH)
 - **CPF** do dependente e do preso
-- **Certidao de recolhimento a prisao** -- documento emitido pela unidade prisional que confirma que o segurado esta preso em regime fechado
-- **Documentos que comprovem a relacao de dependencia:**
+- **Certidao de recolhimento a prisão** -- documento emitido pela unidade prisional que confirma que o segurado está preso em regime fechado
+- **Documentos que comprovem a relacao de dependência:**
   - Certidao de casamento (esposo/esposa)
   - Certidao de nascimento (filhos)
-  - Prova de uniao estavel (companheiro/companheira)
-  - Documentos que comprovem dependencia economica (pais, irmaos)
-- **Comprovantes de contribuicao do segurado ao INSS** (contracheques, Carteira de Trabalho)
+  - Prova de uniao estável (companheiro/companheira)
+  - Documentos que comprovem dependência econômica (pais, irmaos)
+- **Comprovantes de contribuição do segurado ao INSS** (contracheques, Carteira de Trabalho)
 
-> **Onde conseguir a Certidao de Recolhimento a Prisao:** Solicite na propria unidade prisional (penitenciaria ou presidio) onde o segurado esta preso. E o documento mais importante para o pedido.
-
----
-
-## Manutencao do Beneficio -- O Que Fazer a Cada 3 Meses
-
-Depois que o beneficio for concedido, a familia precisa apresentar a **Declaracao de Carcere/Reclusao** (emitida pela unidade prisional) a cada **3 meses** pelo Meu INSS.
-
-> **Atencao:** Se a declaracao nao for apresentada no prazo, o beneficio sera **suspenso**. Nao esqueca de renovar a cada 3 meses.
+> **Onde conseguir a Certidao de Recolhimento a Prisão:** Solicite na própria unidade prisional (penitenciaria ou presidio) onde o segurado está preso. E o documento mais importante para o pedido.
 
 ---
 
-## Quando o Beneficio E Cancelado
+## Manutenção do Benefício -- O Que Fazer a Cada 3 Meses
 
-O Auxilio-Reclusao e cancelado imediatamente quando:
+Depois que o benefício for concedido, a família precisa apresentar a **Declaração de Carcere/Reclusão** (emitida pela unidade prisional) a cada **3 meses** pelo Meu INSS.
+
+> **Atenção:** Se a declaração não for apresentada no prazo, o benefício será **suspenso**. Não esqueca de renovar a cada 3 meses.
+
+---
+
+## Quando o Benefício E Cancelado
+
+O Auxílio-Reclusão e cancelado imediatamente quando:
 
 - O preso e **libertado**
 - O preso **foge**
 - O preso e transferido para **regime aberto** ou semiaberto (exceto colonia agricola)
-- O preso passa a receber **aposentadoria** ou outro beneficio do INSS
-- O dependente **perde a qualidade** (ex: filho completa 21 anos, divorcio do conjuge)
+- O preso passa a receber **aposentadoria** ou outro benefício do INSS
+- O dependente **perde a qualidade** (ex: filho completa 21 anos, divorcio do cônjuge)
 
-> **Muito importante:** Quando o preso for solto, o dependente deve apresentar o documento de soltura ao INSS **imediatamente**. Se a familia continuar recebendo o beneficio apos a soltura, o INSS vai cobrar a devolucao dos valores.
+> **Muito importante:** Quando o preso for solto, o dependente deve apresentar o documento de soltura ao INSS **imediatamente**. Se a família continuar recebendo o benefício após a soltura, o INSS vai cobrar a devolucao dos valores.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | INSS (agendar, tirar duvidas, fazer pedido) | 135 |
 | Meu INSS (internet) | https://meu.inss.gov.br |
-| Defensoria Publica do DF (ajuda juridica gratuita) | (61) 3105-9200 |
+| Defensoria Pública do DF (ajuda jurídica gratuita) | (61) 3105-9200 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- INSS -- Auxilio-Reclusao: https://www.gov.br/inss/pt-br/direitos-e-deveres/auxilio-reclusao/auxilio-reclusao
-- INSS -- Entenda o Auxilio-Reclusao: https://www.gov.br/inss/pt-br/noticias/auxilio-reclusao-entenda-o-que-e-quem-tem-direito-e-como-pedir
+- INSS -- Auxílio-Reclusão: https://www.gov.br/inss/pt-br/direitos-e-deveres/auxílio-reclusão/auxílio-reclusão
+- INSS -- Entenda o Auxílio-Reclusão: https://www.gov.br/inss/pt-br/noticias/auxílio-reclusão-entenda-o-que-e-quem-tem-direito-e-como-pedir
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
 `
         },
         {
-          id: `06-beneficios-df`,
-          title: `Beneficios do Distrito Federal`,
-          content: `# Beneficios do Distrito Federal
+          id: `06-benefícios-df`,
+          title: `Benefícios do Distrito Federal`,
+          content: `# Benefícios do Distrito Federal
 
 ## Introducao
 
-Alem dos programas do governo federal, o Governo do Distrito Federal (GDF) oferece varios beneficios para familias em situacao de vulnerabilidade social. A maioria deles exige inscricao no **Cadastro Unico (CadUnico)** -- se voce ainda nao fez o seu, leia o capitulo [01 - Cadastro Unico](01-cadastro-unico.md).
+Além dos programas do governo federal, o Governo do Distrito Federal (GDF) oferece varios benefícios para famílias em situação de vulnerabilidade social. A maioria deles exige inscrição no **Cadastro Único (CadUnico)** -- se você ainda não fez o seu, leia o capítulo [01 - Cadastro Único](01-cadastro-único.md).
 
-Neste capitulo voce vai encontrar informacoes sobre:
+Neste capítulo você vai encontrar informações sobre:
 
 1. Cartao Material Escolar
 2. Passe Livre Estudantil
-3. Passe Livre Especial (Pessoas com Deficiencia)
+3. Passe Livre Especial (Pessoas com Deficiência)
 4. Programas Habitacionais (CODHAB)
-5. Tarifa Social de Energia Eletrica
+5. Tarifa Social de Energia Elétrica
 6. Tarifa Social de Agua e Esgoto (CAESB)
 7. Programa DF Social
-8. Beneficios Eventuais
+8. Benefícios Eventuais
 9. Carteira do Idoso
 
 ---
@@ -1067,28 +1067,28 @@ Neste capitulo voce vai encontrar informacoes sobre:
 
 ### O Que E
 
-Beneficio do GDF que oferece creditos para compra de material escolar em papelarias credenciadas no Distrito Federal.
+Benefício do GDF que oferece creditos para compra de material escolar em papelarias credenciadas no Distrito Federal.
 
 ### Quem Tem Direito
 
-- Estudantes matriculados na **rede publica de ensino do DF**
-- Pais ou responsaveis devem ser beneficiarios do **Bolsa Familia**
+- Estudantes matriculados na **rede pública de ensino do DF**
+- Pais ou responsáveis devem ser beneficiarios do **Bolsa Família**
 
-### Valores (Referencia 2025)
+### Valores (Referência 2025)
 
 | Nivel de Ensino | Valor |
 |----------------|-------|
-| Educacao Infantil, Educacao Especial e Ensino Fundamental | R$ 320,00 |
+| Educação Infantil, Educação Especial e Ensino Fundamental | R$ 320,00 |
 | Ensino Medio | R$ 240,00 |
 
 ### Como Funciona
 
-- **Voce nao precisa pedir.** O beneficio e concedido automaticamente. O GDF cruza os dados do Bolsa Familia com o sistema da Secretaria de Educacao.
-- O cartao e entregue na escola ou em ponto indicado pela Secretaria de Educacao.
-- O credito e liberado no inicio do ano letivo (geralmente em fevereiro), podendo ser em ate 3 lotes.
+- **Você não precisa pedir.** O benefício é concedido automaticamente. O GDF cruza os dados do Bolsa Família com o sistema da Secretaria de Educação.
+- O cartao e entregue na escola ou em ponto indicado pela Secretaria de Educação.
+- O credito e liberado no inicio do ano letivo (geralmente em fevereiro), podendo ser em até 3 lotes.
 - O credito pode ser usado em mais de 500 papelarias credenciadas no DF.
 
-> **Dica:** Se seu filho esta matriculado na rede publica e voce recebe Bolsa Familia, fique atento ao inicio do ano letivo. Se nao recebeu o cartao, procure a escola ou ligue para a Central 156.
+> **Dica:** Se seu filho esta matriculado na rede pública e você recebe Bolsa Família, fique atento ao inicio do ano letivo. Se não recebeu o cartao, procure a escola ou ligue para a Central 156.
 
 ---
 
@@ -1096,26 +1096,26 @@ Beneficio do GDF que oferece creditos para compra de material escolar em papelar
 
 ### O Que E
 
-Transporte publico gratuito (onibus e metro) para estudantes no Distrito Federal.
+Transporte público gratuito (onibus e metro) para estudantes no Distrito Federal.
 
 ### Quem Tem Direito
 
-- Estudantes regularmente matriculados em instituicoes de ensino do DF (rede publica e rede privada com bolsa integral)
-- Inclui acompanhantes de estudante crianca ou com deficiencia
+- Estudantes regularmente matriculados em instituições de ensino do DF (rede pública e rede privada com bolsa integral)
+- Inclui acompanhantes de estudante criança ou com deficiência
 
 ### Passo a Passo: Como Solicitar
 
 **PASSO 1** -- Acesse o site https://mobilidade.brb.com.br/passelivre
 
-**PASSO 2** -- Faca o cadastro online com seus dados pessoais e da instituicao de ensino
+**PASSO 2** -- Faca o cadastro online com seus dados pessoais e da instituição de ensino
 
 **PASSO 3** -- Se preferir, va presencialmente a um dos postos de atendimento do BRB Mobilidade
 
-### Documentos Necessarios
+### Documentos Necessários
 
 - RG e CPF
-- Comprovante de matricula ou declaracao escolar
-- Comprovante de residencia
+- Comprovante de matricula ou declaração escolar
+- Comprovante de residência
 - Foto 3x4
 
 ### Contato
@@ -1124,22 +1124,22 @@ Transporte publico gratuito (onibus e metro) para estudantes no Distrito Federal
 
 ---
 
-## 3. Passe Livre Especial (Pessoas com Deficiencia)
+## 3. Passe Livre Especial (Pessoas com Deficiência)
 
 ### O Que E
 
-Gratuidade no transporte publico coletivo do DF para pessoas com deficiencia.
+Gratuidade no transporte público coletivo do DF para pessoas com deficiência.
 
 ### Quem Tem Direito
 
-Pessoas com deficiencia que residem no Distrito Federal.
+Pessoas com deficiência que residem no Distrito Federal.
 
-### Documentos Necessarios
+### Documentos Necessários
 
-- Laudo medico atualizado (descrevendo a deficiencia)
+- Laudo médico atualizado (descrevendo a deficiência)
 - RG e CPF
 - Comprovante de renda
-- Comprovante de residencia
+- Comprovante de residência
 - Foto 3x4
 
 ### Como Solicitar
@@ -1159,59 +1159,59 @@ Pessoas com deficiencia que residem no Distrito Federal.
 
 A Companhia de Desenvolvimento Habitacional do DF (CODHAB) gerencia os programas de moradia popular do Distrito Federal, vinculados ao programa federal Minha Casa Minha Vida.
 
-### Programas Disponiveis
+### Programas Disponíveis
 
-- **Imoveis Prontos** -- unidades habitacionais construidas pelo GDF
-- **Lotes Urbanizados** -- terrenos com infraestrutura basica para construcao
-- **Morar Bem / Minha Casa Minha Vida** -- habitacoes para familias de baixa e media renda
+- **Imóveis Prontos** -- unidades habitacionais construidas pelo GDF
+- **Lotes Urbanizados** -- terrenos com infraestrutura básica para construção
+- **Morar Bem / Minha Casa Minha Vida** -- habitacoes para famílias de baixa e media renda
 
 ### Requisitos Basicos (Lei 3.877/2006)
 
 - Ser **maior de idade** ou emancipado
 - Residir no DF nos ultimos **5 anos** (tempo cumulativo) **ou** trabalhar no DF e morar na Regiao Metropolitana (RIDE)
-- Renda familiar bruta mensal de ate **R$ 8.000,00** (zona urbana) ou ate R$ 96.000,00 por ano (zona rural)
-- **Nao ser proprietario** de imovel residencial no DF
-- Nao ter sido beneficiario de programa habitacional anterior com transferencia de propriedade
-- Pessoas com deficiencia devem apresentar o CadPCD da Secretaria da Pessoa com Deficiencia (SEPD)
+- Renda familiar bruta mensal de até **R$ 8.000,00** (zona urbana) ou até R$ 96.000,00 por ano (zona rural)
+- **Não ser proprietario** de imóvel residencial no DF
+- Não ter sido beneficiario de programa habitacional anterior com transferencia de propriedade
+- Pessoas com deficiência devem apresentar o CadPCD da Secretaria da Pessoa com Deficiência (SEPD)
 
 ### Como Se Inscrever
 
-As inscricoes estao **permanentemente abertas** para as linhas "Imoveis Prontos" e "Lotes Urbanizados":
+As inscrições estão **permanentemente abertas** para as linhas "Imóveis Prontos" e "Lotes Urbanizados":
 
 - **Pela internet:** Acesse https://www.codhab.df.gov.br
 - **Pelo aplicativo:** Baixe o app **CODHAB CID** no celular
 
-### Como Funciona a Classificacao
+### Como Funciona a Classificação
 
-A CODHAB classifica as familias inscritas de acordo com os seguintes criterios (em ordem de importancia):
+A CODHAB classifica as famílias inscritas de acordo com os seguintes criterios (em ordem de importancia):
 
-1. Tempo de residencia ou trabalho no DF
-2. Tempo de inscricao no programa habitacional
-3. Numero de dependentes
-4. Condicoes de prioridade especial (PCD, idosos, mulher chefe de familia)
+1. Tempo de residência ou trabalho no DF
+2. Tempo de inscrição no programa habitacional
+3. Número de dependentes
+4. Condições de prioridade especial (PCD, idosos, mulher chefe de família)
 5. Renda familiar bruta
 
-> **Dica:** Quanto antes voce se inscrever, melhor sua posicao na fila. A inscricao e gratuita e pode ser feita pela internet.
+> **Dica:** Quanto antes você se inscrever, melhor sua posicao na fila. A inscrição é gratuita e pode ser feita pela internet.
 
 ---
 
-## 5. Tarifa Social de Energia Eletrica
+## 5. Tarifa Social de Energia Elétrica
 
 ### O Que E
 
-Desconto de ate **65%** na conta de energia eletrica para familias de baixa renda, fornecido pela **Neoenergia Brasilia**.
+Desconto de até **65%** na conta de energia elétrica para famílias de baixa renda, fornecido pela **Neoenergia Brasilia**.
 
 ### Quem Tem Direito
 
-- Familias inscritas no CadUnico com renda mensal de ate **3 salarios minimos** (R$ 4.863,00 em 2026)
-- Familias com membro que receba o **BPC**
-- Familias com pessoa que precise usar equipamentos eletricos por motivo de saude (ex: aparelhos de oxigenio, concentradores)
+- Famílias inscritas no CadUnico com renda mensal de até **3 salários minimos** (R$ 4.863,00 em 2026)
+- Famílias com membro que receba o **BPC**
+- Famílias com pessoa que precise usar equipamentos eletricos por motivo de saúde (ex: aparelhos de oxigenio, concentradores)
 
 ### Faixas de Desconto
 
 | Consumo Mensal | Desconto |
 |---------------|----------|
-| Ate 30 kWh | **65%** |
+| Até 30 kWh | **65%** |
 | De 31 a 100 kWh | **40%** |
 | De 101 a 220 kWh | **10%** |
 | Acima de 220 kWh | Sem desconto |
@@ -1227,10 +1227,10 @@ Desconto de ate **65%** na conta de energia eletrica para familias de baixa rend
 
 ### Documentos
 
-- Numero da conta de energia
-- NIS (Numero de Identificacao Social, do CadUnico) ou numero do beneficio (BPC)
+- Número da conta de energia
+- NIS (Número de Identificação Social, do CadUnico) ou número do benefício (BPC)
 
-> **Atencao (regra de 2026):** A conta de luz deve estar no nome do responsavel familiar do CadUnico, de alguem do mesmo grupo familiar ou do beneficiario do BPC. O endereco da conta deve ser o mesmo registrado no CadUnico ou no INSS.
+> **Atenção (regra de 2026):** A conta de luz deve estar no nome do responsável familiar do CadUnico, de alguém do mesmo grupo familiar ou do beneficiario do BPC. O endereço da conta deve ser o mesmo registrado no CadUnico ou no INSS.
 
 ---
 
@@ -1238,22 +1238,22 @@ Desconto de ate **65%** na conta de energia eletrica para familias de baixa rend
 
 ### O Que E
 
-Desconto de **50%** nas contas de agua e esgoto para familias de baixa renda, conforme a **Lei Federal 14.898/2024**.
+Desconto de **50%** nas contas de agua e esgoto para famílias de baixa renda, conforme a **Lei Federal 14.898/2024**.
 
 ### Quem Tem Direito
 
-- Familias beneficiarias do **Bolsa Familia**
-- Familias inscritas no **CadUnico** em condicao de baixa renda
+- Famílias beneficiarias do **Bolsa Família**
+- Famílias inscritas no **CadUnico** em condição de baixa renda
 - Participantes do **Programa Morar Bem -- Faixa I**
 
-### Beneficios Adicionais
+### Benefícios Adicionais
 
-- Isencao de custos para **instalacao de agua e esgoto** no imovel
+- Isenção de custos para **instalacao de agua e esgoto** no imóvel
 
 ### Como Solicitar
 
 - Ligue para a Central **156** (opcao 1)
-- Ou va presencialmente a um posto de atendimento da CAESB com documentos e comprovante de vinculacao ao CadUnico ou Bolsa Familia
+- Ou va presencialmente a um posto de atendimento da CAESB com documentos e comprovante de vinculacao ao CadUnico ou Bolsa Família
 
 ---
 
@@ -1261,38 +1261,38 @@ Desconto de **50%** nas contas de agua e esgoto para familias de baixa renda, co
 
 ### O Que E
 
-Beneficio de transferencia de renda do GDF no valor fixo de **R$ 150,00 por mes por familia**.
+Benefício de transferencia de renda do GDF no valor fixo de **R$ 150,00 por mês por família**.
 
 ### Quem Tem Direito
 
-- Familias com renda por pessoa inferior a **1/2 salario minimo** (R$ 810,50 em 2026)
+- Famílias com renda por pessoa inferior a **1/2 salário mínimo** (R$ 810,50 em 2026)
 - Inscritas no **CadUnico**
 - Residentes no **Distrito Federal**
 
 ### Como Solicitar
 
-- Procure o **CRAS** mais proximo para inscricao ou atualizacao do CadUnico
-- O beneficio e concedido **automaticamente** com base nos dados do CadUnico
-- Nao e preciso fazer pedido separado
+- Procure o **CRAS** mais proximo para inscrição ou atualização do CadUnico
+- O benefício é concedido **automaticamente** com base nos dados do CadUnico
+- Não é preciso fazer pedido separado
 
-> **Dica:** Mantenha o CadUnico sempre atualizado para nao perder este e outros beneficios.
+> **Dica:** Mantenha o CadUnico sempre atualizado para não perder este e outros benefícios.
 
 ---
 
-## 8. Beneficios Eventuais
+## 8. Benefícios Eventuais
 
-Sao beneficios concedidos a familias em situacoes especificas e emergenciais. Para ter direito, a renda por pessoa deve ser de ate 1/2 salario minimo e a familia deve residir no DF, preferencialmente inscrita no CadUnico.
+Sao benefícios concedidos a famílias em situações específicas e emergenciais. Para ter direito, a renda por pessoa deve ser de até 1/2 salário mínimo é a família deve residir no DF, preferencialmente inscrita no CadUnico.
 
-| Beneficio | Valor | Quando Se Aplica |
+| Benefício | Valor | Quando Se Aplica |
 |-----------|-------|-----------------|
-| **Auxilio Natalidade** | R$ 200,00 (parcela unica por crianca) | Nascimento de crianca ou natimorto |
-| **Auxilio por Morte** | Variavel | Falecimento de membro da familia (cobre despesas funerarias) |
-| **Auxilio Vulnerabilidade Temporaria** | Variavel | Situacoes imprevistas como incendio, desabamento, enchente ou outra emergencia |
+| **Auxílio Natalidade** | R$ 200,00 (parcela única por criança) | Nascimento de criança ou natimorto |
+| **Auxílio por Morte** | Variavel | Falecimento de membro da família (cobre despesas funerarias) |
+| **Auxílio Vulnerabilidade Temporaria** | Variavel | Situações imprevistas como incendio, desabamento, enchente ou outra emergência |
 
 ### Onde Solicitar
 
 - No **CRAS** ou **CREAS** da sua regiao
-- Veja a lista de CRAS no capitulo [01 - Cadastro Unico](01-cadastro-unico.md)
+- Veja a lista de CRAS no capítulo [01 - Cadastro Único](01-cadastro-único.md)
 
 ---
 
@@ -1305,175 +1305,175 @@ Documento que garante **desconto de 50%** em passagens de transporte interestadu
 ### Quem Tem Direito
 
 - Pessoas com **60 anos ou mais**
-- Renda individual mensal de ate **2 salarios minimos**
+- Renda individual mensal de até **2 salários minimos**
 
 ### Como Solicitar
 
-- Procure o **CRAS** mais proximo com documento de identidade, CPF, comprovante de renda e comprovante de residencia
+- Procure o **CRAS** mais proximo com documento de identidade, CPF, comprovante de renda e comprovante de residência
 
 ---
 
-## Resumo: Onde Solicitar Cada Beneficio
+## Resumo: Onde Solicitar Cada Benefício
 
-| Beneficio | Onde Solicitar |
+| Benefício | Onde Solicitar |
 |-----------|---------------|
-| Cartao Material Escolar | Automatico (Bolsa Familia + escola publica) |
+| Cartao Material Escolar | Automatico (Bolsa Família + escola pública) |
 | Passe Livre Estudantil | Site BRB Mobilidade ou postos de atendimento |
 | Passe Livre Especial (PCD) | Site BRB Mobilidade ou Estacao 112 Sul |
 | Programas Habitacionais (CODHAB) | Site da CODHAB ou app CODHAB CID |
 | Tarifa Social de Energia | Neoenergia: WhatsApp, site, telefone 116 |
 | Tarifa Social de Agua | Central 156 (opcao 1) ou postos da CAESB |
 | Programa DF Social | Automatico via CadUnico (procure o CRAS) |
-| Beneficios Eventuais | CRAS ou CREAS |
+| Benefícios Eventuais | CRAS ou CREAS |
 | Carteira do Idoso | CRAS |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | Central do GDF | 156 |
 | BRB Mobilidade (Passe Livre) | (61) 3120-9500 |
 | Neoenergia Brasilia (Tarifa Social Energia) | 116 ou WhatsApp (61) 3465-9318 |
 | CAESB (Tarifa Social Agua) | 156 (opcao 1) |
-| CODHAB (Habitacao) | https://www.codhab.df.gov.br |
-| Defensoria Publica do DF | (61) 3105-9200 |
-| CRAS | Veja lista em [01 - Cadastro Unico](01-cadastro-unico.md) |
+| CODHAB (Habitação) | https://www.codhab.df.gov.br |
+| Defensoria Pública do DF | (61) 3105-9200 |
+| CRAS | Veja lista em [01 - Cadastro Único](01-cadastro-único.md) |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - SEDES -- Cartao Material Escolar: https://www.sedes.df.gov.br/cartao-material-escolar-cme
-- Secretaria de Educacao do DF -- Material Escolar: https://www.educacao.df.gov.br/material-escolar/
+- Secretaria de Educação do DF -- Material Escolar: https://www.educação.df.gov.br/material-escolar/
 - SEPD -- Passe Livre Especial: https://www.sepd.df.gov.br/passe-livre-especial-saiba-como-pedir-o-seu
 - CODHAB -- Programas Habitacionais: https://www.codhab.df.gov.br/pagina/1
 - Neoenergia -- Tarifa Social: https://www.neoenergia.com/web/brasilia/tarifa-social
 - CAESB -- Tarifa Social: https://www.caesb.df.gov.br/tarifa-social-da-caesb-atendera-270-mil-pessoas-com-desconto-de-50/
 - SEDES -- Programa DF Social: https://www.sedes.df.gov.br/programa-df-social
-- SEDES -- Programas e Beneficios: https://www.sedes.df.gov.br/programas-e-beneficios
+- SEDES -- Programas e Benefícios: https://www.sedes.df.gov.br/programas-e-benefícios
 - Lei 3.877/2006 (Programas Habitacionais do DF)
 - Lei Federal 14.898/2024 (Tarifa Social de Agua)
 - Portaria Conjunta no 02/2023 (Cartao Material Escolar)
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
 `
         },
       ]
     },
     {
-      id: `02-violencia-domestica`,
-      title: `Violencia Domestica -- Como Proceder e Direitos das Vitimas`,
+      id: `02-violência-doméstica`,
+      title: `Violência Doméstica -- Como Proceder e Direitos das Vítimas`,
       icon: `shield-alt`,
-      readme: `# Violencia Domestica -- Como Proceder e Direitos das Vitimas
+      readme: `# Violência Doméstica -- Como Proceder e Direitos das Vítimas
 
-> **Se voce esta em perigo agora, ligue 190 (Policia Militar).**
-> **Para orientacao e denuncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Se você está em perigo agora, ligue 190 (Polícia Militar).**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
 
-Esta secao do Manual Vicentino reune tudo o que voce precisa saber sobre violencia domestica: o que e, como denunciar, quais sao seus direitos e onde buscar ajuda no Distrito Federal.
+Esta seção do Manual Vicentino reune tudo o que você precisa saber sobre violência doméstica: o que é, como denunciar, quais sao seus direitos e onde buscar ajuda no Distrito Federal.
 
-A violencia domestica nao e um problema particular. E um crime. E voce nao esta sozinha.
+A violência doméstica não é um problema particular. E um crime. E você não esta sozinha.
 
 ---
 
-## O Que Voce Vai Encontrar Aqui
+## O Que Você Vai Encontrar Aqui
 
-| Secao | O Que Trata |
+| Seção | O Que Trata |
 |-------|-------------|
-| [01 - Lei Maria da Penha](01-lei-maria-da-penha.md) | O que diz a lei, os cinco tipos de violencia domestica e seus direitos |
-| [02 - Como Denunciar](02-como-denunciar.md) | Telefones, delegacias, boletim de ocorrencia online e denuncia anonima |
-| [03 - Medidas Protetivas](03-medidas-protetivas.md) | O que sao, como pedir e o que acontece se o agressor descumprir |
-| [04 - Rede de Protecao no DF](04-rede-protecao-df.md) | Casa da Mulher, CEAMs, Casa Abrigo, Defensoria, PROVID -- com enderecos e telefones |
-| [05 - Violencia contra Idosos, Criancas e PCD](05-violencia-idosos-criancas.md) | Disque 100, Estatuto do Idoso, ECA e protecao a pessoa com deficiencia |
-| [06 - Feminicidio, Stalking e Violencia Psicologica](06-feminicidio-stalking.md) | Crimes graves: feminicidio, perseguicao e violencia psicologica |
+| [01 - Lei Maria da Penha](01-lei-maria-da-penha.md) | O que diz a lei, os cinco tipos de violência doméstica e seus direitos |
+| [02 - Como Denunciar](02-como-denunciar.md) | Telefones, delegacias, boletim de ocorrência online e denúncia anônima |
+| [03 - Medidas Protetivas](03-medidas-protetivas.md) | O que sao, como pedir é o que acontece se o agressor descumprir |
+| [04 - Rede de Proteção no DF](04-rede-proteção-df.md) | Casa da Mulher, CEAMs, Casa Abrigo, Defensoria, PROVID -- com endereços e telefones |
+| [05 - Violência contra Idosos, Crianças e PCD](05-violência-idosos-crianças.md) | Disque 100, Estatuto do Idoso, ECA e proteção a pessoa com deficiência |
+| [06 - Feminicidio, Stalking e Violência Psicológica](06-feminicidio-stalking.md) | Crimes graves: feminicidio, perseguicao e violência psicológica |
 
 ---
 
-## Telefones de Emergencia
+## Telefones de Emergência
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
-| Policia Militar (emergencia) | **190** | 24 horas |
+| Polícia Militar (emergência) | **190** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
-| Direitos Humanos (idosos, criancas, PCD) | **100** | 24 horas |
-| Policia Civil (denuncia anonima) | **197** | 24 horas |
+| Direitos Humanos (idosos, crianças, PCD) | **100** | 24 horas |
+| Polícia Civil (denúncia anônima) | **197** | 24 horas |
 | DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
 | DEAM II -- Ceilandia | (61) 3207-7391 | 24 horas |
 | Casa da Mulher Brasileira | (61) 98312-0763 | 24 horas |
-| Defensoria Publica (Brasilia) | (61) 99359-0024 | Dias uteis |
+| Defensoria Pública (Brasilia) | (61) 99359-0024 | Dias úteis |
 
 ---
 
 ## Lembre-se
 
-- **A culpa nunca e da vitima.** Ninguem merece sofrer violencia.
-- **Voce tem direitos.** A lei esta do seu lado.
-- **Voce nao precisa enfrentar isso sozinha.** Existe uma rede inteira de apoio pronta para ajudar.
-- **Pedir ajuda e um ato de coragem**, nao de fraqueza.
+- **A culpa nunca e da vítima.** Ninguém merece sofrer violência.
+- **Você tem direitos.** A lei esta do seu lado.
+- **Você não precisa enfrentar isso sozinha.** Existe uma rede inteira de apoio pronta para ajudar.
+- **Pedir ajuda é um ato de coragem**, não de fraqueza.
 
 ---
 
-**Este material foi elaborado com base na legislacao federal vigente e em informacoes oficiais dos orgaos de protecao do Distrito Federal. Pesquisa realizada em marco de 2026.**
+**Este material foi elaborado com base na legislação federal vigente e em informações oficiais dos órgãos de proteção do Distrito Federal. Pesquisa realizada em marco de 2026.**
 `,
       pages: [
         {
           id: `01-lei-maria-da-penha`,
-          title: `A Lei Maria da Penha -- Seus Direitos Contra a Violencia Domestica`,
-          content: `# A Lei Maria da Penha -- Seus Direitos Contra a Violencia Domestica
+          title: `A Lei Maria da Penha -- Seus Direitos Contra a Violência Doméstica`,
+          content: `# A Lei Maria da Penha -- Seus Direitos Contra a Violência Doméstica
 
-> **Se voce esta em perigo agora, ligue 190 (Policia Militar).**
-> **Para orientacao e denuncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Se você está em perigo agora, ligue 190 (Polícia Militar).**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
 
 ---
 
 ## O Que E a Lei Maria da Penha?
 
-A Lei Maria da Penha (Lei 11.340/2006) e a principal lei brasileira de protecao a mulher contra a violencia domestica e familiar. Ela garante que toda mulher -- independente de classe social, raca, idade, religiao ou orientacao sexual -- tem o direito de viver sem violencia.
+A Lei Maria da Penha (Lei 11.340/2006) é a principal lei brasileira de proteção a mulher contra a violência doméstica e familiar. Ela garante que toda mulher -- independente de classe social, raca, idade, religiao ou orientação sexual -- tem o direito de viver sem violência.
 
-Essa lei foi declarada constitucional pelo Supremo Tribunal Federal (STF) em 2012 e e uma das mais avancadas do mundo na protecao das mulheres.
+Essa lei foi declarada constitucional pelo Supremo Tribunal Federal (STF) em 2012 e é uma das mais avancadas do mundo na proteção das mulheres.
 
 ### Quando a Lei se Aplica?
 
-A Lei Maria da Penha se aplica quando a violencia acontece:
+A Lei Maria da Penha se aplica quando a violência acontece:
 
-- **Dentro de casa** -- no espaco onde as pessoas convivem, com ou sem vinculo familiar (exemplo: agregados, empregados domesticos)
-- **Na familia** -- entre pessoas unidas por lacos de parentesco, afinidade ou vontade (exemplo: sogra, cunhada, madrasta)
-- **Em qualquer relacao de afeto** -- quando o agressor convive ou ja conviveu com a vitima, mesmo que nao morem juntos (exemplo: namorado, ex-namorado, ex-marido)
+- **Dentro de casa** -- no espaco onde as pessoas convivem, com ou sem vínculo familiar (exemplo: agregados, empregados domésticos)
+- **Na família** -- entre pessoas unidas por lacos de parentesco, afinidade ou vontade (exemplo: sogra, cunhada, madrasta)
+- **Em qualquer relacao de afeto** -- quando o agressor convive ou já conviveu com a vítima, mesmo que não morem juntos (exemplo: namorado, ex-namorado, ex-marido)
 
-> **Importante:** Nao e preciso morar junto para a lei valer. Ex-namorados, ex-maridos e ex-companheiros estao sujeitos a Lei Maria da Penha (Sumula 600 do STJ).
+> **Importante:** Não é preciso morar junto para a lei valer. Ex-namorados, ex-maridos e ex-companheiros estão sujeitos a Lei Maria da Penha (Sumula 600 do STJ).
 
 ---
 
-## Os Cinco Tipos de Violencia Domestica
+## Os Cinco Tipos de Violência Doméstica
 
-A lei reconhece **cinco formas** de violencia contra a mulher (artigo 7o). Violencia nao e so agressao fisica. Veja:
+A lei reconhece **cinco formas** de violência contra a mulher (artigo 7o). Violência não e só agressão física. Veja:
 
-### 1. Violencia Fisica
+### 1. Violência Física
 
 Qualquer ato que cause dor ou ferimento no corpo da mulher.
 
 **Exemplos:** empurrar, chutar, bater, dar tapas, estrangular, queimar, usar objetos ou armas para agredir.
 
-### 2. Violencia Psicologica
+### 2. Violência Psicológica
 
 Qualquer atitude que cause dano emocional, diminua a autoestima ou tente controlar o que a mulher faz, pensa ou decide.
 
 **Exemplos:**
 - Ameacar
 - Humilhar e xingar
-- Isolar a mulher de amigos e familia
-- Controlar onde ela vai e o que faz
+- Isolar a mulher de amigos e família
+- Controlar onde ela vai é o que faz
 - Vigiar o celular e as redes sociais
 - Fazer chantagem emocional
-- Ridicularizar em publico
+- Ridicularizar em público
 - Proibir de trabalhar ou estudar
 
-> **Atencao:** Desde 2021, a violencia psicologica contra a mulher e **crime** (Lei 14.188/2021, artigo 147-B do Codigo Penal), com pena de 6 meses a 2 anos de prisao.
+> **Atenção:** Desde 2021, a violência psicológica contra a mulher e **crime** (Lei 14.188/2021, artigo 147-B do Código Penal), com pena de 6 meses a 2 anos de prisão.
 
-### 3. Violencia Sexual
+### 3. Violência Sexual
 
 Qualquer ato que obrigue a mulher a participar de relacao sexual contra sua vontade, ou que limite seus direitos sexuais e reprodutivos.
 
@@ -1483,298 +1483,298 @@ Qualquer ato que obrigue a mulher a participar de relacao sexual contra sua vont
 - Forcar gravidez ou aborto
 - Obrigar a prostituicao
 
-> **Importante:** Violencia sexual dentro do casamento ou uniao estavel e CRIME. O marido ou companheiro nao tem "direito" ao corpo da mulher.
+> **Importante:** Violência sexual dentro do casamento ou uniao estável e CRIME. O marido ou companheiro não tem "direito" ao corpo da mulher.
 
-### 4. Violencia Patrimonial
+### 4. Violência Patrimonial
 
 Qualquer ato que destrua, retenha ou tire bens, documentos ou recursos da mulher.
 
 **Exemplos:**
 - Destruir documentos pessoais (RG, CPF, certidoes)
-- Esconder cartao do banco ou reter salario
+- Esconder cartao do banco ou reter salário
 - Quebrar objetos pessoais ou de trabalho
 - Vender bens do casal sem consentimento
 - Destruir ferramentas de trabalho
 
-### 5. Violencia Moral
+### 5. Violência Moral
 
-Qualquer ato que atinja a honra e a reputacao da mulher.
+Qualquer ato que atinja a honra é a reputacao da mulher.
 
 **Exemplos:**
 - Xingar e ofender a dignidade
-- Acusar falsamente de traicao em publico
-- Inventar crimes que a mulher nao cometeu (calunia)
+- Acusar falsamente de traicao em público
+- Inventar crimes que a mulher não cometeu (calunia)
 - Expor a vida intima nas redes sociais
 
 ---
 
 ## Direitos Garantidos pela Lei Maria da Penha
 
-A mulher vitima de violencia domestica tem os seguintes direitos:
+A mulher vítima de violência doméstica tem os seguintes direitos:
 
-### Protecao Imediata
-- Pedir **medidas protetivas de urgencia** (o juiz decide em ate 48 horas)
-- Ter o **agressor afastado de casa** -- e ele quem deve sair, nao a mulher
+### Proteção Imediata
+- Pedir **medidas protetivas de urgência** (o juiz decide em até 48 horas)
+- Ter o **agressor afastado de casa** -- e ele quem deve sair, não a mulher
 - Ser encaminhada a **Casa Abrigo** em caso de risco de morte
 
-### Saude
-- Atendimento medico de emergencia (gratuito pelo SUS)
+### Saúde
+- Atendimento médico de emergência (gratuito pelo SUS)
 - Exame de corpo de delito no IML
-- Atendimento psicologico
-- Contraceptivo de emergencia e prevencao de doencas (em caso de violencia sexual)
+- Atendimento psicológico
+- Contraceptivo de emergência e prevenção de doencas (em caso de violência sexual)
 - Prioridade em cirurgias plasticas reparadoras
 
 ### Trabalho
-- **Manutencao do emprego** por ate 6 meses quando precisar se afastar do trabalho (artigo 9o, paragrafo 2o)
-- A empresa nao pode demitir a mulher durante esse periodo
-- Direito a beneficios do INSS
+- **Manutenção do emprego** por até 6 meses quando precisar se afastar do trabalho (artigo 9o, paragrafo 2o)
+- A empresa não pode demitir a mulher durante esse período
+- Direito a benefícios do INSS
 
-### Moradia e Assistencia Social
+### Moradia e Assistência Social
 - Prioridade em **programas habitacionais**
 - **Aluguel Social** no DF -- telefone: (61) 3181-1467
 - **Passe Livre** para transporte no DF -- telefone: (61) 3181-1470
 - Inclusao em cadastro de programas assistenciais do governo
-- Prioridade na remocao para servidoras publicas
+- Prioridade na remocao para servidoras públicas
 
 ### Filhos
-- Matricula dos filhos em escola proxima ao novo domicilio, **mesmo sem vaga disponivel**
-- Restricao ou suspensao de visitas do agressor aos filhos menores
+- Matricula dos filhos em escola proxima ao novo domicílio, **mesmo sem vaga disponível**
+- Restricao ou suspensão de visitas do agressor aos filhos menores
 
 ### Justica
-- Direito a **indenizacao por danos morais e materiais**, fixada na propria sentenca criminal
-- Assistencia juridica **gratuita** pela Defensoria Publica
-- Nao e necessario ter advogado para pedir medida protetiva
-- A mulher nao pode ser obrigada a entregar intimacao ao agressor
+- Direito a **indenização por danos morais e materiais**, fixada na própria sentença criminal
+- Assistência jurídica **gratuita** pela Defensoria Pública
+- Não é necessário ter advogado para pedir medida protetiva
+- A mulher não pode ser obrigada a entregar intimacao ao agressor
 
 ---
 
-## O Que a Justica Ja Decidiu
+## O Que a Justica Já Decidiu
 
-Para que voce saiba: os tribunais brasileiros tem posicoes firmes em defesa da mulher:
+Para que você saiba: os tribunais brasileiros tem posicoes firmes em defesa da mulher:
 
-- O Ministerio Publico pode processar o agressor **mesmo que a vitima nao queira** (STF, ADI 4424)
-- O agressor **nao pode** ter a pena de prisao substituida por cestas basicas ou servico comunitario (Sumula 588, STJ)
-- O agressor **nao pode** se beneficiar de acordos ou suspensao do processo (Sumula 536, STJ)
-- A reconciliacao do casal **nao apaga** a responsabilidade criminal do agressor
-- Violencia domestica **nao e** crime de menor potencial ofensivo
-
----
-
-## O Que Fazer Se Voce Sofre Violencia
-
-1. **Em perigo imediato:** ligue **190** (Policia Militar)
-2. **Para denuncia e orientacao:** ligue **180** (24 horas, gratuito, pode ser anonimo)
-3. **Registre Boletim de Ocorrencia** na DEAM ou em qualquer delegacia
-4. **Peca medida protetiva de urgencia** -- voce nao precisa de advogado para isso
-5. **Busque apoio:** Defensoria Publica, CEAM, Casa da Mulher Brasileira
-
-> **Voce nao tem culpa. Violencia domestica e crime. Buscar ajuda e um ato de coragem.**
+- O Ministerio Público pode processar o agressor **mesmo que a vítima não queira** (STF, ADI 4424)
+- O agressor **não pode** ter a pena de prisão substituida por cestas básicas ou serviço comunitario (Sumula 588, STJ)
+- O agressor **não pode** se beneficiar de acordos ou suspensão do processo (Sumula 536, STJ)
+- A reconciliacao do casal **não apaga** a responsabilidade criminal do agressor
+- Violência doméstica **não e** crime de menor potencial ofensivo
 
 ---
 
-## Fontes e Referencias
+## O Que Fazer Se Você Sofre Violência
+
+1. **Em perigo imediato:** ligue **190** (Polícia Militar)
+2. **Para denúncia e orientação:** ligue **180** (24 horas, gratuito, pode ser anônimo)
+3. **Registre Boletim de Ocorrência** na DEAM ou em qualquer delegacia
+4. **Peca medida protetiva de urgência** -- você não precisa de advogado para isso
+5. **Busque apoio:** Defensoria Pública, CEAM, Casa da Mulher Brasileira
+
+> **Você não tem culpa. Violência doméstica é crime. Buscar ajuda é um ato de coragem.**
+
+---
+
+## Fontes e Referências
 
 - [Lei 11.340/2006 -- Lei Maria da Penha](http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm)
-- [Lei 14.188/2021 -- Violencia psicologica contra a mulher](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14188.htm)
+- [Lei 14.188/2021 -- Violência psicológica contra a mulher](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14188.htm)
 - [STF -- ADC 19 e ADI 4424 (constitucionalidade da Lei Maria da Penha)](https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=199845&ori=1)
-- [STJ -- Sumulas 536, 542, 588 e 600](https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/08082021-Violencia-domestica-15-interpretacoes-que-reforcaram-a-protecao-da-mulher-em-15-anos-da-Lei-Maria-da-Penha.aspx)
-- [CNJ -- Sobre a Lei Maria da Penha](https://www.cnj.jus.br/programas-e-acoes/violencia-contra-a-mulher/sobre-a-lei-maria-da-penha/)
+- [STJ -- Sumulas 536, 542, 588 e 600](https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/08082021-Violência-doméstica-15-interpretacoes-que-reforcaram-a-proteção-da-mulher-em-15-anos-da-Lei-Maria-da-Penha.aspx)
+- [CNJ -- Sobre a Lei Maria da Penha](https://www.cnj.jus.br/programas-e-ações/violência-contra-a-mulher/sobre-a-lei-maria-da-penha/)
 `
         },
         {
           id: `02-como-denunciar`,
-          title: `Como Denunciar Violencia Domestica`,
-          content: `# Como Denunciar Violencia Domestica
+          title: `Como Denunciar Violência Doméstica`,
+          content: `# Como Denunciar Violência Doméstica
 
-> **Se voce esta em perigo agora, ligue 190 (Policia Militar).**
-> **Para orientacao e denuncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Se você está em perigo agora, ligue 190 (Polícia Militar).**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
 
 ---
 
-## Telefones de Emergencia
+## Telefones de Emergência
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
-| Policia Militar (emergencia) | **190** | 24 horas |
+| Polícia Militar (emergência) | **190** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
-| Direitos Humanos (idosos, criancas, PCD) | **100** | 24 horas |
-| Policia Civil (denuncia anonima) | **197** | 24 horas |
+| Direitos Humanos (idosos, crianças, PCD) | **100** | 24 horas |
+| Polícia Civil (denúncia anônima) | **197** | 24 horas |
 
 ---
 
-Denunciar e o primeiro passo para sair de uma situacao de violencia. Existem varios caminhos para isso, e voce pode escolher o que for mais seguro para a sua situacao. **Qualquer pessoa pode denunciar** -- a propria vitima, um familiar, vizinho, amigo ou colega de trabalho.
+Denunciar é o primeiro passo para sair de uma situação de violência. Existem varios caminhos para isso, e você pode escolher o que for mais seguro para a sua situação. **Qualquer pessoa pode denunciar** -- a própria vítima, um familiar, vizinho, amigo ou colega de trabalho.
 
 ---
 
 ## Ligue 180 -- Central de Atendimento a Mulher
 
-O Ligue 180 e o principal canal de apoio a mulher vitima de violencia no Brasil.
+O Ligue 180 é o principal canal de apoio a mulher vítima de violência no Brasil.
 
 - **Telefone:** 180 (ligacao gratuita, de qualquer telefone)
 - **WhatsApp:** (61) 9610-0180
 - **Funciona:** 24 horas por dia, 7 dias por semana, inclusive feriados
-- **A denuncia pode ser anonima**
+- **A denúncia pode ser anônima**
 
 ### O que o Ligue 180 faz:
-- Recebe denuncias de violencia contra mulheres
-- Orienta sobre leis e direitos
-- Encaminha para delegacias, Defensoria Publica, Casa Abrigo e outros servicos
-- As denuncias sao enviadas a Seguranca Publica, Ministerio Publico e Secretaria de Politicas para Mulheres
+- Recebe denúncias de violência contra mulheres
+- Orienta sobre leis é direitos
+- Encaminha para delegacias, Defensoria Pública, Casa Abrigo e outros serviços
+- As denúncias sao enviadas a Segurança Pública, Ministerio Público e Secretaria de Politicas para Mulheres
 
-> **Qualquer pessoa pode ligar:** a vitima, familiares, vizinhos, colegas. Nao precisa se identificar.
+> **Qualquer pessoa pode ligar:** a vítima, familiares, vizinhos, colegas. Não precisa se identificar.
 
 ---
 
-## Ligue 190 -- Policia Militar (Emergencia)
+## Ligue 190 -- Polícia Militar (Emergência)
 
 - **Telefone:** 190
 - **Funciona:** 24 horas
-- **Quando ligar:** agressao acontecendo agora, risco imediato, situacao de emergencia
+- **Quando ligar:** agressão acontecendo agora, risco imediato, situação de emergência
 
 Ao ligar para o 190, uma viatura e enviada imediatamente ao local. O agressor pode ser preso em flagrante.
 
-> **Se a agressao esta acontecendo agora, ligue 190. Nao espere.**
+> **Se a agressão esta acontecendo agora, ligue 190. Não espere.**
 
 ---
 
-## Ligue 197 -- Policia Civil (Denuncia Anonima)
+## Ligue 197 -- Polícia Civil (Denúncia Anonima)
 
 - **Telefone:** 197
-- **Servico:** denuncia anonima de crimes em geral
-- **Voce nao precisa se identificar**
+- **Serviço:** denúncia anônima de crimes em geral
+- **Você não precisa se identificar**
 
 ---
 
 ## Delegacias Especializadas de Atendimento a Mulher (DEAM) no DF
 
-O Distrito Federal tem **duas DEAMs especializadas** em violencia contra a mulher. As duas funcionam **24 horas, todos os dias**, inclusive feriados.
+O Distrito Federal tem **duas DEAMs especializadas** em violência contra a mulher. As duas funcionam **24 horas, todos os dias**, inclusive feriados.
 
 ### DEAM I -- Asa Sul (Brasilia)
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| **Endereco** | EQS 204/205 -- Asa Sul -- Brasilia/DF -- CEP: 70234-400 |
+| **Endereço** | EQS 204/205 -- Asa Sul -- Brasilia/DF -- CEP: 70234-400 |
 | **Plantao** | (61) 3207-6172 / (61) 3207-6195 |
 | **Administrativo** | (61) 3207-6173 |
-| **Horario** | 24 horas, todos os dias |
+| **Horário** | 24 horas, todos os dias |
 
 ### DEAM II -- Ceilandia
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| **Endereco** | Setor M, QNM 2 (ao lado da 15a DP) -- Ceilandia -- CEP: 72210-515 |
+| **Endereço** | Setor M, QNM 2 (ao lado da 15a DP) -- Ceilandia -- CEP: 72210-515 |
 | **Plantao** | (61) 3207-7391 / (61) 3207-7408 / (61) 3207-7438 |
 | **Administrativo** | (61) 3207-7377 |
-| **Horario** | 24 horas, todos os dias |
+| **Horário** | 24 horas, todos os dias |
 
-> **Importante:** Voce pode registrar ocorrencia em QUALQUER delegacia, nao apenas nas DEAMs. Toda delegacia e obrigada por lei a atender a mulher vitima de violencia domestica.
+> **Importante:** Você pode registrar ocorrência em QUALQUER delegacia, não apenas nas DEAMs. Toda delegacia e obrigada por lei a atender a mulher vítima de violência doméstica.
 
 ---
 
-## Boletim de Ocorrencia Online (Delegacia Eletronica -- PCDF)
+## Boletim de Ocorrência Online (Delegacia Eletrônica -- PCDF)
 
-Voce pode registrar Boletim de Ocorrencia pela internet, sem sair de casa.
+Você pode registrar Boletim de Ocorrência pela internet, sem sair de casa.
 
 - **Site:** https://delegaciaeletronica.pcdf.df.gov.br/
-- **Acesso alternativo:** www.pcdf.df.gov.br > Servicos > Delegacia Eletronica
+- **Acesso alternativo:** www.pcdf.df.gov.br > Serviços > Delegacia Eletrônica
 
 ### Requisitos:
 - Ser maior de 18 anos
 - O fato deve ter ocorrido no Distrito Federal
-- Ter documento de identificacao (RG, CPF, CNH ou documento com foto)
+- Ter documento de identificação (RG, CPF, CNH ou documento com foto)
 
 ### Como funciona:
-1. Acesse o site da Delegacia Eletronica
-2. Preencha o formulario com os dados do ocorrido
-3. A ocorrencia fica disponivel para impressao em ate 24 horas
+1. Acesse o site da Delegacia Eletrônica
+2. Preencha o formulário com os dados do ocorrido
+3. A ocorrência fica disponível para impressao em até 24 horas
 
-> **Atencao:** O B.O. online e indicado para fatos ja ocorridos, quando nao ha risco imediato. Se voce esta em perigo agora, ligue **190** ou va presencialmente a uma delegacia.
+> **Atenção:** O B.O. online e indicado para fatos já ocorridos, quando não ha risco imediato. Se você está em perigo agora, ligue **190** ou va presencialmente a uma delegacia.
 
 ---
 
-## Denuncia Anonima
+## Denúncia Anonima
 
-Voce nao precisa se identificar para denunciar. Os seguintes canais aceitam denuncia anonima:
+Você não precisa se identificar para denunciar. Os seguintes canais aceitam denúncia anônima:
 
 | Canal | Telefone | Para quem |
 |-------|----------|-----------|
-| Ligue 180 | 180 | Violencia contra a mulher |
-| Disque 100 | 100 | Violencia contra criancas, idosos e pessoas com deficiencia |
-| Policia Civil | 197 | Denuncia anonima de crimes em geral |
+| Ligue 180 | 180 | Violência contra a mulher |
+| Disque 100 | 100 | Violência contra crianças, idosos e pessoas com deficiência |
+| Polícia Civil | 197 | Denúncia anônima de crimes em geral |
 
-> **Denunciar anonimamente pode salvar uma vida.** Se voce sabe de alguem que esta sofrendo violencia, nao se cale.
+> **Denunciar anonimamente pode salvar uma vida.** Se você sabe de alguém que está sofrendo violência, não se cale.
 
 ---
 
 ## O Que Fazer Passo a Passo
 
-### Se voce esta em perigo imediato:
-1. Ligue **190** (Policia Militar)
-2. Saia do local se for possivel -- va para a casa de familiar, vizinho ou amigo de confianca
-3. Se tiver lesoes, va ao hospital -- o atendimento e obrigatorio e gratuito pelo SUS
+### Se você está em perigo imediato:
+1. Ligue **190** (Polícia Militar)
+2. Saia do local se for possível -- va para a casa de familiar, vizinho ou amigo de confianca
+3. Se tiver lesoes, va ao hospital -- o atendimento é obrigatório é gratuito pelo SUS
 
-### Para denunciar e buscar protecao:
-1. Ligue **180** para orientacao (24 horas, gratuito)
-2. Va a uma delegacia (de preferencia a DEAM) e registre o Boletim de Ocorrencia
-3. Peca a **medida protetiva de urgencia** -- o delegado encaminha ao juiz, que decide em ate 48 horas
-4. Voce nao precisa de advogado para pedir a medida protetiva
+### Para denunciar e buscar proteção:
+1. Ligue **180** para orientação (24 horas, gratuito)
+2. Va a uma delegacia (de preferencia a DEAM) e registre o Boletim de Ocorrência
+3. Peca a **medida protetiva de urgência** -- o delegado encaminha ao juiz, que decide em até 48 horas
+4. Você não precisa de advogado para pedir a medida protetiva
 
-### Se nao quiser ir a delegacia agora:
-1. Ligue **180** para orientacao
-2. Procure um **CEAM** (Centro Especializado de Atendimento a Mulher) para apoio psicologico e juridico
-3. Procure a **Defensoria Publica** para assistencia juridica gratuita
+### Se não quiser ir a delegacia agora:
+1. Ligue **180** para orientação
+2. Procure um **CEAM** (Centro Especializado de Atendimento a Mulher) para apoio psicológico e jurídico
+3. Procure a **Defensoria Pública** para assistência jurídica gratuita
 
 ---
 
-## Dicas de Seguranca ao Denunciar
+## Dicas de Segurança ao Denunciar
 
-- Se possivel, guarde provas: fotos de lesoes, mensagens de ameaca, audios, videos
-- Conte para alguem de confianca o que esta acontecendo
-- Tenha um plano de saida: saiba para onde ir em caso de emergencia
-- Guarde documentos importantes (RG, CPF, certidao de nascimento dos filhos) em local seguro, fora de casa se possivel
+- Se possível, guarde provas: fotos de lesoes, mensagens de ameaca, audios, videos
+- Conte para alguém de confianca o que está acontecendo
+- Tenha um plano de saida: saiba para onde ir em caso de emergência
+- Guarde documentos importantes (RG, CPF, certidao de nascimento dos filhos) em local seguro, fora de casa se possível
 - Se precisar sair de casa as pressas, va direto a uma delegacia ou a Casa da Mulher Brasileira
 
-> **Voce nao precisa ter vergonha de pedir ajuda. A culpa e do agressor, nunca da vitima.**
+> **Você não precisa ter vergonha de pedir ajuda. A culpa e do agressor, nunca da vítima.**
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - [Lei 11.340/2006 -- Lei Maria da Penha](http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm)
-- [PCDF -- Delegacia Eletronica](https://delegaciaeletronica.pcdf.df.gov.br/)
-- [PCDF -- DEAM I](https://www.pcdf.df.gov.br/informacoes/lista-telefonica/68/deam-delegacia-especial-de-atendimento-a-mulher)
-- [PCDF -- DEAM II](https://www.pcdf.df.gov.br/informacoes/lista-telefonica/95/-deam-ii-delegacia-especial-de-atendimento-a-mulher-ii)
+- [PCDF -- Delegacia Eletrônica](https://delegaciaeletronica.pcdf.df.gov.br/)
+- [PCDF -- DEAM I](https://www.pcdf.df.gov.br/informações/lista-telefonica/68/deam-delegacia-especial-de-atendimento-a-mulher)
+- [PCDF -- DEAM II](https://www.pcdf.df.gov.br/informações/lista-telefonica/95/-deam-ii-delegacia-especial-de-atendimento-a-mulher-ii)
 - [Ligue 180 -- Ministerio das Mulheres](https://www.gov.br/mulheres/pt-br/ligue180)
-- [Disque 100 -- Ministerio dos Direitos Humanos](https://www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos)
+- [Disque 100 -- Ministerio dos Direitos Humanos](https://www.gov.br/pt-br/serviços/denunciar-violação-de-direitos-humanos)
 `
         },
         {
           id: `03-medidas-protetivas`,
-          title: `Medidas Protetivas de Urgencia`,
-          content: `# Medidas Protetivas de Urgencia
+          title: `Medidas Protetivas de Urgência`,
+          content: `# Medidas Protetivas de Urgência
 
-> **Se voce esta em perigo agora, ligue 190 (Policia Militar).**
-> **Para orientacao e denuncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Se você está em perigo agora, ligue 190 (Polícia Militar).**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
 
 ---
 
-## Telefones de Emergencia
+## Telefones de Emergência
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
-| Policia Militar (emergencia) | **190** | 24 horas |
+| Polícia Militar (emergência) | **190** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
 | DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
 | DEAM II -- Ceilandia | (61) 3207-7391 | 24 horas |
-| Defensoria Publica (Brasilia) | (61) 99359-0024 | Dias uteis |
+| Defensoria Pública (Brasilia) | (61) 99359-0024 | Dias úteis |
 
 ---
 
 ## O Que Sao Medidas Protetivas?
 
-As medidas protetivas de urgencia sao **ordens da Justica** que servem para proteger a mulher em situacao de violencia domestica. Sao como um escudo legal: obrigam o agressor a manter distancia e proibem comportamentos perigosos.
+As medidas protetivas de urgência sao **ordens da Justica** que servem para proteger a mulher em situação de violência doméstica. Sao como um escudo legal: obrigam o agressor a manter distancia e proibem comportamentos perigosos.
 
-Elas podem ser concedidas **rapidamente**, sem necessidade de audiencia, e valem mesmo antes de qualquer processo criminal.
+Elas podem ser concedidas **rapidamente**, sem necessidade de audiência, e valem mesmo antes de qualquer processo criminal.
 
 ---
 
@@ -1784,32 +1784,32 @@ Elas podem ser concedidas **rapidamente**, sem necessidade de audiencia, e valem
 
 O juiz pode obrigar o agressor a:
 
-| Medida | O que significa na pratica |
+| Medida | O que significa na prática |
 |--------|---------------------------|
-| Afastamento do lar | O agressor e obrigado a sair de casa. A vitima fica. |
-| Proibicao de aproximacao | O agressor nao pode chegar perto da vitima, dos filhos e de testemunhas. O juiz fixa a distancia minima. |
-| Proibicao de contato | O agressor nao pode ligar, mandar mensagem, usar redes sociais ou qualquer outro meio para falar com a vitima. |
-| Proibicao de frequentar lugares | O agressor nao pode ir a lugares que a vitima frequenta (trabalho, escola, igreja, etc.). |
-| Suspensao de porte de arma | O agressor perde o direito de ter arma. |
-| Restricao de visitas aos filhos | O agressor so pode ver os filhos nas condicoes definidas pelo juiz. |
-| Pensao alimenticia | O agressor e obrigado a pagar alimentos provisorios a vitima e aos filhos. |
+| Afastamento do lar | O agressor e obrigado a sair de casa. A vítima fica. |
+| Proibicao de aproximacao | O agressor não pode chegar perto da vítima, dos filhos e de testemunhas. O juiz fixa a distancia mínima. |
+| Proibicao de contato | O agressor não pode ligar, mandar mensagem, usar redes sociais ou qualquer outro meio para falar com a vítima. |
+| Proibicao de frequentar lugares | O agressor não pode ir a lugares que a vítima frequenta (trabalho, escola, igreja, etc.). |
+| Suspensão de porte de arma | O agressor perde o direito de ter arma. |
+| Restricao de visitas aos filhos | O agressor só pode ver os filhos nas condições definidas pelo juiz. |
+| Pensão alimentícia | O agressor e obrigado a pagar alimentos provisorios a vítima e aos filhos. |
 | Programa de reeducacao | O agressor deve participar de programa de recuperacao. |
 
-### Para Protecao da Vitima (artigo 23)
+### Para Proteção da Vítima (artigo 23)
 
-O juiz tambem pode determinar:
+O juiz também pode determinar:
 
-- Encaminhamento da vitima e filhos a programa de protecao ou atendimento
-- Que a vitima e os filhos voltem para casa apos o agressor ser afastado
-- Afastamento da vitima do lar, **sem perder direitos sobre bens, guarda dos filhos e alimentos**
+- Encaminhamento da vítima e filhos a programa de proteção ou atendimento
+- Que a vítima e os filhos voltem para casa após o agressor ser afastado
+- Afastamento da vítima do lar, **sem perder direitos sobre bens, guarda dos filhos e alimentos**
 - Separacao de corpos
-- Matricula dos filhos em escola proxima, **mesmo sem vaga disponivel**
+- Matricula dos filhos em escola proxima, **mesmo sem vaga disponível**
 
-### Sobre o Patrimonio (artigo 24)
+### Sobre o Patrimônio (artigo 24)
 
-- Devolucao de bens que o agressor tenha tomado da vitima
+- Devolucao de bens que o agressor tenha tomado da vítima
 - Proibicao de vender, alugar ou transferir bens do casal
-- Cancelamento de procuracoes que a vitima tenha dado ao agressor
+- Cancelamento de procuracoes que a vítima tenha dado ao agressor
 
 ---
 
@@ -1817,7 +1817,7 @@ O juiz tambem pode determinar:
 
 ### Passo a Passo
 
-**1. Registre o Boletim de Ocorrencia (B.O.)**
+**1. Registre o Boletim de Ocorrência (B.O.)**
 - Va a uma delegacia (de preferencia a DEAM) ou registre online
 - Conte o que aconteceu e diga que quer medida protetiva
 
@@ -1825,24 +1825,24 @@ O juiz tambem pode determinar:
 - A autoridade policial tem **48 horas** para enviar o pedido ao juiz
 
 **3. O juiz decide**
-- O juiz tem **48 horas** para decidir apos receber o pedido
-- Nao precisa de audiencia. Nao precisa ouvir o agressor primeiro.
+- O juiz tem **48 horas** para decidir após receber o pedido
+- Não precisa de audiência. Não precisa ouvir o agressor primeiro.
 
 **4. A medida e cumprida**
 - O agressor e notificado pela Justica e deve cumprir imediatamente
 
-> **Voce NAO precisa de advogado para pedir medida protetiva.** Pode pedir direto na delegacia, na Defensoria Publica, no Ministerio Publico ou ate direto ao juiz.
+> **Você NAO precisa de advogado para pedir medida protetiva.** Pode pedir direto na delegacia, na Defensoria Pública, no Ministerio Público ou até direto ao juiz.
 
 ### Novidade Importante (Lei 14.550/2023)
 
-Desde 2023, voce pode pedir medida protetiva **mesmo sem ter registrado Boletim de Ocorrencia**. A lei diz que as medidas protetivas serao concedidas independentemente de:
+Desde 2023, você pode pedir medida protetiva **mesmo sem ter registrado Boletim de Ocorrência**. A lei diz que as medidas protetivas serão concedidas independentemente de:
 
-- Boletim de ocorrencia
+- Boletim de ocorrência
 - Inquerito policial
 - Processo criminal ou civel
-- Classificacao do tipo de crime
+- Classificação do tipo de crime
 
-Isso significa que, se voce estiver em perigo, pode ir direto a Defensoria Publica ou ao Ministerio Publico e pedir a medida protetiva, sem precisar passar pela delegacia primeiro.
+Isso significa que, se você estiver em perigo, pode ir direto a Defensoria Pública ou ao Ministerio Público e pedir a medida protetiva, sem precisar passar pela delegacia primeiro.
 
 ---
 
@@ -1856,90 +1856,90 @@ Se o agressor se aproximar, ligar, mandar mensagem ou descumprir qualquer determ
 
 | Aspecto | Detalhe |
 |---------|---------|
-| **Crime** | Descumprimento de medida protetiva de urgencia (artigo 24-A da Lei Maria da Penha) |
-| **Pena atual** | Reclusao de **2 a 5 anos** e multa (Lei 14.987/2024) |
-| **Regime** | Reclusao -- o agressor pode ir para regime fechado |
+| **Crime** | Descumprimento de medida protetiva de urgência (artigo 24-A da Lei Maria da Penha) |
+| **Pena atual** | Reclusão de **2 a 5 anos** e multa (Lei 14.987/2024) |
+| **Regime** | Reclusão -- o agressor pode ir para regime fechado |
 | **Flagrante** | O agressor pode ser preso em flagrante ao descumprir |
-| **Fianca** | So o juiz pode conceder fianca (o delegado nao pode) |
+| **Fianca** | Só o juiz pode conceder fianca (o delegado não pode) |
 
 ### O que mudou com a Lei 14.987/2024:
 
-Antes, a pena era de 3 meses a 2 anos de detencao (pena leve). Agora, a pena e de **2 a 5 anos de reclusao** -- muito mais severa. Essa mudanca mostra que a Justica leva o descumprimento de medidas protetivas muito a serio.
+Antes, a pena era de 3 meses a 2 anos de detenção (pena leve). Agora, a pena e de **2 a 5 anos de reclusão** -- muito mais severa. Essa mudança mostra que a Justica leva o descumprimento de medidas protetivas muito a serio.
 
 ---
 
 ## O Que Fazer Se o Agressor Descumprir
 
-1. **Ligue 190** (Policia Militar) imediatamente
-2. Informe que ha medida protetiva e que o agressor esta descumprindo
-3. A policia ira ao local e pode prender o agressor em flagrante
+1. **Ligue 190** (Polícia Militar) imediatamente
+2. Informe que ha medida protetiva é que o agressor esta descumprindo
+3. A polícia ira ao local e pode prender o agressor em flagrante
 4. Guarde provas: mensagens, ligacoes, fotos, testemunhas
-5. Comunique tambem ao seu advogado ou a Defensoria Publica
+5. Comunique também ao seu advogado ou a Defensoria Pública
 
-> **A reconciliacao do casal nao apaga o crime.** Mesmo que a vitima perdoe o agressor, ele responde criminalmente pelo descumprimento.
+> **A reconciliacao do casal não apaga o crime.** Mesmo que a vítima perdoe o agressor, ele responde criminalmente pelo descumprimento.
 
 ---
 
 ## Perguntas Frequentes
 
 ### Preciso de advogado para pedir medida protetiva?
-**Nao.** Voce pode pedir na delegacia, na Defensoria Publica ou no Ministerio Publico sem advogado.
+**Não.** Você pode pedir na delegacia, na Defensoria Pública ou no Ministerio Público sem advogado.
 
 ### Preciso ter registrado B.O. para pedir?
-**Nao.** Desde 2023, a medida protetiva pode ser pedida mesmo sem B.O. (Lei 14.550/2023).
+**Não.** Desde 2023, a medida protetiva pode ser pedida mesmo sem B.O. (Lei 14.550/2023).
 
 ### Quanto tempo demora?
-O juiz deve decidir em ate **48 horas** apos receber o pedido.
+O juiz deve decidir em até **48 horas** após receber o pedido.
 
 ### A medida protetiva tem prazo de validade?
-A medida protetiva vigora enquanto houver risco. O juiz pode revoga-la, prorroga-la ou modifica-la conforme a situacao.
+A medida protetiva vigora enquanto houver risco. O juiz pode revoga-la, prorroga-la ou modifica-la conforme a situação.
 
 ### E se eu quiser retirar a medida protetiva?
-Voce pode pedir ao juiz, mas a decisao final e dele. O juiz pode manter a medida se entender que ainda existe risco, mesmo que voce nao queira mais.
+Você pode pedir ao juiz, mas a decisão final e dele. O juiz pode manter a medida se entender que ainda existe risco, mesmo que você não queira mais.
 
-### O agressor pode ser preso so por descumprir a medida?
-**Sim.** Descumprir medida protetiva e crime com pena de 2 a 5 anos de reclusao, e o agressor pode ser preso em flagrante.
+### O agressor pode ser preso só por descumprir a medida?
+**Sim.** Descumprir medida protetiva é crime com pena de 2 a 5 anos de reclusão, é o agressor pode ser preso em flagrante.
 
 ---
 
 ## Onde Buscar Ajuda
 
-| Servico | Contato |
+| Serviço | Contato |
 |---------|---------|
-| Defensoria Publica -- Brasilia | (61) 99359-0024 |
-| Defensoria Publica -- Taguatinga | (61) 99359-0058 |
-| Defensoria Publica -- Violencia Domestica (Taguatinga) | (61) 99359-0038 |
-| Defensoria Publica -- Planaltina | (61) 99882-4085 |
-| Plantao Criminal e Violencia Domestica | (61) 99359-0081 (dias uteis, 12h-19h) |
+| Defensoria Pública -- Brasilia | (61) 99359-0024 |
+| Defensoria Pública -- Taguatinga | (61) 99359-0058 |
+| Defensoria Pública -- Violência Doméstica (Taguatinga) | (61) 99359-0038 |
+| Defensoria Pública -- Planaltina | (61) 99882-4085 |
+| Plantao Criminal e Violência Doméstica | (61) 99359-0081 (dias úteis, 12h-19h) |
 | Casa da Mulher Brasileira (Ceilandia) | (61) 98312-0763 (24 horas) |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - [Lei 11.340/2006 -- Lei Maria da Penha (artigos 18 a 24)](http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm)
 - [Lei 13.641/2018 -- Crime de descumprimento de medida protetiva](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13641.htm)
 - [Lei 14.550/2023 -- Medidas protetivas independentes de B.O.](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14550.htm)
 - [Lei 14.987/2024 -- Aumento da pena por descumprimento](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14987.htm)
 - [CNJ -- Medidas protetivas da Lei Maria da Penha](https://www.cnj.jus.br/conheca-as-medidas-protetivas-previstas-pela-lei-maria-da-penha/)
-- [Defensoria Publica do DF](https://www.defensoria.df.gov.br/?page_id=63141)
+- [Defensoria Pública do DF](https://www.defensoria.df.gov.br/?page_id=63141)
 `
         },
         {
-          id: `04-rede-protecao-df`,
-          title: `Rede de Protecao no Distrito Federal`,
-          content: `# Rede de Protecao no Distrito Federal
+          id: `04-rede-proteção-df`,
+          title: `Rede de Proteção no Distrito Federal`,
+          content: `# Rede de Proteção no Distrito Federal
 
-> **Se voce esta em perigo agora, ligue 190 (Policia Militar).**
-> **Para orientacao e denuncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Se você está em perigo agora, ligue 190 (Polícia Militar).**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
 
 ---
 
-## Telefones de Emergencia
+## Telefones de Emergência
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
-| Policia Militar (emergencia) | **190** | 24 horas |
+| Polícia Militar (emergência) | **190** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
 | Direitos Humanos | **100** | 24 horas |
 | DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
@@ -1947,71 +1947,71 @@ Voce pode pedir ao juiz, mas a decisao final e dele. O juiz pode manter a medida
 
 ---
 
-O Distrito Federal tem uma rede de servicos gratuitos para proteger e apoiar mulheres vitimas de violencia domestica. Aqui voce encontra enderecos, telefones e informacoes sobre cada servico.
+O Distrito Federal tem uma rede de serviços gratuitos para proteger e apoiar mulheres vítimas de violência doméstica. Aqui você encontra endereços, telefones e informações sobre cada serviço.
 
-**Todos os servicos listados abaixo sao gratuitos.**
+**Todos os serviços listados abaixo sao gratuitos.**
 
 ---
 
 ## Casa da Mulher Brasileira -- Ceilandia
 
-A Casa da Mulher Brasileira e um centro que reune varios servicos em um so lugar. Funciona **24 horas, todos os dias**.
+A Casa da Mulher Brasileira é um centro que reune varios serviços em um só lugar. Funciona **24 horas, todos os dias**.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| **Endereco** | CNM 1, Bloco I, Lote 3 -- Ceilandia -- CEP: 72215-110 |
+| **Endereço** | CNM 1, Bloco I, Lote 3 -- Ceilandia -- CEP: 72215-110 |
 | **Recepcao** | (61) 98312-0763 |
 | **Portaria** | (61) 3181-1474 |
 | **Coordenacao** | (61) 3181-2228 |
-| **Horario** | 24 horas, todos os dias |
+| **Horário** | 24 horas, todos os dias |
 
-### Servicos disponiveis no mesmo local:
+### Serviços disponíveis no mesmo local:
 - Acolhimento e escuta
-- Orientacao juridica
+- Orientação jurídica
 - Apoio psicossocial
 - Delegacia especializada
-- Defensoria Publica
-- Ministerio Publico
-- Juizado de Violencia Domestica
+- Defensoria Pública
+- Ministerio Público
+- Juizado de Violência Doméstica
 
-> **A Casa da Mulher Brasileira e um otimo ponto de partida.** La voce encontra tudo o que precisa em um so lugar, 24 horas por dia.
+> **A Casa da Mulher Brasileira é um otimo ponto de partida.** La você encontra tudo o que precisa em um só lugar, 24 horas por dia.
 
 ---
 
 ## CEAMs -- Centros Especializados de Atendimento a Mulher
 
-Os CEAMs oferecem acolhimento e acompanhamento com equipe de assistentes sociais, psicologos, pedagogos e orientacao juridica. O servico e **gratuito** e dura em media 6 meses.
+Os CEAMs oferecem acolhimento e acompanhamento com equipe de assistentes sociais, psicologos, pedagogos e orientação jurídica. O serviço e **gratuito** e dura em media 6 meses.
 
-**Quem pode usar:** Mulheres a partir de 18 anos em situacao de violencia.
-**Documentos:** De preferencia RG e CPF, mas a falta de documentos nao impede o atendimento.
+**Quem pode usar:** Mulheres a partir de 18 anos em situação de violência.
+**Documentos:** De preferencia RG e CPF, mas a falta de documentos não impede o atendimento.
 **Agendamento:** Pelo site agenda.df.gov.br ou por telefone.
 
 ### Unidades dos CEAMs
 
 #### CEAM 102 Sul (Plano Piloto)
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | **Telefone** | (61) 3181-2245 / (61) 99183-6454 |
 | **E-mail** | ceam.102sul@mulher.df.gov.br |
-| **Horario** | Segunda a sexta, 8h as 18h |
+| **Horário** | Segunda a sexta, 8h as 18h |
 
 #### CEAM Planaltina
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | **Telefone** | (61) 3181-2249 / (61) 3181-2250 / (61) 99202-6376 |
 | **E-mail** | ceamplanaltinadm@mulher.df.gov.br |
-| **Horario** | Segunda a sexta, 9h as 18h |
+| **Horário** | Segunda a sexta, 9h as 18h |
 
 #### CEAM CIOB (Plano Piloto)
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | **Telefone** | (61) 3181-2251 / (61) 3181-2252 / (61) 98199-1198 |
 | **E-mail** | ceam4@mulher.df.gov.br |
-| **Horario** | Segunda a sexta, 9h as 18h |
+| **Horário** | Segunda a sexta, 9h as 18h |
 
 ---
 
-## Centros de Referencia da Mulher Brasileira (CRMB)
+## Centros de Referência da Mulher Brasileira (CRMB)
 
 Funcionamento: segunda a sexta, 9h as 18h.
 
@@ -2024,46 +2024,46 @@ Funcionamento: segunda a sexta, 9h as 18h.
 
 ---
 
-## Casa Abrigo -- Para Situacoes de Risco de Morte
+## Casa Abrigo -- Para Situações de Risco de Morte
 
-A Casa Abrigo e um local seguro e sigiloso para mulheres vitimas de violencia domestica que correm **risco de morte**, junto com seus filhos.
+A Casa Abrigo é um local seguro e sigiloso para mulheres vítimas de violência doméstica que correm **risco de morte**, junto com seus filhos.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| **Endereco** | Sigiloso (para protecao das abrigadas) |
-| **Capacidade** | Ate 40 pessoas (vitimas e dependentes) |
-| **Permanencia** | Ate 90 dias, podendo ser prorrogada |
+| **Endereço** | Sigiloso (para proteção das abrigadas) |
+| **Capacidade** | Até 40 pessoas (vítimas e dependentes) |
+| **Permanencia** | Até 90 dias, podendo ser prorrogada |
 
-### Servicos oferecidos:
-- Moradia segura com dormitorios e alimentacao
-- Atendimento psicologico
-- Assistencia juridica
-- Apoio pedagogico para as criancas
-- Assistencia social
+### Serviços oferecidos:
+- Moradia segura com dormitorios e alimentação
+- Atendimento psicológico
+- Assistência jurídica
+- Apoio pedagogico para as crianças
+- Assistência social
 
 ### Quem pode ser abrigada:
-- Mulheres com risco de morte por violencia domestica
-- Filhos do sexo masculino ate 12 anos incompletos
+- Mulheres com risco de morte por violência doméstica
+- Filhos do sexo masculino até 12 anos incompletos
 - Filhas do sexo feminino sem limite de idade
 
 ### Como solicitar abrigo:
 
-1. Registre Boletim de Ocorrencia na DEAM ou delegacia mais proxima, relatando **risco de morte**
-2. Se houver lesoes, sera encaminhada ao IML para exame
+1. Registre Boletim de Ocorrência na DEAM ou delegacia mais proxima, relatando **risco de morte**
+2. Se houver lesoes, será encaminhada ao IML para exame
 3. A autoridade policial faz o encaminhamento formal a Casa Abrigo
-4. O encaminhamento tambem pode ser feito por ordem judicial ou pela Casa da Mulher Brasileira
+4. O encaminhamento também pode ser feito por ordem judicial ou pela Casa da Mulher Brasileira
 
-> **Se voce corre risco de morte, nao hesite em buscar abrigo. A Casa Abrigo existe para proteger voce e seus filhos.**
+> **Se você corre risco de morte, não hesite em buscar abrigo. A Casa Abrigo existe para proteger você e seus filhos.**
 
 ---
 
 ## Espacos Acolher (antigos NAFAVDs)
 
-Os Espacos Acolher oferecem atendimento psicossocial a todas as pessoas envolvidas em violencia domestica: vitimas, agressores e familiares. O objetivo e ajudar na recuperacao e na construcao de uma vida sem violencia.
+Os Espacos Acolher oferecem atendimento psicossocial a todas as pessoas envolvidas em violência doméstica: vítimas, agressores e familiares. O objetivo e ajudar na recuperacao e na construção de uma vida sem violência.
 
 ### Unidades no DF
 
-| Unidade | Telefone | Endereco |
+| Unidade | Telefone | Endereço |
 |---------|----------|----------|
 | **Plano Piloto** | (61) 3181-2236 / 99323-6567 | SQS 112/312, Asa Sul -- CEP 70375-000 |
 | **Ceilandia** | (61) 3181-2240 / 98314-0882 | QNM 02, conjunto F, lote 1/3, Ceilandia Centro |
@@ -2075,13 +2075,13 @@ Os Espacos Acolher oferecem atendimento psicossocial a todas as pessoas envolvid
 | **Sobradinho** | (61) 3181-2241 / 99501-6007 | Qd. 3, Area Especial 5, Ed. Gran Via, sala 115 -- CEP 73031-030 |
 | **Samambaia** | (61) 3181-2237 / 99530-9675 | Ed. Arena Mall, QS 406, conj. E, lote 3, loja 4, Samambaia Norte |
 
-**Horario de todas as unidades:** Segunda a sexta, 8h ou 9h as 18h.
+**Horário de todas as unidades:** Segunda a sexta, 8h ou 9h as 18h.
 
 ---
 
-## Defensoria Publica do DF -- Assistencia Juridica Gratuita
+## Defensoria Pública do DF -- Assistência Jurídica Gratuita
 
-A Defensoria Publica oferece advogado gratuito para mulheres vitimas de violencia domestica. Voce tem direito a acompanhamento juridico em todos os processos, civeis e criminais.
+A Defensoria Pública oferece advogado gratuito para mulheres vítimas de violência doméstica. Você tem direito a acompanhamento jurídico em todos os processos, civeis e criminais.
 
 ### Contatos por localidade
 
@@ -2090,39 +2090,39 @@ A Defensoria Publica oferece advogado gratuito para mulheres vitimas de violenci
 | **Brasilia (Plano Piloto)** | (61) 3103-1926 / 3103-1928 / 3103-1765 |
 | **Brasilia -- WhatsApp** | (61) 99359-0024 |
 | **Taguatinga -- WhatsApp geral** | (61) 99359-0058 |
-| **Taguatinga -- Violencia domestica** | (61) 99359-0038 |
+| **Taguatinga -- Violência doméstica** | (61) 99359-0038 |
 | **Planaltina -- WhatsApp** | (61) 99882-4085 |
-| **Plantao Criminal e Violencia Domestica** | (61) 99359-0081 (dias uteis, 12h-19h) |
+| **Plantao Criminal e Violência Doméstica** | (61) 99359-0081 (dias úteis, 12h-19h) |
 
-**Endereco em Brasilia:** Forum Jose Julio Leal Fagundes -- Setor de Multiplas Atividades Sul, Trecho 3, Lotes 4/6.
+**Endereço em Brasilia:** Forum Jose Julio Leal Fagundes -- Setor de Multiplas Atividades Sul, Trecho 3, Lotes 4/6.
 
-> **Voce nao precisa pagar advogado.** A Defensoria Publica atende gratuitamente.
+> **Você não precisa pagar advogado.** A Defensoria Pública atende gratuitamente.
 
 ---
 
-## PROVID -- Policia Militar de Prevencao a Violencia Domestica
+## PROVID -- Polícia Militar de Prevenção a Violência Doméstica
 
-O PROVID e um programa da Policia Militar do DF que faz acompanhamento preventivo de familias em situacao de violencia domestica.
+O PROVID é um programa da Polícia Militar do DF que faz acompanhamento preventivo de famílias em situação de violência doméstica.
 
 ### Como funciona:
-- Apos denuncia ou solicitacao, o primeiro atendimento e feito em ate **48 horas**
-- A policia verifica a situacao e acompanha o caso
-- Faz encaminhamento para orgaos de apoio (Defensoria, CRAS, Conselho Tutelar)
+- Após denúncia ou solicitação, o primeiro atendimento é feito em até **48 horas**
+- A polícia verifica a situação e acompanha o caso
+- Faz encaminhamento para órgãos de apoio (Defensoria, CRAS, Conselho Tutelar)
 
 ### Quem pode solicitar:
-- A propria vitima
+- A própria vítima
 - Qualquer pessoa que denuncie
-- Orgaos publicos (Ministerio Publico, Juizado, CRAS, Conselho Tutelar)
+- Órgãos públicos (Ministerio Público, Juizado, CRAS, Conselho Tutelar)
 
 ### Contato da Sede Principal (CPCDH)
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| **Endereco** | Avenida Sibipiruna, Lote 3/5 -- Aguas Claras |
+| **Endereço** | Avenida Sibipiruna, Lote 3/5 -- Aguas Claras |
 | **Telefone** | (61) 3910-1669 |
 | **E-mail** | pmdf.cpcdh.provid@gmail.com |
 
-O PROVID tambem tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradinho, Planaltina, Sao Sebastiao e Santa Maria.
+O PROVID também tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradinho, Planaltina, Sao Sebastiao e Santa Maria.
 
 ---
 
@@ -2130,7 +2130,7 @@ O PROVID tambem tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradin
 
 ### Sedes
 
-| Sede | Endereco | Telefone |
+| Sede | Endereço | Telefone |
 |------|----------|----------|
 | **Sede I** | Palacio do Buriti, Ed. Anexo, 8o andar -- CEP 70306-905 | (61) 3181-1445 |
 | **Sede II** | SBN Quadra 02, Bloco P, Edificio Sede 2 -- CEP 70040-035 | (61) 3181-1449 |
@@ -2139,9 +2139,9 @@ O PROVID tambem tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradin
 
 | Programa | Telefone | O que oferece |
 |----------|----------|---------------|
-| **Aluguel Social** | (61) 3181-1467 | Auxilio para moradia |
+| **Aluguel Social** | (61) 3181-1467 | Auxílio para moradia |
 | **Acolher Eles e Elas** | (61) 3181-1471 | Programa de acolhimento |
-| **Passe Livre Transporte** | (61) 3181-1470 | Transporte publico gratuito |
+| **Passe Livre Transporte** | (61) 3181-1470 | Transporte público gratuito |
 
 ---
 
@@ -2149,140 +2149,140 @@ O PROVID tambem tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradin
 
 | Sua necessidade | Onde ir | Contato |
 |-----------------|---------|---------|
-| Emergencia / agressao agora | Policia Militar | 190 |
-| Orientacao e denuncia | Ligue 180 | 180 |
+| Emergência / agressão agora | Polícia Militar | 190 |
+| Orientação e denúncia | Ligue 180 | 180 |
 | Registrar B.O. e pedir medida protetiva | DEAM I ou DEAM II | (61) 3207-6172 / 3207-7391 |
-| Atendimento completo em um so lugar | Casa da Mulher Brasileira | (61) 98312-0763 |
-| Apoio psicologico e social | CEAM ou Espaco Acolher | Ver lista acima |
-| Advogado gratuito | Defensoria Publica | (61) 99359-0024 |
+| Atendimento completo em um só lugar | Casa da Mulher Brasileira | (61) 98312-0763 |
+| Apoio psicológico e social | CEAM ou Espaco Acolher | Ver lista acima |
+| Advogado gratuito | Defensoria Pública | (61) 99359-0024 |
 | Abrigo (risco de morte) | Casa Abrigo (via DEAM) | Registre B.O. na DEAM |
-| Auxilio moradia | Aluguel Social | (61) 3181-1467 |
+| Auxílio moradia | Aluguel Social | (61) 3181-1467 |
 | Transporte gratuito | Passe Livre | (61) 3181-1470 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - [Secretaria da Mulher do DF -- Telefones das unidades](https://www.mulher.df.gov.br/telefone-das-unidades-2)
 - [Secretaria da Mulher do DF -- CEAM](https://www.mulher.df.gov.br/centro-especializado-de-atendimento-a-mulher-ceam)
 - [Secretaria da Mulher do DF -- Espacos Acolher/NAFAVD](https://www.mulher.df.gov.br/nafavds)
 - [Secretaria da Mulher do DF -- Casa Abrigo](https://www.mulher.df.gov.br/casa-abrigo-2)
 - [GDF -- Casa Abrigo](https://www.df.gov.br/casa-abrigo/)
-- [GDF -- PROVID](https://www.df.gov.br/assistencia-da-prevencao-orientada-a-violencia-domestica-provid/)
-- [PCDF -- DEAM I](https://www.pcdf.df.gov.br/informacoes/lista-telefonica/68/deam-delegacia-especial-de-atendimento-a-mulher)
-- [PCDF -- DEAM II](https://www.pcdf.df.gov.br/informacoes/lista-telefonica/95/-deam-ii-delegacia-especial-de-atendimento-a-mulher-ii)
-- [Defensoria Publica do DF](https://www.defensoria.df.gov.br/?page_id=63141)
+- [GDF -- PROVID](https://www.df.gov.br/assistência-da-prevenção-orientada-a-violência-doméstica-provid/)
+- [PCDF -- DEAM I](https://www.pcdf.df.gov.br/informações/lista-telefonica/68/deam-delegacia-especial-de-atendimento-a-mulher)
+- [PCDF -- DEAM II](https://www.pcdf.df.gov.br/informações/lista-telefonica/95/-deam-ii-delegacia-especial-de-atendimento-a-mulher-ii)
+- [Defensoria Pública do DF](https://www.defensoria.df.gov.br/?page_id=63141)
 `
         },
         {
-          id: `05-violencia-idosos-criancas`,
-          title: `Violencia contra Idosos, Criancas e Pessoas com Deficiencia`,
-          content: `# Violencia contra Idosos, Criancas e Pessoas com Deficiencia
+          id: `05-violência-idosos-crianças`,
+          title: `Violência contra Idosos, Crianças e Pessoas com Deficiência`,
+          content: `# Violência contra Idosos, Crianças e Pessoas com Deficiência
 
-> **Para denunciar violencia contra idosos, criancas ou pessoas com deficiencia, ligue 100 (Disque Direitos Humanos) -- 24 horas, gratuito, anonimo.**
-> **Em caso de emergencia, ligue 190 (Policia Militar).**
+> **Para denunciar violência contra idosos, crianças ou pessoas com deficiência, ligue 100 (Disque Direitos Humanos) -- 24 horas, gratuito, anônimo.**
+> **Em caso de emergência, ligue 190 (Polícia Militar).**
 
 ---
 
-## Telefones de Emergencia
+## Telefones de Emergência
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
-| Policia Militar (emergencia) | **190** | 24 horas |
+| Polícia Militar (emergência) | **190** | 24 horas |
 | Disque Direitos Humanos | **100** | 24 horas |
 | WhatsApp Direitos Humanos | **(61) 99656-5008** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
-| Policia Civil (denuncia anonima) | **197** | 24 horas |
+| Polícia Civil (denúncia anônima) | **197** | 24 horas |
 
 ---
 
-A violencia domestica nao atinge apenas mulheres. Idosos, criancas, adolescentes e pessoas com deficiencia tambem sao vitimas frequentes. Muitas vezes, a violencia vem de dentro da propria familia -- de filhos, netos, pais, cuidadores ou responsaveis.
+A violência doméstica não atinge apenas mulheres. Idosos, crianças, adolescentes e pessoas com deficiência também sao vítimas frequentes. Muitas vezes, a violência vem de dentro da própria família -- de filhos, netos, pais, cuidadores ou responsáveis.
 
-**Toda pessoa tem o dever de denunciar.** Se voce sabe de alguem que esta sofrendo violencia, nao se cale. A denuncia pode ser anonima.
+**Toda pessoa tem o dever de denunciar.** Se você sabe de alguém que está sofrendo violência, não se cale. A denúncia pode ser anônima.
 
 ---
 
 ## Disque 100 -- Direitos Humanos
 
-O Disque 100 e o principal canal para denunciar violencia contra pessoas vulneraveis.
+O Disque 100 é o principal canal para denunciar violência contra pessoas vulneráveis.
 
 - **Telefone:** 100 (ligacao gratuita, de qualquer telefone)
 - **WhatsApp:** (61) 99656-5008
-- **Aplicativo:** "Direitos Humanos Brasil" (com recursos de acessibilidade para pessoas com deficiencia)
+- **Aplicativo:** "Direitos Humanos Brasil" (com recursos de acessibilidade para pessoas com deficiência)
 - **Funciona:** 24 horas, 7 dias por semana, inclusive feriados
-- **A denuncia pode ser anonima**
+- **A denúncia pode ser anônima**
 
 ### Quem pode denunciar:
-- Qualquer pessoa: a propria vitima, familiares, vizinhos, profissionais de saude, professores, cuidadores, amigos
+- Qualquer pessoa: a própria vítima, familiares, vizinhos, profissionais de saúde, professores, cuidadores, amigos
 
-### O que acontece apos a denuncia:
-As denuncias sao encaminhadas aos orgaos responsaveis: Ministerio Publico, Conselho Tutelar, delegacias e Defensorias Publicas.
+### O que acontece após a denúncia:
+As denúncias sao encaminhadas aos órgãos responsáveis: Ministerio Público, Conselho Tutelar, delegacias e Defensorias Publicas.
 
-> **Voce nao precisa ter certeza para denunciar.** Se suspeitar que alguem esta sofrendo violencia, ligue. Os orgaos competentes vao investigar.
+> **Você não precisa ter certeza para denunciar.** Se suspeitar que alguém esta sofrendo violência, ligue. Os órgãos competentes vao investigar.
 
 ---
 
-## Violencia contra Idosos
+## Violência contra Idosos
 
 ### O Que Diz a Lei
 
-O **Estatuto do Idoso** (Lei 10.741/2003) protege toda pessoa com **60 anos ou mais**. A lei garante protecao integral contra todas as formas de violencia, negligencia e abandono.
+O **Estatuto do Idoso** (Lei 10.741/2003) protege toda pessoa com **60 anos ou mais**. A lei garante proteção integral contra todas as formas de violência, negligencia e abandono.
 
-### Tipos de Violencia contra Idosos
+### Tipos de Violência contra Idosos
 
 | Tipo | Exemplos |
 |------|----------|
-| **Violencia fisica** | Bater, empurrar, amarrar, dar medicacao excessiva para manter a pessoa quieta |
-| **Violencia psicologica** | Humilhar, ameacar, isolar, ignorar, gritar, tratar com desprezo |
-| **Violencia patrimonial/financeira** | Tomar a aposentadoria, usar o cartao do banco sem permissao, forcar a assinar documentos, vender bens do idoso |
-| **Violencia sexual** | Qualquer ato sexual sem consentimento |
-| **Negligencia e abandono** | Deixar sem comida, sem remedio, sem higiene, sem cuidados medicos |
-| **Violencia institucional** | Maus-tratos em casas de repouso, asilos ou hospitais |
+| **Violência física** | Bater, empurrar, amarrar, dar medicacao excessiva para manter a pessoa quieta |
+| **Violência psicológica** | Humilhar, ameacar, isolar, ignorar, gritar, tratar com desprezo |
+| **Violência patrimonial/financeira** | Tomar a aposentadoria, usar o cartao do banco sem permissão, forcar a assinar documentos, vender bens do idoso |
+| **Violência sexual** | Qualquer ato sexual sem consentimento |
+| **Negligencia e abandono** | Deixar sem comida, sem remedio, sem higiene, sem cuidados médicos |
+| **Violência institucional** | Maus-tratos em casas de repouso, asilos ou hospitais |
 
-> **A violencia patrimonial e uma das mais comuns contra idosos.** Filhos, netos ou cuidadores que se apropriam da aposentadoria, do cartao do banco ou dos bens do idoso estao cometendo crime.
+> **A violência patrimonial é uma das mais comuns contra idosos.** Filhos, netos ou cuidadores que se apropriam da aposentadoria, do cartao do banco ou dos bens do idoso estão cometendo crime.
 
 ### Quem E Obrigado a Denunciar
 
-A lei determina que as seguintes pessoas sao **obrigadas** a comunicar casos de violencia contra idosos:
+A lei determina que as seguintes pessoas sao **obrigadas** a comunicar casos de violência contra idosos:
 
-- Profissionais de saude (medicos, enfermeiros, agentes de saude)
-- Profissionais de educacao
-- Profissionais de assistencia social
-- Funcionarios de instituicoes de longa permanencia (asilos, casas de repouso)
+- Profissionais de saúde (médicos, enfermeiros, agentes de saúde)
+- Profissionais de educação
+- Profissionais de assistência social
+- Funcionarios de instituições de longa permanência (asilos, casas de repouso)
 
-Quem sabe de violencia contra idoso e nao denuncia pode responder criminalmente.
+Quem sabe de violência contra idoso e não denúncia pode responder criminalmente.
 
 ### Direitos do Idoso
 
-- Prioridade absoluta no atendimento em todos os orgaos publicos e privados
+- Prioridade absoluta no atendimento em todos os órgãos públicos e privados
 - Prioridade especial para maiores de 80 anos
 - Penas mais severas quando o crime e cometido contra pessoa idosa
-- Direito a alimentos (pensao) por parte dos filhos e familiares
+- Direito a alimentos (pensão) por parte dos filhos e familiares
 
-### Onde Denunciar Violencia contra Idosos
+### Onde Denunciar Violência contra Idosos
 
 | Canal | Contato |
 |-------|---------|
-| Disque 100 | 100 (24h, gratuito, anonimo) |
+| Disque 100 | 100 (24h, gratuito, anônimo) |
 | WhatsApp Direitos Humanos | (61) 99656-5008 |
-| Delegacia de Policia | Qualquer delegacia |
-| Ministerio Publico | Promotoria da sua regiao |
-| Conselho dos Direitos do Idoso | Consulte a secretaria de assistencia social da sua cidade |
-| CREAS | Centro de Referencia Especializado de Assistencia Social da sua regiao |
+| Delegacia de Polícia | Qualquer delegacia |
+| Ministerio Público | Promotoria da sua regiao |
+| Conselho dos Direitos do Idoso | Consulte a secretaria de assistência social da sua cidade |
+| CREAS | Centro de Referência Especializado de Assistência Social da sua regiao |
 
 ---
 
-## Violencia contra Criancas e Adolescentes
+## Violência contra Crianças e Adolescentes
 
 ### O Que Diz a Lei
 
-O **Estatuto da Crianca e do Adolescente -- ECA** (Lei 8.069/1990) protege:
-- **Criancas:** ate 12 anos incompletos
+O **Estatuto da Criança e do Adolescente -- ECA** (Lei 8.069/1990) protege:
+- **Crianças:** até 12 anos incompletos
 - **Adolescentes:** de 12 a 18 anos
 
-O ECA garante protecao contra qualquer forma de maus-tratos, negligencia, exploracoes, violencia fisica, psicologica ou sexual.
+O ECA garante proteção contra qualquer forma de maus-tratos, negligencia, exploracoes, violência física, psicológica ou sexual.
 
-### Sinais de Que Uma Crianca Pode Estar Sofrendo Violencia
+### Sinais de Que Uma Criança Pode Estar Sofrendo Violência
 
 Fique atento a estes sinais:
 - Marcas no corpo sem explicacao (hematomas, queimaduras, arranhoes)
@@ -2295,124 +2295,124 @@ Fique atento a estes sinais:
 
 ### Quem E Obrigado a Denunciar
 
-**Toda a sociedade** tem o dever de proteger criancas e adolescentes. Mas a lei estabelece obrigacao especial para:
+**Toda a sociedade** tem o dever de proteger crianças e adolescentes. Mas a lei estabelece obrigação especial para:
 
 - **Professores e diretores de escola** -- sao obrigados a comunicar ao Conselho Tutelar
-- **Medicos e profissionais de saude** -- sao obrigados a notificar casos suspeitos
-- **Profissionais de assistencia social**
+- **Medicos e profissionais de saúde** -- sao obrigados a notificar casos suspeitos
+- **Profissionais de assistência social**
 
-Profissionais de saude e educacao que nao denunciarem podem responder criminalmente (artigo 245 do ECA).
+Profissionais de saúde e educação que não denunciarem podem responder criminalmente (artigo 245 do ECA).
 
 ### O Conselho Tutelar
 
-O Conselho Tutelar e o orgao responsavel por proteger os direitos das criancas e dos adolescentes. Funciona como a "porta de entrada" da rede de protecao.
+O Conselho Tutelar é o órgão responsável por proteger os direitos das crianças e dos adolescentes. Funciona como a "porta de entrada" da rede de proteção.
 
 **O que o Conselho Tutelar faz:**
-- Recebe denuncias e notificacoes
-- Verifica a situacao no local
-- Aplica medidas de protecao
-- Encaminha para atendimento medico, psicologico e social
-- Aciona o Ministerio Publico e a policia quando necessario
-- Acompanha a familia
+- Recebe denúncias e notificacoes
+- Verifica a situação no local
+- Aplica medidas de proteção
+- Encaminha para atendimento médico, psicológico e social
+- Aciona o Ministerio Público é a polícia quando necessário
+- Acompanha a família
 
-### Onde Denunciar Violencia contra Criancas e Adolescentes
+### Onde Denunciar Violência contra Crianças e Adolescentes
 
 | Canal | Contato |
 |-------|---------|
-| Disque 100 | 100 (24h, gratuito, anonimo) |
+| Disque 100 | 100 (24h, gratuito, anônimo) |
 | WhatsApp Direitos Humanos | (61) 99656-5008 |
 | Conselho Tutelar | Da sua regiao |
-| Delegacia de Policia | Qualquer delegacia |
-| Delegacia da Crianca e do Adolescente (DCA) | No DF |
-| Ministerio Publico | Promotoria da sua regiao |
+| Delegacia de Polícia | Qualquer delegacia |
+| Delegacia da Criança e do Adolescente (DCA) | No DF |
+| Ministerio Público | Promotoria da sua regiao |
 | Escola | Professores e diretores sao obrigados a comunicar |
 
-> **Nao espere ter certeza.** Se uma crianca ou adolescente apresenta sinais de violencia, denuncie. Os orgaos competentes vao investigar. Sua denuncia pode salvar uma vida.
+> **Não espere ter certeza.** Se uma criança ou adolescente apresenta sinais de violência, denuncie. Os órgãos competentes vao investigar. Sua denúncia pode salvar uma vida.
 
 ---
 
-## Violencia contra Pessoas com Deficiencia
+## Violência contra Pessoas com Deficiência
 
 ### O Que Diz a Lei
 
-O **Estatuto da Pessoa com Deficiencia** (Lei 13.146/2015) garante protecao integral contra todas as formas de:
-- Violencia
+O **Estatuto da Pessoa com Deficiência** (Lei 13.146/2015) garante proteção integral contra todas as formas de:
+- Violência
 - Negligencia
 - Discriminacao
 - Exploracao
 - Crueldade
 
-### Tipos de Violencia Comuns contra PCD
+### Tipos de Violência Comuns contra PCD
 
-- Violencia fisica por parte de familiares ou cuidadores
-- Negligencia (negar cuidados, medicamentos, alimentacao)
-- Violencia patrimonial (se apropriar de beneficios como BPC/LOAS)
-- Violencia psicologica (humilhacao, isolamento, tratamento degradante)
-- Abandono em instituicoes
-- Impedir acesso a servicos de saude, educacao ou reabilitacao
+- Violência física por parte de familiares ou cuidadores
+- Negligencia (negar cuidados, medicamentos, alimentação)
+- Violência patrimonial (se apropriar de benefícios como BPC/LOAS)
+- Violência psicológica (humilhacao, isolamento, tratamento degradante)
+- Abandono em instituições
+- Impedir acesso a serviços de saúde, educação ou reabilitação
 
 ### Onde Denunciar
 
 | Canal | Contato |
 |-------|---------|
-| Disque 100 | 100 (24h, gratuito, anonimo) |
+| Disque 100 | 100 (24h, gratuito, anônimo) |
 | WhatsApp Direitos Humanos | (61) 99656-5008 |
-| Delegacia de Policia | Qualquer delegacia |
-| Ministerio Publico | Promotoria da sua regiao |
-| CREAS | Centro de Referencia Especializado de Assistencia Social |
+| Delegacia de Polícia | Qualquer delegacia |
+| Ministerio Público | Promotoria da sua regiao |
+| CREAS | Centro de Referência Especializado de Assistência Social |
 
-> **O aplicativo "Direitos Humanos Brasil" tem recursos de acessibilidade** para que pessoas com deficiencia possam fazer denuncias de forma autonoma.
+> **O aplicativo "Direitos Humanos Brasil" tem recursos de acessibilidade** para que pessoas com deficiência possam fazer denúncias de forma autônoma.
 
 ---
 
-## O Que Fazer -- Guia Pratico
+## O Que Fazer -- Guia Prático
 
-### Se a violencia esta acontecendo agora:
-1. Ligue **190** (Policia Militar)
-2. Se possivel, retire a vitima do local de perigo
+### Se a violência esta acontecendo agora:
+1. Ligue **190** (Polícia Militar)
+2. Se possível, retire a vítima do local de perigo
 3. Se houver lesoes, leve ao hospital (atendimento gratuito pelo SUS)
 
-### Se voce suspeita de violencia:
-1. Ligue **100** (Disque Direitos Humanos) -- pode ser anonimo
-2. Ou ligue **197** (Policia Civil -- denuncia anonima)
-3. Procure o Conselho Tutelar (para criancas e adolescentes)
-4. Procure o CREAS da sua regiao (para idosos e pessoas com deficiencia)
-5. Comunique a escola, se envolver crianca ou adolescente
+### Se você suspeita de violência:
+1. Ligue **100** (Disque Direitos Humanos) -- pode ser anônimo
+2. Ou ligue **197** (Polícia Civil -- denúncia anônima)
+3. Procure o Conselho Tutelar (para crianças e adolescentes)
+4. Procure o CREAS da sua regiao (para idosos e pessoas com deficiência)
+5. Comunique a escola, se envolver criança ou adolescente
 
-### Informacoes para ter em maos ao denunciar:
-- Nome e endereco da vitima (se souber)
+### Informações para ter em maos ao denunciar:
+- Nome e endereço da vítima (se souber)
 - Nome do agressor (se souber)
-- O que esta acontecendo (o que voce viu, ouviu ou suspeita)
+- O que está acontecendo (o que você viu, ouviu ou suspeita)
 - Desde quando acontece
 - Se ha outras testemunhas
 
-> **Voce nao precisa ter todas as informacoes.** Denuncie com o que voce souber. Qualquer informacao ajuda.
+> **Você não precisa ter todas as informações.** Denuncie com o que você souber. Qualquer informação ajuda.
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - [Lei 10.741/2003 -- Estatuto do Idoso](http://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm)
-- [Lei 8.069/1990 -- Estatuto da Crianca e do Adolescente (ECA)](http://www.planalto.gov.br/ccivil_03/leis/l8069.htm)
-- [Lei 13.146/2015 -- Estatuto da Pessoa com Deficiencia](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm)
-- [Disque 100 -- Ministerio dos Direitos Humanos](https://www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos)
+- [Lei 8.069/1990 -- Estatuto da Criança e do Adolescente (ECA)](http://www.planalto.gov.br/ccivil_03/leis/l8069.htm)
+- [Lei 13.146/2015 -- Estatuto da Pessoa com Deficiência](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm)
+- [Disque 100 -- Ministerio dos Direitos Humanos](https://www.gov.br/pt-br/serviços/denunciar-violação-de-direitos-humanos)
 `
         },
         {
           id: `06-feminicidio-stalking`,
-          title: `Feminicidio, Stalking e Violencia Psicologica`,
-          content: `# Feminicidio, Stalking e Violencia Psicologica
+          title: `Feminicidio, Stalking e Violência Psicológica`,
+          content: `# Feminicidio, Stalking e Violência Psicológica
 
-> **Se voce esta em perigo agora, ligue 190 (Policia Militar).**
-> **Para orientacao e denuncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Se você está em perigo agora, ligue 190 (Polícia Militar).**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
 
 ---
 
-## Telefones de Emergencia
+## Telefones de Emergência
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
-| Policia Militar (emergencia) | **190** | 24 horas |
+| Polícia Militar (emergência) | **190** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
 | Direitos Humanos | **100** | 24 horas |
 | DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
@@ -2420,7 +2420,7 @@ O **Estatuto da Pessoa com Deficiencia** (Lei 13.146/2015) garante protecao inte
 
 ---
 
-Esta secao trata de tres crimes graves que costumam estar ligados a violencia domestica: o feminicidio, o stalking (perseguicao) e a violencia psicologica. Conhecer esses crimes e importante para identificar situacoes de perigo e buscar protecao antes que a violencia aumente.
+Esta seção trata de três crimes graves que costumam estar ligados a violência doméstica: o feminicidio, o stalking (perseguicao) é a violência psicológica. Conhecer esses crimes é importante para identificar situações de perigo e buscar proteção antes que a violência aumente.
 
 ---
 
@@ -2428,46 +2428,46 @@ Esta secao trata de tres crimes graves que costumam estar ligados a violencia do
 
 ### O Que E
 
-O feminicidio e o assassinato de uma mulher por razoes ligadas ao fato de ela ser mulher. Desde 2015, e considerado **crime hediondo** no Brasil (Lei 13.104/2015).
+O feminicidio é o assassinato de uma mulher por razoes ligadas ao fato de ela ser mulher. Desde 2015, é considerado **crime hediondo** no Brasil (Lei 13.104/2015).
 
 Existe feminicidio quando o homicidio acontece em contexto de:
-- **Violencia domestica e familiar** (o agressor e marido, companheiro, namorado, ex-parceiro ou familiar)
+- **Violência doméstica e familiar** (o agressor e marido, companheiro, namorado, ex-parceiro ou familiar)
 - **Menosprezo ou discriminacao contra a mulher** (matar porque a mulher quis se separar, porque se recusou a ter relacoes, por ciumes doentio, por controle)
 
 ### Qual a Pena
 
 | Aspecto | Detalhe |
 |---------|---------|
-| **Pena** | Reclusao de **12 a 30 anos** |
+| **Pena** | Reclusão de **12 a 30 anos** |
 | **Tipo de crime** | Crime hediondo |
 | **Regime inicial** | Fechado |
-| **Fianca** | Nao admite fianca |
-| **Anistia, graca ou indulto** | Nao admite |
+| **Fianca** | Não admite fianca |
+| **Anistia, graca ou indulto** | Não admite |
 
 ### Quando a Pena Aumenta
 
 A pena e ainda maior quando o feminicidio e praticado:
 
-- Durante a gestacao ou nos 3 meses apos o parto
-- Contra menores de 14 anos, maiores de 60 anos, pessoas com deficiencia ou com doencas que causam vulnerabilidade
-- Na presenca (fisica ou virtual) de filhos ou pais da vitima
-- Em descumprimento de medida protetiva de urgencia
+- Durante a gestacao ou nos 3 meses após o parto
+- Contra menores de 14 anos, maiores de 60 anos, pessoas com deficiência ou com doencas que causam vulnerabilidade
+- Na presenca (física ou virtual) de filhos ou pais da vítima
+- Em descumprimento de medida protetiva de urgência
 
 ### Por Que E Importante Conhecer o Feminicidio
 
-Muitas vezes, o feminicidio e o ponto final de uma escalada de violencia que comecou com agressoes verbais, ameacas e violencia fisica. Reconhecer os sinais de perigo pode salvar vidas.
+Muitas vezes, o feminicidio é o ponto final de uma escalada de violência que comecou com agressoes verbais, ameacas e violência física. Reconhecer os sinais de perigo pode salvar vidas.
 
 **Sinais de alerta de risco de feminicidio:**
-- Ameacas de morte ("se voce me deixar, eu te mato")
+- Ameacas de morte ("se você me deixar, eu te mato")
 - Posse ou acesso a armas
 - Historico de agressoes fisicas graves
 - Tentativas anteriores de estrangulamento
 - Ciumes excessivo e controle obsessivo
-- Perseguicao apos separacao
+- Perseguicao após separacao
 - Descumprimento de medidas protetivas
-- Ameaca de suicidio pelo agressor ("se voce me deixar, eu me mato")
+- Ameaca de suicidio pelo agressor ("se você me deixar, eu me mato")
 
-> **Se voce identifica esses sinais na sua situacao ou na de alguem que voce conhece, busque ajuda imediatamente. Ligue 190 ou 180. Peca medida protetiva. Procure a Casa Abrigo se houver risco de morte.**
+> **Se você identifica esses sinais na sua situação ou na de alguém que você conhece, busque ajuda imediatamente. Ligue 190 ou 180. Peca medida protetiva. Procure a Casa Abrigo se houver risco de morte.**
 
 ---
 
@@ -2475,67 +2475,67 @@ Muitas vezes, o feminicidio e o ponto final de uma escalada de violencia que com
 
 ### O Que E
 
-Stalking e a perseguicao repetida contra uma pessoa, por qualquer meio, que cause medo, restrinja sua liberdade ou invada sua privacidade. Desde 2021, e crime no Brasil (Lei 14.132/2021, artigo 147-A do Codigo Penal).
+Stalking é a perseguicao repetida contra uma pessoa, por qualquer meio, que cause medo, restrinja sua liberdade ou invada sua privacidade. Desde 2021, é crime no Brasil (Lei 14.132/2021, artigo 147-A do Código Penal).
 
 ### O Que Configura Stalking
 
 Para ser considerado crime, a perseguicao precisa ser:
-- **Reiterada** (acontece varias vezes, nao e um evento isolado)
+- **Reiterada** (acontece varias vezes, não é um evento isolado)
 - **Por qualquer meio** (presencial, por telefone, por redes sociais, por terceiros)
 - E precisa causar pelo menos um destes efeitos:
-  - Ameaca a integridade fisica ou psicologica da vitima
+  - Ameaca a integridade física ou psicológica da vítima
   - Restricao da liberdade de ir e vir
   - Invasao ou perturbacao da privacidade
 
 ### Exemplos de Stalking
 
-- Seguir a vitima na rua, no trabalho, na escola ou na igreja
-- Enviar mensagens repetidas apos ser bloqueado
-- Vigiar a casa da vitima
+- Seguir a vítima na rua, no trabalho, na escola ou na igreja
+- Enviar mensagens repetidas após ser bloqueado
+- Vigiar a casa da vítima
 - Criar perfis falsos para monitorar redes sociais
-- Aparecer em lugares frequentados pela vitima
-- Ligar repetidamente para a vitima ou seus familiares
-- Enviar presentes insistentemente apos rejeicao
-- Instalar aplicativos de rastreamento no celular da vitima
+- Aparecer em lugares frequentados pela vítima
+- Ligar repetidamente para a vítima ou seus familiares
+- Enviar presentes insistentemente após rejeicao
+- Instalar aplicativos de rastreamento no celular da vítima
 
-> **O stalking pode acontecer de forma digital (cyberstalking).** Nao e necessario contato fisico para ser crime.
+> **O stalking pode acontecer de forma digital (cyberstalking).** Não é necessário contato físico para ser crime.
 
 ### Qual a Pena
 
 | Aspecto | Detalhe |
 |---------|---------|
-| **Pena** | Reclusao de **6 meses a 2 anos** e multa |
-| **Pena aumentada pela metade** quando praticado contra crianca, adolescente, idoso ou mulher por razoes de genero |
+| **Pena** | Reclusão de **6 meses a 2 anos** e multa |
+| **Pena aumentada pela metade** quando praticado contra criança, adolescente, idoso ou mulher por razoes de gênero |
 | **Pena aumentada pela metade** quando praticado com emprego de arma ou em grupo |
 
-### O Que Fazer Se Voce Sofre Stalking
+### O Que Fazer Se Você Sofre Stalking
 
 1. **Guarde todas as provas:** mensagens, e-mails, fotos, prints de redes sociais, registros de ligacoes
-2. **Nao responda** ao perseguidor -- qualquer resposta pode encorajar a continuidade
-3. **Registre Boletim de Ocorrencia** na delegacia ou na DEAM
-4. **Peca medida protetiva de urgencia** para que o juiz determine que o perseguidor mantenha distancia
-5. **Conte para pessoas de confianca** sobre a situacao
+2. **Não responda** ao perseguidor -- qualquer resposta pode encorajar a continuidade
+3. **Registre Boletim de Ocorrência** na delegacia ou na DEAM
+4. **Peca medida protetiva de urgência** para que o juiz determine que o perseguidor mantenha distancia
+5. **Conte para pessoas de confianca** sobre a situação
 6. **Altere senhas** de redes sociais, e-mail e celular
 7. **Revise configuracoes de privacidade** nas redes sociais
 
 ---
 
-## Violencia Psicologica contra a Mulher -- E Crime
+## Violência Psicológica contra a Mulher -- E Crime
 
 ### O Que E
 
-Desde 2021, causar dano emocional a mulher com o objetivo de controlar, degradar ou prejudicar suas acoes e decisoes e **crime** (Lei 14.188/2021, artigo 147-B do Codigo Penal).
+Desde 2021, causar dano emocional a mulher com o objetivo de controlar, degradar ou prejudicar suas ações e decisões e **crime** (Lei 14.188/2021, artigo 147-B do Código Penal).
 
-### O Que Configura Violencia Psicologica
+### O Que Configura Violência Psicológica
 
-Qualquer conduta que cause dano emocional e que vise controlar, degradar ou prejudicar a mulher, incluindo:
+Qualquer conduta que cause dano emocional é que vise controlar, degradar ou prejudicar a mulher, incluindo:
 
 - **Ameacar** -- dizer que vai agredir, matar, tirar os filhos
-- **Humilhar** -- xingar, ridicularizar, menosprezar em publico ou em privado
+- **Humilhar** -- xingar, ridicularizar, menosprezar em público ou em privado
 - **Manipular** -- distorcer fatos, fazer a mulher duvidar de si mesma (gaslighting)
 - **Isolar** -- proibir de ver familiares e amigos, controlar saidas
 - **Controlar** -- vigiar celular, decidir o que pode vestir, onde pode ir, com quem pode falar
-- **Chantagear** -- usar os filhos, dinheiro ou informacoes intimas para obrigar a mulher a fazer algo
+- **Chantagear** -- usar os filhos, dinheiro ou informações intimas para obrigar a mulher a fazer algo
 - **Vigiar constantemente** -- monitorar cada passo, exigir que preste contas de tudo
 - **Insultar** -- ofensas constantes que destroem a autoestima
 - **Limitar a liberdade** -- proibir de trabalhar, estudar ou sair de casa
@@ -2544,47 +2544,47 @@ Qualquer conduta que cause dano emocional e que vise controlar, degradar ou prej
 
 | Aspecto | Detalhe |
 |---------|---------|
-| **Pena** | Reclusao de **6 meses a 2 anos** e multa |
-| **Condicao** | Se a conduta nao constituir crime mais grave |
+| **Pena** | Reclusão de **6 meses a 2 anos** e multa |
+| **Condição** | Se a conduta não constituir crime mais grave |
 
-### A Diferenca entre Stalking e Violencia Psicologica
+### A Diferenca entre Stalking e Violência Psicológica
 
 Embora parecidos, sao crimes diferentes:
 
-| Aspecto | Stalking (art. 147-A) | Violencia Psicologica (art. 147-B) |
+| Aspecto | Stalking (art. 147-A) | Violência Psicológica (art. 147-B) |
 |---------|----------------------|-------------------------------------|
 | **Foco** | Perseguicao reiterada | Dano emocional, controle e degradacao |
-| **Vitima** | Qualquer pessoa | Especificamente mulher |
-| **Contexto** | Pode ser dentro ou fora da relacao | Geralmente no contexto domestico |
+| **Vítima** | Qualquer pessoa | Especificamente mulher |
+| **Contexto** | Pode ser dentro ou fora da relacao | Geralmente no contexto doméstico |
 | **Caracteristica principal** | Repetir condutas de perseguicao | Causar sofrimento emocional e controle |
 
 ---
 
-## A Escalada da Violencia -- Como Reconhecer o Perigo
+## A Escalada da Violência -- Como Reconhecer o Perigo
 
-A violencia domestica raramente comeca com agressao fisica grave. Ela costuma seguir uma escalada:
+A violência doméstica raramente comeca com agressão física grave. Ela costuma seguir uma escalada:
 
 ### Fase 1 -- Controle e Isolamento
 - O agressor controla o que a mulher faz, com quem fala, onde vai
 - Isola a mulher de amigos e familiares
 - Faz criticas constantes para diminuir a autoestima
 
-### Fase 2 -- Ameacas e Violencia Verbal
+### Fase 2 -- Ameacas e Violência Verbal
 - Comeca a gritar, xingar e humilhar
-- Faz ameacas ("se voce sair, vai se arrepender")
+- Faz ameacas ("se você sair, vai se arrepender")
 - Joga objetos, esmurra paredes
 
-### Fase 3 -- Violencia Fisica
+### Fase 3 -- Violência Física
 - Empurroes, tapas, socos
 - As agressoes se tornam mais frequentes e mais graves
 
-### Fase 4 -- Violencia Extrema
+### Fase 4 -- Violência Extrema
 - Agressoes que podem causar lesoes graves ou morte
 - Uso de armas ou objetos
 - Estrangulamento
 - Risco real de feminicidio
 
-> **Se voce se reconhece em qualquer fase dessa escalada, busque ajuda agora.** Nao espere a situacao piorar. Quanto antes voce agir, mais segura voce estara.
+> **Se você se reconhece em qualquer fase dessa escalada, busque ajuda agora.** Não espere a situação piorar. Quanto antes você agir, mais segura você estara.
 
 ---
 
@@ -2593,192 +2593,192 @@ A violencia domestica raramente comeca com agressao fisica grave. Ela costuma se
 ### Em caso de perseguicao (stalking):
 1. Guarde provas (mensagens, prints, fotos)
 2. Registre B.O. na delegacia ou DEAM
-3. Peca medida protetiva de urgencia
-4. Ligue **180** para orientacao
+3. Peca medida protetiva de urgência
+4. Ligue **180** para orientação
 
-### Em caso de violencia psicologica:
-1. Reconheca que voce esta sofrendo violencia -- violencia psicologica e crime
-2. Conte para alguem de confianca
-3. Procure um CEAM para apoio psicologico
+### Em caso de violência psicológica:
+1. Reconheca que você está sofrendo violência -- violência psicológica é crime
+2. Conte para alguém de confianca
+3. Procure um CEAM para apoio psicológico
 4. Registre B.O. e peca medida protetiva
-5. Procure a Defensoria Publica para assistencia juridica gratuita
+5. Procure a Defensoria Pública para assistência jurídica gratuita
 
 ### Em caso de risco de feminicidio:
 1. Ligue **190** imediatamente
 2. Saia de casa e va para lugar seguro
 3. Registre B.O. na DEAM relatando risco de morte
 4. Peca encaminhamento para a Casa Abrigo
-5. Peca medida protetiva de urgencia
+5. Peca medida protetiva de urgência
 
-> **Voce nao e culpada pela violencia que sofre. O agressor e o unico responsavel. Pedir ajuda e um ato de coragem e de amor pela propria vida.**
+> **Você não e culpada pela violência que sofre. O agressor é o único responsável. Pedir ajuda é um ato de coragem e de amor pela própria vida.**
 
 ---
 
 ## Onde Buscar Ajuda
 
-| Servico | Contato | Horario |
+| Serviço | Contato | Horário |
 |---------|---------|---------|
-| Policia Militar (emergencia) | 190 | 24 horas |
+| Polícia Militar (emergência) | 190 | 24 horas |
 | Central da Mulher | 180 | 24 horas |
 | DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
 | DEAM II -- Ceilandia | (61) 3207-7391 | 24 horas |
 | Casa da Mulher Brasileira | (61) 98312-0763 | 24 horas |
-| Defensoria Publica (Brasilia) | (61) 99359-0024 | Dias uteis |
+| Defensoria Pública (Brasilia) | (61) 99359-0024 | Dias úteis |
 | CEAM 102 Sul | (61) 3181-2245 | Seg-Sex, 8h-18h |
 | Casa Abrigo (risco de morte) | Via DEAM (registre B.O.) | 24 horas |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - [Lei 13.104/2015 -- Feminicidio](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13104.htm)
 - [Lei 14.132/2021 -- Crime de perseguicao/stalking](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14132.htm)
-- [Lei 14.188/2021 -- Violencia psicologica contra a mulher](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14188.htm)
+- [Lei 14.188/2021 -- Violência psicológica contra a mulher](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14188.htm)
 - [Lei 11.340/2006 -- Lei Maria da Penha](http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm)
-- [CNJ -- Sobre a Lei Maria da Penha](https://www.cnj.jus.br/programas-e-acoes/violencia-contra-a-mulher/sobre-a-lei-maria-da-penha/)
+- [CNJ -- Sobre a Lei Maria da Penha](https://www.cnj.jus.br/programas-e-ações/violência-contra-a-mulher/sobre-a-lei-maria-da-penha/)
 `
         },
       ]
     },
     {
-      id: `03-criancas-adolescentes`,
-      title: `Criancas e Adolescentes -- Direitos e Protecao`,
+      id: `03-crianças-adolescentes`,
+      title: `Crianças e Adolescentes -- Direitos e Proteção`,
       icon: `child`,
-      readme: `# Criancas e Adolescentes -- Direitos e Protecao
+      readme: `# Crianças e Adolescentes -- Direitos e Proteção
 
-Este capitulo do Manual Vicentino trata dos direitos das criancas e adolescentes, com orientacoes praticas para familias que precisam de ajuda no Distrito Federal.
+Este capítulo do Manual Vicentino trata dos direitos das crianças e adolescentes, com orientações práticas para famílias que precisam de ajuda no Distrito Federal.
 
-Aqui voce vai encontrar informacoes sobre como proteger seus filhos, como pedir pensao alimenticia, o que fazer em caso de violencia, e onde buscar ajuda gratuita.
+Aqui você vai encontrar informações sobre como proteger seus filhos, como pedir pensão alimentícia, o que fazer em caso de violência, e onde buscar ajuda gratuita.
 
 ---
 
-## Indice da Secao
+## Índice da Seção
 
 ### [01 - Direitos Fundamentais no ECA](01-direitos-eca.md)
-O que o Estatuto da Crianca e do Adolescente garante: direito a saude, educacao, convivencia familiar, protecao contra trabalho infantil e medidas protetivas.
+O que o Estatuto da Criança e do Adolescente garante: direito a saúde, educação, convivência familiar, proteção contra trabalho infantil e medidas protetivas.
 
 ### [02 - Guarda, Tutela e Adocao](02-guarda-adocao.md)
-Tipos de guarda (unilateral e compartilhada), quando se aplica a tutela, e o passo a passo da adocao no DF.
+Tipos de guarda (unilateral e compartilhada), quando se aplica a tutela, é o passo a passo da adocao no DF.
 
-### [03 - Pensao Alimenticia](03-pensao-alimenticia.md)
-Guia completo e pratico: quem paga, como pedir, valores de referencia, o que fazer quando nao pagam, alimentos gravidicos, revisao e exoneracao.
+### [03 - Pensão Alimentícia](03-pensão-alimentícia.md)
+Guia completo e prático: quem paga, como pedir, valores de referência, o que fazer quando não pagam, alimentos gravidicos, revisão e exoneração.
 
-### [04 - Alienacao Parental](04-alienacao-parental.md)
-O que e alienacao parental, como identificar, consequencias juridicas e como denunciar.
+### [04 - Alienação Parental](04-alienação-parental.md)
+O que é alienação parental, como identificar, consequências jurídicas e como denunciar.
 
 ### [05 - Bullying e Cyberbullying](05-bullying.md)
-Leis de protecao, criminalizacao do bullying, e o que fazer quando uma crianca ou adolescente sofre intimidacao.
+Leis de proteção, criminalizacao do bullying, é o que fazer quando uma criança ou adolescente sofre intimidacao.
 
-### [06 - Conselho Tutelar e Defensoria Publica no DF](06-conselho-tutelar-df.md)
-O que e o Conselho Tutelar, quando acionar, enderecos e telefones no DF, e como acessar a Defensoria Publica gratuitamente.
+### [06 - Conselho Tutelar e Defensoria Pública no DF](06-conselho-tutelar-df.md)
+O que é o Conselho Tutelar, quando acionar, endereços e telefones no DF, e como acessar a Defensoria Pública gratuitamente.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
 | Canal | Telefone |
 |-------|----------|
 | Disque Direitos Humanos | 100 (gratuito) |
-| Defensoria Publica do DF | (61) 2196-4300 |
-| Ministerio Publico do DF | (61) 3343-9500 |
-| Policia Civil do DF | 197 |
-| Violencia contra a mulher | 180 (gratuito) |
+| Defensoria Pública do DF | (61) 2196-4300 |
+| Ministerio Público do DF | (61) 3343-9500 |
+| Polícia Civil do DF | 197 |
+| Violência contra a mulher | 180 (gratuito) |
 
 ---
 
-> **Lembre-se:** Criancas e adolescentes tem prioridade absoluta. Se os direitos de uma crianca estao sendo violados, voce pode e deve denunciar. A denuncia pode ser anonima.
+> **Lembre-se:** Crianças e adolescentes tem prioridade absoluta. Se os direitos de uma criança estão sendo violados, você pode e deve denunciar. A denúncia pode ser anônima.
 `,
       pages: [
         {
           id: `01-direitos-eca`,
-          title: `Direitos Fundamentais das Criancas e Adolescentes`,
-          content: `# Direitos Fundamentais das Criancas e Adolescentes
+          title: `Direitos Fundamentais das Crianças e Adolescentes`,
+          content: `# Direitos Fundamentais das Crianças e Adolescentes
 
-## O que e o ECA?
+## O que é o ECA?
 
-O **Estatuto da Crianca e do Adolescente** (Lei 8.069/1990) e a lei que protege todas as criancas e adolescentes no Brasil. Segundo essa lei:
+O **Estatuto da Criança e do Adolescente** (Lei 8.069/1990) é a lei que protege todas as crianças e adolescentes no Brasil. Segundo essa lei:
 
-- **Crianca** e quem tem ate 12 anos incompletos.
+- **Criança** e quem tem até 12 anos incompletos.
 - **Adolescente** e quem tem entre 12 e 18 anos.
 
-> **Principio fundamental:** Criancas e adolescentes sao sujeitos de direitos e tem **prioridade absoluta** no atendimento. Isso significa que, em qualquer situacao, eles devem ser atendidos primeiro.
+> **Principio fundamental:** Crianças e adolescentes sao sujeitos de direitos e tem **prioridade absoluta** no atendimento. Isso significa que, em qualquer situação, eles devem ser atendidos primeiro.
 
-A base legal esta no artigo 227 da Constituicao Federal e na Lei 8.069/1990.
+A base legal está no artigo 227 da Constituição Federal e na Lei 8.069/1990.
 
 ---
 
-## Direito a Vida e a Saude
+## Direito a Vida é a Saúde
 
 **(Artigos 7 a 14 do ECA)**
 
-Toda crianca e adolescente tem direito a:
+Toda criança e adolescente tem direito a:
 
-- **Atendimento integral pelo SUS** -- prevencao, tratamento e recuperacao da saude.
-- **Atendimento prioritario** em postos de saude e hospitais. Criancas e adolescentes tem preferencia.
-- **Vacinacao obrigatoria** conforme o calendario do Ministerio da Saude.
+- **Atendimento integral pelo SUS** -- prevenção, tratamento e recuperacao da saúde.
+- **Atendimento prioritario** em postos de saúde e hospitais. Crianças e adolescentes tem preferencia.
+- **Vacinacao obrigatória** conforme o calendário do Ministerio da Saúde.
 - **Gestante** tem direito a atendimento pre-natal e parto pelo SUS.
-- **Aleitamento materno** garantido, inclusive para maes que estao presas.
+- **Aleitamento materno** garantido, inclusive para maes que estão presas.
 
-> **Importante:** Profissionais de saude sao obrigados por lei a comunicar ao Conselho Tutelar qualquer caso de maus-tratos ou suspeita de maus-tratos contra criancas e adolescentes.
+> **Importante:** Profissionais de saúde sao obrigados por lei a comunicar ao Conselho Tutelar qualquer caso de maus-tratos ou suspeita de maus-tratos contra crianças e adolescentes.
 
 ### O que fazer se o atendimento for negado
 
-Se uma crianca ou adolescente for impedida de receber atendimento de saude no SUS:
+Se uma criança ou adolescente for impedida de receber atendimento de saúde no SUS:
 
 1. Procure o **Conselho Tutelar** da sua regiao.
-2. Se nao resolver, procure a **Defensoria Publica do DF** -- telefone (61) 2196-4300.
-3. A Defensoria pode entrar com acao judicial para garantir o atendimento.
+2. Se não resolver, procure a **Defensoria Pública do DF** -- telefone (61) 2196-4300.
+3. A Defensoria pode entrar com ação judicial para garantir o atendimento.
 
 ---
 
-## Direito a Educacao
+## Direito a Educação
 
 **(Artigos 53 a 59 do ECA)**
 
-Toda crianca e adolescente tem direito a:
+Toda criança e adolescente tem direito a:
 
-- **Educacao basica obrigatoria e gratuita** -- inclui educacao infantil, ensino fundamental e medio.
-- **Creche e pre-escola** para criancas de 0 a 5 anos. A vaga e obrigacao do Estado.
-- **Matricula garantida** -- a escola publica nao pode recusar matricula.
-- **Escola proxima de casa** -- o ensino publico deve ser acessivel.
+- **Educação básica obrigatória é gratuita** -- inclui educação infantil, ensino fundamental e medio.
+- **Creche e pre-escola** para crianças de 0 a 5 anos. A vaga e obrigação do Estado.
+- **Matricula garantida** -- a escola pública não pode recusar matricula.
+- **Escola proxima de casa** -- o ensino público deve ser acessível.
 - Ser **respeitado pelos educadores**.
 - Participar de **entidades estudantis** (gremios, por exemplo).
 
-### Passo a Passo: Se nao conseguir vaga em creche ou escola
+### Passo a Passo: Se não conseguir vaga em creche ou escola
 
 1. Registre o pedido de vaga na escola ou na regional de ensino da sua regiao.
 2. Se a vaga for negada, procure o **Conselho Tutelar**.
-3. Se ainda nao resolver, procure a **Defensoria Publica do DF** para entrar com acao judicial.
+3. Se ainda não resolver, procure a **Defensoria Pública do DF** para entrar com ação judicial.
 
-> **Atencao:** A falta de documentos da crianca nao pode impedir a matricula. A escola deve aceitar a matricula e orientar a familia a regularizar a documentacao.
+> **Atenção:** A falta de documentos da criança não pode impedir a matricula. A escola deve aceitar a matricula e orientar a família a regularizar a documentacao.
 
 ---
 
-## Direito a Convivencia Familiar e Comunitaria
+## Direito a Convivência Familiar e Comunitaria
 
 **(Artigos 19 a 24 do ECA)**
 
-- Toda crianca tem direito a ser **criada e educada pela sua familia**.
-- **Ninguem pode perder a guarda dos filhos apenas por ser pobre.** A falta de dinheiro nao e motivo para tirar uma crianca da familia (artigo 23 do ECA).
-- Se a familia nao puder cuidar da crianca, ela sera colocada em **familia substituta** (guarda, tutela ou adocao).
-- O **acolhimento em abrigo** e medida temporaria e excepcional. O prazo maximo e de 18 meses, salvo decisao do juiz.
+- Toda criança tem direito a ser **criada e educada pela sua família**.
+- **Ninguém pode perder a guarda dos filhos apenas por ser pobre.** A falta de dinheiro não e motivo para tirar uma criança da família (artigo 23 do ECA).
+- Se a família não puder cuidar da criança, ela será colocada em **família substituta** (guarda, tutela ou adocao).
+- O **acolhimento em abrigo** e medida temporária e excepcional. O prazo máximo e de 18 meses, salvo decisão do juiz.
 
-> **Fique sabendo:** Tirar uma crianca da familia exige processo judicial. Os pais tem direito a se defender antes de qualquer decisao.
+> **Fique sabendo:** Tirar uma criança da família exige processo judicial. Os pais tem direito a se defender antes de qualquer decisão.
 
 ---
 
-## Direito a Liberdade, ao Respeito e a Dignidade
+## Direito a Liberdade, ao Respeito é a Dignidade
 
 **(Artigos 15 a 18 do ECA)**
 
-Criancas e adolescentes tem direito a:
+Crianças e adolescentes tem direito a:
 
 - Ir e vir livremente.
 - Dar sua opiniao e se expressar.
 - Brincar, praticar esportes e se divertir.
-- Ter sua **integridade fisica, psicologica e moral** respeitada.
+- Ter sua **integridade física, psicológica e moral** respeitada.
 
-> **Dever de todos:** E obrigacao de toda a sociedade proteger criancas e adolescentes de qualquer tratamento desumano, violento, humilhante ou constrangedor.
+> **Dever de todos:** E obrigação de toda a sociedade proteger crianças e adolescentes de qualquer tratamento desumano, violento, humilhante ou constrangedor.
 
 ---
 
@@ -2786,7 +2786,7 @@ Criancas e adolescentes tem direito a:
 
 ### Regra geral
 
-**(Artigo 60 do ECA e artigo 7, inciso XXXIII, da Constituicao Federal)**
+**(Artigo 60 do ECA e artigo 7, inciso XXXIII, da Constituição Federal)**
 
 | Idade | O que a lei permite |
 |-------|---------------------|
@@ -2804,19 +2804,19 @@ Criancas e adolescentes tem direito a:
 
 O jovem aprendiz tem regras especiais:
 
-- **Idade:** entre 14 e 24 anos (sem limite de idade para pessoa com deficiencia).
-- **Jornada maxima:** 6 horas por dia. Pode chegar a 8 horas se o aprendiz ja concluiu o ensino fundamental (incluindo horas de aula teorica).
-- **Direitos do aprendiz:** salario minimo-hora, FGTS (aliquota reduzida de 2%), ferias junto com as ferias escolares, vale-transporte e 13o salario.
+- **Idade:** entre 14 e 24 anos (sem limite de idade para pessoa com deficiência).
+- **Jornada máxima:** 6 horas por dia. Pode chegar a 8 horas se o aprendiz já concluiu o ensino fundamental (incluindo horas de aula teorica).
+- **Direitos do aprendiz:** salário mínimo-hora, FGTS (aliquota reduzida de 2%), ferias junto com as ferias escolares, vale-transporte e 13o salário.
 - O aprendiz deve estar inscrito em programa de formacao profissional.
 - As atividades devem ser adequadas ao desenvolvimento do adolescente.
 
 ### Como denunciar trabalho infantil
 
-Se voce souber de uma crianca ou adolescente trabalhando de forma irregular:
+Se você souber de uma criança ou adolescente trabalhando de forma irregular:
 
 1. Denuncie ao **Conselho Tutelar** da regiao.
-2. Ligue para o **Disque 100** (gratuito, pode ser anonimo).
-3. Procure o **Ministerio Publico do Trabalho** (MPT).
+2. Ligue para o **Disque 100** (gratuito, pode ser anônimo).
+3. Procure o **Ministerio Público do Trabalho** (MPT).
 4. Procure a **Superintendencia Regional do Trabalho**.
 
 ---
@@ -2825,43 +2825,43 @@ Se voce souber de uma crianca ou adolescente trabalhando de forma irregular:
 
 **(Artigo 101 do ECA)**
 
-Quando os direitos de uma crianca ou adolescente estao ameacados ou sendo violados, o Conselho Tutelar ou o Juiz pode aplicar medidas de protecao. Veja quais sao:
+Quando os direitos de uma criança ou adolescente estão ameacados ou sendo violados, o Conselho Tutelar ou o Juiz pode aplicar medidas de proteção. Veja quais sao:
 
 | Medida | O que significa |
 |--------|-----------------|
-| Encaminhamento aos pais/responsavel | A crianca volta para a familia com orientacao |
-| Orientacao e acompanhamento | A familia recebe apoio de programas sociais |
-| Matricula obrigatoria | A crianca e inscrita em escola |
-| Programa comunitario | Inclusao em programas de apoio a familia |
-| Tratamento medico ou psicologico | Atendimento de saude em hospital ou ambulatorio |
-| Programa de tratamento | Para casos de alcoolismo ou dependencia quimica |
-| Acolhimento institucional (abrigo) | Medida temporaria e excepcional |
-| Acolhimento familiar | A crianca vai para uma familia acolhedora |
-| Familia substituta | Guarda, tutela ou adocao |
+| Encaminhamento aos pais/responsável | A criança volta para a família com orientação |
+| Orientação e acompanhamento | A família recebe apoio de programas sociais |
+| Matricula obrigatória | A criança e inscrita em escola |
+| Programa comunitario | Inclusao em programas de apoio a família |
+| Tratamento médico ou psicológico | Atendimento de saúde em hospital ou ambulatório |
+| Programa de tratamento | Para casos de alcoolismo ou dependência quimica |
+| Acolhimento institucional (abrigo) | Medida temporária e excepcional |
+| Acolhimento familiar | A criança vai para uma família acolhedora |
+| Família substituta | Guarda, tutela ou adocao |
 
-> **Atencao:** O acolhimento em abrigo so pode ser determinado por um **juiz**. Nenhum outro orgao pode tirar a crianca da familia sem decisao judicial.
+> **Atenção:** O acolhimento em abrigo só pode ser determinado por um **juiz**. Nenhum outro órgão pode tirar a criança da família sem decisão judicial.
 
 ---
 
 ## Onde Buscar Ajuda
 
-| Situacao | Onde procurar | Contato |
+| Situação | Onde procurar | Contato |
 |----------|---------------|---------|
-| Maus-tratos, negligencia, violencia | Conselho Tutelar | Veja enderecos na secao 06 |
-| Denuncia anonima | Disque 100 | Ligue 100 (gratuito) |
-| Falta de vaga em escola/creche | Conselho Tutelar ou Defensoria Publica | (61) 2196-4300 |
+| Maus-tratos, negligencia, violência | Conselho Tutelar | Veja endereços na seção 06 |
+| Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
+| Falta de vaga em escola/creche | Conselho Tutelar ou Defensoria Pública | (61) 2196-4300 |
 | Trabalho infantil | Conselho Tutelar ou MPT | Disque 100 |
-| Orientacao juridica gratuita | Defensoria Publica do DF | (61) 2196-4300 |
-| Crimes contra criancas | Policia Civil | 197 |
+| Orientação jurídica gratuita | Defensoria Pública do DF | (61) 2196-4300 |
+| Crimes contra crianças | Polícia Civil | 197 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- **Lei 8.069/1990** -- Estatuto da Crianca e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- **Constituicao Federal**, artigo 227 -- Protecao integral a crianca e ao adolescente.
-- **Defensoria Publica do DF**: https://www.defensoria.df.gov.br
-- **Conselho Tutelar do DF** -- Enderecos: https://conselhotutelar.sejus.df.gov.br/enderecos/
+- **Lei 8.069/1990** -- Estatuto da Criança e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- **Constituição Federal**, artigo 227 -- Proteção integral a criança e ao adolescente.
+- **Defensoria Pública do DF**: https://www.defensoria.df.gov.br
+- **Conselho Tutelar do DF** -- Endereços: https://conselhotutelar.sejus.df.gov.br/endereços/
 `
         },
         {
@@ -2869,131 +2869,131 @@ Quando os direitos de uma crianca ou adolescente estao ameacados ou sendo violad
           title: `Guarda, Tutela e Adocao`,
           content: `# Guarda, Tutela e Adocao
 
-Este capitulo explica as formas legais de cuidar de uma crianca ou adolescente: guarda, tutela e adocao. Cada uma tem regras diferentes, e e importante saber a diferenca para buscar o caminho certo.
+Este capítulo explica as formas legais de cuidar de uma criança ou adolescente: guarda, tutela e adocao. Cada uma tem regras diferentes, e é importante saber a diferenca para buscar o caminho certo.
 
 ---
 
 ## Guarda
 
-### O que e
+### O que é
 
-A guarda e a forma legal de regularizar a situacao de uma crianca que esta sendo cuidada por alguem. O guardiao tem o dever de dar assistencia material (comida, moradia, roupas), moral e educacional.
+A guarda é a forma legal de regularizar a situação de uma criança que está sendo cuidada por alguém. O guardiao tem o dever de dar assistência material (comida, moradia, roupas), moral e educacional.
 
 ### Tipos de Guarda
 
 **Guarda Unilateral**
 
-A crianca fica sob a responsabilidade de apenas um dos pais (ou de outra pessoa). O outro genitor mantem:
+A criança fica sob a responsabilidade de apenas um dos pais (ou de outra pessoa). O outro genitor mantem:
 - O direito de visitas.
-- O dever de pagar pensao alimenticia.
-- O direito de fiscalizar como a crianca esta sendo criada.
+- O dever de pagar pensão alimentícia.
+- O direito de fiscalizar como a criança está sendo criada.
 
 **Guarda Compartilhada (Lei 13.058/2014)**
 
-> **Regra no Brasil:** A guarda compartilhada e a regra, nao a excecao. O juiz deve aplica-la mesmo quando os pais nao concordam, exceto se um deles declarar que nao deseja a guarda.
+> **Regra no Brasil:** A guarda compartilhada é a regra, não a exceção. O juiz deve aplica-la mesmo quando os pais não concordam, exceto se um deles declarar que não deseja a guarda.
 
 Na guarda compartilhada:
-- Ambos os pais decidem juntos sobre a vida da crianca (escola, saude, atividades).
-- O tempo de convivencia deve ser dividido de forma equilibrada.
-- A cidade-base de moradia da crianca sera aquela que melhor atender aos interesses dela.
-- Escolas, hospitais e qualquer estabelecimento sao obrigados a dar informacoes a qualquer dos pais.
+- Ambos os pais decidem juntos sobre a vida da criança (escola, saúde, atividades).
+- O tempo de convivência deve ser dividido de forma equilibrada.
+- A cidade-base de moradia da criança será aquela que melhor atender aos interesses dela.
+- Escolas, hospitais e qualquer estabelecimento sao obrigados a dar informações a qualquer dos pais.
 
-> **Importante:** A guarda compartilhada NAO elimina a obrigacao de pagar pensao alimenticia. Mesmo com guarda compartilhada, o juiz pode fixar pensao.
+> **Importante:** A guarda compartilhada NAO elimina a obrigação de pagar pensão alimentícia. Mesmo com guarda compartilhada, o juiz pode fixar pensão.
 
 ### Documentos para Pedir Guarda
 
 - RG e CPF do requerente
-- Certidao de nascimento da crianca
-- Comprovante de residencia
+- Certidao de nascimento da criança
+- Comprovante de residência
 - Comprovante de renda
-- Declaracao de idoneidade moral
+- Declaração de idoneidade moral
 
 ### Onde Solicitar
 
-- **Entre os pais:** Vara de Familia.
-- **Se for outra pessoa (avo, tio, etc.):** Vara da Infancia e Juventude.
-- **Quem nao pode pagar advogado:** Defensoria Publica do DF -- telefone (61) 2196-4300.
+- **Entre os pais:** Vara de Família.
+- **Se for outra pessoa (avo, tio, etc.):** Vara da Infância e Juventude.
+- **Quem não pode pagar advogado:** Defensoria Pública do DF -- telefone (61) 2196-4300.
 
 ---
 
 ## Tutela
 
-### O que e
+### O que é
 
-A tutela se aplica quando **nao ha pais** para cuidar da crianca. Isso acontece quando os pais:
+A tutela se aplica quando **não ha pais** para cuidar da criança. Isso acontece quando os pais:
 - Faleceram.
 - Foram declarados ausentes pela Justica.
-- Perderam o poder familiar por decisao judicial.
+- Perderam o poder familiar por decisão judicial.
 
-O tutor assume todos os cuidados com a crianca e tambem administra os bens dela (se houver).
+O tutor assume todos os cuidados com a criança e também administra os bens dela (se houver).
 
 ### Diferenca entre Guarda e Tutela
 
 | Aspecto | Guarda | Tutela |
 |---------|--------|--------|
-| Poder familiar dos pais | Continua existindo | Nao existe mais |
-| Administracao de bens | Nao inclui | O tutor administra os bens |
+| Poder familiar dos pais | Contínua existindo | Não existe mais |
+| Administração de bens | Não inclui | O tutor administra os bens |
 | Quando termina | Pode ser revogada a qualquer tempo | Quando o menor completa 18 anos |
-| Quando se aplica | Quando a crianca precisa de regularizacao | Quando os pais estao ausentes |
+| Quando se aplica | Quando a criança precisa de regularizacao | Quando os pais estão ausentes |
 
 ---
 
 ## Adocao
 
-### O que e
+### O que é
 
-A adocao e a forma mais completa de colocacao em familia substituta. Quando uma adocao e concluida:
+A adocao é a forma mais completa de colocacao em família substituta. Quando uma adocao e concluida:
 - O adotado passa a ser **filho legitimo**, com todos os direitos de um filho biologico.
-- O vinculo com a familia de origem e rompido definitivamente.
-- A adocao e **irrevogavel** -- nao pode ser desfeita.
+- O vínculo com a família de origem e rompido definitivamente.
+- A adocao e **irrevogavel** -- não pode ser desfeita.
 
 ### Quem Pode Adotar
 
 - Qualquer pessoa com **18 anos ou mais**.
-- Deve haver diferenca minima de **16 anos** entre quem adota e quem e adotado.
-- **Nao depende do estado civil** -- solteiros, casados, divorciados e viuvos podem adotar.
+- Deve haver diferenca mínima de **16 anos** entre quem adota e quem e adotado.
+- **Não depende do estado civil** -- solteiros, casados, divorciados e viuvos podem adotar.
 - E preciso comprovar estabilidade familiar.
 
 ### Passo a Passo da Adocao
 
 **1. Pre-cadastro no Sistema Nacional de Adocao (SNA)**
 - Acesse o site https://sna.cnj.jus.br
-- Preencha seus dados e o perfil da crianca que deseja adotar.
+- Preencha seus dados é o perfil da criança que deseja adotar.
 
-**2. Apresente os documentos na Vara da Infancia e Juventude**
+**2. Apresente os documentos na Vara da Infância e Juventude**
 
-Documentos necessarios:
+Documentos necessários:
 - RG e CPF
 - Certidao de nascimento ou casamento
 - Comprovante de renda
-- Comprovante de residencia
-- Atestados de sanidade fisica e mental
-- Certidao negativa de distribuicao civel
+- Comprovante de residência
+- Atestados de sanidade física e mental
+- Certidao negativa de distribuição civel
 - Certidao de antecedentes criminais
 
-**3. Avaliacao psicossocial**
-- Uma equipe do Poder Judiciario avalia suas motivacoes e condicoes para adotar.
+**3. Avaliação psicossocial**
+- Uma equipe do Poder Judiciário avalia suas motivacoes e condições para adotar.
 
 **4. Curso preparatorio**
-- Participacao obrigatoria em curso sobre adocao. E exigencia da lei.
+- Participação obrigatória em curso sobre adocao. E exigência da lei.
 
 **5. Habilitacao**
-- O processo de habilitacao tem prazo de ate 120 dias, podendo ser prorrogado por mais 120.
+- O processo de habilitacao tem prazo de até 120 dias, podendo ser prorrogado por mais 120.
 
 **6. Busca ativa**
-- Quando habilitado, o sistema busca criancas com perfil compativel ao que voce indicou.
+- Quando habilitado, o sistema busca crianças com perfil compativel ao que você indicou.
 
-**7. Estagio de convivencia**
-- Voce e a crianca passam um periodo juntos, com acompanhamento profissional.
+**7. Estagio de convivência**
+- Você é a criança passam um período juntos, com acompanhamento profissional.
 
-**8. Sentenca de adocao**
-- O juiz finaliza o processo com a sentenca. A partir dai, a crianca e legalmente seu filho.
+**8. Sentença de adocao**
+- O juiz finaliza o processo com a sentença. A partir dai, a criança e legalmente seu filho.
 
 ### No Distrito Federal
 
-- O processo tramita na **Vara da Infancia e Juventude do DF**.
-- Informacoes pelo telefone: **(61) 3103-7070** (TJDFT).
-- Site do CNJ com orientacoes: https://www.cnj.jus.br/programas-e-acoes/adocao/passo-a-passo-da-adocao/
+- O processo tramita na **Vara da Infância e Juventude do DF**.
+- Informações pelo telefone: **(61) 3103-7070** (TJDFT).
+- Site do CNJ com orientações: https://www.cnj.jus.br/programas-e-ações/adocao/passo-a-passo-da-adocao/
 
 ---
 
@@ -3001,471 +3001,471 @@ Documentos necessarios:
 
 | Necessidade | Onde procurar | Contato |
 |-------------|---------------|---------|
-| Pedir guarda (gratuito) | Defensoria Publica do DF | (61) 2196-4300 |
-| Informacoes sobre adocao | TJDFT -- Vara da Infancia | (61) 3103-7070 |
+| Pedir guarda (gratuito) | Defensoria Pública do DF | (61) 2196-4300 |
+| Informações sobre adocao | TJDFT -- Vara da Infância | (61) 3103-7070 |
 | Cadastro para adocao | Sistema Nacional de Adocao | https://sna.cnj.jus.br |
-| Orientacao juridica | Defensoria Publica do DF | (61) 2196-4300 |
+| Orientação jurídica | Defensoria Pública do DF | (61) 2196-4300 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- **Lei 8.069/1990** -- Estatuto da Crianca e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- **Lei 8.069/1990** -- Estatuto da Criança e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
 - **Lei 13.058/2014** -- Guarda Compartilhada: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13058.htm
-- **Codigo Civil**, artigos 1.583 a 1.590 -- Protecao dos filhos.
-- **CNJ -- Passo a passo da adocao:** https://www.cnj.jus.br/programas-e-acoes/adocao/passo-a-passo-da-adocao/
-- **TJDFT -- Guarda x Tutela x Adocao:** https://www.tjdft.jus.br/institucional/imprensa/campanhas-e-produtos/direito-facil/edicao-semanal/guarda-x-tutela-x-adocao
-- **Defensoria Publica do DF:** https://www.defensoria.df.gov.br
+- **Código Civil**, artigos 1.583 a 1.590 -- Proteção dos filhos.
+- **CNJ -- Passo a passo da adocao:** https://www.cnj.jus.br/programas-e-ações/adocao/passo-a-passo-da-adocao/
+- **TJDFT -- Guarda x Tutela x Adocao:** https://www.tjdft.jus.br/institucional/imprensa/campanhas-e-produtos/direito-fácil/edicao-semanal/guarda-x-tutela-x-adocao
+- **Defensoria Pública do DF:** https://www.defensoria.df.gov.br
 `
         },
         {
-          id: `03-pensao-alimenticia`,
-          title: `Pensao Alimenticia -- Guia Completo`,
-          content: `# Pensao Alimenticia -- Guia Completo
+          id: `03-pensão-alimentícia`,
+          title: `Pensão Alimentícia -- Guia Completo`,
+          content: `# Pensão Alimentícia -- Guia Completo
 
-A pensao alimenticia e um direito de quem nao consegue se sustentar sozinho. Este guia explica tudo o que voce precisa saber: quem paga, como pedir, quanto e, o que fazer quando nao pagam, e muito mais.
+A pensão alimentícia é um direito de quem não consegue se sustentar sozinho. Este guia explica tudo o que você precisa saber: quem paga, como pedir, quanto e, o que fazer quando não pagam, e muito mais.
 
 ---
 
-## O que e Pensao Alimenticia
+## O que é Pensão Alimentícia
 
-Pensao alimenticia (ou simplesmente "alimentos") e o valor que uma pessoa deve pagar a outra para cobrir necessidades basicas, como:
+Pensão alimentícia (ou simplesmente "alimentos") é o valor que uma pessoa deve pagar a outra para cobrir necessidades básicas, como:
 
-- Alimentacao
+- Alimentação
 - Moradia
-- Saude
-- Educacao
+- Saúde
+- Educação
 - Vestuario (roupas)
 - Lazer
 
-> **Base legal:** Artigos 1.694 a 1.710 do Codigo Civil e Lei de Alimentos (Lei 5.478/1968).
+> **Base legal:** Artigos 1.694 a 1.710 do Código Civil e Lei de Alimentos (Lei 5.478/1968).
 
 ---
 
-## Quem Deve Pagar Pensao
+## Quem Deve Pagar Pensão
 
-A obrigacao de pagar pensao alimenticia pode recair sobre:
+A obrigação de pagar pensão alimentícia pode recair sobre:
 
 | Quem paga | Para quem |
 |-----------|-----------|
 | Pais | Filhos menores de idade |
-| Filhos | Pais idosos ou que nao podem se manter |
+| Filhos | Pais idosos ou que não podem se manter |
 | Ex-marido ou ex-esposa | O outro, se comprovar necessidade |
-| Ex-companheiro(a) | O outro, apos fim da uniao estavel |
-| Avos | Netos (quando os pais nao conseguem pagar) |
+| Ex-companheiro(a) | O outro, após fim da uniao estável |
+| Avos | Netos (quando os pais não conseguem pagar) |
 | Irmaos | Irmaos necessitados (em ultimo caso) |
 
-> **Atencao:** A obrigacao e reciproca. Quem paga hoje pode precisar receber amanha. E a obrigacao dos avos e subsidiaria e complementar -- so cabe quando os pais nao tem condicoes de arcar com o valor total.
+> **Atenção:** A obrigação e reciproca. Quem paga hoje pode precisar receber amanha. E a obrigação dos avos e subsidiaria e complementar -- só cabe quando os pais não tem condições de arcar com o valor total.
 
 ---
 
 ## Quem Tem Direito a Receber
 
-- **Filhos menores de idade** -- a necessidade e presumida (nao precisa provar).
-- **Filhos ate 24 anos** que estejam cursando ensino superior ou tecnico (entendimento da jurisprudencia, nao e lei expressa).
-- **Filhos com deficiencia** -- sem limite de idade, enquanto durar a necessidade.
-- **Ex-conjuge ou ex-companheiro(a)** que comprove que precisa.
-- **Pais idosos** ou que nao possam se sustentar.
-- **Parentes necessitados** que nao consigam prover o proprio sustento.
+- **Filhos menores de idade** -- a necessidade e presumida (não precisa provar).
+- **Filhos até 24 anos** que estejam cursando ensino superior ou tecnico (entendimento da jurisprudencia, não e lei expressa).
+- **Filhos com deficiência** -- sem limite de idade, enquanto durar a necessidade.
+- **Ex-cônjuge ou ex-companheiro(a)** que comprove que precisa.
+- **Pais idosos** ou que não possam se sustentar.
+- **Parentes necessitados** que não consigam prover o próprio sustento.
 
 ---
 
-## Como Solicitar Pensao Alimenticia
+## Como Solicitar Pensão Alimentícia
 
-### Pela Defensoria Publica (gratuito)
+### Pela Defensoria Pública (gratuito)
 
-Este e o caminho mais comum para quem nao tem condicoes de pagar um advogado.
+Este é o caminho mais comum para quem não tem condições de pagar um advogado.
 
 **Passo a Passo:**
 
 1. **Reuna os documentos:**
-   - RG e CPF seus e da crianca
+   - RG e CPF seus e da criança
    - Certidao de nascimento do filho
-   - Comprovante de residencia atualizado
-   - Comprovante de renda (ou declaracao de desemprego)
-   - Informacoes sobre quem vai pagar: nome completo, endereco, local de trabalho e renda estimada
+   - Comprovante de residência atualizado
+   - Comprovante de renda (ou declaração de desemprego)
+   - Informações sobre quem vai pagar: nome completo, endereço, local de trabalho e renda estimada
 
-2. **Va ate a Defensoria Publica do DF:**
+2. **Va até a Defensoria Pública do DF:**
    - Telefone: **(61) 2196-4300**
-   - Horario da central: 9h as 17h (dias uteis)
-   - Atendimento presencial: 13h as 18h (dias uteis)
-   - Agendamento online: https://agenda.df.gov.br/organizacao.html?organizacao=37885304
+   - Horário da central: 9h as 17h (dias úteis)
+   - Atendimento presencial: 13h as 18h (dias úteis)
+   - Agendamento online: https://agenda.df.gov.br/organização.html?organização=37885304
 
-3. **A Defensoria analisa seu caso** e, havendo direito, entra com a acao de alimentos na Vara de Familia.
+3. **A Defensoria analisa seu caso** e, havendo direito, entra com a ação de alimentos na Vara de Família.
 
 ### Por advogado particular
 
-Voce pode contratar um advogado para entrar diretamente com a acao na Vara de Familia.
+Você pode contratar um advogado para entrar diretamente com a ação na Vara de Família.
 
 ---
 
-## Como Funciona a Acao de Alimentos
+## Como Funciona a Ação de Alimentos
 
-A acao de alimentos segue um rito especial (mais rapido que uma acao comum):
+A ação de alimentos segue um rito especial (mais rapido que uma ação comum):
 
-**1. Peticao inicial**
-O advogado ou Defensor Publico apresenta o pedido ao juiz.
+**1. Petição inicial**
+O advogado ou Defensor Público apresenta o pedido ao juiz.
 
-**2. Alimentos provisorios (pensao imediata)**
+**2. Alimentos provisorios (pensão imediata)**
 
-> **Muito importante:** O juiz fixa um valor provisorio de pensao LOGO que recebe a acao, ANTES da audiencia. Isso garante que quem precisa nao fique desamparado enquanto o processo anda.
+> **Muito importante:** O juiz fixa um valor provisório de pensão LOGO que recebe a ação, ANTES da audiência. Isso garante que quem precisa não fique desamparado enquanto o processo anda.
 
 **3. Citacao do devedor**
-O alimentante (quem vai pagar) e notificado para comparecer a audiencia.
+O alimentante (quem vai pagar) e notificado para comparecer a audiência.
 
-**4. Audiencia de conciliacao**
-O juiz tenta um acordo entre as partes. Se houver acordo, ele e homologado e tem forca de sentenca.
+**4. Audiência de conciliacao**
+O juiz tenta um acordo entre as partes. Se houver acordo, ele e homologado e tem forca de sentença.
 
-**5. Se nao houver acordo**
-O juiz ouve testemunhas, analisa os documentos e decide o valor definitivo da pensao.
+**5. Se não houver acordo**
+O juiz ouve testemunhas, analisa os documentos e decide o valor definitivo da pensão.
 
 **6. Desconto em folha**
-Se quem paga e empregado registrado, o juiz determina o desconto direto no salario. O empregador e obrigado a cumprir.
+Se quem paga e empregado registrado, o juiz determina o desconto direto no salário. O empregador e obrigado a cumprir.
 
 ---
 
-## Quanto se Paga de Pensao
+## Quanto se Paga de Pensão
 
 ### O Trinomio: Necessidade, Possibilidade e Proporcionalidade
 
-Nao existe um valor fixo na lei. O juiz analisa tres fatores:
+Não existe um valor fixo na lei. O juiz analisa três fatores:
 
-- **Necessidade:** Quanto a crianca (ou quem recebe) precisa? Quais sao os gastos com alimentacao, moradia, saude, educacao, roupas, transporte?
-- **Possibilidade:** Quanto quem paga ganha? Qual e a capacidade financeira real?
+- **Necessidade:** Quanto a criança (ou quem recebe) precisa? Quais sao os gastos com alimentação, moradia, saúde, educação, roupas, transporte?
+- **Possibilidade:** Quanto quem paga ganha? Qual é a capacidade financeira real?
 - **Proporcionalidade:** O valor deve ser justo para os dois lados.
 
-### Percentuais de Referencia na Jurisprudencia
+### Percentuais de Referência na Jurisprudencia
 
-A lei nao fixa percentuais, mas os tribunais brasileiros costumam usar estes valores como referencia:
+A lei não fixa percentuais, mas os tribunais brasileiros costumam usar estes valores como referência:
 
-| Situacao | Percentual de referencia |
+| Situação | Percentual de referência |
 |----------|--------------------------|
 | 1 filho (alimentante empregado) | **30% da renda liquida** |
 | 2 filhos (alimentante empregado) | **33% a 40% da renda liquida** |
 | 3 ou mais filhos | **40% a 50% da renda liquida** |
-| Alimentante autonomo ou informal | **30% a 50% do salario minimo por filho** |
-| Alimentante desempregado | **Geralmente 30% do salario minimo** |
+| Alimentante autônomo ou informal | **30% a 50% do salário mínimo por filho** |
+| Alimentante desempregado | **Geralmente 30% do salário mínimo** |
 
-> **Atencao:** Esses percentuais sao apenas referencias. O juiz pode fixar valores maiores ou menores, analisando cada caso. O fato de estar desempregado NAO elimina a obrigacao de pagar.
+> **Atenção:** Esses percentuais sao apenas referências. O juiz pode fixar valores maiores ou menores, analisando cada caso. O fato de estar desempregado NAO elimina a obrigação de pagar.
 
 ### O que Entra na Base de Calculo (TJDFT)
 
-A pensao incide sobre a **remuneracao bruta**, descontados apenas:
+A pensão incide sobre a **remuneração bruta**, descontados apenas:
 - Imposto de Renda Retido na Fonte (IRRF)
-- Contribuicao previdenciaria (INSS)
+- Contribuição previdenciaria (INSS)
 
 **Entram na base de calculo:**
-- Salario
+- Salário
 - Horas extras
-- Participacao nos Lucros e Resultados (PLR)
+- Participação nos Lucros e Resultados (PLR)
 - Verbas de natureza remuneratoria
 
 **NAO entra na base de calculo:**
-- Auxilio-moradia de natureza indenizatoria
+- Auxílio-moradia de natureza indenizatoria
 
 ---
 
-## Quando Nao Pagam: Execucao de Alimentos
+## Quando Não Pagam: Execução de Alimentos
 
-Se quem deve pagar a pensao nao esta pagando, voce pode cobrar na Justica. Ha dois caminhos:
+Se quem deve pagar a pensão não esta pagando, você pode cobrar na Justica. Ha dois caminhos:
 
-### Caminho 1: Execucao com Risco de Prisao
+### Caminho 1: Execução com Risco de Prisão
 
-**(Artigo 528 do Codigo de Processo Civil)**
+**(Artigo 528 do Código de Processo Civil)**
 
 - Serve para cobrar as **3 ultimas parcelas vencidas** + as que vencerem durante o processo.
-- O devedor e citado para **pagar em 3 dias** ou justificar por que nao pode.
-- Se nao pagar nem justificar: **prisao de 1 a 3 meses** em regime fechado.
-- Se pagar a divida toda, sai da prisao imediatamente.
-- A prisao nao apaga a divida -- mesmo preso, continua devendo.
+- O devedor e citado para **pagar em 3 dias** ou justificar por que não pode.
+- Se não pagar nem justificar: **prisão de 1 a 3 meses** em regime fechado.
+- Se pagar a divida toda, sai da prisão imediatamente.
+- A prisão não apaga a divida -- mesmo preso, contínua devendo.
 
-> **Saiba:** A prisao por divida de pensao alimenticia e a **unica prisao por divida permitida** no Brasil. Esta na Constituicao Federal, artigo 5, inciso LXVII.
+> **Saiba:** A prisão por divida de pensão alimentícia é a **única prisão por divida permitida** no Brasil. Esta na Constituição Federal, artigo 5, inciso LXVII.
 
-### Caminho 2: Execucao com Penhora de Bens
+### Caminho 2: Execução com Penhora de Bens
 
 **(Artigo 528, paragrafo 8, e artigo 913 do CPC)**
 
 - Serve para cobrar parcelas **mais antigas** (anteriores as 3 ultimas).
 - O juiz pode determinar: penhora de bens, bloqueio de contas bancarias, desconto em folha de pagamento.
-- O desconto em folha nao pode ultrapassar **50% dos ganhos liquidos** do devedor.
-- Nao leva a prisao, mas permite apreender bens e dinheiro.
+- O desconto em folha não pode ultrapassar **50% dos ganhos liquidos** do devedor.
+- Não leva a prisão, mas permite apreender bens e dinheiro.
 
-> **Dica pratica:** Voce pode usar os dois caminhos ao mesmo tempo -- prisao para as parcelas recentes e penhora para as mais antigas.
+> **Dica prática:** Você pode usar os dois caminhos ao mesmo tempo -- prisão para as parcelas recentes e penhora para as mais antigas.
 
 ### Sumula 309 do STJ (explicada de forma simples)
 
-O Superior Tribunal de Justica definiu que so cabe prisao pelas **3 ultimas parcelas** antes de entrar com a cobranca, mais as parcelas que vencerem enquanto o processo estiver em andamento. Dividas mais antigas sao cobradas por penhora, sem prisao.
+O Superior Tribunal de Justica definiu que só cabe prisão pelas **3 ultimas parcelas** antes de entrar com a cobrança, mais as parcelas que vencerem enquanto o processo estiver em andamento. Dividas mais antigas sao cobradas por penhora, sem prisão.
 
-### Quando NAO Cabe Prisao
+### Quando NAO Cabe Prisão
 
-- Se o devedor comprovar que e **absolutamente impossivel** pagar (desemprego comprovado, doenca grave).
+- Se o devedor comprovar que e **absolutamente impossível** pagar (desemprego comprovado, doenca grave).
 - Para dividas anteriores as 3 ultimas parcelas.
 
-### Passo a Passo para Cobrar Pensao Atrasada
+### Passo a Passo para Cobrar Pensão Atrasada
 
-1. Reuna os comprovantes de que a pensao nao foi paga (extratos bancarios, recibos).
-2. Procure a **Defensoria Publica** ou seu advogado.
-3. Entre com a **execucao de alimentos** na Vara de Familia.
+1. Reuna os comprovantes de que a pensão não foi paga (extratos bancarios, recibos).
+2. Procure a **Defensoria Pública** ou seu advogado.
+3. Entre com a **execução de alimentos** na Vara de Família.
 4. O juiz intima o devedor para pagar em 3 dias.
-5. Se nao pagar, o juiz decreta a prisao ou a penhora de bens.
+5. Se não pagar, o juiz decreta a prisão ou a penhora de bens.
 
 ---
 
-## Alimentos Gravidicos -- Pensao Durante a Gravidez
+## Alimentos Gravidicos -- Pensão Durante a Gravidez
 
 **(Lei 11.804/2008)**
 
 ### O que sao
 
-A mulher gravida tem direito a receber uma pensao do suposto pai **durante a gravidez**, sem precisar esperar o bebe nascer.
+A mulher gravida tem direito a receber uma pensão do suposto pai **durante a gravidez**, sem precisar esperar o bebe nascer.
 
 ### O que os Alimentos Gravidicos Cobrem
 
-- Alimentacao especial para a gestante
-- Assistencia medica e psicologica
+- Alimentação especial para a gestante
+- Assistência médica e psicológica
 - Exames complementares
 - Internacoes
 - Parto
 - Medicamentos
-- Demais tratamentos necessarios
+- Demais tratamentos necessários
 
-### O que e Preciso para Pedir
+### O que é Preciso para Pedir
 
-- **Indicios de paternidade** -- nao precisa de exame de DNA. Basta apresentar indicios (mensagens, fotos, testemunhos).
-- Comprovacao das necessidades da gestante.
+- **Indicios de paternidade** -- não precisa de exame de DNA. Basta apresentar indicios (mensagens, fotos, testemunhos).
+- Comprovação das necessidades da gestante.
 
 ### Passo a Passo
 
-1. Procure a **Defensoria Publica** ou um advogado.
-2. Entre com a **acao de alimentos gravidicos** na Vara de Familia.
-3. O juiz fixa a pensao com base nos indicios de paternidade.
+1. Procure a **Defensoria Pública** ou um advogado.
+2. Entre com a **ação de alimentos gravidicos** na Vara de Família.
+3. O juiz fixa a pensão com base nos indicios de paternidade.
 
-> **Muito importante:** Apos o nascimento da crianca, os alimentos gravidicos se transformam automaticamente em pensao alimenticia para o bebe. Nao e preciso entrar com outra acao.
+> **Muito importante:** Após o nascimento da criança, os alimentos gravidicos se transformam automaticamente em pensão alimentícia para o bebe. Não é preciso entrar com outra ação.
 
 ---
 
-## Revisao de Pensao -- Quando o Valor Precisa Mudar
+## Revisão de Pensão -- Quando o Valor Precisa Mudar
 
-Qualquer uma das partes (quem paga ou quem recebe) pode pedir revisao do valor da pensao quando houver **mudanca significativa** nas condicoes.
+Qualquer uma das partes (quem paga ou quem recebe) pode pedir revisão do valor da pensão quando houver **mudança significativa** nas condições.
 
 ### Quando se Pode Pedir Aumento
 
-- As necessidades da crianca aumentaram (tratamento medico, escola, etc.).
+- As necessidades da criança aumentaram (tratamento médico, escola, etc.).
 - Quem paga passou a ganhar mais.
 
-### Quando se Pode Pedir Reducao
+### Quando se Pode Pedir Redução
 
-- Quem paga perdeu o emprego ou teve reducao de renda.
-- Quem paga teve outros filhos e a renda nao e suficiente para todos.
+- Quem paga perdeu o emprego ou teve redução de renda.
+- Quem paga teve outros filhos é a renda não e suficiente para todos.
 - As necessidades de quem recebe diminuiram.
 
-> **Atencao (TJDFT):** O simples nascimento de outro filho NAO e, por si so, motivo suficiente para reduzir a pensao. E preciso comprovar que a capacidade financeira realmente diminuiu.
+> **Atenção (TJDFT):** O simples nascimento de outro filho NAO e, por si só, motivo suficiente para reduzir a pensão. E preciso comprovar que a capacidade financeira realmente diminuiu.
 
-### Como Pedir Revisao
+### Como Pedir Revisão
 
-1. Procure a **Defensoria Publica** ou um advogado.
-2. Entre com a **Acao Revisional de Alimentos** na Vara de Familia.
+1. Procure a **Defensoria Pública** ou um advogado.
+2. Entre com a **Ação Revisional de Alimentos** na Vara de Família.
 3. O juiz analisa os novos fatos e decide se o valor deve mudar.
 
 ---
 
-## Exoneracao -- Quando a Pensao Pode Acabar
+## Exoneração -- Quando a Pensão Pode Acabar
 
-### O que e
+### O que é
 
-Exoneracao e o pedido judicial para **encerrar** a obrigacao de pagar pensao.
+Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pensão.
 
 ### Quando se Pode Pedir
 
-- O filho completou **18 anos** -- mas atencao: a maioridade, sozinha, NAO encerra automaticamente a pensao.
-- O filho passou a ter **renda propria** suficiente.
-- O filho **concluiu o ensino superior** (a jurisprudencia costuma manter a pensao ate aproximadamente 24 anos, se o filho estiver estudando).
+- O filho completou **18 anos** -- mas atenção: a maioridade, sozinha, NAO encerra automaticamente a pensão.
+- O filho passou a ter **renda própria** suficiente.
+- O filho **concluiu o ensino superior** (a jurisprudencia costuma manter a pensão até aproximadamente 24 anos, se o filho estiver estudando).
 
 ### Regras Importantes
 
-> **Sumula 358 do STJ:** O cancelamento da pensao alimenticia de filho maior de idade depende de decisao judicial. Nao pode ser feito automaticamente.
+> **Sumula 358 do STJ:** O cancelamento da pensão alimentícia de filho maior de idade depende de decisão judicial. Não pode ser feito automaticamente.
 
-> **NUNCA pare de pagar a pensao por conta propria.** Mesmo que o filho tenha completado 18 anos, voce DEVE entrar com acao judicial para pedir a exoneracao. Se simplesmente parar de pagar, pode ser preso.
+> **NUNCA pare de pagar a pensão por conta própria.** Mesmo que o filho tenha completado 18 anos, você DEVE entrar com ação judicial para pedir a exoneração. Se simplesmente parar de pagar, pode ser preso.
 
 ### Passo a Passo
 
-1. Procure a **Defensoria Publica** ou um advogado.
-2. Entre com a **Acao de Exoneracao de Alimentos** na Vara de Familia.
-3. Apos os 18 anos, cabe ao **filho provar** que ainda precisa da pensao (o onus da prova se inverte).
-4. O juiz decide apos ouvir as duas partes.
+1. Procure a **Defensoria Pública** ou um advogado.
+2. Entre com a **Ação de Exoneração de Alimentos** na Vara de Família.
+3. Após os 18 anos, cabe ao **filho provar** que ainda precisa da pensão (o onus da prova se inverte).
+4. O juiz decide após ouvir as duas partes.
 
 ---
 
 ## Jurisprudencia Importante -- STJ e TJDFT
 
-### Sumulas do STJ sobre Pensao Alimenticia
+### Sumulas do STJ sobre Pensão Alimentícia
 
 | Sumula | O que diz (em linguagem simples) |
 |--------|----------------------------------|
-| **309** | So cabe prisao pelas 3 ultimas parcelas atrasadas + as que vencerem durante o processo |
-| **358** | A pensao de filho maior de idade so pode ser cancelada por decisao judicial |
-| **596** | A obrigacao dos avos de pagar pensao e complementar -- so quando os pais nao conseguem |
+| **309** | Só cabe prisão pelas 3 ultimas parcelas atrasadas + as que vencerem durante o processo |
+| **358** | A pensão de filho maior de idade só pode ser cancelada por decisão judicial |
+| **596** | A obrigação dos avos de pagar pensão e complementar -- só quando os pais não conseguem |
 
 ### Entendimentos do TJDFT
 
-- A guarda compartilhada **nao elimina** a obrigacao de pagar pensao.
-- Participacao nos Lucros (PLR) **entra** na base de calculo da pensao.
-- Auxilio-moradia de natureza indenizatoria **nao entra** na base de calculo.
+- A guarda compartilhada **não elimina** a obrigação de pagar pensão.
+- Participação nos Lucros (PLR) **entra** na base de calculo da pensão.
+- Auxílio-moradia de natureza indenizatoria **não entra** na base de calculo.
 - Na penhora em folha de pagamento, o limite e de **50% dos ganhos liquidos**.
-- Filhos maiores de idade **nao podem viver indefinidamente** de pensao.
+- Filhos maiores de idade **não podem viver indefinidamente** de pensão.
 
 ---
 
-## Resumo Pratico -- Guia Rapido
+## Resumo Prático -- Guia Rapido
 
-### Se voce precisa de pensao para seu filho:
+### Se você precisa de pensão para seu filho:
 
-1. Reuna: RG, CPF, certidao de nascimento do filho, comprovante de residencia e renda.
-2. Ligue para a Defensoria Publica: **(61) 2196-4300**.
-3. A Defensoria entra com a acao e o juiz fixa pensao provisoria rapidamente.
+1. Reuna: RG, CPF, certidao de nascimento do filho, comprovante de residência e renda.
+2. Ligue para a Defensoria Pública: **(61) 2196-4300**.
+3. A Defensoria entra com a ação é o juiz fixa pensão provisória rapidamente.
 
-### Se o pai/mae nao esta pagando a pensao:
+### Se o pai/mae não esta pagando a pensão:
 
-1. Procure a Defensoria Publica ou seu advogado.
-2. Entre com execucao de alimentos (rito de prisao para as ultimas 3 parcelas).
-3. O devedor e citado para pagar em 3 dias ou sera preso.
+1. Procure a Defensoria Pública ou seu advogado.
+2. Entre com execução de alimentos (rito de prisão para as ultimas 3 parcelas).
+3. O devedor e citado para pagar em 3 dias ou será preso.
 
-### Se voce esta gravida e o pai nao quer ajudar:
+### Se você está gravida é o pai não quer ajudar:
 
-1. Procure a Defensoria Publica.
-2. Entre com acao de alimentos gravidicos (basta indicio de paternidade).
-3. O juiz fixa pensao durante a gravidez. Apos o nascimento, vira pensao do bebe automaticamente.
+1. Procure a Defensoria Pública.
+2. Entre com ação de alimentos gravidicos (basta indicio de paternidade).
+3. O juiz fixa pensão durante a gravidez. Após o nascimento, vira pensão do bebe automaticamente.
 
-### Se voce quer revisar o valor da pensao:
+### Se você quer revisar o valor da pensão:
 
-1. Comprove a mudanca de situacao (aumento de gastos ou reducao de renda).
-2. Procure a Defensoria Publica ou advogado.
-3. Entre com a Acao Revisional.
+1. Comprove a mudança de situação (aumento de gastos ou redução de renda).
+2. Procure a Defensoria Pública ou advogado.
+3. Entre com a Ação Revisional.
 
 ---
 
-## Documentos Necessarios -- Resumo
+## Documentos Necessários -- Resumo
 
-| Tipo de acao | Documentos |
+| Tipo de ação | Documentos |
 |--------------|------------|
-| Pedir pensao | RG, CPF, certidao de nascimento, comprovante de residencia e renda, dados do alimentante |
-| Cobrar pensao atrasada | Os mesmos acima + comprovantes do nao pagamento (extratos, recibos) |
+| Pedir pensão | RG, CPF, certidao de nascimento, comprovante de residência e renda, dados do alimentante |
+| Cobrar pensão atrasada | Os mesmos acima + comprovantes do não pagamento (extratos, recibos) |
 | Alimentos gravidicos | RG, CPF, exames de gravidez, indicios de paternidade (mensagens, fotos, testemunhos) |
-| Revisao de pensao | RG, CPF, comprovantes da mudanca de situacao, copia da decisao anterior |
-| Exoneracao | RG, CPF, comprovantes de que o filho pode se manter, copia da decisao anterior |
+| Revisão de pensão | RG, CPF, comprovantes da mudança de situação, copia da decisão anterior |
+| Exoneração | RG, CPF, comprovantes de que o filho pode se manter, copia da decisão anterior |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Defensoria Publica do DF | (61) 2196-4300 |
-| TJDFT -- Informacoes gerais | (61) 3103-7070 |
+| Defensoria Pública do DF | (61) 2196-4300 |
+| TJDFT -- Informações gerais | (61) 3103-7070 |
 | Disque Direitos Humanos | 100 (gratuito) |
-| Ministerio Publico do DF | (61) 3343-9500 |
+| Ministerio Público do DF | (61) 3343-9500 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - **Lei 5.478/1968** -- Lei de Alimentos.
 - **Lei 11.804/2008** -- Alimentos Gravidicos: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11804.htm
-- **Codigo Civil**, artigos 1.694 a 1.710 -- Alimentos.
-- **Codigo de Processo Civil**, artigos 528 a 533 -- Execucao de alimentos.
+- **Código Civil**, artigos 1.694 a 1.710 -- Alimentos.
+- **Código de Processo Civil**, artigos 528 a 533 -- Execução de alimentos.
 - **Sumula 309 do STJ:** https://www.stj.jus.br/publicacaoinstitucional/index.php/sumstj/article/viewFile/5727/5847
-- **Sumula 358 do STJ** -- Cancelamento de pensao apos maioridade.
-- **Sumula 596 do STJ** -- Obrigacao alimentar dos avos.
+- **Sumula 358 do STJ** -- Cancelamento de pensão após maioridade.
+- **Sumula 596 do STJ** -- Obrigação alimentar dos avos.
 - **TJDFT -- Jurisprudencia sobre alimentos:** https://www.tjdft.jus.br/consultas/jurisprudencia/jurisprudencia-em-temas/jurisprudencia-em-perguntas/direito-civil-e-processual-civil/alimentos
-- **STJ -- Decisoes sobre exoneracao:** https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias-antigas/2016/2016-10-16_08-00_Decisoes-impedem-que-filhos-maiores-vivam-indefinidamente-de-pensao.aspx
-- **Defensoria Publica do DF:** https://www.defensoria.df.gov.br
+- **STJ -- Decisoes sobre exoneração:** https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias-antigas/2016/2016-10-16_08-00_Decisoes-impedem-que-filhos-maiores-vivam-indefinidamente-de-pensão.aspx
+- **Defensoria Pública do DF:** https://www.defensoria.df.gov.br
 `
         },
         {
-          id: `04-alienacao-parental`,
-          title: `Alienacao Parental`,
-          content: `# Alienacao Parental
+          id: `04-alienação-parental`,
+          title: `Alienação Parental`,
+          content: `# Alienação Parental
 
-## O que e Alienacao Parental
+## O que é Alienação Parental
 
-Alienacao parental e quando um dos pais (ou outra pessoa que cuida da crianca) tenta prejudicar a relacao da crianca com o outro genitor. E uma forma de manipulacao emocional que causa grande dano a crianca.
+Alienação parental e quando um dos pais (ou outra pessoa que cuida da criança) tenta prejudicar a relacao da criança com o outro genitor. E uma forma de manipulacao emocional que causa grande dano a criança.
 
-A **Lei 12.318/2010** define alienacao parental como a interferencia na formacao psicologica da crianca ou adolescente para que ela:
+A **Lei 12.318/2010** define alienação parental como a interferencia na formacao psicológica da criança ou adolescente para que ela:
 - Repudie (rejeite) o outro genitor.
 - Tenha prejudicada a relacao com o outro genitor.
 
-> **Importante:** A alienacao parental pode ser praticada nao so pelo pai ou pela mae, mas por qualquer pessoa que tenha a crianca sob seus cuidados -- avos, tios, padrastos, madrastas.
+> **Importante:** A alienação parental pode ser praticada não só pelo pai ou pela mae, mas por qualquer pessoa que tenha a criança sob seus cuidados -- avos, tios, padrastos, madrastas.
 
 ---
 
-## Como Identificar a Alienacao Parental
+## Como Identificar a Alienação Parental
 
-A lei lista exemplos de comportamentos que caracterizam alienacao parental (artigo 2 da Lei 12.318/2010):
+A lei lista exemplos de comportamentos que caracterizam alienação parental (artigo 2 da Lei 12.318/2010):
 
-1. **Falar mal do outro genitor** para a crianca, fazendo campanha para que ela nao goste dele.
-2. **Dificultar o exercicio da autoridade parental** -- por exemplo, tomar decisoes sobre a vida da crianca sem consultar o outro pai/mae.
-3. **Dificultar o contato da crianca com o outro genitor** -- esconder a crianca, nao atender ligacoes, nao permitir visitas.
-4. **Atrapalhar o direito de visitas** ja estabelecido pela Justica.
-5. **Esconder informacoes importantes** sobre a crianca -- como notas da escola, problemas de saude, consultas medicas.
-6. **Fazer falsas denuncias** contra o outro genitor para impedir a convivencia.
-7. **Mudar de cidade sem justificativa** para dificultar o contato da crianca com o outro genitor.
+1. **Falar mal do outro genitor** para a criança, fazendo campanha para que ela não goste dele.
+2. **Dificultar o exercício da autoridade parental** -- por exemplo, tomar decisões sobre a vida da criança sem consultar o outro pai/mae.
+3. **Dificultar o contato da criança com o outro genitor** -- esconder a criança, não atender ligacoes, não permitir visitas.
+4. **Atrapalhar o direito de visitas** já estabelecido pela Justica.
+5. **Esconder informações importantes** sobre a criança -- como notas da escola, problemas de saúde, consultas médicas.
+6. **Fazer falsas denúncias** contra o outro genitor para impedir a convivência.
+7. **Mudar de cidade sem justificativa** para dificultar o contato da criança com o outro genitor.
 
-> **Atencao:** Esses sao apenas exemplos. Qualquer ato que prejudique a relacao da crianca com o outro genitor pode ser considerado alienacao parental.
+> **Atenção:** Esses sao apenas exemplos. Qualquer ato que prejudique a relacao da criança com o outro genitor pode ser considerado alienação parental.
 
 ---
 
-## Consequencias Juridicas
+## Consequências Juridicas
 
-Quando o juiz identifica que esta havendo alienacao parental, ele pode tomar diversas medidas, dependendo da gravidade:
+Quando o juiz identifica que está havendo alienação parental, ele pode tomar diversas medidas, dependendo da gravidade:
 
 | Gravidade | Medida que o juiz pode aplicar |
 |-----------|-------------------------------|
 | Leve | Advertencia ao alienador |
-| Moderada | Ampliar o tempo de convivencia com o genitor prejudicado |
+| Moderada | Ampliar o tempo de convivência com o genitor prejudicado |
 | Moderada | Aplicar multa ao alienador |
-| Moderada | Determinar acompanhamento psicologico |
+| Moderada | Determinar acompanhamento psicológico |
 | Grave | Alterar a guarda -- pode inverter para o genitor prejudicado |
-| Grave | Fixar o domicilio da crianca |
+| Grave | Fixar o domicílio da criança |
 | Muito grave | Suspender a autoridade parental do alienador |
 
-> **Tramitacao prioritaria:** O processo de alienacao parental tem prioridade na Justica. O juiz pode tomar medidas de urgencia para proteger a crianca imediatamente.
+> **Tramitacao prioritaria:** O processo de alienação parental tem prioridade na Justica. O juiz pode tomar medidas de urgência para proteger a criança imediatamente.
 
 ---
 
-## Como Denunciar Alienacao Parental
+## Como Denunciar Alienação Parental
 
 ### Passo a Passo
 
 1. **Reuna provas:**
-   - Mensagens de texto ou audio em que o alienador fala mal do outro genitor para a crianca.
-   - Registros de visitas nao cumpridas.
+   - Mensagens de texto ou audio em que o alienador fala mal do outro genitor para a criança.
+   - Registros de visitas não cumpridas.
    - Testemunhos de familiares, professores ou vizinhos.
-   - Relatorios escolares ou medicos que mostrem a situacao.
+   - Relatorios escolares ou médicos que mostrem a situação.
 
 2. **Procure a Justica:**
-   - Va a **Vara de Familia** para pedir medidas judiciais.
-   - A **Defensoria Publica** pode representar voce gratuitamente -- telefone (61) 2196-4300.
+   - Va a **Vara de Família** para pedir medidas judiciais.
+   - A **Defensoria Pública** pode representar você gratuitamente -- telefone (61) 2196-4300.
 
 3. **Acione o Conselho Tutelar:**
-   - O Conselho Tutelar pode intervir para proteger a crianca.
-   - Procure o Conselho Tutelar da regiao onde a crianca mora.
+   - O Conselho Tutelar pode intervir para proteger a criança.
+   - Procure o Conselho Tutelar da regiao onde a criança mora.
 
 4. **Ligue para o Disque 100:**
-   - O Disque 100 (Disque Direitos Humanos) recebe denuncias de violacoes de direitos de criancas e adolescentes.
-   - A ligacao e gratuita e pode ser anonima.
+   - O Disque 100 (Disque Direitos Humanos) recebe denúncias de violações de direitos de crianças e adolescentes.
+   - A ligacao é gratuita e pode ser anônima.
 
 ---
 
-## O que Acontece com a Crianca
+## O que Acontece com a Criança
 
-A alienacao parental causa danos serios a saude emocional da crianca:
+A alienação parental causa danos serios a saúde emocional da criança:
 
 - Sentimento de culpa por gostar de um dos pais.
 - Ansiedade e depressao.
 - Dificuldade em manter relacionamentos saudaveis no futuro.
-- Perda de referencia familiar.
+- Perda de referência familiar.
 
-> **A protecao da crianca vem em primeiro lugar.** O juiz sempre decidira pensando no melhor interesse da crianca, nao dos pais.
+> **A proteção da criança vem em primeiro lugar.** O juiz sempre decidira pensando no melhor interesse da criança, não dos pais.
 
 ---
 
@@ -3473,20 +3473,20 @@ A alienacao parental causa danos serios a saude emocional da crianca:
 
 | Necessidade | Onde procurar | Contato |
 |-------------|---------------|---------|
-| Acao judicial contra alienacao parental | Defensoria Publica do DF | (61) 2196-4300 |
-| Protecao imediata da crianca | Conselho Tutelar da regiao | Veja enderecos na secao 06 |
-| Denuncia anonima | Disque 100 | Ligue 100 (gratuito) |
-| Acompanhamento psicologico | CREAS da regiao | Procure o CREAS mais proximo |
-| Promotoria da Infancia | Ministerio Publico do DF | (61) 3343-9500 |
+| Ação judicial contra alienação parental | Defensoria Pública do DF | (61) 2196-4300 |
+| Proteção imediata da criança | Conselho Tutelar da regiao | Veja endereços na seção 06 |
+| Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
+| Acompanhamento psicológico | CREAS da regiao | Procure o CREAS mais proximo |
+| Promotoria da Infância | Ministerio Público do DF | (61) 3343-9500 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- **Lei 12.318/2010** -- Alienacao Parental: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12318.htm
-- **Lei 8.069/1990** -- Estatuto da Crianca e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- **Defensoria Publica do DF:** https://www.defensoria.df.gov.br
-- **Conselho Tutelar do DF** -- Enderecos: https://conselhotutelar.sejus.df.gov.br/enderecos/
+- **Lei 12.318/2010** -- Alienação Parental: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12318.htm
+- **Lei 8.069/1990** -- Estatuto da Criança e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- **Defensoria Pública do DF:** https://www.defensoria.df.gov.br
+- **Conselho Tutelar do DF** -- Endereços: https://conselhotutelar.sejus.df.gov.br/endereços/
 `
         },
         {
@@ -3494,27 +3494,27 @@ A alienacao parental causa danos serios a saude emocional da crianca:
           title: `Bullying e Cyberbullying`,
           content: `# Bullying e Cyberbullying
 
-## O que e Bullying
+## O que é Bullying
 
-Bullying e a **intimidacao sistematica** -- ou seja, repetida e intencional -- contra uma pessoa, por meio de violencia fisica ou psicologica. Pode acontecer na escola, no bairro, em clubes ou em qualquer lugar.
+Bullying é a **intimidacao sistematica** -- ou seja, repetida e intencional -- contra uma pessoa, por meio de violência física ou psicológica. Pode acontecer na escola, no bairro, em clubes ou em qualquer lugar.
 
 Exemplos de bullying:
 - Agressoes fisicas repetidas (empurroes, socos, chutes).
 - Humilhacoes, apelidos ofensivos, xingamentos constantes.
-- Excluir alguem do grupo de proposito.
-- Espalhar boatos e mentiras sobre alguem.
+- Excluir alguém do grupo de proposito.
+- Espalhar boatos e mentiras sobre alguém.
 - Ameacas e intimidacoes.
 
-## O que e Cyberbullying
+## O que é Cyberbullying
 
-Cyberbullying e o bullying praticado pela internet, redes sociais, aplicativos de mensagens, jogos online ou qualquer meio digital.
+Cyberbullying é o bullying praticado pela internet, redes sociais, aplicativos de mensagens, jogos online ou qualquer meio digital.
 
 Exemplos de cyberbullying:
 - Espalhar fotos ou videos humilhantes na internet.
 - Criar perfis falsos para ofender ou humilhar.
 - Enviar mensagens ameacadoras por WhatsApp, Instagram ou outras redes.
 - Fazer comentarios ofensivos em publicacoes.
-- Compartilhar informacoes pessoais sem autorizacao.
+- Compartilhar informações pessoais sem autorizacao.
 
 ---
 
@@ -3523,28 +3523,28 @@ Exemplos de cyberbullying:
 ### Lei 13.185/2015 -- Programa de Combate ao Bullying
 
 Esta lei criou o Programa de Combate a Intimidacao Sistematica em todo o Brasil. Ela obriga:
-- **Escolas, clubes e entidades recreativas** a adotar medidas de prevencao, conscientizacao e combate ao bullying.
+- **Escolas, clubes e entidades recreativas** a adotar medidas de prevenção, conscientizacao e combate ao bullying.
 - Promocao de campanhas educativas.
 - Capacitacao de profissionais para identificar e lidar com o problema.
 
 ### Lei 14.811/2024 -- Bullying e Cyberbullying Agora Sao Crimes
 
-A partir de 15 de janeiro de 2024, bullying e cyberbullying passaram a ser **crimes** no Brasil, com a inclusao do artigo 146-A no Codigo Penal.
+A partir de 15 de janeiro de 2024, bullying e cyberbullying passaram a ser **crimes** no Brasil, com a inclusao do artigo 146-A no Código Penal.
 
 | Conduta | Tipo de crime | Pena |
 |---------|---------------|------|
-| **Bullying** | Intimidacao sistematica | Multa (se nao constituir crime mais grave) |
-| **Cyberbullying** | Intimidacao sistematica virtual | Reclusao de **2 a 4 anos** + multa |
+| **Bullying** | Intimidacao sistematica | Multa (se não constituir crime mais grave) |
+| **Cyberbullying** | Intimidacao sistematica virtual | Reclusão de **2 a 4 anos** + multa |
 
-> **Atencao:** O cyberbullying tem pena mais severa do que o bullying presencial, porque o alcance e o dano causado pela internet sao maiores.
+> **Atenção:** O cyberbullying tem pena mais severa do que o bullying presencial, porque o alcance é o dano causado pela internet sao maiores.
 
 ### Quando o Agressor e Menor de 18 Anos
 
-Menores de 18 anos nao respondem por crime, mas respondem por **ato infracional** (equivalente a crime no ECA). As medidas que podem ser aplicadas incluem:
+Menores de 18 anos não respondem por crime, mas respondem por **ato infracional** (equivalente a crime no ECA). As medidas que podem ser aplicadas incluem:
 
 - Advertencia.
-- Obrigacao de reparar o dano causado.
-- Prestacao de servicos a comunidade.
+- Obrigação de reparar o dano causado.
+- Prestação de serviços a comunidade.
 - Liberdade assistida.
 - Em casos graves, internacao em estabelecimento educacional.
 
@@ -3556,48 +3556,48 @@ Menores de 18 anos nao respondem por crime, mas respondem por **ato infracional*
 
 **1. Registre as provas**
 
-Este e o passo mais importante. Guarde tudo:
+Este é o passo mais importante. Guarde tudo:
 - Prints (capturas de tela) de mensagens, publicacoes e comentarios ofensivos.
 - Salve fotos e videos.
-- Anote datas, horarios e nomes de testemunhas.
+- Anote datas, horários e nomes de testemunhas.
 - Guarde links das publicacoes (antes que sejam apagadas).
 
-> **Dica:** Faca uma **ata notarial** em cartorio para dar valor legal as provas digitais. Caso nao seja possivel, os prints servem como inicio de prova.
+> **Dica:** Faca uma **ata notarial** em cartorio para dar valor legal as provas digitais. Caso não seja possível, os prints servem como inicio de prova.
 
 **2. Comunique a escola**
 
-- A escola tem **obrigacao legal** de tomar providencias (Lei 13.185/2015).
-- Faca a comunicacao por **escrito** (carta, e-mail ou protocolo) para ter comprovante.
-- Peca uma resposta formal sobre as medidas que serao tomadas.
+- A escola tem **obrigação legal** de tomar providencias (Lei 13.185/2015).
+- Faca a comunicação por **escrito** (carta, e-mail ou protocolo) para ter comprovante.
+- Peca uma resposta formal sobre as medidas que serão tomadas.
 
 **3. Acione o Conselho Tutelar**
 
-- Se a escola nao resolver, procure o Conselho Tutelar da sua regiao.
+- Se a escola não resolver, procure o Conselho Tutelar da sua regiao.
 - O Conselho pode aplicar medidas protetivas e encaminhar o caso.
 
-**4. Registre Boletim de Ocorrencia**
+**4. Registre Boletim de Ocorrência**
 
 - Va a **delegacia mais proxima** para registrar o B.O.
 - Para cyberbullying, procure a **Delegacia de Repressao a Crimes Ciberneticos (DRCC)** do DF.
-- Leve as provas que voce reuniu.
+- Leve as provas que você reuniu.
 
-**5. Procure a Defensoria Publica**
+**5. Procure a Defensoria Pública**
 
-- A Defensoria pode orientar sobre **acoes civeis de reparacao** (indenizacao por danos morais).
+- A Defensoria pode orientar sobre **ações civeis de reparação** (indenização por danos morais).
 - Telefone: **(61) 2196-4300**.
 
 **6. Ligue para o Disque 100**
 
-- Para denuncia anonima de violacoes de direitos de criancas e adolescentes.
+- Para denúncia anônima de violações de direitos de crianças e adolescentes.
 - Ligacao gratuita: **100**.
 
 ---
 
-## Como Ajudar a Crianca ou Adolescente
+## Como Ajudar a Criança ou Adolescente
 
-- **Ouca com atencao.** Nao minimize o que a crianca esta sentindo.
-- **Nao culpe a vitima.** Bullying nunca e culpa de quem sofre.
-- **Busque apoio psicologico.** O CREAS da sua regiao oferece atendimento gratuito.
+- **Ouca com atenção.** Não minimize o que a criança esta sentindo.
+- **Não culpe a vítima.** Bullying nunca e culpa de quem sofre.
+- **Busque apoio psicológico.** O CREAS da sua regiao oferece atendimento gratuito.
 - **Mantenha o dialogo aberto.** Fale sobre o assunto de forma acolhedora.
 - **Acompanhe as redes sociais** dos seus filhos, respeitando a privacidade adequada a idade.
 
@@ -3605,85 +3605,85 @@ Este e o passo mais importante. Guarde tudo:
 
 ## Onde Buscar Ajuda
 
-| Situacao | Onde procurar | Contato |
+| Situação | Onde procurar | Contato |
 |----------|---------------|---------|
-| Bullying na escola que nao foi resolvido | Conselho Tutelar | Veja enderecos na secao 06 |
-| Registrar ocorrencia policial | Delegacia mais proxima | 197 (Policia Civil) |
+| Bullying na escola que não foi resolvido | Conselho Tutelar | Veja endereços na seção 06 |
+| Registrar ocorrência policial | Delegacia mais proxima | 197 (Polícia Civil) |
 | Cyberbullying | Delegacia de Crimes Ciberneticos (DRCC) | Procure a delegacia especializada |
-| Denuncia anonima | Disque 100 | Ligue 100 (gratuito) |
-| Orientacao juridica gratuita | Defensoria Publica do DF | (61) 2196-4300 |
-| Apoio psicologico | CREAS da regiao | Procure o CREAS mais proximo |
+| Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
+| Orientação jurídica gratuita | Defensoria Pública do DF | (61) 2196-4300 |
+| Apoio psicológico | CREAS da regiao | Procure o CREAS mais proximo |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - **Lei 13.185/2015** -- Programa de Combate a Intimidacao Sistematica (Bullying): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13185.htm
 - **Lei 14.811/2024** -- Criminalizacao do Bullying e Cyberbullying: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm
-- **Lei 8.069/1990** -- Estatuto da Crianca e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- **Codigo Penal**, artigo 146-A -- Intimidacao sistematica.
-- **Defensoria Publica do DF:** https://www.defensoria.df.gov.br
-- **Conselho Tutelar do DF** -- Enderecos: https://conselhotutelar.sejus.df.gov.br/enderecos/
+- **Lei 8.069/1990** -- Estatuto da Criança e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- **Código Penal**, artigo 146-A -- Intimidacao sistematica.
+- **Defensoria Pública do DF:** https://www.defensoria.df.gov.br
+- **Conselho Tutelar do DF** -- Endereços: https://conselhotutelar.sejus.df.gov.br/endereços/
 `
         },
         {
           id: `06-conselho-tutelar-df`,
-          title: `Conselho Tutelar e Defensoria Publica no DF`,
-          content: `# Conselho Tutelar e Defensoria Publica no DF
+          title: `Conselho Tutelar e Defensoria Pública no DF`,
+          content: `# Conselho Tutelar e Defensoria Pública no DF
 
-## O que e o Conselho Tutelar
+## O que é o Conselho Tutelar
 
-O Conselho Tutelar e um orgao que existe em todas as cidades do Brasil para **proteger os direitos das criancas e adolescentes**. Ele nao faz parte do Poder Judiciario (nao e tribunal), mas tem autoridade para tomar medidas de protecao.
+O Conselho Tutelar é um órgão que existe em todas as cidades do Brasil para **proteger os direitos das crianças e adolescentes**. Ele não faz parte do Poder Judiciário (não e tribunal), mas tem autoridade para tomar medidas de proteção.
 
-Cada Conselho Tutelar e formado por **5 conselheiros**, escolhidos pela propria comunidade.
+Cada Conselho Tutelar e formado por **5 conselheiros**, escolhidos pela própria comunidade.
 
-> **Base legal:** Artigo 131 do Estatuto da Crianca e do Adolescente (ECA).
+> **Base legal:** Artigo 131 do Estatuto da Criança e do Adolescente (ECA).
 
 ---
 
 ## Quando Acionar o Conselho Tutelar
 
-Voce deve procurar o Conselho Tutelar quando souber de qualquer situacao que coloque em risco os direitos de uma crianca ou adolescente:
+Você deve procurar o Conselho Tutelar quando souber de qualquer situação que coloque em risco os direitos de uma criança ou adolescente:
 
-- **Maus-tratos** contra crianca ou adolescente (agressao fisica, psicologica).
-- **Negligencia** dos pais ou responsaveis (falta de cuidados basicos).
-- **Crianca fora da escola** ou sem vaga em creche.
+- **Maus-tratos** contra criança ou adolescente (agressão física, psicológica).
+- **Negligencia** dos pais ou responsáveis (falta de cuidados básicos).
+- **Criança fora da escola** ou sem vaga em creche.
 - **Trabalho infantil.**
-- **Violencia domestica** envolvendo crianca ou adolescente.
-- **Uso de drogas** por crianca ou adolescente.
+- **Violência doméstica** envolvendo criança ou adolescente.
+- **Uso de drogas** por criança ou adolescente.
 - **Abandono.**
 - **Exploracao sexual.**
-- Qualquer outra situacao em que os direitos da crianca estejam ameacados ou violados.
+- Qualquer outra situação em que os direitos da criança estejam ameacados ou violados.
 
-> **Qualquer pessoa pode denunciar:** vizinhos, professores, profissionais de saude, parentes ou qualquer pessoa da comunidade. A denuncia pode ser **anonima**.
+> **Qualquer pessoa pode denunciar:** vizinhos, professores, profissionais de saúde, parentes ou qualquer pessoa da comunidade. A denúncia pode ser **anônima**.
 
 ---
 
-## Como Fazer uma Denuncia
+## Como Fazer uma Denúncia
 
 ### Presencialmente
-Va ao Conselho Tutelar da regiao onde a crianca mora. Leve as informacoes que tiver sobre a situacao.
+Va ao Conselho Tutelar da regiao onde a criança mora. Leve as informações que tiver sobre a situação.
 
 ### Por telefone
 Ligue para o Conselho Tutelar da regiao (veja os telefones abaixo) ou para o **Disque 100** (gratuito).
 
-### O que informar na denuncia
-- Nome e endereco da crianca (se souber).
-- O que esta acontecendo.
-- Quem e o responsavel pela violacao.
-- Endereco ou local onde a situacao ocorre.
+### O que informar na denúncia
+- Nome e endereço da criança (se souber).
+- O que está acontecendo.
+- Quem é o responsável pela violação.
+- Endereço ou local onde a situação ocorre.
 
-> **Voce nao precisa se identificar.** A denuncia pode ser completamente anonima.
+> **Você não precisa se identificar.** A denúncia pode ser completamente anônima.
 
 ---
 
-## Enderecos e Telefones dos Conselhos Tutelares no DF
+## Endereços e Telefones dos Conselhos Tutelares no DF
 
 O Distrito Federal possui **44 Conselhos Tutelares** distribuidos em 35 Regioes Administrativas.
 
 ### Ceilandia
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Ceilandia I | QNM 04, Conj. B, Lote 32, Ceilandia Norte | (61) 2244-1578/1579 -- Plantao: 99241-9885 |
 | Ceilandia II | St. M QNM 3 Conj. O, Lote 07 | (61) 2244-1574/1575 -- Plantao: 99242-8678 |
@@ -3693,57 +3693,57 @@ O Distrito Federal possui **44 Conselhos Tutelares** distribuidos em 35 Regioes 
 
 ### Taguatinga
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Taguatinga I | Setor B Sul C 12 AE S/N | (61) 2244-1522/1523 -- Plantao: 99240-9326 |
 | Taguatinga II | QNA 33 Lote 14 | (61) 2244-1520/1521 -- Plantao: 99240-8795 |
 
 ### Samambaia
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Samambaia I | QN 308, Conj. 05, Lotes 1/2, AE, Samambaia Sul | (61) 2244-1536/1537 -- Plantao: 99233-9759 |
 | Samambaia II | QS 409, AE no 2, Samambaia Norte | (61) 2244-1534/1535 -- Plantao: 99240-9523 |
 
 ### Planaltina
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Planaltina II | Av. WL 02, Setor Administrativo | (61) 2244-1544/1545 -- Plantao: 99243-1083 |
 
 ### Lista Completa de Todos os 44 Conselhos
 
-Para consultar **todos** os Conselhos Tutelares do DF com enderecos atualizados:
+Para consultar **todos** os Conselhos Tutelares do DF com endereços atualizados:
 
-- **Enderecos:** https://conselhotutelar.sejus.df.gov.br/enderecos/
+- **Endereços:** https://conselhotutelar.sejus.df.gov.br/endereços/
 - **Telefones:** https://conselhotutelar.sejus.df.gov.br/2346-2/
 - **Contatos:** https://conselhotutelar.sejus.df.gov.br/contatos/
 
 ---
 
-## Defensoria Publica do DF
+## Defensoria Pública do DF
 
-### O que e
+### O que é
 
-A Defensoria Publica e o orgao do Estado que oferece **assistencia juridica gratuita** para pessoas que nao podem pagar um advogado. E um direito garantido pela Constituicao.
+A Defensoria Pública é o órgão do Estado que oferece **assistência jurídica gratuita** para pessoas que não podem pagar um advogado. E um direito garantido pela Constituição.
 
 ### Quem Tem Direito
 
-A Defensoria atende pessoas que comprovem **insuficiencia de recursos**. Em regra, atende familias com renda de ate **3 salarios minimos**, mas cada caso e analisado individualmente.
+A Defensoria atende pessoas que comprovem **insuficiencia de recursos**. Em regra, atende famílias com renda de até **3 salários minimos**, mas cada caso e analisado individualmente.
 
-### O que a Defensoria Atende em Questoes de Familia e Crianca
+### O que a Defensoria Atende em Questoes de Família e Criança
 
-- Pensao alimenticia (pedir, cobrar, revisar).
+- Pensão alimentícia (pedir, cobrar, revisar).
 - Guarda e regulamentacao de visitas.
-- Divorcio e dissolucao de uniao estavel.
+- Divorcio e dissolucao de uniao estável.
 - Investigacao de paternidade.
-- Pedido de vaga em creche publica.
-- Alienacao parental.
-- Orientacao juridica geral em Direito de Familia.
+- Pedido de vaga em creche pública.
+- Alienação parental.
+- Orientação jurídica geral em Direito de Família.
 
-### NAJ Familia -- Nucleo de Familias de Brasilia
+### NAJ Família -- Nucleo de Famílias de Brasilia
 
-**Endereco:**
+**Endereço:**
 Forum Jose Julio Leal Fagundes
 Setor de Multiplas Atividades Sul (SMAS), Trecho 3, Lotes 4/6, Bloco 5 -- Terreo
 Brasilia/DF
@@ -3751,18 +3751,18 @@ Brasilia/DF
 **Contato:**
 - Telefone: **(61) 2196-4300** (Central de Relacionamento)
 - E-mail: najfamilia@defensoria.df.gov.br
-- Horario da central: **9h as 17h** (dias uteis)
-- Atendimento presencial: **13h as 18h** (dias uteis)
+- Horário da central: **9h as 17h** (dias úteis)
+- Atendimento presencial: **13h as 18h** (dias úteis)
 
 **Agendamento online:**
-- https://agenda.df.gov.br/organizacao.html?organizacao=37885304
+- https://agenda.df.gov.br/organização.html?organização=37885304
 - http://www.nahora.df.gov.br/agendamento-online/
 
 ### Nucleos Regionais da Defensoria
 
 A Defensoria tem nucleos em diversas regioes do DF para facilitar o acesso:
 
-- **Brasilia** -- Forum do SMAS (endereco acima)
+- **Brasilia** -- Forum do SMAS (endereço acima)
 - **Taguatinga** -- Na Hora de Taguatinga
 - **Ceilandia** -- Nucleo Regional de Ceilandia
 - **Samambaia** -- Nucleo Regional de Samambaia
@@ -3776,13 +3776,13 @@ A Defensoria tem nucleos em diversas regioes do DF para facilitar o acesso:
 
 Leve os seguintes documentos:
 
-1. **RG e CPF** (do requerente e da crianca/adolescente)
-2. **Certidao de nascimento** da crianca
+1. **RG e CPF** (do requerente e da criança/adolescente)
+2. **Certidao de nascimento** da criança
 3. **Certidao de casamento** (se houver)
-4. **Comprovante de residencia** atualizado
-5. **Comprovante de renda** (contracheque, carteira de trabalho ou declaracao de desemprego)
-6. **Informacoes sobre a outra parte** (nome completo, endereco, local de trabalho)
-7. **Documentos que comprovem a situacao** (laudos medicos, boletins escolares, fotografias, conforme o caso)
+4. **Comprovante de residência** atualizado
+5. **Comprovante de renda** (contracheque, carteira de trabalho ou declaração de desemprego)
+6. **Informações sobre a outra parte** (nome completo, endereço, local de trabalho)
+7. **Documentos que comprovem a situação** (laudos médicos, boletins escolares, fotografias, conforme o caso)
 
 ---
 
@@ -3790,88 +3790,88 @@ Leve os seguintes documentos:
 
 | Canal | Como acessar | Quando usar |
 |-------|--------------|-------------|
-| **Disque 100** | Ligue 100 (gratuito) | Denuncias de violacoes de direitos de criancas e adolescentes |
-| **Disque 180** | Ligue 180 (gratuito) | Violencia contra a mulher (inclusive gestantes) |
-| **CREAS** | Procure o CREAS da sua regiao | Atendimento social em situacoes de violencia |
-| **Ministerio Publico do DF** | (61) 3343-9500 | Promotoria da Infancia e Juventude |
-| **Policia Civil do DF** | 197 ou delegacia mais proxima | Crimes contra criancas e adolescentes |
-| **SAMU** | 192 | Emergencias de saude |
+| **Disque 100** | Ligue 100 (gratuito) | Denúncias de violações de direitos de crianças e adolescentes |
+| **Disque 180** | Ligue 180 (gratuito) | Violência contra a mulher (inclusive gestantes) |
+| **CREAS** | Procure o CREAS da sua regiao | Atendimento social em situações de violência |
+| **Ministerio Público do DF** | (61) 3343-9500 | Promotoria da Infância e Juventude |
+| **Polícia Civil do DF** | 197 ou delegacia mais proxima | Crimes contra crianças e adolescentes |
+| **SAMU** | 192 | Emergencias de saúde |
 | **Bombeiros** | 193 | Emergencias |
 
 ---
 
-## Resumo Pratico
+## Resumo Prático
 
-### Se uma crianca esta sofrendo violencia ou maus-tratos:
+### Se uma criança esta sofrendo violência ou maus-tratos:
 
-1. Ligue para o **Disque 100** (gratuito e anonimo).
+1. Ligue para o **Disque 100** (gratuito e anônimo).
 2. Procure o **Conselho Tutelar** da regiao.
-3. Se houver urgencia, ligue para a **Policia** (190).
-4. Registre **Boletim de Ocorrencia** na delegacia.
+3. Se houver urgência, ligue para a **Polícia** (190).
+4. Registre **Boletim de Ocorrência** na delegacia.
 
-### Se voce precisa de ajuda juridica gratuita:
+### Se você precisa de ajuda jurídica gratuita:
 
-1. Ligue para a **Defensoria Publica**: **(61) 2196-4300**.
+1. Ligue para a **Defensoria Pública**: **(61) 2196-4300**.
 2. Agende atendimento online ou va presencialmente.
 3. Leve todos os documentos listados acima.
 
-### Se a crianca esta sem vaga na escola ou creche:
+### Se a criança esta sem vaga na escola ou creche:
 
 1. Procure a regional de ensino.
-2. Se nao resolver, procure o **Conselho Tutelar**.
-3. Se ainda nao resolver, procure a **Defensoria Publica**.
+2. Se não resolver, procure o **Conselho Tutelar**.
+3. Se ainda não resolver, procure a **Defensoria Pública**.
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- **Lei 8.069/1990** -- Estatuto da Crianca e do Adolescente (ECA), artigos 131 a 140 -- Conselho Tutelar: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- **Conselho Tutelar do DF** -- Enderecos: https://conselhotutelar.sejus.df.gov.br/enderecos/
+- **Lei 8.069/1990** -- Estatuto da Criança e do Adolescente (ECA), artigos 131 a 140 -- Conselho Tutelar: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- **Conselho Tutelar do DF** -- Endereços: https://conselhotutelar.sejus.df.gov.br/endereços/
 - **Conselho Tutelar do DF** -- Telefones: https://conselhotutelar.sejus.df.gov.br/2346-2/
-- **Defensoria Publica do DF** -- Nucleos: https://www.defensoria.df.gov.br/?page_id=434
-- **Defensoria Publica do DF** -- NAJ Familia: https://www.defensoria.df.gov.br/nucleo/familias-de-brasilia/
-- **Agendamento Defensoria:** https://agenda.df.gov.br/organizacao.html?organizacao=37885304
+- **Defensoria Pública do DF** -- Nucleos: https://www.defensoria.df.gov.br/?page_id=434
+- **Defensoria Pública do DF** -- NAJ Família: https://www.defensoria.df.gov.br/nucleo/famílias-de-brasilia/
+- **Agendamento Defensoria:** https://agenda.df.gov.br/organização.html?organização=37885304
 `
         },
       ]
     },
     {
-      id: `04-direito-saude`,
-      title: `Direito a Saude — Manual Vicentino`,
+      id: `04-direito-saúde`,
+      title: `Direito a Saúde — Manual Vicentino`,
       icon: `heartbeat`,
-      readme: `# Direito a Saude — Manual Vicentino
+      readme: `# Direito a Saúde — Manual Vicentino
 
-Este capitulo reune orientacoes praticas sobre os direitos dos pacientes no Sistema Unico de Saude (SUS), com foco no Distrito Federal. A saude e um direito de todos e um dever do Estado, garantido pela Constituicao Federal (art. 196). Conhecer seus direitos e o primeiro passo para exigi-los.
+Este capítulo reune orientações práticas sobre os direitos dos pacientes no Sistema Único de Saúde (SUS), com foco no Distrito Federal. A saúde é um direito de todos é um dever do Estado, garantido pela Constituição Federal (art. 196). Conhecer seus direitos é o primeiro passo para exigi-los.
 
 ---
 
-## Conteudo desta secao
+## Conteudo desta seção
 
 | N. | Tema | Arquivo |
 |----|------|---------|
 | 1 | Direitos do paciente no SUS | [01-direitos-paciente-sus.md](01-direitos-paciente-sus.md) |
-| 2 | Atendimento de emergencia obrigatorio | [02-emergencia-obrigatoria.md](02-emergencia-obrigatoria.md) |
+| 2 | Atendimento de emergência obrigatório | [02-emergência-obrigatória.md](02-emergência-obrigatória.md) |
 | 3 | Vasectomia e laqueadura pelo SUS | [03-vasectomia-laqueadura.md](03-vasectomia-laqueadura.md) |
 | 4 | Cirurgia para remocao de miomas | [04-cirurgia-miomas.md](04-cirurgia-miomas.md) |
 | 5 | Medicamentos pelo SUS | [05-medicamentos.md](05-medicamentos.md) |
-| 6 | Saude mental no SUS | [06-saude-mental.md](06-saude-mental.md) |
+| 6 | Saúde mental no SUS | [06-saúde-mental.md](06-saúde-mental.md) |
 | 7 | Ouvidoria do SUS e como reclamar | [07-ouvidoria-sus.md](07-ouvidoria-sus.md) |
 
 ---
 
 ## Telefones mais importantes
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| SAMU (emergencia) | **192** |
-| Disque Saude / Ouvidoria SUS | **136** |
+| SAMU (emergência) | **192** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
 | CVV (apoio emocional / suicidio) | **188** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
 
 ---
 
-> **Lembre-se:** Voce tem direito a saude. Se esse direito for negado, existem caminhos para exigi-lo — e este manual mostra como.
+> **Lembre-se:** Você tem direito a saúde. Se esse direito for negado, existem caminhos para exigi-lo — e este manual mostra como.
 `,
       pages: [
         {
@@ -3879,168 +3879,168 @@ Este capitulo reune orientacoes praticas sobre os direitos dos pacientes no Sist
           title: `Direitos do Paciente no SUS`,
           content: `# Direitos do Paciente no SUS
 
-O Sistema Unico de Saude (SUS) e um direito de todo brasileiro. Nao importa se voce tem ou nao plano de saude, se tem emprego ou nao, se e rico ou pobre — o SUS e para todos. E quando voce usa o SUS, voce tem direitos que devem ser respeitados.
+O Sistema Único de Saúde (SUS) é um direito de todo brasileiro. Não importa se você tem ou não plano de saúde, se tem emprego ou não, se e rico ou pobre — o SUS e para todos. E quando você usa o SUS, você tem direitos que devem ser respeitados.
 
-A Portaria n. 1.820/2009 do Ministerio da Saude criou a **Carta dos Direitos dos Usuarios da Saude**, que lista sete direitos fundamentais de quem usa o SUS.
+A Portaria n. 1.820/2009 do Ministerio da Saúde criou a **Carta dos Direitos dos Usuarios da Saúde**, que lista sete direitos fundamentais de quem usa o SUS.
 
 ---
 
 ## Seus Direitos
 
-### 1. Acesso universal e igualitario
+### 1. Acesso universal é igualitario
 
-Todo cidadao brasileiro tem direito ao atendimento no SUS, sem discriminacao de qualquer tipo — seja por idade, raca, cor, religiao, orientacao sexual, condicao economica ou social, estado de saude ou deficiencia.
+Todo cidadão brasileiro tem direito ao atendimento no SUS, sem discriminacao de qualquer tipo — seja por idade, raca, cor, religiao, orientação sexual, condição econômica ou social, estado de saúde ou deficiência.
 
-> **Importante:** Ninguem pode negar atendimento no SUS por qualquer motivo de discriminacao. Se isso acontecer, voce tem o direito de reclamar.
+> **Importante:** Ninguém pode negar atendimento no SUS por qualquer motivo de discriminacao. Se isso acontecer, você tem o direito de reclamar.
 
 ### 2. Tratamento adequado e no tempo certo
 
-Voce tem direito a receber o tratamento correto para o seu problema de saude, sem demoras que nao tenham justificativa.
+Você tem direito a receber o tratamento correto para o seu problema de saúde, sem demoras que não tenham justificativa.
 
 ### 3. Atendimento humanizado e acolhedor
 
-Voce tem direito a ser tratado com respeito e dignidade. O ambiente deve ser limpo, confortavel e acessivel.
+Você tem direito a ser tratado com respeito e dignidade. O ambiente deve ser limpo, confortavel e acessível.
 
 ### 4. Direito a acompanhante
 
-Em muitas situacoes, voce tem direito a ter um acompanhante durante a internacao. A lei garante esse direito especialmente para os seguintes grupos:
+Em muitas situações, você tem direito a ter um acompanhante durante a internacao. A lei garante esse direito especialmente para os seguintes grupos:
 
 | Quem tem direito | Lei que garante |
 |------------------|-----------------|
-| Criancas e adolescentes (menores de 18 anos) | Estatuto da Crianca e do Adolescente (Lei 8.069/1990) |
+| Crianças e adolescentes (menores de 18 anos) | Estatuto da Criança e do Adolescente (Lei 8.069/1990) |
 | Idosos (60 anos ou mais) | Estatuto do Idoso (Lei 10.741/2003, art. 16) |
 | Gestantes (antes, durante e depois do parto) | Lei 11.108/2005 |
-| Pessoas com deficiencia | Estatuto da Pessoa com Deficiencia (Lei 13.146/2015) |
-| Pacientes com comprometimento fisico ou psiquico | Portaria 1.820/2009 (com justificativa medica) |
+| Pessoas com deficiência | Estatuto da Pessoa com Deficiência (Lei 13.146/2015) |
+| Pacientes com comprometimento físico ou psiquico | Portaria 1.820/2009 (com justificativa médica) |
 
-> **Dica:** Se o hospital negar acompanhante para alguem que tem esse direito por lei, mostre a legislacao e, se necessario, registre reclamacao na Ouvidoria do SUS (Disque 136).
+> **Dica:** Se o hospital negar acompanhante para alguém que tem esse direito por lei, mostre a legislação e, se necessário, registre reclamação na Ouvidoria do SUS (Disque 136).
 
-### 5. Acesso ao prontuario medico
+### 5. Acesso ao prontuario médico
 
-O prontuario e o registro de tudo o que aconteceu no seu atendimento — consultas, exames, diagnosticos, tratamentos. Voce tem direito a:
+O prontuario é o registro de tudo o que aconteceu no seu atendimento — consultas, exames, diagnosticos, tratamentos. Você tem direito a:
 
 - **Ver seu prontuario** a qualquer momento.
 - **Pedir uma copia** do prontuario quando quiser.
-- **Receber explicacoes claras** do medico sobre seu estado de saude, diagnostico, tratamento e prognostico.
+- **Receber explicacoes claras** do médico sobre seu estado de saúde, diagnóstico, tratamento e prognostico.
 
-> **Atencao:** Se o hospital ou clinica se recusar a fornecer copia do seu prontuario, isso pode ser considerado uma infracao ao Codigo de Defesa do Consumidor (art. 72 do CDC), com pena de 6 meses a 1 ano de detencao ou multa.
+> **Atenção:** Se o hospital ou clinica se recusar a fornecer copia do seu prontuario, isso pode ser considerado uma infracao ao Código de Defesa do Consumidor (art. 72 do CDC), com pena de 6 meses a 1 ano de detenção ou multa.
 
-### 6. Direito a informacao
+### 6. Direito a informação
 
-O medico e a equipe de saude devem explicar de forma clara:
+O médico é a equipe de saúde devem explicar de forma clara:
 
-- Qual e o seu problema de saude
-- Quais procedimentos serao realizados
+- Qual é o seu problema de saúde
+- Quais procedimentos serão realizados
 - Quais sao os riscos
 - Quais alternativas de tratamento existem
 
-Voce nao e obrigado a aceitar um tratamento sem entender o que esta acontecendo.
+Você não e obrigado a aceitar um tratamento sem entender o que está acontecendo.
 
-### 7. Participacao nas decisoes sobre seu tratamento
+### 7. Participação nas decisões sobre seu tratamento
 
-Voce tem direito de participar das decisoes sobre o seu tratamento e tambem de recusar um tratamento, desde que esteja informado das consequencias.
+Você tem direito de participar das decisões sobre o seu tratamento e também de recusar um tratamento, desde que esteja informado das consequências.
 
 ---
 
 ## O Que Fazer Se Seus Direitos Forem Desrespeitados
 
-1. **Registre o que aconteceu:** Anote o nome do hospital ou unidade de saude, data, hora e o que ocorreu.
+1. **Registre o que aconteceu:** Anote o nome do hospital ou unidade de saúde, data, hora é o que ocorreu.
 2. **Reclame na Ouvidoria do SUS:** Ligue para o **Disque 136** ou procure a Ouvidoria da SES-DF pelo telefone **162**.
-3. **Procure a Defensoria Publica:** Se o problema for grave (negativa de atendimento, falta de medicamento essencial), a Defensoria pode ajudar. Telefone: **(61) 3318-2000**.
+3. **Procure a Defensoria Pública:** Se o problema for grave (negativa de atendimento, falta de medicamento essencial), a Defensoria pode ajudar. Telefone: **(61) 3318-2000**.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Disque Saude / Ouvidoria SUS | **136** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
 | PROCON-DF | **151** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Portaria MS n. 1.820/2009 — Carta dos Direitos dos Usuarios da Saude
-- Lei 8.069/1990 — Estatuto da Crianca e do Adolescente
+- Constituição Federal de 1988, art. 196
+- Portaria MS n. 1.820/2009 — Carta dos Direitos dos Usuarios da Saúde
+- Lei 8.069/1990 — Estatuto da Criança e do Adolescente
 - Lei 10.741/2003 — Estatuto do Idoso
 - Lei 11.108/2005 — Direito a acompanhante no parto
-- Lei 13.146/2015 — Estatuto da Pessoa com Deficiencia
-- Lei 13.787/2018 — Prontuario eletronico
-- Resolucao CFM n. 2.217/2018 — Codigo de Etica Medica
-- Codigo de Defesa do Consumidor (Lei 8.078/1990), art. 72
+- Lei 13.146/2015 — Estatuto da Pessoa com Deficiência
+- Lei 13.787/2018 — Prontuario eletrônico
+- Resolução CFM n. 2.217/2018 — Código de Etica Médica
+- Código de Defesa do Consumidor (Lei 8.078/1990), art. 72
 `
         },
         {
-          id: `02-emergencia-obrigatoria`,
-          title: `Atendimento de Emergencia Obrigatorio`,
-          content: `# Atendimento de Emergencia Obrigatorio
+          id: `02-emergência-obrigatória`,
+          title: `Atendimento de Emergência Obrigatório`,
+          content: `# Atendimento de Emergência Obrigatório
 
-> **NENHUM HOSPITAL PODE RECUSAR ATENDIMENTO DE EMERGENCIA. Nem hospital publico, nem hospital particular. Isso vale para qualquer pessoa, com ou sem plano de saude, com ou sem dinheiro. Recusar atendimento de emergencia e CRIME.**
+> **NENHUM HOSPITAL PODE RECUSAR ATENDIMENTO DE EMERGENCIA. Nem hospital público, nem hospital particular. Isso vale para qualquer pessoa, com ou sem plano de saúde, com ou sem dinheiro. Recusar atendimento de emergência e CRIME.**
 
 ---
 
 ## O Que Diz a Lei
 
-### A saude e um direito fundamental
+### A saúde é um direito fundamental
 
-A Constituicao Federal (art. 196) diz que a saude e direito de todos e dever do Estado. A Lei 8.080/1990 (Lei do SUS) reafirma esse direito e determina que os servicos de saude devem atender a todos com igualdade.
+A Constituição Federal (art. 196) diz que a saúde é direito de todos é dever do Estado. A Lei 8.080/1990 (Lei do SUS) reafirma esse direito e determina que os serviços de saúde devem atender a todos com igualdade.
 
 ### Todo hospital deve atender emergencias
 
-A Resolucao do Conselho Federal de Medicina (CFM n. 2.077/2014) e clara:
+A Resolução do Conselho Federal de Medicina (CFM n. 2.077/2014) e clara:
 
-> **"Todo paciente que tiver acesso ao Servico Hospitalar de Urgencia e Emergencia devera, obrigatoriamente, ser atendido por um medico."**
+> **"Todo paciente que tiver acesso ao Serviço Hospitalar de Urgência e Emergência deverá, obrigatoriamente, ser atendido por um médico."**
 
-Isso vale para hospitais publicos E privados. O medico NAO pode recusar atendimento em caso de urgencia ou emergencia, especialmente quando nao houver outro medico ou servico disponivel.
+Isso vale para hospitais públicos E privados. O médico NAO pode recusar atendimento em caso de urgência ou emergência, especialmente quando não houver outro médico ou serviço disponível.
 
-### O Codigo de Etica Medica confirma
+### O Código de Etica Médica confirma
 
-O Codigo de Etica Medica (Resolucao CFM n. 2.217/2018) determina que, em caso de risco iminente de morte, o medico DEVE agir para preservar a vida do paciente.
+O Código de Etica Médica (Resolução CFM n. 2.217/2018) determina que, em caso de risco iminente de morte, o médico DEVE agir para preservar a vida do paciente.
 
 ---
 
-## Exigir Pagamento Antecipado em Emergencia e Crime
+## Exigir Pagamento Antecipado em Emergência e Crime
 
-### Lei 12.653/2012 — Art. 135-A do Codigo Penal
+### Lei 12.653/2012 — Art. 135-A do Código Penal
 
-> **E CRIME exigir cheque-caucao, nota promissoria ou qualquer garantia financeira como condicao para atendimento de emergencia.**
+> **E CRIME exigir cheque-caucao, nota promissoria ou qualquer garantia financeira como condição para atendimento de emergência.**
 
-Tambem e crime exigir o preenchimento de formularios administrativos antes do atendimento emergencial.
+Também é crime exigir o preenchimento de formularios administrativos antes do atendimento emergencial.
 
-**Pena:** detencao de 3 meses a 1 ano, alem de multa.
+**Pena:** detenção de 3 meses a 1 ano, além de multa.
 
-Se a pessoa sofrer lesao corporal grave por causa da demora: a pena pode ser aumentada ate o dobro.
+Se a pessoa sofrer lesao corporal grave por causa da demora: a pena pode ser aumentada até o dobro.
 
-Se a pessoa morrer por causa da demora: a pena pode ser aumentada ate o triplo.
+Se a pessoa morrer por causa da demora: a pena pode ser aumentada até o triplo.
 
-> **Voce sabia?** Esta lei foi criada depois que o ex-secretario Duvanier Paiva Ferreira morreu de infarto em 2012, em Brasilia, porque hospitais se recusaram a atende-lo sem garantia financeira. Depois dessa tragedia, o Congresso aprovou a lei para que isso nunca mais aconteca.
+> **Você sabia?** Esta lei foi criada depois que o ex-secretario Duvanier Paiva Ferreira morreu de infarto em 2012, em Brasilia, porque hospitais se recusaram a atende-lo sem garantia financeira. Depois dessa tragedia, o Congresso aprovou a lei para que isso nunca mais aconteca.
 
-### Aviso obrigatorio nos hospitais
+### Aviso obrigatório nos hospitais
 
 Todo hospital que atende emergencias deve ter um aviso em local visivel com os seguintes dizeres:
 
-*"E crime exigir cheque-caucao, nota promissoria ou qualquer garantia, bem como o preenchimento previo de formularios administrativos, como condicao para o atendimento medico-hospitalar emergencial."*
+*"E crime exigir cheque-caucao, nota promissoria ou qualquer garantia, bem como o preenchimento prévio de formularios administrativos, como condição para o atendimento médico-hospitalar emergencial."*
 
-Se voce nao vir esse aviso, isso ja e uma irregularidade que pode ser denunciada.
+Se você não vir esse aviso, isso já é uma irregularidade que pode ser denunciada.
 
 ---
 
-## Omissao de Socorro Tambem e Crime
+## Omissão de Socorro Também e Crime
 
-### Art. 135 do Codigo Penal
+### Art. 135 do Código Penal
 
-Deixar de prestar assistencia a pessoa que esta em perigo, quando e possivel ajudar sem risco pessoal, e crime de omissao de socorro.
+Deixar de prestar assistência a pessoa que está em perigo, quando é possível ajudar sem risco pessoal, é crime de omissão de socorro.
 
-**Pena:** detencao de 1 a 6 meses, ou multa.
+**Pena:** detenção de 1 a 6 meses, ou multa.
 
 - Se causar lesao corporal grave: pena aumentada pela metade.
 - Se causar morte: pena triplicada.
 
-> **Na pratica:** Se um medico ou hospital se recusar a atender alguem em emergencia, alem de responder pelo crime especifico da Lei 12.653/2012, pode responder tambem por omissao de socorro.
+> **Na prática:** Se um médico ou hospital se recusar a atender alguém em emergência, além de responder pelo crime específico da Lei 12.653/2012, pode responder também por omissão de socorro.
 
 ---
 
@@ -4048,102 +4048,102 @@ Deixar de prestar assistencia a pessoa que esta em perigo, quando e possivel aju
 
 ### Jurisprudencia do STJ e do TJDFT
 
-Os tribunais brasileiros ja decidiram repetidamente que:
+Os tribunais brasileiros já decidiram repetidamente que:
 
-- **Hospitais privados sao obrigados a prestar atendimento de emergencia**, mesmo sem plano de saude ou pagamento previo. O hospital pode cobrar depois, mas NAO pode condicionar o atendimento a pagamento.
-- **Quando a rede publica nao tem vagas** e o paciente precisa ir para um hospital particular, o Estado deve pagar as despesas.
-- **Hospitais e medicos que negam atendimento** podem ser condenados a pagar indenizacao por danos morais e materiais.
+- **Hospitais privados sao obrigados a prestar atendimento de emergência**, mesmo sem plano de saúde ou pagamento prévio. O hospital pode cobrar depois, mas NAO pode condicionar o atendimento a pagamento.
+- **Quando a rede pública não tem vagas** é o paciente precisa ir para um hospital particular, o Estado deve pagar as despesas.
+- **Hospitais e médicos que negam atendimento** podem ser condenados a pagar indenização por danos morais e materiais.
 
 ---
 
-## O Que Fazer Se Negarem Seu Atendimento de Emergencia
+## O Que Fazer Se Negarem Seu Atendimento de Emergência
 
-Este e um passo a passo para proteger sua vida e seus direitos:
+Este é um passo a passo para proteger sua vida e seus direitos:
 
 ### Passo 1 — Procure atendimento imediato
 
-Se o hospital recusar, ligue imediatamente para o **SAMU: 192**. O SAMU e obrigado a enviar socorro e encaminhar voce para atendimento.
+Se o hospital recusar, ligue imediatamente para o **SAMU: 192**. O SAMU e obrigado a enviar socorro e encaminhar você para atendimento.
 
 ### Passo 2 — Registre tudo
 
-Anote ou peca para alguem anotar:
+Anote ou peca para alguém anotar:
 
 - Nome do hospital
 - Data e hora
-- Nome da pessoa que negou o atendimento (se possivel)
+- Nome da pessoa que negou o atendimento (se possível)
 - Motivo alegado para a recusa
-- Se possivel, grave audio ou video (voce tem esse direito)
+- Se possível, grave audio ou video (você tem esse direito)
 
-### Passo 3 — Faca um Boletim de Ocorrencia
+### Passo 3 — Faca um Boletim de Ocorrência
 
-A recusa de atendimento de emergencia e crime. Va a uma delegacia de policia ou registre o BO online e relate o que aconteceu.
+A recusa de atendimento de emergência é crime. Va a uma delegacia de polícia ou registre o BO online e relate o que aconteceu.
 
 ### Passo 4 — Reclame na Ouvidoria do SUS
 
-Ligue para o **Disque Saude: 136** e registre a reclamacao. Anote o numero de protocolo.
+Ligue para o **Disque Saúde: 136** e registre a reclamação. Anote o número de protocolo.
 
-### Passo 5 — Procure a Defensoria Publica
+### Passo 5 — Procure a Defensoria Pública
 
-Se voce ou seu familiar sofreu danos (fisicos ou emocionais) por causa da recusa de atendimento, a Defensoria Publica pode entrar na Justica pedindo indenizacao por danos morais e materiais. O servico e gratuito.
+Se você ou seu familiar sofreu danos (fisicos ou emocionais) por causa da recusa de atendimento, a Defensoria Pública pode entrar na Justica pedindo indenização por danos morais e materiais. O serviço é gratuito.
 
-**Defensoria Publica do DF:** (61) 3318-2000
+**Defensoria Pública do DF:** (61) 3318-2000
 
 ### Passo 6 — Denuncie ao Conselho de Medicina
 
-Se um medico pessoalmente recusou o atendimento, voce pode denunciar ao **CRM-DF:** (61) 3445-5800.
+Se um médico pessoalmente recusou o atendimento, você pode denunciar ao **CRM-DF:** (61) 3445-5800.
 
 ---
 
-## Classificacao de Risco — Como Funciona a Triagem
+## Classificação de Risco — Como Funciona a Triagem
 
-Quando voce chega a uma emergencia, e feita uma triagem para avaliar a gravidade do seu caso. Isso NAO e uma recusa de atendimento — e uma forma de garantir que os casos mais graves sejam atendidos primeiro.
+Quando você chega a uma emergência, é feita uma triagem para avaliar a gravidade do seu caso. Isso NAO é uma recusa de atendimento — é uma forma de garantir que os casos mais graves sejam atendidos primeiro.
 
 A Portaria MS n. 2.048/2002 determina que:
 
-- A triagem deve ser feita por profissional de saude de nivel superior, com treinamento especifico.
-- O objetivo e classificar a urgencia do caso e colocar os pacientes em ordem de prioridade.
-- Mesmo se o seu caso nao for o mais urgente, voce TEM direito ao atendimento — apenas pode precisar esperar mais.
+- A triagem deve ser feita por profissional de saúde de nivel superior, com treinamento específico.
+- O objetivo e classificar a urgência do caso e colocar os pacientes em ordem de prioridade.
+- Mesmo se o seu caso não for o mais urgente, você TEM direito ao atendimento — apenas pode precisar esperar mais.
 
-> **Atencao:** Triagem NAO e recusa. Se voce chegar a emergencia e for classificado como caso de menor gravidade, voce ainda sera atendido. Mas se voce for mandado embora sem atendimento, isso e irregular e voce deve reclamar.
+> **Atenção:** Triagem NAO e recusa. Se você chegar a emergência e for classificado como caso de menor gravidade, você ainda será atendido. Mas se você for mandado embora sem atendimento, isso e irregular e você deve reclamar.
 
 ---
 
 ## Seus Direitos em Resumo
 
-| Situacao | Seu direito |
+| Situação | Seu direito |
 |----------|-------------|
-| Emergencia em hospital publico | Atendimento obrigatorio e gratuito |
-| Emergencia em hospital particular | Atendimento obrigatorio, sem exigencia de pagamento previo |
-| Hospital pede cheque-caucao ou garantia | Isso e CRIME (art. 135-A do Codigo Penal) |
-| Hospital manda preencher formularios antes de atender | Isso e CRIME (art. 135-A do Codigo Penal) |
-| Medico se recusa a atender emergencia | Pode responder por omissao de socorro (art. 135 CP) e infringir o Codigo de Etica Medica |
-| Rede publica sem vagas | O Estado deve custear atendimento na rede privada |
+| Emergência em hospital público | Atendimento obrigatório é gratuito |
+| Emergência em hospital particular | Atendimento obrigatório, sem exigência de pagamento prévio |
+| Hospital pede cheque-caucao ou garantia | Isso e CRIME (art. 135-A do Código Penal) |
+| Hospital manda preencher formularios antes de atender | Isso e CRIME (art. 135-A do Código Penal) |
+| Médico se recusa a atender emergência | Pode responder por omissão de socorro (art. 135 CP) e infringir o Código de Etica Médica |
+| Rede pública sem vagas | O Estado deve custear atendimento na rede privada |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| SAMU (emergencia) | **192** |
-| Disque Saude / Ouvidoria SUS | **136** |
+| SAMU (emergência) | **192** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
-| CRM-DF (denunciar medico) | **(61) 3445-5800** |
-| Policia (Boletim de Ocorrencia) | **190** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
+| CRM-DF (denunciar médico) | **(61) 3445-5800** |
+| Polícia (Boletim de Ocorrência) | **190** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Lei 8.080/1990 — Lei Organica da Saude (Lei do SUS)
+- Constituição Federal de 1988, art. 196
+- Lei 8.080/1990 — Lei Organica da Saúde (Lei do SUS)
 - Lei 12.653/2012 — Crime de condicionar atendimento emergencial a garantia
-- Codigo Penal, art. 135 — Omissao de socorro
-- Codigo Penal, art. 135-A — Condicionar atendimento emergencial
-- Portaria MS n. 2.048/2002 — Classificacao de Risco em Urgencia e Emergencia
-- Resolucao CFM n. 2.077/2014 — Atendimento obrigatorio em urgencia e emergencia
-- Resolucao CFM n. 2.217/2018 — Codigo de Etica Medica
+- Código Penal, art. 135 — Omissão de socorro
+- Código Penal, art. 135-A — Condicionar atendimento emergencial
+- Portaria MS n. 2.048/2002 — Classificação de Risco em Urgência e Emergência
+- Resolução CFM n. 2.077/2014 — Atendimento obrigatório em urgência e emergência
+- Resolução CFM n. 2.217/2018 — Código de Etica Médica
 - Jurisprudencia do Superior Tribunal de Justica (STJ) e do Tribunal de Justica do Distrito Federal e Territorios (TJDFT)
 `
         },
@@ -4152,9 +4152,9 @@ A Portaria MS n. 2.048/2002 determina que:
           title: `Vasectomia e Laqueadura pelo SUS`,
           content: `# Vasectomia e Laqueadura pelo SUS
 
-O SUS oferece gratuitamente a vasectomia (para homens) e a laqueadura (para mulheres) como metodos de planejamento familiar. A Lei 14.443/2022 trouxe mudancas importantes que facilitaram o acesso a esses procedimentos.
+O SUS oferece gratuitamente a vasectomia (para homens) é a laqueadura (para mulheres) como metodos de planejamento familiar. A Lei 14.443/2022 trouxe mudanças importantes que facilitaram o acesso a esses procedimentos.
 
-> **Mudanca importante:** Desde 2023, NAO e mais necessario o consentimento do conjuge para realizar vasectomia ou laqueadura. A decisao e individual.
+> **Mudanca importante:** Desde 2023, NAO e mais necessário o consentimento do cônjuge para realizar vasectomia ou laqueadura. A decisão e individual.
 
 ---
 
@@ -4162,45 +4162,45 @@ O SUS oferece gratuitamente a vasectomia (para homens) e a laqueadura (para mulh
 
 | Requisito | O que vale hoje |
 |-----------|-----------------|
-| Idade minima | **21 anos** com capacidade civil plena |
+| Idade mínima | **21 anos** com capacidade civil plena |
 | Alternativa a idade | Ter **2 filhos vivos** (a partir de 18 anos) |
-| Prazo de reflexao | **60 dias** entre a manifestacao por escrito e a cirurgia |
-| Consentimento do conjuge | **NAO e mais necessario** |
-| Manifestacao por escrito | **Obrigatoria** |
+| Prazo de reflexao | **60 dias** entre a manifestação por escrito é a cirurgia |
+| Consentimento do cônjuge | **NAO e mais necessário** |
+| Manifestacao por escrito | **Obrigatória** |
 
-> **Comparando com a lei antiga:** Antes era preciso ter 25 anos (agora sao 21) e o conjuge precisava concordar (agora nao precisa mais).
+> **Comparando com a lei antiga:** Antes era preciso ter 25 anos (agora sao 21) é o cônjuge precisava concordar (agora não precisa mais).
 
 ---
 
 ## Vasectomia
 
-### O que e
+### O que é
 
-A vasectomia e uma cirurgia simples que impede o homem de ter filhos. O procedimento interrompe o caminho dos espermatozoides. E feita com anestesia local, sem necessidade de internacao.
+A vasectomia é uma cirurgia simples que impede o homem de ter filhos. O procedimento interrompe o caminho dos espermatozoides. E feita com anestesia local, sem necessidade de internacao.
 
 ### O procedimento
 
-- Cirurgia rapida, feita no ambulatorio
+- Cirurgia rapida, feita no ambulatório
 - Anestesia local
 - Riscos minimos (pequeno sangramento ou infeccao)
-- Apos a cirurgia, e necessario fazer um exame chamado **espermograma** entre 60 e 90 dias depois
-- So e seguro parar de usar outros metodos anticoncepcionais depois que o espermograma confirmar que nao ha mais espermatozoides
+- Após a cirurgia, é necessário fazer um exame chamado **espermograma** entre 60 e 90 dias depois
+- Só e seguro parar de usar outros metodos anticoncepcionais depois que o espermograma confirmar que não ha mais espermatozoides
 
-> **Atencao:** A vasectomia NAO faz efeito imediato. Continue usando outros metodos ate o espermograma confirmar que o procedimento funcionou.
+> **Atenção:** A vasectomia NAO faz efeito imediato. Continue usando outros metodos até o espermograma confirmar que o procedimento funcionou.
 
 ### Passo a passo no Distrito Federal
 
 **Passo 1 — Va a UBS mais proxima**
-Procure a Unidade Basica de Saude (UBS) mais proxima de onde voce mora e diga que quer fazer a vasectomia.
+Procure a Unidade Básica de Saúde (UBS) mais proxima de onde você mora e diga que quer fazer a vasectomia.
 
-**Passo 2 — Orientacao com equipe de saude**
-Voce sera atendido por uma equipe de planejamento familiar (medicos, enfermeiros, psicologos ou assistentes sociais) que vai explicar os metodos disponiveis e tirar suas duvidas.
+**Passo 2 — Orientação com equipe de saúde**
+Você será atendido por uma equipe de planejamento familiar (médicos, enfermeiros, psicologos ou assistentes sociais) que vai explicar os metodos disponíveis e tirar suas duvidas.
 
 **Passo 3 — Assine o termo e aguarde 60 dias**
-Voce vai assinar um documento dizendo que quer fazer o procedimento. A cirurgia so pode ser marcada depois de 60 dias.
+Você vai assinar um documento dizendo que quer fazer o procedimento. A cirurgia só pode ser marcada depois de 60 dias.
 
 **Passo 4 — Encaminhamento para o hospital**
-Apos a triagem, voce sera encaminhado para um dos hospitais regionais.
+Após a triagem, você será encaminhado para um dos hospitais regionais.
 
 **Passo 5 — Cirurgia e acompanhamento**
 Realizacao da cirurgia e acompanhamento depois, incluindo o espermograma de controle.
@@ -4217,95 +4217,95 @@ Realizacao da cirurgia e acompanhamento depois, incluindo o espermograma de cont
 | Hospital Regional de Santa Maria | HRSM |
 | Hospital Regional de Taguatinga | HRT |
 
-**Dado de referencia:** Em 2024, a rede publica do DF realizou 612 vasectomias.
+**Dado de referência:** Em 2024, a rede pública do DF realizou 612 vasectomias.
 
 ---
 
 ## Laqueadura
 
-### O que e
+### O que é
 
-A laqueadura (ligadura de trompas) e uma cirurgia que impede a mulher de engravidar. O procedimento interrompe o caminho do ovulo ate o utero. E um metodo definitivo.
+A laqueadura (ligadura de trompas) é uma cirurgia que impede a mulher de engravidar. O procedimento interrompe o caminho do ovulo até o utero. E um metodo definitivo.
 
 ### Laqueadura durante o parto ou cesarea
 
-> **Novidade da Lei 14.443/2022:** A laqueadura PODE ser realizada durante a cesarea ou logo apos o parto. Assim, a mulher nao precisa passar por duas cirurgias separadas. Para isso, avise a equipe de saude da UBS durante o pre-natal, respeitando o prazo de 60 dias.
+> **Novidade da Lei 14.443/2022:** A laqueadura PODE ser realizada durante a cesarea ou logo após o parto. Assim, a mulher não precisa passar por duas cirurgias separadas. Para isso, avise a equipe de saúde da UBS durante o pre-natal, respeitando o prazo de 60 dias.
 
 ### Passo a passo no Distrito Federal
 
 **Passo 1 — Va a UBS mais proxima**
-Procure a Unidade Basica de Saude (UBS) mais proxima e diga que quer fazer a laqueadura.
+Procure a Unidade Básica de Saúde (UBS) mais proxima e diga que quer fazer a laqueadura.
 
 **Passo 2 — Programa de Planejamento Familiar**
-Voce sera encaminhada para o programa de planejamento familiar, onde vai receber orientacao sobre todos os metodos anticoncepcionais.
+Você será encaminhada para o programa de planejamento familiar, onde vai receber orientação sobre todos os metodos anticoncepcionais.
 
-**Passo 3 — Orientacao multidisciplinar e prazo de reflexao**
-A SES-DF oferece orientacao com medicos, psicologos, enfermeiros ou assistentes sociais. Voce deve assinar o documento de manifestacao de desejo com pelo menos 60 dias de antecedencia da cirurgia.
+**Passo 3 — Orientação multidisciplinar e prazo de reflexao**
+A SES-DF oferece orientação com médicos, psicologos, enfermeiros ou assistentes sociais. Você deve assinar o documento de manifestação de desejo com pelo menos 60 dias de antecedencia da cirurgia.
 
 **Passo 4 — Encaminhamento para cirurgia**
-Voce sera regulada e encaminhada para ambulatorio de cirurgia ginecologica, onde passara por consulta com ginecologista, avaliacao clinica e exames pre-operatorios.
+Você será regulada e encaminhada para ambulatório de cirurgia ginecologica, onde passara por consulta com ginecologista, avaliação clinica e exames pre-operatorios.
 
 **Opcoes de quando fazer a cirurgia:**
 
-- **Cirurgia eletiva agendada** — em um dos 11 hospitais do DF que realizam laqueaduras programadas (incluindo o Hospital Materno Infantil de Brasilia e o Hospital Universitario de Brasilia).
-- **Durante o parto ou pos-parto** — em qualquer uma das 12 maternidades da rede publica do DF (precisa ter sido solicitado durante o pre-natal).
+- **Cirurgia eletiva agendada** — em um dos 11 hospitais do DF que realizam laqueaduras programadas (incluindo o Hospital Materno Infantil de Brasilia é o Hospital Universitario de Brasilia).
+- **Durante o parto ou pos-parto** — em qualquer uma das 12 maternidades da rede pública do DF (precisa ter sido solicitado durante o pre-natal).
 
 ---
 
-## Documentos Necessarios (para vasectomia e laqueadura)
+## Documentos Necessários (para vasectomia e laqueadura)
 
 - Documento de identidade com foto
-- Cartao SUS (se nao tiver, pode fazer na propria UBS)
-- Comprovante de residencia
+- Cartao SUS (se não tiver, pode fazer na própria UBS)
+- Comprovante de residência
 
 ---
 
-## Aconselhamento Obrigatorio
+## Aconselhamento Obrigatório
 
-Entre a manifestacao da vontade e a cirurgia, tanto para vasectomia quanto para laqueadura, a pessoa passara por aconselhamento com equipe de saude, recebendo orientacoes sobre:
+Entre a manifestação da vontade é a cirurgia, tanto para vasectomia quanto para laqueadura, a pessoa passara por aconselhamento com equipe de saúde, recebendo orientações sobre:
 
 - Vantagens e desvantagens do procedimento
 - Riscos e eficacia
-- Metodos anticoncepcionais reversiveis disponiveis
-- O carater definitivo da esterilizacao (nao e facilmente reversivel)
+- Metodos anticoncepcionais reversiveis disponíveis
+- O carater definitivo da esterilizacao (não e facilmente reversivel)
 
-> **Importante:** O aconselhamento existe para garantir que voce tome uma decisao informada. Mas a decisao final e SUA — ninguem pode impedir o procedimento se voce cumprir os requisitos legais.
+> **Importante:** O aconselhamento existe para garantir que você tome uma decisão informada. Mas a decisão final e SUA — ninguém pode impedir o procedimento se você cumprir os requisitos legais.
 
 ---
 
 ## Perguntas Frequentes
 
 **Preciso da autorizacao do meu marido/esposa?**
-NAO. Desde a Lei 14.443/2022, a decisao e individual. Nao e necessario consentimento do conjuge.
+NAO. Desde a Lei 14.443/2022, a decisão e individual. Não é necessário consentimento do cônjuge.
 
-**Posso fazer se nao tenho filhos?**
+**Posso fazer se não tenho filhos?**
 SIM, desde que tenha 21 anos ou mais e capacidade civil plena.
 
 **A vasectomia/laqueadura e reversivel?**
-Sao considerados metodos definitivos. Embora existam cirurgias de reversao, o resultado nao e garantido. Por isso o aconselhamento antes e tao importante.
+Sao considerados metodos definitivos. Embora existam cirurgias de reversao, o resultado não é garantido. Por isso o aconselhamento antes e tao importante.
 
 **Quanto custa?**
 NADA. Pelo SUS, o procedimento e totalmente gratuito.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Disque Saude / Ouvidoria SUS | **136** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
 | Central de Regulacao SES-DF | **160** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - Lei 9.263/1996 — Lei do Planejamento Familiar
 - Lei 14.443/2022 — Novas regras para vasectomia e laqueadura (em vigor desde marco de 2023)
-- Constituicao Federal de 1988, art. 196 e art. 226, paragrafo 7.
-- Dados da Secretaria de Saude do Distrito Federal (SES-DF)
+- Constituição Federal de 1988, art. 196 e art. 226, paragrafo 7.
+- Dados da Secretaria de Saúde do Distrito Federal (SES-DF)
 `
         },
         {
@@ -4313,11 +4313,11 @@ NADA. Pelo SUS, o procedimento e totalmente gratuito.
           title: `Cirurgia para Remocao de Miomas pelo SUS`,
           content: `# Cirurgia para Remocao de Miomas pelo SUS
 
-Miomas uterinos sao tumores benignos (nao cancerosos) que crescem no utero. Sao muito comuns e podem causar dor, sangramento forte e outros problemas. O SUS oferece tratamento completo para miomas, incluindo cirurgias, de forma gratuita.
+Miomas uterinos sao tumores benignos (não cancerosos) que crescem no utero. Sao muito comuns e podem causar dor, sangramento forte e outros problemas. O SUS oferece tratamento completo para miomas, incluindo cirurgias, de forma gratuita.
 
 ---
 
-## Quando a Cirurgia e Necessaria
+## Quando a Cirurgia e Necessária
 
 A cirurgia para miomas e indicada quando o mioma causa:
 
@@ -4326,10 +4326,10 @@ A cirurgia para miomas e indicada quando o mioma causa:
 - Dor no abdomen ou na pelve
 - Dificuldade para engravidar
 - Aumento do volume da barriga
-- Pressao na bexiga (vontade de urinar com frequencia) ou no intestino
+- Pressao na bexiga (vontade de urinar com frequência) ou no intestino
 - Anemia por perda de sangue constante
 
-> **Importante:** Nem todo mioma precisa de cirurgia. O medico vai avaliar o tamanho, a quantidade e os sintomas para decidir o melhor tratamento.
+> **Importante:** Nem todo mioma precisa de cirurgia. O médico vai avaliar o tamanho, a quantidade e os sintomas para decidir o melhor tratamento.
 
 ---
 
@@ -4345,44 +4345,44 @@ A cirurgia para miomas e indicada quando o mioma causa:
 
 - Remocao do utero (total ou parcial)
 - Indicada quando os miomas sao muito grandes, em grande quantidade, ou quando ha outras indicacoes clinicas
-- Procedimento definitivo — a mulher nao podera mais engravidar
+- Procedimento definitivo — a mulher não poderá mais engravidar
 
 ---
 
 ## Passo a Passo para Conseguir a Cirurgia pelo SUS
 
-### Passo 1 — Va a UBS (Unidade Basica de Saude)
+### Passo 1 — Va a UBS (Unidade Básica de Saúde)
 
-Procure a UBS mais proxima de onde voce mora com a queixa ginecologica (sangramento, dor, etc.). O medico da atencao primaria vai fazer a avaliacao inicial e pedir exames, como a ultrassonografia pelvica ou transvaginal. Se o mioma for confirmado, voce sera encaminhada para um especialista.
+Procure a UBS mais proxima de onde você mora com a queixa ginecologica (sangramento, dor, etc.). O médico da atenção primaria vai fazer a avaliação inicial e pedir exames, como a ultrassonografia pelvica ou transvaginal. Se o mioma for confirmado, você será encaminhada para um especialista.
 
 ### Passo 2 — Regulacao pelo SISREG
 
-O encaminhamento e feito pelo sistema de regulacao chamado SISREG. O pedido e inserido no sistema e avaliado por medicos reguladores, que classificam a prioridade do seu caso com base em protocolos clinicos.
+O encaminhamento é feito pelo sistema de regulacao chamado SISREG. O pedido e inserido no sistema e avaliado por médicos reguladores, que classificam a prioridade do seu caso com base em protocolos clinicos.
 
 ### Passo 3 — Consulta com ginecologista especialista
 
-Quando a vaga for liberada, voce sera chamada para consulta com ginecologista na atencao secundaria ou hospitalar. O especialista vai avaliar seu caso, pedir exames complementares e decidir se o tratamento sera clinico (com medicamentos) ou cirurgico.
+Quando a vaga for liberada, você será chamada para consulta com ginecologista na atenção secundaria ou hospitalar. O especialista vai avaliar seu caso, pedir exames complementares e decidir se o tratamento será clinico (com medicamentos) ou cirurgico.
 
 ### Passo 4 — Pre-operatorio e agendamento
 
-Se a cirurgia for indicada, serao pedidos exames pre-operatorios e voce sera inserida na lista de cirurgias do sistema de regulacao.
+Se a cirurgia for indicada, serão pedidos exames pre-operatorios e você será inserida na lista de cirurgias do sistema de regulacao.
 
 ### Passo 5 — Cirurgia
 
-O procedimento sera realizado no hospital de referencia.
+O procedimento será realizado no hospital de referência.
 
 ---
 
 ## Tempo de Espera — Quanto Tempo Posso Esperar?
 
-Os prazos considerados razoaveis, conforme o Enunciado 93 da I Jornada de Direito da Saude do Conselho Nacional de Justica (CNJ), sao:
+Os prazos considerados razoaveis, conforme o Enunciado 93 da I Jornada de Direito da Saúde do Conselho Nacional de Justica (CNJ), sao:
 
-| Tipo de atendimento | Prazo maximo razoavel |
+| Tipo de atendimento | Prazo máximo razoavel |
 |---------------------|----------------------|
 | Consultas e exames | **100 dias** |
 | Cirurgias e tratamentos | **180 dias** |
 
-> **Se voce esta esperando alem desses prazos, voce tem direito de agir.** Veja abaixo como.
+> **Se você está esperando além desses prazos, você tem direito de agir.** Veja abaixo como.
 
 ---
 
@@ -4396,53 +4396,53 @@ Os prazos considerados razoaveis, conforme o Enunciado 93 da I Jornada de Direit
 
 ## Quando a Espera e Demais — Como Judicializar
 
-Se a espera for excessiva e estiver prejudicando sua saude, voce tem o direito de pedir ajuda da Justica.
+Se a espera for excessiva e estiver prejudicando sua saúde, você tem o direito de pedir ajuda da Justica.
 
-### O que a Justica ja decidiu
+### O que a Justica já decidiu
 
-O Tribunal de Justica do Distrito Federal (TJDFT) ja decidiu que:
+O Tribunal de Justica do Distrito Federal (TJDFT) já decidiu que:
 
-- O Estado tem o dever constitucional de fornecer assistencia medica, incluindo cirurgias essenciais.
-- O TJDFT ja condenou o Distrito Federal a pagar **R$ 20.000 em danos morais** a paciente que esperou quase 10 anos por cirurgia na rede publica.
-- Em casos de risco de piora clinica, o TJDFT determinou que o DF deve submeter o paciente a cirurgia **em ate 30 dias** na rede publica ou na rede privada as custas do Estado, sob pena de multa diaria.
+- O Estado tem o dever constitucional de fornecer assistência médica, incluindo cirurgias essenciais.
+- O TJDFT já condenou o Distrito Federal a pagar **R$ 20.000 em danos morais** a paciente que esperou quase 10 anos por cirurgia na rede pública.
+- Em casos de risco de piora clinica, o TJDFT determinou que o DF deve submeter o paciente a cirurgia **em até 30 dias** na rede pública ou na rede privada as custas do Estado, sob pena de multa diaria.
 
-> **A Justica entende que demoras injustificadas retiram a efetividade real do direito a saude.**
+> **A Justica entende que demoras injustificadas retiram a efetividade real do direito a saúde.**
 
 ### Passo a passo para judicializar
 
 **Passo 1 — Reuna seus documentos:**
-- Laudos medicos mostrando a necessidade da cirurgia
-- Comprovante de inscricao no SISREG
-- Protocolos de solicitacao na UBS
-- Qualquer comprovante de quanto tempo voce esta esperando
+- Laudos médicos mostrando a necessidade da cirurgia
+- Comprovante de inscrição no SISREG
+- Protocolos de solicitação na UBS
+- Qualquer comprovante de quanto tempo você está esperando
 
-**Passo 2 — Procure a Defensoria Publica do DF**
-O atendimento e gratuito para quem nao pode pagar advogado.
+**Passo 2 — Procure a Defensoria Pública do DF**
+O atendimento é gratuito para quem não pode pagar advogado.
 Telefone: **(61) 3318-2000**
 Site: www.defensoria.df.gov.br
 
-**Passo 3 — Acao judicial**
-O defensor pode ingressar com uma acao de obrigacao de fazer com pedido de tutela de urgencia (liminar), que e uma ordem para que o Estado providencie a cirurgia rapidamente.
+**Passo 3 — Ação judicial**
+O defensor pode ingressar com uma ação de obrigação de fazer com pedido de tutela de urgência (liminar), que é uma ordem para que o Estado providencie a cirurgia rapidamente.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
 | Central de Regulacao SES-DF | **160** |
-| Disque Saude / Ouvidoria SUS | **136** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
-| Ministerio Publico do DF | **(61) 3343-6000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
+| Ministerio Público do DF | **(61) 3343-6000** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Lei 8.080/1990 — Lei Organica da Saude (Lei do SUS)
-- Enunciado 93, I Jornada de Direito da Saude do CNJ — Prazos maximos de espera
+- Constituição Federal de 1988, art. 196
+- Lei 8.080/1990 — Lei Organica da Saúde (Lei do SUS)
+- Enunciado 93, I Jornada de Direito da Saúde do CNJ — Prazos maximos de espera
 - Jurisprudencia do Tribunal de Justica do Distrito Federal e Territorios (TJDFT)
 - Portaria MS n. 2.048/2002 — Sistema de Regulacao
 `
@@ -4452,13 +4452,13 @@ O defensor pode ingressar com uma acao de obrigacao de fazer com pedido de tutel
           title: `Medicamentos pelo SUS`,
           content: `# Medicamentos pelo SUS
 
-O SUS oferece medicamentos gratuitos para diversas doencas. Existem tres formas principais de conseguir remedios de graca: pela Farmacia Popular, pelas farmacias das UBS e pelo programa de medicamentos de alto custo. Este guia explica cada uma delas.
+O SUS oferece medicamentos gratuitos para diversas doencas. Existem três formas principais de conseguir remedios de graca: pela Farmacia Popular, pelas farmacias das UBS e pelo programa de medicamentos de alto custo. Este guia explica cada uma delas.
 
 ---
 
 ## 1. Farmacia Popular — Medicamentos 100% Gratuitos
 
-### O que e
+### O que é
 
 O Programa Farmacia Popular do Brasil disponibiliza medicamentos em farmacias privadas credenciadas (com a logomarca do programa).
 
@@ -4476,11 +4476,11 @@ O programa cobre medicamentos para **12 indicacoes**:
 | Osteoporose | Remedios para os ossos |
 | Colesterol alto | Remedios para colesterol |
 | Rinite | Remedios para alergia nasal |
-| Doenca de Parkinson | Remedios especificos |
+| Doenca de Parkinson | Remedios específicos |
 | Glaucoma | Colirios |
 | Diabetes com doencas do coracao | Tratamento combinado |
 | Anticoncepcao | Pilula e outros metodos |
-| Fraldas geriatricas | Para idosos ou pessoas com deficiencia com incontinencia |
+| Fraldas geriatricas | Para idosos ou pessoas com deficiência com incontinencia |
 | Absorventes higienicos | Programa Dignidade Menstrual (para beneficiarias) |
 
 ### Como conseguir
@@ -4488,158 +4488,158 @@ O programa cobre medicamentos para **12 indicacoes**:
 1. Encontre uma farmacia credenciada (com a logomarca do Farmacia Popular)
 2. Leve:
    - Documento de identidade com foto e CPF
-   - Receita medica valida (pode ser do SUS ou de medico particular)
+   - Receita médica válida (pode ser do SUS ou de médico particular)
 3. Retire o medicamento gratuitamente
 
-**Para fraldas geriatricas:** Ter 60 anos ou mais, ou ser pessoa com deficiencia, com documentacao medica.
+**Para fraldas geriatricas:** Ter 60 anos ou mais, ou ser pessoa com deficiência, com documentacao médica.
 
 **Para absorventes (Dignidade Menstrual):** Documento com CPF e autorizacao obtida pelo app ou site Meu SUS Digital (validade de 180 dias).
 
-> **Dica:** Para encontrar farmacias credenciadas perto de voce, consulte o site https://infoms.saude.gov.br ou ligue para o **Disque Saude 136**.
+> **Dica:** Para encontrar farmacias credenciadas perto de você, consulte o site https://infoms.saúde.gov.br ou ligue para o **Disque Saúde 136**.
 
 ---
 
 ## 2. RENAME — Medicamentos nas UBS
 
-### O que e
+### O que é
 
-A RENAME (Relacao Nacional de Medicamentos Essenciais) e a lista oficial de medicamentos que o SUS deve fornecer gratuitamente. Esses remedios sao distribuidos diretamente nas farmacias das UBS e unidades de saude.
+A RENAME (Relacao Nacional de Medicamentos Essenciais) é a lista oficial de medicamentos que o SUS deve fornecer gratuitamente. Esses remedios sao distribuidos diretamente nas farmacias das UBS e unidades de saúde.
 
 ### Como conseguir
 
-1. Consulte na UBS e pegue a receita medica
-2. Apresente a receita na farmacia da propria UBS
-3. Se o medicamento estiver na RENAME, sera fornecido gratuitamente na hora
+1. Consulte na UBS e pegue a receita médica
+2. Apresente a receita na farmacia da própria UBS
+3. Se o medicamento estiver na RENAME, será fornecido gratuitamente na hora
 
-> **Se o medicamento nao estiver disponivel na UBS**, pergunte quando vai chegar ou se ha outra unidade proxima com estoque. Voce tambem pode reclamar na Ouvidoria (Disque 136).
+> **Se o medicamento não estiver disponível na UBS**, pergunte quando vai chegar ou se ha outra unidade proxima com estoque. Você também pode reclamar na Ouvidoria (Disque 136).
 
 ---
 
 ## 3. Medicamentos de Alto Custo
 
-### O que e
+### O que é
 
-O Componente Especializado da Assistencia Farmaceutica (CEAF) e o programa que fornece medicamentos caros para doencas especificas. Sao remedios que custam caro e que a maioria das pessoas nao conseguiria comprar.
+O Componente Especializado da Assistência Farmaceutica (CEAF) é o programa que fornece medicamentos caros para doencas específicas. Sao remedios que custam caro é que a maioria das pessoas não conseguiria comprar.
 
 ### Passo a passo para solicitar no DF
 
-**Passo 1 — Peca ao medico a documentacao**
+**Passo 1 — Peca ao médico a documentacao**
 
-Solicite ao seu medico:
-- Laudo medico detalhado com o codigo da doenca (CID), historico e motivo para usar o medicamento
-- Receita medica com o nome completo do remedio, dose e tempo de uso
-- Formulario LME (Laudo para Solicitacao, Avaliacao e Autorizacao de Medicamentos do CEAF)
+Solicite ao seu médico:
+- Laudo médico detalhado com o código da doenca (CID), historico e motivo para usar o medicamento
+- Receita médica com o nome completo do remedio, dose e tempo de uso
+- Formulário LME (Laudo para Solicitação, Avaliação e Autorizacao de Medicamentos do CEAF)
 
 **Passo 2 — Agende o atendimento**
 
-Ligue para o **160, opcao 3** (Farmacia Ambulatorial Especializada) para agendar a data e o local para entregar os documentos.
+Ligue para o **160, opcao 3** (Farmacia Ambulatorial Especializada) para agendar a data é o local para entregar os documentos.
 
 **Passo 3 — Entregue os documentos na farmacia de alto custo**
 
-Documentos necessarios:
-- Formulario LME preenchido pelo medico
-- Declaracao Autorizadora
-- Declaracao de Residencia
-- Receita medica
+Documentos necessários:
+- Formulário LME preenchido pelo médico
+- Declaração Autorizadora
+- Declaração de Residência
+- Receita médica
 - Documento de identidade e Cartao SUS
 - Exames complementares recentes
 
-**Passo 4 — Aguarde a analise**
+**Passo 4 — Aguarde a análise**
 
-Um medico especialista da SES-DF vai analisar se voce atende aos criterios do protocolo clinico. Prazo de resposta: ate cerca de 30 dias.
+Um médico especialista da SES-DF vai analisar se você atende aos criterios do protocolo clinico. Prazo de resposta: até cerca de 30 dias.
 
 **Passo 5 — Retire o medicamento**
 
-Apos aprovacao, voce retira o medicamento na farmacia de alto custo. Depois da primeira retirada, pode ir mensalmente ou optar pelo recebimento em domicilio.
+Após aprovacao, você retira o medicamento na farmacia de alto custo. Depois da primeira retirada, pode ir mensalmente ou optar pelo recebimento em domicílio.
 
 ### Farmacias de Alto Custo no DF
 
-| Local | Endereco | Telefone |
+| Local | Endereço | Telefone |
 |-------|----------|----------|
 | Asa Sul | Estacao 102 Sul do Metro, subsolo - Ala Comercial | (61) 4042-6774 |
-| Ceilandia | EQNM 18/20, blocos A e C - Praca do Cidadao | (61) 4042-6773 |
+| Ceilandia | EQNM 18/20, blocos A e C - Praca do Cidadão | (61) 4042-6773 |
 | Gama | Praca 1, s/n. - Setor Leste | (61) 4042-6771 (WhatsApp) |
 
 ---
 
 ## Quando o SUS Nega o Medicamento — Como Judicializar
 
-Se voce precisa de um medicamento e o SUS negou o fornecimento, voce pode recorrer a Justica.
+Se você precisa de um medicamento é o SUS negou o fornecimento, você pode recorrer a Justica.
 
 ### Requisitos (definidos pelo STJ)
 
-Para ter direito ao medicamento pela Justica, e preciso comprovar:
+Para ter direito ao medicamento pela Justica, é preciso comprovar:
 
-1. **Laudo medico** mostrando que o medicamento e necessario e que os remedios fornecidos pelo SUS nao funcionam para o seu caso
-2. **Incapacidade financeira** de comprar o medicamento por conta propria
-3. **Registro na ANVISA** — o medicamento precisa estar registrado na agencia reguladora
+1. **Laudo médico** mostrando que o medicamento é necessário é que os remedios fornecidos pelo SUS não funcionam para o seu caso
+2. **Incapacidade financeira** de comprar o medicamento por conta própria
+3. **Registro na ANVISA** — o medicamento precisa estar registrado na agência reguladora
 
 ### Passo a passo para judicializar
 
 **Passo 1 — Tente a via administrativa primeiro**
-Faca a solicitacao formal na farmacia de alto custo e aguarde a resposta.
+Faca a solicitação formal na farmacia de alto custo e aguarde a resposta.
 
 **Passo 2 — Se for negado, guarde o comprovante**
-O documento de negativa e essencial para entrar na Justica.
+O documento de negativa é essencial para entrar na Justica.
 
 **Passo 3 — Reuna documentos**
-- Laudo medico detalhado
-- Receita medica
+- Laudo médico detalhado
+- Receita médica
 - Comprovante de negativa do SUS
-- Comprovante de renda (contracheques, declaracao de hipossuficiencia ou CTPS)
+- Comprovante de renda (contracheques, declaração de hipossuficiencia ou CTPS)
 
-**Passo 4 — Procure a Defensoria Publica do DF**
-O atendimento e gratuito para quem nao pode pagar advogado.
+**Passo 4 — Procure a Defensoria Pública do DF**
+O atendimento é gratuito para quem não pode pagar advogado.
 Telefone: **(61) 3318-2000**
 
-**Passo 5 — Acao judicial**
-O defensor vai entrar com uma acao pedindo que o Estado forneca o medicamento, podendo pedir liminar (ordem urgente) para fornecimento imediato.
+**Passo 5 — Ação judicial**
+O defensor vai entrar com uma ação pedindo que o Estado forneca o medicamento, podendo pedir liminar (ordem urgente) para fornecimento imediato.
 
-> **O TJDFT reconhece o dever do Estado de fornecer medicamentos nao padronizados pelo SUS quando comprovada a necessidade clinica e a incapacidade financeira do paciente, mesmo que o medicamento nao conste na lista oficial (RENAME).**
+> **O TJDFT reconhece o dever do Estado de fornecer medicamentos não padronizados pelo SUS quando comprovada a necessidade clinica é a incapacidade financeira do paciente, mesmo que o medicamento não conste na lista oficial (RENAME).**
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
 | Farmacia de Alto Custo (agendamento) | **160, opcao 3** |
-| Disque Saude / Ouvidoria SUS | **136** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Lei 8.080/1990 — Lei Organica da Saude (Lei do SUS)
-- Programa Farmacia Popular do Brasil — Ministerio da Saude
+- Constituição Federal de 1988, art. 196
+- Lei 8.080/1990 — Lei Organica da Saúde (Lei do SUS)
+- Programa Farmacia Popular do Brasil — Ministerio da Saúde
 - RENAME — Relacao Nacional de Medicamentos Essenciais
-- Componente Especializado da Assistencia Farmaceutica (CEAF)
+- Componente Especializado da Assistência Farmaceutica (CEAF)
 - Jurisprudencia do Superior Tribunal de Justica (STJ) e do Tribunal de Justica do Distrito Federal e Territorios (TJDFT)
 `
         },
         {
-          id: `06-saude-mental`,
-          title: `Saude Mental no SUS`,
-          content: `# Saude Mental no SUS
+          id: `06-saúde-mental`,
+          title: `Saúde Mental no SUS`,
+          content: `# Saúde Mental no SUS
 
-Problemas de saude mental sao tao serios quanto qualquer outro problema de saude. Depressao, ansiedade, crises de panico, dependencia de alcool ou drogas, pensamentos suicidas — tudo isso tem tratamento, e o SUS oferece atendimento gratuito e especializado.
+Problemas de saúde mental sao tao serios quanto qualquer outro problema de saúde. Depressao, ansiedade, crises de panico, dependência de álcool ou drogas, pensamentos suicidas — tudo isso tem tratamento, é o SUS oferece atendimento gratuito e especializado.
 
-> **Voce nao esta sozinho. Se voce ou alguem proximo esta passando por uma crise, procure ajuda. O primeiro passo e o mais importante.**
+> **Você não esta sozinho. Se você ou alguém proximo esta passando por uma crise, procure ajuda. O primeiro passo é o mais importante.**
 
 ---
 
-## CAPS — Centro de Atencao Psicossocial
+## CAPS — Centro de Atenção Psicossocial
 
 ### O que sao
 
-Os CAPS sao servicos especializados em saude mental que funcionam na comunidade. Sao lugares onde voce pode receber tratamento com psicologos, psiquiatras, assistentes sociais e outros profissionais.
+Os CAPS sao serviços especializados em saúde mental que funcionam na comunidade. Sao lugares onde você pode receber tratamento com psicologos, psiquiatras, assistentes sociais e outros profissionais.
 
-> **Voce NAO precisa de encaminhamento para ir ao CAPS. E so chegar. O atendimento e de porta aberta.**
+> **Você NAO precisa de encaminhamento para ir ao CAPS. E só chegar. O atendimento e de porta aberta.**
 
-O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as regioes de saude.
+O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as regioes de saúde.
 
 ### Tipos de CAPS
 
@@ -4648,8 +4648,8 @@ O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as r
 | CAPS I | Adultos com transtornos mentais graves (em cidades menores) |
 | CAPS II | Adultos com transtornos mentais graves |
 | CAPS III | Funciona 24 horas, com acolhimento noturno |
-| CAPS AD | Pessoas com problemas com alcool e outras drogas |
-| CAPS i | Criancas e adolescentes com transtornos mentais |
+| CAPS AD | Pessoas com problemas com álcool e outras drogas |
+| CAPS i | Crianças e adolescentes com transtornos mentais |
 
 ### O que o CAPS atende
 
@@ -4657,38 +4657,38 @@ O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as r
 - Ansiedade e crises de panico
 - Transtorno bipolar
 - Esquizofrenia e outros transtornos psicoticos
-- Dependencia de alcool e drogas
+- Dependência de álcool e drogas
 - Pensamentos suicidas
 - Outros transtornos psiquiatricos
 
 ### Como acessar
 
-1. Va diretamente ao CAPS da sua regiao — nao precisa de agendamento nem de encaminhamento
-2. O acolhimento e feito por equipe multidisciplinar no mesmo dia
+1. Va diretamente ao CAPS da sua regiao — não precisa de agendamento nem de encaminhamento
+2. O acolhimento é feito por equipe multidisciplinar no mesmo dia
 
-### Documentos necessarios
+### Documentos necessários
 
-- Documento de identificacao valido
+- Documento de identificação válido
 - Cartao Nacional do SUS
 - Cartao SES-DF (pode ser feito no primeiro atendimento)
 
 ### Como encontrar o CAPS mais proximo
 
-- Acesse: https://info.saude.df.gov.br/busca-saude-caps/
-- Ou ligue para o **Disque Saude 136**
+- Acesse: https://info.saúde.df.gov.br/busca-saúde-caps/
+- Ou ligue para o **Disque Saúde 136**
 
 ### Exemplos de CAPS no DF
 
-| CAPS | Endereco | Telefone |
+| CAPS | Endereço | Telefone |
 |------|----------|----------|
 | CAPS i Asa Norte | SMHN, Quadra 03, Conj. 1, Bl. A (Ed. COMPP) | (61) 2017-1900 (ramais 7710/7711) |
 | CAPS III Samambaia | Quadra 302, Conj. 5, Lote 1, Centro Urbano | (61) 98549-5372 |
 
 ---
 
-## Emergencia Psiquiatrica — Onde Ir em Caso de Crise
+## Emergência Psiquiatrica — Onde Ir em Caso de Crise
 
-Algumas situacoes de saude mental sao emergencias e precisam de atendimento imediato:
+Algumas situações de saúde mental sao emergencias e precisam de atendimento imediato:
 
 - Tentativa de suicidio ou risco iminente
 - Agitacao intensa com risco para si ou para outros
@@ -4696,20 +4696,20 @@ Algumas situacoes de saude mental sao emergencias e precisam de atendimento imed
 - Intoxicacao aguda ou abstinencia de substancias
 - Incapacidade grave de cuidar de si mesmo
 
-### Onde buscar atendimento de emergencia
+### Onde buscar atendimento de emergência
 
 **1. Hospital Sao Vicente de Paulo (HSVP)**
-- Referencia principal para emergencias psiquiatricas de adultos no DF
+- Referência principal para emergencias psiquiatricas de adultos no DF
 - Funciona 24 horas, 7 dias por semana
 - 83 leitos psiquiatricos
 
 **2. Qualquer UPA ou pronto-socorro de hospital regional**
-- Todos realizam avaliacao clinica inicial de saude mental
+- Todos realizam avaliação clinica inicial de saúde mental
 
-**3. SAMU 192 — Nucleo de Saude Mental**
-- Ligue **192** quando nao for possivel levar a pessoa ao hospital
+**3. SAMU 192 — Nucleo de Saúde Mental**
+- Ligue **192** quando não for possível levar a pessoa ao hospital
 - Equipe especializada: assistente social, psicologo, enfermeiro e condutor socorrista
-- Atende crises de ansiedade, crises psicoticas, tentativas de suicidio, vitimas de violencia e dependencia quimica grave
+- Atende crises de ansiedade, crises psicoticas, tentativas de suicidio, vítimas de violência e dependência quimica grave
 
 ### Hospitais com leitos psiquiatricos no DF
 
@@ -4718,51 +4718,51 @@ Algumas situacoes de saude mental sao emergencias e precisam de atendimento imed
 | Hospital Sao Vicente de Paulo (HSVP) | 83 |
 | Hospital de Base (HB) | 36 |
 | Hospital Universitario de Brasilia (HUB) | 1 |
-| Hospital da Crianca de Brasilia (HCB) | 2 |
+| Hospital da Criança de Brasilia (HCB) | 2 |
 | **Total no DF** | **122 leitos** |
 
 ---
 
 ## CVV — Centro de Valorizacao da Vida
 
-Se voce esta passando por um momento dificil, com pensamentos suicidas ou precisando de apoio emocional, ligue para o CVV:
+Se você está passando por um momento difícil, com pensamentos suicidas ou precisando de apoio emocional, ligue para o CVV:
 
-> **Ligue 188 — 24 horas por dia, todos os dias. A ligacao e gratuita.**
+> **Ligue 188 — 24 horas por dia, todos os dias. A ligacao é gratuita.**
 
-Voce tambem pode conversar pelo chat: **www.cvv.org.br**
+Você também pode conversar pelo chat: **www.cvv.org.br**
 
-O CVV e formado por voluntarios treinados que estao prontos para ouvir voce, sem julgamento. A conversa e totalmente sigilosa.
-
----
-
-## Seus Direitos em Saude Mental
-
-- Voce tem direito a tratamento gratuito pelo SUS
-- Voce tem direito a ser tratado com dignidade e respeito
-- Voce tem direito a recusar tratamento (exceto em situacoes de emergencia com risco de vida)
-- Voce tem direito a acompanhante durante internacao psiquiatrica
-- Internacao involuntaria (sem consentimento do paciente) so pode ser feita com laudo medico e deve ser comunicada ao Ministerio Publico em ate 72 horas
+O CVV e formado por voluntários treinados que estão prontos para ouvir você, sem julgamento. A conversa e totalmente sigilosa.
 
 ---
 
-## Telefones Uteis
+## Seus Direitos em Saúde Mental
 
-| Servico | Telefone |
+- Você tem direito a tratamento gratuito pelo SUS
+- Você tem direito a ser tratado com dignidade e respeito
+- Você tem direito a recusar tratamento (exceto em situações de emergência com risco de vida)
+- Você tem direito a acompanhante durante internacao psiquiatrica
+- Internacao involuntaria (sem consentimento do paciente) só pode ser feita com laudo médico e deve ser comunicada ao Ministerio Público em até 72 horas
+
+---
+
+## Telefones Úteis
+
+| Serviço | Telefone |
 |---------|----------|
 | CVV (apoio emocional / suicidio) | **188** |
-| SAMU (emergencia) | **192** |
-| Disque Saude / Ouvidoria SUS | **136** |
+| SAMU (emergência) | **192** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Lei 10.216/2001 — Lei da Reforma Psiquiatrica (protecao e direitos das pessoas com transtornos mentais)
-- Portaria MS n. 3.088/2011 — Rede de Atencao Psicossocial (RAPS)
-- Secretaria de Saude do Distrito Federal (SES-DF) — informacoes sobre CAPS e leitos psiquiatricos
+- Constituição Federal de 1988, art. 196
+- Lei 10.216/2001 — Lei da Reforma Psiquiatrica (proteção é direitos das pessoas com transtornos mentais)
+- Portaria MS n. 3.088/2011 — Rede de Atenção Psicossocial (RAPS)
+- Secretaria de Saúde do Distrito Federal (SES-DF) — informações sobre CAPS e leitos psiquiatricos
 - Centro de Valorizacao da Vida (CVV) — www.cvv.org.br
 `
         },
@@ -4771,97 +4771,97 @@ O CVV e formado por voluntarios treinados que estao prontos para ouvir voce, sem
           title: `Ouvidoria do SUS e Como Reclamar`,
           content: `# Ouvidoria do SUS e Como Reclamar
 
-Se voce teve um problema no atendimento de saude — demora excessiva, mau atendimento, falta de medicamento, recusa de atendimento — voce tem o direito de reclamar. Existem varios canais oficiais para isso, e todos sao gratuitos.
+Se você teve um problema no atendimento de saúde — demora excessiva, mau atendimento, falta de medicamento, recusa de atendimento — você tem o direito de reclamar. Existem varios canais oficiais para isso, e todos sao gratuitos.
 
-> **Reclamar e um direito seu. A ouvidoria existe para ouvir voce e cobrar solucoes.**
+> **Reclamar é um direito seu. A ouvidoria existe para ouvir você e cobrar solucoes.**
 
 ---
 
-## Canais de Reclamacao — Ambito Federal
+## Canais de Reclamação — Ambito Federal
 
-### Disque Saude 136
+### Disque Saúde 136
 
-O Disque 136 e a Ouvidoria-Geral do SUS, que atende todo o Brasil.
+O Disque 136 é a Ouvidoria-Geral do SUS, que atende todo o Brasil.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **136** |
-| Horario com atendente | Segunda a sexta, 8h as 20h; sabado, 8h as 18h |
-| Horario automatico | 24 horas |
-| O que aceita | Reclamacoes, denuncias, elogios, sugestoes e pedidos de informacao |
-| Anonimato | Garantido — voce pode reclamar sem se identificar |
+| Horário com atendente | Segunda a sexta, 8h as 20h; sabado, 8h as 18h |
+| Horário automatico | 24 horas |
+| O que aceita | Reclamações, denúncias, elogios, sugestoes e pedidos de informação |
+| Anonimato | Garantido — você pode reclamar sem se identificar |
 
 ### Meu SUS Digital
 
-Voce tambem pode registrar reclamacoes pela internet:
-- Site: https://meususdigital.saude.gov.br
-- Disponivel tambem como aplicativo para celular
+Você também pode registrar reclamações pela internet:
+- Site: https://meususdigital.saúde.gov.br
+- Disponível também como aplicativo para celular
 
 ---
 
-## Canais de Reclamacao — Distrito Federal
+## Canais de Reclamação — Distrito Federal
 
 ### Ouvidoria da SES-DF
 
-A Ouvidoria da Secretaria de Saude do DF e o canal para reclamacoes sobre hospitais, UBS, UPAs e outros servicos de saude do Distrito Federal.
+A Ouvidoria da Secretaria de Saúde do DF é o canal para reclamações sobre hospitais, UBS, UPAs e outros serviços de saúde do Distrito Federal.
 
-| Canal | Informacao |
+| Canal | Informação |
 |-------|-----------|
 | Telefone | **162** (ligacao gratuita de fixo e celular) |
-| Horario | Segunda a sexta, 9h-12h e 14h-17h |
+| Horário | Segunda a sexta, 9h-12h e 14h-17h |
 | Online | Sistema **Participa-DF** (registro e acompanhamento por protocolo) |
 | Presencial | Ed. PO 700, 1. andar — SRTVN 701 Norte, Via W5, Lote D — CEP 70.719-040 |
 
 ---
 
-## Passo a Passo — Como Registrar uma Reclamacao
+## Passo a Passo — Como Registrar uma Reclamação
 
 ### Passo 1 — Escolha o canal
 
-Voce pode reclamar por telefone (136 ou 162), pela internet (Participa-DF ou Meu SUS Digital) ou presencialmente na Ouvidoria.
+Você pode reclamar por telefone (136 ou 162), pela internet (Participa-DF ou Meu SUS Digital) ou presencialmente na Ouvidoria.
 
 ### Passo 2 — Descreva o problema
 
-Informe com o maximo de detalhes possiveis:
-- Qual unidade de saude (nome do hospital, UBS ou UPA)
+Informe com o máximo de detalhes possiveis:
+- Qual unidade de saúde (nome do hospital, UBS ou UPA)
 - Data e hora do ocorrido
 - O que aconteceu
 - Nomes dos profissionais envolvidos (se souber)
 
-> **Dica:** Quanto mais detalhes voce fornecer, mais facil sera resolver o problema. Se tiver fotos, gravacoes ou documentos, guarde-os.
+> **Dica:** Quanto mais detalhes você fornecer, mais fácil será resolver o problema. Se tiver fotos, gravacoes ou documentos, guarde-os.
 
-### Passo 3 — Anote o numero de protocolo
+### Passo 3 — Anote o número de protocolo
 
-Ao registrar a reclamacao, voce recebera um numero de protocolo. **Guarde esse numero.** Ele e a prova de que voce reclamou e permite acompanhar a resposta.
+Ao registrar a reclamação, você receberá um número de protocolo. **Guarde esse número.** Ele é a prova de que você reclamou e permite acompanhar a resposta.
 
 ### Passo 4 — Acompanhe
 
-Voce pode acompanhar o andamento da sua reclamacao:
+Você pode acompanhar o andamento da sua reclamação:
 - Pelo sistema Participa-DF (online)
 - Ligando para o 162
 
 ---
 
-## Quando a Ouvidoria Nao Resolve — Outros Caminhos
+## Quando a Ouvidoria Não Resolve — Outros Caminhos
 
-Se voce reclamou na ouvidoria e o problema nao foi resolvido, existem outros orgaos que podem ajudar:
+Se você reclamou na ouvidoria é o problema não foi resolvido, existem outros órgãos que podem ajudar:
 
-### Defensoria Publica do DF
+### Defensoria Pública do DF
 
-Para quando o direito a saude e negado e voce precisa de ajuda juridica gratuita.
+Para quando o direito a saúde e negado e você precisa de ajuda jurídica gratuita.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **(61) 3318-2000** |
 | Site | www.defensoria.df.gov.br |
 | Quando procurar | Negativa de atendimento, demora excessiva, necessidade de entrar na Justica |
-| Custo | Gratuito para quem nao pode pagar advogado |
+| Custo | Gratuito para quem não pode pagar advogado |
 
-### Ministerio Publico do DF (MPDFT)
+### Ministerio Público do DF (MPDFT)
 
-Para denuncias de irregularidades graves nos servicos de saude.
+Para denúncias de irregularidades graves nos serviços de saúde.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **(61) 3343-6000** |
 | Site | www.mpdft.mp.br |
@@ -4869,121 +4869,121 @@ Para denuncias de irregularidades graves nos servicos de saude.
 
 ### PROCON-DF
 
-Para problemas com planos de saude ou hospitais privados.
+Para problemas com planos de saúde ou hospitais privados.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **151** |
-| Quando procurar | Negativa de cobertura do plano, cobranca indevida, problemas com hospitais particulares |
+| Quando procurar | Negativa de cobertura do plano, cobrança indevida, problemas com hospitais particulares |
 
 ### CRM-DF (Conselho Regional de Medicina)
 
-Para denuncias sobre a conduta de um medico especifico.
+Para denúncias sobre a conduta de um médico específico.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **(61) 3445-5800** |
-| Quando procurar | Medico que recusou atendimento, erro medico, conduta inadequada |
+| Quando procurar | Médico que recusou atendimento, erro médico, conduta inadequada |
 
-### ANS (Agencia Nacional de Saude Suplementar)
+### ANS (Agência Nacional de Saúde Suplementar)
 
-Para problemas com planos de saude em nivel nacional.
+Para problemas com planos de saúde em nivel nacional.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **0800 701 9656** |
 | Quando procurar | Reajuste abusivo, negativa de cobertura, descredenciamento indevido |
 
 ---
 
-## Resumo — Qual Canal Usar para Cada Situacao
+## Resumo — Qual Canal Usar para Cada Situação
 
-| Situacao | Canal indicado |
+| Situação | Canal indicado |
 |----------|---------------|
 | Problema em hospital ou UBS do SUS no DF | Ouvidoria SES-DF (162) ou Disque 136 |
 | Problema no SUS em qualquer estado | Disque 136 |
-| Precisa entrar na Justica por direito a saude | Defensoria Publica (61) 3318-2000 |
-| Irregularidade grave no SUS | Ministerio Publico (61) 3343-6000 |
-| Problema com plano de saude | PROCON (151) ou ANS (0800 701 9656) |
-| Denuncia contra medico | CRM-DF (61) 3445-5800 |
+| Precisa entrar na Justica por direito a saúde | Defensoria Pública (61) 3318-2000 |
+| Irregularidade grave no SUS | Ministerio Público (61) 3343-6000 |
+| Problema com plano de saúde | PROCON (151) ou ANS (0800 701 9656) |
+| Denúncia contra médico | CRM-DF (61) 3445-5800 |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Disque Saude / Ouvidoria SUS | **136** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
-| Ministerio Publico do DF | **(61) 3343-6000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
+| Ministerio Público do DF | **(61) 3343-6000** |
 | PROCON-DF | **151** |
 | CRM-DF | **(61) 3445-5800** |
-| ANS (planos de saude) | **0800 701 9656** |
+| ANS (planos de saúde) | **0800 701 9656** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Lei 8.080/1990 — Lei Organica da Saude (Lei do SUS)
-- Lei 13.460/2017 — Lei de Defesa do Usuario de Servicos Publicos
-- Ouvidoria-Geral do SUS (OuvSUS) — Ministerio da Saude
-- Secretaria de Saude do Distrito Federal (SES-DF) — Ouvidoria
+- Constituição Federal de 1988, art. 196
+- Lei 8.080/1990 — Lei Organica da Saúde (Lei do SUS)
+- Lei 13.460/2017 — Lei de Defesa do Usuario de Serviços Publicos
+- Ouvidoria-Geral do SUS (OuvSUS) — Ministerio da Saúde
+- Secretaria de Saúde do Distrito Federal (SES-DF) — Ouvidoria
 - Sistema Participa-DF
 `
         },
       ]
     },
     {
-      id: `05-previdencia-social`,
-      title: `Previdencia Social — Guia de Beneficios do INSS`,
+      id: `05-previdência-social`,
+      title: `Previdência Social — Guia de Benefícios do INSS`,
       icon: `file-invoice-dollar`,
-      readme: `# Previdencia Social — Guia de Beneficios do INSS
+      readme: `# Previdência Social — Guia de Benefícios do INSS
 
-Este capitulo do Manual Vicentino reune informacoes praticas sobre os principais beneficios do INSS (Instituto Nacional do Seguro Social) voltados para pessoas em situacao de vulnerabilidade social. O objetivo e ajudar voce a entender seus direitos, saber o que fazer em cada situacao e onde buscar ajuda.
+Este capítulo do Manual Vicentino reune informações práticas sobre os principais benefícios do INSS (Instituto Nacional do Seguro Social) voltados para pessoas em situação de vulnerabilidade social. O objetivo e ajudar você a entender seus direitos, saber o que fazer em cada situação e onde buscar ajuda.
 
 ---
 
-## O que voce vai encontrar nesta secao
+## O que você vai encontrar nesta seção
 
 | Arquivo | Assunto | Resumo |
 |---------|---------|--------|
-| [01 - Aposentadorias](01-aposentadorias.md) | Aposentadorias | Por idade, por incapacidade permanente, para pessoa com deficiencia e para trabalhador rural |
-| [02 - Auxilio por Incapacidade](02-auxilio-incapacidade.md) | Auxilio-doenca e auxilio-acidente | Beneficios para quem esta doente ou sofreu acidente, periodo de graca |
-| [03 - Pensao por Morte](03-pensao-por-morte.md) | Pensao por morte | Quem sao os dependentes, quanto se recebe, como pedir |
-| [04 - Salario-Maternidade](04-salario-maternidade.md) | Salario-maternidade | Direitos da gestante, inclusive desempregada, como solicitar |
-| [05 - Acesso ao INSS](05-acesso-inss.md) | Como acessar o INSS | Meu INSS, telefone 135, agencias no DF, DPU e Justica Federal |
+| [01 - Aposentadorias](01-aposentadorias.md) | Aposentadorias | Por idade, por incapacidade permanente, para pessoa com deficiência e para trabalhador rural |
+| [02 - Auxílio por Incapacidade](02-auxílio-incapacidade.md) | Auxílio-doenca e auxílio-acidente | Benefícios para quem está doente ou sofreu acidente, período de graca |
+| [03 - Pensão por Morte](03-pensão-por-morte.md) | Pensão por morte | Quem sao os dependentes, quanto se recebe, como pedir |
+| [04 - Salário-Maternidade](04-salário-maternidade.md) | Salário-maternidade | Direitos da gestante, inclusive desempregada, como solicitar |
+| [05 - Acesso ao INSS](05-acesso-inss.md) | Como acessar o INSS | Meu INSS, telefone 135, agências no DF, DPU e Justica Federal |
 
 ---
 
-## Guia Rapido: o que fazer em cada situacao
+## Guia Rapido: o que fazer em cada situação
 
-### Voce esta doente e nao consegue trabalhar?
-1. Peca o auxilio por incapacidade temporaria pelo Meu INSS ou ligue para o 135
+### Você está doente e não consegue trabalhar?
+1. Peca o auxílio por incapacidade temporária pelo Meu INSS ou ligue para o 135
 2. Se a doenca for permanente, peca aposentadoria por incapacidade permanente
-3. Se nunca contribuiu para o INSS, verifique se tem direito ao BPC/LOAS (veja o capitulo sobre Assistencia Social)
+3. Se nunca contribuiu para o INSS, verifique se tem direito ao BPC/LOAS (veja o capítulo sobre Assistência Social)
 
 ### Um familiar faleceu?
-1. Peca a pensao por morte em ate 90 dias apos o obito (180 dias se o dependente for menor de 16 anos)
-2. Reuna certidao de obito, documentos pessoais e prova de que era dependente
+1. Peca a pensão por morte em até 90 dias após o óbito (180 dias se o dependente for menor de 16 anos)
+2. Reuna certidao de óbito, documentos pessoais e prova de que era dependente
 
-### Voce esta gravida e desempregada?
-1. Verifique se ainda esta no periodo de graca (protecao do INSS apos demissao)
-2. Se estiver, peca o salario-maternidade pelo Meu INSS
+### Você está gravida e desempregada?
+1. Verifique se ainda está no período de graca (proteção do INSS após demissão)
+2. Se estiver, peca o salário-maternidade pelo Meu INSS
 
 ### O INSS negou seu pedido?
-1. Voce pode recorrer pelo Meu INSS em ate 30 dias
-2. Se a negativa for mantida, procure a Defensoria Publica da Uniao (DPU)
-3. Voce tambem pode entrar com acao no Juizado Especial Federal sem precisar de advogado (para causas de ate 20 salarios minimos)
+1. Você pode recorrer pelo Meu INSS em até 30 dias
+2. Se a negativa for mantida, procure a Defensoria Pública da Uniao (DPU)
+3. Você também pode entrar com ação no Juizado Especial Federal sem precisar de advogado (para causas de até 20 salários minimos)
 
-> **Importante:** A maioria dos servicos do INSS pode ser feita pela internet (site meu.inss.gov.br) ou pelo telefone 135, sem precisar ir a uma agencia. Veja todos os detalhes no arquivo [05 - Acesso ao INSS](05-acesso-inss.md).
+> **Importante:** A maioria dos serviços do INSS pode ser feita pela internet (site meu.inss.gov.br) ou pelo telefone 135, sem precisar ir a uma agência. Veja todos os detalhes no arquivo [05 - Acesso ao INSS](05-acesso-inss.md).
 
 ---
 
 ## Sobre este material
 
-Este conteudo foi elaborado com base na legislacao vigente em marco de 2026, incluindo a Constituicao Federal, a Lei 8.213/1991, a EC 103/2019 (Reforma da Previdencia) e demais normas aplicaveis. As informacoes sao de carater orientativo e nao substituem a consulta a um profissional do Direito.
+Este conteudo foi elaborado com base na legislação vigente em marco de 2026, incluindo a Constituição Federal, a Lei 8.213/1991, a EC 103/2019 (Reforma da Previdência) e demais normas aplicaveis. As informações sao de carater orientativo e não substituem a consulta a um profissional do Direito.
 `,
       pages: [
         {
@@ -4991,40 +4991,40 @@ Este conteudo foi elaborado com base na legislacao vigente em marco de 2026, inc
           title: `Aposentadorias do INSS`,
           content: `# Aposentadorias do INSS
 
-Este arquivo explica os principais tipos de aposentadoria do INSS, com foco nas situacoes mais comuns entre pessoas em vulnerabilidade social. Voce vai encontrar os requisitos, o valor do beneficio e o passo a passo para solicitar cada um.
+Este arquivo explica os principais tipos de aposentadoria do INSS, com foco nas situações mais comuns entre pessoas em vulnerabilidade social. Você vai encontrar os requisitos, o valor do benefício é o passo a passo para solicitar cada um.
 
 ---
 
 ## 1. Aposentadoria por Idade (Urbana)
 
-A aposentadoria por idade e o tipo mais comum. E para quem trabalhou e contribuiu para o INSS durante um tempo minimo e atingiu a idade exigida.
+A aposentadoria por idade é o tipo mais comum. E para quem trabalhou e contribuiu para o INSS durante um tempo mínimo e atingiu a idade exigida.
 
 ### Quem tem direito
 
 | Requisito | Homem | Mulher |
 |-----------|-------|--------|
-| Idade minima | 65 anos | 62 anos |
-| Tempo minimo de contribuicao | 20 anos | 15 anos |
-| Carencia (numero minimo de contribuicoes) | 180 meses | 180 meses |
+| Idade mínima | 65 anos | 62 anos |
+| Tempo mínimo de contribuição | 20 anos | 15 anos |
+| Carência (número mínimo de contribuições) | 180 meses | 180 meses |
 
-> **Atencao:** Homens que ja contribuiam para o INSS antes de 13/11/2019 (data da Reforma da Previdencia) precisam de apenas 15 anos de contribuicao, e nao 20. A regra de 20 anos vale apenas para quem comecou a contribuir depois dessa data.
+> **Atenção:** Homens que já contribuiam para o INSS antes de 13/11/2019 (data da Reforma da Previdência) precisam de apenas 15 anos de contribuição, e não 20. A regra de 20 anos vale apenas para quem comecou a contribuir depois dessa data.
 
 ### Regras de transicao (para 2026)
 
-Se voce ja contribuia antes da Reforma, pode se aposentar por regras de transicao:
+Se você já contribuia antes da Reforma, pode se aposentar por regras de transicao:
 
-- **Mulheres:** 59 anos e 6 meses de idade + 30 anos de contribuicao
-- **Homens:** 64 anos e 6 meses de idade + 35 anos de contribuicao
-- **Sistema de pontos:** 93 pontos para mulheres e 103 pontos para homens (soma da idade com o tempo de contribuicao)
+- **Mulheres:** 59 anos e 6 meses de idade + 30 anos de contribuição
+- **Homens:** 64 anos e 6 meses de idade + 35 anos de contribuição
+- **Sistema de pontos:** 93 pontos para mulheres e 103 pontos para homens (soma da idade com o tempo de contribuição)
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-O calculo e feito assim:
-1. O INSS faz a media de todos os seus salarios de contribuicao desde julho de 1994
-2. Voce recebe **60% dessa media** como ponto de partida
-3. Para cada ano que passar de 20 anos de contribuicao (homens) ou 15 anos (mulheres), voce ganha **mais 2%**
+O calculo é feito assim:
+1. O INSS faz a media de todos os seus salários de contribuição desde julho de 1994
+2. Você recebe **60% dessa media** como ponto de partida
+3. Para cada ano que passar de 20 anos de contribuição (homens) ou 15 anos (mulheres), você ganha **mais 2%**
 
-**Exemplo pratico:** Uma mulher com 20 anos de contribuicao recebe 60% + (5 anos extras x 2%) = 70% da media dos salarios.
+**Exemplo prático:** Uma mulher com 20 anos de contribuição recebe 60% + (5 anos extras x 2%) = 70% da media dos salários.
 
 ### Passo a Passo para Solicitar
 
@@ -5033,35 +5033,35 @@ O calculo e feito assim:
 3. Clique em **"Novo Pedido"**
 4. Selecione **"Aposentadoria por Idade Urbana"**
 5. Anexe seus documentos (veja lista abaixo)
-6. Acompanhe o andamento pelo proprio aplicativo
+6. Acompanhe o andamento pelo próprio aplicativo
 
-### Documentos Necessarios
+### Documentos Necessários
 
 - RG e CPF
-- Carteira de Trabalho (CTPS) — todas que voce tiver
-- Comprovantes de contribuicao ao INSS (carnes, guias de recolhimento)
-- Comprovante de endereco atualizado
+- Carteira de Trabalho (CTPS) — todas que você tiver
+- Comprovantes de contribuição ao INSS (carnes, guias de recolhimento)
+- Comprovante de endereço atualizado
 
-> **Dica:** O pedido e feito 100% pela internet. Voce nao precisa ir a uma agencia do INSS.
+> **Dica:** O pedido é feito 100% pela internet. Você não precisa ir a uma agência do INSS.
 
 ---
 
 ## 2. Aposentadoria por Incapacidade Permanente (antiga "Aposentadoria por Invalidez")
 
-Esse beneficio e para quem ficou permanentemente incapaz de trabalhar em qualquer atividade, por doenca ou acidente.
+Esse benefício e para quem ficou permanentemente incapaz de trabalhar em qualquer atividade, por doenca ou acidente.
 
 ### Quem tem direito
 
-- Estar contribuindo para o INSS ou dentro do periodo de graca (veja o arquivo [02 - Auxilio por Incapacidade](02-auxilio-incapacidade.md))
-- Ter pelo menos **12 contribuicoes mensais** (carencia)
-- Ter a incapacidade total e permanente comprovada por pericia medica do INSS
-- Nao ser possivel a reabilitacao para outra atividade
+- Estar contribuindo para o INSS ou dentro do período de graca (veja o arquivo [02 - Auxílio por Incapacidade](02-auxílio-incapacidade.md))
+- Ter pelo menos **12 contribuições mensais** (carência)
+- Ter a incapacidade total e permanente comprovada por pericia médica do INSS
+- Não ser possível a reabilitação para outra atividade
 
-### Quando NAO se exige carencia
+### Quando NAO se exige carência
 
-A carencia de 12 meses **nao e exigida** quando a incapacidade for causada por:
+A carência de 12 meses **não é exigida** quando a incapacidade for causada por:
 
-- Acidente de qualquer tipo (trabalho, transito, domestico)
+- Acidente de qualquer tipo (trabalho, trânsito, doméstico)
 - Doenca profissional ou do trabalho
 - **Doencas graves**, entre elas:
   - Cancer (neoplasia maligna)
@@ -5075,61 +5075,61 @@ A carencia de 12 meses **nao e exigida** quando a incapacidade for causada por:
   - Esclerose multipla
   - Hepatopatia grave
   - Nefropatia grave (doenca renal grave)
-  - Alienacao mental
+  - Alienação mental
 
 > **Base legal:** Art. 26, inciso II, da Lei 8.213/91.
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-- **Regra geral:** 60% da media dos salarios + 2% por ano acima de 20 anos (homens) ou 15 anos (mulheres) de contribuicao
+- **Regra geral:** 60% da media dos salários + 2% por ano acima de 20 anos (homens) ou 15 anos (mulheres) de contribuição
 - **Se for acidente de trabalho ou doenca ocupacional:** 100% da media
 
 ### Adicional de 25% para quem precisa de cuidador
 
-Se voce precisa de ajuda permanente de outra pessoa para atividades basicas do dia a dia (comer, tomar banho, se vestir), pode pedir um **acrescimo de 25%** sobre o valor da aposentadoria. Esse acrescimo pode ultrapassar o teto do INSS.
+Se você precisa de ajuda permanente de outra pessoa para atividades básicas do dia a dia (comer, tomar banho, se vestir), pode pedir um **acrescimo de 25%** sobre o valor da aposentadoria. Esse acrescimo pode ultrapassar o teto do INSS.
 
 > **Base legal:** Art. 45 da Lei 8.213/91.
 
-### Revisao periodica
+### Revisão periódica
 
-O INSS pode chamar voce para nova pericia a cada 2 anos. Porem, voce fica dispensado da revisao se:
+O INSS pode chamar você para nova pericia a cada 2 anos. Porém, você fica dispensado da revisão se:
 - Tiver mais de 60 anos de idade, **ou**
-- Tiver mais de 55 anos e ja receber o beneficio ha pelo menos 15 anos
+- Tiver mais de 55 anos e já receber o benefício ha pelo menos 15 anos
 
 ### Passo a Passo para Solicitar
 
 1. Acesse o **Meu INSS** (site ou aplicativo)
 2. Clique em **"Novo Pedido"**
 3. Selecione **"Aposentadoria por Incapacidade Permanente"**
-4. Anexe laudos medicos detalhados, exames e relatorios
-5. Agende a pericia medica (pelo Meu INSS ou ligando para o 135)
+4. Anexe laudos médicos detalhados, exames e relatorios
+5. Agende a pericia médica (pelo Meu INSS ou ligando para o 135)
 
-### Documentos Necessarios
+### Documentos Necessários
 
 - RG e CPF
-- Laudos medicos com diagnostico (CID), descricao da doenca e assinatura/carimbo do medico
+- Laudos médicos com diagnóstico (CID), descricao da doenca e assinatura/carimbo do médico
 - Exames complementares (raio-x, ressonancia, exames de sangue, etc.)
 - Relatorios de tratamento e internacao
 - Carteira de Trabalho (CTPS)
-- Comprovantes de contribuicao ao INSS
+- Comprovantes de contribuição ao INSS
 
 ---
 
-## 3. Aposentadoria da Pessoa com Deficiencia
+## 3. Aposentadoria da Pessoa com Deficiência
 
-A lei garante condicoes especiais de aposentadoria para pessoas com deficiencia que contribuem para o INSS. As regras sao mais favoraveis do que as da aposentadoria comum.
+A lei garante condições especiais de aposentadoria para pessoas com deficiência que contribuem para o INSS. As regras sao mais favoraveis do que as da aposentadoria comum.
 
 > **Base legal:** Lei Complementar 142/2013.
 
-### Quem e considerado pessoa com deficiencia (para o INSS)
+### Quem é considerado pessoa com deficiência (para o INSS)
 
-Quem tem impedimentos de longo prazo de natureza fisica, mental, intelectual ou sensorial que, em contato com barreiras do dia a dia, dificultam sua participacao plena na sociedade.
+Quem tem impedimentos de longo prazo de natureza física, mental, intelectual ou sensorial que, em contato com barreiras do dia a dia, dificultam sua participação plena na sociedade.
 
-### Modalidade 1: Aposentadoria por Tempo de Contribuicao
+### Modalidade 1: Aposentadoria por Tempo de Contribuição
 
-Nao exige idade minima, apenas tempo de contribuicao conforme o grau de deficiencia:
+Não exige idade mínima, apenas tempo de contribuição conforme o grau de deficiência:
 
-| Grau de deficiencia | Homem | Mulher |
+| Grau de deficiência | Homem | Mulher |
 |---------------------|-------|--------|
 | Grave | 25 anos | 20 anos |
 | Moderada | 29 anos | 24 anos |
@@ -5139,51 +5139,51 @@ Nao exige idade minima, apenas tempo de contribuicao conforme o grau de deficien
 
 | Requisito | Homem | Mulher |
 |-----------|-------|--------|
-| Idade minima | 60 anos | 55 anos |
-| Tempo minimo de contribuicao como PcD | 15 anos | 15 anos |
+| Idade mínima | 60 anos | 55 anos |
+| Tempo mínimo de contribuição como PcD | 15 anos | 15 anos |
 
-### Como e avaliado o grau de deficiencia
+### Como e avaliado o grau de deficiência
 
-A avaliacao e feita por uma equipe do INSS composta por:
-- **Perito medico** (avaliacao medica)
-- **Assistente social** (avaliacao social)
+A avaliação é feita por uma equipe do INSS composta por:
+- **Perito médico** (avaliação médica)
+- **Assistente social** (avaliação social)
 
-Eles usam o Indice de Funcionalidade Brasileiro (IFBrA) para classificar o grau como leve, moderado ou grave. Se o grau de deficiencia mudou ao longo da vida, os periodos com diferentes graus sao proporcionalmente considerados.
+Eles usam o Índice de Funcionalidade Brasileiro (IFBrA) para classificar o grau como leve, moderado ou grave. Se o grau de deficiência mudou ao longo da vida, os períodos com diferentes graus sao proporcionalmente considerados.
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-O valor e **100% da media dos salarios de contribuicao**. Isso e uma grande vantagem, pois na aposentadoria comum o calculo comeca em apenas 60%.
+O valor e **100% da media dos salários de contribuição**. Isso é uma grande vantagem, pois na aposentadoria comum o calculo comeca em apenas 60%.
 
 ### Diferenca entre aposentadoria da PcD e BPC/LOAS
 
 | Caracteristica | Aposentadoria da PcD | BPC/LOAS |
 |----------------|---------------------|----------|
-| Precisa ter contribuido ao INSS? | Sim | Nao |
-| Exige comprovacao de baixa renda? | Nao | Sim |
-| Valor | Proporcional as contribuicoes | 1 salario minimo |
-| Tem 13o salario? | Sim | Nao |
+| Precisa ter contribuido ao INSS? | Sim | Não |
+| Exige comprovação de baixa renda? | Não | Sim |
+| Valor | Proporcional as contribuições | 1 salário mínimo |
+| Tem 13o salário? | Sim | Não |
 
 ### Passo a Passo para Solicitar
 
-1. Acesse o **Meu INSS** > **"Novo Pedido"** > **"Aposentadoria da Pessoa com Deficiencia"**
-2. Sera agendada uma avaliacao biopsicossocial (medica + social)
+1. Acesse o **Meu INSS** > **"Novo Pedido"** > **"Aposentadoria da Pessoa com Deficiência"**
+2. Será agendada uma avaliação biopsicossocial (médica + social)
 3. Compareça na data agendada com seus documentos
 
-### Documentos Necessarios
+### Documentos Necessários
 
 - RG e CPF
-- Laudos medicos com descricao da deficiencia
+- Laudos médicos com descricao da deficiência
 - Exames e relatorios de tratamento
-- Historico funcional (descricao de como a deficiencia afeta o dia a dia)
-- Carteira de Trabalho (CTPS) e comprovantes de contribuicao
+- Historico funcional (descricao de como a deficiência afeta o dia a dia)
+- Carteira de Trabalho (CTPS) e comprovantes de contribuição
 
 ---
 
 ## 4. Aposentadoria do Segurado Especial (Trabalhador Rural)
 
-Esse beneficio e para quem trabalha no campo em regime de economia familiar, sem empregados permanentes. As regras sao mais favoraveis: a idade e menor e o valor e de 1 salario minimo.
+Esse benefício e para quem trabalha no campo em regime de economia familiar, sem empregados permanentes. As regras sao mais favoraveis: a idade e menor é o valor e de 1 salário mínimo.
 
-> **Importante:** A Reforma da Previdencia (EC 103/2019) NAO mudou as regras da aposentadoria rural. As idades continuam as mesmas.
+> **Importante:** A Reforma da Previdência (EC 103/2019) NAO mudou as regras da aposentadoria rural. As idades continuam as mesmas.
 
 ### Quem e segurado especial
 
@@ -5191,123 +5191,123 @@ Esse beneficio e para quem trabalha no campo em regime de economia familiar, sem
 - Pescador artesanal
 - Indigena que exerca atividade rural
 - Garimpeiro (em regime de economia familiar)
-- Conjuge, companheiro(a) e filhos maiores de 16 anos que trabalhem com a familia
+- Cônjuge, companheiro(a) e filhos maiores de 16 anos que trabalhem com a família
 
 ### Quem tem direito
 
 | Requisito | Homem | Mulher |
 |-----------|-------|--------|
-| Idade minima | 60 anos | 55 anos |
+| Idade mínima | 60 anos | 55 anos |
 | Tempo de atividade rural | 15 anos (180 meses) | 15 anos (180 meses) |
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-O valor e de **1 salario minimo** (R$ 1.518,00 em 2025).
+O valor e de **1 salário mínimo** (R$ 1.518,00 em 2025).
 
-Se o segurado especial tambem fez contribuicoes facultativas ao INSS, o calculo segue a regra geral e o valor pode ser maior.
+Se o segurado especial também fez contribuições facultativas ao INSS, o calculo segue a regra geral é o valor pode ser maior.
 
 ### Como comprovar a atividade rural
 
-Voce precisara apresentar documentos que provem o trabalho no campo. Veja exemplos:
+Você precisara apresentar documentos que provem o trabalho no campo. Veja exemplos:
 
-- Autodeclaracao Rural Eletronica (disponivel no Meu INSS para periodos anteriores a 01/01/2023)
+- Autodeclaracao Rural Eletrônica (disponível no Meu INSS para períodos anteriores a 01/01/2023)
 - Contratos de parceria, arrendamento ou meacao
 - Notas fiscais e blocos de produtor rural
-- Declaracoes de cooperativas e orgaos publicos
-- Comprovantes de venda de producao
+- Declaracoes de cooperativas e órgãos públicos
+- Comprovantes de venda de produção
 - Cadastro no INCRA
-- Declaracao do Sindicato de Trabalhadores Rurais homologada pelo INSS
+- Declaração do Sindicato de Trabalhadores Rurais homologada pelo INSS
 
-> **Atencao:** A prova apenas por testemunhas NAO e aceita. E preciso ter documentos que comprovem o trabalho rural (Sumula 149 do STJ).
+> **Atenção:** A prova apenas por testemunhas NAO e aceita. E preciso ter documentos que comprovem o trabalho rural (Sumula 149 do STJ).
 
 ### Passo a Passo para Solicitar
 
 1. Acesse o **Meu INSS** > **"Novo Pedido"** > **"Aposentadoria por Idade Rural"**
-2. Preencha a Autodeclaracao Rural (quando aplicavel)
+2. Preencha a Autodeclaracao Rural (quando aplicável)
 3. Anexe os documentos que comprovam a atividade rural
 4. Acompanhe o andamento pelo Meu INSS ou pelo telefone 135
 
-### Documentos Necessarios
+### Documentos Necessários
 
 - RG e CPF
 - Documentos que comprovem atividade rural (veja lista acima)
-- Comprovante de endereco
+- Comprovante de endereço
 - Carteira de Trabalho (se tiver)
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
 | Central do INSS | **135** | Segunda a sabado, 7h as 22h |
 | DPU Brasilia | **(61) 3318-4300** | Segunda a sexta, 8h as 18h |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-### Legislacao
-- Constituicao Federal, arts. 194 a 204
-- Lei 8.213/1991 — Plano de Beneficios da Previdencia Social (arts. 42, 48, 59, 86)
-- Emenda Constitucional 103/2019 — Reforma da Previdencia
-- Lei Complementar 142/2013 — Aposentadoria da Pessoa com Deficiencia
+### Legislação
+- Constituição Federal, arts. 194 a 204
+- Lei 8.213/1991 — Plano de Benefícios da Previdência Social (arts. 42, 48, 59, 86)
+- Emenda Constitucional 103/2019 — Reforma da Previdência
+- Lei Complementar 142/2013 — Aposentadoria da Pessoa com Deficiência
 - Decreto 8.145/2013 — Regulamentacao da LC 142/2013
-- Sumula 149 do STJ — Exigencia de inicio de prova material para atividade rural
+- Sumula 149 do STJ — Exigência de inicio de prova material para atividade rural
 
 ### Fontes consultadas (marco/2026)
 - Portal gov.br/inss
-- Portal gov.br/previdencia
+- Portal gov.br/previdência
 - Portal do Planalto (planalto.gov.br)
 `
         },
         {
-          id: `02-auxilio-incapacidade`,
-          title: `Auxilio por Incapacidade Temporaria, Auxilio-Acidente e Periodo de Graca`,
-          content: `# Auxilio por Incapacidade Temporaria, Auxilio-Acidente e Periodo de Graca
+          id: `02-auxílio-incapacidade`,
+          title: `Auxílio por Incapacidade Temporaria, Auxílio-Acidente e Período de Graca`,
+          content: `# Auxílio por Incapacidade Temporaria, Auxílio-Acidente e Período de Graca
 
-Este arquivo explica tres temas relacionados: o auxilio para quem esta temporariamente doente, o auxilio para quem ficou com sequela de acidente e o periodo de graca (tempo em que voce continua protegido pelo INSS mesmo sem contribuir).
+Este arquivo explica três temas relacionados: o auxílio para quem esta temporariamente doente, o auxílio para quem ficou com sequela de acidente é o período de graca (tempo em que você contínua protegido pelo INSS mesmo sem contribuir).
 
 ---
 
-## 1. Auxilio por Incapacidade Temporaria (antigo "Auxilio-Doenca")
+## 1. Auxílio por Incapacidade Temporaria (antigo "Auxílio-Doenca")
 
-Esse beneficio e para quem esta temporariamente incapaz de trabalhar por causa de doenca ou acidente. E um dos beneficios mais procurados do INSS.
+Esse benefício e para quem esta temporariamente incapaz de trabalhar por causa de doenca ou acidente. E um dos benefícios mais procurados do INSS.
 
 > **Base legal:** Art. 59 da Lei 8.213/91.
 
 ### Quem tem direito
 
-- Ser segurado do INSS (estar contribuindo ou dentro do periodo de graca)
+- Ser segurado do INSS (estar contribuindo ou dentro do período de graca)
 - Estar incapaz de trabalhar por **mais de 15 dias seguidos**
-- Ter cumprido a carencia exigida (veja abaixo)
+- Ter cumprido a carência exigida (veja abaixo)
 
 > **Para trabalhadores com carteira assinada (CLT):** Os primeiros 15 dias de afastamento sao pagos pela empresa. A partir do 16o dia, o INSS assume o pagamento.
 
-### Carencia (tempo minimo de contribuicao)
+### Carência (tempo mínimo de contribuição)
 
-- **Regra geral:** 12 contribuicoes mensais
+- **Regra geral:** 12 contribuições mensais
 
-- **Nao se exige carencia nos seguintes casos:**
-  - Acidente de qualquer tipo (trabalho, transito, domestico)
+- **Não se exige carência nos seguintes casos:**
+  - Acidente de qualquer tipo (trabalho, trânsito, doméstico)
   - Doenca profissional ou do trabalho
   - Doencas graves previstas em lei (cancer, AIDS, tuberculose ativa, cardiopatia grave, cegueira, paralisia irreversivel, entre outras)
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-- **91% da media dos salarios de contribuicao**
-- O valor nao pode ultrapassar a media dos ultimos 12 salarios
+- **91% da media dos salários de contribuição**
+- O valor não pode ultrapassar a media dos ultimos 12 salários
 
-### A Pericia Medica do INSS
+### A Pericia Médica do INSS
 
-A pericia medica e o momento mais importante do processo. E nela que o INSS avalia se voce esta realmente incapaz de trabalhar.
+A pericia médica é o momento mais importante do processo. E nela que o INSS avalia se você está realmente incapaz de trabalhar.
 
 **Existem duas formas de pericia:**
 
-1. **Pericia presencial:** Voce vai ate uma agencia do INSS e e examinado por um perito medico
-2. **Analise documental (Atestmed):** Voce envia o atestado medico digitalizado pelo Meu INSS e o beneficio pode ser concedido sem necessidade de ir pessoalmente
+1. **Pericia presencial:** Você vai até uma agência do INSS e e examinado por um perito médico
+2. **Análise documental (Atestmed):** Você envia o atestado médico digitalizado pelo Meu INSS é o benefício pode ser concedido sem necessidade de ir pessoalmente
 
-> **Novidade:** A Portaria Conjunta MPS/INSS no 83/2025 ampliou o prazo maximo de beneficio concedido por analise documental para 60 dias (medida valida ate abril/2026).
+> **Novidade:** A Portaria Conjunta MPS/INSS no 83/2025 ampliou o prazo máximo de benefício concedido por análise documental para 60 dias (medida válida até abril/2026).
 
 ### Passo a Passo para Solicitar
 
@@ -5316,213 +5316,213 @@ A pericia medica e o momento mais importante do processo. E nela que o INSS aval
 1. Acesse **meu.inss.gov.br** ou abra o aplicativo "Meu INSS"
 2. Faca login com sua conta gov.br
 3. Clique em **"Novo Pedido"**
-4. Selecione **"Auxilio por Incapacidade Temporaria"**
-5. Anexe o atestado medico (deve conter: CID da doenca, tempo de afastamento sugerido e data)
-6. O sistema vai direcionar para analise documental ou agendar pericia presencial
+4. Selecione **"Auxílio por Incapacidade Temporaria"**
+5. Anexe o atestado médico (deve conter: CID da doenca, tempo de afastamento sugerido e data)
+6. O sistema vai direcionar para análise documental ou agendar pericia presencial
 
 **Pelo telefone 135:**
 
 1. Ligue para **135** (segunda a sabado, das 7h as 22h)
 2. Informe seu CPF e dados pessoais
-3. Solicite o agendamento de pericia ou o requerimento do beneficio
+3. Solicite o agendamento de pericia ou o requerimento do benefício
 
-### Documentos Necessarios
+### Documentos Necessários
 
 - RG e CPF
-- Atestado medico com CID, tempo de afastamento e data
-- Laudos medicos e exames complementares
+- Atestado médico com CID, tempo de afastamento e data
+- Laudos médicos e exames complementares
 - Carteira de Trabalho (CTPS)
-- Comprovantes de contribuicao ao INSS
+- Comprovantes de contribuição ao INSS
 
-### Se o Beneficio Estiver Acabando e Voce Ainda Estiver Doente
+### Se o Benefício Estiver Acabando e Você Ainda Estiver Doente
 
-Voce pode pedir a **prorrogacao** do beneficio:
+Você pode pedir a **prorrogação** do benefício:
 
-1. O pedido deve ser feito nos **15 dias antes** da data em que o beneficio vai acabar
-2. Solicite pelo Meu INSS (opcao "Prorrogacao") ou pelo telefone 135
-3. Se a pericia de prorrogacao demorar mais de 30 dias para ser agendada, o beneficio e **automaticamente prorrogado por mais 30 dias**
+1. O pedido deve ser feito nos **15 dias antes** da data em que o benefício vai acabar
+2. Solicite pelo Meu INSS (opcao "Prorrogação") ou pelo telefone 135
+3. Se a pericia de prorrogação demorar mais de 30 dias para ser agendada, o benefício e **automaticamente prorrogado por mais 30 dias**
 
-> **Dica:** Se a pericia constatar que sua incapacidade e definitiva (permanente), voce pode pedir a **transformacao** do auxilio temporario em aposentadoria por incapacidade permanente.
+> **Dica:** Se a pericia constatar que sua incapacidade e definitiva (permanente), você pode pedir a **transformacao** do auxílio temporário em aposentadoria por incapacidade permanente.
 
 ---
 
-## 2. Auxilio-Acidente
+## 2. Auxílio-Acidente
 
-Esse beneficio e diferente do auxilio por incapacidade temporaria. Ele e para quem sofreu acidente e ficou com **sequela permanente** que reduz a capacidade de trabalho, mas **continua trabalhando**.
+Esse benefício e diferente do auxílio por incapacidade temporária. Ele e para quem sofreu acidente e ficou com **sequela permanente** que reduz a capacidade de trabalho, mas **contínua trabalhando**.
 
 > **Base legal:** Art. 86 da Lei 8.213/91.
 
 ### Quem tem direito
 
-- Ter sofrido acidente de qualquer tipo (trabalho, transito, domestico, etc.)
+- Ter sofrido acidente de qualquer tipo (trabalho, trânsito, doméstico, etc.)
 - Ter ficado com sequela permanente que reduza a capacidade para o trabalho
-- Ser segurado nas categorias: empregado, domestico, trabalhador avulso ou segurado especial
-- **NAO e exigida carencia** (nenhuma contribuicao minima)
+- Ser segurado nas categorias: empregado, doméstico, trabalhador avulso ou segurado especial
+- **NAO é exigida carência** (nenhuma contribuição mínima)
 
-> **Atencao:** Contribuinte individual e segurado facultativo NAO tem direito ao auxilio-acidente.
+> **Atenção:** Contribuinte individual e segurado facultativo NAO tem direito ao auxílio-acidente.
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-- **50% do salario de beneficio**
-- O beneficio e pago ate voce se aposentar ou falecer
+- **50% do salário de benefício**
+- O benefício é pago até você se aposentar ou falecer
 
-### Diferenca entre o Auxilio por Incapacidade Temporaria e o Auxilio-Acidente
+### Diferenca entre o Auxílio por Incapacidade Temporaria é o Auxílio-Acidente
 
-| Caracteristica | Auxilio por Incapacidade Temporaria | Auxilio-Acidente |
+| Caracteristica | Auxílio por Incapacidade Temporaria | Auxílio-Acidente |
 |----------------|--------------------------------------|------------------|
-| Para que serve | Substituir a renda enquanto esta doente | Indenizar pela perda parcial de capacidade |
-| Tipo de incapacidade | Temporaria e total | Reducao permanente da capacidade |
-| Pode trabalhar? | Nao | Sim, pode e deve continuar trabalhando |
-| Carencia | 12 meses (regra geral) | Nao tem carencia |
-| Valor | 91% da media | 50% do salario de beneficio |
-| Duracao | Enquanto durar a doenca | Ate a aposentadoria ou falecimento |
+| Para que serve | Substituir a renda enquanto está doente | Indenizar pela perda parcial de capacidade |
+| Tipo de incapacidade | Temporaria e total | Redução permanente da capacidade |
+| Pode trabalhar? | Não | Sim, pode e deve continuar trabalhando |
+| Carência | 12 meses (regra geral) | Não tem carência |
+| Valor | 91% da media | 50% do salário de benefício |
+| Duração | Enquanto durar a doenca | Até a aposentadoria ou falecimento |
 
-### Pode acumular com outros beneficios?
+### Pode acumular com outros benefícios?
 
-- **Sim:** com salario ou remuneracao do trabalho (essa e a finalidade do beneficio)
-- **Sim:** com auxilio por incapacidade temporaria de outro acidente diferente
-- **Nao:** com auxilio por incapacidade temporaria da mesma sequela
-- **Nao:** com aposentadoria (o auxilio-acidente cessa quando voce se aposenta, mas e incorporado ao calculo da aposentadoria)
-- **Nao:** com outro auxilio-acidente
+- **Sim:** com salário ou remuneração do trabalho (essa é a finalidade do benefício)
+- **Sim:** com auxílio por incapacidade temporária de outro acidente diferente
+- **Não:** com auxílio por incapacidade temporária da mesma sequela
+- **Não:** com aposentadoria (o auxílio-acidente cessa quando você se aposenta, mas e incorporado ao calculo da aposentadoria)
+- **Não:** com outro auxílio-acidente
 
 ---
 
-## 3. Periodo de Graca
+## 3. Período de Graca
 
-O periodo de graca e um conceito muito importante e pouco conhecido. E o tempo em que voce **continua protegido pelo INSS mesmo sem estar contribuindo**. Isso significa que, durante esse periodo, voce e seus dependentes podem pedir beneficios.
+O período de graca é um conceito muito importante e pouco conhecido. E o tempo em que você **contínua protegido pelo INSS mesmo sem estar contribuindo**. Isso significa que, durante esse período, você e seus dependentes podem pedir benefícios.
 
 > **Base legal:** Art. 15 da Lei 8.213/91.
 
-### Prazos do periodo de graca
+### Prazos do período de graca
 
-| Situacao | Por quanto tempo voce continua protegido |
+| Situação | Por quanto tempo você contínua protegido |
 |----------|------------------------------------------|
-| Esta recebendo beneficio do INSS (aposentadoria, auxilio, etc.) | Sem limite de prazo (enquanto receber) |
-| Parou de contribuir (regra geral) | **12 meses** apos a ultima contribuicao |
-| Terminou de receber auxilio por incapacidade | **12 meses** apos a cessacao |
-| Terminou de receber salario-maternidade | **12 meses** |
-| Saiu da prisao | **12 meses** apos o livramento |
+| Esta recebendo benefício do INSS (aposentadoria, auxílio, etc.) | Sem limite de prazo (enquanto receber) |
+| Parou de contribuir (regra geral) | **12 meses** após a ultima contribuição |
+| Terminou de receber auxílio por incapacidade | **12 meses** após a cessação |
+| Terminou de receber salário-maternidade | **12 meses** |
+| Saiu da prisão | **12 meses** após o livramento |
 | Foi dispensado das Forcas Armadas | **3 meses** |
 | Parou de contribuir como segurado facultativo | **6 meses** |
 
-### O periodo pode ser estendido
+### O período pode ser estendido
 
-O prazo de 12 meses pode aumentar em duas situacoes:
+O prazo de 12 meses pode aumentar em duas situações:
 
 **Mais 12 meses (totalizando 24 meses):**
-- Se voce tiver mais de **120 contribuicoes seguidas** (10 anos) sem ter perdido a qualidade de segurado
+- Se você tiver mais de **120 contribuições seguidas** (10 anos) sem ter perdido a qualidade de segurado
 
-**Mais 12 meses alem disso (totalizando 36 meses):**
-- Se, alem das 120+ contribuicoes, voce comprovar que esta em **situacao de desemprego involuntario**
+**Mais 12 meses além disso (totalizando 36 meses):**
+- Se, além das 120+ contribuições, você comprovar que está em **situação de desemprego involuntario**
 
 ### Como comprovar o desemprego involuntario
 
-Para ter direito a extensao de mais 12 meses por desemprego, voce pode usar:
+Para ter direito a extensão de mais 12 meses por desemprego, você pode usar:
 - Registro no SINE (Sistema Nacional de Emprego)
 - Comprovante de recebimento de seguro-desemprego
 - Carteira de Trabalho sem novo registro de emprego
-- Declaracao do empregador
-- Registro em agencias de emprego
+- Declaração do empregador
+- Registro em agências de emprego
 
-### O que voce pode pedir durante o periodo de graca
+### O que você pode pedir durante o período de graca
 
-- Auxilio por incapacidade temporaria (auxilio-doenca)
+- Auxílio por incapacidade temporária (auxílio-doenca)
 - Aposentadoria por incapacidade permanente
-- Salario-maternidade
-- Seus dependentes ficam protegidos para pensao por morte
-- Seus dependentes ficam protegidos para auxilio-reclusao
+- Salário-maternidade
+- Seus dependentes ficam protegidos para pensão por morte
+- Seus dependentes ficam protegidos para auxílio-reclusão
 
-> **Atencao:** O periodo de graca NAO conta como tempo de contribuicao para fins de aposentadoria. Ele apenas mantem a sua protecao previdenciaria.
+> **Atenção:** O período de graca NAO conta como tempo de contribuição para fins de aposentadoria. Ele apenas mantem a sua proteção previdenciaria.
 
-### Por que isso e importante na pratica
+### Por que isso é importante na prática
 
-Imagine esta situacao: uma mulher foi demitida e, 8 meses depois, descobre que esta gravida. Se ela tiver menos de 10 anos de contribuicao, seu periodo de graca e de 12 meses. Como os 8 meses estao dentro desse prazo, ela ainda e segurada e pode pedir o salario-maternidade.
+Imagine esta situação: uma mulher foi demitida e, 8 meses depois, descobre que está gravida. Se ela tiver menos de 10 anos de contribuição, seu período de graca e de 12 meses. Como os 8 meses estão dentro desse prazo, ela ainda é segurada e pode pedir o salário-maternidade.
 
-Outro exemplo: um homem perde o emprego e, 10 meses depois, sofre um acidente grave. Se ele estiver dentro do periodo de graca, pode pedir o auxilio por incapacidade temporaria normalmente.
+Outro exemplo: um homem perde o emprego e, 10 meses depois, sofre um acidente grave. Se ele estiver dentro do período de graca, pode pedir o auxílio por incapacidade temporária normalmente.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
 | Central do INSS | **135** | Segunda a sabado, 7h as 22h |
 | DPU Brasilia | **(61) 3318-4300** | Segunda a sexta, 8h as 18h |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-### Legislacao
-- Lei 8.213/1991 — Plano de Beneficios da Previdencia Social (arts. 15, 59, 86)
-- Emenda Constitucional 103/2019 — Reforma da Previdencia
-- Portaria Conjunta MPS/INSS no 83/2025 — Ampliacao do prazo de analise documental (Atestmed)
-- Art. 26, inciso II, da Lei 8.213/91 — Isencao de carencia para doencas graves
+### Legislação
+- Lei 8.213/1991 — Plano de Benefícios da Previdência Social (arts. 15, 59, 86)
+- Emenda Constitucional 103/2019 — Reforma da Previdência
+- Portaria Conjunta MPS/INSS no 83/2025 — Ampliacao do prazo de análise documental (Atestmed)
+- Art. 26, inciso II, da Lei 8.213/91 — Isenção de carência para doencas graves
 
 ### Fontes consultadas (marco/2026)
 - Portal gov.br/inss
-- Portal gov.br/previdencia
+- Portal gov.br/previdência
 `
         },
         {
-          id: `03-pensao-por-morte`,
-          title: `Pensao por Morte`,
-          content: `# Pensao por Morte
+          id: `03-pensão-por-morte`,
+          title: `Pensão por Morte`,
+          content: `# Pensão por Morte
 
-A pensao por morte e o beneficio pago pelo INSS aos dependentes de um segurado que faleceu. Este arquivo explica quem sao os dependentes, quanto se recebe, por quanto tempo e como solicitar.
+A pensão por morte é o benefício pago pelo INSS aos dependentes de um segurado que faleceu. Este arquivo explica quem sao os dependentes, quanto se recebe, por quanto tempo e como solicitar.
 
-> **Base legal:** Arts. 74 a 79 da Lei 8.213/91, com alteracoes da Emenda Constitucional 103/2019 (Reforma da Previdencia).
+> **Base legal:** Arts. 74 a 79 da Lei 8.213/91, com alterações da Emenda Constitucional 103/2019 (Reforma da Previdência).
 
 ---
 
 ## 1. Quem Sao os Dependentes
 
-Os dependentes estao organizados em **tres classes**. Se existir algum dependente da 1a classe, os das classes seguintes nao recebem nada. Dentro da mesma classe, o valor e dividido igualmente.
+Os dependentes estão organizados em **três classes**. Se existir algum dependente da 1a classe, os das classes seguintes não recebem nada. Dentro da mesma classe, o valor é dividido igualmente.
 
-### 1a Classe — Dependencia presumida (nao precisa comprovar)
+### 1a Classe — Dependência presumida (não precisa comprovar)
 
-- Marido, esposa, companheiro(a) — inclusive em uniao estavel
-- Filho(a) menor de 21 anos que nao seja emancipado(a)
-- Filho(a) invalido(a) ou com deficiencia intelectual, mental ou grave (qualquer idade)
+- Marido, esposa, companheiro(a) — inclusive em uniao estável
+- Filho(a) menor de 21 anos que não seja emancipado(a)
+- Filho(a) inválido(a) ou com deficiência intelectual, mental ou grave (qualquer idade)
 
-### 2a Classe — Precisa comprovar dependencia economica
+### 2a Classe — Precisa comprovar dependência econômica
 
 - Pai e mae do segurado falecido
 
-### 3a Classe — Precisa comprovar dependencia economica
+### 3a Classe — Precisa comprovar dependência econômica
 
-- Irmao(a) menor de 21 anos que nao seja emancipado(a)
-- Irmao(a) invalido(a) ou com deficiencia intelectual, mental ou grave (qualquer idade)
+- Irmao(a) menor de 21 anos que não seja emancipado(a)
+- Irmao(a) inválido(a) ou com deficiência intelectual, mental ou grave (qualquer idade)
 
-### Situacoes especiais
+### Situações especiais
 
-- **Ex-marido, ex-esposa ou ex-companheiro(a)** que recebia pensao alimenticia tem direito a pensao por morte
-- **Enteados e tutelados** podem ser equiparados a filhos, desde que comprovem dependencia economica
-- **Uniao estavel homoafetiva** e reconhecida para fins de pensao por morte (decisao do STF, Tema 529)
+- **Ex-marido, ex-esposa ou ex-companheiro(a)** que recebia pensão alimentícia tem direito a pensão por morte
+- **Enteados e tutelados** podem ser equiparados a filhos, desde que comprovem dependência econômica
+- **Uniao estável homoafetiva** e reconhecida para fins de pensão por morte (decisão do STF, Tema 529)
 
 ---
 
-## 2. Duracao do Beneficio
+## 2. Duração do Benefício
 
-A duracao da pensao por morte depende de quem e o dependente.
+A duração da pensão por morte depende de quem é o dependente.
 
 ### Para filhos e irmaos
 
-A pensao e paga ate o dependente completar **21 anos**. Se o filho ou irmao for invalido ou tiver deficiencia grave, a pensao dura enquanto essa condicao existir (pode ser vitalicia).
+A pensão é paga até o dependente completar **21 anos**. Se o filho ou irmao for inválido ou tiver deficiência grave, a pensão dura enquanto essa condição existir (pode ser vitalícia).
 
-### Para conjuge ou companheiro(a)
+### Para cônjuge ou companheiro(a)
 
-A duracao depende de duas condicoes: quantas contribuicoes o falecido tinha e ha quanto tempo era o casamento ou a uniao estavel.
+A duração depende de duas condições: quantas contribuições o falecido tinha e ha quanto tempo era o casamento ou a uniao estável.
 
-**Situacao 1 — Pensao de apenas 4 meses:**
-A pensao dura so 4 meses se:
-- O segurado falecido tinha **menos de 18 contribuicoes** antes do obito, **OU**
-- O casamento ou uniao estavel tinha **menos de 2 anos**
+**Situação 1 — Pensão de apenas 4 meses:**
+A pensão dura só 4 meses se:
+- O segurado falecido tinha **menos de 18 contribuições** antes do óbito, **OU**
+- O casamento ou uniao estável tinha **menos de 2 anos**
 
-**Situacao 2 — Pensao com duracao variavel:**
-Se o segurado tinha 18 ou mais contribuicoes **E** o casamento ou uniao estavel tinha 2 ou mais anos, a duracao depende da **idade do conjuge na data do obito**:
+**Situação 2 — Pensão com duração variavel:**
+Se o segurado tinha 18 ou mais contribuições **E** o casamento ou uniao estável tinha 2 ou mais anos, a duração depende da **idade do cônjuge na data do óbito**:
 
-| Idade do conjuge na data do obito | Duracao da pensao |
+| Idade do cônjuge na data do óbito | Duração da pensão |
 |-----------------------------------|-------------------|
 | Menos de 22 anos | 3 anos |
 | De 22 a 27 anos | 6 anos |
@@ -5533,19 +5533,19 @@ Se o segurado tinha 18 ou mais contribuicoes **E** o casamento ou uniao estavel 
 
 ---
 
-## 3. Quanto Voce Vai Receber (Cota Familiar)
+## 3. Quanto Você Vai Receber (Cota Familiar)
 
-Apos a Reforma da Previdencia (EC 103/2019), o calculo da pensao por morte mudou:
+Após a Reforma da Previdência (EC 103/2019), o calculo da pensão por morte mudou:
 
 ### Como funciona o calculo
 
 1. Primeiro, calcula-se o valor da aposentadoria que o segurado falecido recebia ou teria direito
 2. A **cota familiar** e de **50% desse valor**
-3. Soma-se **10% para cada dependente**, ate o limite de 100%
+3. Soma-se **10% para cada dependente**, até o limite de 100%
 
 ### Exemplos praticos
 
-| Numero de dependentes | Percentual da pensao |
+| Número de dependentes | Percentual da pensão |
 |-----------------------|---------------------|
 | 1 dependente | 60% (50% + 10%) |
 | 2 dependentes | 70% (50% + 20%) |
@@ -5555,25 +5555,25 @@ Apos a Reforma da Previdencia (EC 103/2019), o calculo da pensao por morte mudou
 
 ### Regras importantes sobre o valor
 
-> **Excecao:** Se algum dos dependentes for invalido ou tiver deficiencia intelectual, mental ou grave, o valor sera de **100%** independentemente do numero de dependentes.
+> **Exceção:** Se algum dos dependentes for inválido ou tiver deficiência intelectual, mental ou grave, o valor será de **100%** independentemente do número de dependentes.
 
-> **Valor minimo:** A pensao por morte nao pode ser inferior a **1 salario minimo** (R$ 1.518,00 em 2025) quando for a unica fonte de renda do dependente.
+> **Valor mínimo:** A pensão por morte não pode ser inferior a **1 salário mínimo** (R$ 1.518,00 em 2025) quando for a única fonte de renda do dependente.
 
-> **Atencao:** Quando um dependente perde o direito a sua cota (por exemplo, o filho completa 21 anos), essa cota **nao e redistribuida** aos demais dependentes. Ela simplesmente se extingue.
+> **Atenção:** Quando um dependente perde o direito a sua cota (por exemplo, o filho completa 21 anos), essa cota **não e redistribuida** aos demais dependentes. Ela simplesmente se extingue.
 
 ---
 
-## 4. Prazo para Pedir a Pensao
+## 4. Prazo para Pedir a Pensão
 
-O prazo para solicitar a pensao por morte e muito importante, pois ele determina a partir de quando voce vai receber:
+O prazo para solicitar a pensão por morte e muito importante, pois ele determina a partir de quando você vai receber:
 
-| Situacao | Prazo | Efeito |
+| Situação | Prazo | Efeito |
 |----------|-------|--------|
-| Regra geral | Ate **90 dias** apos o obito | Recebe desde a data da morte |
-| Dependente menor de 16 anos | Ate **180 dias** apos o obito | Recebe desde a data da morte |
-| Apos esses prazos | A qualquer tempo | Recebe apenas a partir da data do pedido |
+| Regra geral | Até **90 dias** após o óbito | Recebe desde a data da morte |
+| Dependente menor de 16 anos | Até **180 dias** após o óbito | Recebe desde a data da morte |
+| Após esses prazos | A qualquer tempo | Recebe apenas a partir da data do pedido |
 
-> **Dica:** Nao demore para pedir! Se voce solicitar dentro de 90 dias, recebe os valores retroativos desde a data do falecimento. Se demorar mais, perde os meses anteriores ao pedido.
+> **Dica:** Não demore para pedir! Se você solicitar dentro de 90 dias, recebe os valores retroativos desde a data do falecimento. Se demorar mais, perde os meses anteriores ao pedido.
 
 ---
 
@@ -5584,84 +5584,84 @@ O prazo para solicitar a pensao por morte e muito importante, pois ele determina
 1. Acesse **meu.inss.gov.br** ou abra o aplicativo "Meu INSS"
 2. Faca login com sua conta gov.br
 3. Clique em **"Novo Pedido"**
-4. Selecione **"Pensao por Morte Urbana"** (ou **"Pensao por Morte Rural"**, conforme o caso)
-5. Preencha as informacoes solicitadas
-6. Anexe os documentos necessarios (veja lista abaixo)
+4. Selecione **"Pensão por Morte Urbana"** (ou **"Pensão por Morte Rural"**, conforme o caso)
+5. Preencha as informações solicitadas
+6. Anexe os documentos necessários (veja lista abaixo)
 
 ### Pelo telefone 135
 
 1. Ligue para **135** (segunda a sabado, das 7h as 22h)
 2. Informe seu CPF e os dados do segurado falecido
-3. Solicite o requerimento da pensao por morte
+3. Solicite o requerimento da pensão por morte
 
-### Documentos Necessarios
+### Documentos Necessários
 
 **Sobre o segurado falecido:**
-- Certidao de obito
+- Certidao de óbito
 - CPF do falecido
 - Carteira de Trabalho (CTPS) do falecido
-- Carnes de contribuicao ou outros comprovantes de pagamento ao INSS
+- Carnes de contribuição ou outros comprovantes de pagamento ao INSS
 
 **Sobre o dependente (quem vai receber):**
 - RG e CPF do dependente
-- Certidao de casamento (se for conjuge) ou prova de uniao estavel
+- Certidao de casamento (se for cônjuge) ou prova de uniao estável
 - Certidao de nascimento (se for filho)
-- Comprovante de endereco
+- Comprovante de endereço
 
-**Para comprovar uniao estavel (quando nao ha casamento formal):**
+**Para comprovar uniao estável (quando não ha casamento formal):**
 - Conta bancaria conjunta
 - Certidao de nascimento de filho em comum
-- Declaracao de imposto de renda com o companheiro como dependente
-- Prova de mesmo endereco
-- Escritura publica de uniao estavel (se houver)
+- Declaração de imposto de renda com o companheiro como dependente
+- Prova de mesmo endereço
+- Escritura pública de uniao estável (se houver)
 
 ---
 
 ## 6. Onde Ir se o INSS Negar
 
-Se o seu pedido de pensao por morte for negado pelo INSS:
+Se o seu pedido de pensão por morte for negado pelo INSS:
 
-1. **Recurso administrativo:** Pelo Meu INSS, em ate 30 dias apos a negativa
-2. **Defensoria Publica da Uniao (DPU):** Oferece assistencia juridica gratuita
-   - Endereco em Brasilia: SBS Quadra 2, Bloco H, Lote 14, Ed. Cleto Meirelles
+1. **Recurso administrativo:** Pelo Meu INSS, em até 30 dias após a negativa
+2. **Defensoria Pública da Uniao (DPU):** Oferece assistência jurídica gratuita
+   - Endereço em Brasilia: SBS Quadra 2, Bloco H, Lote 14, Ed. Cleto Meirelles
    - Telefone: (61) 3318-4300
-3. **Juizado Especial Federal (JEF):** Voce pode entrar com acao sem advogado para causas de ate 20 salarios minimos
-   - Endereco: SAUS Quadra 2, Bloco A, Brasilia/DF
+3. **Juizado Especial Federal (JEF):** Você pode entrar com ação sem advogado para causas de até 20 salários minimos
+   - Endereço: SAUS Quadra 2, Bloco A, Brasilia/DF
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
 | Central do INSS | **135** | Segunda a sabado, 7h as 22h |
 | DPU Brasilia | **(61) 3318-4300** | Segunda a sexta, 8h as 18h |
-| Justica Federal (SJDF) | **(61) 3314-5225** | Horario comercial |
+| Justica Federal (SJDF) | **(61) 3314-5225** | Horário comercial |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-### Legislacao
-- Lei 8.213/1991 — Plano de Beneficios da Previdencia Social (arts. 74 a 79)
-- Emenda Constitucional 103/2019 — Reforma da Previdencia
-- Constituicao Federal, art. 201, inciso V
+### Legislação
+- Lei 8.213/1991 — Plano de Benefícios da Previdência Social (arts. 74 a 79)
+- Emenda Constitucional 103/2019 — Reforma da Previdência
+- Constituição Federal, art. 201, inciso V
 
 ### Jurisprudencia
-- STF, Tema 529 — Reconhecimento de uniao estavel homoafetiva para fins previdenciarios
+- STF, Tema 529 — Reconhecimento de uniao estável homoafetiva para fins previdenciários
 
 ### Fontes consultadas (marco/2026)
 - Portal gov.br/inss
-- Portal gov.br/previdencia
+- Portal gov.br/previdência
 - Portal da DPU (dpu.def.br)
 `
         },
         {
-          id: `04-salario-maternidade`,
-          title: `Salario-Maternidade`,
-          content: `# Salario-Maternidade
+          id: `04-salário-maternidade`,
+          title: `Salário-Maternidade`,
+          content: `# Salário-Maternidade
 
-O salario-maternidade e o beneficio pago a mulher (e, em alguns casos, ao homem) durante o periodo de afastamento por motivo de nascimento de filho, adocao ou aborto nao criminoso. Este arquivo explica quem tem direito, inclusive mulheres desempregadas, e como solicitar.
+O salário-maternidade é o benefício pago a mulher (e, em alguns casos, ao homem) durante o período de afastamento por motivo de nascimento de filho, adocao ou aborto não criminoso. Este arquivo explica quem tem direito, inclusive mulheres desempregadas, e como solicitar.
 
 > **Base legal:** Arts. 71 a 73 da Lei 8.213/91.
 
@@ -5669,173 +5669,173 @@ O salario-maternidade e o beneficio pago a mulher (e, em alguns casos, ao homem)
 
 ## 1. Quem Tem Direito
 
-O salario-maternidade e garantido a todas as seguradas do INSS, mas as regras de carencia variam conforme a categoria:
+O salário-maternidade é garantido a todas as seguradas do INSS, mas as regras de carência variam conforme a categoria:
 
-| Categoria | Carencia (tempo minimo de contribuicao) |
+| Categoria | Carência (tempo mínimo de contribuição) |
 |-----------|----------------------------------------|
-| Empregada CLT | Nenhuma (sem carencia) |
-| Empregada domestica | Nenhuma (sem carencia) |
-| Trabalhadora avulsa | Nenhuma (sem carencia) |
-| Contribuinte individual | 10 contribuicoes mensais |
-| Segurada facultativa | 10 contribuicoes mensais |
+| Empregada CLT | Nenhuma (sem carência) |
+| Empregada doméstica | Nenhuma (sem carência) |
+| Trabalhadora avulsa | Nenhuma (sem carência) |
+| Contribuinte individual | 10 contribuições mensais |
+| Segurada facultativa | 10 contribuições mensais |
 | Segurada especial (rural) | 10 meses de atividade rural comprovada |
 
-### Desempregadas tambem tem direito
+### Desempregadas também tem direito
 
-> **Importante:** Mulheres desempregadas que ainda estejam dentro do **periodo de graca** (tempo de protecao do INSS apos a demissao) **tem direito ao salario-maternidade**. O pedido deve ser feito diretamente ao INSS.
+> **Importante:** Mulheres desempregadas que ainda estejam dentro do **período de graca** (tempo de proteção do INSS após a demissão) **tem direito ao salário-maternidade**. O pedido deve ser feito diretamente ao INSS.
 
-Para entender quanto tempo dura o periodo de graca, veja o arquivo [02 - Auxilio por Incapacidade](02-auxilio-incapacidade.md), na secao sobre Periodo de Graca. Em resumo:
+Para entender quanto tempo dura o período de graca, veja o arquivo [02 - Auxílio por Incapacidade](02-auxílio-incapacidade.md), na seção sobre Período de Graca. Em resumo:
 
-- **Regra geral:** 12 meses apos a ultima contribuicao
-- **Se tiver mais de 10 anos de contribuicao:** 24 meses
+- **Regra geral:** 12 meses após a ultima contribuição
+- **Se tiver mais de 10 anos de contribuição:** 24 meses
 - **Se comprovar desemprego involuntario:** pode chegar a 36 meses
 
 ---
 
-## 2. Situacoes que Geram o Direito
+## 2. Situações que Geram o Direito
 
-O salario-maternidade e pago nas seguintes situacoes:
+O salário-maternidade é pago nas seguintes situações:
 
-| Situacao | Observacao |
+| Situação | Observacao |
 |----------|------------|
 | Parto | Inclusive natimorto (bebe que nasce sem vida) a partir da 23a semana de gestacao |
-| Adocao ou guarda judicial para fins de adocao | Independente da idade da crianca adotada |
-| Aborto nao criminoso | Aborto espontaneo ou nos casos permitidos por lei (risco de vida para a mae, anencefalia) |
+| Adocao ou guarda judicial para fins de adocao | Independente da idade da criança adotada |
+| Aborto não criminoso | Aborto espontaneo ou nos casos permitidos por lei (risco de vida para a mae, anencefalia) |
 
 ---
 
-## 3. Duracao do Beneficio
+## 3. Duração do Benefício
 
-| Situacao | Duracao |
+| Situação | Duração |
 |----------|---------|
-| Parto | **120 dias** (pode comecar ate 28 dias antes da data prevista do parto) |
+| Parto | **120 dias** (pode comecar até 28 dias antes da data prevista do parto) |
 | Adocao ou guarda judicial | **120 dias** |
 | Natimorto | **120 dias** |
-| Aborto nao criminoso | **14 dias** |
+| Aborto não criminoso | **14 dias** |
 
 ---
 
-## 4. Quanto Voce Vai Receber
+## 4. Quanto Você Vai Receber
 
-O valor do salario-maternidade depende da sua categoria de segurada:
+O valor do salário-maternidade depende da sua categoria de segurada:
 
 | Categoria | Valor |
 |-----------|-------|
-| Empregada CLT | Remuneracao integral (ultimo salario) |
-| Empregada domestica | Ultimo salario de contribuicao |
-| Contribuinte individual ou facultativa | Media dos ultimos 12 salarios de contribuicao |
-| Segurada especial (rural) | 1 salario minimo (R$ 1.518,00 em 2025) |
-| Desempregada (em periodo de graca) | Media dos ultimos 12 salarios de contribuicao |
+| Empregada CLT | Remuneração integral (ultimo salário) |
+| Empregada doméstica | Ultimo salário de contribuição |
+| Contribuinte individual ou facultativa | Media dos ultimos 12 salários de contribuição |
+| Segurada especial (rural) | 1 salário mínimo (R$ 1.518,00 em 2025) |
+| Desempregada (em período de graca) | Media dos ultimos 12 salários de contribuição |
 
 ---
 
 ## 5. Passo a Passo para Solicitar
 
-### Se voce e empregada CLT
+### Se você e empregada CLT
 
-O pedido e feito diretamente ao seu **empregador**. A empresa paga o salario-maternidade e depois desconta esse valor das contribuicoes que deve ao INSS. Voce nao precisa ir ao INSS.
+O pedido é feito diretamente ao seu **empregador**. A empresa paga o salário-maternidade e depois desconta esse valor das contribuições que deve ao INSS. Você não precisa ir ao INSS.
 
 **O que fazer:**
-1. Apresente ao empregador o atestado medico ou a certidao de nascimento da crianca
-2. A empresa providencia o pagamento a partir da data do afastamento
+1. Apresente ao empregador o atestado médico ou a certidao de nascimento da criança
+2. A empresa providência o pagamento a partir da data do afastamento
 
-### Se voce e de outra categoria (inclusive desempregada)
+### Se você e de outra categoria (inclusive desempregada)
 
-O pedido e feito diretamente ao INSS:
+O pedido é feito diretamente ao INSS:
 
 **Pelo Meu INSS (site ou aplicativo):**
 
 1. Acesse **meu.inss.gov.br** ou abra o aplicativo "Meu INSS"
 2. Faca login com sua conta gov.br
 3. Clique em **"Novo Pedido"**
-4. Selecione **"Salario-Maternidade"**
-5. Preencha as informacoes e anexe os documentos
+4. Selecione **"Salário-Maternidade"**
+5. Preencha as informações e anexe os documentos
 
 **Pelo telefone 135:**
 
 1. Ligue para **135** (segunda a sabado, das 7h as 22h)
 2. Informe seu CPF e dados pessoais
-3. Solicite o salario-maternidade
+3. Solicite o salário-maternidade
 
 ### Prazo para Requerer
 
-Voce tem ate **5 anos** apos o evento (nascimento, adocao ou aborto) para solicitar o beneficio. Porem, quanto antes pedir, melhor.
+Você tem até **5 anos** após o evento (nascimento, adocao ou aborto) para solicitar o benefício. Porém, quanto antes pedir, melhor.
 
-### Documentos Necessarios
+### Documentos Necessários
 
 **Em caso de parto:**
 - RG e CPF
-- Certidao de nascimento da crianca
-- Atestado medico (se o afastamento comecar antes do parto)
+- Certidao de nascimento da criança
+- Atestado médico (se o afastamento comecar antes do parto)
 - Carteira de Trabalho (CTPS)
-- Comprovantes de contribuicao ao INSS (para contribuinte individual e facultativa)
+- Comprovantes de contribuição ao INSS (para contribuinte individual e facultativa)
 
 **Em caso de adocao:**
 - RG e CPF
 - Termo de guarda judicial ou certidao de adocao
-- Certidao de nascimento da crianca
-- Carteira de Trabalho e comprovantes de contribuicao
+- Certidao de nascimento da criança
+- Carteira de Trabalho e comprovantes de contribuição
 
-**Em caso de aborto nao criminoso:**
+**Em caso de aborto não criminoso:**
 - RG e CPF
-- Atestado medico comprovando a situacao
-- Carteira de Trabalho e comprovantes de contribuicao
+- Atestado médico comprovando a situação
+- Carteira de Trabalho e comprovantes de contribuição
 
 ---
 
-## 6. Situacoes Especiais
+## 6. Situações Especiais
 
 ### Gestante desempregada — o que fazer
 
-Se voce foi demitida e esta gravida:
+Se você foi demitida e está gravida:
 
-1. **Verifique se ainda esta no periodo de graca.** Conte quantos meses se passaram desde sua ultima contribuicao:
-   - Menos de 12 meses? Voce tem direito.
-   - Menos de 24 meses e tem mais de 10 anos de contribuicao? Voce tem direito.
-   - Menos de 36 meses, tem mais de 10 anos de contribuicao e comprova desemprego? Voce tem direito.
+1. **Verifique se ainda está no período de graca.** Conte quantos meses se passaram desde sua ultima contribuição:
+   - Menos de 12 meses? Você tem direito.
+   - Menos de 24 meses e tem mais de 10 anos de contribuição? Você tem direito.
+   - Menos de 36 meses, tem mais de 10 anos de contribuição e comprova desemprego? Você tem direito.
 
-2. **Se voce tem direito:** Solicite pelo Meu INSS ou pelo 135. O INSS vai analisar se voce ainda e segurada.
+2. **Se você tem direito:** Solicite pelo Meu INSS ou pelo 135. O INSS vai analisar se você ainda é segurada.
 
-3. **Se voce nao tem direito ao salario-maternidade:** Procure o CRAS (Centro de Referencia de Assistencia Social) mais proximo para verificar outros beneficios assistenciais disponiveis.
+3. **Se você não tem direito ao salário-maternidade:** Procure o CRAS (Centro de Referência de Assistência Social) mais proximo para verificar outros benefícios assistenciais disponíveis.
 
 ### Pai adotivo
 
-O pai adotivo (homem) tambem pode requerer o salario-maternidade nos casos de adocao, quando nao houver mae adotiva que ja esteja recebendo o beneficio.
+O pai adotivo (homem) também pode requerer o salário-maternidade nos casos de adocao, quando não houver mae adotiva que já esteja recebendo o benefício.
 
 ---
 
 ## 7. Onde Ir se o INSS Negar
 
-Se o seu pedido de salario-maternidade for negado:
+Se o seu pedido de salário-maternidade for negado:
 
-1. **Recurso administrativo:** Pelo Meu INSS, em ate 30 dias apos a negativa
-2. **Defensoria Publica da Uniao (DPU):** Assistencia juridica gratuita
-   - Endereco em Brasilia: SBS Quadra 2, Bloco H, Lote 14, Ed. Cleto Meirelles
+1. **Recurso administrativo:** Pelo Meu INSS, em até 30 dias após a negativa
+2. **Defensoria Pública da Uniao (DPU):** Assistência jurídica gratuita
+   - Endereço em Brasilia: SBS Quadra 2, Bloco H, Lote 14, Ed. Cleto Meirelles
    - Telefone: (61) 3318-4300
-3. **Juizado Especial Federal (JEF):** Para causas de ate 20 salarios minimos, nao precisa de advogado
-   - Endereco: SAUS Quadra 2, Bloco A, Brasilia/DF
+3. **Juizado Especial Federal (JEF):** Para causas de até 20 salários minimos, não precisa de advogado
+   - Endereço: SAUS Quadra 2, Bloco A, Brasilia/DF
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
 | Central do INSS | **135** | Segunda a sabado, 7h as 22h |
 | DPU Brasilia | **(61) 3318-4300** | Segunda a sexta, 8h as 18h |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-### Legislacao
-- Lei 8.213/1991 — Plano de Beneficios da Previdencia Social (arts. 71 a 73)
-- Constituicao Federal, art. 7o, inciso XVIII (licenca-maternidade de 120 dias)
-- Art. 15 da Lei 8.213/91 — Periodo de graca
+### Legislação
+- Lei 8.213/1991 — Plano de Benefícios da Previdência Social (arts. 71 a 73)
+- Constituição Federal, art. 7o, inciso XVIII (licença-maternidade de 120 dias)
+- Art. 15 da Lei 8.213/91 — Período de graca
 
 ### Fontes consultadas (marco/2026)
 - Portal gov.br/inss
-- Portal gov.br/previdencia
+- Portal gov.br/previdência
 `
         },
         {
@@ -5843,62 +5843,62 @@ Se o seu pedido de salario-maternidade for negado:
           title: `Como Acessar o INSS`,
           content: `# Como Acessar o INSS
 
-Este arquivo reune todas as formas de acessar os servicos do INSS: pela internet, pelo telefone, presencialmente nas agencias do Distrito Federal e, quando necessario, pela Defensoria Publica da Uniao (DPU) ou pela Justica Federal.
+Este arquivo reune todas as formas de acessar os serviços do INSS: pela internet, pelo telefone, presencialmente nas agências do Distrito Federal e, quando necessário, pela Defensoria Pública da Uniao (DPU) ou pela Justica Federal.
 
 ---
 
 ## 1. Meu INSS (Site e Aplicativo)
 
-O Meu INSS e a principal ferramenta para acessar os servicos do INSS. A maioria dos pedidos pode ser feita por ele, sem precisar sair de casa.
+O Meu INSS é a principal ferramenta para acessar os serviços do INSS. A maioria dos pedidos pode ser feita por ele, sem precisar sair de casa.
 
 **Site:** meu.inss.gov.br
-**Aplicativo:** Disponivel para celulares Android (Google Play) e iPhone (App Store). Procure por "Meu INSS".
+**Aplicativo:** Disponível para celulares Android (Google Play) e iPhone (App Store). Procure por "Meu INSS".
 
-### O que voce pode fazer pelo Meu INSS
+### O que você pode fazer pelo Meu INSS
 
-- Solicitar beneficios (aposentadorias, auxilios, pensoes, salario-maternidade, BPC)
-- Agendar pericia medica
-- Solicitar prorrogacao de beneficios
-- Consultar seu extrato de contribuicoes (CNIS)
+- Solicitar benefícios (aposentadorias, auxílios, pensões, salário-maternidade, BPC)
+- Agendar pericia médica
+- Solicitar prorrogação de benefícios
+- Consultar seu extrato de contribuições (CNIS)
 - Simular aposentadoria (verificar quanto falta para se aposentar)
-- Emitir certidoes e declaracoes
-- Consultar resultado de pericia medica
+- Emitir certidoes e declarações
+- Consultar resultado de pericia médica
 - Acompanhar o andamento dos seus pedidos
-- Solicitar recurso contra decisao do INSS
+- Solicitar recurso contra decisão do INSS
 
 ### Como Criar Sua Conta (Passo a Passo)
 
-Para usar o Meu INSS, voce precisa de uma conta gov.br. Veja como criar:
+Para usar o Meu INSS, você precisa de uma conta gov.br. Veja como criar:
 
 1. Acesse o site **gov.br** ou baixe o aplicativo "gov.br"
 2. Clique em **"Criar conta"**
-3. Informe seu **CPF** e siga as instrucoes
+3. Informe seu **CPF** e siga as instruções
 4. Valide sua identidade por um dos meios abaixo:
    - **Biometria facial** (reconhecimento do rosto pelo celular)
-   - **Bancos conveniados** (se voce tem conta em banco, pode validar por la)
+   - **Bancos conveniados** (se você tem conta em banco, pode validar por la)
    - **Presencialmente** em um posto de atendimento
-5. Apos criar a conta, acesse o **Meu INSS** com o login gov.br
+5. Após criar a conta, acesse o **Meu INSS** com o login gov.br
 
-> **Dica:** Se voce tiver dificuldade para criar a conta pela internet, peca ajuda a um familiar, amigo ou va a uma agencia do INSS ou posto Na Hora.
+> **Dica:** Se você tiver dificuldade para criar a conta pela internet, peca ajuda a um familiar, amigo ou va a uma agência do INSS ou posto Na Hora.
 
 ---
 
 ## 2. Telefone 135
 
-Se voce nao tem acesso a internet ou prefere falar com uma pessoa, pode ligar para o **135**.
+Se você não tem acesso a internet ou prefere falar com uma pessoa, pode ligar para o **135**.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| Numero | **135** |
-| Horario | Segunda a sabado, das **7h as 22h** (horario de Brasilia) |
+| Número | **135** |
+| Horário | Segunda a sabado, das **7h as 22h** (horário de Brasilia) |
 | Custo | Gratuito de telefone fixo. De celular, custo de ligacao local |
 
-### O que voce pode fazer pelo 135
+### O que você pode fazer pelo 135
 
 - Agendar atendimento e pericias
-- Pedir informacoes sobre beneficios
-- Fazer requerimento de beneficios
-- Solicitar prorrogacao de auxilio
+- Pedir informações sobre benefícios
+- Fazer requerimento de benefícios
+- Solicitar prorrogação de auxílio
 - Consultar andamento de pedidos
 
 > **Dica:** Tenha em maos seu CPF e documentos pessoais antes de ligar. Isso agiliza o atendimento.
@@ -5907,9 +5907,9 @@ Se voce nao tem acesso a internet ou prefere falar com uma pessoa, pode ligar pa
 
 ## 3. Agencias do INSS no Distrito Federal
 
-Embora a maioria dos servicos possa ser feita pelo Meu INSS ou pelo 135, em alguns casos pode ser necessario ir pessoalmente a uma agencia. Veja as agencias disponiveis no DF:
+Embora a maioria dos serviços possa ser feita pelo Meu INSS ou pelo 135, em alguns casos pode ser necessário ir pessoalmente a uma agência. Veja as agências disponíveis no DF:
 
-| Agencia | Endereco | Horario |
+| Agência | Endereço | Horário |
 |---------|----------|---------|
 | **Asa Sul** | AV W3 Sul, CRS 502, Bloco B, Lote 08 a 12, Terreo, 1o e 2o andares — Asa Sul, CEP 70330-520 | 7h as 17h |
 | **Taguatinga** | CNB 02, Lote 01 — Taguatinga Norte, CEP 72115-025 | 7h as 17h |
@@ -5921,119 +5921,119 @@ Embora a maioria dos servicos possa ser feita pelo Meu INSS ou pelo 135, em algu
 
 **Posto na Rodoviaria do Plano Piloto:** Ha um posto de atendimento do INSS na Estacao Rodoviaria de Brasilia.
 
-> **Importante:** Antes de ir a uma agencia, tente resolver pelo Meu INSS ou pelo 135. Muitas vezes, a ida presencial nao e necessaria e voce evita filas e deslocamentos.
+> **Importante:** Antes de ir a uma agência, tente resolver pelo Meu INSS ou pelo 135. Muitas vezes, a ida presencial não é necessária e você evita filas e deslocamentos.
 
 ---
 
-## 4. Defensoria Publica da Uniao (DPU) — Assistencia Juridica Gratuita
+## 4. Defensoria Pública da Uniao (DPU) — Assistência Jurídica Gratuita
 
-A DPU e o orgao que oferece **assistencia juridica gratuita** para quem nao pode pagar advogado. Ela atende questoes contra o INSS, como beneficios negados, cancelados ou suspensos.
+A DPU é o órgão que oferece **assistência jurídica gratuita** para quem não pode pagar advogado. Ela atende questoes contra o INSS, como benefícios negados, cancelados ou suspensos.
 
 ### Quem pode ser atendido pela DPU
 
-- Pessoas com renda familiar de ate **R$ 2.000,00**
+- Pessoas com renda familiar de até **R$ 2.000,00**
 - Ou pessoas que demonstrem impossibilidade de pagar as custas do processo
 - O atendimento e **totalmente gratuito**
 
 ### Onde fica a DPU em Brasilia
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| Atendimento ao publico | SBS Quadra 2, Bloco H, Lote 14, Edificio Cleto Meirelles |
+| Atendimento ao público | SBS Quadra 2, Bloco H, Lote 14, Edificio Cleto Meirelles |
 | Sede administrativa | SBN Quadra 1, Bloco F, Edificio Palacio da Agricultura — Asa Norte, CEP 70040-908 |
-| Horario | Segunda a sexta, **8h as 18h** (senhas ate 17h) |
+| Horário | Segunda a sexta, **8h as 18h** (senhas até 17h) |
 | Telefone | **(61) 3318-4300** |
-| Plantao (apos 18h) | **(61) 98258-0136** |
-| WhatsApp DPU Cidadao | **(61) 3318-7617** |
+| Plantao (após 18h) | **(61) 98258-0136** |
+| WhatsApp DPU Cidadão | **(61) 3318-7617** |
 
-### O que a DPU pode fazer por voce em questoes do INSS
+### O que a DPU pode fazer por você em questoes do INSS
 
-- Orientar sobre seus direitos previdenciarios
+- Orientar sobre seus direitos previdenciários
 - Acompanhar pedidos que foram negados pelo INSS
-- Entrar com acoes judiciais contra o INSS
+- Entrar com ações judiciais contra o INSS
 - Fazer recursos administrativos
-- Defender voce em casos de suspensao ou cancelamento de beneficios
+- Defender você em casos de suspensão ou cancelamento de benefícios
 
 ### Passo a Passo para ser Atendido pela DPU
 
-1. Va ao endereco de atendimento ao publico (SBS Quadra 2, Bloco H, Lote 14)
-2. Chegue cedo para pegar senha (senhas ate 17h)
-3. Leve seus documentos pessoais (RG, CPF, comprovante de renda, comprovante de endereco)
-4. Leve tambem os documentos relacionados ao seu caso no INSS (carta de negativa, laudos medicos, etc.)
-5. Voce sera atendido por um defensor publico que vai analisar seu caso
+1. Va ao endereço de atendimento ao público (SBS Quadra 2, Bloco H, Lote 14)
+2. Chegue cedo para pegar senha (senhas até 17h)
+3. Leve seus documentos pessoais (RG, CPF, comprovante de renda, comprovante de endereço)
+4. Leve também os documentos relacionados ao seu caso no INSS (carta de negativa, laudos médicos, etc.)
+5. Você será atendido por um defensor público que vai analisar seu caso
 
 ---
 
 ## 5. Juizado Especial Federal (JEF) — Justica sem Advogado
 
-O Juizado Especial Federal e o tribunal que julga causas contra o INSS de ate 60 salarios minimos. A grande vantagem e que, **para causas de ate 20 salarios minimos, voce nao precisa de advogado**.
+O Juizado Especial Federal é o tribunal que julga causas contra o INSS de até 60 salários minimos. A grande vantagem e que, **para causas de até 20 salários minimos, você não precisa de advogado**.
 
 ### Onde fica o JEF no Distrito Federal
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
-| Endereco | SAUS Quadra 2, Bloco A, Praca dos Tribunais Superiores — Brasilia/DF, CEP 70070-900 |
+| Endereço | SAUS Quadra 2, Bloco A, Praca dos Tribunais Superiores — Brasilia/DF, CEP 70070-900 |
 | Telefone | **(61) 3314-5225** |
 | Site | www.trf1.jus.br/sjdf |
 | Varas previdenciarias | 31a, 32a, 34a, 36a e 40a Varas Federais |
 
-### Como entrar com acao no JEF
+### Como entrar com ação no JEF
 
-**Sem advogado (para causas de ate 20 salarios minimos):**
+**Sem advogado (para causas de até 20 salários minimos):**
 
-1. Va pessoalmente ao JEF no endereco acima
-2. Solicite a **"atermacao"** — isso significa que um funcionario vai registrar seu pedido por escrito, sem que voce precise de advogado
-3. Voce tambem pode agendar a atermacao pelo site **agenda.df.gov.br**
+1. Va pessoalmente ao JEF no endereço acima
+2. Solicite a **"atermacao"** — isso significa que um funcionário vai registrar seu pedido por escrito, sem que você precise de advogado
+3. Você também pode agendar a atermacao pelo site **agenda.df.gov.br**
 
-**Com advogado ou defensor publico:**
+**Com advogado ou defensor público:**
 
-1. Procure a DPU (se nao pode pagar advogado) ou um advogado particular
-2. O advogado ou defensor ira preparar e protocolar a acao
+1. Procure a DPU (se não pode pagar advogado) ou um advogado particular
+2. O advogado ou defensor ira preparar e protocolar a ação
 
-### Documentos Necessarios para Acao no JEF
+### Documentos Necessários para Ação no JEF
 
 - RG e CPF
-- Comprovante de residencia
-- Carta de indeferimento do INSS (a negativa do seu pedido) ou comprovante de que voce fez o pedido administrativo
-- Documentos medicos (para beneficios por incapacidade)
-- Comprovantes de contribuicao (CNIS, Carteira de Trabalho)
+- Comprovante de residência
+- Carta de indeferimento do INSS (a negativa do seu pedido) ou comprovante de que você fez o pedido administrativo
+- Documentos médicos (para benefícios por incapacidade)
+- Comprovantes de contribuição (CNIS, Carteira de Trabalho)
 - Procuracao (se for representado por advogado)
 
-> **Atencao:** E obrigatorio ter feito o pedido ao INSS antes de entrar na Justica (decisao do STF, Tema 350). Ou seja, voce precisa primeiro pedir ao INSS e, se for negado, ai sim pode ir ao JEF.
+> **Atenção:** E obrigatório ter feito o pedido ao INSS antes de entrar na Justica (decisão do STF, Tema 350). Ou seja, você precisa primeiro pedir ao INSS e, se for negado, ai sim pode ir ao JEF.
 
 ---
 
-## 6. Resumo: Onde Buscar Ajuda em Cada Situacao
+## 6. Resumo: Onde Buscar Ajuda em Cada Situação
 
-| Situacao | Onde ir |
+| Situação | Onde ir |
 |----------|---------|
-| Pedir qualquer beneficio do INSS | Meu INSS (meu.inss.gov.br) ou telefone 135 |
-| Dificuldade com a internet | Telefone 135 ou agencia do INSS mais proxima |
-| Beneficio negado pelo INSS | Recurso pelo Meu INSS (ate 30 dias) |
+| Pedir qualquer benefício do INSS | Meu INSS (meu.inss.gov.br) ou telefone 135 |
+| Dificuldade com a internet | Telefone 135 ou agência do INSS mais proxima |
+| Benefício negado pelo INSS | Recurso pelo Meu INSS (até 30 dias) |
 | Precisa de advogado gratuito | DPU — (61) 3318-4300 |
 | Quer entrar na Justica | JEF — SAUS Quadra 2, Bloco A, Brasilia |
-| Nao sabe o que fazer | Ligue para o 135 ou procure a DPU |
+| Não sabe o que fazer | Ligue para o 135 ou procure a DPU |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
 | Central do INSS | **135** | Segunda a sabado, 7h as 22h |
 | DPU Brasilia | **(61) 3318-4300** | Segunda a sexta, 8h as 18h |
-| DPU Plantao (apos 18h) | **(61) 98258-0136** | Apos 18h |
-| DPU WhatsApp | **(61) 3318-7617** | Horario comercial |
-| Justica Federal (SJDF) | **(61) 3314-5225** | Horario comercial |
+| DPU Plantao (após 18h) | **(61) 98258-0136** | Após 18h |
+| DPU WhatsApp | **(61) 3318-7617** | Horário comercial |
+| Justica Federal (SJDF) | **(61) 3314-5225** | Horário comercial |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-### Legislacao
-- Lei 8.213/1991 — Plano de Beneficios da Previdencia Social
+### Legislação
+- Lei 8.213/1991 — Plano de Benefícios da Previdência Social
 - Lei 10.259/2001 — Juizados Especiais Federais
-- STF, RE 631.240 (Tema 350) — Exigencia de previo requerimento administrativo antes de acao judicial
+- STF, RE 631.240 (Tema 350) — Exigência de prévio requerimento administrativo antes de ação judicial
 
 ### Fontes consultadas (marco/2026)
 - Portal gov.br/inss
@@ -6046,45 +6046,45 @@ O Juizado Especial Federal e o tribunal que julga causas contra o INSS de ate 60
     },
     {
       id: `06-direito-consumidor`,
-      title: `Direito do Consumidor -- Guia Pratico`,
+      title: `Direito do Consumidor -- Guia Prático`,
       icon: `shopping-cart`,
-      readme: `# Direito do Consumidor -- Guia Pratico
+      readme: `# Direito do Consumidor -- Guia Prático
 
-Bem-vindo a secao de **Direito do Consumidor** do Manual Vicentino. Aqui voce encontra informacoes claras sobre seus direitos na hora de comprar produtos, contratar servicos, lidar com dividas e resolver problemas com empresas.
+Bem-vindo a seção de **Direito do Consumidor** do Manual Vicentino. Aqui você encontra informações claras sobre seus direitos na hora de comprar produtos, contratar serviços, lidar com dividas e resolver problemas com empresas.
 
 ---
 
-## O Que Voce Vai Encontrar Nesta Secao
+## O Que Você Vai Encontrar Nesta Seção
 
 | N. | Tema | Descricao |
 |----|------|-----------|
-| 01 | [Direitos Basicos do Consumidor](01-direitos-basicos-cdc.md) | Seus direitos na compra de produtos e servicos: informacao, arrependimento, garantia, praticas abusivas e venda casada. |
-| 02 | [Superendividamento](02-superendividamento.md) | O que fazer quando as dividas ficam maiores do que voce pode pagar. Como renegociar e proteger o minimo para viver. |
-| 03 | [PROCON-DF](03-procon-df.md) | Como registrar reclamacao no PROCON, enderecos, telefones e o site consumidor.gov.br. |
-| 04 | [Servicos Essenciais](04-servicos-essenciais.md) | Regras sobre corte de agua e luz, aviso previo, dividas antigas, religacao e telefones das concessionarias. |
+| 01 | [Direitos Basicos do Consumidor](01-direitos-básicos-cdc.md) | Seus direitos na compra de produtos e serviços: informação, arrependimento, garantia, práticas abusivas e venda casada. |
+| 02 | [Superendividamento](02-superendividamento.md) | O que fazer quando as dividas ficam maiores do que você pode pagar. Como renegociar e proteger o mínimo para viver. |
+| 03 | [PROCON-DF](03-procon-df.md) | Como registrar reclamação no PROCON, endereços, telefones é o site consumidor.gov.br. |
+| 04 | [Serviços Essenciais](04-serviços-essenciais.md) | Regras sobre corte de agua e luz, aviso prévio, dividas antigas, religacao e telefones das concessionarias. |
 
 ---
 
 ## Por Onde Comecar?
 
-Se voce esta com um problema de consumo e nao sabe o que fazer, siga estes passos:
+Se você está com um problema de consumo e não sabe o que fazer, siga estes passos:
 
 1. **Tente resolver diretamente com a empresa** -- ligue, va a loja ou envie mensagem. Anote o protocolo de atendimento.
 2. **Guarde todos os comprovantes** -- nota fiscal, contrato, prints de conversa, fotos do produto.
-3. **Se a empresa nao resolver, procure o PROCON-DF** -- pelo telefone 151, online ou presencialmente. Leia o capitulo [03 - PROCON-DF](03-procon-df.md).
-4. **Para valores pequenos, use os Juizados Especiais** -- voce pode entrar com acao sem advogado para causas de ate 20 salarios minimos.
+3. **Se a empresa não resolver, procure o PROCON-DF** -- pelo telefone 151, online ou presencialmente. Leia o capítulo [03 - PROCON-DF](03-procon-df.md).
+4. **Para valores pequenos, use os Juizados Especiais** -- você pode entrar com ação sem advogado para causas de até 20 salários minimos.
 
-> **Dica importante:** O Codigo de Defesa do Consumidor (CDC) protege toda pessoa que compra produtos ou contrata servicos. Voce nao precisa ser rico nem ter advogado para fazer valer seus direitos. O PROCON-DF atende de graca.
+> **Dica importante:** O Código de Defesa do Consumidor (CDC) protege toda pessoa que compra produtos ou contrata serviços. Você não precisa ser rico nem ter advogado para fazer valer seus direitos. O PROCON-DF atende de graca.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Neoenergia/CEB (energia) | 116 |
 | Caesb (agua) | 115 |
 | ANEEL (energia) | 167 |
@@ -6093,60 +6093,60 @@ Se voce esta com um problema de consumo e nao sabe o que fazer, siga estes passo
 `,
       pages: [
         {
-          id: `01-direitos-basicos-cdc`,
+          id: `01-direitos-básicos-cdc`,
           title: `Direitos Basicos do Consumidor`,
           content: `# Direitos Basicos do Consumidor
 
-O Codigo de Defesa do Consumidor (CDC) e a lei que protege toda pessoa que compra um produto ou contrata um servico. Foi criado pela Lei 8.078/1990 e garante direitos importantes para voce. Conhecer esses direitos e o primeiro passo para nao ser enganado.
+O Código de Defesa do Consumidor (CDC) é a lei que protege toda pessoa que compra um produto ou contrata um serviço. Foi criado pela Lei 8.078/1990 e garante direitos importantes para você. Conhecer esses direitos é o primeiro passo para não ser enganado.
 
 ---
 
-## 1. Direito a Informacao
+## 1. Direito a Informação
 
-Toda vez que voce compra algo ou contrata um servico, voce tem direito a receber informacoes **claras e completas**. O vendedor ou prestador de servico e obrigado a informar:
+Toda vez que você compra algo ou contrata um serviço, você tem direito a receber informações **claras e completas**. O vendedor ou prestador de serviço e obrigado a informar:
 
-- O **preco** do produto ou servico (sempre em reais)
+- O **preço** do produto ou serviço (sempre em reais)
 - A **quantidade** e as **caracteristicas** do produto
 - Os **riscos** que o produto pode oferecer
-- A **composicao** e a **validade** (no caso de alimentos)
+- A **composicao** é a **validade** (no caso de alimentos)
 - Os **juros** e encargos (no caso de compras parceladas)
 
-> **Na pratica:** Se voce comprar um produto sem rotulo, com informacoes confusas ou em outro idioma, a empresa esta violando a lei. Voce pode reclamar no PROCON.
+> **Na prática:** Se você comprar um produto sem rotulo, com informações confusas ou em outro idioma, a empresa esta violando a lei. Você pode reclamar no PROCON.
 
 ### O Que Fazer Se Esse Direito For Violado
 
 1. Fotografe o produto ou guarde a propaganda enganosa
-2. Registre reclamacao no PROCON-DF (telefone 151) ou no site consumidor.gov.br
-3. Se voce sofreu algum prejuizo, pode entrar com acao nos Juizados Especiais
+2. Registre reclamação no PROCON-DF (telefone 151) ou no site consumidor.gov.br
+3. Se você sofreu algum prejuízo, pode entrar com ação nos Juizados Especiais
 
 ---
 
-## 2. Protecao Contra Propaganda Enganosa
+## 2. Proteção Contra Propaganda Enganosa
 
 A lei proibe dois tipos de propaganda:
 
-**Propaganda enganosa:** quando a empresa diz algo falso sobre o produto, ou esconde informacoes importantes para enganar voce. Exemplos: dizer que o produto faz algo que nao faz, anunciar preco menor do que o real.
+**Propaganda enganosa:** quando a empresa diz algo falso sobre o produto, ou esconde informações importantes para enganar você. Exemplos: dizer que o produto faz algo que não faz, anunciar preço menor do que o real.
 
-**Propaganda abusiva:** quando a propaganda explora o medo, se aproveita de criancas, ou incentiva comportamentos perigosos.
+**Propaganda abusiva:** quando a propaganda explora o medo, se aproveita de crianças, ou incentiva comportamentos perigosos.
 
-> **Importante:** Se a empresa fez propaganda, ela e obrigada a cumprir o que anunciou. Se o preco estava errado no panfleto ou no site, voce tem direito de pagar o valor anunciado. E a empresa que deve provar que a propaganda e verdadeira -- voce nao precisa provar que e falsa.
+> **Importante:** Se a empresa fez propaganda, ela e obrigada a cumprir o que anunciou. Se o preço estava errado no panfleto ou no site, você tem direito de pagar o valor anunciado. E a empresa que deve provar que a propaganda e verdadeira -- você não precisa provar que e falsa.
 
 ---
 
 ## 3. Direito de Arrependimento (7 Dias Para Devolver)
 
-Se voce comprou um produto ou contratou um servico **fora da loja fisica** -- por exemplo, pela internet, por telefone, por catalogo ou de um vendedor que foi ate sua casa -- voce pode **desistir em ate 7 dias corridos**.
+Se você comprou um produto ou contratou um serviço **fora da loja física** -- por exemplo, pela internet, por telefone, por catalogo ou de um vendedor que foi até sua casa -- você pode **desistir em até 7 dias corridos**.
 
 ### Regras do Arrependimento
 
 | Regra | Explicacao |
 |-------|-----------|
-| **Prazo** | 7 dias corridos, contados a partir do dia que voce recebeu o produto |
-| **Motivo** | Voce nao precisa dar nenhuma explicacao |
+| **Prazo** | 7 dias corridos, contados a partir do dia que você recebeu o produto |
+| **Motivo** | Você não precisa dar nenhuma explicacao |
 | **Devolucao do dinheiro** | A empresa deve devolver todo o valor pago, com correcao |
-| **Frete de devolucao** | Quem paga e a empresa, nao voce |
+| **Frete de devolucao** | Quem paga é a empresa, não você |
 
-> **Atencao:** Esse direito so vale para compras feitas **fora da loja**. Se voce comprou dentro da loja fisica e o produto nao tem defeito, a loja nao e obrigada a trocar (embora muitas lojas facam por cortesia).
+> **Atenção:** Esse direito só vale para compras feitas **fora da loja**. Se você comprou dentro da loja física é o produto não tem defeito, a loja não e obrigada a trocar (embora muitas lojas facam por cortesia).
 
 ### Passo a Passo Para Exercer o Arrependimento
 
@@ -6154,33 +6154,33 @@ Se voce comprou um produto ou contratou um servico **fora da loja fisica** -- po
 2. Informe que quer devolver o produto e cancelar a compra
 3. Anote o protocolo de atendimento
 4. Envie o produto de volta (a empresa deve pagar o frete)
-5. Se a empresa se recusar, registre reclamacao no PROCON (151) ou no consumidor.gov.br
+5. Se a empresa se recusar, registre reclamação no PROCON (151) ou no consumidor.gov.br
 
 ---
 
 ## 4. Garantia Legal (30 e 90 Dias)
 
-Todo produto vendido no Brasil tem **garantia automatica pela lei**, mesmo que o fabricante nao de garantia por escrito.
+Todo produto vendido no Brasil tem **garantia automatica pela lei**, mesmo que o fabricante não de garantia por escrito.
 
 ### Prazos de Garantia Legal
 
 | Tipo de Produto | Prazo de Garantia |
 |-----------------|-------------------|
-| **Produtos nao duraveis** (alimentos, produtos de limpeza, cosmeticos) | **30 dias** |
-| **Produtos duraveis** (eletrodomesticos, moveis, celulares, roupas) | **90 dias** |
+| **Produtos não duráveis** (alimentos, produtos de limpeza, cosmeticos) | **30 dias** |
+| **Produtos duráveis** (eletrodomesticos, moveis, celulares, roupas) | **90 dias** |
 
 ### Quando Comeca a Contar o Prazo
 
 - **Defeito visivel** (que da para ver logo): o prazo comeca no dia da entrega
 - **Defeito oculto** (que aparece depois de um tempo): o prazo comeca no dia que o defeito apareceu
 
-> **Dica:** Se o fabricante oferece 1 ano de garantia, voce tem na verdade 1 ano + 90 dias, porque a garantia legal se soma a garantia do fabricante.
+> **Dica:** Se o fabricante oferece 1 ano de garantia, você tem na verdade 1 ano + 90 dias, porque a garantia legal se soma a garantia do fabricante.
 
 ---
 
 ## 5. Produto Com Defeito -- O Que Fazer
 
-Quando o produto tem defeito (chamado "vicio" na lei), a empresa tem **30 dias para consertar**. Se nao consertar nesse prazo, voce pode escolher uma destas opcoes:
+Quando o produto tem defeito (chamado "vicio" na lei), a empresa tem **30 dias para consertar**. Se não consertar nesse prazo, você pode escolher uma destas opcoes:
 
 1. **Trocar** o produto por outro igual e novo
 2. **Receber o dinheiro de volta**, com correcao
@@ -6188,101 +6188,101 @@ Quando o produto tem defeito (chamado "vicio" na lei), a empresa tem **30 dias p
 
 ### Quando o Produto Causa Acidente
 
-Se o produto causou algum dano a sua saude ou a seus bens (por exemplo: um eletrodomestico que pegou fogo, um alimento estragado que causou intoxicacao), o fabricante deve **pagar indenizacao**, mesmo sem ter culpa. Isso se chama "acidente de consumo" e a responsabilidade e do fabricante.
+Se o produto causou algum dano a sua saúde ou a seus bens (por exemplo: um eletrodomestico que pegou fogo, um alimento estragado que causou intoxicacao), o fabricante deve **pagar indenização**, mesmo sem ter culpa. Isso se chama "acidente de consumo" é a responsabilidade e do fabricante.
 
 ### Passo a Passo
 
-1. Guarde a nota fiscal e o produto com defeito
-2. Procure a loja ou o fabricante e registre a reclamacao (anote o protocolo)
-3. Se nao resolverem em 30 dias, exija a troca, devolucao do dinheiro ou desconto
-4. Se nao resolverem, procure o PROCON-DF (151) ou entre com acao nos Juizados Especiais
+1. Guarde a nota fiscal é o produto com defeito
+2. Procure a loja ou o fabricante e registre a reclamação (anote o protocolo)
+3. Se não resolverem em 30 dias, exija a troca, devolucao do dinheiro ou desconto
+4. Se não resolverem, procure o PROCON-DF (151) ou entre com ação nos Juizados Especiais
 
 ---
 
 ## 6. Praticas Abusivas
 
-A lei proibe empresas de agirem de forma desleal com o consumidor. Veja as praticas mais comuns que sao **proibidas**:
+A lei proibe empresas de agirem de forma desleal com o consumidor. Veja as práticas mais comuns que sao **proibidas**:
 
 ### Tabela de Praticas Abusivas
 
-| Pratica Proibida | O Que Significa | Exemplo |
+| Prática Proibida | O Que Significa | Exemplo |
 |------------------|-----------------|---------|
-| **Venda casada** | Condicionar a venda de um produto a compra de outro | Banco que obriga voce a contratar seguro para conseguir emprestimo |
-| **Recusa de atendimento** | Negar venda de produto disponivel | Farmacia que se recusa a vender um unico comprimido |
-| **Envio sem pedido** | Mandar produto que voce nao pediu | Cartao de credito que chega sem voce ter solicitado |
-| **Pressao sobre vulneraveis** | Se aproveitar da idade, saude ou condicao social da pessoa | Vendedor que pressiona idoso a comprar produto caro e desnecessario |
-| **Aumento abusivo de preco** | Subir o preco sem motivo justo | Aumentar preco de remedios ou alimentos em epoca de crise |
-| **Servico sem autorizacao** | Fazer servico sem orcamento previo e aprovacao | Oficina que faz reparos que voce nao pediu e cobra |
+| **Venda casada** | Condicionar a venda de um produto a compra de outro | Banco que obriga você a contratar seguro para conseguir emprestimo |
+| **Recusa de atendimento** | Negar venda de produto disponível | Farmacia que se recusa a vender um único comprimido |
+| **Envio sem pedido** | Mandar produto que você não pediu | Cartao de credito que chega sem você ter solicitado |
+| **Pressao sobre vulneráveis** | Se aproveitar da idade, saúde ou condição social da pessoa | Vendedor que pressiona idoso a comprar produto caro e desnecessario |
+| **Aumento abusivo de preço** | Subir o preço sem motivo justo | Aumentar preço de remedios ou alimentos em epoca de crise |
+| **Serviço sem autorizacao** | Fazer serviço sem orcamento prévio e aprovacao | Oficina que faz reparos que você não pediu e cobra |
 
-> **Importante:** Se voce recebeu um produto que nao pediu, a lei diz que e **amostra gratis**. Voce nao precisa pagar nem devolver.
+> **Importante:** Se você recebeu um produto que não pediu, a lei diz que e **amostra gratis**. Você não precisa pagar nem devolver.
 
 ### O Que Fazer
 
-1. Diga "nao" com firmeza quando tentarem obrigar voce a comprar algo que nao quer
-2. Registre reclamacao no PROCON-DF (151) se a empresa insistir
+1. Diga "não" com firmeza quando tentarem obrigar você a comprar algo que não quer
+2. Registre reclamação no PROCON-DF (151) se a empresa insistir
 3. Guarde provas: contratos, mensagens, gravacoes, testemunhas
-4. Em casos graves, procure a Defensoria Publica ou os Juizados Especiais
+4. Em casos graves, procure a Defensoria Pública ou os Juizados Especiais
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Juizados Especiais (TJDFT) | www.tjdft.jus.br |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Codigo de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+- Código de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
 - PROCON-DF -- Canais de Atendimento: https://www.procon.df.gov.br/canais-de-atendimento/
 - Consumidor.gov.br: https://www.consumidor.gov.br
 `
         },
         {
           id: `02-superendividamento`,
-          title: `Superendividamento -- Quando as Dividas Ficam Maiores do Que Voce Pode Pagar`,
-          content: `# Superendividamento -- Quando as Dividas Ficam Maiores do Que Voce Pode Pagar
+          title: `Superendividamento -- Quando as Dividas Ficam Maiores do Que Você Pode Pagar`,
+          content: `# Superendividamento -- Quando as Dividas Ficam Maiores do Que Você Pode Pagar
 
-Se voce esta devendo mais do que consegue pagar e as dividas estao comprometendo ate o dinheiro do alimento e do aluguel, saiba que existe uma lei para ajudar voce. A Lei 14.181/2021 criou um caminho para renegociar todas as dividas de uma vez e proteger o dinheiro necessario para a sobrevivencia da sua familia.
+Se você está devendo mais do que consegue pagar e as dividas estão comprometendo até o dinheiro do alimento e do aluguel, saiba que existe uma lei para ajudar você. A Lei 14.181/2021 criou um caminho para renegociar todas as dividas de uma vez e proteger o dinheiro necessário para a sobrevivencia da sua família.
 
 ---
 
 ## 1. O Que e Superendividamento
 
-Superendividamento e quando uma pessoa de boa-fe nao consegue pagar **todas as suas dividas** sem deixar de comprar comida, pagar aluguel ou cuidar da saude. Nao e so dever muito -- e dever mais do que da para pagar sem passar necessidade.
+Superendividamento e quando uma pessoa de boa-fe não consegue pagar **todas as suas dividas** sem deixar de comprar comida, pagar aluguel ou cuidar da saúde. Não e só dever muito -- é dever mais do que da para pagar sem passar necessidade.
 
 ### Quem Pode Pedir Ajuda
 
-- Qualquer **pessoa fisica** (nao vale para empresas) que tenha dividas de consumo: cartao de credito, emprestimos, financiamentos, contas de servicos
-- A pessoa precisa estar de **boa-fe** -- ou seja, nao se endividou de proposito para dar o calote
+- Qualquer **pessoa física** (não vale para empresas) que tenha dividas de consumo: cartao de credito, emprestimos, financiamentos, contas de serviços
+- A pessoa precisa estar de **boa-fe** -- ou seja, não se endividou de proposito para dar o calote
 
-### Quem Nao Pode Pedir
+### Quem Não Pode Pedir
 
 - Quem se endividou de **ma-fe** (enganando os credores de proposito)
-- Quem fez dividas de **luxo** ou compras superfulas sabendo que nao poderia pagar
+- Quem fez dividas de **luxo** ou compras supérfluas sabendo que não poderia pagar
 - Quem usou **fraude** para conseguir credito
 
 ---
 
-## 2. O Que e o Minimo Existencial
+## 2. O Que é o Mínimo Existencial
 
-O minimo existencial e o dinheiro que voce precisa para manter a vida digna da sua familia. A lei garante que **nenhum plano de pagamento de dividas pode tirar de voce esse dinheiro**.
+O mínimo existencial é o dinheiro que você precisa para manter a vida digna da sua família. A lei garante que **nenhum plano de pagamento de dividas pode tirar de você esse dinheiro**.
 
-O minimo existencial inclui gastos com:
+O mínimo existencial inclui gastos com:
 
-- Alimentacao
+- Alimentação
 - Moradia (aluguel, condominio)
-- Saude e higiene
-- Roupas basicas
+- Saúde e higiene
+- Roupas básicas
 - Transporte
 - Despesas do dia a dia que sao essenciais
 
-> **Na pratica:** Se voce ganha R$ 2.000 por mes e precisa de R$ 1.500 para essas despesas basicas, as parcelas das dividas so podem ser calculadas sobre os R$ 500 que sobram.
+> **Na prática:** Se você ganha R$ 2.000 por mês e precisa de R$ 1.500 para essas despesas básicas, as parcelas das dividas só podem ser calculadas sobre os R$ 500 que sobram.
 
 ---
 
@@ -6292,26 +6292,26 @@ O minimo existencial inclui gastos com:
 
 | Etapa | O Que Acontece |
 |-------|----------------|
-| **1. Procure ajuda** | Va ao PROCON-DF, a Defensoria Publica ou ao TJDFT e diga que esta superendividado |
-| **2. Solicite a repactuacao** | O orgao vai abrir um processo de renegociacao das suas dividas |
-| **3. Audiencia de conciliacao** | Todos os seus credores (bancos, lojas, etc.) sao chamados para uma reuniao unica |
-| **4. Plano de pagamento** | Um especialista ou juiz cria um plano que respeita o seu minimo existencial |
-| **5. Acordo ou decisao do juiz** | Se os credores aceitarem, otimo. Se recusarem sem motivo, o juiz pode obrigar |
+| **1. Procure ajuda** | Va ao PROCON-DF, a Defensoria Pública ou ao TJDFT e diga que está superendividado |
+| **2. Solicite a repactuação** | O órgão vai abrir um processo de renegociacao das suas dividas |
+| **3. Audiência de conciliacao** | Todos os seus credores (bancos, lojas, etc.) sao chamados para uma reuniao única |
+| **4. Plano de pagamento** | Um especialista ou juiz cria um plano que respeita o seu mínimo existencial |
+| **5. Acordo ou decisão do juiz** | Se os credores aceitarem, otimo. Se recusarem sem motivo, o juiz pode obrigar |
 
 ### Regras Importantes
 
-- O plano de pagamento pode ter ate **5 anos (60 meses)** para voce quitar as dividas
-- As parcelas sao calculadas com base no que **sobra** da sua renda, depois de descontar o minimo existencial
-- Se os credores nao comparecerem ou recusarem sem justificativa, o **juiz pode impor** o plano de pagamento
+- O plano de pagamento pode ter até **5 anos (60 meses)** para você quitar as dividas
+- As parcelas sao calculadas com base no que **sobra** da sua renda, depois de descontar o mínimo existencial
+- Se os credores não comparecerem ou recusarem sem justificativa, o **juiz pode impor** o plano de pagamento
 
 ---
 
 ## 4. Onde Buscar Ajuda no Distrito Federal
 
-| Orgao | Como Procurar | O Que Fazem |
+| Órgão | Como Procurar | O Que Fazem |
 |-------|---------------|-------------|
-| **PROCON-DF** | Telefone 151 (24 horas) | Orientacao, mediacao e encaminhamento para renegociacao |
-| **Defensoria Publica do DF** | (61) 2196-4300 | Assistencia juridica gratuita para quem esta superendividado |
+| **PROCON-DF** | Telefone 151 (24 horas) | Orientação, mediacao e encaminhamento para renegociacao |
+| **Defensoria Pública do DF** | (61) 2196-4300 | Assistência jurídica gratuita para quem esta superendividado |
 | **TJDFT -- CEJUSC** | www.tjdft.jus.br | Centros de mediacao e conciliacao para resolver conflitos |
 | **Consumidor.gov.br** | www.consumidor.gov.br | Plataforma online para renegociar dividas diretamente com as empresas |
 
@@ -6319,32 +6319,32 @@ O minimo existencial inclui gastos com:
 
 ## 5. Dicas Para Quem Esta Endividado
 
-1. **Nao se esconda das dividas** -- quanto mais tempo passar, mais juros voce paga
-2. **Anote todas as dividas** em um papel: quanto deve, para quem, qual o juros
-3. **Procure o PROCON ou a Defensoria** -- o atendimento e gratuito
-4. **Cuidado com promessas de "limpar o nome facil"** -- muitas empresas cobram para fazer o que voce pode fazer de graca
-5. **Nao pegue emprestimo para pagar outro emprestimo** sem orientacao -- isso pode piorar a situacao
-6. **Negocie diretamente com o credor** quando possivel -- muitas vezes ha desconto para pagamento a vista
+1. **Não se esconda das dividas** -- quanto mais tempo passar, mais juros você paga
+2. **Anote todas as dividas** em um papel: quanto deve, para quem, quais os juros
+3. **Procure o PROCON ou a Defensoria** -- o atendimento é gratuito
+4. **Cuidado com promessas de "limpar o nome fácil"** -- muitas empresas cobram para fazer o que você pode fazer de graca
+5. **Não pegue emprestimo para pagar outro emprestimo** sem orientação -- isso pode piorar a situação
+6. **Negocie diretamente com o credor** quando possível -- muitas vezes ha desconto para pagamento a vista
 
-> **Lembre-se:** Estar endividado nao e crime. Voce tem direito a renegociar suas dividas e a manter o dinheiro necessario para viver com dignidade. Procure ajuda.
+> **Lembre-se:** Estar endividado não é crime. Você tem direito a renegociar suas dividas é a manter o dinheiro necessário para viver com dignidade. Procure ajuda.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Consumidor.gov.br | www.consumidor.gov.br |
 | TJDFT -- CEJUSC | www.tjdft.jus.br |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - Lei do Superendividamento -- Lei 14.181/2021: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14181.htm
-- Codigo de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+- Código de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
 - Gov.br -- Superendividamento: https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2021/07/lei-cria-regras-para-prevenir-o-superendividamento
 - PROCON-DF: https://www.procon.df.gov.br/canais-de-atendimento/
 `
@@ -6354,39 +6354,39 @@ O minimo existencial inclui gastos com:
           title: `PROCON-DF -- Como Reclamar e Defender Seus Direitos`,
           content: `# PROCON-DF -- Como Reclamar e Defender Seus Direitos
 
-O PROCON-DF (Instituto de Defesa do Consumidor do Distrito Federal) e o orgao publico que ajuda voce a resolver problemas com empresas, lojas, bancos e prestadores de servico. O atendimento e **gratuito**.
+O PROCON-DF (Instituto de Defesa do Consumidor do Distrito Federal) é o órgão público que ajuda você a resolver problemas com empresas, lojas, bancos e prestadores de serviço. O atendimento e **gratuito**.
 
 ---
 
 ## 1. Antes de Ir ao PROCON
 
-Antes de registrar reclamacao no PROCON, tente resolver o problema diretamente com a empresa. Isso e importante porque o PROCON vai perguntar se voce ja tentou.
+Antes de registrar reclamação no PROCON, tente resolver o problema diretamente com a empresa. Isso é importante porque o PROCON vai perguntar se você já tentou.
 
 ### O Que Fazer Antes
 
-1. Ligue para a empresa ou va ate a loja
+1. Ligue para a empresa ou va até a loja
 2. Explique o problema e peca a solucao
-3. **Anote o numero do protocolo** de atendimento
+3. **Anote o número do protocolo** de atendimento
 4. Guarde e-mails, mensagens e prints de conversa
 
-> **Dica:** Se a empresa nao resolver ou nao responder, ai sim e hora de procurar o PROCON.
+> **Dica:** Se a empresa não resolver ou não responder, ai sim e hora de procurar o PROCON.
 
 ---
 
-## 2. Como Registrar Reclamacao
+## 2. Como Registrar Reclamação
 
-Voce pode reclamar de tres formas: **presencialmente**, **online** ou **por telefone**.
+Você pode reclamar de três formas: **presencialmente**, **online** ou **por telefone**.
 
 ### Por Telefone
 
 - Ligue para o **151** (funciona 24 horas, todos os dias)
-- Informe seus dados, os dados da empresa e o problema
+- Informe seus dados, os dados da empresa é o problema
 
 ### Presencialmente
 
-1. Va a uma das unidades do Na Hora que tem atendimento do PROCON (veja enderecos abaixo)
-2. Leve seus documentos: RG, CPF e comprovante de residencia
-3. Leve tambem: nota fiscal, contrato, comprovante de pagamento, fotos do produto, prints de conversas
+1. Va a uma das unidades do Na Hora que tem atendimento do PROCON (veja endereços abaixo)
+2. Leve seus documentos: RG, CPF e comprovante de residência
+3. Leve também: nota fiscal, contrato, comprovante de pagamento, fotos do produto, prints de conversas
 4. Pegue uma senha e aguarde o atendimento
 
 ### Online (Pela Internet)
@@ -6394,38 +6394,38 @@ Voce pode reclamar de tres formas: **presencialmente**, **online** ou **por tele
 **Opcao 1 -- Site do PROCON-DF:**
 
 1. Acesse o site **www.procon.df.gov.br**
-2. Clique em "Registrar Reclamacao"
-3. Acesse o sistema de peticionamento eletronico
+2. Clique em "Registrar Reclamação"
+3. Acesse o sistema de peticionamento eletrônico
 4. Clique no icone "Novo Peticionamento"
-5. Preencha o formulario com seus dados e os detalhes da reclamacao
+5. Preencha o formulário com seus dados e os detalhes da reclamação
 6. Anexe os documentos que comprovam o problema
-7. Voce precisa ter cadastro no portal **gov.br** para acessar
+7. Você precisa ter cadastro no portal **gov.br** para acessar
 
 **Opcao 2 -- Consumidor.gov.br (Plataforma Nacional):**
 
 1. Acesse **www.consumidor.gov.br**
-2. Verifique se a empresa esta cadastrada na plataforma
-3. Registre a reclamacao com todos os detalhes
+2. Verifique se a empresa está cadastrada na plataforma
+3. Registre a reclamação com todos os detalhes
 4. A empresa tem **10 dias** para responder
-5. Depois da resposta, voce tem **20 dias** para avaliar se ficou satisfeito
-6. O PROCON e a Senacon monitoram todo o processo
+5. Depois da resposta, você tem **20 dias** para avaliar se ficou satisfeito
+6. O PROCON é a Senacon monitoram todo o processo
 
 > **Vantagem do consumidor.gov.br:** Muitas empresas grandes respondem rapidamente nessa plataforma porque o governo monitora. A maioria dos casos e resolvida ali mesmo.
 
 ---
 
-## 3. Enderecos e Telefones do PROCON-DF
+## 3. Endereços e Telefones do PROCON-DF
 
 ### Sede do PROCON-DF
 
-- **Endereco:** SCS, Quadra 08, Edificio Venancio Shopping, Bloco B-60, Sala 240, Brasilia-DF, CEP 70.333-900
+- **Endereço:** SCS, Quadra 08, Edificio Venancio Shopping, Bloco B-60, Sala 240, Brasilia-DF, CEP 70.333-900
 - **Telefone:** 151 (24 horas)
-- **Horario:** Segunda a sexta-feira, 8h as 17h
+- **Horário:** Segunda a sexta-feira, 8h as 17h
 - **Site:** www.procon.df.gov.br
 
 ### Unidades nas Casas do Na Hora
 
-| Unidade | Endereco | Telefone |
+| Unidade | Endereço | Telefone |
 |---------|----------|----------|
 | **Na Hora Rodoviaria** | Plataforma Inferior da Rodoviaria de Brasilia | (61) 2244-1146 |
 | **Na Hora Taguatinga** | QS 03, Lote 11, lojas 4 e 8, Pistao Sul, Aguas Claras | (61) 2244-1158 |
@@ -6435,180 +6435,180 @@ Voce pode reclamar de tres formas: **presencialmente**, **online** ou **por tele
 | **Na Hora Brazlandia** | Area Especial 4, Lote 3, Setor Tradicional | (61) 2244-1176 |
 | **Na Hora Riacho Fundo** | Shopping Riacho Mall, 2o andar, QN 7, Area Especial 1, Riacho Fundo I | (61) 2244-1187 |
 
-### Horario das Unidades Na Hora
+### Horário das Unidades Na Hora
 
-- **Segunda a sexta:** 7h30 as 19h (senhas ate 18h30)
-- **Sabados:** 7h30 as 13h (senhas ate 12h30)
+- **Segunda a sexta:** 7h30 as 19h (senhas até 18h30)
+- **Sabados:** 7h30 as 13h (senhas até 12h30)
 
 ---
 
-## 4. Documentos Necessarios Para Reclamar
+## 4. Documentos Necessários Para Reclamar
 
 Leve tudo que puder para comprovar o problema:
 
 - **RG e CPF** (seus documentos pessoais)
-- **Comprovante de residencia**
+- **Comprovante de residência**
 - **Nota fiscal** ou cupom de compra
 - **Contrato** (se houver)
 - **Comprovante de pagamento** (recibo, extrato bancario, comprovante PIX)
 - **Fotos** do produto com defeito
 - **Prints** de conversas (WhatsApp, e-mail, chat)
-- **Numero do protocolo** de atendimento anterior com a empresa
+- **Número do protocolo** de atendimento anterior com a empresa
 
-> **Importante:** Quanto mais provas voce tiver, mais facil sera resolver seu problema. Mesmo que nao tenha todos os documentos, va ao PROCON assim mesmo -- eles vao orientar voce.
+> **Importante:** Quanto mais provas você tiver, mais fácil será resolver seu problema. Mesmo que não tenha todos os documentos, va ao PROCON assim mesmo -- eles vao orientar você.
 
 ---
 
-## 5. O Que Acontece Depois da Reclamacao
+## 5. O Que Acontece Depois da Reclamação
 
-1. O PROCON notifica a empresa sobre a sua reclamacao
+1. O PROCON notifica a empresa sobre a sua reclamação
 2. A empresa tem um prazo para responder (geralmente 10 a 30 dias)
-3. Se necessario, o PROCON agenda uma **audiencia de conciliacao** entre voce e a empresa
+3. Se necessário, o PROCON agenda uma **audiência de conciliacao** entre você é a empresa
 4. Se houver acordo, o caso e encerrado
-5. Se nao houver acordo, o PROCON pode aplicar **multa** a empresa
-6. Voce tambem pode entrar com acao nos **Juizados Especiais** para pedir indenizacao
+5. Se não houver acordo, o PROCON pode aplicar **multa** a empresa
+6. Você também pode entrar com ação nos **Juizados Especiais** para pedir indenização
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
 | Site PROCON-DF | www.procon.df.gov.br |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Juizados Especiais (TJDFT) | www.tjdft.jus.br |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - PROCON-DF -- Canais de Atendimento: https://www.procon.df.gov.br/canais-de-atendimento/
 - PROCON-DF -- Postos de Atendimento: https://www.procon.df.gov.br/postos-de-atendimento-2/
 - Na Hora DF -- Unidades PROCON: https://www.nahora.df.gov.br/procon-2/
 - Consumidor.gov.br: https://www.consumidor.gov.br
-- Codigo de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+- Código de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
 `
         },
         {
-          id: `04-servicos-essenciais`,
-          title: `Servicos Essenciais -- Agua, Luz e Telefone`,
-          content: `# Servicos Essenciais -- Agua, Luz e Telefone
+          id: `04-serviços-essenciais`,
+          title: `Serviços Essenciais -- Agua, Luz e Telefone`,
+          content: `# Serviços Essenciais -- Agua, Luz e Telefone
 
-Agua, energia eletrica e telefone sao considerados **servicos essenciais** pela lei. Isso significa que as empresas que fornecem esses servicos tem obrigacoes especiais: nao podem cortar sem aviso, nao podem cobrar de forma abusiva e devem manter a qualidade do servico.
+Agua, energia elétrica e telefone sao considerados **serviços essenciais** pela lei. Isso significa que as empresas que fornecem esses serviços tem obrigações especiais: não podem cortar sem aviso, não podem cobrar de forma abusiva e devem manter a qualidade do serviço.
 
 ---
 
 ## 1. Regras Para Corte de Agua e Luz
 
-A empresa pode cortar seu servico por falta de pagamento, mas **so se seguir todas as regras**. Se nao seguir, o corte e ilegal.
+A empresa pode cortar seu serviço por falta de pagamento, mas **só se seguir todas as regras**. Se não seguir, o corte e ilegal.
 
 ### Quando o Corte e Legal
 
 Para o corte ser permitido, a empresa e obrigada a cumprir **todos** estes requisitos:
 
 1. Enviar **aviso por escrito com pelo menos 15 dias de antecedencia**
-2. O aviso deve ter **comprovacao de entrega** (nao basta enviar -- tem que provar que voce recebeu)
-3. A divida deve ser do **mes atual de consumo** -- nao pode cortar por divida antiga
-4. Voce deve ter tido **oportunidade de pagar ou negociar** antes do corte
+2. O aviso deve ter **comprovação de entrega** (não basta enviar -- tem que provar que você recebeu)
+3. A divida deve ser do **mês atual de consumo** -- não pode cortar por divida antiga
+4. Você deve ter tido **oportunidade de pagar ou negociar** antes do corte
 
 ### Quando o Corte e Ilegal (Proibido)
 
-O corte e **proibido** nas seguintes situacoes:
+O corte e **proibido** nas seguintes situações:
 
-| Situacao | Por Que e Ilegal |
+| Situação | Por Que e Ilegal |
 |----------|------------------|
-| **Sem aviso previo** | A empresa e obrigada a avisar com antecedencia |
-| **Por divida antiga** | O STJ ja decidiu que nao pode cortar por debito de meses anteriores |
-| **Sexta-feira, vespera de feriado ou final de semana** | Para energia eletrica, o corte so pode ser em dia util |
-| **Quando ha negociacao em andamento** | Se voce esta negociando a divida, nao podem cortar |
-| **Quando comprometer a saude** | Se alguem da casa depende de equipamento eletrico (como aparelho de oxigenio) |
+| **Sem aviso prévio** | A empresa e obrigada a avisar com antecedencia |
+| **Por divida antiga** | O STJ já decidiu que não pode cortar por debito de meses anteriores |
+| **Sexta-feira, vespera de feriado ou final de semana** | Para energia elétrica, o corte só pode ser em dia útil |
+| **Quando ha negociação em andamento** | Se você está negociando a divida, não podem cortar |
+| **Quando comprometer a saúde** | Se alguém da casa depende de equipamento elétrico (como aparelho de oxigenio) |
 
-> **Importante:** Se cortaram sua agua ou luz de forma ilegal, voce tem direito a **religacao imediata** e pode pedir **indenizacao por danos morais e materiais** (por exemplo, comida que estragou na geladeira).
+> **Importante:** Se cortaram sua agua ou luz de forma ilegal, você tem direito a **religacao imediata** e pode pedir **indenização por danos morais e materiais** (por exemplo, comida que estragou na geladeira).
 
 ---
 
 ## 2. Prazos Para Religacao
 
-Depois que voce pagar a divida ou resolver a situacao, a empresa tem prazo maximo para religar o servico:
+Depois que você pagar a divida ou resolver a situação, a empresa tem prazo máximo para religar o serviço:
 
 | Local | Prazo Para Religar |
 |-------|-------------------|
-| **Area urbana** (cidade) | Ate **24 horas** |
-| **Area rural** (zona rural) | Ate **48 horas** |
+| **Area urbana** (cidade) | Até **24 horas** |
+| **Area rural** (zona rural) | Até **48 horas** |
 
-> **Dica:** Se a empresa nao religar dentro do prazo, ligue para a agencia reguladora e registre reclamacao.
+> **Dica:** Se a empresa não religar dentro do prazo, ligue para a agência reguladora e registre reclamação.
 
 ---
 
 ## 3. Dividas Antigas -- O Que Fazer
 
-Se voce tem divida antiga de agua ou luz, saiba que:
+Se você tem divida antiga de agua ou luz, saiba que:
 
-- A empresa **nao pode cortar o servico** por divida de meses anteriores (so pode cobrar, nao cortar)
-- Voce pode **negociar o parcelamento** da divida diretamente com a concessionaria
-- Se a empresa negar negociacao ou oferecer condicoes abusivas, procure o **PROCON-DF**
-- Em ultimo caso, a **Defensoria Publica** pode intermediar ou entrar com acao judicial
+- A empresa **não pode cortar o serviço** por divida de meses anteriores (só pode cobrar, não cortar)
+- Você pode **negociar o parcelamento** da divida diretamente com a concessionaria
+- Se a empresa negar negociação ou oferecer condições abusivas, procure o **PROCON-DF**
+- Em ultimo caso, a **Defensoria Pública** pode intermediar ou entrar com ação judicial
 
 ### Passo a Passo Para Negociar
 
-1. Va ate a concessionaria (CEB/Neoenergia, Caesb) ou ligue para negociar
-2. Peca o parcelamento da divida -- explique sua situacao financeira
-3. Se nao conseguir acordo, procure o PROCON-DF (151)
-4. Voce tambem pode reclamar na agencia reguladora (ANEEL para energia, ADASA para agua)
-5. Se nada funcionar, procure a Defensoria Publica do DF -- (61) 2196-4300
+1. Va até a concessionaria (CEB/Neoenergia, Caesb) ou ligue para negociar
+2. Peca o parcelamento da divida -- explique sua situação financeira
+3. Se não conseguir acordo, procure o PROCON-DF (151)
+4. Você também pode reclamar na agência reguladora (ANEEL para energia, ADASA para agua)
+5. Se nada funcionar, procure a Defensoria Pública do DF -- (61) 2196-4300
 
 ---
 
 ## 4. Corte Indevido -- Seus Direitos
 
-Se o corte foi feito sem seguir as regras, voce tem direito a:
+Se o corte foi feito sem seguir as regras, você tem direito a:
 
-- **Religacao imediata** do servico, sem custo
-- **Indenizacao por danos morais** (o STJ ja reconhece esse direito)
-- **Indenizacao por danos materiais** (alimentos estragados, remedios perdidos, prejuizos com equipamentos)
+- **Religacao imediata** do serviço, sem custo
+- **Indenização por danos morais** (o STJ já reconhece esse direito)
+- **Indenização por danos materiais** (alimentos estragados, remedios perdidos, prejuizos com equipamentos)
 
 ### O Que Fazer
 
-1. Registre reclamacao na concessionaria e anote o protocolo
-2. Registre reclamacao no PROCON-DF (151)
-3. Registre reclamacao na agencia reguladora (ANEEL, ADASA ou ANATEL)
-4. Guarde provas: contas, avisos recebidos (ou nao recebidos), fotos de alimentos estragados
-5. Procure os Juizados Especiais ou a Defensoria Publica para pedir indenizacao
+1. Registre reclamação na concessionaria e anote o protocolo
+2. Registre reclamação no PROCON-DF (151)
+3. Registre reclamação na agência reguladora (ANEEL, ADASA ou ANATEL)
+4. Guarde provas: contas, avisos recebidos (ou não recebidos), fotos de alimentos estragados
+5. Procure os Juizados Especiais ou a Defensoria Pública para pedir indenização
 
 ---
 
-## 5. Tarifa Social -- Desconto Para Familias de Baixa Renda
+## 5. Tarifa Social -- Desconto Para Famílias de Baixa Renda
 
-Se voce e de familia de baixa renda e esta inscrito no Cadastro Unico (CadUnico), voce pode ter direito a desconto na conta de luz e de agua:
+Se você e de família de baixa renda e esta inscrito no Cadastro Único (CadUnico), você pode ter direito a desconto na conta de luz e de agua:
 
-- **Tarifa Social de Energia Eletrica:** desconto de ate 65% na conta de luz
-- **Tarifa Social de Agua (Caesb):** desconto na conta de agua para familias inscritas no CadUnico
+- **Tarifa Social de Energia Elétrica:** desconto de até 65% na conta de luz
+- **Tarifa Social de Agua (Caesb):** desconto na conta de agua para famílias inscritas no CadUnico
 
-> **Como solicitar:** Procure a concessionaria com seu NIS (Numero de Inscricao Social do CadUnico) e documentos pessoais. Voce tambem pode pedir informacao no CRAS mais proximo.
+> **Como solicitar:** Procure a concessionaria com seu NIS (Número de Inscrição Social do CadUnico) e documentos pessoais. Você também pode pedir informação no CRAS mais proximo.
 
 ---
 
-## 6. Telefones Uteis -- Concessionarias e Agencias Reguladoras
+## 6. Telefones Úteis -- Concessionarias e Agencias Reguladoras
 
-| Servico | Telefone | O Que Faz |
+| Serviço | Telefone | O Que Faz |
 |---------|----------|-----------|
-| **Neoenergia/CEB** (energia) | **116** | Emergencias, falta de energia, negociacao de dividas |
-| **Caesb** (agua) | **115** | Falta de agua, vazamentos, negociacao de dividas |
-| **ANEEL** (reguladora de energia) | **167** | Reclamacoes sobre servico de energia |
-| **ADASA** (reguladora de agua no DF) | **(61) 3961-4600** | Reclamacoes sobre servico de agua no DF |
-| **ANATEL** (reguladora de telefonia) | **1331** | Reclamacoes sobre telefone e internet |
-| **PROCON-DF** | **151** | Reclamacoes gerais de consumo (24 horas) |
-| **Defensoria Publica do DF** | **(61) 2196-4300** | Assistencia juridica gratuita |
+| **Neoenergia/CEB** (energia) | **116** | Emergencias, falta de energia, negociação de dividas |
+| **Caesb** (agua) | **115** | Falta de agua, vazamentos, negociação de dividas |
+| **ANEEL** (reguladora de energia) | **167** | Reclamações sobre serviço de energia |
+| **ADASA** (reguladora de agua no DF) | **(61) 3961-4600** | Reclamações sobre serviço de agua no DF |
+| **ANATEL** (reguladora de telefonia) | **1331** | Reclamações sobre telefone e internet |
+| **PROCON-DF** | **151** | Reclamações gerais de consumo (24 horas) |
+| **Defensoria Pública do DF** | **(61) 2196-4300** | Assistência jurídica gratuita |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Codigo de Defesa do Consumidor -- Lei 8.078/1990 (Art. 22): https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
-- STJ -- Jurisprudencia em Teses, Edicao 13 (Servicos Essenciais): https://scon.stj.jus.br/SCON/jt/doc.jsp?livre='13'.tit.
-- STJ -- Aviso previo obrigatorio sobre corte de energia: https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/09102024-Aviso-previo-obrigatorio-sobre-corte-de-energia-tem-de-seguir-forma-prevista-pela-Aneel.aspx
+- Código de Defesa do Consumidor -- Lei 8.078/1990 (Art. 22): https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+- STJ -- Jurisprudencia em Teses, Edicao 13 (Serviços Essenciais): https://scon.stj.jus.br/SCON/jt/doc.jsp?livre='13'.tit.
+- STJ -- Aviso prévio obrigatório sobre corte de energia: https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/09102024-Aviso-prévio-obrigatório-sobre-corte-de-energia-tem-de-seguir-forma-prevista-pela-Aneel.aspx
 - PROCON-DF: https://www.procon.df.gov.br/canais-de-atendimento/
 `
         },
@@ -6616,47 +6616,47 @@ Se voce e de familia de baixa renda e esta inscrito no Cadastro Unico (CadUnico)
     },
     {
       id: `07-nocoes-direito-penal`,
-      title: `Nocoes de Direito Penal -- Guia Pratico`,
+      title: `Nocoes de Direito Penal -- Guia Prático`,
       icon: `gavel`,
-      readme: `# Nocoes de Direito Penal -- Guia Pratico
+      readme: `# Nocoes de Direito Penal -- Guia Prático
 
-Bem-vindo a secao de **Nocoes de Direito Penal** do Manual Vicentino. Aqui voce encontra informacoes simples e praticas sobre como agir quando for vitima de um crime, o que fazer na delegacia, quais sao os crimes mais comuns contra pessoas vulneraveis e quais sao os direitos de quem esta preso e de sua familia.
+Bem-vindo a seção de **Nocoes de Direito Penal** do Manual Vicentino. Aqui você encontra informações simples e práticas sobre como agir quando for vítima de um crime, o que fazer na delegacia, quais sao os crimes mais comuns contra pessoas vulneráveis e quais sao os direitos de quem está preso e de sua família.
 
 ---
 
-## O Que Voce Vai Encontrar Nesta Secao
+## O Que Você Vai Encontrar Nesta Seção
 
 | N. | Tema | Descricao |
 |----|------|-----------|
-| 01 | [Quando Ir a Delegacia](01-quando-ir-delegacia.md) | Como registrar ocorrencia (presencial e online), delegacia eletronica da PCDF e delegacias especializadas. |
-| 02 | [Crimes Comuns Contra Vulneraveis](02-crimes-comuns.md) | Golpes e estelionato, ameaca, lesao corporal, furto e roubo, injuria racial e racismo, importunacao sexual e crimes digitais. |
-| 03 | [Direitos do Preso e da Familia](03-direitos-preso-familia.md) | Direito a defensor publico, audiencia de custodia, visitas, auxilio-reclusao e legitima defesa. |
+| 01 | [Quando Ir a Delegacia](01-quando-ir-delegacia.md) | Como registrar ocorrência (presencial e online), delegacia eletrônica da PCDF e delegacias especializadas. |
+| 02 | [Crimes Comuns Contra Vulneráveis](02-crimes-comuns.md) | Golpes e estelionato, ameaca, lesao corporal, furto e roubo, injuria racial e racismo, importunacao sexual é crimes digitais. |
+| 03 | [Direitos do Preso e da Família](03-direitos-preso-família.md) | Direito a defensor público, audiência de custódia, visitas, auxílio-reclusão e legítima defesa. |
 
 ---
 
 ## Por Onde Comecar?
 
-Se voce foi vitima de um crime e nao sabe o que fazer:
+Se você foi vítima de um crime e não sabe o que fazer:
 
-1. **Se estiver em perigo imediato, ligue 190** (Policia Militar)
-2. **Registre um Boletim de Ocorrencia (BO)** -- pode ser presencial em qualquer delegacia ou online pela Delegacia Eletronica da PCDF
+1. **Se estiver em perigo imediato, ligue 190** (Polícia Militar)
+2. **Registre um Boletim de Ocorrência (BO)** -- pode ser presencial em qualquer delegacia ou online pela Delegacia Eletrônica da PCDF
 3. **Guarde todas as provas** -- fotos, prints de conversa, comprovantes, nomes de testemunhas
-4. **Procure a Defensoria Publica** se precisar de orientacao juridica gratuita -- (61) 2196-4300
+4. **Procure a Defensoria Pública** se precisar de orientação jurídica gratuita -- (61) 2196-4300
 
-> **Importante:** Registrar o BO e fundamental, mesmo que voce ache que "nao vai dar em nada". O BO e o primeiro passo para que a policia investigue e para que voce possa buscar seus direitos na Justica.
+> **Importante:** Registrar o BO é fundamental, mesmo que você ache que "não vai dar em nada". O BO é o primeiro passo para que a polícia investigue e para que você possa buscar seus direitos na Justica.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Policia Militar (emergencia) | 190 |
-| SAMU (emergencia saude) | 192 |
+| Polícia Militar (emergência) | 190 |
+| SAMU (emergência saúde) | 192 |
 | Bombeiros | 193 |
-| Disque-Denuncia (PCDF) | 197 |
-| Delegacia Eletronica PCDF | delegaciaeletronica.pcdf.df.gov.br |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Disque-Denúncia (PCDF) | 197 |
+| Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Disque Direitos Humanos | 100 |
 | Central da Mulher | 180 |
 `,
@@ -6666,68 +6666,68 @@ Se voce foi vitima de um crime e nao sabe o que fazer:
           title: `Quando Procurar a Delegacia`,
           content: `# Quando Procurar a Delegacia
 
-Se voce foi vitima de um crime -- roubo, ameaca, golpe, agressao ou qualquer outro -- o primeiro passo e **registrar um Boletim de Ocorrencia (BO)**. O BO e o documento oficial que inicia a investigacao pela policia e serve como prova para voce buscar seus direitos.
+Se você foi vítima de um crime -- roubo, ameaca, golpe, agressão ou qualquer outro -- o primeiro passo e **registrar um Boletim de Ocorrência (BO)**. O BO é o documento oficial que inicia a investigacao pela polícia e serve como prova para você buscar seus direitos.
 
 ---
 
-## 1. Tipos de Acao Penal -- Por Que Isso Importa
+## 1. Tipos de Ação Penal -- Por Que Isso Importa
 
-Nem todos os crimes sao processados da mesma forma. Entender isso ajuda voce a saber o que esperar:
+Nem todos os crimes sao processados da mesma forma. Entender isso ajuda você a saber o que esperar:
 
-| Tipo de Acao | Quem Toma a Iniciativa | Exemplos de Crimes |
+| Tipo de Ação | Quem Toma a Iniciativa | Exemplos de Crimes |
 |-------------|------------------------|---------------------|
-| **Publica incondicionada** | O Ministerio Publico processa automaticamente, sem depender da vontade da vitima | Roubo, homicidio, lesao corporal grave, violencia domestica, estupro, racismo |
-| **Publica condicionada** | O Ministerio Publico processa, **mas a vitima precisa autorizar** (fazer a "representacao") | Ameaca, lesao corporal leve (fora de violencia domestica), estelionato |
-| **Privada** | A propria vitima precisa contratar advogado ou Defensoria para processar | Injuria simples, calunia, difamacao |
+| **Pública incondicionada** | O Ministerio Público processa automaticamente, sem depender da vontade da vítima | Roubo, homicidio, lesao corporal grave, violência doméstica, estupro, racismo |
+| **Pública condicionada** | O Ministerio Público processa, **mas a vítima precisa autorizar** (fazer a "representacao") | Ameaca, lesao corporal leve (fora de violência doméstica), estelionato |
+| **Privada** | A própria vítima precisa contratar advogado ou Defensoria para processar | Injuria simples, calunia, difamacao |
 
-> **O que voce precisa saber:**
-> - Em crimes de acao **condicionada**, voce tem **6 meses** para autorizar o processo (a partir do dia que soube quem foi o autor). Se perder esse prazo, o crime nao pode mais ser processado.
-> - Em crimes de acao **incondicionada**, o processo segue mesmo que voce desista.
-> - **Na duvida, registre o BO.** A policia e o Ministerio Publico vao orientar voce sobre os proximos passos.
+> **O que você precisa saber:**
+> - Em crimes de ação **condicionada**, você tem **6 meses** para autorizar o processo (a partir do dia que soube quem foi o autor). Se perder esse prazo, o crime não pode mais ser processado.
+> - Em crimes de ação **incondicionada**, o processo segue mesmo que você desista.
+> - **Na duvida, registre o BO.** A polícia é o Ministerio Público vao orientar você sobre os proximos passos.
 
 ---
 
-## 2. Como Registrar Boletim de Ocorrencia
+## 2. Como Registrar Boletim de Ocorrência
 
 ### Registro Presencial (Em Qualquer Delegacia)
 
 **Passo a passo:**
 
-1. Va a qualquer delegacia de policia do DF (nao precisa ser perto de onde aconteceu o crime)
+1. Va a qualquer delegacia de polícia do DF (não precisa ser perto de onde aconteceu o crime)
 2. Leve um **documento de identidade com foto** (RG, CNH ou carteira de trabalho)
-3. Conte ao delegado ou escrivao o que aconteceu, com o maximo de detalhes
+3. Conte ao delegado ou escrivao o que aconteceu, com o máximo de detalhes
 4. Informe dados do agressor, se souber (nome, caracteristicas fisicas, placa do carro)
 5. Informe nomes e contatos de testemunhas
 6. Peca uma **copia do BO** -- e seu direito
 
-> **Dica:** Voce pode ir a delegacia a qualquer hora do dia ou da noite. Delegacias funcionam 24 horas.
+> **Dica:** Você pode ir a delegacia a qualquer hora do dia ou da noite. Delegacias funcionam 24 horas.
 
-### Registro Online -- Delegacia Eletronica da PCDF
+### Registro Online -- Delegacia Eletrônica da PCDF
 
-Se voce nao pode ir a delegacia ou prefere registrar de casa, pode usar a **Delegacia Eletronica**:
+Se você não pode ir a delegacia ou prefere registrar de casa, pode usar a **Delegacia Eletrônica**:
 
 - **Site:** https://delegaciaeletronica.pcdf.df.gov.br/
 - **Funciona:** 24 horas por dia, 7 dias por semana
-- **Requisitos:** Ser maior de 18 anos e o fato ter ocorrido no DF
+- **Requisitos:** Ser maior de 18 anos é o fato ter ocorrido no DF
 
 **Tipos de crimes que podem ser registrados online:**
 
-- Furto (sem violencia)
+- Furto (sem violência)
 - Perda ou extravio de documentos
-- Danos ao patrimonio
-- Ameaca (sem violencia fisica)
+- Danos ao patrimônio
+- Ameaca (sem violência física)
 - Estelionato e golpes
-- Outros crimes sem violencia
+- Outros crimes sem violência
 
-> **Atencao:** Para crimes com violencia (roubo, agressao, estupro), va presencialmente a delegacia ou ligue 190.
+> **Atenção:** Para crimes com violência (roubo, agressão, estupro), va presencialmente a delegacia ou ligue 190.
 
 ### Outros Canais da PCDF
 
 | Canal | Contato | Para Que Serve |
 |-------|---------|----------------|
-| **Disque-Denuncia** | **197** (opcao 1) | Denuncias anonimas sobre crimes |
-| **Informacoes PCDF** | **197** (opcao 2) | Informacoes sobre servicos da policia |
-| **Site da PCDF** | www.pcdf.df.gov.br | Informacoes gerais e servicos |
+| **Disque-Denúncia** | **197** (opcao 1) | Denúncias anonimas sobre crimes |
+| **Informações PCDF** | **197** (opcao 2) | Informações sobre serviços da polícia |
+| **Site da PCDF** | www.pcdf.df.gov.br | Informações gerais e serviços |
 
 ---
 
@@ -6737,76 +6737,76 @@ Para alguns tipos de crime, existem delegacias especiais que sao mais preparadas
 
 | Delegacia | Sigla | Para Quem |
 |-----------|-------|-----------|
-| **Delegacia Especial de Atendimento a Mulher** | DEAM | Mulheres vitimas de violencia domestica, ameaca, agressao, estupro |
-| **Delegacia da Crianca e do Adolescente** | DCA | Criancas e adolescentes vitimas de crimes |
-| **Delegacia do Idoso** | -- | Idosos vitimas de maus-tratos, golpes, abandono |
+| **Delegacia Especial de Atendimento a Mulher** | DEAM | Mulheres vítimas de violência doméstica, ameaca, agressão, estupro |
+| **Delegacia da Criança e do Adolescente** | DCA | Crianças e adolescentes vítimas de crimes |
+| **Delegacia do Idoso** | -- | Idosos vítimas de maus-tratos, golpes, abandono |
 | **Delegacia de Repressao aos Crimes Ciberneticos** | DRCC | Golpes pela internet, invasao de contas, crimes digitais |
 
-> **Importante:** Voce pode registrar o BO em qualquer delegacia, mesmo que exista uma especializada. O BO sera encaminhado para a delegacia correta depois.
+> **Importante:** Você pode registrar o BO em qualquer delegacia, mesmo que exista uma especializada. O BO será encaminhado para a delegacia correta depois.
 
 ---
 
 ## 4. O Que Levar a Delegacia
 
-Para facilitar o registro e a investigacao, leve o que puder:
+Para facilitar o registro é a investigacao, leve o que puder:
 
 - **Documento de identidade** com foto
 - **Prints de conversas** (WhatsApp, redes sociais) se o crime envolveu mensagens
 - **Comprovantes de transferencia** (PIX, deposito) se foi golpe
 - **Fotos** de lesoes, danos ou do local do crime
-- **Laudos medicos** se houve agressao
+- **Laudos médicos** se houve agressão
 - **Nome e contato de testemunhas**
-- **Numero de telefone do agressor** ou qualquer dado que ajude a identifica-lo
+- **Número de telefone do agressor** ou qualquer dado que ajude a identifica-lo
 
 ---
 
 ## 5. Depois do BO -- O Que Acontece
 
-1. A policia inicia a **investigacao** (inquerito policial)
+1. A polícia inicia a **investigacao** (inquerito policial)
 2. O delegado pode pedir depoimentos de testemunhas e do acusado
-3. Se houver provas suficientes, o caso e enviado ao **Ministerio Publico**
-4. O Ministerio Publico decide se oferece denuncia (processo criminal)
-5. Se for crime de acao condicionada, voce sera chamado para confirmar que quer processar
+3. Se houver provas suficientes, o caso e enviado ao **Ministerio Público**
+4. O Ministerio Público decide se oferece denúncia (processo criminal)
+5. Se for crime de ação condicionada, você será chamado para confirmar que quer processar
 
-> **Dica:** Se voce nao tiver advogado, a **Defensoria Publica** pode acompanhar todo o processo gratuitamente. Ligue para (61) 2196-4300.
+> **Dica:** Se você não tiver advogado, a **Defensoria Pública** pode acompanhar todo o processo gratuitamente. Ligue para (61) 2196-4300.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Policia Militar (emergencia) | 190 |
-| Disque-Denuncia (PCDF) | 197 |
-| Delegacia Eletronica PCDF | delegaciaeletronica.pcdf.df.gov.br |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Polícia Militar (emergência) | 190 |
+| Disque-Denúncia (PCDF) | 197 |
+| Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Central da Mulher | 180 |
 | Disque Direitos Humanos | 100 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Delegacia Eletronica da PCDF: https://www.pcdf.df.gov.br/servicos/delegacia-eletronica
+- Delegacia Eletrônica da PCDF: https://www.pcdf.df.gov.br/serviços/delegacia-eletrônica
 - PCDF -- Site oficial: https://www.pcdf.df.gov.br
-- Codigo de Processo Penal -- Decreto-Lei 3.689/1941: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm
-- Defensoria Publica do DF: https://www.defensoria.df.gov.br
+- Código de Processo Penal -- Decreto-Lei 3.689/1941: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm
+- Defensoria Pública do DF: https://www.defensoria.df.gov.br
 `
         },
         {
           id: `02-crimes-comuns`,
-          title: `Crimes Comuns Contra Pessoas Vulneraveis`,
-          content: `# Crimes Comuns Contra Pessoas Vulneraveis
+          title: `Crimes Comuns Contra Pessoas Vulneráveis`,
+          content: `# Crimes Comuns Contra Pessoas Vulneráveis
 
-Este capitulo explica, em linguagem simples, os crimes que mais atingem pessoas em situacao de vulnerabilidade. Para cada crime, voce vai encontrar: o que e, qual a pena, e o que fazer se for vitima.
+Este capítulo explica, em linguagem simples, os crimes que mais atingem pessoas em situação de vulnerabilidade. Para cada crime, você vai encontrar: o que é, qual a pena, é o que fazer se for vítima.
 
 ---
 
 ## 1. Estelionato -- Golpes e Fraudes
 
-**O que e:** Quando alguem engana voce para tirar vantagem, geralmente dinheiro. O golpista mente, se disfaraca ou inventa historias para convencer voce a entregar algo.
+**O que é:** Quando alguém engana você para tirar vantagem, geralmente dinheiro. O golpista mente, se disfaraca ou inventa historias para convencer você a entregar algo.
 
-**Pena:** 1 a 5 anos de prisao + multa.
+**Pena:** 1 a 5 anos de prisão + multa.
 
 ### Golpes Mais Comuns
 
@@ -6815,80 +6815,80 @@ Este capitulo explica, em linguagem simples, os crimes que mais atingem pessoas 
 | **Golpe do PIX** | O criminoso se passa por parente ou amigo e pede transferencia urgente | Sempre ligue para a pessoa antes de transferir. Confirme a voz. |
 | **Falso emprego** | Anuncio de vaga que pede pagamento antecipado | Empresa seria nunca cobra para dar emprego |
 | **Falso boleto** | Enviam boleto falsificado por e-mail ou WhatsApp | Confira os dados do beneficiario antes de pagar |
-| **Golpe do emprestimo** | Prometem emprestimo facil, mas cobram "taxa" antes de liberar | Banco serio desconta taxas do valor emprestado, nao cobra antes |
-| **Clonagem de WhatsApp** | O criminoso assume sua conta e pede dinheiro aos seus contatos | Ative a verificacao em duas etapas no WhatsApp |
+| **Golpe do emprestimo** | Prometem emprestimo fácil, mas cobram "taxa" antes de liberar | Banco serio desconta taxas do valor emprestado, não cobra antes |
+| **Clonagem de WhatsApp** | O criminoso assume sua conta e pede dinheiro aos seus contatos | Ative a verificação em duas etapas no WhatsApp |
 
-### Golpe Pela Internet (Fraude Eletronica)
+### Golpe Pela Internet (Fraude Eletrônica)
 
-Golpes feitos por PIX, WhatsApp, sites falsos ou redes sociais tem pena **mais grave**: **4 a 8 anos de prisao**.
+Golpes feitos por PIX, WhatsApp, sites falsos ou redes sociais tem pena **mais grave**: **4 a 8 anos de prisão**.
 
-Se o golpe for contra **idoso ou pessoa vulneravel**, a pena aumenta ainda mais (de 1/3 ao dobro).
+Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais (de 1/3 ao dobro).
 
 ### O Que Fazer Se Cair em Um Golpe
 
-1. **Registre BO** imediatamente -- na Delegacia Eletronica (delegaciaeletronica.pcdf.df.gov.br) ou presencialmente
+1. **Registre BO** imediatamente -- na Delegacia Eletrônica (delegaciaeletronica.pcdf.df.gov.br) ou presencialmente
 2. **Guarde todas as provas:** prints de conversa, comprovante de transferencia PIX, dados do golpista
-3. **Avise seu banco** -- peca o bloqueio da transacao e o MED (Mecanismo Especial de Devolucao do PIX)
-4. Se for golpe de WhatsApp, **avise seus contatos** para que ninguem mais caia
+3. **Avise seu banco** -- peca o bloqueio da transacao é o MED (Mecanismo Especial de Devolucao do PIX)
+4. Se for golpe de WhatsApp, **avise seus contatos** para que ninguém mais caia
 
 ---
 
 ## 2. Ameaca
 
-**O que e:** Quando alguem ameaca causar mal grave a voce ou a sua familia, seja por palavras, por escrito, por mensagem ou por gesto.
+**O que é:** Quando alguém ameaca causar mal grave a você ou a sua família, seja por palavras, por escrito, por mensagem ou por gesto.
 
-**Pena:** 1 a 6 meses de prisao, ou multa.
+**Pena:** 1 a 6 meses de prisão, ou multa.
 
-> **Importante:** Ameaca feita por WhatsApp, redes sociais ou telefone **tambem e crime**. Tire print de tudo.
+> **Importante:** Ameaca feita por WhatsApp, redes sociais ou telefone **também é crime**. Tire print de tudo.
 
 ### O Que Fazer
 
 1. **Guarde provas:** prints de mensagens, gravacoes de audio ou video
-2. **Registre BO** -- pode ser na Delegacia Eletronica se nao houve violencia fisica
-3. **Manifeste vontade de processar** (representacao) na delegacia -- voce tem 6 meses para fazer isso
-4. Se a ameaca for grave e constante, peca **medida protetiva** na delegacia ou na Defensoria Publica
+2. **Registre BO** -- pode ser na Delegacia Eletrônica se não houve violência física
+3. **Manifeste vontade de processar** (representacao) na delegacia -- você tem 6 meses para fazer isso
+4. Se a ameaca for grave e constante, peca **medida protetiva** na delegacia ou na Defensoria Pública
 
 ---
 
-## 3. Lesao Corporal (Agressao Fisica)
+## 3. Lesao Corporal (Agressão Física)
 
-**O que e:** Quando alguem causa dano ao corpo ou a saude de outra pessoa.
+**O que é:** Quando alguém causa dano ao corpo ou a saúde de outra pessoa.
 
 | Tipo | O Que Significa | Pena |
 |------|-----------------|------|
 | **Leve** | Sem sequelas graves (hematomas, arranhoes) | 3 meses a 1 ano |
 | **Grave** | Incapacidade para trabalho por mais de 30 dias, perigo de vida | 1 a 5 anos |
 | **Gravissima** | Incapacidade permanente, deformidade, doenca incuravel | 2 a 8 anos |
-| **Seguida de morte** | A agressao causa a morte (sem intencao de matar) | 4 a 12 anos |
+| **Seguida de morte** | A agressão causa a morte (sem intencao de matar) | 4 a 12 anos |
 
-> **Violencia domestica (Lei Maria da Penha):** Agressao contra mulher no ambito domestico tem pena de 3 meses a 3 anos. O processo segue **mesmo que a vitima desista** -- e acao publica incondicionada.
+> **Violência doméstica (Lei Maria da Penha):** Agressão contra mulher no ambito doméstico tem pena de 3 meses a 3 anos. O processo segue **mesmo que a vítima desista** -- e ação pública incondicionada.
 
 ### O Que Fazer Se For Agredido
 
-1. Se estiver em perigo, ligue **190** (Policia Militar)
-2. Procure atendimento medico e peca o **laudo** ou atestado
-3. Registre BO na delegacia (para violencia domestica, procure a DEAM)
+1. Se estiver em perigo, ligue **190** (Polícia Militar)
+2. Procure atendimento médico e peca o **laudo** ou atestado
+3. Registre BO na delegacia (para violência doméstica, procure a DEAM)
 4. Tire fotos das lesoes
 5. Anote nomes de testemunhas
-6. Procure a Defensoria Publica para orientacao -- (61) 2196-4300
+6. Procure a Defensoria Pública para orientação -- (61) 2196-4300
 
 ---
 
 ## 4. Furto e Roubo
 
-### Furto (Sem Violencia)
+### Furto (Sem Violência)
 
-**O que e:** Quando alguem pega algo que e seu **sem usar forca nem ameaca**. Exemplo: furto de celular no onibus, furto de bicicleta.
+**O que é:** Quando alguém pega algo que e seu **sem usar forca nem ameaca**. Exemplo: furto de celular no onibus, furto de bicicleta.
 
 | Tipo | Pena |
 |------|------|
 | Furto simples | 1 a 4 anos + multa |
 | Furto qualificado (arrombamento, escalada) | 2 a 8 anos |
-| Furto eletronico (por dispositivo eletronico/internet) | 4 a 8 anos |
+| Furto eletrônico (por dispositivo eletrônico/internet) | 4 a 8 anos |
 
-### Roubo (Com Violencia ou Ameaca)
+### Roubo (Com Violência ou Ameaca)
 
-**O que e:** Quando alguem pega algo que e seu **usando forca ou ameaca**. Exemplo: assalto a mao armada.
+**O que é:** Quando alguém pega algo que e seu **usando forca ou ameaca**. Exemplo: assalto a mao armada.
 
 | Tipo | Pena |
 |------|------|
@@ -6897,13 +6897,13 @@ Se o golpe for contra **idoso ou pessoa vulneravel**, a pena aumenta ainda mais 
 | Com lesao corporal grave | 7 a 18 anos |
 | Com morte (latrocinio -- crime hediondo) | 20 a 30 anos |
 
-> **Diferenca fundamental:** No furto, o criminoso nao tem contato com voce. No roubo, ha violencia ou ameaca direta.
+> **Diferenca fundamental:** No furto, o criminoso não tem contato com você. No roubo, ha violência ou ameaca direta.
 
 ### O Que Fazer
 
-1. Se for roubo, **nao reaja** -- sua vida vale mais que qualquer bem material
-2. Tente memorizar as caracteristicas do criminoso (roupas, altura, veiculo, placa)
-3. Registre BO o mais rapido possivel (presencial para roubo, pode ser online para furto)
+1. Se for roubo, **não reaja** -- sua vida vale mais que qualquer bem material
+2. Tente memorizar as caracteristicas do criminoso (roupas, altura, veículo, placa)
+3. Registre BO o mais rapido possível (presencial para roubo, pode ser online para furto)
 4. Se tiver celular roubado, registre o IMEI no BO e bloqueie na operadora
 
 ---
@@ -6912,53 +6912,53 @@ Se o golpe for contra **idoso ou pessoa vulneravel**, a pena aumenta ainda mais 
 
 ### Injuria Racial
 
-**O que e:** Ofender a honra de uma **pessoa especifica** usando palavras referentes a raca, cor, etnia, religiao ou origem. Exemplo: xingar alguem com termo racista.
+**O que é:** Ofender a honra de uma **pessoa específica** usando palavras referentes a raca, cor, etnia, religiao ou origem. Exemplo: xingar alguém com termo racista.
 
-**Pena:** 2 a 5 anos de prisao + multa.
+**Pena:** 2 a 5 anos de prisão + multa.
 
 ### Racismo
 
-**O que e:** Discriminar ou impedir o acesso de uma **coletividade** por motivo de raca, cor, etnia, religiao ou origem. Exemplo: impedir entrada em estabelecimento por causa da cor da pele.
+**O que é:** Discriminar ou impedir o acesso de uma **coletividade** por motivo de raca, cor, etnia, religiao ou origem. Exemplo: impedir entrada em estabelecimento por causa da cor da pele.
 
-**Pena:** 2 a 5 anos de prisao.
+**Pena:** 2 a 5 anos de prisão.
 
-> **Muito importante:** Desde 2023, tanto a injuria racial quanto o racismo sao crimes **inafiancaveis** (o acusado nao pode pagar fianca para sair) e **imprescritiveis** (podem ser processados a qualquer tempo, nao tem prazo de validade).
+> **Muito importante:** Desde 2023, tanto a injuria racial quanto o racismo sao crimes **inafiancaveis** (o acusado não pode pagar fianca para sair) e **imprescritiveis** (podem ser processados a qualquer tempo, não tem prazo de validade).
 
 ### O Que Fazer
 
 1. **Registre BO imediatamente** -- na delegacia mais proxima
 2. **Guarde todas as provas:** grave audios, tire prints de mensagens, identifique testemunhas
-3. **Procure a Defensoria Publica** para pedir indenizacao por danos morais
-4. Se aconteceu em estabelecimento comercial, anote nome da empresa, endereco e nome dos funcionarios
+3. **Procure a Defensoria Pública** para pedir indenização por danos morais
+4. Se aconteceu em estabelecimento comercial, anote nome da empresa, endereço e nome dos funcionários
 
 ---
 
 ## 6. Importunacao Sexual
 
-**O que e:** Praticar ato sexual contra alguem **sem consentimento**, como encostar, apalpar ou fazer gestos obscenos.
+**O que é:** Praticar ato sexual contra alguém **sem consentimento**, como encostar, apalpar ou fazer gestos obscenos.
 
-**Pena:** 1 a 5 anos de prisao.
+**Pena:** 1 a 5 anos de prisão.
 
 **Exemplos que sao crime:**
-- Encostar ou "encoxar" alguem no transporte publico
-- Toques nao consentidos de carater sexual
+- Encostar ou "encoxar" alguém no transporte público
+- Toques não consentidos de carater sexual
 - Ejacular em pessoa no onibus ou metro
-- "Passada de mao" nao autorizada
+- "Passada de mao" não autorizada
 
 ### Divulgacao de Imagens Intimas Sem Consentimento
 
-Compartilhar fotos ou videos de nudez ou sexo de alguem sem autorizacao (a chamada "pornografia de vinganca") tambem e crime:
+Compartilhar fotos ou videos de nudez ou sexo de alguém sem autorizacao (a chamada "pornografia de vinganca") também é crime:
 
-- **Pena:** 1 a 5 anos de prisao
-- O processo acontece **mesmo sem a vitima pedir** (acao publica incondicionada)
+- **Pena:** 1 a 5 anos de prisão
+- O processo acontece **mesmo sem a vítima pedir** (ação pública incondicionada)
 
 ### O Que Fazer
 
-1. Se estiver no transporte publico, **peca ajuda** ao motorista ou passageiros e ligue 190
+1. Se estiver no transporte público, **peca ajuda** ao motorista ou passageiros e ligue 190
 2. Tente identificar o agressor (caracteristicas fisicas, roupas)
 3. **Registre BO** presencialmente na delegacia
 4. Se forem imagens intimas vazadas, **notifique a rede social ou site** para remocao imediata (a lei obriga a plataforma a retirar)
-5. Procure a Defensoria Publica para orientacao -- (61) 2196-4300
+5. Procure a Defensoria Pública para orientação -- (61) 2196-4300
 
 ---
 
@@ -6966,74 +6966,74 @@ Compartilhar fotos ou videos de nudez ou sexo de alguem sem autorizacao (a chama
 
 ### Invasao de Dispositivo (Lei Carolina Dieckmann)
 
-**O que e:** Invadir celular, computador ou tablet de alguem sem autorizacao, para obter ou destruir dados.
+**O que é:** Invadir celular, computador ou tablet de alguém sem autorizacao, para obter ou destruir dados.
 
-**Pena:** 1 a 4 anos de prisao + multa. A pena aumenta se o criminoso obteve conversas privadas ou dados sigilosos.
+**Pena:** 1 a 4 anos de prisão + multa. A pena aumenta se o criminoso obteve conversas privadas ou dados sigilosos.
 
 ### Seus Direitos na Internet
 
 O Marco Civil da Internet (Lei 12.965/2014) garante:
 
 - **Privacidade** das suas comunicacoes online
-- Redes sociais e sites sao **obrigados a remover conteudo ilicito** apos ordem judicial
-- Para conteudo de nudez/sexo sem consentimento, a plataforma deve remover **apos simples notificacao da vitima** (sem precisar de ordem judicial)
+- Redes sociais e sites sao **obrigados a remover conteudo ilicito** após ordem judicial
+- Para conteudo de nudez/sexo sem consentimento, a plataforma deve remover **após simples notificação da vítima** (sem precisar de ordem judicial)
 
-### O Que Fazer Se For Vitima de Crime Digital
+### O Que Fazer Se For Vítima de Crime Digital
 
-1. **Nao apague nada** -- guarde prints, links, e-mails e mensagens
-2. Registre BO na **Delegacia de Crimes Ciberneticos (DRCC)** ou na Delegacia Eletronica
+1. **Não apague nada** -- guarde prints, links, e-mails e mensagens
+2. Registre BO na **Delegacia de Crimes Ciberneticos (DRCC)** ou na Delegacia Eletrônica
 3. Notifique a plataforma ou rede social para remover o conteudo
 4. Altere suas senhas imediatamente
-5. Procure a Defensoria Publica se precisar de ajuda juridica
+5. Procure a Defensoria Pública se precisar de ajuda jurídica
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Policia Militar (emergencia) | 190 |
-| Disque-Denuncia (PCDF) | 197 |
-| Delegacia Eletronica PCDF | delegaciaeletronica.pcdf.df.gov.br |
+| Polícia Militar (emergência) | 190 |
+| Disque-Denúncia (PCDF) | 197 |
+| Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
 | Delegacia da Mulher (DEAM) | 180 ou 190 |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Disque Direitos Humanos | 100 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Codigo Penal Brasileiro -- Decreto-Lei 2.848/1940: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
-- Lei 14.155/2021 (Fraude Eletronica): https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14155.htm
+- Código Penal Brasileiro -- Decreto-Lei 2.848/1940: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
+- Lei 14.155/2021 (Fraude Eletrônica): https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14155.htm
 - Lei 7.716/1989 (Racismo): https://www.planalto.gov.br/ccivil_03/leis/l7716compilado.htm
 - Lei 14.532/2023 (Injuria Racial equiparada a Racismo): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm
 - Lei 13.718/2018 (Importunacao Sexual): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13718.htm
 - Lei 12.737/2012 (Lei Carolina Dieckmann): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12737.htm
 - Marco Civil da Internet -- Lei 12.965/2014: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm
-- Delegacia Eletronica PCDF: https://www.pcdf.df.gov.br/servicos/delegacia-eletronica
+- Delegacia Eletrônica PCDF: https://www.pcdf.df.gov.br/serviços/delegacia-eletrônica
 `
         },
         {
-          id: `03-direitos-preso-familia`,
-          title: `Direitos do Preso e da Familia`,
-          content: `# Direitos do Preso e da Familia
+          id: `03-direitos-preso-família`,
+          title: `Direitos do Preso e da Família`,
+          content: `# Direitos do Preso e da Família
 
-Quando alguem e preso, tanto a pessoa presa quanto sua familia continuam tendo direitos garantidos por lei. Este capitulo explica os principais direitos, como funciona a audiencia de custodia, como visitar um preso e como a familia pode receber o auxilio-reclusao.
+Quando alguém e preso, tanto a pessoa presa quanto sua família continuam tendo direitos garantidos por lei. Este capítulo explica os principais direitos, como funciona a audiência de custódia, como visitar um preso e como a família pode receber o auxílio-reclusão.
 
 ---
 
-## 1. Direito a Defensor Publico
+## 1. Direito a Defensor Público
 
-Todo preso tem direito a **assistencia juridica gratuita**, mesmo que nao tenha dinheiro para pagar advogado.
+Todo preso tem direito a **assistência jurídica gratuita**, mesmo que não tenha dinheiro para pagar advogado.
 
 ### O Que a Lei Garante
 
-- A **Defensoria Publica** deve prestar assistencia juridica dentro e fora do presidio
-- Se o preso nao tiver advogado particular, a Defensoria e **nomeada automaticamente**
+- A **Defensoria Pública** deve prestar assistência jurídica dentro e fora do presidio
+- Se o preso não tiver advogado particular, a Defensoria e **nomeada automaticamente**
 - A Defensoria deve estar presente em **todas as unidades prisionais**
-- O preso pode pedir para falar com o defensor publico a qualquer momento
+- O preso pode pedir para falar com o defensor público a qualquer momento
 
-### Contato da Defensoria Publica do DF -- Area Criminal
+### Contato da Defensoria Pública do DF -- Area Criminal
 
 | Canal | Contato |
 |-------|---------|
@@ -7041,207 +7041,207 @@ Todo preso tem direito a **assistencia juridica gratuita**, mesmo que nao tenha 
 | WhatsApp Criminal | (61) 98349-2485 |
 | WhatsApp Criminal (2) | (61) 98297-0064 |
 
-> **Importante:** Se um familiar seu foi preso e nao tem advogado, entre em contato com a Defensoria Publica imediatamente. O preso tem direito a defesa desde o primeiro momento.
+> **Importante:** Se um familiar seu foi preso e não tem advogado, entre em contato com a Defensoria Pública imediatamente. O preso tem direito a defesa desde o primeiro momento.
 
 ---
 
-## 2. Audiencia de Custodia
+## 2. Audiência de Custódia
 
 ### O Que E
 
-Toda pessoa presa em flagrante deve ser apresentada a um juiz **em ate 24 horas** apos a prisao. Essa apresentacao se chama **audiencia de custodia**.
+Toda pessoa presa em flagrante deve ser apresentada a um juiz **em até 24 horas** após a prisão. Essa apresentacao se chama **audiência de custódia**.
 
 ### Para Que Serve
 
-A audiencia de custodia serve para o juiz verificar tres coisas:
+A audiência de custódia serve para o juiz verificar três coisas:
 
-1. **A prisao foi legal?** -- O juiz analisa se a policia agiu corretamente
-2. **Houve tortura ou maus-tratos?** -- O preso pode relatar se sofreu violencia durante a prisao
-3. **A prisao deve ser mantida?** -- O juiz decide se o preso ficara preso (prisao preventiva) ou se pode ser solto
+1. **A prisão foi legal?** -- O juiz analisa se a polícia agiu corretamente
+2. **Houve tortura ou maus-tratos?** -- O preso pode relatar se sofreu violência durante a prisão
+3. **A prisão deve ser mantida?** -- O juiz decide se o preso ficará preso (prisão preventiva) ou se pode ser solto
 
-### Direitos na Audiencia de Custodia
+### Direitos na Audiência de Custódia
 
-- O preso **sera ouvido** pessoalmente pelo juiz
-- A **Defensoria Publica** estara presente (se nao houver advogado particular)
-- O **Ministerio Publico** tambem participa
-- O juiz pode decidir **soltar** o preso com ou sem condicoes (fianca, tornozeleira, proibicao de sair da cidade, etc.)
+- O preso **será ouvido** pessoalmente pelo juiz
+- A **Defensoria Pública** estara presente (se não houver advogado particular)
+- O **Ministerio Público** também participa
+- O juiz pode decidir **soltar** o preso com ou sem condições (fianca, tornozeleira, proibicao de sair da cidade, etc.)
 
-> **O que a familia pode fazer:** Se voce sabe que um familiar foi preso, entre em contato com a Defensoria Publica para acompanhar a audiencia de custodia. O defensor vai atuar na defesa do preso.
+> **O que a família pode fazer:** Se você sabe que um familiar foi preso, entre em contato com a Defensoria Pública para acompanhar a audiência de custódia. O defensor vai atuar na defesa do preso.
 
 ---
 
 ## 3. Direito de Visita
 
-O preso tem direito de receber visitas. Isso esta na lei e nao pode ser negado sem motivo justo.
+O preso tem direito de receber visitas. Isso está na lei e não pode ser negado sem motivo justo.
 
 ### Quem Pode Visitar
 
-- Conjuge ou companheiro(a)
+- Cônjuge ou companheiro(a)
 - Filhos e filhas
 - Pais e irmaos
 - Outros parentes
-- **Amigos** tambem podem visitar (a visita nao e restrita a parentes)
+- **Amigos** também podem visitar (a visita não e restrita a parentes)
 
 ### Como Funciona a Visita no DF
 
 | Etapa | O Que Fazer |
 |-------|-------------|
-| **1. Cadastro previo** | Faca o cadastro junto a unidade prisional onde a pessoa esta presa |
-| **2. Documentos necessarios** | Leve RG, CPF e comprovante de residencia |
+| **1. Cadastro prévio** | Faca o cadastro junto a unidade prisional onde a pessoa está presa |
+| **2. Documentos necessários** | Leve RG, CPF e comprovante de residência |
 | **3. Antecedentes** | Algumas unidades podem pedir atestado de antecedentes criminais |
-| **4. Dia e horario** | Os dias e horarios sao definidos pela direcao do presidio |
+| **4. Dia e horário** | Os dias e horários sao definidos pela direcao do presidio |
 
 ### Visita Intima
 
-A visita intima (entre o preso e seu conjuge ou companheiro) **tambem e um direito reconhecido**. As regras variam conforme a unidade prisional.
+A visita intima (entre o preso e seu cônjuge ou companheiro) **também é um direito reconhecido**. As regras variam conforme a unidade prisional.
 
-> **Se a visita for negada sem justificativa:** Procure a Defensoria Publica para garantir esse direito. O telefone e (61) 2196-4300.
+> **Se a visita for negada sem justificativa:** Procure a Defensoria Pública para garantir esse direito. O telefone e (61) 2196-4300.
 
 ---
 
-## 4. Auxilio-Reclusao
+## 4. Auxílio-Reclusão
 
-O auxilio-reclusao e um beneficio pago pelo INSS a **familia do preso**, para ajudar no sustento enquanto a pessoa esta na prisao.
+O auxílio-reclusão é um benefício pago pelo INSS a **família do preso**, para ajudar no sustento enquanto a pessoa está na prisão.
 
 ### Quem Tem Direito de Receber
 
 Os **dependentes** do preso:
 
-- Conjuge ou companheiro(a)
-- Filhos menores de 21 anos (ou invalidos/com deficiencia, sem limite de idade)
+- Cônjuge ou companheiro(a)
+- Filhos menores de 21 anos (ou invalidos/com deficiência, sem limite de idade)
 - Pais (se comprovarem que dependiam financeiramente do preso)
 
 ### Requisitos
 
-Para a familia receber o auxilio-reclusao, e necessario que:
+Para a família receber o auxílio-reclusão, é necessário que:
 
 | Requisito | Explicacao |
 |-----------|-----------|
-| **Segurado do INSS** | O preso deve ter sido contribuinte do INSS antes da prisao |
-| **24 meses de contribuicao** | Deve ter contribuido por pelo menos 24 meses (carencia) |
-| **Baixa renda** | O ultimo salario de contribuicao deve estar abaixo do limite legal |
-| **Preso efetivamente** | O preso deve estar recolhido a prisao (regime fechado ou semiaberto) |
+| **Segurado do INSS** | O preso deve ter sido contribuinte do INSS antes da prisão |
+| **24 meses de contribuição** | Deve ter contribuido por pelo menos 24 meses (carência) |
+| **Baixa renda** | O ultimo salário de contribuição deve estar abaixo do limite legal |
+| **Preso efetivamente** | O preso deve estar recolhido a prisão (regime fechado ou semiaberto) |
 
-### Valor do Beneficio
+### Valor do Benefício
 
-**1 salario minimo por mes** (R$ 1.518,00 em 2025).
+**1 salário mínimo por mês** (R$ 1.518,00 em 2025).
 
 ### Como Solicitar
 
 1. Acesse o site ou aplicativo **Meu INSS** (https://meu.inss.gov.br/)
 2. Ou ligue para o **135** (Central do INSS)
-3. Documentos necessarios:
-   - Certidao de recolhimento a prisao (peca na unidade prisional)
+3. Documentos necessários:
+   - Certidao de recolhimento a prisão (peca na unidade prisional)
    - Documentos do preso (RG, CPF, carteira de trabalho)
-   - Documentos dos dependentes (certidao de nascimento dos filhos, certidao de casamento ou declaracao de uniao estavel)
+   - Documentos dos dependentes (certidao de nascimento dos filhos, certidao de casamento ou declaração de uniao estável)
 
-### Quando o Beneficio Acaba
+### Quando o Benefício Acaba
 
 - Quando o preso e **solto** (qualquer forma de soltura)
 - Quando o preso **foge** do presidio
-- Quando o dependente **perde essa condicao** (exemplo: filho completa 21 anos)
+- Quando o dependente **perde essa condição** (exemplo: filho completa 21 anos)
 
-> **Dica:** Mesmo que o preso nao tenha carteira assinada no momento da prisao, se ele contribuiu anteriormente por pelo menos 24 meses e estava dentro do "periodo de graca" (tempo em que mantem a qualidade de segurado), a familia pode ter direito ao beneficio. Procure o INSS para verificar.
+> **Dica:** Mesmo que o preso não tenha carteira assinada no momento da prisão, se ele contribuiu anteriormente por pelo menos 24 meses e estava dentro do "período de graca" (tempo em que mantem a qualidade de segurado), a família pode ter direito ao benefício. Procure o INSS para verificar.
 
 ---
 
-## 5. Legitima Defesa -- Nocoes Basicas
+## 5. Legítima Defesa -- Nocoes Basicas
 
-A lei permite que voce se defenda quando sofre uma agressao injusta. Mas existem regras para isso.
+A lei permite que você se defenda quando sofre uma agressão injusta. Mas existem regras para isso.
 
 ### O Que Diz a Lei
 
-A legitima defesa acontece quando alguem, usando os meios necessarios de forma moderada, **repele uma agressao injusta que esta acontecendo ou prestes a acontecer**.
+A legítima defesa acontece quando alguém, usando os meios necessários de forma moderada, **repele uma agressão injusta que está acontecendo ou prestes a acontecer**.
 
 ### Requisitos -- Todos Devem Estar Presentes
 
 | Requisito | O Que Significa | Exemplo |
 |-----------|-----------------|---------|
-| **Agressao injusta** | O agressor nao tinha direito de atacar voce | Tentativa de roubo ou agressao gratuita |
-| **Atual ou iminente** | A agressao esta acontecendo naquele momento ou vai acontecer agora | Nao vale para agressao que ja terminou |
-| **Defesa propria ou de terceiro** | Voce pode defender a si mesmo ou outra pessoa | Proteger um filho de agressao |
-| **Meios necessarios** | Usar o que estiver disponivel para se defender | Proporcional a agressao que esta sofrendo |
-| **Uso moderado** | Nao usar mais forca do que o necessario | Parar quando a agressao cessar |
+| **Agressão injusta** | O agressor não tinha direito de atacar você | Tentativa de roubo ou agressão gratuita |
+| **Atual ou iminente** | A agressão esta acontecendo naquele momento ou vai acontecer agora | Não vale para agressão que já terminou |
+| **Defesa própria ou de terceiro** | Você pode defender a si mesmo ou outra pessoa | Proteger um filho de agressão |
+| **Meios necessários** | Usar o que estiver disponível para se defender | Proporcional a agressão que está sofrendo |
+| **Uso moderado** | Não usar mais forca do que o necessário | Parar quando a agressão cessar |
 
-### O Que NAO e Legitima Defesa
+### O Que NAO e Legítima Defesa
 
-- **Vinganca:** A agressao ja acabou e voce vai atras do agressor depois
-- **Excesso:** Usar forca muito maior que a necessaria
-- **Provocacao:** Provocar alguem de proposito para depois alegar defesa
-- **Ameaca futura e incerta:** "Um dia ele vai me pegar" nao justifica acao preventiva
+- **Vinganca:** A agressão já acabou e você vai atrás do agressor depois
+- **Excesso:** Usar forca muito maior que a necessária
+- **Provocacao:** Provocar alguém de proposito para depois alegar defesa
+- **Ameaca futura e incerta:** "Um dia ele vai me pegar" não justifica ação preventiva
 
-### Se Voce Precisou Se Defender -- Passo a Passo
+### Se Você Precisou Se Defender -- Passo a Passo
 
-1. **Pare** imediatamente quando a agressao cessar -- nao continue
-2. **Ligue 190** (Policia Militar) na hora
-3. **Nao fuja** do local -- fugir pode ser interpretado como culpa
-4. **Registre BO** dizendo que agiu em legitima defesa
+1. **Pare** imediatamente quando a agressão cessar -- não continue
+2. **Ligue 190** (Polícia Militar) na hora
+3. **Não fuja** do local -- fugir pode ser interpretado como culpa
+4. **Registre BO** dizendo que agiu em legítima defesa
 5. **Identifique testemunhas** que possam confirmar o que aconteceu
-6. **Procure a Defensoria Publica** o mais rapido possivel -- (61) 2196-4300
+6. **Procure a Defensoria Pública** o mais rapido possível -- (61) 2196-4300
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | WhatsApp Criminal (Defensoria) | (61) 98349-2485 / (61) 98297-0064 |
-| INSS (auxilio-reclusao) | 135 |
+| INSS (auxílio-reclusão) | 135 |
 | Meu INSS (site) | meu.inss.gov.br |
-| Policia Militar (emergencia) | 190 |
+| Polícia Militar (emergência) | 190 |
 | Disque Direitos Humanos | 100 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Lei de Execucao Penal -- Lei 7.210/1984: https://www.planalto.gov.br/ccivil_03/leis/l7210compilado.htm
-- Codigo Penal -- Art. 25 (Legitima Defesa): https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
-- Gov.br -- Auxilio-Reclusao: https://www.gov.br/secom/pt-br/fatos/brasil-contra-fake/noticias/2023/10/o-que-voce-precisa-saber-sobre-auxilio-reclusao
-- Defensoria Publica do DF: https://www.defensoria.df.gov.br
+- Lei de Execução Penal -- Lei 7.210/1984: https://www.planalto.gov.br/ccivil_03/leis/l7210compilado.htm
+- Código Penal -- Art. 25 (Legítima Defesa): https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
+- Gov.br -- Auxílio-Reclusão: https://www.gov.br/secom/pt-br/fatos/brasil-contra-fake/noticias/2023/10/o-que-você-precisa-saber-sobre-auxílio-reclusão
+- Defensoria Pública do DF: https://www.defensoria.df.gov.br
 `
         },
       ]
     },
     {
       id: `08-acesso-justica`,
-      title: `Acesso a Justica -- Guia Pratico`,
+      title: `Acesso a Justica -- Guia Prático`,
       icon: `balance-scale`,
-      readme: `# Acesso a Justica -- Guia Pratico
+      readme: `# Acesso a Justica -- Guia Prático
 
-Bem-vindo a secao de **Acesso a Justica** do Manual Vicentino. Aqui voce encontra informacoes sobre como buscar ajuda juridica gratuita no Distrito Federal, mesmo sem ter dinheiro para pagar advogado. A Justica e um direito de todos, nao so de quem pode pagar.
+Bem-vindo a seção de **Acesso a Justica** do Manual Vicentino. Aqui você encontra informações sobre como buscar ajuda jurídica gratuita no Distrito Federal, mesmo sem ter dinheiro para pagar advogado. A Justica é um direito de todos, não só de quem pode pagar.
 
 ---
 
-## O Que Voce Vai Encontrar Nesta Secao
+## O Que Você Vai Encontrar Nesta Seção
 
 | N. | Tema | Descricao |
 |----|------|-----------|
-| 01 | [Defensoria Publica do DF](01-defensoria-publica-df.md) | Todos os nucleos com enderecos e telefones, como agendar atendimento e documentos necessarios. |
-| 02 | [Justica Gratuita](02-justica-gratuita.md) | O que e, quem tem direito e como solicitar a isencao de custas judiciais. |
-| 03 | [Juizados Especiais](03-juizados-especiais.md) | Como resolver problemas na Justica de forma rapida e gratuita, sem precisar de advogado. |
-| 04 | [Nucleos de Pratica Juridica de Universidades](04-nucleos-universidades.md) | Universidades que oferecem atendimento juridico gratuito no DF. |
+| 01 | [Defensoria Pública do DF](01-defensoria-pública-df.md) | Todos os nucleos com endereços e telefones, como agendar atendimento e documentos necessários. |
+| 02 | [Justica Gratuita](02-justica-gratuita.md) | O que é, quem tem direito e como solicitar a isenção de custas judiciais. |
+| 03 | [Juizados Especiais](03-juizados-especiais.md) | Como resolver problemas na Justica de forma rapida é gratuita, sem precisar de advogado. |
+| 04 | [Nucleos de Prática Jurídica de Universidades](04-nucleos-universidades.md) | Universidades que oferecem atendimento jurídico gratuito no DF. |
 
 ---
 
 ## Por Onde Comecar?
 
-Se voce precisa de ajuda juridica e nao tem dinheiro para advogado:
+Se você precisa de ajuda jurídica e não tem dinheiro para advogado:
 
-1. **Ligue para a Defensoria Publica do DF** -- (61) 2196-4300. Eles vao orientar voce sobre o que fazer.
-2. **Para problemas simples** (ate 20 salarios minimos), va direto ao **Juizado Especial** -- voce nao precisa de advogado.
-3. **Se nao conseguir atendimento na Defensoria**, procure os **nucleos de pratica juridica das universidades** -- eles tambem atendem de graca.
+1. **Ligue para a Defensoria Pública do DF** -- (61) 2196-4300. Eles vao orientar você sobre o que fazer.
+2. **Para problemas simples** (até 20 salários minimos), va direto ao **Juizado Especial** -- você não precisa de advogado.
+3. **Se não conseguir atendimento na Defensoria**, procure os **nucleos de prática jurídica das universidades** -- eles também atendem de graca.
 
-> **Lembre-se:** A Constituicao Federal garante assistencia juridica integral e gratuita a quem nao pode pagar. Esse e um direito seu. Nao deixe de buscar ajuda por vergonha ou medo.
+> **Lembre-se:** A Constituição Federal garante assistência jurídica integral é gratuita a quem não pode pagar. Esse é um direito seu. Não deixe de buscar ajuda por vergonha ou medo.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | WhatsApp Civel (Defensoria) | (61) 98272-6829 |
 | WhatsApp Criminal (Defensoria) | (61) 98349-2485 |
 | Agendamento online (DF) | agenda.df.gov.br |
@@ -7250,19 +7250,19 @@ Se voce precisa de ajuda juridica e nao tem dinheiro para advogado:
 `,
       pages: [
         {
-          id: `01-defensoria-publica-df`,
-          title: `Defensoria Publica do DF -- Assistencia Juridica Gratuita`,
-          content: `# Defensoria Publica do DF -- Assistencia Juridica Gratuita
+          id: `01-defensoria-pública-df`,
+          title: `Defensoria Pública do DF -- Assistência Jurídica Gratuita`,
+          content: `# Defensoria Pública do DF -- Assistência Jurídica Gratuita
 
-A Defensoria Publica do Distrito Federal e o orgao que presta **assistencia juridica integral e gratuita** a pessoas que nao podem pagar advogado. Se voce precisa de ajuda com qualquer problema juridico -- divorcio, pensao alimenticia, problemas trabalhistas, defesa criminal, questoes de moradia, beneficios negados -- a Defensoria pode ajudar.
+A Defensoria Pública do Distrito Federal é o órgão que presta **assistência jurídica integral é gratuita** a pessoas que não podem pagar advogado. Se você precisa de ajuda com qualquer problema jurídico -- divorcio, pensão alimentícia, problemas trabalhistas, defesa criminal, questoes de moradia, benefícios negados -- a Defensoria pode ajudar.
 
 ---
 
 ## 1. Quem Pode Ser Atendido
 
-A Defensoria Publica atende pessoas que **nao tem condicoes de pagar advogado** sem comprometer o sustento da familia. Voce nao precisa ser miseravel -- basta comprovar que pagar um advogado particular prejudicaria seu orcamento.
+A Defensoria Pública atende pessoas que **não tem condições de pagar advogado** sem comprometer o sustento da família. Você não precisa ser miseravel -- basta comprovar que pagar um advogado particular prejudicaria seu orcamento.
 
-> **Dica:** Na duvida, procure a Defensoria mesmo assim. Eles vao avaliar sua situacao e orientar voce.
+> **Dica:** Na duvida, procure a Defensoria mesmo assim. Eles vao avaliar sua situação e orientar você.
 
 ---
 
@@ -7273,34 +7273,34 @@ O primeiro passo e entrar em contato com a Central de Relacionamento:
 | Canal | Contato |
 |-------|---------|
 | **Telefone** | (61) 2196-4300 |
-| **Horario** | 9h as 17h, dias uteis |
+| **Horário** | 9h as 17h, dias úteis |
 | **WhatsApp Civel** | (61) 98272-6829 |
 | **WhatsApp Criminal** | (61) 98349-2485 e (61) 98297-0064 |
 | **Agendamento online** | https://agenda.df.gov.br |
 
 ---
 
-## 3. Nucleos Regionais -- Enderecos e Contatos
+## 3. Nucleos Regionais -- Endereços e Contatos
 
 A Defensoria tem nucleos espalhados pelo Distrito Federal para atender a populacao de diferentes regioes:
 
-| Nucleo | Endereco | Contato |
+| Nucleo | Endereço | Contato |
 |--------|----------|---------|
 | **Brasilia** | Forum de Brasilia, Praca Municipal, Lote 1 | (61) 2196-4300 |
 | **Taguatinga** | CNB 03, Lote 07, Setor Comercial Norte | (61) 2196-4586 / WhatsApp: (61) 98244-5928 |
 | **Ceilandia** | Forum de Ceilandia, QNM 11, Area Especial n. 01 | WhatsApp: (61) 98349-2485 |
-| **Samambaia** | Forum Des. Raimundo Macedo, Centro Urbano, Q. 302, Conj. 01, Lt. 01, Samambaia Sul | WhatsApp Familia: (61) 99458-3470 / WhatsApp Civel: (61) 98349-4258 |
-| **Gama** | Forum do Gama | Atraves da CRC: (61) 2196-4300 |
-| **Paranoa / Itapoa** | Forum do Paranoa | Atraves da CRC: (61) 2196-4300 |
-| **Recanto das Emas** | Forum do Recanto das Emas | Atraves da CRC: (61) 2196-4300 |
+| **Samambaia** | Forum Des. Raimundo Macedo, Centro Urbano, Q. 302, Conj. 01, Lt. 01, Samambaia Sul | WhatsApp Família: (61) 99458-3470 / WhatsApp Civel: (61) 98349-4258 |
+| **Gama** | Forum do Gama | Através da CRC: (61) 2196-4300 |
+| **Paranoa / Itapoa** | Forum do Paranoa | Através da CRC: (61) 2196-4300 |
+| **Recanto das Emas** | Forum do Recanto das Emas | Através da CRC: (61) 2196-4300 |
 
 ### Defensoria nas Unidades Na Hora
 
 - **Na Hora Taguatinga:** CNB 03, Lote 07, Setor Comercial Norte, Taguatinga
 
-### Defensoria Publica da Uniao (DPU)
+### Defensoria Pública da Uniao (DPU)
 
-Para questoes que envolvem orgaos federais (INSS, justica federal, Uniao), procure a **Defensoria Publica da Uniao**, que tambem esta disponivel nas unidades Na Hora.
+Para questoes que envolvem órgãos federais (INSS, justica federal, Uniao), procure a **Defensoria Pública da Uniao**, que também esta disponível nas unidades Na Hora.
 
 ---
 
@@ -7308,20 +7308,20 @@ Para questoes que envolvem orgaos federais (INSS, justica federal, Uniao), procu
 
 ### Passo a Passo
 
-1. **Ligue para a Central de Relacionamento:** (61) 2196-4300 (dias uteis, 9h as 17h)
+1. **Ligue para a Central de Relacionamento:** (61) 2196-4300 (dias úteis, 9h as 17h)
 2. **Ou acesse o agendamento online:** https://agenda.df.gov.br
 3. **Ou envie mensagem por WhatsApp** para o nucleo da sua regiao (veja tabela acima)
-4. Informe qual e o seu problema juridico
-5. Agende dia e horario para atendimento
+4. Informe qual é o seu problema jurídico
+5. Agende dia e horário para atendimento
 
 ### Plantao Para Casos Urgentes
 
-Para situacoes que **nao podem esperar** o horario normal de atendimento:
+Para situações que **não podem esperar** o horário normal de atendimento:
 
-- **Apos as 19h em dias uteis**
+- **Após as 19h em dias úteis**
 - **24 horas aos sabados, domingos e feriados**
 
-> **Exemplos de casos urgentes:** Prisao em flagrante, violencia domestica com risco imediato, internacao compulsoria, mandado de despejo com prazo curto.
+> **Exemplos de casos urgentes:** Prisão em flagrante, violência doméstica com risco imediato, internacao compulsoria, mandado de despejo com prazo curto.
 
 ---
 
@@ -7332,59 +7332,59 @@ Leve tudo que puder para facilitar e agilizar o atendimento:
 ### Documentos Pessoais
 
 - RG e CPF
-- Comprovante de residencia atualizado
-- Comprovante de renda (contracheque, extrato bancario, declaracao de trabalho informal)
+- Comprovante de residência atualizado
+- Comprovante de renda (contracheque, extrato bancario, declaração de trabalho informal)
 - Carteira de trabalho (se tiver)
 
 ### Documentos Sobre o Problema
 
 Depende do tipo de caso, mas leve tudo que tiver:
 
-| Tipo de Problema | Documentos Uteis |
+| Tipo de Problema | Documentos Úteis |
 |------------------|------------------|
-| **Familia** (divorcio, pensao, guarda) | Certidao de casamento, certidao de nascimento dos filhos, comprovante de renda do outro |
-| **Trabalhista** | Carteira de trabalho, contracheque, carta de demissao, extrato FGTS |
-| **Criminal** | Boletim de Ocorrencia, laudos medicos, fotos, prints de mensagens |
+| **Família** (divorcio, pensão, guarda) | Certidao de casamento, certidao de nascimento dos filhos, comprovante de renda do outro |
+| **Trabalhista** | Carteira de trabalho, contracheque, carta de demissão, extrato FGTS |
+| **Criminal** | Boletim de Ocorrência, laudos médicos, fotos, prints de mensagens |
 | **Consumidor** | Nota fiscal, contrato, comprovantes de pagamento, prints de conversa |
-| **Moradia** | Contrato de aluguel, notificacao de despejo, comprovante de pagamento |
-| **Beneficios** (INSS, BPC) | Carta de indeferimento, laudos medicos, documentos do CadUnico |
+| **Moradia** | Contrato de aluguel, notificação de despejo, comprovante de pagamento |
+| **Benefícios** (INSS, BPC) | Carta de indeferimento, laudos médicos, documentos do CadUnico |
 
-> **Importante:** Mesmo que voce nao tenha todos os documentos, va ao atendimento. O defensor vai orientar sobre o que ainda precisa.
+> **Importante:** Mesmo que você não tenha todos os documentos, va ao atendimento. O defensor vai orientar sobre o que ainda precisa.
 
 ---
 
-## 6. O Que a Defensoria Pode Fazer Por Voce
+## 6. O Que a Defensoria Pode Fazer Por Você
 
-A Defensoria Publica atua em praticamente todas as areas do Direito:
+A Defensoria Pública atua em praticamente todas as areas do Direito:
 
-- **Direito de familia:** divorcio, pensao alimenticia, guarda de filhos, reconhecimento de paternidade
+- **Direito de família:** divorcio, pensão alimentícia, guarda de filhos, reconhecimento de paternidade
 - **Direito criminal:** defesa de acusados, acompanhamento de presos, habeas corpus
-- **Direito do consumidor:** acoes contra empresas, planos de saude, bancos
+- **Direito do consumidor:** ações contra empresas, planos de saúde, bancos
 - **Direito a moradia:** defesa contra despejo, regularizacao fundiaria
-- **Direito previdenciario:** beneficios do INSS negados (BPC, aposentadoria, auxilio-doenca)
-- **Direito a saude:** acoes para obter medicamentos e tratamentos pelo SUS
-- **Violencia domestica:** medidas protetivas, acompanhamento da vitima
+- **Direito previdenciário:** benefícios do INSS negados (BPC, aposentadoria, auxílio-doenca)
+- **Direito a saúde:** ações para obter medicamentos e tratamentos pelo SUS
+- **Violência doméstica:** medidas protetivas, acompanhamento da vítima
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | Central da Defensoria DF | (61) 2196-4300 |
 | WhatsApp Civel | (61) 98272-6829 |
 | WhatsApp Criminal | (61) 98349-2485 / (61) 98297-0064 |
-| WhatsApp Familia (Samambaia) | (61) 99458-3470 |
+| WhatsApp Família (Samambaia) | (61) 99458-3470 |
 | Agendamento online | agenda.df.gov.br |
 | Site da Defensoria | www.defensoria.df.gov.br |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Defensoria Publica do DF -- Nucleos Regionais: https://www.defensoria.df.gov.br/?page_id=434
-- Defensoria Publica do DF -- Site oficial: https://www.defensoria.df.gov.br
-- Constituicao Federal -- Art. 5o, LXXIV (Assistencia juridica gratuita): https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+- Defensoria Pública do DF -- Nucleos Regionais: https://www.defensoria.df.gov.br/?page_id=434
+- Defensoria Pública do DF -- Site oficial: https://www.defensoria.df.gov.br
+- Constituição Federal -- Art. 5o, LXXIV (Assistência jurídica gratuita): https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm
 - Agendamento DF: https://agenda.df.gov.br
 `
         },
@@ -7393,47 +7393,47 @@ A Defensoria Publica atua em praticamente todas as areas do Direito:
           title: `Justica Gratuita -- Como Usar a Justica Sem Pagar`,
           content: `# Justica Gratuita -- Como Usar a Justica Sem Pagar
 
-Muitas pessoas deixam de buscar seus direitos na Justica porque acham que e caro. Mas a lei garante que quem nao pode pagar custas judiciais tem direito a **justica gratuita**. Isso significa que voce pode entrar com acao judicial sem gastar nenhum centavo.
+Muitas pessoas deixam de buscar seus direitos na Justica porque acham que e caro. Mas a lei garante que quem não pode pagar custas judiciais tem direito a **justica gratuita**. Isso significa que você pode entrar com ação judicial sem gastar nenhum centavo.
 
 ---
 
 ## 1. O Que e Justica Gratuita
 
-Justica gratuita (tambem chamada de "gratuidade de justica") e a **isencao de todas as custas e despesas** de um processo judicial. Quem recebe esse beneficio nao precisa pagar nada para usar a Justica.
+Justica gratuita (também chamada de "gratuidade de justica") é a **isenção de todas as custas e despesas** de um processo judicial. Quem recebe esse benefício não precisa pagar nada para usar a Justica.
 
 ### O Que a Justica Gratuita Cobre
 
-| Despesa | Voce Paga? |
+| Despesa | Você Paga? |
 |---------|-----------|
-| Custas judiciais e taxa judiciaria | **Nao** |
-| Despesas com publicacoes no Diario de Justica | **Nao** |
-| Honorarios de advogado (se perder a causa) | **Nao** |
-| Honorarios de perito (quando necessario) | **Nao** |
-| Despesas com certidoes e documentos | **Nao** |
-| Depositos judiciais | **Nao** |
-| Despesas com traducao (se necessario) | **Nao** |
+| Custas judiciais e taxa judiciaria | **Não** |
+| Despesas com publicacoes no Diario de Justica | **Não** |
+| Honorarios de advogado (se perder a causa) | **Não** |
+| Honorarios de perito (quando necessário) | **Não** |
+| Despesas com certidoes e documentos | **Não** |
+| Depositos judiciais | **Não** |
+| Despesas com traducao (se necessário) | **Não** |
 
-> **Resumindo:** A justica gratuita cobre praticamente tudo. Voce nao paga para entrar com a acao, nao paga durante o processo e nao paga se perder.
+> **Resumindo:** A justica gratuita cobre praticamente tudo. Você não paga para entrar com a ação, não paga durante o processo e não paga se perder.
 
 ---
 
 ## 2. Quem Tem Direito
 
-Tem direito a justica gratuita toda pessoa que **nao pode pagar as custas do processo sem comprometer o sustento proprio ou da familia**.
+Tem direito a justica gratuita toda pessoa que **não pode pagar as custas do processo sem comprometer o sustento próprio ou da família**.
 
-### O Que Voce Precisa Saber
+### O Que Você Precisa Saber
 
-- **Nao precisa ser miseravel** para ter direito -- basta que o pagamento das custas prejudique seu sustento
-- **Nao existe um limite de renda fixo** na lei -- o juiz analisa caso a caso
+- **Não precisa ser miseravel** para ter direito -- basta que o pagamento das custas prejudique seu sustento
+- **Não existe um limite de renda fixo** na lei -- o juiz analisa caso a caso
 - Pessoas inscritas no **CadUnico** e beneficiarios de programas sociais geralmente tem o pedido aprovado com facilidade
-- Mesmo quem tem emprego pode pedir, se a renda nao for suficiente para cobrir as custas sem prejudicar a familia
+- Mesmo quem tem emprego pode pedir, se a renda não for suficiente para cobrir as custas sem prejudicar a família
 
 ### Base Legal
 
-O direito a justica gratuita esta previsto em:
+O direito a justica gratuita está previsto em:
 
-- **Constituicao Federal, Art. 5o, LXXIV** -- "O Estado prestara assistencia juridica integral e gratuita aos que comprovarem insuficiencia de recursos"
-- **Codigo de Processo Civil, Art. 98** -- Define as regras da gratuidade de justica
+- **Constituição Federal, Art. 5o, LXXIV** -- "O Estado prestara assistência jurídica integral é gratuita aos que comprovarem insuficiencia de recursos"
+- **Código de Processo Civil, Art. 98** -- Define as regras da gratuidade de justica
 
 ---
 
@@ -7443,77 +7443,77 @@ O direito a justica gratuita esta previsto em:
 
 | Etapa | O Que Fazer |
 |-------|-------------|
-| **1. Declare que nao pode pagar** | Basta fazer uma declaracao simples dizendo que nao tem condicoes de arcar com as custas do processo |
-| **2. Inclua no processo** | O pedido pode ser feito na propria peticao inicial (documento que inicia o processo) |
-| **3. Ou peca ao defensor publico** | Se voce for atendido pela Defensoria Publica, o defensor ja inclui o pedido automaticamente |
+| **1. Declare que não pode pagar** | Basta fazer uma declaração simples dizendo que não tem condições de arcar com as custas do processo |
+| **2. Inclua no processo** | O pedido pode ser feito na própria petição inicial (documento que inicia o processo) |
+| **3. Ou peca ao defensor público** | Se você for atendido pela Defensoria Pública, o defensor já inclui o pedido automaticamente |
 
 ### Formas de Solicitar
 
-**Se voce tem advogado ou defensor publico:**
-- O proprio advogado ou defensor inclui o pedido de justica gratuita na peticao inicial
-- Basta uma declaracao de hipossuficiencia assinada por voce
+**Se você tem advogado ou defensor público:**
+- O próprio advogado ou defensor inclui o pedido de justica gratuita na petição inicial
+- Basta uma declaração de hipossuficiencia assinada por você
 
-**Se voce esta nos Juizados Especiais sem advogado:**
-- Ao iniciar o processo, informe que nao pode pagar custas
-- O servidor do Juizado vai orientar voce sobre como formalizar o pedido
+**Se você está nos Juizados Especiais sem advogado:**
+- Ao iniciar o processo, informe que não pode pagar custas
+- O servidor do Juizado vai orientar você sobre como formalizar o pedido
 
-> **Importante:** Para pessoa fisica, basta uma **simples declaracao** de que nao pode pagar. Voce nao precisa comprovar renda com documentos, a nao ser que o juiz peca (o que e raro).
-
----
-
-## 4. Posso Perder o Beneficio?
-
-Sim, em situacoes especificas:
-
-- Se o juiz descobrir que voce **pode pagar** as custas e fez declaracao falsa
-- Se sua **situacao financeira melhorar** durante o processo
-
-> **Atencao:** Fazer declaracao falsa de pobreza pode ser considerado crime. Seja honesto ao pedir o beneficio.
+> **Importante:** Para pessoa física, basta uma **simples declaração** de que não pode pagar. Você não precisa comprovar renda com documentos, a não ser que o juiz peca (o que é raro).
 
 ---
 
-## 5. Justica Gratuita e a Mesma Coisa que Defensoria Publica?
+## 4. Posso Perder o Benefício?
 
-**Nao.** Sao coisas diferentes, mas complementares:
+Sim, em situações específicas:
+
+- Se o juiz descobrir que você **pode pagar** as custas e fez declaração falsa
+- Se sua **situação financeira melhorar** durante o processo
+
+> **Atenção:** Fazer declaração falsa de pobreza pode ser considerado crime. Seja honesto ao pedir o benefício.
+
+---
+
+## 5. Justica Gratuita é a Mesma Coisa que Defensoria Pública?
+
+**Não.** Sao coisas diferentes, mas complementares:
 
 | Conceito | O Que E |
 |----------|---------|
-| **Justica gratuita** | Isencao de custas e despesas do processo judicial |
-| **Defensoria Publica** | Orgao que fornece advogado gratuito para quem nao pode pagar |
+| **Justica gratuita** | Isenção de custas e despesas do processo judicial |
+| **Defensoria Pública** | Órgão que fornece advogado gratuito para quem não pode pagar |
 
-Voce pode ter justica gratuita mesmo com advogado particular (ele so nao cobra de voce). E pode usar a Defensoria Publica e ter justica gratuita ao mesmo tempo.
+Você pode ter justica gratuita mesmo com advogado particular (ele só não cobra de você). E pode usar a Defensoria Pública e ter justica gratuita ao mesmo tempo.
 
 ---
 
 ## 6. Perguntas Frequentes
 
 **Preciso levar algum documento para pedir justica gratuita?**
-Em geral, basta sua declaracao. Mas e bom ter em maos comprovante de renda, inscricao no CadUnico ou carteira de trabalho, caso o juiz peca.
+Em geral, basta sua declaração. Mas e bom ter em maos comprovante de renda, inscrição no CadUnico ou carteira de trabalho, caso o juiz peca.
 
 **Estou trabalhando. Ainda posso pedir?**
-Sim. O que importa e que pagar as custas comprometeria seu sustento. Ter emprego nao impede o pedido.
+Sim. O que importa é que pagar as custas comprometeria seu sustento. Ter emprego não impede o pedido.
 
 **Se eu perder o processo, vou ter que pagar algo?**
-Com justica gratuita, voce nao paga custas nem honorarios do advogado da outra parte, mesmo perdendo. Porem, essa isencao pode ser revista se sua situacao financeira mudar nos 5 anos seguintes.
+Com justica gratuita, você não paga custas nem honorarios do advogado da outra parte, mesmo perdendo. Porém, essa isenção pode ser revista se sua situação financeira mudar nos 5 anos seguintes.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | WhatsApp Civel (Defensoria) | (61) 98272-6829 |
 | TJDFT (Juizados Especiais) | www.tjdft.jus.br |
 | Agendamento DF | agenda.df.gov.br |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal -- Art. 5o, LXXIV: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
-- Codigo de Processo Civil -- Art. 98 a 102 (Justica Gratuita): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm
-- Defensoria Publica do DF: https://www.defensoria.df.gov.br
+- Constituição Federal -- Art. 5o, LXXIV: https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm
+- Código de Processo Civil -- Art. 98 a 102 (Justica Gratuita): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm
+- Defensoria Pública do DF: https://www.defensoria.df.gov.br
 `
         },
         {
@@ -7521,23 +7521,23 @@ Com justica gratuita, voce nao paga custas nem honorarios do advogado da outra p
           title: `Juizados Especiais -- A Forma Mais Rapida de Resolver Problemas na Justica`,
           content: `# Juizados Especiais -- A Forma Mais Rapida de Resolver Problemas na Justica
 
-Os Juizados Especiais sao a porta de entrada mais acessivel para quem precisa da Justica. Sao mais rapidos que a justica comum, nao cobram custas em primeira instancia e permitem que voce entre com acao **sem precisar de advogado** para causas de menor valor.
+Os Juizados Especiais sao a porta de entrada mais acessível para quem precisa da Justica. Sao mais rapidos que a justica comum, não cobram custas em primeira instancia e permitem que você entre com ação **sem precisar de advogado** para causas de menor valor.
 
 ---
 
 ## 1. O Que Sao os Juizados Especiais
 
-Os Juizados Especiais foram criados para resolver conflitos de forma **rapida, simples e gratuita**. Sao voltados para causas de menor valor e complexidade.
+Os Juizados Especiais foram criados para resolver conflitos de forma **rapida, simples é gratuita**. Sao voltados para causas de menor valor e complexidade.
 
 ### Principais Vantagens
 
 | Vantagem | Explicacao |
 |----------|-----------|
-| **Gratuito** | Nao ha custas nem taxas em primeira instancia |
-| **Sem advogado** | Para causas de ate 20 salarios minimos, voce nao precisa de advogado |
-| **Rapido** | Os processos costumam ser resolvidos em meses (nao em anos) |
+| **Gratuito** | Não ha custas nem taxas em primeira instancia |
+| **Sem advogado** | Para causas de até 20 salários minimos, você não precisa de advogado |
+| **Rapido** | Os processos costumam ser resolvidos em meses (não em anos) |
 | **Conciliacao** | O Juizado tenta primeiro um acordo entre as partes |
-| **Linguagem simples** | O atendimento e feito de forma acessivel |
+| **Linguagem simples** | O atendimento é feito de forma acessível |
 
 ---
 
@@ -7547,19 +7547,19 @@ Os Juizados Especiais foram criados para resolver conflitos de forma **rapida, s
 
 | Valor da Causa | Precisa de Advogado? |
 |----------------|---------------------|
-| Ate **20 salarios minimos** | **Nao** -- voce pode ir sozinho |
-| De **20 a 40 salarios minimos** | **Sim** -- precisa de advogado ou Defensoria Publica |
-| Acima de **40 salarios minimos** | Nao pode usar o Juizado Especial -- va a justica comum |
+| Até **20 salários minimos** | **Não** -- você pode ir sozinho |
+| De **20 a 40 salários minimos** | **Sim** -- precisa de advogado ou Defensoria Pública |
+| Acima de **40 salários minimos** | Não pode usar o Juizado Especial -- va a justica comum |
 
-> **Em 2025:** 1 salario minimo = R$ 1.518,00. Portanto, 20 salarios = R$ 30.360,00 e 40 salarios = R$ 60.720,00.
+> **Em 2025:** 1 salário mínimo = R$ 1.518,00. Portanto, 20 salários = R$ 30.360,00 e 40 salários = R$ 60.720,00.
 
 ### Tipos de Problemas Que os Juizados Resolvem
 
 - Cobrancas de dividas
-- Danos materiais (algo que voce pagou e nao recebeu, produto com defeito)
+- Danos materiais (algo que você pagou e não recebeu, produto com defeito)
 - Danos morais (ofensa, humilhacao, negativacao indevida do nome)
-- Problemas com produtos e servicos (loja, banco, plano de saude)
-- Acidentes de transito (danos materiais)
+- Problemas com produtos e serviços (loja, banco, plano de saúde)
+- Acidentes de trânsito (danos materiais)
 - Problemas de vizinhanca
 - Cheques e notas promissorias
 
@@ -7571,33 +7571,33 @@ Existem **4 formas** de iniciar um processo:
 
 ### Opcao 1 -- Por E-mail
 
-1. Escreva sua peticao em casa (pode ser um texto simples explicando o problema)
+1. Escreva sua petição em casa (pode ser um texto simples explicando o problema)
 2. Envie por e-mail ao Juizado Especial do TJDFT
-3. Informacoes no site: www.tjdft.jus.br/servicos/distribuicao-e-atendimento
+3. Informações no site: www.tjdft.jus.br/serviços/distribuição-e-atendimento
 
 ### Opcao 2 -- Por Chamada de Video (NUREVI)
 
 1. Agende uma chamada de video com o TJDFT
-2. Um servidor vai redigir sua peticao durante a chamada
-3. Voce nao precisa sair de casa
+2. Um servidor vai redigir sua petição durante a chamada
+3. Você não precisa sair de casa
 
-### Opcao 3 -- Presencial Com Peticao Pronta
+### Opcao 3 -- Presencial Com Petição Pronta
 
-1. Prepare sua peticao antes (pode pedir ajuda na Defensoria ou em nucleo de universidade)
+1. Prepare sua petição antes (pode pedir ajuda na Defensoria ou em nucleo de universidade)
 2. Leve ao Nucleo de Atendimento ao Jurisdicionado (NAJ)
 
-### Opcao 4 -- Presencial Sem Peticao
+### Opcao 4 -- Presencial Sem Petição
 
 1. Agende atendimento presencial no NAJ
-2. Um servidor vai redigir sua peticao no local
-3. Voce so precisa contar o que aconteceu
+2. Um servidor vai redigir sua petição no local
+3. Você só precisa contar o que aconteceu
 
-### Endereco do NAJ em Brasilia
+### Endereço do NAJ em Brasilia
 
 - **Local:** Forum Jose Julio Leal Fagundes
-- **Endereco:** SMAS Trecho 3, Lote 4/6, Bloco 4, Terreo
-- **Horario:** Segunda a sexta, 12h as 19h
-- **Site:** www.tjdft.jus.br/servicos/distribuicao-e-atendimento
+- **Endereço:** SMAS Trecho 3, Lote 4/6, Bloco 4, Terreo
+- **Horário:** Segunda a sexta, 12h as 19h
+- **Site:** www.tjdft.jus.br/serviços/distribuição-e-atendimento
 
 ---
 
@@ -7607,16 +7607,16 @@ Leve todos os documentos que comprovem seu problema:
 
 | Documento | Para Que Serve |
 |-----------|----------------|
-| **RG e CPF** | Identificacao |
-| **Comprovante de residencia** | Provar onde voce mora |
+| **RG e CPF** | Identificação |
+| **Comprovante de residência** | Provar onde você mora |
 | **Nota fiscal ou recibo** | Provar a compra ou contratacao |
-| **Contrato** | Provar as condicoes combinadas |
+| **Contrato** | Provar as condições combinadas |
 | **Fotos e prints** | Provar o defeito, a conversa ou o problema |
-| **Comprovantes de pagamento** | Provar que voce pagou |
-| **Orcamentos** | Provar o valor do prejuizo |
-| **Nome e endereco da empresa/pessoa** | Para o Juizado notificar a outra parte |
+| **Comprovantes de pagamento** | Provar que você pagou |
+| **Orcamentos** | Provar o valor do prejuízo |
+| **Nome e endereço da empresa/pessoa** | Para o Juizado notificar a outra parte |
 
-> **Dica:** Leve tudo que puder. Quanto mais provas, melhor. Mas mesmo que nao tenha todos os documentos, procure o Juizado -- eles vao orientar voce.
+> **Dica:** Leve tudo que puder. Quanto mais provas, melhor. Mas mesmo que não tenha todos os documentos, procure o Juizado -- eles vao orientar você.
 
 ---
 
@@ -7624,92 +7624,92 @@ Leve todos os documentos que comprovem seu problema:
 
 | Etapa | O Que Acontece |
 |-------|----------------|
-| **1. Distribuicao** | Voce registra seu pedido no Juizado |
-| **2. Audiencia de conciliacao** | Voce e a outra parte sao chamados para tentar um acordo |
-| **3. Se houver acordo** | O caso e resolvido ali mesmo. O acordo tem forca de sentenca judicial |
-| **4. Se nao houver acordo** | O juiz marca audiencia de instrucao e julgamento, onde ouve testemunhas e analisa provas |
-| **5. Sentenca** | O juiz decide quem tem razao |
-| **6. Cumprimento** | Se a outra parte nao cumprir a decisao, o Juizado pode obrigar (penhora de bens, bloqueio de conta) |
+| **1. Distribuicao** | Você registra seu pedido no Juizado |
+| **2. Audiência de conciliacao** | Você é a outra parte sao chamados para tentar um acordo |
+| **3. Se houver acordo** | O caso e resolvido ali mesmo. O acordo tem forca de sentença judicial |
+| **4. Se não houver acordo** | O juiz marca audiência de instrução e julgamento, onde ouve testemunhas e analisa provas |
+| **5. Sentença** | O juiz decide quem tem razao |
+| **6. Cumprimento** | Se a outra parte não cumprir a decisão, o Juizado pode obrigar (penhora de bens, bloqueio de conta) |
 
 ---
 
 ## 6. Perguntas Frequentes
 
 **Posso pedir danos morais no Juizado?**
-Sim. Se voce sofreu humilhacao, negativacao indevida do nome, ou qualquer situacao que causou sofrimento, pode pedir indenizacao por danos morais.
+Sim. Se você sofreu humilhacao, negativacao indevida do nome, ou qualquer situação que causou sofrimento, pode pedir indenização por danos morais.
 
 **Quanto tempo demora?**
 Em media, os processos nos Juizados Especiais demoram alguns meses. E bem mais rapido que a justica comum, que pode levar anos.
 
 **Se eu perder, tenho que pagar algo?**
-Em primeira instancia, nao. Se voce recorrer e perder o recurso, ai pode ter que pagar custas (exceto se tiver justica gratuita).
+Em primeira instancia, não. Se você recorrer e perder o recurso, ai pode ter que pagar custas (exceto se tiver justica gratuita).
 
 **Empresa pode usar o Juizado?**
-Nao. Nos Juizados Especiais civeis, so pessoas fisicas, microempresas e empresas de pequeno porte podem entrar com acoes.
+Não. Nos Juizados Especiais civeis, só pessoas fisicas, microempresas e empresas de pequeno porte podem entrar com ações.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| TJDFT (informacoes) | www.tjdft.jus.br |
-| Juizados Especiais | www.tjdft.jus.br/servicos/distribuicao-e-atendimento |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| TJDFT (informações) | www.tjdft.jus.br |
+| Juizados Especiais | www.tjdft.jus.br/serviços/distribuição-e-atendimento |
+| Defensoria Pública do DF | (61) 2196-4300 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - Lei dos Juizados Especiais -- Lei 9.099/1995: https://www.planalto.gov.br/ccivil_03/leis/l9099.htm
-- TJDFT -- Juizados Especiais Civeis: https://www.tjdft.jus.br/informacoes/juizados-especiais/juizados-civeis
-- TJDFT -- Como Iniciar Processo nos Juizados Especiais: https://www.tjdft.jus.br/servicos/distribuicao-e-atendimento/como-iniciar-um-processo-nos-juizados-especiais
-- Defensoria Publica do DF: https://www.defensoria.df.gov.br
+- TJDFT -- Juizados Especiais Civeis: https://www.tjdft.jus.br/informações/juizados-especiais/juizados-civeis
+- TJDFT -- Como Iniciar Processo nos Juizados Especiais: https://www.tjdft.jus.br/serviços/distribuição-e-atendimento/como-iniciar-um-processo-nos-juizados-especiais
+- Defensoria Pública do DF: https://www.defensoria.df.gov.br
 `
         },
         {
           id: `04-nucleos-universidades`,
-          title: `Nucleos de Pratica Juridica de Universidades -- Atendimento Juridico Gratuito`,
-          content: `# Nucleos de Pratica Juridica de Universidades -- Atendimento Juridico Gratuito
+          title: `Nucleos de Prática Jurídica de Universidades -- Atendimento Jurídico Gratuito`,
+          content: `# Nucleos de Prática Jurídica de Universidades -- Atendimento Jurídico Gratuito
 
-Alem da Defensoria Publica, varias universidades do Distrito Federal oferecem **atendimento juridico gratuito** para a populacao de baixa renda. Esses atendimentos sao realizados por estudantes de Direito, **supervisionados por professores advogados**, e tem a mesma validade de um atendimento feito por advogado particular.
+Além da Defensoria Pública, varias universidades do Distrito Federal oferecem **atendimento jurídico gratuito** para a populacao de baixa renda. Esses atendimentos sao realizados por estudantes de Direito, **supervisionados por professores advogados**, e tem a mesma validade de um atendimento feito por advogado particular.
 
 ---
 
-## 1. O Que Sao os Nucleos de Pratica Juridica
+## 1. O Que Sao os Nucleos de Prática Jurídica
 
-Os nucleos de pratica juridica sao servicos das faculdades de Direito onde os alunos atendem pessoas reais com problemas juridicos reais, sempre com a orientacao de professores advogados. E uma forma de os alunos aprenderem na pratica e, ao mesmo tempo, ajudarem quem precisa.
+Os nucleos de prática jurídica sao serviços das faculdades de Direito onde os alunos atendem pessoas reais com problemas jurídicos reais, sempre com a orientação de professores advogados. E uma forma de os alunos aprenderem na prática e, ao mesmo tempo, ajudarem quem precisa.
 
 ### Vantagens
 
 - O atendimento e **totalmente gratuito**
 - Os profissionais sao **supervisionados por advogados experientes**
-- Podem entrar com acoes judiciais em seu nome
-- Atendem diversas areas: familia, consumidor, trabalhista, civel
+- Podem entrar com ações judiciais em seu nome
+- Atendem diversas areas: família, consumidor, trabalhista, civel
 
 ---
 
 ## 2. Universidade de Brasilia (UnB)
 
-### Nucleo de Pratica Juridica da UnB
+### Nucleo de Prática Jurídica da UnB
 
 - **Quem atende:** Populacao de baixa renda
-- **Areas de atuacao:** Acoes civeis e de familia (divorcio, pensao alimenticia, guarda de filhos, entre outros)
-- **Equipe:** Cerca de 120 alunos e 11 advogados voluntarios
-- **Atendimento em Ceilandia:** O nucleo tambem atende em Ceilandia, duas vezes por semana
+- **Areas de atuacao:** Ações civeis e de família (divorcio, pensão alimentícia, guarda de filhos, entre outros)
+- **Equipe:** Cerca de 120 alunos e 11 advogados voluntários
+- **Atendimento em Ceilandia:** O nucleo também atende em Ceilandia, duas vezes por semana
 - **Local principal:** Faculdade de Direito da UnB, Campus Darcy Ribeiro, Asa Norte, Brasilia
 - **Site:** http://direito.unb.br
 
-> **Como ser atendido:** Ligue ou va pessoalmente a Faculdade de Direito da UnB e pergunte sobre o Nucleo de Pratica Juridica. Leve seus documentos pessoais e os documentos relacionados ao problema.
+> **Como ser atendido:** Ligue ou va pessoalmente a Faculdade de Direito da UnB e pergunte sobre o Nucleo de Prática Jurídica. Leve seus documentos pessoais e os documentos relacionados ao problema.
 
 ---
 
 ## 3. Centro Universitario de Brasilia (UniCEUB)
 
-### Nucleo de Pratica Juridica do UniCEUB
+### Nucleo de Prática Jurídica do UniCEUB
 
 - **Quem atende:** Populacao de baixa renda do DF
-- **Areas de atuacao:** Direito civil, familia, consumidor e outras areas
+- **Areas de atuacao:** Direito civil, família, consumidor e outras areas
 - **Local:** Campus do UniCEUB, SEPN 707/907, Asa Norte, Brasilia
 - **Contato:** Procure a Faculdade de Direito do UniCEUB
 
@@ -7717,7 +7717,7 @@ Os nucleos de pratica juridica sao servicos das faculdades de Direito onde os al
 
 ## 4. Universidade Catolica de Brasilia (UCB)
 
-### Escritorio de Pratica Juridica da UCB
+### Escritorio de Prática Jurídica da UCB
 
 - **Quem atende:** Populacao de baixa renda
 - **Areas de atuacao:** Diversas areas do Direito
@@ -7726,24 +7726,24 @@ Os nucleos de pratica juridica sao servicos das faculdades de Direito onde os al
 
 ---
 
-## 5. Instituto de Educacao Superior de Brasilia (IESB)
+## 5. Instituto de Educação Superior de Brasilia (IESB)
 
-### Nucleo de Pratica Juridica do IESB
+### Nucleo de Prática Jurídica do IESB
 
 - **Quem atende:** Populacao de baixa renda do DF
-- **Areas de atuacao:** Direito civil, familia, consumidor
-- **Local:** Campus do IESB (verificar endereco atualizado no site da instituicao)
+- **Areas de atuacao:** Direito civil, família, consumidor
+- **Local:** Campus do IESB (verificar endereço atualizado no site da instituição)
 - **Contato:** Procure a Faculdade de Direito do IESB
 
 ---
 
 ## 6. Centro Universitario do Distrito Federal (UDF)
 
-### Nucleo de Pratica Juridica do UDF
+### Nucleo de Prática Jurídica do UDF
 
 - **Quem atende:** Populacao de baixa renda do DF
 - **Areas de atuacao:** Diversas areas do Direito
-- **Local:** Campus do UDF (verificar endereco atualizado no site da instituicao)
+- **Local:** Campus do UDF (verificar endereço atualizado no site da instituição)
 - **Contato:** Procure a Faculdade de Direito do UDF
 
 ---
@@ -7753,20 +7753,20 @@ Os nucleos de pratica juridica sao servicos das faculdades de Direito onde os al
 ### Passo a Passo
 
 1. **Escolha a universidade mais proxima** da sua casa
-2. **Ligue para a faculdade de Direito** da universidade e pergunte sobre o Nucleo de Pratica Juridica
-3. **Agende um horario** de atendimento
-4. **Leve seus documentos:** RG, CPF, comprovante de residencia e comprovante de renda
-5. **Leve os documentos do problema:** contratos, notas fiscais, boletins de ocorrencia, laudos, prints de conversas -- tudo que tiver
-6. **Conte sua situacao** com o maximo de detalhes ao estudante e ao professor supervisor
+2. **Ligue para a faculdade de Direito** da universidade e pergunte sobre o Nucleo de Prática Jurídica
+3. **Agende um horário** de atendimento
+4. **Leve seus documentos:** RG, CPF, comprovante de residência e comprovante de renda
+5. **Leve os documentos do problema:** contratos, notas fiscais, boletins de ocorrência, laudos, prints de conversas -- tudo que tiver
+6. **Conte sua situação** com o máximo de detalhes ao estudante e ao professor supervisor
 
 ### O Que Esperar
 
-- O primeiro atendimento geralmente e uma **entrevista** para entender seu caso
+- O primeiro atendimento geralmente é uma **entrevista** para entender seu caso
 - O nucleo vai analisar se pode aceitar o caso
-- Se aceitar, os estudantes e o professor vao cuidar de todo o processo judicial
-- Voce sera informado sobre o andamento do caso
+- Se aceitar, os estudantes é o professor vao cuidar de todo o processo judicial
+- Você será informado sobre o andamento do caso
 
-> **Dica importante:** Os nucleos de pratica juridica costumam ter **vagas limitadas** e o atendimento pode ter lista de espera. Se nao conseguir vaga, procure a Defensoria Publica do DF -- (61) 2196-4300.
+> **Dica importante:** Os nucleos de prática jurídica costumam ter **vagas limitadas** é o atendimento pode ter lista de espera. Se não conseguir vaga, procure a Defensoria Pública do DF -- (61) 2196-4300.
 
 ---
 
@@ -7774,102 +7774,102 @@ Os nucleos de pratica juridica sao servicos das faculdades de Direito onde os al
 
 | Universidade | Local Principal | O Que Oferece |
 |-------------|-----------------|---------------|
-| **UnB** | Campus Darcy Ribeiro, Asa Norte | Acoes civeis e de familia. Tambem atende em Ceilandia |
+| **UnB** | Campus Darcy Ribeiro, Asa Norte | Ações civeis e de família. Também atende em Ceilandia |
 | **UniCEUB** | SEPN 707/907, Asa Norte | Diversas areas do Direito |
 | **UCB** | QS 07, Lote 1, Aguas Claras / Taguatinga | Diversas areas do Direito |
-| **IESB** | Verificar no site da instituicao | Direito civil, familia, consumidor |
-| **UDF** | Verificar no site da instituicao | Diversas areas do Direito |
+| **IESB** | Verificar no site da instituição | Direito civil, família, consumidor |
+| **UDF** | Verificar no site da instituição | Diversas areas do Direito |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | UnB -- Faculdade de Direito | http://direito.unb.br |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | TJDFT (Juizados Especiais) | www.tjdft.jus.br |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- UnB -- Nucleo de Praticas Juridicas: https://noticias.unb.br/112-extensao-e-comunidade/1519-nucleo-de-praticas-juridicas-da-unb-atende-populacao-de-baixa-renda
-- Defensoria Publica do DF: https://www.defensoria.df.gov.br
+- UnB -- Nucleo de Praticas Juridicas: https://noticias.unb.br/112-extensão-e-comunidade/1519-nucleo-de-práticas-jurídicas-da-unb-atende-populacao-de-baixa-renda
+- Defensoria Pública do DF: https://www.defensoria.df.gov.br
 `
         },
       ]
     },
     {
       id: `09-direitos-fundamentais`,
-      title: `Direitos Fundamentais -- Guia Pratico`,
+      title: `Direitos Fundamentais -- Guia Prático`,
       icon: `landmark`,
-      readme: `# Direitos Fundamentais -- Guia Pratico
+      readme: `# Direitos Fundamentais -- Guia Prático
 
-Bem-vindo a secao de **Direitos Fundamentais** do Manual Vicentino. Aqui voce encontra, em linguagem simples, os direitos mais importantes garantidos pela **Constituicao Federal** e pela **Lei Organica do Distrito Federal** para pessoas em situacao de vulnerabilidade.
+Bem-vindo a seção de **Direitos Fundamentais** do Manual Vicentino. Aqui você encontra, em linguagem simples, os direitos mais importantes garantidos pela **Constituição Federal** e pela **Lei Organica do Distrito Federal** para pessoas em situação de vulnerabilidade.
 
 ---
 
-## O Que Voce Vai Encontrar Nesta Secao
+## O Que Você Vai Encontrar Nesta Seção
 
 | N. | Tema | Descricao |
 |----|------|-----------|
-| 01 | [Constituicao Federal -- Direitos Sociais](01-constituicao-direitos-sociais.md) | Os artigos da Constituicao que mais importam para voce: igualdade, saude, educacao, moradia, trabalho, assistencia social e protecao a criancas e idosos. |
-| 02 | [Lei Organica do DF](02-lei-organica-df.md) | Direitos sociais especificos do Distrito Federal: moradia, participacao popular, programas sociais e o papel das administracoes regionais. |
+| 01 | [Constituição Federal -- Direitos Sociais](01-constituição-direitos-sociais.md) | Os artigos da Constituição que mais importam para você: igualdade, saúde, educação, moradia, trabalho, assistência social e proteção a crianças e idosos. |
+| 02 | [Lei Organica do DF](02-lei-organica-df.md) | Direitos sociais específicos do Distrito Federal: moradia, participação popular, programas sociais é o papel das administrações regionais. |
 
 ---
 
 ## Por Que Conhecer Seus Direitos Fundamentais?
 
-Os direitos fundamentais sao aqueles que a lei considera **tao importantes** que ninguem pode tirar de voce -- nem o governo, nem uma empresa, nem outra pessoa. Eles estao na Constituicao Federal, que e a lei mais importante do pais.
+Os direitos fundamentais sao aqueles que a lei considera **tao importantes** que ninguém pode tirar de você -- nem o governo, nem uma empresa, nem outra pessoa. Eles estão na Constituição Federal, que é a lei mais importante do pais.
 
-Conhecer esses direitos ajuda voce a:
+Conhecer esses direitos ajuda você a:
 
-1. **Saber o que pode exigir** do governo (saude, educacao, moradia, assistencia social)
+1. **Saber o que pode exigir** do governo (saúde, educação, moradia, assistência social)
 2. **Se defender** quando seus direitos forem violados
 3. **Procurar a Justica** com mais confianca, sabendo que a lei esta do seu lado
 
-> **Importante:** Esses direitos existem para todos, mas sao especialmente importantes para quem mais precisa. Se o Estado nao esta cumprindo com o que a lei garante, voce pode exigir na Justica -- com a ajuda da Defensoria Publica, de forma gratuita.
+> **Importante:** Esses direitos existem para todos, mas sao especialmente importantes para quem mais precisa. Se o Estado não esta cumprindo com o que a lei garante, você pode exigir na Justica -- com a ajuda da Defensoria Pública, de forma gratuita.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Disque Direitos Humanos | 100 |
 | Central do GDF | 156 |
 | CODHAB (moradia) | (61) 3214-1830 |
 `,
       pages: [
         {
-          id: `01-constituicao-direitos-sociais`,
-          title: `Constituicao Federal -- Seus Direitos Mais Importantes`,
-          content: `# Constituicao Federal -- Seus Direitos Mais Importantes
+          id: `01-constituição-direitos-sociais`,
+          title: `Constituição Federal -- Seus Direitos Mais Importantes`,
+          content: `# Constituição Federal -- Seus Direitos Mais Importantes
 
-A Constituicao Federal e a **lei mais importante do Brasil**. Ela foi criada em 1988 e garante direitos fundamentais para todas as pessoas. Nenhuma outra lei pode ir contra o que esta na Constituicao. Neste capitulo, voce vai conhecer os artigos que mais importam para quem vive em situacao de vulnerabilidade.
+A Constituição Federal é a **lei mais importante do Brasil**. Ela foi criada em 1988 e garante direitos fundamentais para todas as pessoas. Nenhuma outra lei pode ir contra o que está na Constituição. Neste capítulo, você vai conhecer os artigos que mais importam para quem vive em situação de vulnerabilidade.
 
 ---
 
 ## 1. Art. 5o -- Igualdade e Direitos Individuais
 
-O Artigo 5o e considerado o coracao da Constituicao. Ele garante que **todos sao iguais perante a lei**, sem distincao de raca, cor, sexo, religiao ou origem.
+O Artigo 5o é considerado o coracao da Constituição. Ele garante que **todos sao iguais perante a lei**, sem distincao de raca, cor, sexo, religiao ou origem.
 
 ### Direitos Mais Importantes do Art. 5o
 
-| Direito | O Que Significa Para Voce |
+| Direito | O Que Significa Para Você |
 |---------|---------------------------|
-| **Igualdade** | Ninguem pode ser tratado de forma diferente por causa da cor, sexo, religiao, idade ou condicao social |
-| **Proibicao de tortura** | Ninguem pode ser torturado nem tratado de forma desumana -- nem pela policia, nem em presidios |
-| **Direito de peticao gratuito** | Voce pode enviar pedido ou reclamacao a qualquer orgao publico sem pagar nada |
-| **Acesso a Justica** | Nenhum direito seu pode ser ignorado pela Justica. Se voce foi prejudicado, pode processar |
-| **Racismo e crime grave** | Racismo e crime inafiancavel (sem direito a fianca) e imprescritivel (pode ser processado a qualquer tempo) |
-| **Assistencia juridica gratuita** | Quem nao pode pagar advogado tem direito a Defensoria Publica, de graca |
-| **Certidao de nascimento e obito gratuitas** | Para quem e reconhecidamente pobre, o registro civil e de graca |
-| **Habeas corpus gratuito** | Se alguem for preso ilegalmente, pode pedir habeas corpus sem pagar nada |
+| **Igualdade** | Ninguém pode ser tratado de forma diferente por causa da cor, sexo, religiao, idade ou condição social |
+| **Proibicao de tortura** | Ninguém pode ser torturado nem tratado de forma desumana -- nem pela polícia, nem em presidios |
+| **Direito de petição gratuito** | Você pode enviar pedido ou reclamação a qualquer órgão público sem pagar nada |
+| **Acesso a Justica** | Nenhum direito seu pode ser ignorado pela Justica. Se você foi prejudicado, pode processar |
+| **Racismo é crime grave** | Racismo é crime inafiancavel (sem direito a fianca) e imprescritivel (pode ser processado a qualquer tempo) |
+| **Assistência jurídica gratuita** | Quem não pode pagar advogado tem direito a Defensoria Pública, de graca |
+| **Certidao de nascimento e óbito gratuitas** | Para quem e reconhecidamente pobre, o registro civil e de graca |
+| **Habeas corpus gratuito** | Se alguém for preso ilegalmente, pode pedir habeas corpus sem pagar nada |
 
-> **Na pratica:** Se voce sofreu discriminacao, violencia, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituicao esta do seu lado. Procure a Defensoria Publica -- (61) 2196-4300.
+> **Na prática:** Se você sofreu discriminacao, violência, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituição esta do seu lado. Procure a Defensoria Pública -- (61) 2196-4300.
 
 ---
 
@@ -7877,150 +7877,150 @@ O Artigo 5o e considerado o coracao da Constituicao. Ele garante que **todos sao
 
 O Artigo 6o lista os direitos sociais que o Estado e **obrigado** a garantir para toda a populacao:
 
-> "Sao direitos sociais a educacao, a saude, a alimentacao, o trabalho, a moradia, o transporte, o lazer, a seguranca, a previdencia social, a protecao a maternidade e a infancia, a assistencia aos desamparados."
+> "Sao direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção a maternidade é a infância, a assistência aos desamparados."
 
-### O Que Isso Significa Na Pratica
+### O Que Isso Significa Na Prática
 
 | Direito Social | O Que o Estado Deve Garantir |
 |----------------|------------------------------|
-| **Educacao** | Escola publica gratuita para todos, da creche a universidade |
-| **Saude** | Atendimento pelo SUS para qualquer pessoa, sem discriminacao |
-| **Alimentacao** | Programas de seguranca alimentar (Bolsa Familia, restaurantes comunitarios) |
+| **Educação** | Escola pública gratuita para todos, da creche a universidade |
+| **Saúde** | Atendimento pelo SUS para qualquer pessoa, sem discriminacao |
+| **Alimentação** | Programas de segurança alimentar (Bolsa Família, restaurantes comunitarios) |
 | **Trabalho** | Politicas de geracao de emprego e renda |
-| **Moradia** | Programas habitacionais para quem nao tem onde morar |
-| **Transporte** | Transporte publico acessivel |
-| **Previdencia social** | Aposentadoria, auxilio-doenca, salario-maternidade |
-| **Assistencia social** | BPC/LOAS, CRAS, CREAS, programas de protecao social |
+| **Moradia** | Programas habitacionais para quem não tem onde morar |
+| **Transporte** | Transporte público acessível |
+| **Previdência social** | Aposentadoria, auxílio-doenca, salário-maternidade |
+| **Assistência social** | BPC/LOAS, CRAS, CREAS, programas de proteção social |
 
-> **Importante:** Se o Estado nao esta cumprindo algum desses direitos (por exemplo: negou vaga em creche, negou medicamento pelo SUS, negou um beneficio), voce pode **exigir na Justica**. A Defensoria Publica pode entrar com acao para obrigar o governo a cumprir.
+> **Importante:** Se o Estado não esta cumprindo algum desses direitos (por exemplo: negou vaga em creche, negou medicamento pelo SUS, negou um benefício), você pode **exigir na Justica**. A Defensoria Pública pode entrar com ação para obrigar o governo a cumprir.
 
 ### Esses Direitos Podem Ser Retirados?
 
-**Nao.** Os direitos sociais sao considerados **clausulas petreas** -- isso quer dizer que nenhuma lei, emenda ou governo pode retira-los da Constituicao. Eles sao permanentes.
+**Não.** Os direitos sociais sao considerados **clausulas petreas** -- isso quer dizer que nenhuma lei, emenda ou governo pode retira-los da Constituição. Eles sao permanentes.
 
 ---
 
 ## 3. Art. 7o -- Direitos do Trabalhador
 
-O Artigo 7o garante os direitos de quem trabalha com carteira assinada. Mesmo que voce trabalhe de forma informal, e bom conhecer esses direitos:
+O Artigo 7o garante os direitos de quem trabalha com carteira assinada. Mesmo que você trabalhe de forma informal, e bom conhecer esses direitos:
 
 | Direito | O Que Garante |
 |---------|---------------|
-| **Salario minimo** | Um valor capaz de atender as necessidades basicas do trabalhador e da familia |
-| **13o salario** | Uma gratificacao extra no final do ano |
-| **FGTS** | Fundo de garantia depositado pelo empregador todo mes |
+| **Salário mínimo** | Um valor capaz de atender as necessidades básicas do trabalhador e da família |
+| **13o salário** | Uma gratificacao extra no final do ano |
+| **FGTS** | Fundo de garantia depositado pelo empregador todo mês |
 | **Seguro-desemprego** | Ajuda financeira para quem foi demitido sem justa causa |
-| **Jornada maxima** | 8 horas por dia e 44 horas por semana |
-| **Ferias remuneradas** | 30 dias de ferias por ano, com acrescimo de 1/3 do salario |
-| **Licenca-maternidade** | 120 dias de afastamento para a mae, sem perder emprego nem salario |
+| **Jornada máxima** | 8 horas por dia e 44 horas por semana |
+| **Ferias remuneradas** | 30 dias de ferias por ano, com acrescimo de 1/3 do salário |
+| **Licenca-maternidade** | 120 dias de afastamento para a mae, sem perder emprego nem salário |
 | **Licenca-paternidade** | 5 dias de afastamento para o pai |
-| **Aviso previo** | Minimo de 30 dias de aviso antes da demissao |
+| **Aviso prévio** | Mínimo de 30 dias de aviso antes da demissão |
 | **Adicional noturno** | Pagamento maior para quem trabalha a noite |
-| **Protecao contra demissao arbitraria** | Multa de 40% sobre o FGTS em caso de demissao sem justa causa |
+| **Proteção contra demissão arbitraria** | Multa de 40% sobre o FGTS em caso de demissão sem justa causa |
 
-> **Dica:** Se voce trabalha com carteira assinada e algum desses direitos nao esta sendo cumprido, procure a Defensoria Publica ou o Ministerio do Trabalho. Se trabalha sem carteira, voce pode pedir o reconhecimento do vinculo trabalhista na Justica.
-
----
-
-## 4. Art. 196 -- Saude e Direito de Todos
-
-> "A saude e direito de todos e dever do Estado."
-
-### O Que a Constituicao Garante Sobre Saude
-
-- O **SUS** deve atender **qualquer pessoa**, tenha ou nao plano de saude
-- Ninguem pode ser **recusado** em hospital publico
-- O SUS deve fornecer **medicamentos** necessarios ao tratamento
-- Se o SUS nao tiver o medicamento ou procedimento, voce pode **pedir na Justica** (com laudo medico)
-
-> **Na pratica:** Se o SUS negar um medicamento ou cirurgia que o medico receitou, procure a Defensoria Publica com o laudo medico. Eles podem entrar com acao para obrigar o SUS a fornecer o tratamento.
+> **Dica:** Se você trabalha com carteira assinada e algum desses direitos não está sendo cumprido, procure a Defensoria Pública ou o Ministerio do Trabalho. Se trabalha sem carteira, você pode pedir o reconhecimento do vínculo trabalhista na Justica.
 
 ---
 
-## 5. Arts. 203 e 204 -- Assistencia Social
+## 4. Art. 196 -- Saúde e Direito de Todos
 
-### Art. 203 -- Quem Tem Direito a Assistencia Social
+> "A saúde é direito de todos é dever do Estado."
 
-A assistencia social e para **quem dela necessitar**, independentemente de ter contribuido ao INSS. Os objetivos incluem:
+### O Que a Constituição Garante Sobre Saúde
 
-- Protecao a familia, maternidade, infancia, adolescencia e velhice
-- Amparo a criancas e adolescentes carentes
+- O **SUS** deve atender **qualquer pessoa**, tenha ou não plano de saúde
+- Ninguém pode ser **recusado** em hospital público
+- O SUS deve fornecer **medicamentos** necessários ao tratamento
+- Se o SUS não tiver o medicamento ou procedimento, você pode **pedir na Justica** (com laudo médico)
+
+> **Na prática:** Se o SUS negar um medicamento ou cirurgia que o médico receitou, procure a Defensoria Pública com o laudo médico. Eles podem entrar com ação para obrigar o SUS a fornecer o tratamento.
+
+---
+
+## 5. Arts. 203 e 204 -- Assistência Social
+
+### Art. 203 -- Quem Tem Direito a Assistência Social
+
+A assistência social e para **quem dela necessitar**, independentemente de ter contribuido ao INSS. Os objetivos incluem:
+
+- Proteção a família, maternidade, infância, adolescencia e velhice
+- Amparo a crianças e adolescentes carentes
 - Geracao de emprego e renda
-- Reabilitacao de pessoas com deficiencia
-- **BPC/LOAS:** Garantia de 1 salario minimo para idosos (65+) e pessoas com deficiencia de baixa renda
+- Reabilitacao de pessoas com deficiência
+- **BPC/LOAS:** Garantia de 1 salário mínimo para idosos (65+) e pessoas com deficiência de baixa renda
 
-### BPC -- Beneficio de Prestacao Continuada
+### BPC -- Benefício de Prestação Continuada
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |-----------|---------|
-| **Quem tem direito** | Idosos com 65 anos ou mais E pessoas com deficiencia, que comprovem nao ter meios de se manter |
-| **Renda exigida** | Renda familiar por pessoa inferior a 1/4 do salario minimo |
-| **Valor** | 1 salario minimo por mes (R$ 1.518,00 em 2025) |
-| **Contribuicao ao INSS** | Nao precisa ter contribuido |
+| **Quem tem direito** | Idosos com 65 anos ou mais E pessoas com deficiência, que comprovem não ter meios de se manter |
+| **Renda exigida** | Renda familiar por pessoa inferior a 1/4 do salário mínimo |
+| **Valor** | 1 salário mínimo por mês (R$ 1.518,00 em 2025) |
+| **Contribuição ao INSS** | Não precisa ter contribuido |
 | **Como pedir** | Pelo site/app Meu INSS ou pela Central 135 |
 
-### Art. 204 -- Organizacao da Assistencia Social
+### Art. 204 -- Organização da Assistência Social
 
-- As acoes de assistencia social sao financiadas pelo orcamento publico
-- A populacao tem direito de **participar** na formulacao das politicas sociais e no controle das acoes do governo
+- As ações de assistência social sao financiadas pelo orcamento público
+- A populacao tem direito de **participar** na formulacao das politicas sociais e no controle das ações do governo
 
 ---
 
-## 6. Art. 227 -- Protecao a Crianca e ao Adolescente
+## 6. Art. 227 -- Proteção a Criança e ao Adolescente
 
-> "E dever da familia, da sociedade e do Estado assegurar a crianca, ao adolescente e ao jovem, com absoluta prioridade, o direito a vida, a saude, a alimentacao, a educacao, ao lazer, a dignidade, ao respeito, a liberdade e a convivencia familiar e comunitaria."
+> "E dever da família, da sociedade e do Estado assegurar a criança, ao adolescente e ao jovem, com absoluta prioridade, o direito a vida, a saúde, a alimentação, a educação, ao lazer, a dignidade, ao respeito, a liberdade é a convivência familiar e comunitaria."
 
 ### O Que a Lei Garante
 
-- Criancas e adolescentes tem **prioridade absoluta** -- seus direitos vem primeiro
-- Protecao especial contra negligencia, discriminacao, exploracao, violencia e crueldade
-- **Trabalho infantil e proibido** ate 16 anos (exceto como aprendiz a partir de 14)
-- Protecao contra **exploracao sexual**
+- Crianças e adolescentes tem **prioridade absoluta** -- seus direitos vem primeiro
+- Proteção especial contra negligencia, discriminacao, exploracao, violência e crueldade
+- **Trabalho infantil é proibido** até 16 anos (exceto como aprendiz a partir de 14)
+- Proteção contra **exploracao sexual**
 
-### O Que Fazer Se Souber de Violacao
+### O Que Fazer Se Souber de Violação
 
-Qualquer pessoa que saiba de maus-tratos, abandono, violencia ou exploracao de crianca ou adolescente **deve denunciar**:
+Qualquer pessoa que saiba de maus-tratos, abandono, violência ou exploracao de criança ou adolescente **deve denunciar**:
 
 | Canal | Contato |
 |-------|---------|
-| **Disque 100** | Denuncia de violacoes contra criancas, adolescentes, idosos e pessoas com deficiencia |
+| **Disque 100** | Denúncia de violações contra crianças, adolescentes, idosos e pessoas com deficiência |
 | **Conselho Tutelar** | Procure o Conselho Tutelar da sua regiao |
-| **Delegacia da Crianca e Adolescente (DCA)** | Para crimes contra menores |
+| **Delegacia da Criança e Adolescente (DCA)** | Para crimes contra menores |
 
 ---
 
 ## Resumo -- Seus Direitos em Uma Pagina
 
-| Artigo | Direito | O Que Voce Pode Exigir |
+| Artigo | Direito | O Que Você Pode Exigir |
 |--------|---------|------------------------|
-| **Art. 5o** | Igualdade e garantias individuais | Nao ser discriminado, ter acesso a Justica, ter defensor publico gratuito |
-| **Art. 6o** | Direitos sociais | Saude, educacao, moradia, trabalho, assistencia social |
-| **Art. 7o** | Direitos trabalhistas | Salario minimo, ferias, 13o, FGTS, seguro-desemprego |
-| **Art. 196** | Saude | Atendimento pelo SUS, medicamentos, cirurgias |
-| **Arts. 203-204** | Assistencia social | BPC/LOAS, programas sociais, protecao a vulneraveis |
-| **Art. 227** | Protecao a criancas | Prioridade absoluta, protecao contra violencia e exploracao |
+| **Art. 5o** | Igualdade e garantias individuais | Não ser discriminado, ter acesso a Justica, ter defensor público gratuito |
+| **Art. 6o** | Direitos sociais | Saúde, educação, moradia, trabalho, assistência social |
+| **Art. 7o** | Direitos trabalhistas | Salário mínimo, ferias, 13o, FGTS, seguro-desemprego |
+| **Art. 196** | Saúde | Atendimento pelo SUS, medicamentos, cirurgias |
+| **Arts. 203-204** | Assistência social | BPC/LOAS, programas sociais, proteção a vulneráveis |
+| **Art. 227** | Proteção a crianças | Prioridade absoluta, proteção contra violência e exploracao |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Disque Direitos Humanos | 100 |
 | Central da Mulher | 180 |
-| INSS (beneficios) | 135 |
-| SUS (informacoes) | 136 |
+| INSS (benefícios) | 135 |
+| SUS (informações) | 136 |
 | Central do GDF | 156 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
-- Lei Organica da Assistencia Social -- Lei 8.742/1993 (BPC/LOAS): https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm
-- Estatuto da Crianca e do Adolescente -- Lei 8.069/1990: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- Defensoria Publica do DF: https://www.defensoria.df.gov.br
+- Constituição Federal de 1988: https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm
+- Lei Organica da Assistência Social -- Lei 8.742/1993 (BPC/LOAS): https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm
+- Estatuto da Criança e do Adolescente -- Lei 8.069/1990: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- Defensoria Pública do DF: https://www.defensoria.df.gov.br
 `
         },
         {
@@ -8028,22 +8028,22 @@ Qualquer pessoa que saiba de maus-tratos, abandono, violencia ou exploracao de c
           title: `Lei Organica do DF -- Seus Direitos no Distrito Federal`,
           content: `# Lei Organica do DF -- Seus Direitos no Distrito Federal
 
-A Lei Organica do Distrito Federal (LODF) funciona como a "Constituicao" do DF. Foi criada em **8 de junho de 1993** e define os direitos e deveres especificos dos moradores do Distrito Federal. Ela complementa a Constituicao Federal com regras proprias para a nossa regiao.
+A Lei Organica do Distrito Federal (LODF) funciona como a "Constituição" do DF. Foi criada em **8 de junho de 1993** e define os direitos é deveres específicos dos moradores do Distrito Federal. Ela complementa a Constituição Federal com regras próprias para a nossa regiao.
 
 ---
 
-## 1. O Que e a Lei Organica do DF
+## 1. O Que é a Lei Organica do DF
 
-Enquanto cada estado tem sua Constituicao Estadual, o Distrito Federal tem a **Lei Organica**. Ela organiza o funcionamento do governo local e garante direitos sociais especificos para quem mora no DF.
+Enquanto cada estado tem sua Constituição Estadual, o Distrito Federal tem a **Lei Organica**. Ela organiza o funcionamento do governo local e garante direitos sociais específicos para quem mora no DF.
 
 ### Prioridades do Distrito Federal
 
 A LODF estabelece que o governo do DF deve:
 
 - Garantir e promover os **direitos humanos**
-- Priorizar **educacao, saude, trabalho, transporte, seguranca, moradia, saneamento basico, lazer e assistencia social**
-- Combater as **causas da pobreza** e a desnutricao
-- Promover a **integracao social** das pessoas em situacao vulneravel
+- Priorizar **educação, saúde, trabalho, transporte, segurança, moradia, saneamento básico, lazer e assistência social**
+- Combater as **causas da pobreza** é a desnutricao
+- Promover a **integracao social** das pessoas em situação vulnerável
 - Garantir o **bem-estar** de todos os moradores do DF
 
 ---
@@ -8052,41 +8052,41 @@ A LODF estabelece que o governo do DF deve:
 
 A Lei Organica determina que o governo do DF deve garantir:
 
-### Saude
+### Saúde
 
-- Prestar servicos de **assistencia a saude** para toda a populacao
+- Prestar serviços de **assistência a saúde** para toda a populacao
 - Manter hospitais, UBSs e UPAs funcionando adequadamente
 - Garantir acesso a **medicamentos e tratamentos**
 
-### Assistencia Social
+### Assistência Social
 
-- Proteger **pessoas com deficiencia**
-- Manter programas de **protecao a criancas, adolescentes e idosos**
+- Proteger **pessoas com deficiência**
+- Manter programas de **proteção a crianças, adolescentes e idosos**
 - Garantir **CRAS e CREAS** funcionando nas regioes administrativas
-- Implementar programas de **geracao de emprego e renda** para populacoes vulneraveis
+- Implementar programas de **geracao de emprego e renda** para populacoes vulneráveis
 
-### Saneamento Basico
+### Saneamento Básico
 
 - Garantir **agua tratada e esgoto** para todas as regioes administrativas
-- Nenhuma regiao do DF pode ser deixada sem esses servicos basicos
+- Nenhuma regiao do DF pode ser deixada sem esses serviços básicos
 
-### Educacao
+### Educação
 
-- Garantir **escola publica gratuita** para todos
-- Oferecer **creches e pre-escolas** para criancas de 0 a 5 anos
-- Manter programas de **educacao de jovens e adultos** (EJA)
+- Garantir **escola pública gratuita** para todos
+- Oferecer **creches e pre-escolas** para crianças de 0 a 5 anos
+- Manter programas de **educação de jovens e adultos** (EJA)
 
 ---
 
 ## 3. Direito a Moradia no DF
 
-A Lei Organica determina que o governo do DF deve promover **programas habitacionais** para a populacao de baixa renda. O orgao responsavel por isso e a **CODHAB-DF** (Companhia de Desenvolvimento Habitacional do DF).
+A Lei Organica determina que o governo do DF deve promover **programas habitacionais** para a populacao de baixa renda. O órgão responsável por isso é a **CODHAB-DF** (Companhia de Desenvolvimento Habitacional do DF).
 
 ### O Que a CODHAB Faz
 
-| Servico | Descricao |
+| Serviço | Descricao |
 |---------|-----------|
-| **Cadastro habitacional** | Inscricao para programas de moradia popular |
+| **Cadastro habitacional** | Inscrição para programas de moradia popular |
 | **Regularizacao fundiaria** | Legalizacao de terrenos e casas em areas irregulares |
 | **Distribuicao de lotes** | Sorteio e entrega de lotes e unidades habitacionais |
 | **Programas habitacionais** | Construcao de moradias populares subsidiadas |
@@ -8096,90 +8096,90 @@ A Lei Organica determina que o governo do DF deve promover **programas habitacio
 1. Acesse o site **www.codhab.df.gov.br**
 2. Ou va presencialmente a sede da CODHAB
 3. Faca seu cadastro no programa habitacional
-4. Leve documentos pessoais (RG, CPF, comprovante de residencia, comprovante de renda)
+4. Leve documentos pessoais (RG, CPF, comprovante de residência, comprovante de renda)
 5. Mantenha seu cadastro atualizado
 
 **Telefone da CODHAB:** (61) 3214-1830
 
-> **Dica:** Estar inscrito no **Cadastro Unico (CadUnico)** pode facilitar seu acesso aos programas habitacionais. Se voce ainda nao fez o CadUnico, procure o CRAS mais proximo da sua casa.
+> **Dica:** Estar inscrito no **Cadastro Único (CadUnico)** pode facilitar seu acesso aos programas habitacionais. Se você ainda não fez o CadUnico, procure o CRAS mais proximo da sua casa.
 
 ---
 
-## 4. Administracoes Regionais
+## 4. Administrações Regionais
 
-O Distrito Federal nao tem municipios como os outros estados. Em vez disso, o DF e dividido em **Regioes Administrativas (RAs)**, e cada uma tem sua **Administracao Regional**.
+O Distrito Federal não tem municípios como os outros estados. Em vez disso, o DF é dividido em **Regioes Administrativas (RAs)**, e cada uma tem sua **Administração Regional**.
 
-### O Que as Administracoes Regionais Fazem
+### O Que as Administrações Regionais Fazem
 
 | Funcao | Exemplos |
 |--------|----------|
-| **Servicos publicos locais** | Manutencao de ruas, pracas, iluminacao publica |
-| **Canal com o governo** | Receber demandas e reclamacoes dos moradores |
-| **Descentralizacao** | Levar servicos do governo para perto de onde voce mora |
-| **Obras e manutencao** | Tapar buracos, limpar lotes, cuidar de espacos publicos |
+| **Serviços públicos locais** | Manutenção de ruas, pracas, iluminacao pública |
+| **Canal com o governo** | Receber demandas e reclamações dos moradores |
+| **Descentralizacao** | Levar serviços do governo para perto de onde você mora |
+| **Obras e manutenção** | Tapar buracos, limpar lotes, cuidar de espacos públicos |
 
-### Como Pedir Servicos
+### Como Pedir Serviços
 
-- **Central 156 do GDF:** Ligue para pedir servicos publicos na sua regiao (tapar buracos, poda de arvores, iluminacao, limpeza)
-- **Presencialmente:** Va a Administracao Regional da sua cidade
-- **Ouvidoria do GDF:** Para reclamacoes e sugestoes sobre servicos publicos
+- **Central 156 do GDF:** Ligue para pedir serviços públicos na sua regiao (tapar buracos, poda de arvores, iluminacao, limpeza)
+- **Presencialmente:** Va a Administração Regional da sua cidade
+- **Ouvidoria do GDF:** Para reclamações e sugestoes sobre serviços públicos
 
 ---
 
-## 5. Participacao Popular
+## 5. Participação Popular
 
-A Lei Organica garante que a populacao do DF tem direito de **participar das decisoes do governo**. Voce pode participar de varias formas:
+A Lei Organica garante que a populacao do DF tem direito de **participar das decisões do governo**. Você pode participar de varias formas:
 
-### Formas de Participacao
+### Formas de Participação
 
 | Forma | Como Funciona |
 |-------|---------------|
-| **Conselhos de seguranca** | Conselhos comunitarios que discutem seguranca publica na sua regiao |
-| **Audiencias publicas** | Reunioes abertas onde o governo apresenta e discute projetos com a populacao |
-| **Orcamento participativo** | Quando implementado, permite que a populacao ajude a decidir onde o dinheiro publico sera investido |
-| **Direito de peticao** | Voce pode enviar pedido ou reclamacao a qualquer orgao publico, sem pagar nada |
-| **Conselhos de direitos** | Conselhos municipais de saude, educacao, assistencia social -- com participacao da sociedade civil |
+| **Conselhos de segurança** | Conselhos comunitarios que discutem segurança pública na sua regiao |
+| **Audiencias públicas** | Reunioes abertas onde o governo apresenta e discute projetos com a populacao |
+| **Orcamento participativo** | Quando implementado, permite que a populacao ajude a decidir onde o dinheiro público será investido |
+| **Direito de petição** | Você pode enviar pedido ou reclamação a qualquer órgão público, sem pagar nada |
+| **Conselhos de direitos** | Conselhos municipais de saúde, educação, assistência social -- com participação da sociedade civil |
 
-> **Na pratica:** Voce tem o direito de cobrar do governo que ele cumpra suas obrigacoes. Se um servico publico nao esta funcionando na sua regiao, voce pode:
-> - Ligar para o **156** e registrar a reclamacao
-> - Ir a **Administracao Regional** e pedir providencias
-> - Participar de **audiencias publicas** e cobrar os responsaveis
-> - Se nada funcionar, procurar a **Defensoria Publica** para exigir judicialmente
+> **Na prática:** Você tem o direito de cobrar do governo que ele cumpra suas obrigações. Se um serviço público não esta funcionando na sua regiao, você pode:
+> - Ligar para o **156** e registrar a reclamação
+> - Ir a **Administração Regional** e pedir providencias
+> - Participar de **audiencias públicas** e cobrar os responsáveis
+> - Se nada funcionar, procurar a **Defensoria Pública** para exigir judicialmente
 
 ---
 
 ## 6. Perguntas Frequentes
 
-**O que posso fazer se o governo nao esta cumprindo o que a Lei Organica garante?**
-Voce pode reclamar pelos canais oficiais (156, Ouvidoria, Administracao Regional). Se nao resolverem, procure a Defensoria Publica para entrar com acao judicial.
+**O que posso fazer se o governo não esta cumprindo o que a Lei Organica garante?**
+Você pode reclamar pelos canais oficiais (156, Ouvidoria, Administração Regional). Se não resolverem, procure a Defensoria Pública para entrar com ação judicial.
 
 **A Lei Organica garante moradia para todos?**
-A Lei Organica determina que o governo deve ter programas habitacionais para quem precisa. Isso nao significa que todo mundo vai receber uma casa automaticamente, mas o governo e obrigado a manter programas ativos e acessiveis.
+A Lei Organica determina que o governo deve ter programas habitacionais para quem precisa. Isso não significa que todo mundo vai receber uma casa automaticamente, mas o governo e obrigado a manter programas ativos e acessiveis.
 
-**Como fico sabendo das audiencias publicas na minha regiao?**
-Acompanhe o site do GDF, as redes sociais da sua Administracao Regional e os murais informativos nos orgaos publicos da sua cidade. Voce tambem pode ligar para o 156 e perguntar.
+**Como fico sabendo das audiencias públicas na minha regiao?**
+Acompanhe o site do GDF, as redes sociais da sua Administração Regional e os murais informativos nos órgãos públicos da sua cidade. Você também pode ligar para o 156 e perguntar.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | Central do GDF | 156 |
 | CODHAB (moradia) | (61) 3214-1830 |
 | CODHAB (site) | www.codhab.df.gov.br |
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Disque Direitos Humanos | 100 |
 | Ouvidoria do GDF | www.ouvidoria.df.gov.br |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
 - Lei Organica do Distrito Federal (1993): https://www.sinj.df.gov.br/sinj/Norma/66634/Lei_Org_nica__08_06_1993.html
 - CLDF -- Lei Organica do DF: https://www.cl.df.gov.br/-/lei-organica-do-distrito-federal-completa-20-anos
 - CODHAB-DF: https://www.codhab.df.gov.br
-- Constituicao Federal de 1988: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+- Constituição Federal de 1988: https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm
 `
         },
       ]

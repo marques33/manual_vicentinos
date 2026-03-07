@@ -1,47 +1,47 @@
-# Auxilio por Incapacidade Temporaria, Auxilio-Acidente e Periodo de Graca
+# Auxílio por Incapacidade Temporaria, Auxílio-Acidente e Período de Graca
 
-Este arquivo explica tres temas relacionados: o auxilio para quem esta temporariamente doente, o auxilio para quem ficou com sequela de acidente e o periodo de graca (tempo em que voce continua protegido pelo INSS mesmo sem contribuir).
+Este arquivo explica três temas relacionados: o auxílio para quem esta temporariamente doente, o auxílio para quem ficou com sequela de acidente é o período de graca (tempo em que você contínua protegido pelo INSS mesmo sem contribuir).
 
 ---
 
-## 1. Auxilio por Incapacidade Temporaria (antigo "Auxilio-Doenca")
+## 1. Auxílio por Incapacidade Temporaria (antigo "Auxílio-Doenca")
 
-Esse beneficio e para quem esta temporariamente incapaz de trabalhar por causa de doenca ou acidente. E um dos beneficios mais procurados do INSS.
+Esse benefício e para quem esta temporariamente incapaz de trabalhar por causa de doenca ou acidente. E um dos benefícios mais procurados do INSS.
 
 > **Base legal:** Art. 59 da Lei 8.213/91.
 
 ### Quem tem direito
 
-- Ser segurado do INSS (estar contribuindo ou dentro do periodo de graca)
+- Ser segurado do INSS (estar contribuindo ou dentro do período de graca)
 - Estar incapaz de trabalhar por **mais de 15 dias seguidos**
-- Ter cumprido a carencia exigida (veja abaixo)
+- Ter cumprido a carência exigida (veja abaixo)
 
 > **Para trabalhadores com carteira assinada (CLT):** Os primeiros 15 dias de afastamento sao pagos pela empresa. A partir do 16o dia, o INSS assume o pagamento.
 
-### Carencia (tempo minimo de contribuicao)
+### Carência (tempo mínimo de contribuição)
 
-- **Regra geral:** 12 contribuicoes mensais
+- **Regra geral:** 12 contribuições mensais
 
-- **Nao se exige carencia nos seguintes casos:**
-  - Acidente de qualquer tipo (trabalho, transito, domestico)
+- **Não se exige carência nos seguintes casos:**
+  - Acidente de qualquer tipo (trabalho, trânsito, doméstico)
   - Doenca profissional ou do trabalho
   - Doencas graves previstas em lei (cancer, AIDS, tuberculose ativa, cardiopatia grave, cegueira, paralisia irreversivel, entre outras)
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-- **91% da media dos salarios de contribuicao**
-- O valor nao pode ultrapassar a media dos ultimos 12 salarios
+- **91% da media dos salários de contribuição**
+- O valor não pode ultrapassar a media dos ultimos 12 salários
 
-### A Pericia Medica do INSS
+### A Pericia Médica do INSS
 
-A pericia medica e o momento mais importante do processo. E nela que o INSS avalia se voce esta realmente incapaz de trabalhar.
+A pericia médica é o momento mais importante do processo. E nela que o INSS avalia se você está realmente incapaz de trabalhar.
 
 **Existem duas formas de pericia:**
 
-1. **Pericia presencial:** Voce vai ate uma agencia do INSS e e examinado por um perito medico
-2. **Analise documental (Atestmed):** Voce envia o atestado medico digitalizado pelo Meu INSS e o beneficio pode ser concedido sem necessidade de ir pessoalmente
+1. **Pericia presencial:** Você vai até uma agência do INSS e e examinado por um perito médico
+2. **Análise documental (Atestmed):** Você envia o atestado médico digitalizado pelo Meu INSS é o benefício pode ser concedido sem necessidade de ir pessoalmente
 
-> **Novidade:** A Portaria Conjunta MPS/INSS no 83/2025 ampliou o prazo maximo de beneficio concedido por analise documental para 60 dias (medida valida ate abril/2026).
+> **Novidade:** A Portaria Conjunta MPS/INSS no 83/2025 ampliou o prazo máximo de benefício concedido por análise documental para 60 dias (medida válida até abril/2026).
 
 ### Passo a Passo para Solicitar
 
@@ -50,149 +50,149 @@ A pericia medica e o momento mais importante do processo. E nela que o INSS aval
 1. Acesse **meu.inss.gov.br** ou abra o aplicativo "Meu INSS"
 2. Faca login com sua conta gov.br
 3. Clique em **"Novo Pedido"**
-4. Selecione **"Auxilio por Incapacidade Temporaria"**
-5. Anexe o atestado medico (deve conter: CID da doenca, tempo de afastamento sugerido e data)
-6. O sistema vai direcionar para analise documental ou agendar pericia presencial
+4. Selecione **"Auxílio por Incapacidade Temporaria"**
+5. Anexe o atestado médico (deve conter: CID da doenca, tempo de afastamento sugerido e data)
+6. O sistema vai direcionar para análise documental ou agendar pericia presencial
 
 **Pelo telefone 135:**
 
 1. Ligue para **135** (segunda a sabado, das 7h as 22h)
 2. Informe seu CPF e dados pessoais
-3. Solicite o agendamento de pericia ou o requerimento do beneficio
+3. Solicite o agendamento de pericia ou o requerimento do benefício
 
-### Documentos Necessarios
+### Documentos Necessários
 
 - RG e CPF
-- Atestado medico com CID, tempo de afastamento e data
-- Laudos medicos e exames complementares
+- Atestado médico com CID, tempo de afastamento e data
+- Laudos médicos e exames complementares
 - Carteira de Trabalho (CTPS)
-- Comprovantes de contribuicao ao INSS
+- Comprovantes de contribuição ao INSS
 
-### Se o Beneficio Estiver Acabando e Voce Ainda Estiver Doente
+### Se o Benefício Estiver Acabando e Você Ainda Estiver Doente
 
-Voce pode pedir a **prorrogacao** do beneficio:
+Você pode pedir a **prorrogação** do benefício:
 
-1. O pedido deve ser feito nos **15 dias antes** da data em que o beneficio vai acabar
-2. Solicite pelo Meu INSS (opcao "Prorrogacao") ou pelo telefone 135
-3. Se a pericia de prorrogacao demorar mais de 30 dias para ser agendada, o beneficio e **automaticamente prorrogado por mais 30 dias**
+1. O pedido deve ser feito nos **15 dias antes** da data em que o benefício vai acabar
+2. Solicite pelo Meu INSS (opcao "Prorrogação") ou pelo telefone 135
+3. Se a pericia de prorrogação demorar mais de 30 dias para ser agendada, o benefício e **automaticamente prorrogado por mais 30 dias**
 
-> **Dica:** Se a pericia constatar que sua incapacidade e definitiva (permanente), voce pode pedir a **transformacao** do auxilio temporario em aposentadoria por incapacidade permanente.
+> **Dica:** Se a pericia constatar que sua incapacidade e definitiva (permanente), você pode pedir a **transformacao** do auxílio temporário em aposentadoria por incapacidade permanente.
 
 ---
 
-## 2. Auxilio-Acidente
+## 2. Auxílio-Acidente
 
-Esse beneficio e diferente do auxilio por incapacidade temporaria. Ele e para quem sofreu acidente e ficou com **sequela permanente** que reduz a capacidade de trabalho, mas **continua trabalhando**.
+Esse benefício e diferente do auxílio por incapacidade temporária. Ele e para quem sofreu acidente e ficou com **sequela permanente** que reduz a capacidade de trabalho, mas **contínua trabalhando**.
 
 > **Base legal:** Art. 86 da Lei 8.213/91.
 
 ### Quem tem direito
 
-- Ter sofrido acidente de qualquer tipo (trabalho, transito, domestico, etc.)
+- Ter sofrido acidente de qualquer tipo (trabalho, trânsito, doméstico, etc.)
 - Ter ficado com sequela permanente que reduza a capacidade para o trabalho
-- Ser segurado nas categorias: empregado, domestico, trabalhador avulso ou segurado especial
-- **NAO e exigida carencia** (nenhuma contribuicao minima)
+- Ser segurado nas categorias: empregado, doméstico, trabalhador avulso ou segurado especial
+- **NAO é exigida carência** (nenhuma contribuição mínima)
 
-> **Atencao:** Contribuinte individual e segurado facultativo NAO tem direito ao auxilio-acidente.
+> **Atenção:** Contribuinte individual e segurado facultativo NAO tem direito ao auxílio-acidente.
 
-### Quanto voce vai receber
+### Quanto você vai receber
 
-- **50% do salario de beneficio**
-- O beneficio e pago ate voce se aposentar ou falecer
+- **50% do salário de benefício**
+- O benefício é pago até você se aposentar ou falecer
 
-### Diferenca entre o Auxilio por Incapacidade Temporaria e o Auxilio-Acidente
+### Diferenca entre o Auxílio por Incapacidade Temporaria é o Auxílio-Acidente
 
-| Caracteristica | Auxilio por Incapacidade Temporaria | Auxilio-Acidente |
+| Caracteristica | Auxílio por Incapacidade Temporaria | Auxílio-Acidente |
 |----------------|--------------------------------------|------------------|
-| Para que serve | Substituir a renda enquanto esta doente | Indenizar pela perda parcial de capacidade |
-| Tipo de incapacidade | Temporaria e total | Reducao permanente da capacidade |
-| Pode trabalhar? | Nao | Sim, pode e deve continuar trabalhando |
-| Carencia | 12 meses (regra geral) | Nao tem carencia |
-| Valor | 91% da media | 50% do salario de beneficio |
-| Duracao | Enquanto durar a doenca | Ate a aposentadoria ou falecimento |
+| Para que serve | Substituir a renda enquanto está doente | Indenizar pela perda parcial de capacidade |
+| Tipo de incapacidade | Temporaria e total | Redução permanente da capacidade |
+| Pode trabalhar? | Não | Sim, pode e deve continuar trabalhando |
+| Carência | 12 meses (regra geral) | Não tem carência |
+| Valor | 91% da media | 50% do salário de benefício |
+| Duração | Enquanto durar a doenca | Até a aposentadoria ou falecimento |
 
-### Pode acumular com outros beneficios?
+### Pode acumular com outros benefícios?
 
-- **Sim:** com salario ou remuneracao do trabalho (essa e a finalidade do beneficio)
-- **Sim:** com auxilio por incapacidade temporaria de outro acidente diferente
-- **Nao:** com auxilio por incapacidade temporaria da mesma sequela
-- **Nao:** com aposentadoria (o auxilio-acidente cessa quando voce se aposenta, mas e incorporado ao calculo da aposentadoria)
-- **Nao:** com outro auxilio-acidente
+- **Sim:** com salário ou remuneração do trabalho (essa é a finalidade do benefício)
+- **Sim:** com auxílio por incapacidade temporária de outro acidente diferente
+- **Não:** com auxílio por incapacidade temporária da mesma sequela
+- **Não:** com aposentadoria (o auxílio-acidente cessa quando você se aposenta, mas e incorporado ao calculo da aposentadoria)
+- **Não:** com outro auxílio-acidente
 
 ---
 
-## 3. Periodo de Graca
+## 3. Período de Graca
 
-O periodo de graca e um conceito muito importante e pouco conhecido. E o tempo em que voce **continua protegido pelo INSS mesmo sem estar contribuindo**. Isso significa que, durante esse periodo, voce e seus dependentes podem pedir beneficios.
+O período de graca é um conceito muito importante e pouco conhecido. E o tempo em que você **contínua protegido pelo INSS mesmo sem estar contribuindo**. Isso significa que, durante esse período, você e seus dependentes podem pedir benefícios.
 
 > **Base legal:** Art. 15 da Lei 8.213/91.
 
-### Prazos do periodo de graca
+### Prazos do período de graca
 
-| Situacao | Por quanto tempo voce continua protegido |
+| Situação | Por quanto tempo você contínua protegido |
 |----------|------------------------------------------|
-| Esta recebendo beneficio do INSS (aposentadoria, auxilio, etc.) | Sem limite de prazo (enquanto receber) |
-| Parou de contribuir (regra geral) | **12 meses** apos a ultima contribuicao |
-| Terminou de receber auxilio por incapacidade | **12 meses** apos a cessacao |
-| Terminou de receber salario-maternidade | **12 meses** |
-| Saiu da prisao | **12 meses** apos o livramento |
+| Esta recebendo benefício do INSS (aposentadoria, auxílio, etc.) | Sem limite de prazo (enquanto receber) |
+| Parou de contribuir (regra geral) | **12 meses** após a ultima contribuição |
+| Terminou de receber auxílio por incapacidade | **12 meses** após a cessação |
+| Terminou de receber salário-maternidade | **12 meses** |
+| Saiu da prisão | **12 meses** após o livramento |
 | Foi dispensado das Forcas Armadas | **3 meses** |
 | Parou de contribuir como segurado facultativo | **6 meses** |
 
-### O periodo pode ser estendido
+### O período pode ser estendido
 
-O prazo de 12 meses pode aumentar em duas situacoes:
+O prazo de 12 meses pode aumentar em duas situações:
 
 **Mais 12 meses (totalizando 24 meses):**
-- Se voce tiver mais de **120 contribuicoes seguidas** (10 anos) sem ter perdido a qualidade de segurado
+- Se você tiver mais de **120 contribuições seguidas** (10 anos) sem ter perdido a qualidade de segurado
 
-**Mais 12 meses alem disso (totalizando 36 meses):**
-- Se, alem das 120+ contribuicoes, voce comprovar que esta em **situacao de desemprego involuntario**
+**Mais 12 meses além disso (totalizando 36 meses):**
+- Se, além das 120+ contribuições, você comprovar que está em **situação de desemprego involuntario**
 
 ### Como comprovar o desemprego involuntario
 
-Para ter direito a extensao de mais 12 meses por desemprego, voce pode usar:
+Para ter direito a extensão de mais 12 meses por desemprego, você pode usar:
 - Registro no SINE (Sistema Nacional de Emprego)
 - Comprovante de recebimento de seguro-desemprego
 - Carteira de Trabalho sem novo registro de emprego
-- Declaracao do empregador
-- Registro em agencias de emprego
+- Declaração do empregador
+- Registro em agências de emprego
 
-### O que voce pode pedir durante o periodo de graca
+### O que você pode pedir durante o período de graca
 
-- Auxilio por incapacidade temporaria (auxilio-doenca)
+- Auxílio por incapacidade temporária (auxílio-doenca)
 - Aposentadoria por incapacidade permanente
-- Salario-maternidade
-- Seus dependentes ficam protegidos para pensao por morte
-- Seus dependentes ficam protegidos para auxilio-reclusao
+- Salário-maternidade
+- Seus dependentes ficam protegidos para pensão por morte
+- Seus dependentes ficam protegidos para auxílio-reclusão
 
-> **Atencao:** O periodo de graca NAO conta como tempo de contribuicao para fins de aposentadoria. Ele apenas mantem a sua protecao previdenciaria.
+> **Atenção:** O período de graca NAO conta como tempo de contribuição para fins de aposentadoria. Ele apenas mantem a sua proteção previdenciaria.
 
-### Por que isso e importante na pratica
+### Por que isso é importante na prática
 
-Imagine esta situacao: uma mulher foi demitida e, 8 meses depois, descobre que esta gravida. Se ela tiver menos de 10 anos de contribuicao, seu periodo de graca e de 12 meses. Como os 8 meses estao dentro desse prazo, ela ainda e segurada e pode pedir o salario-maternidade.
+Imagine esta situação: uma mulher foi demitida e, 8 meses depois, descobre que está gravida. Se ela tiver menos de 10 anos de contribuição, seu período de graca e de 12 meses. Como os 8 meses estão dentro desse prazo, ela ainda é segurada e pode pedir o salário-maternidade.
 
-Outro exemplo: um homem perde o emprego e, 10 meses depois, sofre um acidente grave. Se ele estiver dentro do periodo de graca, pode pedir o auxilio por incapacidade temporaria normalmente.
+Outro exemplo: um homem perde o emprego e, 10 meses depois, sofre um acidente grave. Se ele estiver dentro do período de graca, pode pedir o auxílio por incapacidade temporária normalmente.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone | Horario |
+| Serviço | Telefone | Horário |
 |---------|----------|---------|
 | Central do INSS | **135** | Segunda a sabado, 7h as 22h |
 | DPU Brasilia | **(61) 3318-4300** | Segunda a sexta, 8h as 18h |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-### Legislacao
-- Lei 8.213/1991 — Plano de Beneficios da Previdencia Social (arts. 15, 59, 86)
-- Emenda Constitucional 103/2019 — Reforma da Previdencia
-- Portaria Conjunta MPS/INSS no 83/2025 — Ampliacao do prazo de analise documental (Atestmed)
-- Art. 26, inciso II, da Lei 8.213/91 — Isencao de carencia para doencas graves
+### Legislação
+- Lei 8.213/1991 — Plano de Benefícios da Previdência Social (arts. 15, 59, 86)
+- Emenda Constitucional 103/2019 — Reforma da Previdência
+- Portaria Conjunta MPS/INSS no 83/2025 — Ampliacao do prazo de análise documental (Atestmed)
+- Art. 26, inciso II, da Lei 8.213/91 — Isenção de carência para doencas graves
 
 ### Fontes consultadas (marco/2026)
 - Portal gov.br/inss
-- Portal gov.br/previdencia
+- Portal gov.br/previdência

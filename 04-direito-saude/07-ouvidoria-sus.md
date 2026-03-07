@@ -1,96 +1,96 @@
 # Ouvidoria do SUS e Como Reclamar
 
-Se voce teve um problema no atendimento de saude — demora excessiva, mau atendimento, falta de medicamento, recusa de atendimento — voce tem o direito de reclamar. Existem varios canais oficiais para isso, e todos sao gratuitos.
+Se você teve um problema no atendimento de saúde — demora excessiva, mau atendimento, falta de medicamento, recusa de atendimento — você tem o direito de reclamar. Existem varios canais oficiais para isso, e todos sao gratuitos.
 
-> **Reclamar e um direito seu. A ouvidoria existe para ouvir voce e cobrar solucoes.**
+> **Reclamar é um direito seu. A ouvidoria existe para ouvir você e cobrar solucoes.**
 
 ---
 
-## Canais de Reclamacao — Ambito Federal
+## Canais de Reclamação — Ambito Federal
 
-### Disque Saude 136
+### Disque Saúde 136
 
-O Disque 136 e a Ouvidoria-Geral do SUS, que atende todo o Brasil.
+O Disque 136 é a Ouvidoria-Geral do SUS, que atende todo o Brasil.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **136** |
-| Horario com atendente | Segunda a sexta, 8h as 20h; sabado, 8h as 18h |
-| Horario automatico | 24 horas |
-| O que aceita | Reclamacoes, denuncias, elogios, sugestoes e pedidos de informacao |
-| Anonimato | Garantido — voce pode reclamar sem se identificar |
+| Horário com atendente | Segunda a sexta, 8h as 20h; sabado, 8h as 18h |
+| Horário automatico | 24 horas |
+| O que aceita | Reclamações, denúncias, elogios, sugestoes e pedidos de informação |
+| Anonimato | Garantido — você pode reclamar sem se identificar |
 
 ### Meu SUS Digital
 
-Voce tambem pode registrar reclamacoes pela internet:
-- Site: https://meususdigital.saude.gov.br
-- Disponivel tambem como aplicativo para celular
+Você também pode registrar reclamações pela internet:
+- Site: https://meususdigital.saúde.gov.br
+- Disponível também como aplicativo para celular
 
 ---
 
-## Canais de Reclamacao — Distrito Federal
+## Canais de Reclamação — Distrito Federal
 
 ### Ouvidoria da SES-DF
 
-A Ouvidoria da Secretaria de Saude do DF e o canal para reclamacoes sobre hospitais, UBS, UPAs e outros servicos de saude do Distrito Federal.
+A Ouvidoria da Secretaria de Saúde do DF é o canal para reclamações sobre hospitais, UBS, UPAs e outros serviços de saúde do Distrito Federal.
 
-| Canal | Informacao |
+| Canal | Informação |
 |-------|-----------|
 | Telefone | **162** (ligacao gratuita de fixo e celular) |
-| Horario | Segunda a sexta, 9h-12h e 14h-17h |
+| Horário | Segunda a sexta, 9h-12h e 14h-17h |
 | Online | Sistema **Participa-DF** (registro e acompanhamento por protocolo) |
 | Presencial | Ed. PO 700, 1. andar — SRTVN 701 Norte, Via W5, Lote D — CEP 70.719-040 |
 
 ---
 
-## Passo a Passo — Como Registrar uma Reclamacao
+## Passo a Passo — Como Registrar uma Reclamação
 
 ### Passo 1 — Escolha o canal
 
-Voce pode reclamar por telefone (136 ou 162), pela internet (Participa-DF ou Meu SUS Digital) ou presencialmente na Ouvidoria.
+Você pode reclamar por telefone (136 ou 162), pela internet (Participa-DF ou Meu SUS Digital) ou presencialmente na Ouvidoria.
 
 ### Passo 2 — Descreva o problema
 
-Informe com o maximo de detalhes possiveis:
-- Qual unidade de saude (nome do hospital, UBS ou UPA)
+Informe com o máximo de detalhes possiveis:
+- Qual unidade de saúde (nome do hospital, UBS ou UPA)
 - Data e hora do ocorrido
 - O que aconteceu
 - Nomes dos profissionais envolvidos (se souber)
 
-> **Dica:** Quanto mais detalhes voce fornecer, mais facil sera resolver o problema. Se tiver fotos, gravacoes ou documentos, guarde-os.
+> **Dica:** Quanto mais detalhes você fornecer, mais fácil será resolver o problema. Se tiver fotos, gravacoes ou documentos, guarde-os.
 
-### Passo 3 — Anote o numero de protocolo
+### Passo 3 — Anote o número de protocolo
 
-Ao registrar a reclamacao, voce recebera um numero de protocolo. **Guarde esse numero.** Ele e a prova de que voce reclamou e permite acompanhar a resposta.
+Ao registrar a reclamação, você receberá um número de protocolo. **Guarde esse número.** Ele é a prova de que você reclamou e permite acompanhar a resposta.
 
 ### Passo 4 — Acompanhe
 
-Voce pode acompanhar o andamento da sua reclamacao:
+Você pode acompanhar o andamento da sua reclamação:
 - Pelo sistema Participa-DF (online)
 - Ligando para o 162
 
 ---
 
-## Quando a Ouvidoria Nao Resolve — Outros Caminhos
+## Quando a Ouvidoria Não Resolve — Outros Caminhos
 
-Se voce reclamou na ouvidoria e o problema nao foi resolvido, existem outros orgaos que podem ajudar:
+Se você reclamou na ouvidoria é o problema não foi resolvido, existem outros órgãos que podem ajudar:
 
-### Defensoria Publica do DF
+### Defensoria Pública do DF
 
-Para quando o direito a saude e negado e voce precisa de ajuda juridica gratuita.
+Para quando o direito a saúde e negado e você precisa de ajuda jurídica gratuita.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **(61) 3318-2000** |
 | Site | www.defensoria.df.gov.br |
 | Quando procurar | Negativa de atendimento, demora excessiva, necessidade de entrar na Justica |
-| Custo | Gratuito para quem nao pode pagar advogado |
+| Custo | Gratuito para quem não pode pagar advogado |
 
-### Ministerio Publico do DF (MPDFT)
+### Ministerio Público do DF (MPDFT)
 
-Para denuncias de irregularidades graves nos servicos de saude.
+Para denúncias de irregularidades graves nos serviços de saúde.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **(61) 3343-6000** |
 | Site | www.mpdft.mp.br |
@@ -98,65 +98,65 @@ Para denuncias de irregularidades graves nos servicos de saude.
 
 ### PROCON-DF
 
-Para problemas com planos de saude ou hospitais privados.
+Para problemas com planos de saúde ou hospitais privados.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **151** |
-| Quando procurar | Negativa de cobertura do plano, cobranca indevida, problemas com hospitais particulares |
+| Quando procurar | Negativa de cobertura do plano, cobrança indevida, problemas com hospitais particulares |
 
 ### CRM-DF (Conselho Regional de Medicina)
 
-Para denuncias sobre a conduta de um medico especifico.
+Para denúncias sobre a conduta de um médico específico.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **(61) 3445-5800** |
-| Quando procurar | Medico que recusou atendimento, erro medico, conduta inadequada |
+| Quando procurar | Médico que recusou atendimento, erro médico, conduta inadequada |
 
-### ANS (Agencia Nacional de Saude Suplementar)
+### ANS (Agência Nacional de Saúde Suplementar)
 
-Para problemas com planos de saude em nivel nacional.
+Para problemas com planos de saúde em nivel nacional.
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |------------|---------|
 | Telefone | **0800 701 9656** |
 | Quando procurar | Reajuste abusivo, negativa de cobertura, descredenciamento indevido |
 
 ---
 
-## Resumo — Qual Canal Usar para Cada Situacao
+## Resumo — Qual Canal Usar para Cada Situação
 
-| Situacao | Canal indicado |
+| Situação | Canal indicado |
 |----------|---------------|
 | Problema em hospital ou UBS do SUS no DF | Ouvidoria SES-DF (162) ou Disque 136 |
 | Problema no SUS em qualquer estado | Disque 136 |
-| Precisa entrar na Justica por direito a saude | Defensoria Publica (61) 3318-2000 |
-| Irregularidade grave no SUS | Ministerio Publico (61) 3343-6000 |
-| Problema com plano de saude | PROCON (151) ou ANS (0800 701 9656) |
-| Denuncia contra medico | CRM-DF (61) 3445-5800 |
+| Precisa entrar na Justica por direito a saúde | Defensoria Pública (61) 3318-2000 |
+| Irregularidade grave no SUS | Ministerio Público (61) 3343-6000 |
+| Problema com plano de saúde | PROCON (151) ou ANS (0800 701 9656) |
+| Denúncia contra médico | CRM-DF (61) 3445-5800 |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Disque Saude / Ouvidoria SUS | **136** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
-| Ministerio Publico do DF | **(61) 3343-6000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
+| Ministerio Público do DF | **(61) 3343-6000** |
 | PROCON-DF | **151** |
 | CRM-DF | **(61) 3445-5800** |
-| ANS (planos de saude) | **0800 701 9656** |
+| ANS (planos de saúde) | **0800 701 9656** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Lei 8.080/1990 — Lei Organica da Saude (Lei do SUS)
-- Lei 13.460/2017 — Lei de Defesa do Usuario de Servicos Publicos
-- Ouvidoria-Geral do SUS (OuvSUS) — Ministerio da Saude
-- Secretaria de Saude do Distrito Federal (SES-DF) — Ouvidoria
+- Constituição Federal de 1988, art. 196
+- Lei 8.080/1990 — Lei Organica da Saúde (Lei do SUS)
+- Lei 13.460/2017 — Lei de Defesa do Usuario de Serviços Publicos
+- Ouvidoria-Geral do SUS (OuvSUS) — Ministerio da Saúde
+- Secretaria de Saúde do Distrito Federal (SES-DF) — Ouvidoria
 - Sistema Participa-DF

@@ -1,58 +1,58 @@
-# Conselho Tutelar e Defensoria Publica no DF
+# Conselho Tutelar e Defensoria Pública no DF
 
-## O que e o Conselho Tutelar
+## O que é o Conselho Tutelar
 
-O Conselho Tutelar e um orgao que existe em todas as cidades do Brasil para **proteger os direitos das criancas e adolescentes**. Ele nao faz parte do Poder Judiciario (nao e tribunal), mas tem autoridade para tomar medidas de protecao.
+O Conselho Tutelar é um órgão que existe em todas as cidades do Brasil para **proteger os direitos das crianças e adolescentes**. Ele não faz parte do Poder Judiciário (não e tribunal), mas tem autoridade para tomar medidas de proteção.
 
-Cada Conselho Tutelar e formado por **5 conselheiros**, escolhidos pela propria comunidade.
+Cada Conselho Tutelar e formado por **5 conselheiros**, escolhidos pela própria comunidade.
 
-> **Base legal:** Artigo 131 do Estatuto da Crianca e do Adolescente (ECA).
+> **Base legal:** Artigo 131 do Estatuto da Criança e do Adolescente (ECA).
 
 ---
 
 ## Quando Acionar o Conselho Tutelar
 
-Voce deve procurar o Conselho Tutelar quando souber de qualquer situacao que coloque em risco os direitos de uma crianca ou adolescente:
+Você deve procurar o Conselho Tutelar quando souber de qualquer situação que coloque em risco os direitos de uma criança ou adolescente:
 
-- **Maus-tratos** contra crianca ou adolescente (agressao fisica, psicologica).
-- **Negligencia** dos pais ou responsaveis (falta de cuidados basicos).
-- **Crianca fora da escola** ou sem vaga em creche.
+- **Maus-tratos** contra criança ou adolescente (agressão física, psicológica).
+- **Negligencia** dos pais ou responsáveis (falta de cuidados básicos).
+- **Criança fora da escola** ou sem vaga em creche.
 - **Trabalho infantil.**
-- **Violencia domestica** envolvendo crianca ou adolescente.
-- **Uso de drogas** por crianca ou adolescente.
+- **Violência doméstica** envolvendo criança ou adolescente.
+- **Uso de drogas** por criança ou adolescente.
 - **Abandono.**
 - **Exploracao sexual.**
-- Qualquer outra situacao em que os direitos da crianca estejam ameacados ou violados.
+- Qualquer outra situação em que os direitos da criança estejam ameacados ou violados.
 
-> **Qualquer pessoa pode denunciar:** vizinhos, professores, profissionais de saude, parentes ou qualquer pessoa da comunidade. A denuncia pode ser **anonima**.
+> **Qualquer pessoa pode denunciar:** vizinhos, professores, profissionais de saúde, parentes ou qualquer pessoa da comunidade. A denúncia pode ser **anônima**.
 
 ---
 
-## Como Fazer uma Denuncia
+## Como Fazer uma Denúncia
 
 ### Presencialmente
-Va ao Conselho Tutelar da regiao onde a crianca mora. Leve as informacoes que tiver sobre a situacao.
+Va ao Conselho Tutelar da regiao onde a criança mora. Leve as informações que tiver sobre a situação.
 
 ### Por telefone
 Ligue para o Conselho Tutelar da regiao (veja os telefones abaixo) ou para o **Disque 100** (gratuito).
 
-### O que informar na denuncia
-- Nome e endereco da crianca (se souber).
-- O que esta acontecendo.
-- Quem e o responsavel pela violacao.
-- Endereco ou local onde a situacao ocorre.
+### O que informar na denúncia
+- Nome e endereço da criança (se souber).
+- O que está acontecendo.
+- Quem é o responsável pela violação.
+- Endereço ou local onde a situação ocorre.
 
-> **Voce nao precisa se identificar.** A denuncia pode ser completamente anonima.
+> **Você não precisa se identificar.** A denúncia pode ser completamente anônima.
 
 ---
 
-## Enderecos e Telefones dos Conselhos Tutelares no DF
+## Endereços e Telefones dos Conselhos Tutelares no DF
 
 O Distrito Federal possui **44 Conselhos Tutelares** distribuidos em 35 Regioes Administrativas.
 
 ### Ceilandia
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Ceilandia I | QNM 04, Conj. B, Lote 32, Ceilandia Norte | (61) 2244-1578/1579 -- Plantao: 99241-9885 |
 | Ceilandia II | St. M QNM 3 Conj. O, Lote 07 | (61) 2244-1574/1575 -- Plantao: 99242-8678 |
@@ -62,57 +62,57 @@ O Distrito Federal possui **44 Conselhos Tutelares** distribuidos em 35 Regioes 
 
 ### Taguatinga
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Taguatinga I | Setor B Sul C 12 AE S/N | (61) 2244-1522/1523 -- Plantao: 99240-9326 |
 | Taguatinga II | QNA 33 Lote 14 | (61) 2244-1520/1521 -- Plantao: 99240-8795 |
 
 ### Samambaia
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Samambaia I | QN 308, Conj. 05, Lotes 1/2, AE, Samambaia Sul | (61) 2244-1536/1537 -- Plantao: 99233-9759 |
 | Samambaia II | QS 409, AE no 2, Samambaia Norte | (61) 2244-1534/1535 -- Plantao: 99240-9523 |
 
 ### Planaltina
 
-| Conselho | Endereco | Telefone / Plantao |
+| Conselho | Endereço | Telefone / Plantao |
 |----------|----------|--------------------|
 | Planaltina II | Av. WL 02, Setor Administrativo | (61) 2244-1544/1545 -- Plantao: 99243-1083 |
 
 ### Lista Completa de Todos os 44 Conselhos
 
-Para consultar **todos** os Conselhos Tutelares do DF com enderecos atualizados:
+Para consultar **todos** os Conselhos Tutelares do DF com endereços atualizados:
 
-- **Enderecos:** https://conselhotutelar.sejus.df.gov.br/enderecos/
+- **Endereços:** https://conselhotutelar.sejus.df.gov.br/endereços/
 - **Telefones:** https://conselhotutelar.sejus.df.gov.br/2346-2/
 - **Contatos:** https://conselhotutelar.sejus.df.gov.br/contatos/
 
 ---
 
-## Defensoria Publica do DF
+## Defensoria Pública do DF
 
-### O que e
+### O que é
 
-A Defensoria Publica e o orgao do Estado que oferece **assistencia juridica gratuita** para pessoas que nao podem pagar um advogado. E um direito garantido pela Constituicao.
+A Defensoria Pública é o órgão do Estado que oferece **assistência jurídica gratuita** para pessoas que não podem pagar um advogado. E um direito garantido pela Constituição.
 
 ### Quem Tem Direito
 
-A Defensoria atende pessoas que comprovem **insuficiencia de recursos**. Em regra, atende familias com renda de ate **3 salarios minimos**, mas cada caso e analisado individualmente.
+A Defensoria atende pessoas que comprovem **insuficiencia de recursos**. Em regra, atende famílias com renda de até **3 salários minimos**, mas cada caso e analisado individualmente.
 
-### O que a Defensoria Atende em Questoes de Familia e Crianca
+### O que a Defensoria Atende em Questoes de Família e Criança
 
-- Pensao alimenticia (pedir, cobrar, revisar).
+- Pensão alimentícia (pedir, cobrar, revisar).
 - Guarda e regulamentacao de visitas.
-- Divorcio e dissolucao de uniao estavel.
+- Divorcio e dissolucao de uniao estável.
 - Investigacao de paternidade.
-- Pedido de vaga em creche publica.
-- Alienacao parental.
-- Orientacao juridica geral em Direito de Familia.
+- Pedido de vaga em creche pública.
+- Alienação parental.
+- Orientação jurídica geral em Direito de Família.
 
-### NAJ Familia -- Nucleo de Familias de Brasilia
+### NAJ Família -- Nucleo de Famílias de Brasilia
 
-**Endereco:**
+**Endereço:**
 Forum Jose Julio Leal Fagundes
 Setor de Multiplas Atividades Sul (SMAS), Trecho 3, Lotes 4/6, Bloco 5 -- Terreo
 Brasilia/DF
@@ -120,18 +120,18 @@ Brasilia/DF
 **Contato:**
 - Telefone: **(61) 2196-4300** (Central de Relacionamento)
 - E-mail: najfamilia@defensoria.df.gov.br
-- Horario da central: **9h as 17h** (dias uteis)
-- Atendimento presencial: **13h as 18h** (dias uteis)
+- Horário da central: **9h as 17h** (dias úteis)
+- Atendimento presencial: **13h as 18h** (dias úteis)
 
 **Agendamento online:**
-- https://agenda.df.gov.br/organizacao.html?organizacao=37885304
+- https://agenda.df.gov.br/organização.html?organização=37885304
 - http://www.nahora.df.gov.br/agendamento-online/
 
 ### Nucleos Regionais da Defensoria
 
 A Defensoria tem nucleos em diversas regioes do DF para facilitar o acesso:
 
-- **Brasilia** -- Forum do SMAS (endereco acima)
+- **Brasilia** -- Forum do SMAS (endereço acima)
 - **Taguatinga** -- Na Hora de Taguatinga
 - **Ceilandia** -- Nucleo Regional de Ceilandia
 - **Samambaia** -- Nucleo Regional de Samambaia
@@ -145,13 +145,13 @@ A Defensoria tem nucleos em diversas regioes do DF para facilitar o acesso:
 
 Leve os seguintes documentos:
 
-1. **RG e CPF** (do requerente e da crianca/adolescente)
-2. **Certidao de nascimento** da crianca
+1. **RG e CPF** (do requerente e da criança/adolescente)
+2. **Certidao de nascimento** da criança
 3. **Certidao de casamento** (se houver)
-4. **Comprovante de residencia** atualizado
-5. **Comprovante de renda** (contracheque, carteira de trabalho ou declaracao de desemprego)
-6. **Informacoes sobre a outra parte** (nome completo, endereco, local de trabalho)
-7. **Documentos que comprovem a situacao** (laudos medicos, boletins escolares, fotografias, conforme o caso)
+4. **Comprovante de residência** atualizado
+5. **Comprovante de renda** (contracheque, carteira de trabalho ou declaração de desemprego)
+6. **Informações sobre a outra parte** (nome completo, endereço, local de trabalho)
+7. **Documentos que comprovem a situação** (laudos médicos, boletins escolares, fotografias, conforme o caso)
 
 ---
 
@@ -159,44 +159,44 @@ Leve os seguintes documentos:
 
 | Canal | Como acessar | Quando usar |
 |-------|--------------|-------------|
-| **Disque 100** | Ligue 100 (gratuito) | Denuncias de violacoes de direitos de criancas e adolescentes |
-| **Disque 180** | Ligue 180 (gratuito) | Violencia contra a mulher (inclusive gestantes) |
-| **CREAS** | Procure o CREAS da sua regiao | Atendimento social em situacoes de violencia |
-| **Ministerio Publico do DF** | (61) 3343-9500 | Promotoria da Infancia e Juventude |
-| **Policia Civil do DF** | 197 ou delegacia mais proxima | Crimes contra criancas e adolescentes |
-| **SAMU** | 192 | Emergencias de saude |
+| **Disque 100** | Ligue 100 (gratuito) | Denúncias de violações de direitos de crianças e adolescentes |
+| **Disque 180** | Ligue 180 (gratuito) | Violência contra a mulher (inclusive gestantes) |
+| **CREAS** | Procure o CREAS da sua regiao | Atendimento social em situações de violência |
+| **Ministerio Público do DF** | (61) 3343-9500 | Promotoria da Infância e Juventude |
+| **Polícia Civil do DF** | 197 ou delegacia mais proxima | Crimes contra crianças e adolescentes |
+| **SAMU** | 192 | Emergencias de saúde |
 | **Bombeiros** | 193 | Emergencias |
 
 ---
 
-## Resumo Pratico
+## Resumo Prático
 
-### Se uma crianca esta sofrendo violencia ou maus-tratos:
+### Se uma criança esta sofrendo violência ou maus-tratos:
 
-1. Ligue para o **Disque 100** (gratuito e anonimo).
+1. Ligue para o **Disque 100** (gratuito e anônimo).
 2. Procure o **Conselho Tutelar** da regiao.
-3. Se houver urgencia, ligue para a **Policia** (190).
-4. Registre **Boletim de Ocorrencia** na delegacia.
+3. Se houver urgência, ligue para a **Polícia** (190).
+4. Registre **Boletim de Ocorrência** na delegacia.
 
-### Se voce precisa de ajuda juridica gratuita:
+### Se você precisa de ajuda jurídica gratuita:
 
-1. Ligue para a **Defensoria Publica**: **(61) 2196-4300**.
+1. Ligue para a **Defensoria Pública**: **(61) 2196-4300**.
 2. Agende atendimento online ou va presencialmente.
 3. Leve todos os documentos listados acima.
 
-### Se a crianca esta sem vaga na escola ou creche:
+### Se a criança esta sem vaga na escola ou creche:
 
 1. Procure a regional de ensino.
-2. Se nao resolver, procure o **Conselho Tutelar**.
-3. Se ainda nao resolver, procure a **Defensoria Publica**.
+2. Se não resolver, procure o **Conselho Tutelar**.
+3. Se ainda não resolver, procure a **Defensoria Pública**.
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- **Lei 8.069/1990** -- Estatuto da Crianca e do Adolescente (ECA), artigos 131 a 140 -- Conselho Tutelar: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- **Conselho Tutelar do DF** -- Enderecos: https://conselhotutelar.sejus.df.gov.br/enderecos/
+- **Lei 8.069/1990** -- Estatuto da Criança e do Adolescente (ECA), artigos 131 a 140 -- Conselho Tutelar: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- **Conselho Tutelar do DF** -- Endereços: https://conselhotutelar.sejus.df.gov.br/endereços/
 - **Conselho Tutelar do DF** -- Telefones: https://conselhotutelar.sejus.df.gov.br/2346-2/
-- **Defensoria Publica do DF** -- Nucleos: https://www.defensoria.df.gov.br/?page_id=434
-- **Defensoria Publica do DF** -- NAJ Familia: https://www.defensoria.df.gov.br/nucleo/familias-de-brasilia/
-- **Agendamento Defensoria:** https://agenda.df.gov.br/organizacao.html?organizacao=37885304
+- **Defensoria Pública do DF** -- Nucleos: https://www.defensoria.df.gov.br/?page_id=434
+- **Defensoria Pública do DF** -- NAJ Família: https://www.defensoria.df.gov.br/nucleo/famílias-de-brasilia/
+- **Agendamento Defensoria:** https://agenda.df.gov.br/organização.html?organização=37885304

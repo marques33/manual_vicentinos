@@ -1,27 +1,27 @@
-# Constituicao Federal -- Seus Direitos Mais Importantes
+# Constituição Federal -- Seus Direitos Mais Importantes
 
-A Constituicao Federal e a **lei mais importante do Brasil**. Ela foi criada em 1988 e garante direitos fundamentais para todas as pessoas. Nenhuma outra lei pode ir contra o que esta na Constituicao. Neste capitulo, voce vai conhecer os artigos que mais importam para quem vive em situacao de vulnerabilidade.
+A Constituição Federal é a **lei mais importante do Brasil**. Ela foi criada em 1988 e garante direitos fundamentais para todas as pessoas. Nenhuma outra lei pode ir contra o que está na Constituição. Neste capítulo, você vai conhecer os artigos que mais importam para quem vive em situação de vulnerabilidade.
 
 ---
 
 ## 1. Art. 5o -- Igualdade e Direitos Individuais
 
-O Artigo 5o e considerado o coracao da Constituicao. Ele garante que **todos sao iguais perante a lei**, sem distincao de raca, cor, sexo, religiao ou origem.
+O Artigo 5o é considerado o coracao da Constituição. Ele garante que **todos sao iguais perante a lei**, sem distincao de raca, cor, sexo, religiao ou origem.
 
 ### Direitos Mais Importantes do Art. 5o
 
-| Direito | O Que Significa Para Voce |
+| Direito | O Que Significa Para Você |
 |---------|---------------------------|
-| **Igualdade** | Ninguem pode ser tratado de forma diferente por causa da cor, sexo, religiao, idade ou condicao social |
-| **Proibicao de tortura** | Ninguem pode ser torturado nem tratado de forma desumana -- nem pela policia, nem em presidios |
-| **Direito de peticao gratuito** | Voce pode enviar pedido ou reclamacao a qualquer orgao publico sem pagar nada |
-| **Acesso a Justica** | Nenhum direito seu pode ser ignorado pela Justica. Se voce foi prejudicado, pode processar |
-| **Racismo e crime grave** | Racismo e crime inafiancavel (sem direito a fianca) e imprescritivel (pode ser processado a qualquer tempo) |
-| **Assistencia juridica gratuita** | Quem nao pode pagar advogado tem direito a Defensoria Publica, de graca |
-| **Certidao de nascimento e obito gratuitas** | Para quem e reconhecidamente pobre, o registro civil e de graca |
-| **Habeas corpus gratuito** | Se alguem for preso ilegalmente, pode pedir habeas corpus sem pagar nada |
+| **Igualdade** | Ninguém pode ser tratado de forma diferente por causa da cor, sexo, religiao, idade ou condição social |
+| **Proibicao de tortura** | Ninguém pode ser torturado nem tratado de forma desumana -- nem pela polícia, nem em presidios |
+| **Direito de petição gratuito** | Você pode enviar pedido ou reclamação a qualquer órgão público sem pagar nada |
+| **Acesso a Justica** | Nenhum direito seu pode ser ignorado pela Justica. Se você foi prejudicado, pode processar |
+| **Racismo é crime grave** | Racismo é crime inafiancavel (sem direito a fianca) e imprescritivel (pode ser processado a qualquer tempo) |
+| **Assistência jurídica gratuita** | Quem não pode pagar advogado tem direito a Defensoria Pública, de graca |
+| **Certidao de nascimento e óbito gratuitas** | Para quem e reconhecidamente pobre, o registro civil e de graca |
+| **Habeas corpus gratuito** | Se alguém for preso ilegalmente, pode pedir habeas corpus sem pagar nada |
 
-> **Na pratica:** Se voce sofreu discriminacao, violencia, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituicao esta do seu lado. Procure a Defensoria Publica -- (61) 2196-4300.
+> **Na prática:** Se você sofreu discriminacao, violência, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituição esta do seu lado. Procure a Defensoria Pública -- (61) 2196-4300.
 
 ---
 
@@ -29,147 +29,147 @@ O Artigo 5o e considerado o coracao da Constituicao. Ele garante que **todos sao
 
 O Artigo 6o lista os direitos sociais que o Estado e **obrigado** a garantir para toda a populacao:
 
-> "Sao direitos sociais a educacao, a saude, a alimentacao, o trabalho, a moradia, o transporte, o lazer, a seguranca, a previdencia social, a protecao a maternidade e a infancia, a assistencia aos desamparados."
+> "Sao direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção a maternidade é a infância, a assistência aos desamparados."
 
-### O Que Isso Significa Na Pratica
+### O Que Isso Significa Na Prática
 
 | Direito Social | O Que o Estado Deve Garantir |
 |----------------|------------------------------|
-| **Educacao** | Escola publica gratuita para todos, da creche a universidade |
-| **Saude** | Atendimento pelo SUS para qualquer pessoa, sem discriminacao |
-| **Alimentacao** | Programas de seguranca alimentar (Bolsa Familia, restaurantes comunitarios) |
+| **Educação** | Escola pública gratuita para todos, da creche a universidade |
+| **Saúde** | Atendimento pelo SUS para qualquer pessoa, sem discriminacao |
+| **Alimentação** | Programas de segurança alimentar (Bolsa Família, restaurantes comunitarios) |
 | **Trabalho** | Politicas de geracao de emprego e renda |
-| **Moradia** | Programas habitacionais para quem nao tem onde morar |
-| **Transporte** | Transporte publico acessivel |
-| **Previdencia social** | Aposentadoria, auxilio-doenca, salario-maternidade |
-| **Assistencia social** | BPC/LOAS, CRAS, CREAS, programas de protecao social |
+| **Moradia** | Programas habitacionais para quem não tem onde morar |
+| **Transporte** | Transporte público acessível |
+| **Previdência social** | Aposentadoria, auxílio-doenca, salário-maternidade |
+| **Assistência social** | BPC/LOAS, CRAS, CREAS, programas de proteção social |
 
-> **Importante:** Se o Estado nao esta cumprindo algum desses direitos (por exemplo: negou vaga em creche, negou medicamento pelo SUS, negou um beneficio), voce pode **exigir na Justica**. A Defensoria Publica pode entrar com acao para obrigar o governo a cumprir.
+> **Importante:** Se o Estado não esta cumprindo algum desses direitos (por exemplo: negou vaga em creche, negou medicamento pelo SUS, negou um benefício), você pode **exigir na Justica**. A Defensoria Pública pode entrar com ação para obrigar o governo a cumprir.
 
 ### Esses Direitos Podem Ser Retirados?
 
-**Nao.** Os direitos sociais sao considerados **clausulas petreas** -- isso quer dizer que nenhuma lei, emenda ou governo pode retira-los da Constituicao. Eles sao permanentes.
+**Não.** Os direitos sociais sao considerados **clausulas petreas** -- isso quer dizer que nenhuma lei, emenda ou governo pode retira-los da Constituição. Eles sao permanentes.
 
 ---
 
 ## 3. Art. 7o -- Direitos do Trabalhador
 
-O Artigo 7o garante os direitos de quem trabalha com carteira assinada. Mesmo que voce trabalhe de forma informal, e bom conhecer esses direitos:
+O Artigo 7o garante os direitos de quem trabalha com carteira assinada. Mesmo que você trabalhe de forma informal, e bom conhecer esses direitos:
 
 | Direito | O Que Garante |
 |---------|---------------|
-| **Salario minimo** | Um valor capaz de atender as necessidades basicas do trabalhador e da familia |
-| **13o salario** | Uma gratificacao extra no final do ano |
-| **FGTS** | Fundo de garantia depositado pelo empregador todo mes |
+| **Salário mínimo** | Um valor capaz de atender as necessidades básicas do trabalhador e da família |
+| **13o salário** | Uma gratificacao extra no final do ano |
+| **FGTS** | Fundo de garantia depositado pelo empregador todo mês |
 | **Seguro-desemprego** | Ajuda financeira para quem foi demitido sem justa causa |
-| **Jornada maxima** | 8 horas por dia e 44 horas por semana |
-| **Ferias remuneradas** | 30 dias de ferias por ano, com acrescimo de 1/3 do salario |
-| **Licenca-maternidade** | 120 dias de afastamento para a mae, sem perder emprego nem salario |
+| **Jornada máxima** | 8 horas por dia e 44 horas por semana |
+| **Ferias remuneradas** | 30 dias de ferias por ano, com acrescimo de 1/3 do salário |
+| **Licenca-maternidade** | 120 dias de afastamento para a mae, sem perder emprego nem salário |
 | **Licenca-paternidade** | 5 dias de afastamento para o pai |
-| **Aviso previo** | Minimo de 30 dias de aviso antes da demissao |
+| **Aviso prévio** | Mínimo de 30 dias de aviso antes da demissão |
 | **Adicional noturno** | Pagamento maior para quem trabalha a noite |
-| **Protecao contra demissao arbitraria** | Multa de 40% sobre o FGTS em caso de demissao sem justa causa |
+| **Proteção contra demissão arbitraria** | Multa de 40% sobre o FGTS em caso de demissão sem justa causa |
 
-> **Dica:** Se voce trabalha com carteira assinada e algum desses direitos nao esta sendo cumprido, procure a Defensoria Publica ou o Ministerio do Trabalho. Se trabalha sem carteira, voce pode pedir o reconhecimento do vinculo trabalhista na Justica.
-
----
-
-## 4. Art. 196 -- Saude e Direito de Todos
-
-> "A saude e direito de todos e dever do Estado."
-
-### O Que a Constituicao Garante Sobre Saude
-
-- O **SUS** deve atender **qualquer pessoa**, tenha ou nao plano de saude
-- Ninguem pode ser **recusado** em hospital publico
-- O SUS deve fornecer **medicamentos** necessarios ao tratamento
-- Se o SUS nao tiver o medicamento ou procedimento, voce pode **pedir na Justica** (com laudo medico)
-
-> **Na pratica:** Se o SUS negar um medicamento ou cirurgia que o medico receitou, procure a Defensoria Publica com o laudo medico. Eles podem entrar com acao para obrigar o SUS a fornecer o tratamento.
+> **Dica:** Se você trabalha com carteira assinada e algum desses direitos não está sendo cumprido, procure a Defensoria Pública ou o Ministerio do Trabalho. Se trabalha sem carteira, você pode pedir o reconhecimento do vínculo trabalhista na Justica.
 
 ---
 
-## 5. Arts. 203 e 204 -- Assistencia Social
+## 4. Art. 196 -- Saúde e Direito de Todos
 
-### Art. 203 -- Quem Tem Direito a Assistencia Social
+> "A saúde é direito de todos é dever do Estado."
 
-A assistencia social e para **quem dela necessitar**, independentemente de ter contribuido ao INSS. Os objetivos incluem:
+### O Que a Constituição Garante Sobre Saúde
 
-- Protecao a familia, maternidade, infancia, adolescencia e velhice
-- Amparo a criancas e adolescentes carentes
+- O **SUS** deve atender **qualquer pessoa**, tenha ou não plano de saúde
+- Ninguém pode ser **recusado** em hospital público
+- O SUS deve fornecer **medicamentos** necessários ao tratamento
+- Se o SUS não tiver o medicamento ou procedimento, você pode **pedir na Justica** (com laudo médico)
+
+> **Na prática:** Se o SUS negar um medicamento ou cirurgia que o médico receitou, procure a Defensoria Pública com o laudo médico. Eles podem entrar com ação para obrigar o SUS a fornecer o tratamento.
+
+---
+
+## 5. Arts. 203 e 204 -- Assistência Social
+
+### Art. 203 -- Quem Tem Direito a Assistência Social
+
+A assistência social e para **quem dela necessitar**, independentemente de ter contribuido ao INSS. Os objetivos incluem:
+
+- Proteção a família, maternidade, infância, adolescencia e velhice
+- Amparo a crianças e adolescentes carentes
 - Geracao de emprego e renda
-- Reabilitacao de pessoas com deficiencia
-- **BPC/LOAS:** Garantia de 1 salario minimo para idosos (65+) e pessoas com deficiencia de baixa renda
+- Reabilitacao de pessoas com deficiência
+- **BPC/LOAS:** Garantia de 1 salário mínimo para idosos (65+) e pessoas com deficiência de baixa renda
 
-### BPC -- Beneficio de Prestacao Continuada
+### BPC -- Benefício de Prestação Continuada
 
-| Informacao | Detalhe |
+| Informação | Detalhe |
 |-----------|---------|
-| **Quem tem direito** | Idosos com 65 anos ou mais E pessoas com deficiencia, que comprovem nao ter meios de se manter |
-| **Renda exigida** | Renda familiar por pessoa inferior a 1/4 do salario minimo |
-| **Valor** | 1 salario minimo por mes (R$ 1.518,00 em 2025) |
-| **Contribuicao ao INSS** | Nao precisa ter contribuido |
+| **Quem tem direito** | Idosos com 65 anos ou mais E pessoas com deficiência, que comprovem não ter meios de se manter |
+| **Renda exigida** | Renda familiar por pessoa inferior a 1/4 do salário mínimo |
+| **Valor** | 1 salário mínimo por mês (R$ 1.518,00 em 2025) |
+| **Contribuição ao INSS** | Não precisa ter contribuido |
 | **Como pedir** | Pelo site/app Meu INSS ou pela Central 135 |
 
-### Art. 204 -- Organizacao da Assistencia Social
+### Art. 204 -- Organização da Assistência Social
 
-- As acoes de assistencia social sao financiadas pelo orcamento publico
-- A populacao tem direito de **participar** na formulacao das politicas sociais e no controle das acoes do governo
+- As ações de assistência social sao financiadas pelo orcamento público
+- A populacao tem direito de **participar** na formulacao das politicas sociais e no controle das ações do governo
 
 ---
 
-## 6. Art. 227 -- Protecao a Crianca e ao Adolescente
+## 6. Art. 227 -- Proteção a Criança e ao Adolescente
 
-> "E dever da familia, da sociedade e do Estado assegurar a crianca, ao adolescente e ao jovem, com absoluta prioridade, o direito a vida, a saude, a alimentacao, a educacao, ao lazer, a dignidade, ao respeito, a liberdade e a convivencia familiar e comunitaria."
+> "E dever da família, da sociedade e do Estado assegurar a criança, ao adolescente e ao jovem, com absoluta prioridade, o direito a vida, a saúde, a alimentação, a educação, ao lazer, a dignidade, ao respeito, a liberdade é a convivência familiar e comunitaria."
 
 ### O Que a Lei Garante
 
-- Criancas e adolescentes tem **prioridade absoluta** -- seus direitos vem primeiro
-- Protecao especial contra negligencia, discriminacao, exploracao, violencia e crueldade
-- **Trabalho infantil e proibido** ate 16 anos (exceto como aprendiz a partir de 14)
-- Protecao contra **exploracao sexual**
+- Crianças e adolescentes tem **prioridade absoluta** -- seus direitos vem primeiro
+- Proteção especial contra negligencia, discriminacao, exploracao, violência e crueldade
+- **Trabalho infantil é proibido** até 16 anos (exceto como aprendiz a partir de 14)
+- Proteção contra **exploracao sexual**
 
-### O Que Fazer Se Souber de Violacao
+### O Que Fazer Se Souber de Violação
 
-Qualquer pessoa que saiba de maus-tratos, abandono, violencia ou exploracao de crianca ou adolescente **deve denunciar**:
+Qualquer pessoa que saiba de maus-tratos, abandono, violência ou exploracao de criança ou adolescente **deve denunciar**:
 
 | Canal | Contato |
 |-------|---------|
-| **Disque 100** | Denuncia de violacoes contra criancas, adolescentes, idosos e pessoas com deficiencia |
+| **Disque 100** | Denúncia de violações contra crianças, adolescentes, idosos e pessoas com deficiência |
 | **Conselho Tutelar** | Procure o Conselho Tutelar da sua regiao |
-| **Delegacia da Crianca e Adolescente (DCA)** | Para crimes contra menores |
+| **Delegacia da Criança e Adolescente (DCA)** | Para crimes contra menores |
 
 ---
 
 ## Resumo -- Seus Direitos em Uma Pagina
 
-| Artigo | Direito | O Que Voce Pode Exigir |
+| Artigo | Direito | O Que Você Pode Exigir |
 |--------|---------|------------------------|
-| **Art. 5o** | Igualdade e garantias individuais | Nao ser discriminado, ter acesso a Justica, ter defensor publico gratuito |
-| **Art. 6o** | Direitos sociais | Saude, educacao, moradia, trabalho, assistencia social |
-| **Art. 7o** | Direitos trabalhistas | Salario minimo, ferias, 13o, FGTS, seguro-desemprego |
-| **Art. 196** | Saude | Atendimento pelo SUS, medicamentos, cirurgias |
-| **Arts. 203-204** | Assistencia social | BPC/LOAS, programas sociais, protecao a vulneraveis |
-| **Art. 227** | Protecao a criancas | Prioridade absoluta, protecao contra violencia e exploracao |
+| **Art. 5o** | Igualdade e garantias individuais | Não ser discriminado, ter acesso a Justica, ter defensor público gratuito |
+| **Art. 6o** | Direitos sociais | Saúde, educação, moradia, trabalho, assistência social |
+| **Art. 7o** | Direitos trabalhistas | Salário mínimo, ferias, 13o, FGTS, seguro-desemprego |
+| **Art. 196** | Saúde | Atendimento pelo SUS, medicamentos, cirurgias |
+| **Arts. 203-204** | Assistência social | BPC/LOAS, programas sociais, proteção a vulneráveis |
+| **Art. 227** | Proteção a crianças | Prioridade absoluta, proteção contra violência e exploracao |
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
-| Defensoria Publica do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | (61) 2196-4300 |
 | Disque Direitos Humanos | 100 |
 | Central da Mulher | 180 |
-| INSS (beneficios) | 135 |
-| SUS (informacoes) | 136 |
+| INSS (benefícios) | 135 |
+| SUS (informações) | 136 |
 | Central do GDF | 156 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
-- Lei Organica da Assistencia Social -- Lei 8.742/1993 (BPC/LOAS): https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm
-- Estatuto da Crianca e do Adolescente -- Lei 8.069/1990: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- Defensoria Publica do DF: https://www.defensoria.df.gov.br
+- Constituição Federal de 1988: https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm
+- Lei Organica da Assistência Social -- Lei 8.742/1993 (BPC/LOAS): https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm
+- Estatuto da Criança e do Adolescente -- Lei 8.069/1990: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- Defensoria Pública do DF: https://www.defensoria.df.gov.br

@@ -1,20 +1,20 @@
-# Saude Mental no SUS
+# Saúde Mental no SUS
 
-Problemas de saude mental sao tao serios quanto qualquer outro problema de saude. Depressao, ansiedade, crises de panico, dependencia de alcool ou drogas, pensamentos suicidas — tudo isso tem tratamento, e o SUS oferece atendimento gratuito e especializado.
+Problemas de saúde mental sao tao serios quanto qualquer outro problema de saúde. Depressao, ansiedade, crises de panico, dependência de álcool ou drogas, pensamentos suicidas — tudo isso tem tratamento, é o SUS oferece atendimento gratuito e especializado.
 
-> **Voce nao esta sozinho. Se voce ou alguem proximo esta passando por uma crise, procure ajuda. O primeiro passo e o mais importante.**
+> **Você não esta sozinho. Se você ou alguém proximo esta passando por uma crise, procure ajuda. O primeiro passo é o mais importante.**
 
 ---
 
-## CAPS — Centro de Atencao Psicossocial
+## CAPS — Centro de Atenção Psicossocial
 
 ### O que sao
 
-Os CAPS sao servicos especializados em saude mental que funcionam na comunidade. Sao lugares onde voce pode receber tratamento com psicologos, psiquiatras, assistentes sociais e outros profissionais.
+Os CAPS sao serviços especializados em saúde mental que funcionam na comunidade. Sao lugares onde você pode receber tratamento com psicologos, psiquiatras, assistentes sociais e outros profissionais.
 
-> **Voce NAO precisa de encaminhamento para ir ao CAPS. E so chegar. O atendimento e de porta aberta.**
+> **Você NAO precisa de encaminhamento para ir ao CAPS. E só chegar. O atendimento e de porta aberta.**
 
-O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as regioes de saude.
+O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as regioes de saúde.
 
 ### Tipos de CAPS
 
@@ -23,8 +23,8 @@ O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as r
 | CAPS I | Adultos com transtornos mentais graves (em cidades menores) |
 | CAPS II | Adultos com transtornos mentais graves |
 | CAPS III | Funciona 24 horas, com acolhimento noturno |
-| CAPS AD | Pessoas com problemas com alcool e outras drogas |
-| CAPS i | Criancas e adolescentes com transtornos mentais |
+| CAPS AD | Pessoas com problemas com álcool e outras drogas |
+| CAPS i | Crianças e adolescentes com transtornos mentais |
 
 ### O que o CAPS atende
 
@@ -32,38 +32,38 @@ O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as r
 - Ansiedade e crises de panico
 - Transtorno bipolar
 - Esquizofrenia e outros transtornos psicoticos
-- Dependencia de alcool e drogas
+- Dependência de álcool e drogas
 - Pensamentos suicidas
 - Outros transtornos psiquiatricos
 
 ### Como acessar
 
-1. Va diretamente ao CAPS da sua regiao — nao precisa de agendamento nem de encaminhamento
-2. O acolhimento e feito por equipe multidisciplinar no mesmo dia
+1. Va diretamente ao CAPS da sua regiao — não precisa de agendamento nem de encaminhamento
+2. O acolhimento é feito por equipe multidisciplinar no mesmo dia
 
-### Documentos necessarios
+### Documentos necessários
 
-- Documento de identificacao valido
+- Documento de identificação válido
 - Cartao Nacional do SUS
 - Cartao SES-DF (pode ser feito no primeiro atendimento)
 
 ### Como encontrar o CAPS mais proximo
 
-- Acesse: https://info.saude.df.gov.br/busca-saude-caps/
-- Ou ligue para o **Disque Saude 136**
+- Acesse: https://info.saúde.df.gov.br/busca-saúde-caps/
+- Ou ligue para o **Disque Saúde 136**
 
 ### Exemplos de CAPS no DF
 
-| CAPS | Endereco | Telefone |
+| CAPS | Endereço | Telefone |
 |------|----------|----------|
 | CAPS i Asa Norte | SMHN, Quadra 03, Conj. 1, Bl. A (Ed. COMPP) | (61) 2017-1900 (ramais 7710/7711) |
 | CAPS III Samambaia | Quadra 302, Conj. 5, Lote 1, Centro Urbano | (61) 98549-5372 |
 
 ---
 
-## Emergencia Psiquiatrica — Onde Ir em Caso de Crise
+## Emergência Psiquiatrica — Onde Ir em Caso de Crise
 
-Algumas situacoes de saude mental sao emergencias e precisam de atendimento imediato:
+Algumas situações de saúde mental sao emergencias e precisam de atendimento imediato:
 
 - Tentativa de suicidio ou risco iminente
 - Agitacao intensa com risco para si ou para outros
@@ -71,20 +71,20 @@ Algumas situacoes de saude mental sao emergencias e precisam de atendimento imed
 - Intoxicacao aguda ou abstinencia de substancias
 - Incapacidade grave de cuidar de si mesmo
 
-### Onde buscar atendimento de emergencia
+### Onde buscar atendimento de emergência
 
 **1. Hospital Sao Vicente de Paulo (HSVP)**
-- Referencia principal para emergencias psiquiatricas de adultos no DF
+- Referência principal para emergencias psiquiatricas de adultos no DF
 - Funciona 24 horas, 7 dias por semana
 - 83 leitos psiquiatricos
 
 **2. Qualquer UPA ou pronto-socorro de hospital regional**
-- Todos realizam avaliacao clinica inicial de saude mental
+- Todos realizam avaliação clinica inicial de saúde mental
 
-**3. SAMU 192 — Nucleo de Saude Mental**
-- Ligue **192** quando nao for possivel levar a pessoa ao hospital
+**3. SAMU 192 — Nucleo de Saúde Mental**
+- Ligue **192** quando não for possível levar a pessoa ao hospital
 - Equipe especializada: assistente social, psicologo, enfermeiro e condutor socorrista
-- Atende crises de ansiedade, crises psicoticas, tentativas de suicidio, vitimas de violencia e dependencia quimica grave
+- Atende crises de ansiedade, crises psicoticas, tentativas de suicidio, vítimas de violência e dependência quimica grave
 
 ### Hospitais com leitos psiquiatricos no DF
 
@@ -93,49 +93,49 @@ Algumas situacoes de saude mental sao emergencias e precisam de atendimento imed
 | Hospital Sao Vicente de Paulo (HSVP) | 83 |
 | Hospital de Base (HB) | 36 |
 | Hospital Universitario de Brasilia (HUB) | 1 |
-| Hospital da Crianca de Brasilia (HCB) | 2 |
+| Hospital da Criança de Brasilia (HCB) | 2 |
 | **Total no DF** | **122 leitos** |
 
 ---
 
 ## CVV — Centro de Valorizacao da Vida
 
-Se voce esta passando por um momento dificil, com pensamentos suicidas ou precisando de apoio emocional, ligue para o CVV:
+Se você está passando por um momento difícil, com pensamentos suicidas ou precisando de apoio emocional, ligue para o CVV:
 
-> **Ligue 188 — 24 horas por dia, todos os dias. A ligacao e gratuita.**
+> **Ligue 188 — 24 horas por dia, todos os dias. A ligacao é gratuita.**
 
-Voce tambem pode conversar pelo chat: **www.cvv.org.br**
+Você também pode conversar pelo chat: **www.cvv.org.br**
 
-O CVV e formado por voluntarios treinados que estao prontos para ouvir voce, sem julgamento. A conversa e totalmente sigilosa.
-
----
-
-## Seus Direitos em Saude Mental
-
-- Voce tem direito a tratamento gratuito pelo SUS
-- Voce tem direito a ser tratado com dignidade e respeito
-- Voce tem direito a recusar tratamento (exceto em situacoes de emergencia com risco de vida)
-- Voce tem direito a acompanhante durante internacao psiquiatrica
-- Internacao involuntaria (sem consentimento do paciente) so pode ser feita com laudo medico e deve ser comunicada ao Ministerio Publico em ate 72 horas
+O CVV e formado por voluntários treinados que estão prontos para ouvir você, sem julgamento. A conversa e totalmente sigilosa.
 
 ---
 
-## Telefones Uteis
+## Seus Direitos em Saúde Mental
 
-| Servico | Telefone |
+- Você tem direito a tratamento gratuito pelo SUS
+- Você tem direito a ser tratado com dignidade e respeito
+- Você tem direito a recusar tratamento (exceto em situações de emergência com risco de vida)
+- Você tem direito a acompanhante durante internacao psiquiatrica
+- Internacao involuntaria (sem consentimento do paciente) só pode ser feita com laudo médico e deve ser comunicada ao Ministerio Público em até 72 horas
+
+---
+
+## Telefones Úteis
+
+| Serviço | Telefone |
 |---------|----------|
 | CVV (apoio emocional / suicidio) | **188** |
-| SAMU (emergencia) | **192** |
-| Disque Saude / Ouvidoria SUS | **136** |
+| SAMU (emergência) | **192** |
+| Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Publica do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **(61) 3318-2000** |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Constituicao Federal de 1988, art. 196
-- Lei 10.216/2001 — Lei da Reforma Psiquiatrica (protecao e direitos das pessoas com transtornos mentais)
-- Portaria MS n. 3.088/2011 — Rede de Atencao Psicossocial (RAPS)
-- Secretaria de Saude do Distrito Federal (SES-DF) — informacoes sobre CAPS e leitos psiquiatricos
+- Constituição Federal de 1988, art. 196
+- Lei 10.216/2001 — Lei da Reforma Psiquiatrica (proteção é direitos das pessoas com transtornos mentais)
+- Portaria MS n. 3.088/2011 — Rede de Atenção Psicossocial (RAPS)
+- Secretaria de Saúde do Distrito Federal (SES-DF) — informações sobre CAPS e leitos psiquiatricos
 - Centro de Valorizacao da Vida (CVV) — www.cvv.org.br

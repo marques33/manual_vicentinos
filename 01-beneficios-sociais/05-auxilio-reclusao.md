@@ -1,22 +1,22 @@
-# Auxilio-Reclusao
+# Auxílio-Reclusão
 
-## O Que E o Auxilio-Reclusao?
+## O Que E o Auxílio-Reclusão?
 
-O Auxilio-Reclusao e um beneficio pago pelo INSS aos **dependentes** (familiares) de um trabalhador segurado que esta preso em regime fechado. O valor e de **1 salario minimo por mes (R$ 1.621,00 em 2026)**.
+O Auxílio-Reclusão é um benefício pago pelo INSS aos **dependentes** (familiares) de um trabalhador segurado que está preso em regime fechado. O valor e de **1 salário mínimo por mês (R$ 1.621,00 em 2026)**.
 
-> **Atencao:** O dinheiro nao e pago ao preso. E pago a **familia** dele -- esposa, marido, companheiro(a), filhos ou outros dependentes. O objetivo e ajudar a familia que perdeu a renda do segurado preso.
+> **Atenção:** O dinheiro não é pago ao preso. E pago a **família** dele -- esposa, marido, companheiro(a), filhos ou outros dependentes. O objetivo e ajudar a família que perdeu a renda do segurado preso.
 
 ---
 
 ## Quem Pode Receber? (Os Dependentes)
 
-Os dependentes do segurado preso podem receber o Auxilio-Reclusao, na seguinte ordem de prioridade:
+Os dependentes do segurado preso podem receber o Auxílio-Reclusão, na seguinte ordem de prioridade:
 
-### Classe 1 -- Nao precisam provar dependencia economica
+### Classe 1 -- Não precisam provar dependência econômica
 
 - Esposo(a) ou companheiro(a)
 - Filhos menores de 21 anos
-- Filhos invalidos ou com deficiencia (sem limite de idade)
+- Filhos invalidos ou com deficiência (sem limite de idade)
 
 ### Classe 2 -- Precisam provar que dependiam economicamente do preso
 
@@ -25,52 +25,52 @@ Os dependentes do segurado preso podem receber o Auxilio-Reclusao, na seguinte o
 ### Classe 3 -- Precisam provar que dependiam economicamente do preso
 
 - Irmaos menores de 21 anos
-- Irmaos invalidos ou com deficiencia (sem limite de idade)
+- Irmaos invalidos ou com deficiência (sem limite de idade)
 
-> **Regra importante:** Se existirem dependentes da Classe 1, os dependentes das Classes 2 e 3 nao recebem. A prioridade e sempre da classe anterior.
+> **Regra importante:** Se existirem dependentes da Classe 1, os dependentes das Classes 2 e 3 não recebem. A prioridade e sempre da classe anterior.
 
 ---
 
 ## Quais Sao os Requisitos?
 
-Para que a familia tenha direito ao Auxilio-Reclusao, o preso precisa cumprir **todos** estes requisitos:
+Para que a família tenha direito ao Auxílio-Reclusão, o preso precisa cumprir **todos** estes requisitos:
 
-1. **Ser segurado do INSS** -- ou seja, estava contribuindo (trabalhando com carteira assinada ou pagando como contribuinte individual) no momento da prisao
-2. **Ter pelo menos 24 meses de contribuicao** antes da prisao
-3. **Ser de baixa renda** -- a media dos 12 ultimos salarios de contribuicao nao pode ultrapassar **R$ 1.754,18** (referencia 2025 -- valor atualizado anualmente)
+1. **Ser segurado do INSS** -- ou seja, estava contribuindo (trabalhando com carteira assinada ou pagando como contribuinte individual) no momento da prisão
+2. **Ter pelo menos 24 meses de contribuição** antes da prisão
+3. **Ser de baixa renda** -- a media dos 12 ultimos salários de contribuição não pode ultrapassar **R$ 1.754,18** (referência 2025 -- valor atualizado anualmente)
 4. **Estar preso em regime fechado** (ou semiaberto em colonia agricola/industrial)
-5. **Nao estar recebendo** salario da empresa, auxilio-doenca, aposentadoria ou outro beneficio do INSS
+5. **Não estar recebendo** salário da empresa, auxílio-doenca, aposentadoria ou outro benefício do INSS
 
 ---
 
-## Qual o Valor do Beneficio?
+## Qual o Valor do Benefício?
 
-O valor e fixo em **1 salario minimo** (R$ 1.621,00 em 2026), independentemente de quanto o segurado ganhava.
+O valor e fixo em **1 salário mínimo** (R$ 1.621,00 em 2026), independentemente de quanto o segurado ganhava.
 
-Se houver mais de um dependente, o valor e dividido entre todos igualmente.
+Se houver mais de um dependente, o valor é dividido entre todos igualmente.
 
 ---
 
-## Por Quanto Tempo a Familia Recebe?
+## Por Quanto Tempo a Família Recebe?
 
 ### Para Esposo(a) ou Companheiro(a)
 
-A duracao depende da idade do conjuge no momento da prisao:
+A duração depende da idade do cônjuge no momento da prisão:
 
-| Idade do Conjuge na Data da Prisao | Duracao do Beneficio |
+| Idade do Cônjuge na Data da Prisão | Duração do Benefício |
 |-----------------------------------|---------------------|
 | Menos de 22 anos | 3 anos |
 | 22 a 27 anos | 6 anos |
 | 28 a 30 anos | 10 anos |
 | 31 a 41 anos | 15 anos |
 | 42 a 44 anos | 20 anos |
-| 45 anos ou mais | Vitalicio (enquanto durar a prisao) |
+| 45 anos ou mais | Vitalício (enquanto durar a prisão) |
 
-> **Atencao:** Se o casamento ou uniao estavel tiver menos de 2 anos antes da prisao, a duracao do beneficio e de apenas **4 meses**.
+> **Atenção:** Se o casamento ou uniao estável tiver menos de 2 anos antes da prisão, a duração do benefício e de apenas **4 meses**.
 
 ### Para Filhos
 
-O beneficio e pago ate o filho completar **21 anos**. Se o filho for invalido ou tiver deficiencia, nao ha limite de idade.
+O benefício é pago até o filho completar **21 anos**. Se o filho for inválido ou tiver deficiência, não ha limite de idade.
 
 ---
 
@@ -78,16 +78,16 @@ O beneficio e pago ate o filho completar **21 anos**. Se o filho for invalido ou
 
 ### PASSO 1 -- Reuna os documentos
 
-Veja a lista completa na secao "Documentos Necessarios" abaixo.
+Veja a lista completa na seção "Documentos Necessários" abaixo.
 
 ### PASSO 2 -- Faca o pedido no INSS
 
-Voce pode solicitar de duas formas:
+Você pode solicitar de duas formas:
 
 **a) Pela internet (Meu INSS):**
 - Acesse https://meu.inss.gov.br ou baixe o aplicativo "Meu INSS"
 - Faca login com sua conta gov.br
-- Clique em "Novo Pedido" e selecione "Auxilio-Reclusao"
+- Clique em "Novo Pedido" e selecione "Auxílio-Reclusão"
 
 **b) Por telefone:**
 - Ligue para o **135** (ligacao gratuita de telefone fixo)
@@ -101,66 +101,66 @@ Voce pode solicitar de duas formas:
 
 ### Prazo Importante Para Solicitar
 
-- Se o pedido for feito dentro de **90 dias** apos a prisao: o pagamento retroage a data da prisao (voce recebe desde o dia em que o segurado foi preso)
-- Se o pedido for feito apos 90 dias: o pagamento comeca apenas na data do pedido
+- Se o pedido for feito dentro de **90 dias** após a prisão: o pagamento retroage a data da prisão (você recebe desde o dia em que o segurado foi preso)
+- Se o pedido for feito após 90 dias: o pagamento comeca apenas na data do pedido
 
-> **Dica:** Nao demore para pedir. Quanto antes voce fizer o pedido, antes a familia comeca a receber.
+> **Dica:** Não demore para pedir. Quanto antes você fizer o pedido, antes a família comeca a receber.
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
-- **Documento de identificacao** do dependente que esta pedindo (RG ou CNH)
+- **Documento de identificação** do dependente que está pedindo (RG ou CNH)
 - **CPF** do dependente e do preso
-- **Certidao de recolhimento a prisao** -- documento emitido pela unidade prisional que confirma que o segurado esta preso em regime fechado
-- **Documentos que comprovem a relacao de dependencia:**
+- **Certidao de recolhimento a prisão** -- documento emitido pela unidade prisional que confirma que o segurado está preso em regime fechado
+- **Documentos que comprovem a relacao de dependência:**
   - Certidao de casamento (esposo/esposa)
   - Certidao de nascimento (filhos)
-  - Prova de uniao estavel (companheiro/companheira)
-  - Documentos que comprovem dependencia economica (pais, irmaos)
-- **Comprovantes de contribuicao do segurado ao INSS** (contracheques, Carteira de Trabalho)
+  - Prova de uniao estável (companheiro/companheira)
+  - Documentos que comprovem dependência econômica (pais, irmaos)
+- **Comprovantes de contribuição do segurado ao INSS** (contracheques, Carteira de Trabalho)
 
-> **Onde conseguir a Certidao de Recolhimento a Prisao:** Solicite na propria unidade prisional (penitenciaria ou presidio) onde o segurado esta preso. E o documento mais importante para o pedido.
-
----
-
-## Manutencao do Beneficio -- O Que Fazer a Cada 3 Meses
-
-Depois que o beneficio for concedido, a familia precisa apresentar a **Declaracao de Carcere/Reclusao** (emitida pela unidade prisional) a cada **3 meses** pelo Meu INSS.
-
-> **Atencao:** Se a declaracao nao for apresentada no prazo, o beneficio sera **suspenso**. Nao esqueca de renovar a cada 3 meses.
+> **Onde conseguir a Certidao de Recolhimento a Prisão:** Solicite na própria unidade prisional (penitenciaria ou presidio) onde o segurado está preso. E o documento mais importante para o pedido.
 
 ---
 
-## Quando o Beneficio E Cancelado
+## Manutenção do Benefício -- O Que Fazer a Cada 3 Meses
 
-O Auxilio-Reclusao e cancelado imediatamente quando:
+Depois que o benefício for concedido, a família precisa apresentar a **Declaração de Carcere/Reclusão** (emitida pela unidade prisional) a cada **3 meses** pelo Meu INSS.
+
+> **Atenção:** Se a declaração não for apresentada no prazo, o benefício será **suspenso**. Não esqueca de renovar a cada 3 meses.
+
+---
+
+## Quando o Benefício E Cancelado
+
+O Auxílio-Reclusão e cancelado imediatamente quando:
 
 - O preso e **libertado**
 - O preso **foge**
 - O preso e transferido para **regime aberto** ou semiaberto (exceto colonia agricola)
-- O preso passa a receber **aposentadoria** ou outro beneficio do INSS
-- O dependente **perde a qualidade** (ex: filho completa 21 anos, divorcio do conjuge)
+- O preso passa a receber **aposentadoria** ou outro benefício do INSS
+- O dependente **perde a qualidade** (ex: filho completa 21 anos, divorcio do cônjuge)
 
-> **Muito importante:** Quando o preso for solto, o dependente deve apresentar o documento de soltura ao INSS **imediatamente**. Se a familia continuar recebendo o beneficio apos a soltura, o INSS vai cobrar a devolucao dos valores.
+> **Muito importante:** Quando o preso for solto, o dependente deve apresentar o documento de soltura ao INSS **imediatamente**. Se a família continuar recebendo o benefício após a soltura, o INSS vai cobrar a devolucao dos valores.
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone / Canal |
+| Serviço | Telefone / Canal |
 |---------|-----------------|
 | INSS (agendar, tirar duvidas, fazer pedido) | 135 |
 | Meu INSS (internet) | https://meu.inss.gov.br |
-| Defensoria Publica do DF (ajuda juridica gratuita) | (61) 3105-9200 |
+| Defensoria Pública do DF (ajuda jurídica gratuita) | (61) 3105-9200 |
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- INSS -- Auxilio-Reclusao: https://www.gov.br/inss/pt-br/direitos-e-deveres/auxilio-reclusao/auxilio-reclusao
-- INSS -- Entenda o Auxilio-Reclusao: https://www.gov.br/inss/pt-br/noticias/auxilio-reclusao-entenda-o-que-e-quem-tem-direito-e-como-pedir
+- INSS -- Auxílio-Reclusão: https://www.gov.br/inss/pt-br/direitos-e-deveres/auxílio-reclusão/auxílio-reclusão
+- INSS -- Entenda o Auxílio-Reclusão: https://www.gov.br/inss/pt-br/noticias/auxílio-reclusão-entenda-o-que-e-quem-tem-direito-e-como-pedir
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*

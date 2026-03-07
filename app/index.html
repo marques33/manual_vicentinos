@@ -976,26 +976,26 @@
     // ===== RENDERERS =====
     function renderHome() {
       const emergencyPhones = [
-        { name: 'SAMU (Emergencia Medica)', num: '192' },
-        { name: 'Policia Militar', num: '190' },
+        { name: 'SAMU (Emergência Médica)', num: '192' },
+        { name: 'Polícia Militar', num: '190' },
         { name: 'Bombeiros', num: '193' },
         { name: 'Central da Mulher', num: '180' },
         { name: 'Disque Direitos Humanos', num: '100' },
-        { name: 'Disque Saude / SUS', num: '136' },
+        { name: 'Disque Saúde / SUS', num: '136' },
         { name: 'INSS', num: '135' },
         { name: 'PROCON-DF', num: '151' },
-        { name: 'Defensoria Publica DF', num: '(61) 3318-4300' },
+        { name: 'Defensoria Pública DF', num: '(61) 3318-4300' },
       ];
 
       let html = `
         <div class="home-hero fade-in-up">
           <img src="assets/logo-ssvp.png" alt="SSVP">
           <h1>Manual Vicentino</h1>
-          <p>Guia pratico de direitos e auxilios para pessoas em situacao de vulnerabilidade social</p>
+          <p>Guia prático de direitos e auxílios para pessoas em situação de vulnerabilidade social</p>
         </div>
         <div class="emergency-bar" onclick="toggleEmergency()">
           <i class="fas fa-phone-alt"></i>
-          <span>Telefones de Emergencia &mdash; Toque para ver</span>
+          <span>Telefones de Emergência &mdash; Toque para ver</span>
           <i class="fas fa-chevron-down" style="margin-left:auto"></i>
         </div>
         <div class="emergency-numbers" id="emergency-numbers">
@@ -1006,7 +1006,7 @@
             </div>
           `).join('')}
         </div>
-        <div class="sections-title">Secoes do Manual</div>
+        <div class="sections-title">Seções do Manual</div>
         <div class="sections-grid">
           ${MANUAL_CONTENT.sections.map(s => `
             <div class="section-card fade-in-up" onclick="navigate('section','${s.id}')">
@@ -1021,13 +1021,13 @@
     }
 
     function renderSection(section) {
-      if (!section) return '<p>Secao nao encontrada.</p>';
+      if (!section) return '<p>Seção não encontrada.</p>';
 
       let html = `
         <div class="section-header fade-in-up">
           <div class="icon"><i class="fas fa-${section.icon}"></i></div>
           <h2>${section.title}</h2>
-          <p>${section.pages.length} topicos disponiveis</p>
+          <p>${section.pages.length} topicos disponíveis</p>
         </div>
         <div class="page-list">
           ${section.pages.map((p, i) => `
@@ -1043,7 +1043,7 @@
     }
 
     function renderPage(section, page) {
-      if (!page) return '<p>Pagina nao encontrada.</p>';
+      if (!page) return '<p>Pagina não encontrada.</p>';
 
       const pageIndex = section.pages.findIndex(p => p.id === page.id);
       const prevPage = pageIndex > 0 ? section.pages[pageIndex - 1] : null;

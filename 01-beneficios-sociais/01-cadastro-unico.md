@@ -1,12 +1,12 @@
-# Cadastro Unico (CadUnico)
+# Cadastro Único (CadUnico)
 
 ## O Que E o CadUnico?
 
-O Cadastro Unico para Programas Sociais do Governo Federal -- conhecido como **CadUnico** -- e um registro que reune informacoes sobre as familias de baixa renda do Brasil. Ele funciona como a **porta de entrada** para quase todos os programas sociais, tanto do governo federal quanto do governo do Distrito Federal.
+O Cadastro Único para Programas Sociais do Governo Federal -- conhecido como **CadUnico** -- é um registro que reune informações sobre as famílias de baixa renda do Brasil. Ele funciona como a **porta de entrada** para quase todos os programas sociais, tanto do governo federal quanto do governo do Distrito Federal.
 
-Quando voce faz o CadUnico, o governo passa a conhecer a situacao da sua familia: onde mora, quantas pessoas vivem na casa, qual a renda, se ha criancas, idosos ou pessoas com deficiencia. Com essas informacoes, o governo avalia automaticamente se a familia tem direito a receber beneficios.
+Quando você faz o CadUnico, o governo passa a conhecer a situação da sua família: onde mora, quantas pessoas vivem na casa, qual a renda, se ha crianças, idosos ou pessoas com deficiência. Com essas informações, o governo avalia automaticamente se a família tem direito a receber benefícios.
 
-> **Resumo:** Sem CadUnico, voce nao consegue acessar o Bolsa Familia, o BPC/LOAS, a Tarifa Social de energia e agua, o Cartao Material Escolar e dezenas de outros programas. Faca o seu o quanto antes.
+> **Resumo:** Sem CadUnico, você não consegue acessar o Bolsa Família, o BPC/LOAS, a Tarifa Social de energia e agua, o Cartao Material Escolar e dezenas de outros programas. Faca o seu o quanto antes.
 
 ---
 
@@ -14,12 +14,12 @@ Quando voce faz o CadUnico, o governo passa a conhecer a situacao da sua familia
 
 Podem se cadastrar no CadUnico:
 
-- Familias com **renda mensal por pessoa de ate meio salario minimo** (ate R$ 810,50 em 2026)
-- Familias com **renda total de ate 3 salarios minimos** (ate R$ 4.863,00 em 2026)
+- Famílias com **renda mensal por pessoa de até meio salário mínimo** (até R$ 810,50 em 2026)
+- Famílias com **renda total de até 3 salários minimos** (até R$ 4.863,00 em 2026)
 
-Tambem podem se cadastrar, **independentemente da renda:**
+Também podem se cadastrar, **independentemente da renda:**
 
-- Pessoas em situacao de rua
+- Pessoas em situação de rua
 - Indigenas
 - Quilombolas
 - Ribeirinhos
@@ -27,69 +27,69 @@ Tambem podem se cadastrar, **independentemente da renda:**
 
 ---
 
-## Documentos Necessarios
+## Documentos Necessários
 
-O cadastro deve ser feito pelo **Responsavel Familiar** -- preferencialmente uma mulher, maior de 16 anos. Ela deve levar os documentos de todos os membros da familia.
+O cadastro deve ser feito pelo **Responsável Familiar** -- preferencialmente uma mulher, maior de 16 anos. Ela deve levar os documentos de todos os membros da família.
 
-### Documentos do Responsavel Familiar (obrigatorios)
+### Documentos do Responsável Familiar (obrigatorios)
 
-- **CPF** (obrigatorio)
-- **Documento de identificacao com foto** (RG, CNH ou Carteira de Trabalho)
+- **CPF** (obrigatório)
+- **Documento de identificação com foto** (RG, CNH ou Carteira de Trabalho)
 
-### Documentos de Cada Membro da Familia
+### Documentos de Cada Membro da Família
 
-| Documento | Obrigatorio? |
+| Documento | Obrigatório? |
 |-----------|-------------|
 | CPF | Sim, para todos |
 | Certidao de nascimento ou casamento | Desejavel |
 | RG | Desejavel |
 | Carteira de Trabalho (CTPS) | Desejavel |
-| Titulo de eleitor | Desejavel |
+| Título de eleitor | Desejavel |
 
-### Comprovante de Residencia
+### Comprovante de Residência
 
 - Conta de luz (preferencial), conta de agua ou correspondencia oficial recente
 
-### Em Situacoes Especiais
+### Em Situações Especiais
 
-- Declaracao escolar dos filhos
-- Laudos medicos (se houver pessoa com deficiencia na familia)
+- Declaração escolar dos filhos
+- Laudos médicos (se houver pessoa com deficiência na família)
 
-> **Atencao:** Leve o maximo de documentos que tiver. Quanto mais informacoes voce levar, mais rapido o cadastro sera concluido. Mas se faltar algum documento, va assim mesmo -- o CRAS pode orientar sobre como resolver.
+> **Atenção:** Leve o máximo de documentos que tiver. Quanto mais informações você levar, mais rapido o cadastro será concluido. Mas se faltar algum documento, va assim mesmo -- o CRAS pode orientar sobre como resolver.
 
 ---
 
 ## Passo a Passo: Como Fazer o Cadastro no DF
 
-**PASSO 1** -- Va ao CRAS mais proximo da sua residencia (veja a lista completa abaixo)
+**PASSO 1** -- Va ao CRAS mais proximo da sua residência (veja a lista completa abaixo)
 
-**PASSO 2** -- Leve os documentos de **todos** os membros da familia
+**PASSO 2** -- Leve os documentos de **todos** os membros da família
 
-**PASSO 3** -- O atendente do CRAS fara o registro de todas as informacoes da sua familia
+**PASSO 3** -- O atendente do CRAS fara o registro de todas as informações da sua família
 
-**PASSO 4** -- Apos o cadastro, voce recebera o **NIS** (Numero de Identificacao Social). Guarde esse numero com cuidado -- voce vai precisar dele para acessar varios programas
+**PASSO 4** -- Após o cadastro, você receberá o **NIS** (Número de Identificação Social). Guarde esse número com cuidado -- você vai precisar dele para acessar varios programas
 
-**PASSO 5** -- Mantenha o cadastro **sempre atualizado**. Volte ao CRAS sempre que houver mudanca de endereco, de renda ou na composicao da familia (nascimento, falecimento, casamento, separacao, etc.)
+**PASSO 5** -- Mantenha o cadastro **sempre atualizado**. Volte ao CRAS sempre que houver mudança de endereço, de renda ou na composicao da família (nascimento, falecimento, casamento, separacao, etc.)
 
-> **Importante:** O CadUnico precisa ser atualizado a cada 2 anos, no minimo. Se o cadastro ficar desatualizado, voce pode perder beneficios.
+> **Importante:** O CadUnico precisa ser atualizado a cada 2 anos, no mínimo. Se o cadastro ficar desatualizado, você pode perder benefícios.
 
 ---
 
 ## Como Consultar Seu Cadastro
 
-Voce pode consultar sua situacao no CadUnico de duas formas:
+Você pode consultar sua situação no CadUnico de duas formas:
 
 - **Pela internet:** Acesse https://cadunico.dataprev.gov.br
-- **Pelo aplicativo:** Baixe o app "CadUnico" no celular (disponivel para Android e iPhone)
+- **Pelo aplicativo:** Baixe o app "CadUnico" no celular (disponível para Android e iPhone)
 - **Por telefone:** Ligue para o Disque Social **121** ou para a Central **156** do GDF
 
 ---
 
 ## Lista de CRAS no Distrito Federal
 
-Abaixo voce encontra o endereco e os telefones de todos os CRAS do DF. Procure o mais proximo da sua casa.
+Abaixo você encontra o endereço e os telefones de todos os CRAS do DF. Procure o mais proximo da sua casa.
 
-| CRAS | Endereco | Telefones |
+| CRAS | Endereço | Telefones |
 |------|----------|-----------|
 | **Brasilia** | Av. L2 Sul - SGAS 614/615, Asa Sul | (61) 3773-7356 / 7357 / 7358 |
 | **Brazlandia Veredas** | Area Especial II, Qd 35/36, Vila Sao Jose | (61) 3773-7361 / 7362 / 7363 |
@@ -103,7 +103,7 @@ Abaixo voce encontra o endereco e os telefones de todos os CRAS do DF. Procure o
 | **Gama** | Area Especial 11/13 Setor Central | (61) 3773-7396 / 7397 / 7398 |
 | **Guara** | EQ 15/26 - Area Comunal 01 | (61) 3773-7401 / 7402 / 7403 |
 | **Itapoa** | Quadra 61 - Area Especial 03 - Del Lago | (61) 3773-7406 / 7407 / 7408 |
-| **Itapoa Parque** | Avenida Itapoa Parque, QD 502 AE 03 | Nao informado |
+| **Itapoa Parque** | Avenida Itapoa Parque, QD 502 AE 03 | Não informado |
 | **Nucleo Bandeirante** | Avenida Central A/E - Lote E | (61) 3773-7411 / 7412 / 7413 |
 | **Paranoa** | Quadra 03, Area Especial 07, S/N | (61) 3773-7416 / 7417 / 7418 / 7699 |
 | **Planaltina** | Area Especial H, Lote 6 - Setor Educacional | (61) 3773-7419 / 7420 / 7421 |
@@ -129,34 +129,34 @@ Abaixo voce encontra o endereco e os telefones de todos os CRAS do DF. Procure o
 
 ## Programas Vinculados ao CadUnico
 
-Com o CadUnico atualizado, voce pode ter acesso aos seguintes programas:
+Com o CadUnico atualizado, você pode ter acesso aos seguintes programas:
 
 ### Programas Federais
 
-- **Bolsa Familia** -- transferencia de renda para familias em situacao de pobreza
-- **BPC/LOAS** -- beneficio de um salario minimo para idosos e pessoas com deficiencia
-- **Tarifa Social de Energia Eletrica** -- desconto de ate 65% na conta de luz
-- **Auxilio Gas** -- ajuda para compra de gas de cozinha
+- **Bolsa Família** -- transferencia de renda para famílias em situação de pobreza
+- **BPC/LOAS** -- benefício de um salário mínimo para idosos e pessoas com deficiência
+- **Tarifa Social de Energia Elétrica** -- desconto de até 65% na conta de luz
+- **Auxílio Gas** -- ajuda para compra de gas de cozinha
 - **Minha Casa Minha Vida** -- programa de moradia popular
 - **Pe-de-Meia** -- poupanca para estudantes do ensino medio
 - **Carteira da Pessoa Idosa** -- desconto de 50% em passagens interestaduais
-- **Isencao de taxas em concursos publicos**
+- **Isenção de taxas em concursos públicos**
 - **ID Jovem** -- meia-entrada em eventos culturais e esportivos
 
 ### Programas do Distrito Federal
 
 - **Cartao Material Escolar** -- credito para compra de material escolar
-- **Programa DF Social** -- R$ 150,00 por mes para familias de baixa renda
-- **Passe Livre Estudantil** -- transporte publico gratuito para estudantes
+- **Programa DF Social** -- R$ 150,00 por mês para famílias de baixa renda
+- **Passe Livre Estudantil** -- transporte público gratuito para estudantes
 - **Tarifa Social da CAESB** -- desconto de 50% na conta de agua
 - **Programas habitacionais da CODHAB** -- moradia popular no DF
-- **Beneficios Eventuais** -- auxilio natalidade, por morte e vulnerabilidade temporaria
+- **Benefícios Eventuais** -- auxílio natalidade, por morte e vulnerabilidade temporária
 
 ---
 
-## Telefones Uteis
+## Telefones Úteis
 
-| Servico | Telefone |
+| Serviço | Telefone |
 |---------|----------|
 | Disque Social (duvidas sobre CadUnico) | 121 |
 | Central do GDF | 156 |
@@ -164,12 +164,12 @@ Com o CadUnico atualizado, voce pode ter acesso aos seguintes programas:
 
 ---
 
-## Fontes e Referencias
+## Fontes e Referências
 
-- Ministerio do Desenvolvimento e Assistencia Social (MDS) -- Cadastro Unico: https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico
+- Ministerio do Desenvolvimento e Assistência Social (MDS) -- Cadastro Único: https://www.gov.br/mds/pt-br/ações-e-programas/cadastro-único
 - Secretaria de Desenvolvimento Social do DF (SEDES) -- CRAS: https://www.sedes.df.gov.br/cras
 - CadUnico Brasil -- Lista de CRAS em Brasilia: https://cadunicobrasil.com.br/cras-brasilia/
 
 ---
 
-*Informacoes atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
+*Informações atualizadas em marco de 2026. Valores e criterios podem mudar. Confirme sempre nos canais oficiais.*
