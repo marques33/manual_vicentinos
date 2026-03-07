@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#093971">
+  <meta name="description" content="Manual Vicentino de Direitos e Auxílios para pessoas em situação de vulnerabilidade social">
+  <title>Manual Vicentino | SSVP</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <style>
+    :root {
+      --primary: #093971;
+      --primary-dark: #062952;
+      --primary-light: #0d4f9e;
+      --accent: #c0392b;
+      --accent-light: #e74c3c;
+      --gold: #d4a843;
+      --bg: #f4f6f9;
+      --bg-card: #ffffff;
+      --text: #2c3e50;
+      --text-light: #7f8c8d;
+      --text-muted: #95a5a6;
+      --border: #e1e8ed;
+      --shadow: 0 2px 12px rgba(9, 57, 113, 0.08);
+      --shadow-lg: 0 8px 32px rgba(9, 57, 113, 0.12);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ===== LOGIN SCREEN ===== */
+    #login-screen {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    #login-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .login-container {
+      width: 90%;
+      max-width: 380px;
+      text-align: center;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .login-logo {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      padding: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    .login-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    }
+
+    .login-title {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .login-subtitle {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .input-group {
+      position: relative;
+    }
+
+    .input-group i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 14px 14px 14px 42px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-sm);
+      color: #fff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .login-form input::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .login-form input:focus {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .login-btn {
+      padding: 14px;
+      background: var(--gold);
+      color: var(--primary-dark);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 4px;
+    }
+
+    .login-btn:hover { background: #e0b84e; transform: translateY(-1px); }
+    .login-btn:active { transform: translateY(0); }
+
+    .login-error {
+      color: #ff6b6b;
+      font-size: 0.85rem;
+      min-height: 20px;
+      margin-top: 4px;
+      transition: var(--transition);
+    }
+
+    .login-motto {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.75rem;
+      margin-top: 28px;
+      font-style: italic;
+    }
+
+    /* ===== APP LAYOUT ===== */
+    #app {
+      display: none;
+      min-height: 100vh;
+    }
+
+    #app.active { display: block; }
+
+    /* ===== HEADER ===== */
+    .app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .header-back {
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-right: 12px;
+      transition: var(--transition);
+    }
+
+    .header-back:hover { background: rgba(255,255,255,0.2); }
+    .header-back.visible { display: flex; }
+
+    .header-logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .header-title {
+      font-size: 1rem;
+      font-weight: 600;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-search-btn {
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .header-search-btn:hover { background: rgba(255,255,255,0.2); }
+
+    .header-logout {
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-left: 8px;
+      transition: var(--transition);
+    }
+
+    .header-logout:hover { background: rgba(192,57,43,0.6); }
+
+    /* ===== SEARCH OVERLAY ===== */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      display: none;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .search-overlay.active { display: block; }
+
+    .search-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 12px 16px;
+      z-index: 201;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .search-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-input-wrap input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 2px solid var(--primary);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+    }
+
+    .search-close {
+      background: none;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .search-results {
+      max-height: 70vh;
+      overflow-y: auto;
+      padding: 8px 0;
+    }
+
+    .search-result-item {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .search-result-item:hover { background: var(--bg); }
+
+    .search-result-item h4 {
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .search-result-item p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .search-result-item .search-section {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main-content {
+      padding-top: 56px;
+      min-height: 100vh;
+    }
+
+    /* ===== HOME VIEW ===== */
+    .home-hero {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      padding: 32px 20px 40px;
+      text-align: center;
+    }
+
+    .home-hero img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      border: 3px solid rgba(255,255,255,0.3);
+    }
+
+    .home-hero h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .home-hero p {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      font-weight: 300;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    /* Emergency bar */
+    .emergency-bar {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .emergency-bar:hover { background: var(--accent-light); }
+
+    .emergency-bar i { font-size: 1.1rem; animation: pulse 2s infinite; }
+
+    .emergency-numbers {
+      background: #fff;
+      margin: 0 16px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .emergency-numbers.open { max-height: 500px; }
+
+    .emergency-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .emergency-item:last-child { border-bottom: none; }
+
+    .emergency-item span { font-size: 0.85rem; color: var(--text); }
+
+    .emergency-item a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    /* Sections grid */
+    .sections-title {
+      padding: 24px 20px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sections-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 0 16px 24px;
+    }
+
+    .section-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      border: 1px solid transparent;
+    }
+
+    .section-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .section-card:active { transform: translateY(0); }
+
+    .section-card .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-size: 1.2rem;
+    }
+
+    .section-card h3 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .section-card .section-count {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ===== SECTION VIEW ===== */
+    .section-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      padding: 24px 20px;
+    }
+
+    .section-header .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 { font-size: 1.2rem; font-weight: 700; }
+    .section-header p { font-size: 0.85rem; opacity: 0.8; margin-top: 4px; }
+
+    .page-list {
+      padding: 12px 16px 24px;
+    }
+
+    .page-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+
+    .page-item:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .page-item .page-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--bg);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .page-item h4 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      flex: 1;
+    }
+
+    .page-item .arrow {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* ===== PAGE VIEW (MARKDOWN CONTENT) ===== */
+    .page-header {
+      background: var(--primary);
+      color: #fff;
+      padding: 20px 20px 16px;
+    }
+
+    .page-header .breadcrumb {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-bottom: 6px;
+    }
+
+    .page-header h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .markdown-body {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .markdown-body h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 24px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .markdown-body h1:first-child { margin-top: 0; }
+
+    .markdown-body h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 24px 0 10px;
+    }
+
+    .markdown-body h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin: 20px 0 8px;
+    }
+
+    .markdown-body h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 16px 0 6px;
+    }
+
+    .markdown-body p {
+      margin: 8px 0;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .markdown-body ul, .markdown-body ol {
+      margin: 8px 0;
+      padding-left: 24px;
+    }
+
+    .markdown-body li {
+      margin: 4px 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .markdown-body strong { color: var(--primary-dark); }
+
+    .markdown-body blockquote {
+      background: linear-gradient(135deg, #e8f4fd, #f0f7ff);
+      border-left: 4px solid var(--primary);
+      padding: 14px 16px;
+      margin: 14px 0;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.88rem;
+    }
+
+    .markdown-body blockquote strong {
+      color: var(--accent);
+    }
+
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 0.82rem;
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .markdown-body thead { background: var(--primary); color: #fff; }
+
+    .markdown-body th {
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .markdown-body td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .markdown-body tbody tr:hover { background: var(--bg); }
+
+    .markdown-body code {
+      background: var(--bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    .markdown-body pre {
+      background: var(--primary-dark);
+      color: #e8f4fd;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      overflow-x: auto;
+      font-size: 0.82rem;
+      margin: 14px 0;
+    }
+
+    .markdown-body pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    .markdown-body hr {
+      border: none;
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
+
+    .markdown-body a {
+      color: var(--primary-light);
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    /* Navigation footer */
+    .page-nav {
+      display: flex;
+      gap: 12px;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    .page-nav button {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .page-nav button:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .page-nav button:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    .page-nav button:disabled:hover {
+      background: var(--bg-card);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-top.visible { opacity: 1; visibility: visible; }
+    .scroll-top:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .fade-in { animation: fadeIn 0.3s ease; }
+    .fade-in-up { animation: fadeInUp 0.4s ease; }
+
+    /* ===== TABLET/DESKTOP ===== */
+    @media (min-width: 768px) {
+      .sections-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 24px 32px;
+      }
+
+      .markdown-body { padding: 32px 40px; }
+      .page-list { max-width: 700px; margin: 0 auto; }
+    }
+
+    @media (min-width: 1024px) {
+      .sections-grid { grid-template-columns: repeat(3, 1fr); max-width: 840px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen">
+    <div class="login-container">
+      <div class="login-logo">
+        <img src="assets/logo-ssvp.png" alt="SSVP">
+      </div>
+      <h1 class="login-title">Manual Vicentino</h1>
+      <p class="login-subtitle">Direitos e Auxílios para Pessoas em Vulnerabilidade</p>
+      <form class="login-form" onsubmit="return handleLogin(event)">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="login-user" placeholder="Usuário" autocomplete="off" autofocus>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="login-pass" placeholder="Senha" autocomplete="off">
+        </div>
+        <button type="submit" class="login-btn">Entrar</button>
+        <div class="login-error" id="login-error"></div>
+      </form>
+      <p class="login-motto">Serviens in Spe &mdash; Servindo na Esperan&ccedil;a</p>
+    </div>
+  </div>
+
+  <!-- APP -->
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <button class="header-back" id="btn-back" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <img src="assets/logo-ssvp.png" alt="SSVP" class="header-logo" onclick="navigate('home')">
+      <span class="header-title" id="header-title">Manual Vicentino</span>
+      <button class="header-search-btn" onclick="toggleSearch()">
+        <i class="fas fa-search"></i>
+      </button>
+      <button class="header-logout" onclick="logout()" title="Sair">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay" onclick="toggleSearch()">
+      <div class="search-panel" onclick="event.stopPropagation()">
+        <div class="search-input-wrap">
+          <input type="text" id="search-input" placeholder="Buscar no manual..." oninput="handleSearch(this.value)">
+          <button class="search-close" onclick="toggleSearch()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content"></main>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+  </div>
+
+  <!-- Markdown parser (lightweight) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+  <!-- Content -->
+  <script src="content.js"></script>
+  <script>
+    // ===== AUTH =====
+    const VALID_USER = 'São Vicente de Paulo';
+    const VALID_PASS = 'Afésemobrasémortaemsimesma';
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const user = document.getElementById('login-user').value.trim();
+      const pass = document.getElementById('login-pass').value;
+      if (user === VALID_USER && pass === VALID_PASS) {
+        sessionStorage.setItem('auth', '1');
+        document.getElementById('login-screen').classList.add('hidden');
+        document.getElementById('app').classList.add('active');
+        navigate('home');
+      } else {
+        document.getElementById('login-error').textContent = 'Usuário ou senha incorretos';
+        document.getElementById('login-pass').value = '';
+        document.getElementById('login-pass').focus();
+      }
+      return false;
+    }
+
+    function logout() {
+      sessionStorage.removeItem('auth');
+      document.getElementById('login-screen').classList.remove('hidden');
+      document.getElementById('app').classList.remove('active');
+      document.getElementById('login-user').value = '';
+      document.getElementById('login-pass').value = '';
+      document.getElementById('login-error').textContent = '';
+    }
+
+    // Check auth on load
+    if (sessionStorage.getItem('auth') === '1') {
+      document.getElementById('login-screen').classList.add('hidden');
+      document.getElementById('app').classList.add('active');
+    }
+
+    // ===== NAVIGATION =====
+    let currentView = 'home';
+    let currentSection = null;
+    let currentPage = null;
+    let history = [];
+
+    function navigate(view, sectionId, pageId) {
+      if (view !== 'home' || currentView !== 'home') {
+        history.push({ view: currentView, section: currentSection, page: currentPage });
+      }
+      currentView = view;
+      currentSection = sectionId || null;
+      currentPage = pageId || null;
+      render();
+      window.scrollTo({ top: 0 });
+    }
+
+    function goBack() {
+      if (history.length > 0) {
+        const prev = history.pop();
+        currentView = prev.view;
+        currentSection = prev.section;
+        currentPage = prev.page;
+        render();
+        window.scrollTo({ top: 0 });
+      }
+    }
+
+    function render() {
+      const main = document.getElementById('main-content');
+      const backBtn = document.getElementById('btn-back');
+      const titleEl = document.getElementById('header-title');
+
+      if (currentView === 'home') {
+        backBtn.classList.remove('visible');
+        titleEl.textContent = 'Manual Vicentino';
+        main.innerHTML = renderHome();
+      } else if (currentView === 'section') {
+        backBtn.classList.add('visible');
+        const section = MANUAL_CONTENT.sections.find(s => s.id === currentSection);
+        titleEl.textContent = section ? section.title : '';
+        main.innerHTML = renderSection(section);
+      } else if (currentView === 'page') {
+        backBtn.classList.add('visible');
+        const section = MANUAL_CONTENT.sections.find(s => s.id === currentSection);
+        const page = section ? section.pages.find(p => p.id === currentPage) : null;
+        titleEl.textContent = page ? page.title : '';
+        main.innerHTML = renderPage(section, page);
+      }
+
+      main.className = 'main-content fade-in';
+    }
+
+    // ===== RENDERERS =====
+    function renderHome() {
+      const emergencyPhones = [
+        { name: 'SAMU (Emergencia Medica)', num: '192' },
+        { name: 'Policia Militar', num: '190' },
+        { name: 'Bombeiros', num: '193' },
+        { name: 'Central da Mulher', num: '180' },
+        { name: 'Disque Direitos Humanos', num: '100' },
+        { name: 'Disque Saude / SUS', num: '136' },
+        { name: 'INSS', num: '135' },
+        { name: 'PROCON-DF', num: '151' },
+        { name: 'Defensoria Publica DF', num: '(61) 3318-4300' },
+      ];
+
+      let html = `
+        <div class="home-hero fade-in-up">
+          <img src="assets/logo-ssvp.png" alt="SSVP">
+          <h1>Manual Vicentino</h1>
+          <p>Guia pratico de direitos e auxilios para pessoas em situacao de vulnerabilidade social</p>
+        </div>
+        <div class="emergency-bar" onclick="toggleEmergency()">
+          <i class="fas fa-phone-alt"></i>
+          <span>Telefones de Emergencia &mdash; Toque para ver</span>
+          <i class="fas fa-chevron-down" style="margin-left:auto"></i>
+        </div>
+        <div class="emergency-numbers" id="emergency-numbers">
+          ${emergencyPhones.map(p => `
+            <div class="emergency-item">
+              <span>${p.name}</span>
+              <a href="tel:${p.num.replace(/[^0-9]/g,'')}">${p.num}</a>
+            </div>
+          `).join('')}
+        </div>
+        <div class="sections-title">Secoes do Manual</div>
+        <div class="sections-grid">
+          ${MANUAL_CONTENT.sections.map(s => `
+            <div class="section-card fade-in-up" onclick="navigate('section','${s.id}')">
+              <div class="icon"><i class="fas fa-${s.icon}"></i></div>
+              <h3>${s.title}</h3>
+              <div class="section-count">${s.pages.length} ${s.pages.length === 1 ? 'topico' : 'topicos'}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      return html;
+    }
+
+    function renderSection(section) {
+      if (!section) return '<p>Secao nao encontrada.</p>';
+
+      let html = `
+        <div class="section-header fade-in-up">
+          <div class="icon"><i class="fas fa-${section.icon}"></i></div>
+          <h2>${section.title}</h2>
+          <p>${section.pages.length} topicos disponiveis</p>
+        </div>
+        <div class="page-list">
+          ${section.pages.map((p, i) => `
+            <div class="page-item fade-in-up" onclick="navigate('page','${section.id}','${p.id}')" style="animation-delay:${i*0.05}s">
+              <div class="page-num">${i + 1}</div>
+              <h4>${p.title}</h4>
+              <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      return html;
+    }
+
+    function renderPage(section, page) {
+      if (!page) return '<p>Pagina nao encontrada.</p>';
+
+      const pageIndex = section.pages.findIndex(p => p.id === page.id);
+      const prevPage = pageIndex > 0 ? section.pages[pageIndex - 1] : null;
+      const nextPage = pageIndex < section.pages.length - 1 ? section.pages[pageIndex + 1] : null;
+
+      const rendered = marked.parse(page.content);
+
+      let html = `
+        <div class="page-header">
+          <div class="breadcrumb">${section.title}</div>
+          <h2>${page.title}</h2>
+        </div>
+        <div class="markdown-body">${rendered}</div>
+        <div class="page-nav">
+          <button ${prevPage ? `onclick="navigateDirect('page','${section.id}','${prevPage.id}')"` : 'disabled'}>
+            <i class="fas fa-arrow-left"></i> Anterior
+          </button>
+          <button ${nextPage ? `onclick="navigateDirect('page','${section.id}','${nextPage.id}')"` : 'disabled'}>
+            Proximo <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      `;
+      return html;
+    }
+
+    function navigateDirect(view, sectionId, pageId) {
+      currentView = view;
+      currentSection = sectionId;
+      currentPage = pageId;
+      render();
+      window.scrollTo({ top: 0 });
+    }
+
+    // ===== EMERGENCY TOGGLE =====
+    function toggleEmergency() {
+      document.getElementById('emergency-numbers').classList.toggle('open');
+    }
+
+    // ===== SEARCH =====
+    function toggleSearch() {
+      const overlay = document.getElementById('search-overlay');
+      overlay.classList.toggle('active');
+      if (overlay.classList.contains('active')) {
+        const input = document.getElementById('search-input');
+        input.value = '';
+        input.focus();
+        document.getElementById('search-results').innerHTML = '';
+      }
+    }
+
+    function handleSearch(query) {
+      const results = document.getElementById('search-results');
+      if (query.length < 3) {
+        results.innerHTML = '<div style="padding:16px;color:#95a5a6;font-size:0.85rem;">Digite pelo menos 3 caracteres...</div>';
+        return;
+      }
+
+      const q = query.toLowerCase();
+      const matches = [];
+
+      MANUAL_CONTENT.sections.forEach(section => {
+        section.pages.forEach(page => {
+          const content = page.content.toLowerCase();
+          const titleMatch = page.title.toLowerCase().includes(q);
+          const contentMatch = content.includes(q);
+
+          if (titleMatch || contentMatch) {
+            let snippet = '';
+            if (contentMatch) {
+              const idx = content.indexOf(q);
+              const start = Math.max(0, idx - 60);
+              const end = Math.min(content.length, idx + query.length + 60);
+              snippet = '...' + page.content.substring(start, end).replace(/\n/g, ' ') + '...';
+            }
+            matches.push({
+              section: section.title,
+              sectionId: section.id,
+              page: page.title,
+              pageId: page.id,
+              snippet: snippet,
+              priority: titleMatch ? 1 : 2
+            });
+          }
+        });
+      });
+
+      matches.sort((a, b) => a.priority - b.priority);
+
+      if (matches.length === 0) {
+        results.innerHTML = '<div style="padding:16px;color:#95a5a6;font-size:0.85rem;">Nenhum resultado encontrado.</div>';
+        return;
+      }
+
+      results.innerHTML = matches.slice(0, 20).map(m => `
+        <div class="search-result-item" onclick="toggleSearch();navigate('page','${m.sectionId}','${m.pageId}')">
+          <h4>${m.page}</h4>
+          ${m.snippet ? `<p>${highlightText(m.snippet, query)}</p>` : ''}
+          <div class="search-section"><i class="fas fa-folder"></i> ${m.section}</div>
+        </div>
+      `).join('');
+    }
+
+    function highlightText(text, query) {
+      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      return text.replace(regex, '<strong style="color:#c0392b">$1</strong>');
+    }
+
+    // ===== SCROLL TO TOP =====
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scroll-top');
+      if (window.scrollY > 300) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    });
+
+    // ===== INIT =====
+    if (sessionStorage.getItem('auth') === '1') {
+      navigate('home');
+    }
+
+    // Configure marked
+    marked.setOptions({
+      breaks: true,
+      gfm: true
+    });
+  </script>
+</body>
+</html>
