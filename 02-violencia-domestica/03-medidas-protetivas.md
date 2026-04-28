@@ -104,12 +104,12 @@ Se o agressor se aproximar, ligar, mandar mensagem ou descumprir qualquer determ
 | Aspecto | Detalhe |
 |---------|---------|
 | **Crime** | Descumprimento de medida protetiva de urgência (artigo 24-A da Lei Maria da Penha) |
-| **Pena atual** | Reclusão de **2 a 5 anos** e multa (Lei 14.987/2024) |
+| **Pena atual** | Reclusão de **2 a 5 anos** e multa (Lei 14.994/2024 -- Pacote Antifeminicídio) |
 | **Regime** | Reclusão -- o agressor pode ir para regime fechado |
 | **Flagrante** | O agressor pode ser preso em flagrante ao descumprir |
 | **Fianca** | Só o juiz pode conceder fianca (o delegado não pode) |
 
-### O que mudou com a Lei 14.987/2024:
+### O que mudou com a Lei 14.994/2024 (Pacote Antifeminicídio):
 
 Antes, a pena era de 3 meses a 2 anos de detenção (pena leve). Agora, a pena e de **2 a 5 anos de reclusão** -- muito mais severa. Essa mudança mostra que a Justica leva o descumprimento de medidas protetivas muito a serio.
 
@@ -167,6 +167,6 @@ Você pode pedir ao juiz, mas a decisão final e dele. O juiz pode manter a medi
 - [Lei 11.340/2006 -- Lei Maria da Penha (artigos 18 a 24)](http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm)
 - [Lei 13.641/2018 -- Crime de descumprimento de medida protetiva](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13641.htm)
 - [Lei 14.550/2023 -- Medidas protetivas independentes de B.O.](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14550.htm)
-- [Lei 14.987/2024 -- Aumento da pena por descumprimento](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14987.htm)
+- [Lei 14.994/2024 -- Pacote Antifeminicídio (aumento da pena por descumprimento)](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm)
 - [CNJ -- Medidas protetivas da Lei Maria da Penha](https://www.cnj.jus.br/conheca-as-medidas-protetivas-previstas-pela-lei-maria-da-penha/)
 - [Defensoria Pública do DF](https://www.defensoria.df.gov.br/?page_id=63141)

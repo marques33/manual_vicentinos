@@ -47,7 +47,7 @@ As denúncias sao encaminhadas aos órgãos responsáveis: Ministerio Público, 
 
 ### O Que Diz a Lei
 
-O **Estatuto do Idoso** (Lei 10.741/2003) protege toda pessoa com **60 anos ou mais**. A lei garante proteção integral contra todas as formas de violência, negligencia e abandono.
+O **Estatuto da Pessoa Idosa** (Lei 10.741/2003) protege toda pessoa com **60 anos ou mais**. A lei garante proteção integral contra todas as formas de violência, negligencia e abandono.
 
 ### Tipos de Violência contra Idosos
 
@@ -213,7 +213,7 @@ O **Estatuto da Pessoa com Deficiência** (Lei 13.146/2015) garante proteção i
 
 ## Fontes e Referências
 
-- [Lei 10.741/2003 -- Estatuto do Idoso](http://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm)
+- [Lei 10.741/2003 -- Estatuto da Pessoa Idosa](http://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm)
 - [Lei 8.069/1990 -- Estatuto da Criança e do Adolescente (ECA)](http://www.planalto.gov.br/ccivil_03/leis/l8069.htm)
 - [Lei 13.146/2015 -- Estatuto da Pessoa com Deficiência](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm)
 - [Disque 100 -- Ministerio dos Direitos Humanos](https://www.gov.br/pt-br/serviços/denunciar-violação-de-direitos-humanos)

@@ -25,7 +25,7 @@ Esta seção trata de três crimes graves que costumam estar ligados a violênci
 
 ### O Que E
 
-O feminicidio é o assassinato de uma mulher por razoes ligadas ao fato de ela ser mulher. Desde 2015, é considerado **crime hediondo** no Brasil (Lei 13.104/2015).
+O feminicídio é o assassinato de uma mulher por razões ligadas ao fato de ela ser mulher. Desde 2015 (Lei 13.104/2015) já era crime hediondo no Brasil. **Desde outubro de 2024, com a Lei 14.994/2024 (Pacote Antifeminicídio), o feminicídio passou a ser um crime autônomo (artigo 121-A do Código Penal), com pena ainda mais severa.**
 
 Existe feminicidio quando o homicidio acontece em contexto de:
 - **Violência doméstica e familiar** (o agressor e marido, companheiro, namorado, ex-parceiro ou familiar)
@@ -35,11 +35,11 @@ Existe feminicidio quando o homicidio acontece em contexto de:
 
 | Aspecto | Detalhe |
 |---------|---------|
-| **Pena** | Reclusão de **12 a 30 anos** |
-| **Tipo de crime** | Crime hediondo |
+| **Pena** | Reclusão de **20 a 40 anos** (art. 121-A do CP, conforme Lei 14.994/2024) |
+| **Tipo de crime** | Crime hediondo e autônomo |
 | **Regime inicial** | Fechado |
-| **Fianca** | Não admite fianca |
-| **Anistia, graca ou indulto** | Não admite |
+| **Fiança** | Não admite fiança |
+| **Anistia, graça ou indulto** | Não admite |
 
 ### Quando a Pena Aumenta
 
@@ -228,7 +228,8 @@ A violência doméstica raramente comeca com agressão física grave. Ela costum
 
 ## Fontes e Referências
 
-- [Lei 13.104/2015 -- Feminicidio](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13104.htm)
+- [Lei 13.104/2015 -- Feminicídio](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13104.htm)
+- [Lei 14.994/2024 -- Pacote Antifeminicídio (crime autônomo, art. 121-A CP)](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm)
 - [Lei 14.132/2021 -- Crime de perseguicao/stalking](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14132.htm)
 - [Lei 14.188/2021 -- Violência psicológica contra a mulher](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14188.htm)
 - [Lei 11.340/2006 -- Lei Maria da Penha](http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm)

@@ -129,8 +129,8 @@ A mulher vítima de violência doméstica tem os seguintes direitos:
 Para que você saiba: os tribunais brasileiros tem posicoes firmes em defesa da mulher:
 
 - O Ministerio Público pode processar o agressor **mesmo que a vítima não queira** (STF, ADI 4424)
-- O agressor **não pode** ter a pena de prisão substituida por cestas básicas ou serviço comunitario (Sumula 588, STJ)
-- O agressor **não pode** se beneficiar de acordos ou suspensão do processo (Sumula 536, STJ)
+- O agressor **não pode** ter a pena privativa de liberdade substituída por penas restritivas de direitos -- como serviço comunitário (Súmula 588 do STJ) -- nem por cestas básicas ou prestação pecuniária (art. 17 da Lei 11.340/2006)
+- O agressor **não pode** se beneficiar de **suspensão condicional do processo** ou **transação penal** previstas na Lei 9.099/95 (Súmula 536 do STJ)
 - A reconciliacao do casal **não apaga** a responsabilidade criminal do agressor
 - Violência doméstica **não e** crime de menor potencial ofensivo
 

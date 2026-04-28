@@ -984,7 +984,7 @@
         { name: 'Disque Saúde / SUS', num: '136' },
         { name: 'INSS', num: '135' },
         { name: 'PROCON-DF', num: '151' },
-        { name: 'Defensoria Pública DF', num: '(61) 3318-4300' },
+        { name: 'Defensoria Pública DF', num: '162' },
       ];
 
       let html = `
@@ -1012,7 +1012,7 @@
             <div class="section-card fade-in-up" onclick="navigate('section','${s.id}')">
               <div class="icon"><i class="fas fa-${s.icon}"></i></div>
               <h3>${s.title}</h3>
-              <div class="section-count">${s.pages.length} ${s.pages.length === 1 ? 'topico' : 'topicos'}</div>
+              <div class="section-count">${s.pages.length} ${s.pages.length === 1 ? 'tópico' : 'tópicos'}</div>
             </div>
           `).join('')}
         </div>
@@ -1027,7 +1027,7 @@
         <div class="section-header fade-in-up">
           <div class="icon"><i class="fas fa-${section.icon}"></i></div>
           <h2>${section.title}</h2>
-          <p>${section.pages.length} topicos disponíveis</p>
+          <p>${section.pages.length} tópicos disponíveis</p>
         </div>
         <div class="page-list">
           ${section.pages.map((p, i) => `
@@ -1043,7 +1043,7 @@
     }
 
     function renderPage(section, page) {
-      if (!page) return '<p>Pagina não encontrada.</p>';
+      if (!page) return '<p>Página não encontrada.</p>';
 
       const pageIndex = section.pages.findIndex(p => p.id === page.id);
       const prevPage = pageIndex > 0 ? section.pages[pageIndex - 1] : null;
@@ -1062,7 +1062,7 @@
             <i class="fas fa-arrow-left"></i> Anterior
           </button>
           <button ${nextPage ? `onclick="navigateDirect('page','${section.id}','${nextPage.id}')"` : 'disabled'}>
-            Proximo <i class="fas fa-arrow-right"></i>
+            Próximo <i class="fas fa-arrow-right"></i>
           </button>
         </div>
       `;
