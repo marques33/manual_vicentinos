@@ -410,6 +410,132 @@
       margin: 0 auto;
     }
 
+    /* ===== EVENTO EM DESTAQUE (banner) ===== */
+    .event-feature {
+      padding: 70px 0;
+      background:
+        radial-gradient(ellipse at right, rgba(201, 165, 103, 0.10), transparent 60%),
+        var(--ivory);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .event-feature-card {
+      display: grid;
+      grid-template-columns: 0.42fr 1fr;
+      gap: 48px;
+      align-items: center;
+      background: linear-gradient(135deg, var(--cream-light) 0%, #fff 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .event-feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--gold), var(--gold-deep));
+    }
+
+    .event-feature-poster {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow:
+        0 0 0 3px var(--gold),
+        0 0 0 4px var(--wine-deep),
+        0 18px 40px rgba(74, 24, 24, 0.22);
+    }
+    .event-feature-poster img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1080 / 1350;
+      object-fit: cover;
+    }
+    .event-feature-poster .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--gold);
+      color: var(--wine-deep);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+
+    .event-feature-info .label {
+      display: inline-block;
+      font-size: 0.74rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .event-feature-info h2 {
+      font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+      color: var(--wine-deep);
+      margin-bottom: 6px;
+    }
+    .event-feature-info .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--wine-mid);
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+    }
+    .event-feature-info p {
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
+
+    .event-feature-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin-bottom: 22px;
+      color: var(--wine);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .event-feature-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .event-feature-meta i { color: var(--gold-deep); }
+
+    .event-feature-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 22px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.94rem;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+      transition: var(--transition);
+    }
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(18, 140, 126, 0.35);
+    }
+
     /* ===== SOBRE OS VICENTINOS ===== */
     .about {
       background:
@@ -1127,6 +1253,11 @@
         grid-template-columns: 1fr;
         gap: 48px;
       }
+      .event-feature-card {
+        grid-template-columns: 0.6fr 1fr;
+        gap: 28px;
+        padding: 24px;
+      }
       .symbols-grid { grid-template-columns: repeat(2, 1fr); }
       .actions-grid, .help-grid { grid-template-columns: 1fr; }
       .conference-info { grid-template-columns: 1fr; }
@@ -1150,6 +1281,13 @@
       nav a { display: block; }
       section { padding: 70px 0; }
       .hero { padding: 120px 0 60px; }
+      .event-feature { padding: 50px 0; }
+      .event-feature-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 20px;
+      }
+      .event-feature-poster { max-width: 280px; margin: 0 auto; }
       .header-brand-text strong { font-size: 0.95rem; }
       .header-brand-text span { font-size: 0.65rem; }
       .corner { display: none; }
@@ -1188,6 +1326,7 @@
         <ul id="navList">
           <li><a href="#sobre">Quem Somos</a></li>
           <li><a href="#conferencia">Nossa Conferência</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
           <li><a href="#acoes">Nossas Ações</a></li>
           <li><a href="#ajudar">Como Ajudar</a></li>
           <li><a href="manual.html" class="cta">Manual de Direitos</a></li>
@@ -1239,6 +1378,52 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============= EVENTO EM DESTAQUE ============= -->
+  <section class="event-feature" aria-labelledby="evento-destaque-titulo">
+    <div class="container">
+      <article class="event-feature-card reveal">
+        <a href="eventos.html" class="event-feature-poster" aria-label="Ver detalhes do Almoço dos Vicentinos">
+          <span class="badge">Próximo evento</span>
+          <img src="assets/almoco-vicentinos.jpg"
+               alt="Encarte do Almoço dos Vicentinos — Domingo 24/05/2026"
+               width="1080" height="1350" loading="lazy" decoding="async">
+        </a>
+
+        <div class="event-feature-info">
+          <span class="label"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Almoço Beneficente</span>
+          <h2 id="evento-destaque-titulo">Almoço dos Vicentinos</h2>
+          <p class="tagline">Sentar à mesa e ajudar quem mais precisa.</p>
+          <p>
+            Um domingo de comunhão e caridade na <strong>Paróquia N. S. do Carmo</strong>.
+            Toda a renda é convertida em apoio direto às famílias acompanhadas pela
+            Conferência.
+          </p>
+
+          <div class="event-feature-meta">
+            <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Domingo · <strong>24/05/2026</strong></span>
+            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 11h30 às 13h30</span>
+            <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 913 Sul</span>
+            <span><i class="fa-solid fa-ticket" aria-hidden="true"></i> R$ 40,00</span>
+          </div>
+
+          <div class="event-feature-cta">
+            <a href="https://wa.me/5561996538206?text=Ol%C3%A1!%20Gostaria%20de%20comprar%20ingressos%20para%20o%20Almo%C3%A7o%20dos%20Vicentinos%20do%20dia%2024%2F05."
+               class="btn-whatsapp"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Comprar ingressos pelo WhatsApp (61) 99653-8206">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Comprar ingresso
+            </a>
+            <a href="eventos.html" class="btn btn-ghost" style="color: var(--wine-deep); border-color: var(--gold);">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              Ver detalhes
+            </a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
