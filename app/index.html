@@ -7,6 +7,24 @@
   <meta name="description" content="Conferência Vicentina Nossa Senhora de Fátima — Paróquia Santuário Nossa Senhora do Carmo. Servir a Cristo nos pobres, na espiritualidade de Frédéric Ozanam.">
   <title>Conferência Nossa Senhora de Fátima | Vicentinos — Paróquia N. S. do Carmo</title>
   <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <!-- Open Graph / compartilhamento social -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Conferência Vicentina N. S. de Fátima">
+  <meta property="og:title" content="Conferência Nossa Senhora de Fátima — Vicentinos">
+  <meta property="og:description" content="Servir a Cristo nos pobres, com fé e caridade. Paróquia Santuário Nossa Senhora do Carmo, Brasília — DF.">
+  <meta property="og:url" content="https://manual-vicentinos.vercel.app/">
+  <meta property="og:image" content="https://manual-vicentinos.vercel.app/assets/nossa-senhora-do-carmo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conferência Nossa Senhora de Fátima — Vicentinos">
+  <meta name="twitter:description" content="Servir a Cristo nos pobres, com fé e caridade.">
+  <meta name="twitter:image" content="https://manual-vicentinos.vercel.app/assets/nossa-senhora-do-carmo.jpg">
+
+  <!-- Marca a página como JS-enabled antes do CSS aplicar opacity:0 nas seções .reveal.
+       Sem JS, o seletor .js .reveal não casa e tudo permanece visível. -->
+  <script>document.documentElement.classList.add('js');</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
@@ -125,10 +143,14 @@
     }
 
     .header-brand img {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+      padding: 3px;
+      background: var(--cream-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.4);
     }
 
     .header-brand-text {
@@ -441,33 +463,59 @@
       font-weight: 600;
     }
 
-    /* Brasão SSVP grande */
+    /* Brasão SSVP grande — apresentado como medalha com moldura dourada */
     .ssvp-emblem {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px;
+      padding: 56px 40px;
       background:
-        radial-gradient(circle at center, rgba(201, 165, 103, 0.14), transparent 65%),
-        var(--cream-light);
+        radial-gradient(circle at center, rgba(201, 165, 103, 0.18), transparent 70%),
+        linear-gradient(180deg, var(--cream-light) 0%, var(--ivory) 100%);
       border-radius: var(--radius-lg);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
     }
 
+    .ssvp-emblem-medal {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 25%, #FBEFD3 0%, var(--cream-light) 35%, #E8D2A4 100%);
+      box-shadow:
+        0 0 0 6px var(--gold),
+        0 0 0 8px var(--wine-deep),
+        0 0 0 14px var(--gold-deep),
+        0 18px 40px rgba(74, 24, 24, 0.28);
+    }
+
+    .ssvp-emblem-medal::before {
+      content: '';
+      position: absolute;
+      inset: 14px;
+      border: 1px dashed rgba(168, 132, 62, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
     .ssvp-emblem img {
-      max-width: 320px;
-      width: 100%;
-      filter: drop-shadow(0 12px 24px rgba(74, 24, 24, 0.18));
+      max-width: 200px;
+      width: 80%;
+      filter: drop-shadow(0 6px 14px rgba(74, 24, 24, 0.25));
     }
 
     .ssvp-emblem::before {
       content: '';
       position: absolute;
-      inset: 16px;
-      border: 1px dashed rgba(201, 165, 103, 0.4);
-      border-radius: calc(var(--radius-lg) - 8px);
+      inset: 18px;
+      border: 1px dashed rgba(201, 165, 103, 0.35);
+      border-radius: calc(var(--radius-lg) - 10px);
       pointer-events: none;
     }
 
@@ -642,7 +690,7 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .symbol-card h4 {
+    .symbol-card h3 {
       font-size: 1.25rem;
       color: var(--wine-deep);
       margin-bottom: 8px;
@@ -694,7 +742,7 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .action-card h4 {
+    .action-card h3 {
       font-size: 1.4rem;
       color: var(--wine-deep);
       margin-bottom: 12px;
@@ -744,7 +792,7 @@
       font-size: 1.8rem;
     }
 
-    .help-card h4 {
+    .help-card h3 {
       font-size: 1.5rem;
       color: var(--wine-deep);
       margin-bottom: 12px;
@@ -984,6 +1032,18 @@
       object-fit: contain;
       filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
     }
+    .footer-logo-ssvp {
+      padding: 4px;
+      background: var(--cream-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      height: 56px !important;
+      width: 56px;
+    }
+    .footer-logo-paroquia {
+      border-radius: 6px;
+      height: 64px !important;
+    }
 
     .footer-divider {
       width: 1px;
@@ -991,7 +1051,7 @@
       background: rgba(201, 165, 103, 0.3);
     }
 
-    footer h4 {
+    footer h3 {
       font-size: 1.4rem;
       color: var(--gold-bright);
       margin-bottom: 6px;
@@ -1006,9 +1066,9 @@
     .footer-bottom {
       margin-top: 32px;
       padding-top: 24px;
-      border-top: 1px solid rgba(201, 165, 103, 0.2);
-      font-size: 0.82rem;
-      color: rgba(245, 230, 211, 0.5);
+      border-top: 1px solid rgba(201, 165, 103, 0.25);
+      font-size: 0.85rem;
+      color: rgba(245, 230, 211, 0.85);
     }
 
     .footer-bottom em {
@@ -1024,14 +1084,20 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .reveal {
+    /* Sem JS, .reveal permanece com opacity:1/translateY(0) (default).
+       Com JS, a classe .js no <html> ativa o estado oculto até o
+       IntersectionObserver adicionar .visible. */
+    .js .reveal {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
-    .reveal.visible {
+    .js .reveal.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .js .reveal { opacity: 1; transform: none; transition: none; }
     }
 
     /* ===== RESPONSIVE ===== */
@@ -1113,6 +1179,8 @@
     </div>
   </header>
 
+  <main>
+
   <!-- ============= HERO ============= -->
   <section class="hero" id="hero">
     <div class="container">
@@ -1149,7 +1217,8 @@
             <span class="corner bl"></span>
             <span class="corner br"></span>
             <img src="assets/nossa-senhora-do-carmo.jpg"
-                 alt="Nossa Senhora do Carmo, padroeira da paróquia">
+                 alt="Nossa Senhora do Carmo, padroeira da paróquia"
+                 width="380" height="780" fetchpriority="high" decoding="async">
           </div>
         </div>
       </div>
@@ -1184,7 +1253,9 @@
         </div>
 
         <div class="ssvp-emblem reveal">
-          <img src="assets/logo-ssvp.png" alt="Brasão da Sociedade de São Vicente de Paulo">
+          <div class="ssvp-emblem-medal">
+            <img src="assets/logo-ssvp.png" alt="Brasão da Sociedade de São Vicente de Paulo" loading="lazy" decoding="async">
+          </div>
         </div>
       </div>
     </div>
@@ -1207,10 +1278,12 @@
         <div class="conference-emblem-stack reveal">
           <div class="conference-shield">
             <img src="assets/brasao-paroquia.jpg"
-                 alt="Brasão da Paróquia Santuário Nossa Senhora do Carmo">
+                 alt="Brasão da Paróquia Santuário Nossa Senhora do Carmo"
+                 loading="lazy" decoding="async">
           </div>
           <div class="conference-seal">
-            <img src="assets/selo-paroquia.jpg" alt="Selo oficial da Paróquia">
+            <img src="assets/selo-paroquia.jpg" alt="Selo oficial da Paróquia"
+                 loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -1273,22 +1346,22 @@
       <div class="symbols-grid">
         <div class="symbol-card reveal">
           <div class="symbol-icon"><i class="fa-solid fa-fire"></i></div>
-          <h4>A Chama</h4>
+          <h3>A Chama</h3>
           <p>O Espírito Santo, fogo que ilumina e move o anúncio do Evangelho.</p>
         </div>
         <div class="symbol-card reveal">
           <div class="symbol-icon"><i class="fa-solid fa-book-bible"></i></div>
-          <h4>O Livro Aberto</h4>
+          <h3>O Livro Aberto</h3>
           <p>A Palavra de Deus, fonte e norma da vida cristã e da caridade.</p>
         </div>
         <div class="symbol-card reveal">
           <div class="symbol-icon"><i class="fa-solid fa-spa"></i></div>
-          <h4>O Lírio</h4>
+          <h3>O Lírio</h3>
           <p>A pureza de Maria, mãe que intercede e nos ensina o sim a Deus.</p>
         </div>
         <div class="symbol-card reveal">
           <div class="symbol-icon"><i class="fa-solid fa-wheat-awn"></i></div>
-          <h4>As Espigas</h4>
+          <h3>As Espigas</h3>
           <p>A Eucaristia, pão partilhado que nos faz um só corpo em Cristo.</p>
         </div>
       </div>
@@ -1299,7 +1372,7 @@
   <section id="acoes" class="actions">
     <div class="container">
       <div class="section-head reveal">
-        <div class="ornament"><i class="fa-solid fa-hands-holding-heart"></i></div>
+        <div class="ornament"><i class="fa-solid fa-handshake-angle"></i></div>
         <span class="section-eyebrow">O que fazemos</span>
         <h2 class="section-title">Caridade que escuta,<br>visita e acompanha.</h2>
         <p class="section-lead">
@@ -1312,37 +1385,37 @@
       <div class="actions-grid">
         <div class="action-card reveal">
           <div class="action-icon"><i class="fa-solid fa-door-open"></i></div>
-          <h4>Visitas às famílias</h4>
+          <h3>Visitas às famílias</h3>
           <p>Encontros pessoais nos lares, levando escuta atenta, oração
           e fraternidade — o coração da nossa missão.</p>
         </div>
         <div class="action-card reveal">
           <div class="action-icon"><i class="fa-solid fa-basket-shopping"></i></div>
-          <h4>Apoio material</h4>
+          <h3>Apoio material</h3>
           <p>Cestas básicas, auxílio com remédios, documentos e necessidades
           imediatas, conforme as possibilidades da Conferência.</p>
         </div>
         <div class="action-card reveal">
-          <div class="action-icon"><i class="fa-solid fa-rosary"></i></div>
-          <h4>Apoio espiritual</h4>
+          <div class="action-icon"><i class="fa-solid fa-dove"></i></div>
+          <h3>Apoio espiritual</h3>
           <p>Oração em comum, sacramentos, preparação para a vida cristã
           e acompanhamento da fé das famílias visitadas.</p>
         </div>
         <div class="action-card reveal">
           <div class="action-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <h4>Orientação de direitos</h4>
+          <h3>Orientação de direitos</h3>
           <p>Apoio para acessar benefícios sociais, saúde, justiça, previdência —
           através do nosso <strong>Manual Vicentino</strong>.</p>
         </div>
         <div class="action-card reveal">
           <div class="action-icon"><i class="fa-solid fa-people-group"></i></div>
-          <h4>Articulação em rede</h4>
+          <h3>Articulação em rede</h3>
           <p>Encaminhamento a CRAS, defensoria, conselhos e demais serviços
           públicos quando o caso exige.</p>
         </div>
         <div class="action-card reveal">
           <div class="action-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h4>Formação contínua</h4>
+          <h3>Formação contínua</h3>
           <p>Estudo do <em>Regra</em>, espiritualidade vicentina e capacitação
           para uma caridade cada vez mais qualificada.</p>
         </div>
@@ -1366,7 +1439,7 @@
       <div class="help-grid">
         <div class="help-card reveal">
           <div class="help-icon"><i class="fa-solid fa-hands-praying"></i></div>
-          <h4>Oração</h4>
+          <h3>Oração</h3>
           <p>Reze pelas famílias que visitamos, pelos vicentinos e por todos
           os pobres — a oração é o motor da nossa caridade.</p>
           <a href="#conferencia" class="help-link">
@@ -1376,7 +1449,7 @@
 
         <div class="help-card reveal">
           <div class="help-icon"><i class="fa-solid fa-gift"></i></div>
-          <h4>Doação</h4>
+          <h3>Doação</h3>
           <p>Alimentos não perecíveis, roupas, remédios e contribuição financeira
           chegam, por nossas mãos, a quem precisa.</p>
           <a href="#contato" class="help-link">
@@ -1386,7 +1459,7 @@
 
         <div class="help-card reveal">
           <div class="help-icon"><i class="fa-solid fa-people-arrows"></i></div>
-          <h4>Voluntariado</h4>
+          <h3>Voluntariado</h3>
           <p>Junte-se à Conferência. Visitar famílias com seus irmãos vicentinos
           é uma escola de fé e de humanidade.</p>
           <a href="#contato" class="help-link">
@@ -1424,7 +1497,7 @@
         <div class="manual-visual reveal">
           <div class="manual-mock">
             <div class="manual-mock-head">
-              <img src="assets/logo-ssvp.png" alt="">
+              <img src="assets/logo-ssvp.png" alt="" loading="lazy" decoding="async">
               <div>
                 <strong>Manual Vicentino</strong>
                 <small>Direitos &amp; Auxílios</small>
@@ -1516,17 +1589,20 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ============= FOOTER ============= -->
   <footer>
     <div class="container">
       <div class="footer-emblems">
-        <img src="assets/logo-ssvp.png" alt="SSVP">
-        <span class="footer-divider"></span>
+        <img src="assets/logo-ssvp.png" alt="SSVP" loading="lazy" decoding="async" class="footer-logo-ssvp">
+        <span class="footer-divider" aria-hidden="true"></span>
         <img src="assets/brasao-paroquia.jpg"
-             style="height:64px; border-radius:6px;"
-             alt="Brasão Paróquia">
+             alt="Brasão Paróquia"
+             loading="lazy" decoding="async"
+             class="footer-logo-paroquia">
       </div>
-      <h4>Conferência Nossa Senhora de Fátima</h4>
+      <h3>Conferência Nossa Senhora de Fátima</h3>
       <p>Sociedade de São Vicente de Paulo · Paróquia Santuário Nossa Senhora do Carmo · Brasília — DF</p>
       <div class="footer-bottom">
         <em>“Christum Annuntiare”</em><br>
