@@ -170,6 +170,19 @@
       font-style: italic;
     }
 
+    .login-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 18px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.78rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .login-back:hover { color: #fff; }
+    .login-back i { font-size: 0.7rem; }
+
     /* ===== APP LAYOUT ===== */
     #app {
       display: none;
@@ -837,6 +850,9 @@
         <div class="login-error" id="login-error"></div>
       </form>
       <p class="login-motto">Serviens in Spe &mdash; Servindo na Esperan&ccedil;a</p>
+      <a href="index.html" class="login-back">
+        <i class="fas fa-arrow-left"></i> Voltar &agrave; p&aacute;gina da Confer&ecirc;ncia
+      </a>
     </div>
   </div>
 
