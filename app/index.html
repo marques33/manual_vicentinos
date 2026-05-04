@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5C1F1B">
+  <meta name="description" content="Conferência Vicentina Nossa Senhora de Fátima — Paróquia Santuário Nossa Senhora do Carmo. Servir a Cristo nos pobres, na espiritualidade de Frédéric Ozanam.">
+  <title>Conferência Nossa Senhora de Fátima | Vicentinos — Paróquia N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      /* Paleta extraída do convite da paróquia */
+      --wine-deep: #4A1818;
+      --wine: #5C1F1B;
+      --wine-mid: #7A2A24;
+      --wine-light: #8E3E37;
+      --gold: #C9A567;
+      --gold-bright: #E0BE7E;
+      --gold-deep: #A8843E;
+      --cream: #F5E6D3;
+      --cream-light: #FAF5EC;
+      --ivory: #FCFAF5;
+
+      /* Azul vicentino — link com a tradição SSVP */
+      --vic-blue: #093971;
+      --vic-blue-dark: #062952;
+
+      /* Azul do brasão da paróquia */
+      --shield-blue: #1E4D7A;
+
+      --text: #2A1B14;
+      --text-soft: #6B5747;
+      --text-muted: #9A8470;
+      --border: rgba(201, 165, 103, 0.25);
+
+      --shadow-sm: 0 2px 8px rgba(74, 24, 24, 0.08);
+      --shadow: 0 8px 32px rgba(74, 24, 24, 0.12);
+      --shadow-lg: 0 20px 60px rgba(74, 24, 24, 0.18);
+      --shadow-gold: 0 8px 32px rgba(201, 165, 103, 0.25);
+
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== ORNAMENTO DOURADO ===== */
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .ornament i { font-size: 0.9rem; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(92, 31, 27, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 165, 103, 0.2);
+      transition: var(--transition);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--cream);
+    }
+
+    .header-brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
+
+    .header-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .header-brand-text strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold-bright);
+    }
+
+    .header-brand-text span {
+      font-size: 0.72rem;
+      color: rgba(245, 230, 211, 0.75);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 8px;
+      align-items: center;
+    }
+
+    nav a {
+      color: rgba(245, 230, 211, 0.85);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--gold-bright);
+      background: rgba(201, 165, 103, 0.1);
+    }
+
+    nav a.cta {
+      background: var(--gold);
+      color: var(--wine-deep);
+      font-weight: 600;
+      padding: 9px 18px;
+    }
+    nav a.cta:hover {
+      background: var(--gold-bright);
+      color: var(--wine-deep);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--cream);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at top right, rgba(201, 165, 103, 0.12), transparent 60%),
+        linear-gradient(135deg, var(--wine-deep) 0%, var(--wine) 50%, var(--wine-mid) 100%);
+      color: var(--cream);
+      padding: 140px 0 80px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(201, 165, 103, 0.08) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(201, 165, 103, 0.06) 0, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 72px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(201, 165, 103, 0.15);
+      border: 1px solid rgba(201, 165, 103, 0.4);
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow i { font-size: 0.7rem; }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      color: var(--cream-light);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 em {
+      color: var(--gold-bright);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    .hero-text {
+      font-size: 1.05rem;
+      color: rgba(245, 230, 211, 0.85);
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--wine-deep);
+      box-shadow: var(--shadow-gold);
+    }
+    .btn-primary:hover {
+      background: var(--gold-bright);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(201, 165, 103, 0.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--cream);
+      border: 1.5px solid rgba(245, 230, 211, 0.4);
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      color: var(--gold-bright);
+      background: rgba(201, 165, 103, 0.08);
+    }
+
+    /* Painel da imagem de N. S. */
+    .hero-image-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-frame {
+      position: relative;
+      max-width: 380px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 4px var(--gold),
+        0 0 0 8px var(--wine-deep),
+        0 0 0 9px var(--gold),
+        0 30px 80px rgba(0,0,0,0.5);
+    }
+
+    .hero-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Cantoneiras douradas decorativas */
+    .corner {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 2px solid var(--gold);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .corner.tl { top: -16px; left: -16px; border-right: none; border-bottom: none; }
+    .corner.tr { top: -16px; right: -16px; border-left: none; border-bottom: none; }
+    .corner.bl { bottom: -16px; left: -16px; border-right: none; border-top: none; }
+    .corner.br { bottom: -16px; right: -16px; border-left: none; border-top: none; }
+
+    /* ===== SEÇÕES BASE ===== */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 64px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.6vw, 2.8rem);
+      color: var(--wine-deep);
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== SOBRE OS VICENTINOS ===== */
+    .about {
+      background:
+        linear-gradient(180deg, var(--ivory) 0%, var(--cream-light) 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 2.4rem;
+      color: var(--wine-deep);
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .about-text p {
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
+
+    .about-text strong {
+      color: var(--wine);
+    }
+
+    .about-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--wine);
+      padding: 24px 28px;
+      border-left: 3px solid var(--gold);
+      background: rgba(201, 165, 103, 0.08);
+      margin-top: 28px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .about-quote cite {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.85rem;
+      font-style: normal;
+      color: var(--gold-deep);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Brasão SSVP grande */
+    .ssvp-emblem {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background:
+        radial-gradient(circle at center, rgba(201, 165, 103, 0.14), transparent 65%),
+        var(--cream-light);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .ssvp-emblem img {
+      max-width: 320px;
+      width: 100%;
+      filter: drop-shadow(0 12px 24px rgba(74, 24, 24, 0.18));
+    }
+
+    .ssvp-emblem::before {
+      content: '';
+      position: absolute;
+      inset: 16px;
+      border: 1px dashed rgba(201, 165, 103, 0.4);
+      border-radius: calc(var(--radius-lg) - 8px);
+      pointer-events: none;
+    }
+
+    /* ===== NOSSA CONFERÊNCIA ===== */
+    .conference {
+      background:
+        radial-gradient(ellipse at top, rgba(201, 165, 103, 0.12), transparent 70%),
+        linear-gradient(180deg, var(--wine-deep) 0%, var(--wine) 100%);
+      color: var(--cream);
+    }
+
+    .conference .section-title { color: var(--cream-light); }
+    .conference .section-lead { color: rgba(245, 230, 211, 0.8); }
+    .conference .section-eyebrow { color: var(--gold-bright); }
+
+    .conference-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .conference-emblem-stack {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .conference-shield {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow:
+        0 0 0 3px var(--gold),
+        0 0 0 6px var(--wine-deep),
+        0 20px 50px rgba(0,0,0,0.4);
+    }
+    .conference-shield img { width: 100%; display: block; }
+
+    .conference-seal {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      background: var(--cream-light);
+    }
+    .conference-seal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .conference-text h3 {
+      font-size: 2.2rem;
+      color: var(--gold-bright);
+      margin-bottom: 8px;
+    }
+
+    .conference-motto {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--gold);
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+    .conference-motto::before {
+      content: '✦ ';
+      color: var(--gold);
+    }
+
+    .conference-text p {
+      color: rgba(245, 230, 211, 0.88);
+      margin-bottom: 16px;
+    }
+
+    .conference-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .info-card {
+      background: rgba(201, 165, 103, 0.08);
+      border: 1px solid rgba(201, 165, 103, 0.25);
+      padding: 18px 20px;
+      border-radius: var(--radius);
+    }
+
+    .info-card i {
+      color: var(--gold-bright);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .info-card .label {
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .info-card .value {
+      color: var(--cream);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    /* ===== ELEMENTOS DO BRASÃO (educativo) ===== */
+    .symbols {
+      background: var(--ivory);
+    }
+
+    .symbols-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .symbol-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--cream-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .symbol-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .symbol-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+    }
+
+    .symbol-card:hover::before { opacity: 1; }
+
+    .symbol-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--wine), var(--wine-mid));
+      color: var(--gold-bright);
+      border-radius: 50%;
+      font-size: 1.6rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .symbol-card h4 {
+      font-size: 1.25rem;
+      color: var(--wine-deep);
+      margin-bottom: 8px;
+    }
+
+    .symbol-card p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    /* ===== AÇÕES ===== */
+    .actions {
+      background: var(--cream-light);
+    }
+
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 24px;
+    }
+
+    .action-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .action-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .action-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color: var(--wine-deep);
+      border-radius: 14px;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .action-card h4 {
+      font-size: 1.4rem;
+      color: var(--wine-deep);
+      margin-bottom: 12px;
+    }
+
+    .action-card p {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+
+    /* ===== COMO AJUDAR ===== */
+    .help {
+      background: var(--ivory);
+    }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .help-card {
+      text-align: center;
+      padding: 48px 32px;
+      background: linear-gradient(180deg, var(--cream-light) 0%, #fff 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: var(--transition);
+    }
+
+    .help-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .help-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--wine-deep);
+      color: var(--gold-bright);
+      font-size: 1.8rem;
+    }
+
+    .help-card h4 {
+      font-size: 1.5rem;
+      color: var(--wine-deep);
+      margin-bottom: 12px;
+    }
+
+    .help-card p {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .help-link {
+      color: var(--gold-deep);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+    .help-link:hover { color: var(--wine); gap: 10px; }
+
+    /* ===== MANUAL CTA ===== */
+    .manual-cta {
+      background:
+        linear-gradient(135deg, var(--wine-deep) 0%, var(--wine) 100%);
+      color: var(--cream);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .manual-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 80% 50%, rgba(201, 165, 103, 0.18), transparent 50%);
+      pointer-events: none;
+    }
+
+    .manual-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .manual-text h2 {
+      font-size: 2.4rem;
+      color: var(--gold-bright);
+      margin-bottom: 16px;
+    }
+
+    .manual-text p {
+      color: rgba(245, 230, 211, 0.85);
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+    }
+
+    .manual-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .manual-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      color: rgba(245, 230, 211, 0.9);
+    }
+
+    .manual-features i {
+      color: var(--gold-bright);
+      font-size: 0.9rem;
+    }
+
+    .manual-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .manual-mock {
+      background: var(--cream-light);
+      color: var(--wine-deep);
+      padding: 32px 28px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      max-width: 340px;
+      width: 100%;
+      border: 1px solid var(--gold);
+      position: relative;
+    }
+
+    .manual-mock::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border: 1px solid rgba(201, 165, 103, 0.4);
+      border-radius: calc(var(--radius-lg) + 6px);
+      pointer-events: none;
+    }
+
+    .manual-mock-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .manual-mock-head img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .manual-mock-head strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--wine-deep);
+    }
+    .manual-mock-head small {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .manual-topics li {
+      list-style: none;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .manual-topics i {
+      color: var(--gold-deep);
+      font-size: 0.75rem;
+    }
+
+    /* ===== CONTATO ===== */
+    .contact {
+      background: var(--cream-light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: stretch;
+    }
+
+    .contact-info, .contact-meet {
+      background: #fff;
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-info h3, .contact-meet h3 {
+      font-size: 1.6rem;
+      color: var(--wine-deep);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-info h3 i, .contact-meet h3 i {
+      color: var(--gold-deep);
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-row:last-child { border-bottom: none; }
+
+    .contact-row .icon {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(201, 165, 103, 0.15);
+      color: var(--gold-deep);
+      flex-shrink: 0;
+    }
+
+    .contact-row .label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+
+    .contact-row .value {
+      color: var(--wine-deep);
+      font-weight: 500;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--wine-deep);
+      color: rgba(245, 230, 211, 0.7);
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+
+    .footer-emblems {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+
+    .footer-emblems img {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    .footer-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(201, 165, 103, 0.3);
+    }
+
+    footer h4 {
+      font-size: 1.4rem;
+      color: var(--gold-bright);
+      margin-bottom: 6px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(201, 165, 103, 0.2);
+      font-size: 0.82rem;
+      color: rgba(245, 230, 211, 0.5);
+    }
+
+    .footer-bottom em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    /* ===== ANIMAÇÕES ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .conference-grid,
+      .manual-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .symbols-grid { grid-template-columns: repeat(2, 1fr); }
+      .actions-grid, .help-grid { grid-template-columns: 1fr; }
+      .conference-info { grid-template-columns: 1fr; }
+      .ssvp-emblem { order: -1; }
+    }
+
+    @media (max-width: 720px) {
+      .menu-toggle { display: block; }
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        flex-direction: column;
+        background: var(--wine-deep);
+        padding: 12px;
+        gap: 4px;
+        border-top: 1px solid rgba(201, 165, 103, 0.2);
+      }
+      nav ul.open { display: flex; }
+      nav a { display: block; }
+      section { padding: 70px 0; }
+      .hero { padding: 120px 0 60px; }
+      .header-brand-text strong { font-size: 0.95rem; }
+      .header-brand-text span { font-size: 0.65rem; }
+      .corner { display: none; }
+      .hero-frame {
+        box-shadow:
+          0 0 0 3px var(--gold),
+          0 0 0 6px var(--wine-deep),
+          0 20px 50px rgba(0,0,0,0.4);
+      }
+      .contact-info, .contact-meet { padding: 28px; }
+      .footer-emblems img { height: 44px; }
+    }
+
+    @media (max-width: 480px) {
+      .symbols-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============= HEADER ============= -->
+  <header>
+    <div class="header-inner">
+      <a href="#hero" class="header-brand">
+        <img src="assets/logo-ssvp.png" alt="Sociedade de São Vicente de Paulo">
+        <div class="header-brand-text">
+          <strong>Conferência N. S. de Fátima</strong>
+          <span>Vicentinos · Paróquia N. S. do Carmo</span>
+        </div>
+      </a>
+      <nav>
+        <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="navList">
+          <li><a href="#sobre">Quem Somos</a></li>
+          <li><a href="#conferencia">Nossa Conferência</a></li>
+          <li><a href="#acoes">Nossas Ações</a></li>
+          <li><a href="#ajudar">Como Ajudar</a></li>
+          <li><a href="manual.html" class="cta">Manual de Direitos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============= HERO ============= -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-eyebrow">
+            <i class="fa-solid fa-cross"></i>
+            Sociedade de São Vicente de Paulo
+          </div>
+          <h1>Servir a Cristo <em>nos pobres</em>, com fé e caridade.</h1>
+          <p class="hero-tagline">Christum Annuntiare — Anunciar Cristo com a vida.</p>
+          <p class="hero-text">
+            Somos a <strong>Conferência Nossa Senhora de Fátima</strong>, vicentinos da
+            <strong>Paróquia Santuário Nossa Senhora do Carmo</strong>, em Brasília — DF.
+            Inspirados por Frédéric Ozanam, visitamos famílias, escutamos histórias,
+            e oferecemos apoio espiritual e material a quem mais precisa.
+          </p>
+          <div class="hero-cta">
+            <a href="#ajudar" class="btn btn-primary">
+              <i class="fa-solid fa-hands-praying"></i>
+              Quero ajudar
+            </a>
+            <a href="manual.html" class="btn btn-ghost">
+              <i class="fa-solid fa-book-open"></i>
+              Acessar Manual de Direitos
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-frame">
+            <span class="corner tl"></span>
+            <span class="corner tr"></span>
+            <span class="corner bl"></span>
+            <span class="corner br"></span>
+            <img src="assets/nossa-senhora-do-carmo.jpg"
+                 alt="Nossa Senhora do Carmo, padroeira da paróquia">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= QUEM SOMOS / SOBRE OS VICENTINOS ============= -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-eyebrow">Quem Somos</span>
+          <h2>Uma fraternidade nascida<br>do amor aos pobres.</h2>
+          <p>
+            A <strong>Sociedade de São Vicente de Paulo (SSVP)</strong> foi fundada em
+            <strong>Paris, em 1833</strong>, pelo bem-aventurado <strong>Frédéric Ozanam</strong>
+            e um pequeno grupo de jovens estudantes. Diante de uma sociedade ferida,
+            quiseram traduzir a fé em obras concretas — visitando famílias pobres em
+            seus próprios lares.
+          </p>
+          <p>
+            No Brasil, a SSVP chegou em <strong>1872</strong>, e hoje reúne dezenas de
+            milhares de vicentinos em <strong>Conferências</strong> espalhadas pelo país.
+            A nossa, a <strong>Conferência Nossa Senhora de Fátima</strong>, atua sob a
+            proteção da Virgem e a missão da paróquia que nos acolhe.
+          </p>
+          <blockquote class="about-quote">
+            “Não basta socorrer os pobres dia a dia. É preciso ainda ir à raiz do mal,
+            e por meio de reformas sábias, diminuir as causas da miséria pública.”
+            <cite>— Bem-aventurado Frédéric Ozanam</cite>
+          </blockquote>
+        </div>
+
+        <div class="ssvp-emblem reveal">
+          <img src="assets/logo-ssvp.png" alt="Brasão da Sociedade de São Vicente de Paulo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= NOSSA CONFERÊNCIA ============= -->
+  <section id="conferencia" class="conference">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="ornament"><i class="fa-solid fa-cross"></i></div>
+        <span class="section-eyebrow">Nossa Conferência</span>
+        <h2 class="section-title">Sob o manto de Maria,<br>na casa do Carmo.</h2>
+        <p class="section-lead">
+          Uma família vicentina vinculada à Paróquia Santuário Nossa Senhora do Carmo,
+          consagrada à intercessão de Nossa Senhora de Fátima.
+        </p>
+      </div>
+
+      <div class="conference-grid">
+        <div class="conference-emblem-stack reveal">
+          <div class="conference-shield">
+            <img src="assets/brasao-paroquia.jpg"
+                 alt="Brasão da Paróquia Santuário Nossa Senhora do Carmo">
+          </div>
+          <div class="conference-seal">
+            <img src="assets/selo-paroquia.jpg" alt="Selo oficial da Paróquia">
+          </div>
+        </div>
+
+        <div class="conference-text reveal">
+          <h3>Conferência Nossa Senhora de Fátima</h3>
+          <p class="conference-motto">Christum Annuntiare</p>
+          <p>
+            Reunimo-nos em torno da Eucaristia e do Manto de Maria. O brasão da nossa
+            paróquia traduz, em imagens, a missão que abraçamos: anunciar Cristo
+            (<em>Christum Annuntiare</em>) com palavras e, sobretudo, com gestos
+            concretos de caridade.
+          </p>
+          <p>
+            A <strong>chama do Espírito</strong>, o <strong>livro da Palavra</strong>,
+            o <strong>lírio da pureza de Maria</strong>, as <strong>espigas de trigo</strong>
+            (Eucaristia) e as <strong>estrelas</strong> nos lembram, em cada visita
+            que fazemos, de quem é Aquele a quem servimos nos pobres.
+          </p>
+
+          <div class="conference-info">
+            <div class="info-card">
+              <i class="fa-solid fa-church"></i>
+              <div class="label">Paróquia</div>
+              <div class="value">Santuário Nossa Senhora do Carmo</div>
+            </div>
+            <div class="info-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="label">Onde estamos</div>
+              <div class="value">AV. W5 SGAS, Quadra 913, Conjunto A — Brasília, DF</div>
+            </div>
+            <div class="info-card">
+              <i class="fa-regular fa-calendar"></i>
+              <div class="label">Reuniões</div>
+              <div class="value">Encontros semanais na paróquia</div>
+            </div>
+            <div class="info-card">
+              <i class="fa-solid fa-hands-holding-circle"></i>
+              <div class="label">Padroeiros</div>
+              <div class="value">N. S. do Carmo &amp; N. S. de Fátima</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= ELEMENTOS DO BRASÃO ============= -->
+  <section class="symbols">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="ornament"><i class="fa-solid fa-fire"></i></div>
+        <span class="section-eyebrow">Símbolos do Brasão</span>
+        <h2 class="section-title">Cada elemento, uma palavra.</h2>
+        <p class="section-lead">
+          O brasão da paróquia é uma catequese silenciosa — cinco símbolos que
+          resumem nossa vocação cristã e vicentina.
+        </p>
+      </div>
+
+      <div class="symbols-grid">
+        <div class="symbol-card reveal">
+          <div class="symbol-icon"><i class="fa-solid fa-fire"></i></div>
+          <h4>A Chama</h4>
+          <p>O Espírito Santo, fogo que ilumina e move o anúncio do Evangelho.</p>
+        </div>
+        <div class="symbol-card reveal">
+          <div class="symbol-icon"><i class="fa-solid fa-book-bible"></i></div>
+          <h4>O Livro Aberto</h4>
+          <p>A Palavra de Deus, fonte e norma da vida cristã e da caridade.</p>
+        </div>
+        <div class="symbol-card reveal">
+          <div class="symbol-icon"><i class="fa-solid fa-spa"></i></div>
+          <h4>O Lírio</h4>
+          <p>A pureza de Maria, mãe que intercede e nos ensina o sim a Deus.</p>
+        </div>
+        <div class="symbol-card reveal">
+          <div class="symbol-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+          <h4>As Espigas</h4>
+          <p>A Eucaristia, pão partilhado que nos faz um só corpo em Cristo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= NOSSAS AÇÕES ============= -->
+  <section id="acoes" class="actions">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="ornament"><i class="fa-solid fa-hands-holding-heart"></i></div>
+        <span class="section-eyebrow">O que fazemos</span>
+        <h2 class="section-title">Caridade que escuta,<br>visita e acompanha.</h2>
+        <p class="section-lead">
+          A obra essencial do vicentino é a <strong>visita domiciliar</strong> —
+          ir ao encontro do pobre em sua casa, reconhecer Cristo no seu rosto,
+          e caminhar com ele.
+        </p>
+      </div>
+
+      <div class="actions-grid">
+        <div class="action-card reveal">
+          <div class="action-icon"><i class="fa-solid fa-door-open"></i></div>
+          <h4>Visitas às famílias</h4>
+          <p>Encontros pessoais nos lares, levando escuta atenta, oração
+          e fraternidade — o coração da nossa missão.</p>
+        </div>
+        <div class="action-card reveal">
+          <div class="action-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+          <h4>Apoio material</h4>
+          <p>Cestas básicas, auxílio com remédios, documentos e necessidades
+          imediatas, conforme as possibilidades da Conferência.</p>
+        </div>
+        <div class="action-card reveal">
+          <div class="action-icon"><i class="fa-solid fa-rosary"></i></div>
+          <h4>Apoio espiritual</h4>
+          <p>Oração em comum, sacramentos, preparação para a vida cristã
+          e acompanhamento da fé das famílias visitadas.</p>
+        </div>
+        <div class="action-card reveal">
+          <div class="action-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h4>Orientação de direitos</h4>
+          <p>Apoio para acessar benefícios sociais, saúde, justiça, previdência —
+          através do nosso <strong>Manual Vicentino</strong>.</p>
+        </div>
+        <div class="action-card reveal">
+          <div class="action-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h4>Articulação em rede</h4>
+          <p>Encaminhamento a CRAS, defensoria, conselhos e demais serviços
+          públicos quando o caso exige.</p>
+        </div>
+        <div class="action-card reveal">
+          <div class="action-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h4>Formação contínua</h4>
+          <p>Estudo do <em>Regra</em>, espiritualidade vicentina e capacitação
+          para uma caridade cada vez mais qualificada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= COMO AJUDAR ============= -->
+  <section id="ajudar" class="help">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="ornament"><i class="fa-solid fa-heart"></i></div>
+        <span class="section-eyebrow">Como Ajudar</span>
+        <h2 class="section-title">Há lugar para você nesta missão.</h2>
+        <p class="section-lead">
+          Toda vocação vicentina nasce de um chamado pessoal. Você pode contribuir
+          de três formas — todas igualmente importantes diante de Deus.
+        </p>
+      </div>
+
+      <div class="help-grid">
+        <div class="help-card reveal">
+          <div class="help-icon"><i class="fa-solid fa-hands-praying"></i></div>
+          <h4>Oração</h4>
+          <p>Reze pelas famílias que visitamos, pelos vicentinos e por todos
+          os pobres — a oração é o motor da nossa caridade.</p>
+          <a href="#conferencia" class="help-link">
+            Conheça nossa espiritualidade <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="help-card reveal">
+          <div class="help-icon"><i class="fa-solid fa-gift"></i></div>
+          <h4>Doação</h4>
+          <p>Alimentos não perecíveis, roupas, remédios e contribuição financeira
+          chegam, por nossas mãos, a quem precisa.</p>
+          <a href="#contato" class="help-link">
+            Entre em contato <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="help-card reveal">
+          <div class="help-icon"><i class="fa-solid fa-people-arrows"></i></div>
+          <h4>Voluntariado</h4>
+          <p>Junte-se à Conferência. Visitar famílias com seus irmãos vicentinos
+          é uma escola de fé e de humanidade.</p>
+          <a href="#contato" class="help-link">
+            Quero participar <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= MANUAL CTA ============= -->
+  <section class="manual-cta">
+    <div class="container">
+      <div class="manual-grid">
+        <div class="manual-text reveal">
+          <span class="section-eyebrow" style="color: var(--gold);">Ferramenta para o vicentino</span>
+          <h2>Manual Vicentino<br>de Direitos e Auxílios</h2>
+          <p>
+            Reunimos em um só lugar — acessível pelo celular — os principais
+            direitos, benefícios e caminhos legais para orientar as famílias visitadas.
+            Da Lei Maria da Penha ao BPC/LOAS, da Defensoria ao SUS.
+          </p>
+          <ul class="manual-features">
+            <li><i class="fa-solid fa-check"></i> 9 áreas de direito, com foco no DF</li>
+            <li><i class="fa-solid fa-check"></i> Linguagem simples, contatos atualizados</li>
+            <li><i class="fa-solid fa-check"></i> Funciona offline no seu celular</li>
+            <li><i class="fa-solid fa-check"></i> Gratuito, feito por vicentinos para vicentinos</li>
+          </ul>
+          <a href="manual.html" class="btn btn-primary">
+            <i class="fa-solid fa-book-open"></i>
+            Acessar o Manual
+          </a>
+        </div>
+
+        <div class="manual-visual reveal">
+          <div class="manual-mock">
+            <div class="manual-mock-head">
+              <img src="assets/logo-ssvp.png" alt="">
+              <div>
+                <strong>Manual Vicentino</strong>
+                <small>Direitos &amp; Auxílios</small>
+              </div>
+            </div>
+            <ul class="manual-topics">
+              <li><i class="fa-solid fa-circle"></i> Benefícios Sociais</li>
+              <li><i class="fa-solid fa-circle"></i> Violência Doméstica</li>
+              <li><i class="fa-solid fa-circle"></i> Crianças e Adolescentes</li>
+              <li><i class="fa-solid fa-circle"></i> Direito à Saúde</li>
+              <li><i class="fa-solid fa-circle"></i> Previdência Social</li>
+              <li><i class="fa-solid fa-circle"></i> Direito do Consumidor</li>
+              <li><i class="fa-solid fa-circle"></i> Acesso à Justiça</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= CONTATO ============= -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="ornament"><i class="fa-solid fa-envelope"></i></div>
+        <span class="section-eyebrow">Visite-nos</span>
+        <h2 class="section-title">Você é bem-vindo na casa do Carmo.</h2>
+        <p class="section-lead">
+          Procure-nos na paróquia, participe de uma Missa e converse conosco
+          após o encontro. As portas da Conferência estão abertas.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3><i class="fa-solid fa-church"></i> Paróquia Santuário</h3>
+          <div class="contact-row">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="label">Endereço</div>
+              <div class="value">AV. W5 SGAS, Quadra 913<br>Conjunto A — Asa Sul, Brasília, DF</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="icon"><i class="fa-solid fa-cross"></i></div>
+            <div>
+              <div class="label">Padroeira</div>
+              <div class="value">Nossa Senhora do Carmo</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div>
+              <div class="label">Pároco</div>
+              <div class="value">Frei Marlom Francis de Souza Moreira, O. Carm.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-meet reveal">
+          <h3><i class="fa-solid fa-handshake-angle"></i> Conferência Vicentina</h3>
+          <div class="contact-row">
+            <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+            <div>
+              <div class="label">Conferência</div>
+              <div class="value">Nossa Senhora de Fátima</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="icon"><i class="fa-regular fa-calendar"></i></div>
+            <div>
+              <div class="label">Reuniões</div>
+              <div class="value">Encontros semanais na paróquia<br>
+                <small style="color: var(--text-muted);">Consulte horários na secretaria</small>
+              </div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div>
+              <div class="label">Quero participar</div>
+              <div class="value">Procure-nos após qualquer Missa<br>
+                <small style="color: var(--text-muted);">ou pela secretaria paroquial</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FOOTER ============= -->
+  <footer>
+    <div class="container">
+      <div class="footer-emblems">
+        <img src="assets/logo-ssvp.png" alt="SSVP">
+        <span class="footer-divider"></span>
+        <img src="assets/brasao-paroquia.jpg"
+             style="height:64px; border-radius:6px;"
+             alt="Brasão Paróquia">
+      </div>
+      <h4>Conferência Nossa Senhora de Fátima</h4>
+      <p>Sociedade de São Vicente de Paulo · Paróquia Santuário Nossa Senhora do Carmo · Brasília — DF</p>
+      <div class="footer-bottom">
+        <em>“Christum Annuntiare”</em><br>
+        Anunciar Cristo com palavras e obras de caridade.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const toggle = document.getElementById('menuToggle');
+    const navList = document.getElementById('navList');
+    if (toggle) {
+      toggle.addEventListener('click', () => navList.classList.toggle('open'));
+      navList.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => navList.classList.remove('open'));
+      });
+    }
+
+    // Header opaco ao rolar
+    const header = document.querySelector('header');
+    const onScroll = () => {
+      if (window.scrollY > 40) {
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Reveal on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
