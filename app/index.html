@@ -420,29 +420,34 @@
     }
 
     .event-feature-card {
-      display: grid;
-      grid-template-columns: 0.42fr 1fr;
-      gap: 48px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 36px;
+      max-width: 760px;
+      margin: 0 auto;
       background: linear-gradient(135deg, var(--cream-light) 0%, #fff 100%);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 32px;
+      padding: 40px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
     .event-feature-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--gold), var(--gold-deep));
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold-deep), var(--gold), var(--gold-deep));
     }
 
     .event-feature-poster {
       position: relative;
+      width: 100%;
+      max-width: 420px;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow:
@@ -452,9 +457,13 @@
     }
     .event-feature-poster img {
       width: 100%;
+      height: auto;
       display: block;
-      aspect-ratio: 1080 / 1350;
-      object-fit: cover;
+    }
+
+    .event-feature-info {
+      width: 100%;
+      max-width: 580px;
     }
     .event-feature-poster .badge {
       position: absolute;
@@ -499,8 +508,9 @@
     .event-feature-meta {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 8px 24px;
-      margin-bottom: 22px;
+      margin-bottom: 26px;
       color: var(--wine);
       font-weight: 500;
       font-size: 0.95rem;
@@ -515,6 +525,7 @@
     .event-feature-cta {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
     }
     .btn-whatsapp {
@@ -1253,11 +1264,7 @@
         grid-template-columns: 1fr;
         gap: 48px;
       }
-      .event-feature-card {
-        grid-template-columns: 0.6fr 1fr;
-        gap: 28px;
-        padding: 24px;
-      }
+      .event-feature-card { gap: 28px; padding: 28px; }
       .symbols-grid { grid-template-columns: repeat(2, 1fr); }
       .actions-grid, .help-grid { grid-template-columns: 1fr; }
       .conference-info { grid-template-columns: 1fr; }
@@ -1282,12 +1289,8 @@
       section { padding: 70px 0; }
       .hero { padding: 120px 0 60px; }
       .event-feature { padding: 50px 0; }
-      .event-feature-card {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 20px;
-      }
-      .event-feature-poster { max-width: 280px; margin: 0 auto; }
+      .event-feature-card { gap: 24px; padding: 24px; }
+      .event-feature-poster { max-width: 320px; }
       .header-brand-text strong { font-size: 0.95rem; }
       .header-brand-text span { font-size: 0.65rem; }
       .corner { display: none; }
