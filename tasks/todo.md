@@ -63,3 +63,25 @@ eventos 0.9 → 0.8.
   o sitemap com `lastmod` novo acelera o recrawl.
 - Se as reuniões de terça mudarem de horário, atualizar: metas + JSON-LD da index, os dois
   cards "Reuniões" e os cards da agenda em eventos.html.
+
+## Diagnóstico de indexação (29/07/2026)
+
+Consultas `site:manual-vicentinos.vercel.app` em DuckDuckGo/lite (índice Bing) e Brave:
+**nenhum resultado**. Busca por frases exatas do site ("Manual Vicentino de Direitos e
+Auxílios") também não retorna o domínio. O Google respondeu com CAPTCHA às consultas
+automatizadas — a confirmação definitiva precisa ser feita no Search Console.
+
+Lado técnico: tudo liberado para indexar.
+- `robots.txt`: `Allow: /` + sitemap declarado.
+- Cabeçalhos de produção: sem `X-Robots-Tag`; `<meta name="robots" content="index, follow">`.
+- `canonical` correto nas três páginas; `sitemap.xml` responde 200.
+- Meta `google-site-verification` presente (propriedade de prefixo de URL no GSC).
+
+Ações pendentes (exigem login no Search Console — só o usuário pode fazer):
+1. Sitemaps → enviar `https://manual-vicentinos.vercel.app/sitemap.xml`.
+2. Inspeção de URL → `/`, `/eventos.html`, `/manual.html` → "Solicitar indexação".
+3. Relatório "Páginas" → conferir o motivo caso apareçam como "Descoberta — não indexada".
+
+Fator de risco conhecido: domínio gratuito `*.vercel.app` e ausência de links externos
+apontando para o site. Um domínio próprio e links (site/redes da paróquia, bio do Instagram)
+aceleram bastante a descoberta.
