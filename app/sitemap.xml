@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://manual-vicentinos.vercel.app/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,13 +17,9 @@
   </url>
   <url>
     <loc>https://manual-vicentinos.vercel.app/eventos.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://manual-vicentinos.vercel.app/assets/almoco-vicentinos.jpg</image:loc>
-      <image:title>Almoço dos Vicentinos — 24 de maio de 2026</image:title>
-    </image:image>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manual-vicentinos.vercel.app/manual.html</loc>

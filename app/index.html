@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#5C1F1B">
-  <meta name="description" content="Vicentinos em Brasília — Conferência Nossa Senhora de Fátima da Paróquia Santuário Nossa Senhora do Carmo (Asa Sul, 913 Sul). Reuniões toda terça-feira, 17h. Visita a famílias, caridade e Manual Vicentino de Direitos.">
-  <meta name="keywords" content="vicentinos Brasília, vicentinos Carmo, Conferência Nossa Senhora de Fátima, Paróquia do Carmo Brasília, Paróquia Santuário Nossa Senhora do Carmo, Sociedade de São Vicente de Paulo Brasília, SSVP DF, vicentinos Asa Sul, vicentinos 913 Sul, Manual Vicentino, caridade Brasília, Frédéric Ozanam">
+  <meta name="description" content="Vicentinos em Brasília — Conferência Nossa Senhora de Fátima da Paróquia Santuário Nossa Senhora do Carmo (Asa Sul, 913 Sul). Reuniões às terças e aos sábados, 17h. Acompanhamos 9 famílias — 53 pessoas — na Estrutural, com cestas básicas, auxílio material e espiritual.">
+  <meta name="keywords" content="vicentinos Brasília, vicentinos Carmo, Conferência Nossa Senhora de Fátima, Paróquia do Carmo Brasília, Paróquia Santuário Nossa Senhora do Carmo, Sociedade de São Vicente de Paulo Brasília, SSVP DF, vicentinos Asa Sul, vicentinos 913 Sul, cestas básicas Estrutural, doação cesta básica Brasília, Manual Vicentino, caridade Brasília, Frédéric Ozanam">
   <title>Vicentinos Brasília · Conferência N. S. de Fátima — Paróquia do Carmo (Asa Sul)</title>
   <link rel="canonical" href="https://manual-vicentinos.vercel.app/">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -20,7 +20,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Vicentinos Brasília — Conferência N. S. de Fátima · Paróquia do Carmo">
   <meta property="og:title" content="Vicentinos Brasília · Conferência N. S. de Fátima — Paróquia do Carmo">
-  <meta property="og:description" content="Vicentinos da Paróquia Santuário Nossa Senhora do Carmo, em Brasília (Asa Sul, 913 Sul). Encontros toda terça, 17h. Servir a Cristo nos pobres com fé e caridade.">
+  <meta property="og:description" content="Vicentinos da Paróquia Santuário Nossa Senhora do Carmo, em Brasília (Asa Sul, 913 Sul). Encontros às terças e aos sábados, 17h. Servir a Cristo nos pobres com fé e caridade.">
   <meta property="og:url" content="https://manual-vicentinos.vercel.app/">
   <meta property="og:image" content="https://manual-vicentinos.vercel.app/assets/nossa-senhora-do-carmo.jpg">
   <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
   <meta property="og:image:alt" content="Nossa Senhora do Carmo, padroeira da paróquia em Brasília">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vicentinos Brasília · Paróquia N. S. do Carmo (Asa Sul)">
-  <meta name="twitter:description" content="Conferência Nossa Senhora de Fátima — encontros toda terça, 17h, na Paróquia do Carmo, 913 Sul.">
+  <meta name="twitter:description" content="Conferência Nossa Senhora de Fátima — encontros às terças e aos sábados, 17h, na Paróquia do Carmo, 913 Sul.">
   <meta name="twitter:image" content="https://manual-vicentinos.vercel.app/assets/nossa-senhora-do-carmo.jpg">
 
   <!-- Dados estruturados (Schema.org) — ajudam o Google a montar rich results -->
@@ -53,18 +53,31 @@
         "url": "https://manual-vicentinos.vercel.app/",
         "logo": "https://manual-vicentinos.vercel.app/assets/logo-ssvp.png",
         "image": "https://manual-vicentinos.vercel.app/assets/nossa-senhora-do-carmo.jpg",
-        "description": "Conferência da Sociedade de São Vicente de Paulo (SSVP) sediada na Paróquia Santuário Nossa Senhora do Carmo, em Brasília.",
+        "description": "Conferência da Sociedade de São Vicente de Paulo (SSVP) sediada na Paróquia Santuário Nossa Senhora do Carmo, em Brasília. Acompanha atualmente 9 famílias — 53 pessoas — domiciliadas na Estrutural (DF), com distribuição de cestas básicas, auxílio material e apoio espiritual. Reuniões às terças-feiras e aos sábados, às 17h, na paróquia.",
         "parentOrganization": {
           "@type": "Organization",
           "name": "Sociedade de São Vicente de Paulo",
           "alternateName": "SSVP",
           "url": "https://www.ssvpbrasil.org.br/"
         },
-        "areaServed": {
-          "@type": "City",
-          "name": "Brasília",
-          "containedInPlace": { "@type": "AdministrativeArea", "name": "Distrito Federal" }
-        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Brasília",
+            "containedInPlace": { "@type": "AdministrativeArea", "name": "Distrito Federal" }
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Estrutural (SCIA)",
+            "containedInPlace": { "@type": "AdministrativeArea", "name": "Distrito Federal" }
+          }
+        ],
+        "knowsAbout": [
+          "Distribuição de cestas básicas",
+          "Visita domiciliar a famílias em vulnerabilidade",
+          "Auxílio material e espiritual",
+          "Orientação sobre direitos e benefícios sociais"
+        ],
         "location": { "@id": "https://manual-vicentinos.vercel.app/#paroquia" }
       },
       {
@@ -92,29 +105,6 @@
         "religion": "Catholic",
         "slogan": "Christum Annuntiare",
         "subOrganization": { "@id": "https://manual-vicentinos.vercel.app/#conferencia" }
-      },
-      {
-        "@type": "Event",
-        "@id": "https://manual-vicentinos.vercel.app/eventos.html#almoco-2026-05-24",
-        "name": "Almoço dos Vicentinos",
-        "description": "Almoço beneficente da Conferência Vicentina Nossa Senhora de Fátima, na Paróquia Santuário Nossa Senhora do Carmo. Toda a renda é convertida em apoio direto às famílias acompanhadas pela Conferência.",
-        "startDate": "2026-05-24T11:30:00-03:00",
-        "endDate": "2026-05-24T13:30:00-03:00",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "image": "https://manual-vicentinos.vercel.app/assets/almoco-vicentinos.jpg",
-        "url": "https://manual-vicentinos.vercel.app/eventos.html",
-        "location": { "@id": "https://manual-vicentinos.vercel.app/#paroquia" },
-        "organizer": { "@id": "https://manual-vicentinos.vercel.app/#conferencia" },
-        "offers": {
-          "@type": "Offer",
-          "name": "Ingresso — Almoço dos Vicentinos",
-          "price": "40.00",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "url": "https://wa.me/5561996538206",
-          "validFrom": "2026-04-01"
-        }
       }
     ]
   }
@@ -509,8 +499,8 @@
       margin: 0 auto;
     }
 
-    /* ===== EVENTO EM DESTAQUE (banner) ===== */
-    .event-feature {
+    /* ===== NOSSA OBRA HOJE (impacto) ===== */
+    .impact {
       padding: 70px 0;
       background:
         radial-gradient(ellipse at right, rgba(201, 165, 103, 0.10), transparent 60%),
@@ -518,23 +508,22 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .event-feature-card {
-      display: flex;
-      flex-direction: column;
+    .impact-card {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
       align-items: center;
-      gap: 36px;
-      max-width: 760px;
+      gap: 48px;
+      max-width: 1000px;
       margin: 0 auto;
       background: linear-gradient(135deg, var(--cream-light) 0%, #fff 100%);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 40px;
+      padding: 44px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
-      text-align: center;
     }
-    .event-feature-card::before {
+    .impact-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
@@ -543,42 +532,7 @@
       background: linear-gradient(90deg, var(--gold-deep), var(--gold), var(--gold-deep));
     }
 
-    .event-feature-poster {
-      position: relative;
-      width: 100%;
-      max-width: 420px;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow:
-        0 0 0 3px var(--gold),
-        0 0 0 4px var(--wine-deep),
-        0 18px 40px rgba(74, 24, 24, 0.22);
-    }
-    .event-feature-poster img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .event-feature-info {
-      width: 100%;
-      max-width: 580px;
-    }
-    .event-feature-poster .badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: var(--gold);
-      color: var(--wine-deep);
-      font-size: 0.66rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 5px 12px;
-      border-radius: 100px;
-    }
-
-    .event-feature-info .label {
+    .impact-text .label {
       display: inline-block;
       font-size: 0.74rem;
       letter-spacing: 0.16em;
@@ -587,63 +541,89 @@
       font-weight: 700;
       margin-bottom: 10px;
     }
-    .event-feature-info h2 {
-      font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+    .impact-text h2 {
+      font-size: clamp(1.7rem, 2.5vw, 2.3rem);
       color: var(--wine-deep);
-      margin-bottom: 6px;
+      line-height: 1.2;
+      margin-bottom: 14px;
     }
-    .event-feature-info .tagline {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      color: var(--wine-mid);
-      font-size: 1.15rem;
-      margin-bottom: 18px;
-    }
-    .event-feature-info p {
+    .impact-text p {
       color: var(--text-soft);
       margin-bottom: 18px;
     }
+    .impact-text strong { color: var(--wine); }
 
-    .event-feature-meta {
+    .impact-meta {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px 24px;
-      margin-bottom: 26px;
+      gap: 8px 22px;
+      margin-bottom: 24px;
       color: var(--wine);
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
     }
-    .event-feature-meta span {
+    .impact-meta span {
       display: inline-flex;
       align-items: center;
       gap: 8px;
     }
-    .event-feature-meta i { color: var(--gold-deep); }
+    .impact-meta i { color: var(--gold-deep); }
 
-    .event-feature-cta {
+    .impact-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .impact-stat {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 16px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .impact-stat .num {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.1rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--wine);
+    }
+    .impact-stat .cap {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .impact-stat-place {
+      grid-column: 1 / -1;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
       gap: 12px;
+      background: var(--wine-deep);
+      border-color: var(--wine-deep);
+      color: var(--cream);
+      padding: 18px 16px;
+      text-align: left;
     }
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 22px;
-      background: #25D366;
-      color: #fff;
-      border-radius: 8px;
+    .impact-stat-place i {
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+    .impact-stat-place .cap {
+      margin-top: 3px;
+      color: var(--gold-bright);
+    }
+    .impact-stat-place strong {
+      display: block;
+      font-size: 1.05rem;
       font-weight: 600;
-      font-size: 0.94rem;
-      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
-      transition: var(--transition);
-    }
-    .btn-whatsapp:hover {
-      background: #128C7E;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(18, 140, 126, 0.35);
+      color: #fff;
     }
 
     /* ===== SOBRE OS VICENTINOS ===== */
@@ -1363,7 +1343,7 @@
         grid-template-columns: 1fr;
         gap: 48px;
       }
-      .event-feature-card { gap: 28px; padding: 28px; }
+      .impact-card { grid-template-columns: 1fr; gap: 32px; padding: 32px; }
       .symbols-grid { grid-template-columns: repeat(2, 1fr); }
       .actions-grid, .help-grid { grid-template-columns: 1fr; }
       .conference-info { grid-template-columns: 1fr; }
@@ -1387,9 +1367,8 @@
       nav a { display: block; }
       section { padding: 70px 0; }
       .hero { padding: 120px 0 60px; }
-      .event-feature { padding: 50px 0; }
-      .event-feature-card { gap: 24px; padding: 24px; }
-      .event-feature-poster { max-width: 320px; }
+      .impact { padding: 50px 0; }
+      .impact-card { gap: 26px; padding: 26px; }
       .header-brand-text strong { font-size: 0.95rem; }
       .header-brand-text span { font-size: 0.65rem; }
       .corner { display: none; }
@@ -1483,46 +1462,45 @@
     </div>
   </section>
 
-  <!-- ============= EVENTO EM DESTAQUE ============= -->
-  <section class="event-feature" aria-labelledby="evento-destaque-titulo">
+  <!-- ============= NOSSA OBRA HOJE ============= -->
+  <section class="impact" id="obra" aria-labelledby="obra-titulo">
     <div class="container">
-      <article class="event-feature-card reveal">
-        <a href="eventos.html" class="event-feature-poster" aria-label="Ver detalhes do Almoço dos Vicentinos">
-          <span class="badge">Próximo evento</span>
-          <img src="assets/almoco-vicentinos.jpg"
-               alt="Encarte do Almoço dos Vicentinos — Domingo 24/05/2026"
-               width="1080" height="1350" loading="lazy" decoding="async">
-        </a>
-
-        <div class="event-feature-info">
-          <span class="label"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Almoço Beneficente</span>
-          <h2 id="evento-destaque-titulo">Almoço dos Vicentinos</h2>
-          <p class="tagline">Sentar à mesa e ajudar quem mais precisa.</p>
+      <article class="impact-card reveal">
+        <div class="impact-text">
+          <span class="label"><i class="fa-solid fa-basket-shopping" aria-hidden="true"></i> Nossa obra hoje</span>
+          <h2 id="obra-titulo">Nove famílias acompanhadas na Estrutural</h2>
           <p>
-            Um domingo de comunhão e caridade na <strong>Paróquia N. S. do Carmo</strong>.
-            Toda a renda é convertida em apoio direto às famílias acompanhadas pela
-            Conferência.
+            Atendemos hoje <strong>9 famílias</strong>, num total de
+            <strong>53 pessoas</strong> domiciliadas na <strong>Estrutural</strong>.
+            A cada visita levamos <strong>cestas básicas</strong> e o auxílio possível —
+            material e espiritual — caminhando junto com cada família.
           </p>
-
-          <div class="event-feature-meta">
-            <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Domingo · <strong>24/05/2026</strong></span>
-            <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 11h30 às 13h30</span>
-            <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 913 Sul</span>
-            <span><i class="fa-solid fa-ticket" aria-hidden="true"></i> R$ 40,00</span>
+          <div class="impact-meta">
+            <span><i class="fa-solid fa-box-open" aria-hidden="true"></i> Cestas básicas</span>
+            <span><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Auxílio material</span>
+            <span><i class="fa-solid fa-dove" aria-hidden="true"></i> Apoio espiritual</span>
           </div>
+          <a href="#ajudar" class="btn btn-primary">
+            <i class="fa-solid fa-hands-praying" aria-hidden="true"></i>
+            Quero ajudar essas famílias
+          </a>
+        </div>
 
-          <div class="event-feature-cta">
-            <a href="https://wa.me/5561996538206?text=Ol%C3%A1!%20Gostaria%20de%20comprar%20ingressos%20para%20o%20Almo%C3%A7o%20dos%20Vicentinos%20do%20dia%2024%2F05."
-               class="btn-whatsapp"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Comprar ingressos pelo WhatsApp (61) 99653-8206">
-              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-              Comprar ingresso
-            </a>
-            <a href="eventos.html" class="btn btn-ghost" style="color: var(--wine-deep); border-color: var(--gold);">
-              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-              Ver detalhes
-            </a>
+        <div class="impact-stats">
+          <div class="impact-stat">
+            <span class="num">9</span>
+            <span class="cap">Famílias acompanhadas</span>
+          </div>
+          <div class="impact-stat">
+            <span class="num">53</span>
+            <span class="cap">Pessoas atendidas</span>
+          </div>
+          <div class="impact-stat impact-stat-place">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <div>
+              <strong>Estrutural</strong>
+              <span class="cap">Distrito Federal</span>
+            </div>
           </div>
         </div>
       </article>
@@ -1618,7 +1596,7 @@
             <div class="info-card">
               <i class="fa-regular fa-calendar"></i>
               <div class="label">Reuniões</div>
-              <div class="value">Toda terça-feira, às 17h<br>na paróquia</div>
+              <div class="value">Terças e sábados, às 17h<br>na paróquia</div>
             </div>
             <div class="info-card">
               <i class="fa-solid fa-hands-holding-circle"></i>
@@ -1687,8 +1665,8 @@
         <div class="action-card reveal">
           <div class="action-icon"><i class="fa-solid fa-door-open"></i></div>
           <h3>Visitas às famílias</h3>
-          <p>Encontros pessoais nos lares, levando escuta atenta, oração
-          e fraternidade — o coração da nossa missão.</p>
+          <p>Encontros pessoais nos lares — hoje com 9 famílias na Estrutural —
+          levando escuta atenta, oração e fraternidade: o coração da nossa missão.</p>
         </div>
         <div class="action-card reveal">
           <div class="action-icon"><i class="fa-solid fa-basket-shopping"></i></div>
@@ -1871,8 +1849,8 @@
             <div class="icon"><i class="fa-regular fa-calendar"></i></div>
             <div>
               <div class="label">Reuniões</div>
-              <div class="value">Toda terça-feira, às 17h<br>
-                <small style="color: var(--text-muted);">Encontros semanais na paróquia</small>
+              <div class="value">Terças e sábados, às 17h<br>
+                <small style="color: var(--text-muted);">Dois encontros por semana na paróquia</small>
               </div>
             </div>
           </div>
