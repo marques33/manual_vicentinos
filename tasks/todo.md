@@ -55,8 +55,10 @@ eventos 0.9 → 0.8.
   fora da menção genérica a futuros almoços beneficentes.
 
 ### Riscos residuais / próximos passos
-- O `assets/almoco-vicentinos.jpg` continua no repositório (não é mais referenciado). Pode ser
-  removido quando não houver interesse em reaproveitar o encarte.
+- `app/assets/almoco-vicentinos.jpg` foi removido do repositório (segue recuperável pelo
+  histórico do git, commit 3d8a067 e anteriores). Ainda é citado por dois documentos que não
+  fazem parte do site: `social/instagram-launch/02-almoco-convite/slides.md` e o checklist
+  `.claude/skills/vicentino-seo-audit/SKILL.md`.
 - Google Search Console pode levar alguns dias para derrubar o rich result do Event antigo;
   o sitemap com `lastmod` novo acelera o recrawl.
 - Se as reuniões de terça mudarem de horário, atualizar: metas + JSON-LD da index, os dois
