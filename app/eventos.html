@@ -357,6 +357,135 @@
       color: rgba(245, 230, 211, 0.88);
     }
 
+    /* ===== DOAÇÃO PIX ===== */
+    .pix-block {
+      max-width: 860px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 36px;
+      border-radius: var(--radius-lg);
+      background: rgba(245, 230, 211, 0.06);
+      border: 1px solid rgba(201, 165, 103, 0.3);
+      text-align: left;
+    }
+
+    .pix-qr { text-align: center; margin: 0; }
+    .pix-qr img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.3);
+    }
+    .pix-qr figcaption {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      color: rgba(245, 230, 211, 0.72);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      max-width: 200px;
+    }
+    .pix-qr figcaption i { color: var(--gold); }
+
+    .pix-info h3 {
+      font-size: 1.35rem;
+      color: var(--gold-bright);
+      margin-bottom: 8px;
+    }
+    .pix-info > p {
+      max-width: none;
+      margin: 0 0 20px;
+      font-size: 0.92rem;
+      color: rgba(245, 230, 211, 0.85);
+    }
+
+    .pix-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 14px 18px;
+      border-radius: var(--radius);
+      background: rgba(0, 0, 0, 0.18);
+      border: 1px solid rgba(201, 165, 103, 0.22);
+      text-align: left;
+    }
+    .pix-row + .pix-row { margin-top: 12px; }
+
+    .pix-label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245, 230, 211, 0.6);
+      margin-bottom: 2px;
+    }
+    .pix-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+    }
+    .pix-value--small {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: rgba(245, 230, 211, 0.8);
+    }
+
+    .pix-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--gold-bright);
+      font-family: inherit;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .pix-copy:hover { background: var(--gold); color: var(--wine-deep); }
+    .pix-copy:focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 3px;
+    }
+    .pix-copy.copied {
+      background: var(--gold);
+      color: var(--wine-deep);
+    }
+
+    .pix-note {
+      margin: 18px 0 0;
+      max-width: none;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: rgba(245, 230, 211, 0.7);
+      display: flex;
+      gap: 10px;
+      text-align: left;
+    }
+    .pix-note i {
+      color: var(--gold);
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+    .pix-note strong { color: var(--gold-bright); }
+
+    .support-alt {
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: rgba(245, 230, 211, 0.75);
+    }
+
     /* ===== Próximos / EM BREVE ===== */
     .upcoming {
       padding: 90px 0;
@@ -484,6 +613,23 @@
       .agenda, .support, .upcoming { padding: 60px 0; }
       .agenda-grid { grid-template-columns: 1fr; }
     }
+
+    @media (max-width: 900px) {
+      .pix-block {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+        padding: 30px 22px;
+      }
+      .pix-info { width: 100%; }
+      .pix-info h3, .pix-info > p:not(.pix-note) { text-align: center; }
+      .pix-row { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .pix-qr img { width: 172px; height: 172px; }
+      .pix-copy { flex: 1 0 100%; justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -593,11 +739,61 @@
         na Estrutural. Qualquer doação se converte em cestas básicas, remédios e
         cuidado para essas famílias.
       </p>
+      <!-- Doação por PIX -->
+      <div class="pix-block reveal" id="doar">
+        <figure class="pix-qr">
+          <img src="assets/pix-qr.svg" width="200" height="200" loading="lazy" decoding="async"
+               alt="QR Code PIX para doação à Conferência Nossa Senhora de Fátima. Chave: telefone (61) 98413-9596.">
+          <figcaption>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            Abra o app do seu banco e aponte a câmera
+          </figcaption>
+        </figure>
+
+        <div class="pix-info">
+          <h3><i class="fa-brands fa-pix"></i> Doe por PIX</h3>
+          <p>
+            Escaneie o QR Code ou copie a chave. O valor é livre —
+            qualquer quantia se converte em cuidado para as famílias.
+          </p>
+
+          <div class="pix-row">
+            <div>
+              <span class="pix-label">Chave PIX · celular</span>
+              <span class="pix-value">(61) 98413-9596</span>
+            </div>
+            <button type="button" class="pix-copy" aria-live="polite" data-pix-copy="+5561984139596">
+              <i class="fa-regular fa-copy"></i> Copiar chave
+            </button>
+          </div>
+
+          <div class="pix-row">
+            <div>
+              <span class="pix-label">PIX copia e cola</span>
+              <span class="pix-value pix-value--small">Código completo, com valor livre</span>
+            </div>
+            <button type="button" class="pix-copy" aria-live="polite"
+                    data-pix-copy="00020126360014br.gov.bcb.pix0114+55619841395965204000053039865802BR5922CONFERENCIA N S FATIMA6008BRASILIA62070503***6304A866">
+              <i class="fa-regular fa-copy"></i> Copiar código
+            </button>
+          </div>
+
+          <p class="pix-note">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>
+              A conta está em nome de <strong>Horcioni</strong>, nossa consócia —
+              é esse o nome que aparecerá no seu aplicativo ao confirmar a doação.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <p class="support-alt">Prefere falar com alguém antes, ou doar alimentos e roupas?</p>
       <a href="https://wa.me/5561996538206?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20doa%C3%A7%C3%A3o%20%C3%A0%20Confer%C3%AAncia%20Nossa%20Senhora%20de%20F%C3%A1tima."
          class="btn btn-whatsapp"
          target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-whatsapp"></i>
-        Quero doar pelo WhatsApp
+        Falar pelo WhatsApp
       </a>
       <p style="margin-top:18px; font-size:0.85rem; color:rgba(245, 230, 211, 0.75);">
         Doações e contato pelo WhatsApp
@@ -640,6 +836,40 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Copiar chave / código PIX
+    document.querySelectorAll('[data-pix-copy]').forEach(btn => {
+      const original = btn.innerHTML;
+      btn.addEventListener('click', async () => {
+        const text = btn.dataset.pixCopy;
+        let ok = true;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+        } catch (e) {
+          ok = false;
+        }
+        btn.innerHTML = ok
+          ? '<i class="fa-solid fa-check"></i> Copiado!'
+          : '<i class="fa-solid fa-triangle-exclamation"></i> Copie manualmente';
+        btn.classList.toggle('copied', ok);
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.classList.remove('copied');
+        }, 2400);
+      });
+    });
   </script>
 </body>
 </html>

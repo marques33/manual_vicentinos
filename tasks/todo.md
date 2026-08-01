@@ -85,3 +85,51 @@ Ações pendentes (exigem login no Search Console — só o usuário pode fazer)
 Fator de risco conhecido: domínio gratuito `*.vercel.app` e ausência de links externos
 apontando para o site. Um domínio próprio e links (site/redes da paróquia, bio do Instagram)
 aceleram bastante a descoberta.
+
+---
+
+# Doação por PIX com QR Code — agosto/2026
+
+## Contexto
+Pedido: incluir no site a informação de doação e o QR Code para a chave PIX `984139596`.
+
+Decisões confirmadas com o usuário:
+- A chave veio sem DDD. Confirmado **61** (Brasília) → chave final `+5561984139596`.
+- A conta está em nome de **Horcioni**, consócia da Conferência (não é conta em nome da
+  Conferência). Por isso o bloco avisa que é esse o nome que aparece no app do doador.
+- Bloco publicado nas **duas** páginas (index.html e eventos.html).
+
+## Tarefas
+- [x] Confirmar DDD e titular da conta antes de gerar qualquer código
+- [x] Gerar o BR Code (EMV MPM) estático com CRC16-CCITT-FALSE
+- [x] Gerar o QR Code como SVG (`app/assets/pix-qr.svg`)
+- [x] index.html — bloco PIX na seção "Como Ajudar" (+ CSS e responsivo)
+- [x] eventos.html — bloco PIX na seção de doação, WhatsApp mantido como alternativa
+- [x] Botões "copiar chave" e "copiar código" com fallback sem Clipboard API
+- [x] Acessibilidade: alt no QR, `:focus-visible` nos botões, `aria-live` no feedback
+- [x] Verificação: CRC, TLV, round-trip do QR, integridade do código no HTML, render local
+
+## Evidências de verificação
+1. **Algoritmo CRC** — check value canônico do CRC-16/CCITT-FALSE (`"123456789"` → `29B1`)
+   confere em duas implementações independentes (bitwise e table-driven).
+2. **Payload** — re-parse TLV completo fecha sem sobra de bytes; CRC do payload confere.
+3. **Round-trip do QR** — o SVG **como servido pelo site** foi rasterizado no navegador e
+   decodificado com pyzbar: devolve exatamente o BR Code esperado, chave `+5561984139596`.
+4. **Integridade no HTML** — os 4 botões (2 por página) carregam a chave e o BR Code
+   idênticos ao payload validado (conferido por script após cada reescrita de arquivo).
+5. **Funcional** — clique nos 4 botões grava o valor correto (writeText interceptado),
+   rótulo muda para "Copiado!"; console sem erros nas duas páginas.
+6. **Layout** — desktop 1280px e mobile emulado 375×812 (DPR 2); bloco PIX sem overflow.
+
+BR Code gerado:
+`00020126360014br.gov.bcb.pix0114+55619841395965204000053039865802BR5922CONFERENCIA N S FATIMA6008BRASILIA62070503***6304A866`
+
+## Riscos residuais / próximos passos
+- **Teste real de pagamento não foi feito.** A validação é do formato (CRC/TLV/decodificação),
+  não da titularidade. Antes de divulgar, alguém deve escanear e conferir se o app mostra o
+  nome da Horcioni — só o banco resolve a chave para a conta de destino.
+- O nome exibido no bloco é só "Horcioni"; se o app do banco mostrar o nome completo, pode
+  valer alinhar o texto do site com o que o doador realmente vê.
+- **Bug pré-existente (não introduzido aqui):** em telas de 375px o `header`/`.about-text`/
+  `.ssvp-emblem` do index.html estouram 10px na horizontal (385px vs 375px). Confirmado
+  idêntico na versão do git HEAD. Fica registrado para uma correção futura.

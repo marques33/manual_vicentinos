@@ -1049,6 +1049,138 @@
     }
     .help-link:hover { color: var(--wine); gap: 10px; }
 
+    /* ===== DOAÇÃO PIX ===== */
+    .pix-block {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(ellipse at top left, rgba(201, 165, 103, 0.14), transparent 60%),
+        linear-gradient(135deg, var(--wine-deep) 0%, var(--wine) 100%);
+      color: var(--cream);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pix-qr {
+      text-align: center;
+    }
+    .pix-qr img {
+      display: block;
+      width: 208px;
+      height: 208px;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .pix-qr figcaption {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: rgba(245, 230, 211, 0.75);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pix-qr figcaption i { color: var(--gold); }
+
+    .pix-info .section-eyebrow {
+      color: var(--gold-bright);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pix-info h3 {
+      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+      color: var(--gold-bright);
+      margin: 8px 0 10px;
+    }
+    .pix-info > p {
+      color: rgba(245, 230, 211, 0.88);
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+
+    .pix-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 14px 18px;
+      border-radius: var(--radius);
+      background: rgba(245, 230, 211, 0.07);
+      border: 1px solid rgba(201, 165, 103, 0.28);
+    }
+    .pix-row + .pix-row { margin-top: 12px; }
+
+    .pix-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245, 230, 211, 0.6);
+      margin-bottom: 2px;
+    }
+    .pix-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      letter-spacing: 0.02em;
+    }
+    .pix-value--small {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(245, 230, 211, 0.8);
+    }
+
+    .pix-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--gold-bright);
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .pix-copy:hover {
+      background: var(--gold);
+      color: var(--wine-deep);
+    }
+    .pix-copy:focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 3px;
+    }
+    .pix-copy.copied {
+      background: var(--gold);
+      color: var(--wine-deep);
+      border-color: var(--gold);
+    }
+
+    .pix-note {
+      margin-top: 18px;
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: rgba(245, 230, 211, 0.72);
+      display: flex;
+      gap: 10px;
+    }
+    .pix-note i {
+      color: var(--gold);
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+    .pix-note strong { color: var(--gold-bright); }
+
     /* ===== MANUAL CTA ===== */
     .manual-cta {
       background:
@@ -1348,6 +1480,16 @@
       .actions-grid, .help-grid { grid-template-columns: 1fr; }
       .conference-info { grid-template-columns: 1fr; }
       .ssvp-emblem { order: -1; }
+      .pix-block {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 32px;
+        padding: 32px 24px;
+      }
+      .pix-info { width: 100%; }
+      .pix-row { justify-content: center; text-align: center; }
+      .pix-note { text-align: left; }
     }
 
     @media (max-width: 720px) {
@@ -1385,6 +1527,8 @@
     @media (max-width: 480px) {
       .symbols-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.2rem; }
+      .pix-qr img { width: 176px; height: 176px; }
+      .pix-copy { flex: 1 0 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -1746,6 +1890,57 @@
           </a>
         </div>
       </div>
+
+      <!-- Doação por PIX -->
+      <div class="pix-block reveal" id="doar">
+        <figure class="pix-qr">
+          <img src="assets/pix-qr.svg" width="208" height="208" loading="lazy" decoding="async"
+               alt="QR Code PIX para doação à Conferência Nossa Senhora de Fátima. Chave: telefone (61) 98413-9596.">
+          <figcaption>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            Abra o app do seu banco e aponte a câmera
+          </figcaption>
+        </figure>
+
+        <div class="pix-info">
+          <span class="section-eyebrow"><i class="fa-brands fa-pix"></i> Doação por PIX</span>
+          <h3>Sua doação vira cesta básica, remédio e cuidado.</h3>
+          <p>
+            Qualquer valor ajuda as nove famílias que acompanhamos na Estrutural.
+            Você pode escanear o QR Code ou copiar a chave abaixo.
+          </p>
+
+          <div class="pix-row">
+            <div>
+              <span class="pix-label">Chave PIX · celular</span>
+              <span class="pix-value">(61) 98413-9596</span>
+            </div>
+            <button type="button" class="pix-copy" aria-live="polite" data-pix-copy="+5561984139596">
+              <i class="fa-regular fa-copy"></i> Copiar chave
+            </button>
+          </div>
+
+          <div class="pix-row">
+            <div>
+              <span class="pix-label">PIX copia e cola</span>
+              <span class="pix-value pix-value--small">Código completo, com valor livre</span>
+            </div>
+            <button type="button" class="pix-copy" aria-live="polite"
+                    data-pix-copy="00020126360014br.gov.bcb.pix0114+55619841395965204000053039865802BR5922CONFERENCIA N S FATIMA6008BRASILIA62070503***6304A866">
+              <i class="fa-regular fa-copy"></i> Copiar código
+            </button>
+          </div>
+
+          <p class="pix-note">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>
+              A conta está em nome de <strong>Horcioni</strong>, nossa consócia —
+              é esse o nome que aparecerá no seu aplicativo ao confirmar a doação.
+              Toda contribuição é prestada em conta nas reuniões da Conferência.
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1922,6 +2117,41 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Copiar chave / código PIX
+    document.querySelectorAll('[data-pix-copy]').forEach(btn => {
+      const original = btn.innerHTML;
+      btn.addEventListener('click', async () => {
+        const text = btn.dataset.pixCopy;
+        let ok = true;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            // Fallback para navegadores sem Clipboard API
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+        } catch (e) {
+          ok = false;
+        }
+        btn.innerHTML = ok
+          ? '<i class="fa-solid fa-check"></i> Copiado!'
+          : '<i class="fa-solid fa-triangle-exclamation"></i> Copie manualmente';
+        btn.classList.toggle('copied', ok);
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.classList.remove('copied');
+        }, 2400);
+      });
+    });
   </script>
 </body>
 </html>
