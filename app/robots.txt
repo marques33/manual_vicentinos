@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Sem "Disallow" para /oracoes.html e /admin.html de propósito.
+#
+# As duas páginas trazem <meta name="robots" content="noindex">, que é o que de
+# fato as mantém fora do índice. Bloquear o rastreamento aqui teria o efeito
+# contrário: o robô não chegaria a ler a meta e ainda poderia indexar a URL a
+# seco, caso encontrasse um link para ela. Deixar rastrear é o que garante que a
+# ordem de não indexar seja obedecida.
+
 Sitemap: https://manual-vicentinos.vercel.app/sitemap.xml

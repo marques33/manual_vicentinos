@@ -991,6 +991,79 @@
       font-size: 0.95rem;
     }
 
+    /* ===== COMUNIDADE (mural + orações) ===== */
+    .comunidade {
+      background: var(--cream-light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comunidade-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .comunidade-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      min-width: 0;
+      padding: 40px 34px;
+      background: linear-gradient(180deg, #fff 0%, var(--cream-light) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .comunidade-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .comunidade-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+      color: var(--wine-deep);
+      font-size: 1.5rem;
+      box-shadow: var(--shadow-gold);
+    }
+
+    .comunidade-card h3 {
+      font-size: 1.6rem;
+      color: var(--wine-deep);
+    }
+
+    .comunidade-card p {
+      color: var(--text-soft);
+      font-size: 0.96rem;
+    }
+
+    .comunidade-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 8px;
+      font-weight: 600;
+      font-size: 0.94rem;
+      color: var(--wine);
+      transition: var(--transition);
+    }
+    .comunidade-link:hover { color: var(--gold-deep); gap: 14px; }
+    .comunidade-link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
     /* ===== COMO AJUDAR ===== */
     .help {
       background: var(--ivory);
@@ -1482,7 +1555,7 @@
       }
       .impact-card { grid-template-columns: 1fr; gap: 32px; padding: 32px; }
       .symbols-grid { grid-template-columns: repeat(2, 1fr); }
-      .actions-grid, .help-grid { grid-template-columns: 1fr; }
+      .actions-grid, .help-grid, .comunidade-grid { grid-template-columns: 1fr; }
       .conference-info { grid-template-columns: 1fr; }
       .ssvp-emblem { order: -1; }
       .pix-block {
@@ -1533,6 +1606,7 @@
        cabem no cartão e eram cortadas pelo overflow:hidden dele. */
     @media (max-width: 400px) {
       .impact-stats { grid-template-columns: 1fr; }
+      .comunidade-card { padding: 30px 22px; }
     }
 
     @media (max-width: 480px) {
@@ -1562,8 +1636,9 @@
         <ul id="navList">
           <li><a href="#sobre">Quem Somos</a></li>
           <li><a href="#conferencia">Nossa Conferência</a></li>
+          <li><a href="mural.html">Mural</a></li>
+          <li><a href="oracoes.html">Orações</a></li>
           <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="#acoes">Nossas Ações</a></li>
           <li><a href="#ajudar">Como Ajudar</a></li>
           <li><a href="manual.html" class="cta">Manual de Direitos</a></li>
         </ul>
@@ -1853,6 +1928,47 @@
           <p>Estudo do <em>Regra</em>, espiritualidade vicentina e capacitação
           para uma caridade cada vez mais qualificada.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= COMUNIDADE ============= -->
+  <section class="comunidade" id="comunidade">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="ornament"><i class="fa-solid fa-hands-holding-circle"></i></div>
+        <span class="section-eyebrow">Comunidade</span>
+        <h2 class="section-title">Caminhamos com outros — e rezamos por todos.</h2>
+        <p class="section-lead">
+          A Conferência não age sozinha. Divulgamos o trabalho de outros grupos da
+          nossa comunidade e levamos à oração as intenções que nos confiam.
+        </p>
+      </div>
+
+      <div class="comunidade-grid">
+        <article class="comunidade-card reveal">
+          <div class="comunidade-icon"><i class="fa-solid fa-thumbtack"></i></div>
+          <h3>Mural da Comunidade</h3>
+          <p>
+            Oficinas, cursos, campanhas e encontros de pastorais e movimentos que
+            caminham conosco. Publicamos a pedido dos próprios grupos.
+          </p>
+          <a href="mural.html" class="comunidade-link">
+            Ver o mural <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="comunidade-card reveal">
+          <div class="comunidade-icon"><i class="fa-solid fa-hands-praying"></i></div>
+          <h3>Pedidos de Oração</h3>
+          <p>
+            Os privilegiados da semana — as pessoas e intenções que levamos a Deus
+            nas reuniões de terça e sábado. Envie a sua.
+          </p>
+          <a href="oracoes.html" class="comunidade-link">
+            Ver e enviar um pedido <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
       </div>
     </div>
   </section>
