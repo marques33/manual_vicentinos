@@ -130,6 +130,45 @@ BR Code gerado:
   nome da Horcioni — só o banco resolve a chave para a conta de destino.
 - O nome exibido no bloco é só "Horcioni"; se o app do banco mostrar o nome completo, pode
   valer alinhar o texto do site com o que o doador realmente vê.
-- **Bug pré-existente (não introduzido aqui):** em telas de 375px o `header`/`.about-text`/
-  `.ssvp-emblem` do index.html estouram 10px na horizontal (385px vs 375px). Confirmado
-  idêntico na versão do git HEAD. Fica registrado para uma correção futura.
+- ~~Bug pré-existente: estouro horizontal de 10px a 375px.~~ **Corrigido** — ver seção
+  abaixo.
+
+
+---
+
+# Correção do estouro horizontal em telas estreitas — agosto/2026
+
+## Contexto
+Achado durante a tarefa do PIX e reportado ao usuário, que pediu a correção.
+
+## Causa raiz (duas, encadeadas)
+1. `.ssvp-emblem-medal` tinha `width`/`height` fixos de 280px dentro de um `.ssvp-emblem`
+   com `padding: 56px 40px` → mínimo de **362px**. O `.container` oferece `largura - 48`,
+   então estourava em **qualquer viewport abaixo de ~410px** (não só a 375px).
+2. `.ssvp-emblem` é item de grid, e item de grid tem `min-width: auto`. Ele crescia além
+   da própria coluna, então um `max-width: 100%` no medalhão resolveria contra um pai
+   inflado pelo próprio medalhão — a primeira correção sozinha não bastava.
+
+## Achado fora do escopo (§6.1)
+`.impact-stats` (grid de 2 colunas, `min-content` de 276px) não cabia no `.impact-card`
+abaixo de ~378px de viewport e era **cortado** pelo `overflow: hidden` do cartão — texto
+some, sem barra de rolagem para denunciar. Corrigido em commit separado: uma coluna só
+abaixo de 400px.
+
+## Correções
+- `.ssvp-emblem-medal`: `max-width: 100%` + `aspect-ratio: 1` no lugar da altura fixa
+  (preserva o círculo ao encolher).
+- `.ssvp-emblem`: `min-width: 0`.
+- `.impact-stats`: uma coluna em `@media (max-width: 400px)`.
+
+## Evidências
+- Varredura de 320px a 1440px em `index.html`: **zero** elementos fora da viewport,
+  emblema sempre dentro da coluna do grid, medalhão sempre circular (161px a 280px).
+- Verificação adicional por `scrollWidth > clientWidth` em `.impact-stat`/`.impact-text`/
+  `.ssvp-emblem`: **zero** elementos com conteúdo cortado, até 290px de largura efetiva.
+- `eventos.html` e `manual.html` varridas em 320/375/414/768/1280: zero estouros.
+- Desktop inalterado: medalhão segue 280x280.
+
+## Riscos residuais
+- Entre 378px e 400px as estatísticas passam a ficar em uma coluna embora coubessem em
+  duas. Escolha deliberada: margem de segurança contra variação de fonte e tradução.

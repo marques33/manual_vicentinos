@@ -1529,6 +1529,12 @@
       .footer-emblems img { height: 44px; }
     }
 
+    /* Abaixo de ~378px as duas colunas de estatísticas (min-content 276px) não
+       cabem no cartão e eram cortadas pelo overflow:hidden dele. */
+    @media (max-width: 400px) {
+      .impact-stats { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 480px) {
       .symbols-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.2rem; }
