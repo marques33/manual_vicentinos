@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel de Moderação · Conferência N. S. de Fátima</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --wine-deep: #4A1818;
+      --wine: #5C1F1B;
+      --wine-mid: #7A2A24;
+      --gold: #C9A567;
+      --gold-bright: #E0BE7E;
+      --gold-deep: #A8843E;
+      --cream: #F5E6D3;
+      --cream-light: #FAF5EC;
+      --ivory: #FCFAF5;
+      --text: #2A1B14;
+      --text-soft: #6B5747;
+      --text-muted: #9A8470;
+      --border: rgba(201, 165, 103, 0.3);
+      --erro: #9B2C22;
+      --ok: #2E6B4F;
+      --alerta: #B4721A;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 8px rgba(74, 24, 24, 0.08);
+      --shadow: 0 8px 32px rgba(74, 24, 24, 0.12);
+      --transition: 0.25s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; line-height: 1.2; }
+    a { color: var(--wine-mid); }
+
+    .wrap { width: 100%; max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== TOPO ===== */
+    .topo {
+      background: var(--wine-deep);
+      color: var(--cream);
+      padding: 16px 0;
+      border-bottom: 3px solid var(--gold);
+    }
+    .topo-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .topo-marca { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .topo-marca img {
+      width: 40px; height: 40px; flex-shrink: 0;
+      padding: 3px; background: var(--cream-light);
+      border: 2px solid var(--gold); border-radius: 50%;
+    }
+    .topo-marca strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; color: var(--gold-bright); display: block;
+    }
+    .topo-marca span { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.75; }
+    .topo-usuario { display: flex; align-items: center; gap: 14px; font-size: 0.85rem; flex-wrap: wrap; }
+
+    /* ===== BOTÕES ===== */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 18px; border: 1px solid transparent; border-radius: 8px;
+      font-family: inherit; font-size: 0.87rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition); white-space: nowrap;
+    }
+    .btn:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+    .btn:disabled { opacity: 0.5; cursor: progress; }
+    .btn-ouro { background: var(--gold); color: var(--wine-deep); }
+    .btn-ouro:hover:not(:disabled) { background: var(--gold-bright); }
+    .btn-ok { background: var(--ok); color: #fff; }
+    .btn-ok:hover:not(:disabled) { filter: brightness(1.12); }
+    .btn-erro { background: transparent; color: var(--erro); border-color: rgba(155,44,34,0.4); }
+    .btn-erro:hover:not(:disabled) { background: rgba(155,44,34,0.08); }
+    .btn-neutro { background: transparent; color: var(--text-soft); border-color: var(--border); }
+    .btn-neutro:hover:not(:disabled) { background: rgba(201,165,103,0.12); color: var(--wine); }
+    .btn-claro { background: rgba(245,230,211,0.14); color: var(--cream); border-color: rgba(201,165,103,0.35); }
+    .btn-claro:hover:not(:disabled) { background: rgba(245,230,211,0.24); }
+    .btn-pequeno { padding: 7px 13px; font-size: 0.8rem; }
+
+    /* ===== LOGIN ===== */
+    .login {
+      max-width: 420px;
+      margin: 70px auto;
+      padding: 36px 32px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .login h1 { font-size: 1.8rem; color: var(--wine-deep); margin-bottom: 6px; text-align: center; }
+    .login > p { text-align: center; color: var(--text-soft); font-size: 0.9rem; margin-bottom: 26px; }
+
+    .campo { margin-bottom: 18px; }
+    .campo label {
+      display: block; font-size: 0.76rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--wine-mid); margin-bottom: 7px;
+    }
+    .campo input, .campo textarea, .campo select {
+      width: 100%; padding: 11px 14px;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--cream-light); color: var(--text);
+      font-family: inherit; font-size: 0.94rem; line-height: 1.55;
+      transition: var(--transition);
+    }
+    .campo textarea { min-height: 92px; resize: vertical; }
+    .campo input:focus, .campo textarea:focus, .campo select:focus {
+      outline: none; border-color: var(--gold); background: #fff;
+      box-shadow: 0 0 0 3px rgba(201,165,103,0.2);
+    }
+    .campo .dica { display: block; font-size: 0.78rem; color: var(--text-muted); margin-top: 5px; }
+
+    .aviso {
+      padding: 12px 16px; border-radius: var(--radius);
+      font-size: 0.87rem; margin-top: 16px; display: none;
+    }
+    .aviso.visivel { display: block; }
+    .aviso.erro { background: rgba(155,44,34,0.1); border: 1px solid rgba(155,44,34,0.3); color: var(--erro); }
+    .aviso.ok { background: rgba(46,107,79,0.1); border: 1px solid rgba(46,107,79,0.3); color: var(--ok); }
+
+    /* ===== PAINEL ===== */
+    .painel { padding: 30px 0 70px; }
+    .abas {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      border-bottom: 1px solid var(--border); margin-bottom: 26px;
+    }
+    .aba {
+      padding: 12px 20px; background: transparent; border: none;
+      border-bottom: 3px solid transparent; margin-bottom: -1px;
+      font-family: inherit; font-size: 0.92rem; font-weight: 600;
+      color: var(--text-muted); cursor: pointer; transition: var(--transition);
+    }
+    .aba:hover { color: var(--wine); }
+    .aba.ativa { color: var(--wine-deep); border-bottom-color: var(--gold); }
+    .aba .contagem {
+      display: inline-block; min-width: 20px; padding: 0 6px; margin-left: 7px;
+      border-radius: 999px; background: var(--gold); color: var(--wine-deep);
+      font-size: 0.72rem; font-weight: 700;
+    }
+    .aba .contagem[hidden] { display: none; }
+
+    .barra {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+    }
+    .filtros { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filtro {
+      padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px;
+      background: transparent; font-family: inherit; font-size: 0.82rem;
+      color: var(--text-soft); cursor: pointer; transition: var(--transition);
+    }
+    .filtro:hover { background: rgba(201,165,103,0.12); }
+    .filtro.ativo { background: var(--wine); border-color: var(--wine); color: var(--cream); }
+
+    /* ===== CARTÕES ===== */
+    .lista { display: flex; flex-direction: column; gap: 16px; }
+    .cartao {
+      padding: 22px 24px; background: #fff;
+      border: 1px solid var(--border); border-left: 4px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+    }
+    .cartao--pendente { border-left-color: var(--alerta); }
+    .cartao--aprovado { border-left-color: var(--ok); }
+    .cartao--rejeitado { border-left-color: var(--erro); opacity: 0.72; }
+    .cartao--marcado { border-left-color: var(--erro); background: #FFF9F7; }
+
+    .cartao-topo {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px; margin-bottom: 12px;
+    }
+    .selo {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 3px 11px; border-radius: 999px;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+    }
+    .selo--pendente { background: rgba(180,114,26,0.15); color: var(--alerta); }
+    .selo--aprovado { background: rgba(46,107,79,0.14); color: var(--ok); }
+    .selo--rejeitado { background: rgba(155,44,34,0.12); color: var(--erro); }
+    .selo--destaque { background: var(--gold); color: var(--wine-deep); }
+    .selo--rascunho { background: rgba(154,132,112,0.18); color: var(--text-soft); }
+    .cartao-data { font-size: 0.78rem; color: var(--text-muted); }
+
+    .marcacao {
+      display: flex; align-items: flex-start; gap: 9px;
+      padding: 10px 14px; margin-bottom: 14px;
+      background: rgba(155,44,34,0.07);
+      border: 1px solid rgba(155,44,34,0.25);
+      border-radius: var(--radius);
+      font-size: 0.84rem; color: var(--erro);
+    }
+    .marcacao i { margin-top: 3px; }
+
+    .cartao-corpo { overflow-wrap: anywhere; }
+    .cartao-corpo h3 { font-size: 1.3rem; color: var(--wine-deep); margin-bottom: 4px; }
+    .cartao-texto { white-space: pre-line; color: var(--text-soft); font-size: 0.95rem; }
+    .cartao-interno {
+      margin-top: 12px; padding: 10px 14px;
+      background: var(--cream-light); border-radius: var(--radius);
+      font-size: 0.83rem; color: var(--text-soft);
+    }
+    .cartao-interno strong { color: var(--wine-mid); }
+    .cartao-acoes {
+      display: flex; flex-wrap: wrap; gap: 9px;
+      margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
+    }
+
+    .grade-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .caixa-linha { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+    .caixa-linha input { width: 17px; height: 17px; accent-color: var(--gold-deep); cursor: pointer; }
+    .caixa-linha label {
+      font-size: 0.88rem; color: var(--text-soft);
+      text-transform: none; letter-spacing: normal; font-weight: 500; margin: 0; cursor: pointer;
+    }
+
+    .editor {
+      padding: 26px; background: #fff;
+      border: 1px solid var(--border); border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm); margin-bottom: 28px;
+    }
+    .editor h2 { font-size: 1.5rem; color: var(--wine-deep); margin-bottom: 18px; }
+
+    .vazio {
+      padding: 46px 26px; text-align: center;
+      background: #fff; border: 1px dashed var(--gold);
+      border-radius: var(--radius-lg); color: var(--text-soft);
+    }
+    .vazio i { font-size: 1.9rem; color: var(--gold-deep); margin-bottom: 12px; display: block; }
+
+    [hidden] { display: none !important; }
+
+    @media (max-width: 640px) {
+      .grade-2 { grid-template-columns: 1fr; }
+      .cartao-acoes .btn { flex: 1 0 auto; }
+      .topo-inner { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Painel de Moderação</strong>
+          <span>Conferência N. S. de Fátima</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-email"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= LOGIN ============= -->
+  <section class="login" id="tela-login" hidden>
+    <h1>Entrar</h1>
+    <p>Acesso restrito aos moderadores da Conferência.</p>
+    <form id="form-login">
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" autocomplete="username" required>
+      </div>
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-ouro" style="width:100%" id="btn-entrar">
+        <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Entrar
+      </button>
+      <p class="aviso erro" id="aviso-login" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- ============= PAINEL ============= -->
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <div class="abas" role="tablist">
+      <button class="aba ativa" id="aba-oracoes" role="tab" aria-selected="true" aria-controls="painel-oracoes">
+        Pedidos de oração <span class="contagem" id="contagem-pendentes" hidden>0</span>
+      </button>
+      <button class="aba" id="aba-mural" role="tab" aria-selected="false" aria-controls="painel-mural">
+        Mural da comunidade
+      </button>
+    </div>
+
+    <p class="aviso" id="aviso-painel" role="status"></p>
+
+    <!-- ---------- Pedidos de oração ---------- -->
+    <section id="painel-oracoes" role="tabpanel" aria-labelledby="aba-oracoes">
+      <div class="barra">
+        <div class="filtros" id="filtros-oracoes">
+          <button class="filtro ativo" data-status="pendente">Pendentes</button>
+          <button class="filtro" data-status="aprovado">Aprovados</button>
+          <button class="filtro" data-status="rejeitado">Rejeitados</button>
+          <button class="filtro" data-status="todos">Todos</button>
+        </div>
+        <button class="btn btn-neutro btn-pequeno" id="btn-limpar-semana">
+          <i class="fa-regular fa-star" aria-hidden="true"></i> Limpar privilegiados da semana
+        </button>
+      </div>
+      <div class="lista" id="lista-oracoes"></div>
+    </section>
+
+    <!-- ---------- Mural ---------- -->
+    <section id="painel-mural" role="tabpanel" aria-labelledby="aba-mural" hidden>
+      <div class="editor">
+        <h2 id="editor-titulo">Nova divulgação</h2>
+        <form id="form-mural">
+          <input type="hidden" id="mural-id">
+          <div class="grade-2">
+            <div class="campo">
+              <label for="mural-titulo">Título *</label>
+              <input type="text" id="mural-titulo" maxlength="120" required>
+            </div>
+            <div class="campo">
+              <label for="mural-organizacao">Grupo / movimento *</label>
+              <input type="text" id="mural-organizacao" maxlength="120" required>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="mural-resumo">Resumo *</label>
+            <textarea id="mural-resumo" maxlength="800" required></textarea>
+            <span class="dica">De 20 a 800 caracteres. As quebras de linha são preservadas na página.</span>
+          </div>
+          <div class="grade-2">
+            <div class="campo">
+              <label for="mural-periodo">Período</label>
+              <input type="text" id="mural-periodo" maxlength="120" placeholder="Ex.: Início em fevereiro e agosto">
+            </div>
+            <div class="campo">
+              <label for="mural-categoria">Categoria</label>
+              <select id="mural-categoria">
+                <option value="movimento">Movimento</option>
+                <option value="pastoral">Pastoral</option>
+                <option value="curso">Curso</option>
+                <option value="campanha">Campanha</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="grade-2">
+            <div class="campo">
+              <label for="mural-contato-nome">Contato — nome</label>
+              <input type="text" id="mural-contato-nome" maxlength="80" placeholder="Ex.: Fernanda">
+            </div>
+            <div class="campo">
+              <label for="mural-contato-fone">Contato — telefone</label>
+              <input type="text" id="mural-contato-fone" maxlength="30" placeholder="Ex.: (61) 99970-7548">
+            </div>
+          </div>
+          <div class="grade-2">
+            <div class="campo">
+              <label for="mural-link">Link (https)</label>
+              <input type="url" id="mural-link" maxlength="300" placeholder="https://exemplo.com.br">
+              <span class="dica">Só endereços https. Deixe em branco se não houver.</span>
+            </div>
+            <div class="campo">
+              <label for="mural-expira">Sai do mural em</label>
+              <input type="date" id="mural-expira">
+              <span class="dica">Em branco = fica no mural até você tirar.</span>
+            </div>
+          </div>
+          <div class="grade-2">
+            <div class="campo">
+              <label for="mural-ordem">Ordem</label>
+              <input type="number" id="mural-ordem" value="0" step="1">
+              <span class="dica">Menor aparece primeiro.</span>
+            </div>
+            <div style="align-self:end;padding-bottom:6px;">
+              <div class="caixa-linha">
+                <input type="checkbox" id="mural-publicado">
+                <label for="mural-publicado">Publicado (visível no site)</label>
+              </div>
+              <div class="caixa-linha" style="margin-bottom:0;">
+                <input type="checkbox" id="mural-destaque">
+                <label for="mural-destaque">Destaque</label>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
+            <button type="submit" class="btn btn-ouro" id="btn-salvar-mural">
+              <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Salvar
+            </button>
+            <button type="button" class="btn btn-neutro" id="btn-cancelar-mural" hidden>Cancelar edição</button>
+          </div>
+          <p class="aviso" id="aviso-mural" role="status"></p>
+        </form>
+      </div>
+
+      <div class="lista" id="lista-mural"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { clienteAdmin, escapar, formatarData, CONFIGURADO }
+      from './assets/supabase-client.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const topoUsuario = document.getElementById('topo-usuario');
+    const avisoLogin = document.getElementById('aviso-login');
+    const avisoPainel = document.getElementById('aviso-painel');
+
+    const sb = clienteAdmin();
+    let usuario = null;
+    let filtroOracoes = 'pendente';
+
+    const CATEGORIAS = {
+      movimento: 'Movimento', pastoral: 'Pastoral', curso: 'Curso',
+      campanha: 'Campanha', outro: 'Outro'
+    };
+    const STATUS = { pendente: 'Pendente', aprovado: 'Aprovado', rejeitado: 'Rejeitado' };
+
+    let muralCache = [];
+
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+      if (tipo === 'ok') setTimeout(() => { el.className = 'aviso'; }, 4000);
+    }
+
+    if (!CONFIGURADO) {
+      telaLogin.hidden = false;
+      document.getElementById('form-login').hidden = true;
+      mostrarAviso(avisoLogin,
+        'Preencha a URL do projeto e a chave anon em assets/supabase-client.js antes de usar o painel.',
+        'erro');
+    }
+
+    // -------------------------------------------------------------------------
+    // Sessão
+    // -------------------------------------------------------------------------
+    async function verificarSessao() {
+      const { data: { session } } = await sb.auth.getSession();
+      if (!session) return mostrarLogin();
+
+      // Estar autenticado não basta: quem manda é a tabela `admins`. Se a
+      // resposta for falsa, a sessão é encerrada em vez de deixar a pessoa numa
+      // tela vazia sem entender por quê.
+      const { data: ehAdmin, error } = await sb.rpc('is_admin');
+      if (error || !ehAdmin) {
+        await sb.auth.signOut();
+        mostrarLogin('Esta conta não tem permissão de moderação. Fale com a Conferência.');
+        return;
+      }
+
+      usuario = session.user;
+      document.getElementById('usuario-email').textContent = usuario.email;
+      topoUsuario.hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+      await Promise.all([carregarOracoes(), carregarMural()]);
+    }
+
+    function mostrarLogin(mensagem) {
+      usuario = null;
+      telaPainel.hidden = true;
+      topoUsuario.hidden = true;
+      telaLogin.hidden = false;
+      if (mensagem) mostrarAviso(avisoLogin, mensagem, 'erro');
+    }
+
+    document.getElementById('form-login').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-entrar');
+      botao.disabled = true;
+      avisoLogin.className = 'aviso';
+
+      const { error } = await sb.auth.signInWithPassword({
+        email: document.getElementById('email').value.trim(),
+        password: document.getElementById('senha').value
+      });
+
+      botao.disabled = false;
+      if (error) {
+        // Mensagem única para e-mail inexistente e senha errada: não se informa
+        // a quem tenta adivinhar qual das duas coisas ele acertou.
+        mostrarAviso(avisoLogin, 'E-mail ou senha incorretos.', 'erro');
+        return;
+      }
+      document.getElementById('senha').value = '';
+      await verificarSessao();
+    });
+
+    document.getElementById('btn-sair').addEventListener('click', async () => {
+      await sb.auth.signOut();
+      mostrarLogin();
+    });
+
+    // -------------------------------------------------------------------------
+    // Abas
+    // -------------------------------------------------------------------------
+    const abas = [
+      { botao: document.getElementById('aba-oracoes'), painel: document.getElementById('painel-oracoes') },
+      { botao: document.getElementById('aba-mural'), painel: document.getElementById('painel-mural') }
+    ];
+    abas.forEach(({ botao }, i) => {
+      botao.addEventListener('click', () => {
+        abas.forEach(({ botao: b, painel: p }, j) => {
+          b.classList.toggle('ativa', i === j);
+          b.setAttribute('aria-selected', String(i === j));
+          p.hidden = i !== j;
+        });
+      });
+    });
+
+    // -------------------------------------------------------------------------
+    // Pedidos de oração
+    // -------------------------------------------------------------------------
+    document.querySelectorAll('#filtros-oracoes .filtro').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('#filtros-oracoes .filtro')
+          .forEach(o => o.classList.toggle('ativo', o === b));
+        filtroOracoes = b.dataset.status;
+        carregarOracoes();
+      });
+    });
+
+    async function carregarOracoes() {
+      const lista = document.getElementById('lista-oracoes');
+      let consulta = sb.from('pedidos_oracao')
+        .select('*')
+        .order('criado_em', { ascending: false })
+        .limit(200);
+      if (filtroOracoes !== 'todos') consulta = consulta.eq('status', filtroOracoes);
+
+      const { data, error } = await consulta;
+      if (error) {
+        mostrarAviso(avisoPainel, 'Erro ao carregar os pedidos: ' + error.message, 'erro');
+        return;
+      }
+
+      // Contagem de pendentes na aba — o painel não avisa por fora, então ao
+      // menos avisa aqui.
+      const { count } = await sb.from('pedidos_oracao')
+        .select('id', { count: 'exact', head: true })
+        .eq('status', 'pendente');
+      const selo = document.getElementById('contagem-pendentes');
+      selo.textContent = count ?? 0;
+      selo.hidden = !count;
+
+      if (!data.length) {
+        lista.innerHTML = '<div class="vazio"><i class="fa-regular fa-folder-open"></i>' +
+          '<p>Nenhum pedido nesta lista.</p></div>';
+        return;
+      }
+
+      lista.innerHTML = data.map(p => {
+        const marcado = p.status === 'pendente' && p.motivo_flag;
+        const classe = marcado ? 'cartao--marcado' : 'cartao--' + p.status;
+
+        const selos = ['<span class="selo selo--' + p.status + '">' +
+          escapar(STATUS[p.status] || p.status) + '</span>'];
+        if (p.privilegiado_semana) {
+          selos.push('<span class="selo selo--destaque"><i class="fa-solid fa-star"></i> Privilegiado</span>');
+        }
+
+        const interno = [];
+        if (p.contato) interno.push('<strong>Contato:</strong> ' + escapar(p.contato));
+        interno.push('<strong>Expira em:</strong> ' + escapar(formatarData(p.expira_em)));
+
+        const acoes = [];
+        if (p.status !== 'aprovado') {
+          acoes.push('<button class="btn btn-ok btn-pequeno" data-acao="aprovar" data-id="' + p.id + '">' +
+            '<i class="fa-solid fa-check"></i> Aprovar</button>');
+        }
+        if (p.status === 'aprovado') {
+          acoes.push('<button class="btn btn-neutro btn-pequeno" data-acao="destaque" data-id="' + p.id +
+            '" data-valor="' + (p.privilegiado_semana ? '0' : '1') + '">' +
+            '<i class="fa-' + (p.privilegiado_semana ? 'solid' : 'regular') + ' fa-star"></i> ' +
+            (p.privilegiado_semana ? 'Tirar dos privilegiados' : 'Privilegiado da semana') + '</button>');
+        }
+        if (p.status !== 'rejeitado') {
+          acoes.push('<button class="btn btn-erro btn-pequeno" data-acao="rejeitar" data-id="' + p.id + '">' +
+            '<i class="fa-solid fa-xmark"></i> Rejeitar</button>');
+        }
+        acoes.push('<button class="btn btn-erro btn-pequeno" data-acao="excluir" data-id="' + p.id + '">' +
+          '<i class="fa-regular fa-trash-can"></i> Excluir</button>');
+
+        return '<article class="cartao ' + classe + '">' +
+          '<div class="cartao-topo"><div>' + selos.join(' ') + '</div>' +
+          '<span class="cartao-data">Recebido em ' + escapar(formatarData(p.criado_em)) + '</span></div>' +
+          (marcado
+            ? '<div class="marcacao"><i class="fa-solid fa-triangle-exclamation"></i>' +
+              '<span><strong>Olhe com atenção:</strong> ' + escapar(p.motivo_flag) + '</span></div>'
+            : '') +
+          '<div class="cartao-corpo">' +
+            '<div class="campo" style="margin-bottom:12px;">' +
+              '<label for="nome-' + p.id + '">Primeiro nome (em branco = anônimo)</label>' +
+              '<input type="text" id="nome-' + p.id + '" maxlength="40" value="' +
+                escapar(p.nome || '') + '">' +
+            '</div>' +
+            '<div class="campo" style="margin-bottom:0;">' +
+              '<label for="texto-' + p.id + '">Intenção</label>' +
+              '<textarea id="texto-' + p.id + '" maxlength="280">' + escapar(p.intencao) + '</textarea>' +
+              '<span class="dica">Você pode ajustar o texto antes de aprovar — corrigir a grafia ' +
+              'ou tirar um detalhe pessoal demais é melhor do que recusar o pedido.</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="cartao-interno">' + interno.join(' · ') + '</div>' +
+          '<div class="cartao-acoes">' + acoes.join('') + '</div>' +
+        '</article>';
+      }).join('');
+    }
+
+    document.getElementById('lista-oracoes').addEventListener('click', async (ev) => {
+      const botao = ev.target.closest('[data-acao]');
+      if (!botao) return;
+      const { acao, id } = botao.dataset;
+      botao.disabled = true;
+
+      let mudanca = null;
+      if (acao === 'aprovar') {
+        const nome = document.getElementById('nome-' + id).value.trim();
+        const texto = document.getElementById('texto-' + id).value.trim();
+        if (texto.length < 10) {
+          mostrarAviso(avisoPainel, 'A intenção precisa ter ao menos 10 caracteres.', 'erro');
+          botao.disabled = false;
+          return;
+        }
+        mudanca = {
+          nome: nome || null, intencao: texto, status: 'aprovado',
+          aprovado_em: new Date().toISOString(), aprovado_por: usuario.id
+        };
+      } else if (acao === 'rejeitar') {
+        mudanca = { status: 'rejeitado', privilegiado_semana: false };
+      } else if (acao === 'destaque') {
+        mudanca = { privilegiado_semana: botao.dataset.valor === '1' };
+      }
+
+      let erro = null;
+      if (acao === 'excluir') {
+        if (!confirm('Excluir este pedido definitivamente?')) { botao.disabled = false; return; }
+        ({ error: erro } = await sb.from('pedidos_oracao').delete().eq('id', id));
+      } else {
+        ({ error: erro } = await sb.from('pedidos_oracao').update(mudanca).eq('id', id));
+      }
+
+      if (erro) mostrarAviso(avisoPainel, 'Não foi possível salvar: ' + erro.message, 'erro');
+      else mostrarAviso(avisoPainel, 'Pronto.', 'ok');
+      await carregarOracoes();
+    });
+
+    document.getElementById('btn-limpar-semana').addEventListener('click', async () => {
+      if (!confirm('Tirar todos os pedidos da lista de privilegiados da semana?')) return;
+      const { error } = await sb.from('pedidos_oracao')
+        .update({ privilegiado_semana: false })
+        .eq('privilegiado_semana', true);
+      if (error) mostrarAviso(avisoPainel, 'Erro: ' + error.message, 'erro');
+      else mostrarAviso(avisoPainel, 'Lista da semana limpa.', 'ok');
+      await carregarOracoes();
+    });
+
+    // -------------------------------------------------------------------------
+    // Mural
+    // -------------------------------------------------------------------------
+    const formMural = document.getElementById('form-mural');
+    const avisoMural = document.getElementById('aviso-mural');
+
+    function limparEditor() {
+      formMural.reset();
+      document.getElementById('mural-id').value = '';
+      document.getElementById('mural-ordem').value = '0';
+      document.getElementById('editor-titulo').textContent = 'Nova divulgação';
+      document.getElementById('btn-cancelar-mural').hidden = true;
+    }
+
+    document.getElementById('btn-cancelar-mural').addEventListener('click', limparEditor);
+
+    formMural.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-salvar-mural');
+      botao.disabled = true;
+
+      const id = document.getElementById('mural-id').value;
+      const publicado = document.getElementById('mural-publicado').checked;
+      const registro = {
+        titulo: document.getElementById('mural-titulo').value.trim(),
+        organizacao: document.getElementById('mural-organizacao').value.trim(),
+        resumo: document.getElementById('mural-resumo').value.trim(),
+        periodo: document.getElementById('mural-periodo').value.trim() || null,
+        contato_nome: document.getElementById('mural-contato-nome').value.trim() || null,
+        contato_fone: document.getElementById('mural-contato-fone').value.trim() || null,
+        link_externo: document.getElementById('mural-link').value.trim() || null,
+        categoria: document.getElementById('mural-categoria').value,
+        expira_em: document.getElementById('mural-expira').value || null,
+        ordem: Number(document.getElementById('mural-ordem').value) || 0,
+        destaque: document.getElementById('mural-destaque').checked,
+        publicado
+      };
+      if (publicado) registro.publicado_em = new Date().toISOString();
+
+      const { error } = id
+        ? await sb.from('mural_posts').update(registro).eq('id', id)
+        : await sb.from('mural_posts').insert({ ...registro, criado_por: usuario.id });
+
+      botao.disabled = false;
+      if (error) {
+        mostrarAviso(avisoMural, 'Não foi possível salvar: ' + error.message, 'erro');
+        return;
+      }
+      mostrarAviso(avisoMural, id ? 'Divulgação atualizada.' : 'Divulgação criada.', 'ok');
+      limparEditor();
+      await carregarMural();
+    });
+
+    async function carregarMural() {
+      const lista = document.getElementById('lista-mural');
+      const { data, error } = await sb.from('mural_posts')
+        .select('*')
+        .order('destaque', { ascending: false })
+        .order('ordem', { ascending: true })
+        .order('criado_em', { ascending: false })
+        .limit(200);
+
+      if (error) {
+        mostrarAviso(avisoPainel, 'Erro ao carregar o mural: ' + error.message, 'erro');
+        return;
+      }
+      if (!data.length) {
+        lista.innerHTML = '<div class="vazio"><i class="fa-regular fa-note-sticky"></i>' +
+          '<p>Nenhuma divulgação cadastrada ainda.</p></div>';
+        return;
+      }
+
+      lista.innerHTML = data.map(m => {
+        const vencido = m.expira_em && m.expira_em < new Date().toISOString().slice(0, 10);
+        const selos = [m.publicado
+          ? '<span class="selo selo--aprovado">Publicado</span>'
+          : '<span class="selo selo--rascunho">Rascunho</span>'];
+        if (m.destaque) selos.push('<span class="selo selo--destaque"><i class="fa-solid fa-star"></i> Destaque</span>');
+        if (vencido) selos.push('<span class="selo selo--rejeitado">Fora do prazo</span>');
+
+        const meta = [escapar(CATEGORIAS[m.categoria] || m.categoria)];
+        if (m.periodo) meta.push(escapar(m.periodo));
+        if (m.expira_em) meta.push('sai em ' + escapar(formatarData(m.expira_em)));
+        if (m.contato_nome || m.contato_fone) {
+          meta.push(escapar([m.contato_nome, m.contato_fone].filter(Boolean).join(' · ')));
+        }
+
+        return '<article class="cartao ' + (m.publicado ? 'cartao--aprovado' : 'cartao--pendente') + '">' +
+          '<div class="cartao-topo"><div>' + selos.join(' ') + '</div>' +
+          '<span class="cartao-data">ordem ' + escapar(String(m.ordem)) + '</span></div>' +
+          '<div class="cartao-corpo">' +
+            '<h3>' + escapar(m.titulo) + '</h3>' +
+            '<p style="font-weight:600;color:var(--wine-mid);font-size:0.88rem;">' +
+              escapar(m.organizacao) + '</p>' +
+            '<p class="cartao-texto" style="margin-top:8px;">' + escapar(m.resumo) + '</p>' +
+          '</div>' +
+          '<div class="cartao-interno">' + meta.join(' · ') + '</div>' +
+          '<div class="cartao-acoes">' +
+            '<button class="btn btn-neutro btn-pequeno" data-acao="editar" data-id="' + m.id + '">' +
+              '<i class="fa-solid fa-pen"></i> Editar</button>' +
+            '<button class="btn ' + (m.publicado ? 'btn-neutro' : 'btn-ok') + ' btn-pequeno" ' +
+              'data-acao="publicar" data-id="' + m.id + '" data-valor="' + (m.publicado ? '0' : '1') + '">' +
+              '<i class="fa-solid fa-' + (m.publicado ? 'eye-slash' : 'eye') + '"></i> ' +
+              (m.publicado ? 'Despublicar' : 'Publicar') + '</button>' +
+            '<button class="btn btn-erro btn-pequeno" data-acao="excluir" data-id="' + m.id + '">' +
+              '<i class="fa-regular fa-trash-can"></i> Excluir</button>' +
+          '</div>' +
+        '</article>';
+      }).join('');
+
+      muralCache = data;
+    }
+
+    document.getElementById('lista-mural').addEventListener('click', async (ev) => {
+      const botao = ev.target.closest('[data-acao]');
+      if (!botao) return;
+      const { acao, id } = botao.dataset;
+
+      if (acao === 'editar') {
+        const m = muralCache.find(x => x.id === id);
+        if (!m) return;
+        document.getElementById('mural-id').value = m.id;
+        document.getElementById('mural-titulo').value = m.titulo || '';
+        document.getElementById('mural-organizacao').value = m.organizacao || '';
+        document.getElementById('mural-resumo').value = m.resumo || '';
+        document.getElementById('mural-periodo').value = m.periodo || '';
+        document.getElementById('mural-categoria').value = m.categoria || 'movimento';
+        document.getElementById('mural-contato-nome').value = m.contato_nome || '';
+        document.getElementById('mural-contato-fone').value = m.contato_fone || '';
+        document.getElementById('mural-link').value = m.link_externo || '';
+        document.getElementById('mural-expira').value = m.expira_em || '';
+        document.getElementById('mural-ordem').value = m.ordem ?? 0;
+        document.getElementById('mural-publicado').checked = !!m.publicado;
+        document.getElementById('mural-destaque').checked = !!m.destaque;
+        document.getElementById('editor-titulo').textContent = 'Editando divulgação';
+        document.getElementById('btn-cancelar-mural').hidden = false;
+        document.querySelector('.editor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      botao.disabled = true;
+      let erro = null;
+      if (acao === 'publicar') {
+        const publicar = botao.dataset.valor === '1';
+        const mudanca = { publicado: publicar };
+        if (publicar) mudanca.publicado_em = new Date().toISOString();
+        ({ error: erro } = await sb.from('mural_posts').update(mudanca).eq('id', id));
+      } else if (acao === 'excluir') {
+        if (!confirm('Excluir esta divulgação definitivamente?')) { botao.disabled = false; return; }
+        ({ error: erro } = await sb.from('mural_posts').delete().eq('id', id));
+      }
+
+      if (erro) mostrarAviso(avisoPainel, 'Não foi possível salvar: ' + erro.message, 'erro');
+      else mostrarAviso(avisoPainel, 'Pronto.', 'ok');
+      await carregarMural();
+    });
+
+    // -------------------------------------------------------------------------
+    // Sem configuração não há sessão a verificar — a tela de login já explicou
+    // o que falta. Interromper com uma exceção aqui só sujaria o console.
+    if (CONFIGURADO) verificarSessao();
+  </script>
+</body>
+</html>

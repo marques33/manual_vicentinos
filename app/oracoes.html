@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5C1F1B">
+  <meta name="description" content="Pedidos de oração da Conferência Vicentina Nossa Senhora de Fátima, em Brasília. Envie sua intenção e conheça os privilegiados da semana — as pessoas por quem rezamos nas reuniões de terça e sábado.">
+  <title>Pedidos de Oração · Vicentinos Brasília — Paróquia do Carmo</title>
+  <link rel="canonical" href="https://manual-vicentinos.vercel.app/oracoes.html">
+
+  <!--
+    noindex deliberado. Um pedido de oração quase sempre revela saúde ou
+    situação familiar de uma pessoa — muitas vezes de um terceiro, que não está
+    aqui para consentir. Deixar "Maria, em tratamento de saúde" virar resultado
+    de busca é justamente o dano que esta página existe para evitar. A página
+    continua acessível pelo menu; ela só não é indexada.
+  -->
+  <meta name="robots" content="noindex, follow">
+
+  <meta name="author" content="Conferência Vicentina Nossa Senhora de Fátima">
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Vicentinos Brasília — Conferência N. S. de Fátima · Paróquia do Carmo">
+  <meta property="og:title" content="Pedidos de Oração · Vicentinos Brasília">
+  <meta property="og:description" content="Envie sua intenção. Rezamos por ela nas reuniões de terça e sábado, às 17h.">
+  <meta property="og:url" content="https://manual-vicentinos.vercel.app/oracoes.html">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --wine-deep: #4A1818;
+      --wine: #5C1F1B;
+      --wine-mid: #7A2A24;
+      --wine-light: #8E3E37;
+      --gold: #C9A567;
+      --gold-bright: #E0BE7E;
+      --gold-deep: #A8843E;
+      --cream: #F5E6D3;
+      --cream-light: #FAF5EC;
+      --ivory: #FCFAF5;
+      --text: #2A1B14;
+      --text-soft: #6B5747;
+      --text-muted: #9A8470;
+      --border: rgba(201, 165, 103, 0.25);
+      --erro: #9B2C22;
+      --ok: #2E6B4F;
+      --shadow-sm: 0 2px 8px rgba(74, 24, 24, 0.08);
+      --shadow: 0 8px 32px rgba(74, 24, 24, 0.12);
+      --shadow-gold: 0 8px 32px rgba(201, 165, 103, 0.25);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .ornament i { font-size: 0.9rem; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(92, 31, 27, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 165, 103, 0.2);
+      transition: var(--transition);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--cream);
+    }
+    .header-brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      padding: 3px;
+      background: var(--cream-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.4);
+    }
+    .header-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .header-brand-text strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold-bright);
+    }
+    .header-brand-text span {
+      font-size: 0.72rem;
+      color: rgba(245, 230, 211, 0.75);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    nav ul { display: flex; list-style: none; gap: 8px; align-items: center; }
+    nav a {
+      color: rgba(245, 230, 211, 0.85);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    nav a:hover { color: var(--gold-bright); background: rgba(201, 165, 103, 0.1); }
+    nav a.active { color: var(--gold-bright); }
+    nav a.cta {
+      background: var(--gold);
+      color: var(--wine-deep);
+      font-weight: 600;
+      padding: 9px 18px;
+    }
+    nav a.cta:hover { background: var(--gold-bright); transform: translateY(-1px); }
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--cream);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* ===== HERO da página ===== */
+    .page-hero {
+      position: relative;
+      padding: 160px 0 80px;
+      background:
+        radial-gradient(ellipse at top, rgba(201, 165, 103, 0.1), transparent 60%),
+        linear-gradient(135deg, var(--wine-deep) 0%, var(--wine) 100%);
+      color: var(--cream);
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      color: var(--cream-light);
+      margin-bottom: 16px;
+    }
+    .page-hero h1 em { color: var(--gold-bright); font-style: normal; font-weight: 700; }
+    .page-hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      color: rgba(245, 230, 211, 0.85);
+      font-size: 1.05rem;
+    }
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 18px;
+    }
+    .breadcrumb a { color: var(--gold); transition: var(--transition); }
+    .breadcrumb a:hover { color: var(--gold-bright); }
+
+    .hero-horario {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: rgba(201, 165, 103, 0.14);
+      border: 1px solid rgba(201, 165, 103, 0.35);
+      font-size: 0.88rem;
+      color: var(--gold-bright);
+    }
+
+    /* ===== SEÇÕES DE ORAÇÃO ===== */
+    .oracoes { padding: 90px 0; background: var(--ivory); }
+    .oracoes--claro { background: var(--cream-light); }
+    .oracoes-head { text-align: center; margin-bottom: 42px; }
+    .oracoes-head .ornament i { color: var(--gold-deep); }
+    .oracoes-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--wine-deep);
+      margin-bottom: 12px;
+    }
+    .oracoes-head p { max-width: 640px; margin: 0 auto; color: var(--text-soft); }
+
+    .oracoes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 22px;
+      align-items: start;
+    }
+
+    .oracao-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+      padding: 26px 24px;
+      background: linear-gradient(180deg, var(--cream-light) 0%, #fff 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .oracao-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .oracao-card--destaque {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-gold);
+      background: linear-gradient(180deg, #fff 0%, var(--cream-light) 100%);
+    }
+    .oracao-icone { font-size: 1.3rem; color: var(--gold-deep); }
+    .oracao-nome {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--wine-deep);
+      overflow-wrap: anywhere;
+    }
+    .oracao-nome--anonimo { color: var(--text-muted); font-style: italic; }
+    .oracao-texto {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+    .oracao-data {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== Estados ===== */
+    .estado {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 48px 32px;
+      background: #fff;
+      border: 1px dashed var(--gold);
+      border-radius: var(--radius-lg);
+      color: var(--text-soft);
+    }
+    .estado i { font-size: 2rem; color: var(--gold-deep); margin-bottom: 14px; }
+    .estado h3 { font-size: 1.4rem; color: var(--wine-deep); margin-bottom: 8px; }
+    .estado p { font-size: 0.95rem; }
+
+    .esqueleto {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 22px;
+    }
+    .esqueleto div {
+      height: 190px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: linear-gradient(100deg, var(--cream-light) 30%, #fff 50%, var(--cream-light) 70%);
+      background-size: 300% 100%;
+      animation: brilho 1.4s ease-in-out infinite;
+    }
+    @keyframes brilho {
+      from { background-position: 150% 0; }
+      to   { background-position: -50% 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { .esqueleto div { animation: none; } }
+
+    /* ===== FORMULÁRIO ===== */
+    .enviar {
+      padding: 90px 0;
+      background:
+        radial-gradient(ellipse at center, rgba(201, 165, 103, 0.1), transparent 60%),
+        linear-gradient(180deg, var(--wine-deep) 0%, var(--wine) 100%);
+      color: var(--cream);
+    }
+    .enviar-head { text-align: center; margin-bottom: 36px; }
+    .enviar-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--gold-bright);
+      margin-bottom: 12px;
+    }
+    .enviar-head p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: rgba(245, 230, 211, 0.88);
+    }
+
+    .form-oracao {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 34px;
+      border-radius: var(--radius-lg);
+      background: rgba(245, 230, 211, 0.06);
+      border: 1px solid rgba(201, 165, 103, 0.3);
+    }
+    .campo { margin-bottom: 22px; }
+    .campo:last-of-type { margin-bottom: 0; }
+    .campo label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 8px;
+    }
+    .campo .dica {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      text-transform: none;
+      color: rgba(245, 230, 211, 0.7);
+      margin-top: 6px;
+    }
+    .campo input[type="text"],
+    .campo textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(201, 165, 103, 0.35);
+      background: rgba(0, 0, 0, 0.22);
+      color: var(--cream-light);
+      font-family: inherit;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      transition: var(--transition);
+    }
+    .campo textarea { min-height: 130px; resize: vertical; }
+    .campo input::placeholder, .campo textarea::placeholder { color: rgba(245, 230, 211, 0.4); }
+    .campo input:focus, .campo textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 0 3px rgba(201, 165, 103, 0.18);
+    }
+    .campo input:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .contador {
+      display: block;
+      text-align: right;
+      font-size: 0.78rem;
+      color: rgba(245, 230, 211, 0.6);
+      margin-top: 6px;
+    }
+    .contador.perto { color: var(--gold-bright); }
+
+    .caixa {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .caixa input[type="checkbox"] {
+      margin-top: 5px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+    .caixa label {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: rgba(245, 230, 211, 0.9);
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+      margin: 0;
+      cursor: pointer;
+    }
+    .caixa label strong { color: var(--gold-bright); font-weight: 600; }
+
+    .aviso-lgpd {
+      margin: 26px 0 22px;
+      padding: 18px 20px;
+      border-radius: var(--radius);
+      background: rgba(0, 0, 0, 0.2);
+      border-left: 3px solid var(--gold);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: rgba(245, 230, 211, 0.82);
+    }
+    .aviso-lgpd strong { color: var(--gold-bright); }
+    .aviso-lgpd ul { margin: 10px 0 0 18px; }
+    .aviso-lgpd li { margin-bottom: 4px; }
+
+    /* Armadilha para robô: invisível, fora da ordem de tabulação e ignorada por
+       leitores de tela. Humano nunca preenche.
+
+       Recortada no lugar (padrão "visually hidden") em vez de jogada para
+       left:-9999px: o campo continua dentro dos limites da página, sem risco de
+       criar rolagem lateral, e não dá ao robô a pista fácil de "está a dez mil
+       pixels daqui, logo é armadilha". */
+    .armadilha {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      border: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 28px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.96rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--wine-deep);
+      box-shadow: var(--shadow-gold);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: var(--gold-bright);
+      transform: translateY(-2px);
+    }
+    .btn:disabled { opacity: 0.55; cursor: progress; transform: none; }
+    .btn:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+
+    .form-acoes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .resposta {
+      margin-top: 18px;
+      padding: 14px 18px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      display: none;
+    }
+    .resposta.visivel { display: block; }
+    .resposta.ok {
+      background: rgba(46, 107, 79, 0.22);
+      border: 1px solid rgba(120, 200, 160, 0.45);
+      color: #CFEBDD;
+    }
+    .resposta.erro {
+      background: rgba(155, 44, 34, 0.28);
+      border: 1px solid rgba(230, 140, 130, 0.45);
+      color: #F6D9D5;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--wine-deep);
+      color: rgba(245, 230, 211, 0.85);
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+    .footer-emblems {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+    .footer-emblems img {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+    .footer-logo-ssvp {
+      padding: 4px;
+      background: var(--cream-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      height: 56px !important;
+      width: 56px;
+    }
+    .footer-logo-paroquia { border-radius: 6px; height: 64px !important; }
+    .footer-divider { width: 1px; height: 40px; background: rgba(201, 165, 103, 0.3); }
+    footer h3 { font-size: 1.4rem; color: var(--gold-bright); margin-bottom: 6px; }
+    footer p { font-size: 0.9rem; max-width: 600px; margin: 0 auto 20px; }
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(201, 165, 103, 0.25);
+      font-size: 0.85rem;
+      color: rgba(245, 230, 211, 0.85);
+    }
+    .footer-bottom em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    /* ===== ANIMAÇÕES ===== */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .js .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 720px) {
+      .menu-toggle { display: block; }
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        flex-direction: column;
+        background: var(--wine-deep);
+        padding: 12px;
+        gap: 4px;
+        border-top: 1px solid rgba(201, 165, 103, 0.2);
+      }
+      nav ul.open { display: flex; }
+      nav a { display: block; }
+      .page-hero { padding: 130px 0 60px; }
+      .header-brand-text strong { font-size: 0.95rem; }
+      .header-brand-text span { font-size: 0.65rem; }
+      .footer-emblems img { height: 44px; }
+      .oracoes, .enviar { padding: 60px 0; }
+      .form-oracao { padding: 26px 20px; }
+    }
+
+    @media (max-width: 400px) {
+      .oracoes-grid, .esqueleto { grid-template-columns: 1fr; }
+      .oracao-card { padding: 22px 18px; }
+      .estado { padding: 36px 22px; }
+      .form-oracao { padding: 22px 16px; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="header-brand">
+        <img src="assets/logo-ssvp.png" alt="Sociedade de São Vicente de Paulo">
+        <div class="header-brand-text">
+          <strong>Conferência N. S. de Fátima</strong>
+          <span>Vicentinos · Paróquia N. S. do Carmo</span>
+        </div>
+      </a>
+      <nav>
+        <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="navList">
+          <li><a href="index.html#sobre">Quem Somos</a></li>
+          <li><a href="index.html#conferencia">Nossa Conferência</a></li>
+          <li><a href="mural.html">Mural</a></li>
+          <li><a href="oracoes.html" class="active">Orações</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="index.html#ajudar">Como Ajudar</a></li>
+          <li><a href="manual.html" class="cta">Manual de Direitos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ============= HERO ============= -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:0.6rem;" aria-hidden="true"></i>
+        <span>Pedidos de Oração</span>
+      </div>
+      <h1>Pedidos de <em>Oração</em></h1>
+      <p>
+        Toda reunião da Conferência começa com oração. Estes são os nossos
+        privilegiados — as pessoas e as intenções que levamos a Deus.
+      </p>
+      <div class="hero-horario">
+        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+        Rezamos por elas às terças e aos sábados, às 17h
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= PRIVILEGIADOS DA SEMANA ============= -->
+  <section class="oracoes" id="privilegiados">
+    <div class="container">
+      <div class="oracoes-head reveal">
+        <div class="ornament"><i class="fa-solid fa-hands-praying"></i></div>
+        <h2>Privilegiados desta semana</h2>
+        <p>
+          As intenções que a Conferência escolheu levar de modo especial à oração
+          nesta semana.
+        </p>
+      </div>
+      <div id="privilegiados-conteudo" aria-live="polite" aria-busy="true">
+        <div class="esqueleto" aria-hidden="true"><div></div><div></div><div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= INTENÇÕES DA COMUNIDADE ============= -->
+  <section class="oracoes oracoes--claro" id="intencoes">
+    <div class="container">
+      <div class="oracoes-head reveal">
+        <div class="ornament"><i class="fa-solid fa-dove"></i></div>
+        <h2>Intenções da comunidade</h2>
+        <p>
+          Pedidos enviados por quem acompanha a Conferência. Reze você também por
+          eles.
+        </p>
+      </div>
+      <div id="intencoes-conteudo" aria-live="polite" aria-busy="true">
+        <div class="esqueleto" aria-hidden="true"><div></div><div></div><div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= ENVIAR PEDIDO ============= -->
+  <section class="enviar" id="pedir">
+    <div class="container">
+      <div class="enviar-head">
+        <div class="ornament"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <h2>Envie seu pedido de oração</h2>
+        <p>
+          Escreva a intenção com poucas palavras. Um de nós lê cada pedido antes
+          de ele aparecer na página.
+        </p>
+      </div>
+
+      <form class="form-oracao" id="form-oracao" novalidate>
+
+        <div class="campo">
+          <label for="nome">Primeiro nome <span style="text-transform:none;font-weight:400;">(opcional)</span></label>
+          <input type="text" id="nome" name="nome" maxlength="40" autocomplete="off"
+                 placeholder="Ex.: Maria" aria-describedby="dica-nome">
+          <span class="dica" id="dica-nome">
+            Apenas o primeiro nome — é assim que ele aparecerá na página.
+            Deixe em branco para enviar sem identificação.
+          </span>
+        </div>
+
+        <div class="caixa">
+          <input type="checkbox" id="anonimo" name="anonimo">
+          <label for="anonimo">Prefiro enviar sem nome nenhum</label>
+        </div>
+
+        <div class="campo">
+          <label for="intencao">Intenção <span style="text-transform:none;font-weight:400;">(obrigatório)</span></label>
+          <textarea id="intencao" name="intencao" maxlength="280" required
+                    placeholder="Ex.: Pela saúde de minha mãe, que está em tratamento."
+                    aria-describedby="dica-intencao contador"></textarea>
+          <span class="contador" id="contador" aria-live="off">0 / 280</span>
+          <span class="dica" id="dica-intencao">
+            Escreva de forma breve e sem detalhes que a pessoa não gostaria de
+            ver publicados. Não inclua telefones, endereços nem links.
+          </span>
+        </div>
+
+        <div class="campo">
+          <label for="contato">Seu contato <span style="text-transform:none;font-weight:400;">(opcional, não é publicado)</span></label>
+          <input type="text" id="contato" name="contato" maxlength="120" autocomplete="off"
+                 placeholder="Telefone ou e-mail, se quiser que a gente retorne"
+                 aria-describedby="dica-contato">
+          <span class="dica" id="dica-contato">
+            Fica visível apenas para a Conferência, caso queiramos falar com você.
+            Nunca aparece no site.
+          </span>
+        </div>
+
+        <!-- Armadilha para robô. Não remova. -->
+        <div class="armadilha" data-armadilha aria-hidden="true">
+          <label for="assunto">Não preencha este campo</label>
+          <input type="text" id="assunto" name="assunto" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="aviso-lgpd">
+          <strong>Antes de enviar, saiba que:</strong>
+          <ul>
+            <li>a intenção aprovada fica <strong>visível para qualquer visitante</strong> desta página;</li>
+            <li>publicamos <strong>somente o primeiro nome</strong>, nunca o nome completo;</li>
+            <li>o pedido sai do ar sozinho depois de <strong>60 dias</strong>;</li>
+            <li>se o pedido é por outra pessoa, você deve ter a <strong>autorização dela</strong> para contar isso aqui;</li>
+            <li>a qualquer momento você pode pedir a remoção pelo WhatsApp (61) 99653-8206.</li>
+          </ul>
+        </div>
+
+        <div class="caixa">
+          <input type="checkbox" id="consentimento" name="consentimento" required>
+          <label for="consentimento">
+            Li o aviso acima e <strong>concordo com a publicação desta intenção</strong>
+            na página, nos termos descritos.
+          </label>
+        </div>
+
+        <div class="form-acoes">
+          <button type="submit" class="btn btn-primary" id="btn-enviar">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Enviar pedido
+          </button>
+        </div>
+
+        <p class="resposta" id="resposta" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-emblems">
+        <img src="assets/logo-ssvp.png" alt="SSVP" loading="lazy" decoding="async" class="footer-logo-ssvp">
+        <span class="footer-divider" aria-hidden="true"></span>
+        <img src="assets/brasao-paroquia.jpg" alt="Brasão Paróquia"
+             loading="lazy" decoding="async" class="footer-logo-paroquia">
+      </div>
+      <h3>Conferência Nossa Senhora de Fátima</h3>
+      <p>Sociedade de São Vicente de Paulo · Paróquia Santuário Nossa Senhora do Carmo · Brasília — DF</p>
+      <div class="footer-bottom">
+        <em>“Christum Annuntiare”</em><br>
+        Anunciar Cristo com palavras e obras de caridade.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const navList = document.getElementById('navList');
+    if (toggle) {
+      toggle.addEventListener('click', () => navList.classList.toggle('open'));
+    }
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Contador da intenção
+    const campoIntencao = document.getElementById('intencao');
+    const contador = document.getElementById('contador');
+    campoIntencao.addEventListener('input', () => {
+      const n = campoIntencao.value.length;
+      contador.textContent = n + ' / 280';
+      contador.classList.toggle('perto', n > 240);
+    });
+
+    // "Prefiro enviar sem nome" desliga o campo de nome
+    const campoNome = document.getElementById('nome');
+    const caixaAnonimo = document.getElementById('anonimo');
+    caixaAnonimo.addEventListener('change', () => {
+      campoNome.disabled = caixaAnonimo.checked;
+      if (caixaAnonimo.checked) campoNome.value = '';
+    });
+  </script>
+
+  <script type="module">
+    const alvoPrivilegiados = document.getElementById('privilegiados-conteudo');
+    const alvoIntencoes = document.getElementById('intencoes-conteudo');
+    const form = document.getElementById('form-oracao');
+    const botao = document.getElementById('btn-enviar');
+    const resposta = document.getElementById('resposta');
+
+    // Medido na própria máquina do visitante: o servidor recebe o intervalo,
+    // não um horário absoluto — assim relógio desajustado não derruba ninguém.
+    const montadoEm = Date.now();
+
+    function estado(alvo, icone, titulo, texto) {
+      alvo.innerHTML =
+        '<div class="estado">' +
+          '<i class="' + icone + '"></i>' +
+          '<h3>' + titulo + '</h3>' +
+          '<p>' + texto + '</p>' +
+        '</div>';
+      alvo.setAttribute('aria-busy', 'false');
+    }
+
+    function mostrarResposta(texto, tipo) {
+      resposta.textContent = texto;
+      resposta.className = 'resposta visivel ' + tipo;
+    }
+
+    // O módulo é carregado primeiro e o formulário é ligado logo em seguida:
+    // quem rola direto até o formulário não fica com um botão morto esperando a
+    // lista de intenções, que é a parte demorada, terminar de carregar.
+    let sb = null;
+    try {
+      sb = await import('./assets/supabase-client.js');
+    } catch (e) {
+      console.error('Falha ao carregar o módulo do Supabase:', e);
+    }
+
+    ligarFormulario(sb);
+
+    try {
+      if (!sb) throw new Error('módulo indisponível');
+      const { clientePublico, escapar, formatarData, CONFIGURADO } = sb;
+
+      if (!CONFIGURADO) {
+        const aviso = ['fa-solid fa-screwdriver-wrench', 'Em preparação.',
+          'Estamos terminando de configurar este espaço. Em breve as intenções aparecem aqui.'];
+        estado(alvoPrivilegiados, ...aviso);
+        estado(alvoIntencoes, ...aviso);
+      } else {
+        // ---- Leitura das intenções aprovadas -------------------------------
+        // A RLS já entrega só o que está aprovado e dentro do prazo. E as
+        // colunas internas (contato, ip_hash) nem constam do SELECT: a chave
+        // anon não tem permissão sobre elas.
+        const { data, error } = await clientePublico()
+          .from('pedidos_oracao')
+          .select('id,nome,intencao,privilegiado_semana,aprovado_em')
+          .order('privilegiado_semana', { ascending: false })
+          .order('aprovado_em', { ascending: false, nullsFirst: false })
+          .limit(40);
+
+        if (error) throw error;
+
+        const lista = data || [];
+        const privilegiados = lista.filter(p => p.privilegiado_semana);
+        const demais = lista.filter(p => !p.privilegiado_semana);
+
+        function cartao(pedido, destaque) {
+          const temNome = Boolean(pedido.nome && pedido.nome.trim());
+          const titulo = temNome
+            ? '<p class="oracao-nome">Por ' + escapar(pedido.nome) + '</p>'
+            : '<p class="oracao-nome oracao-nome--anonimo">Intenção reservada</p>';
+          const data = formatarData(pedido.aprovado_em);
+          return '<article class="oracao-card' + (destaque ? ' oracao-card--destaque' : '') + '">' +
+            '<i class="fa-solid fa-hands-praying oracao-icone" aria-hidden="true"></i>' +
+            titulo +
+            '<p class="oracao-texto">' + escapar(pedido.intencao) + '</p>' +
+            (data ? '<p class="oracao-data">Publicada em ' + escapar(data) + '</p>' : '') +
+          '</article>';
+        }
+
+        function preencher(alvo, pedidos, destaque, vazio) {
+          if (!pedidos.length) {
+            estado(alvo, vazio.icone, vazio.titulo, vazio.texto);
+            return;
+          }
+          alvo.innerHTML = '<div class="oracoes-grid">' +
+            pedidos.map(p => cartao(p, destaque)).join('') + '</div>';
+          alvo.setAttribute('aria-busy', 'false');
+        }
+
+        preencher(alvoPrivilegiados, privilegiados, true, {
+          icone: 'fa-regular fa-star',
+          titulo: 'Ainda não escolhemos os desta semana.',
+          texto: 'Assim que a Conferência definir os privilegiados da semana, eles aparecem aqui.'
+        });
+
+        preencher(alvoIntencoes, demais, false, {
+          icone: 'fa-regular fa-comment-dots',
+          titulo: 'Nenhuma intenção publicada ainda.',
+          texto: 'Seja o primeiro a enviar um pedido — o formulário está logo abaixo.'
+        });
+      }
+    } catch (e) {
+      console.error('Falha ao carregar os pedidos de oração:', e);
+      const aviso = ['fa-solid fa-plug-circle-exclamation', 'Não foi possível carregar agora.',
+        'Tente novamente daqui a pouco. Se preferir, fale conosco pelo WhatsApp (61) 99653-8206.'];
+      estado(alvoPrivilegiados, ...aviso);
+      estado(alvoIntencoes, ...aviso);
+    }
+
+    // ---- Submissão --------------------------------------------------------
+    // Declarada com `function` para ser içada: é chamada lá em cima, antes
+    // desta linha, de propósito.
+    function ligarFormulario(sb) {
+      form.addEventListener('submit', async (ev) => {
+        ev.preventDefault();
+
+        const intencao = document.getElementById('intencao').value.trim();
+        const anonimo = document.getElementById('anonimo').checked;
+        const nome = anonimo ? '' : document.getElementById('nome').value.trim();
+        const contato = document.getElementById('contato').value.trim();
+        const consentimento = document.getElementById('consentimento').checked;
+        const assunto = document.getElementById('assunto').value;
+
+        // Conferências locais, para não gastar a cota de quem só errou a digitação.
+        if (intencao.length < 10) {
+          mostrarResposta('Escreva um pouco mais sobre a intenção (ao menos 10 caracteres).', 'erro');
+          document.getElementById('intencao').focus();
+          return;
+        }
+        if (!consentimento) {
+          mostrarResposta('É preciso concordar com a publicação da intenção para enviar.', 'erro');
+          document.getElementById('consentimento').focus();
+          return;
+        }
+        if (!sb || !sb.CONFIGURADO) {
+          mostrarResposta(
+            'O envio está indisponível no momento. Fale conosco pelo WhatsApp (61) 99653-8206.',
+            'erro'
+          );
+          return;
+        }
+
+        botao.disabled = true;
+        const rotulo = botao.innerHTML;
+        botao.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i> Enviando…';
+
+        try {
+          const r = await fetch(sb.URL_ENVIAR_PEDIDO, {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({
+              nome, intencao, contato, consentimento, assunto,
+              tempoMs: Date.now() - montadoEm
+            })
+          });
+          let dados = {};
+          try { dados = await r.json(); } catch { /* resposta sem corpo JSON */ }
+
+          if (dados && dados.ok) {
+            mostrarResposta(dados.mensagem || 'Recebemos seu pedido. Que Deus o abençoe.', 'ok');
+            form.reset();
+            document.getElementById('contador').textContent = '0 / 280';
+            document.getElementById('nome').disabled = false;
+          } else {
+            mostrarResposta(
+              (dados && dados.mensagem) ||
+              'Não foi possível enviar agora. Tente novamente daqui a pouco.',
+              'erro'
+            );
+          }
+        } catch (e) {
+          console.error('Falha ao enviar o pedido:', e);
+          mostrarResposta(
+            'Não conseguimos falar com o servidor. Verifique sua conexão e tente de novo.',
+            'erro'
+          );
+        } finally {
+          botao.disabled = false;
+          botao.innerHTML = rotulo;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
