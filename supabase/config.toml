@@ -1,0 +1,8 @@
+project_id = "manual-vicentinos"
+
+[functions.enviar-pedido]
+# A verificação de JWT fica desligada de propósito: o formulário é público e a
+# chave `anon` seria apenas um crachá que qualquer um lê no código-fonte do
+# site. Quem guarda a porta são as conferências dentro da própria função —
+# origem, honeypot, tempo de preenchimento, limite por IP e regras de conteúdo.
+verify_jwt = false
