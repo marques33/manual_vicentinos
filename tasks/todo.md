@@ -172,3 +172,136 @@ abaixo de 400px.
 ## Riscos residuais
 - Entre 378px e 400px as estatísticas passam a ficar em uma coluna embora coubessem em
   duas. Escolha deliberada: margem de segurança contra variação de fonte e tradução.
+
+
+---
+
+# Mural da Comunidade e Pedidos de Oração (Supabase) — agosto/2026
+
+## Contexto
+Dois pedidos do usuário:
+1. **Mural** para divulgar outros grupos e movimentos — o caso concreto foi o folheto das
+   *Oficinas de Oração e Vida* (frei Ignácio Larrañaga; início em fevereiro e agosto;
+   contato Fernanda (61) 99970-7548; www.tovbrasil.com.br).
+2. **Pedidos de oração**, com os "privilegiados da semana", expostos na própria página.
+
+O segundo abre o site a conteúdo de desconhecidos. O usuário pediu explicitamente
+mecanismos contra fake news e discurso de ódio, e política de RLS protegendo o banco.
+
+## Decisões confirmadas com o usuário
+| Tema | Decisão |
+|---|---|
+| Quem publica no mural | Só a Conferência, pelo painel. Sem formulário público. |
+| Pedidos de oração | Aprovação prévia — nada aparece antes de um moderador liberar. |
+| Exibição | Primeiro nome + intenção curta; opção anônima; expira em 60 dias. |
+| Formato | Duas páginas novas + faixa na home (não seções dentro da index). |
+| Cartazes | Só texto estruturado — sem upload de imagem, sem Storage. |
+| Infra | Conta Supabase já existia. Sem Cloudflare → sem Turnstile. |
+
+## Princípio da arquitetura
+**O navegador nunca escreve no banco.** A chave `anon` que vai no HTML só tem `SELECT`,
+em colunas nomeadas, de linhas já moderadas. Não há política de INSERT/UPDATE/DELETE para
+`anon` em nenhuma tabela. A única porta de escrita pública é a Edge Function, que usa
+`service_role` do lado do servidor. A Vercel continua 100% estática — sem `api/`, sem
+`package.json`, sem tocar em `vercel.json`.
+
+## Tarefas
+- [x] Migrações: `admins` + `is_admin()`, `mural_posts`, `pedidos_oracao`, limite e retenção
+- [x] Proteção por **coluna** em `pedidos_oracao` (RLS é por linha e não esconderia
+      `contato`/`ip_hash` de uma linha aprovada)
+- [x] Edge Function `enviar-pedido` com 10 camadas de conferência
+- [x] `app/assets/supabase-client.js` — configuração única + auxiliares compartilhados
+- [x] `app/mural.html`, `app/oracoes.html`, `app/admin.html`
+- [x] Menus (index/eventos), faixa "Comunidade" na home, `sitemap.xml`, `robots.txt`
+- [x] Scripts de verificação: RLS, Edge Function e filtros de conteúdo
+- [x] Verificação: HTML, JSON-LD, sintaxe JS, filtros, varredura de layout
+
+## Decisões técnicas que merecem registro
+
+**Proteção por coluna, não só RLS.** `revoke all ... from anon` + `grant select (id, nome,
+intencao, privilegiado_semana, aprovado_em, criado_em)`. Sem isso, uma intenção aprovada
+entregaria `contato` e `ip_hash` a qualquer visitante — a RLS filtra linhas, não colunas.
+Consequência esperada: `select *` como anon dá **erro**, e o front pede as colunas pelo nome.
+
+**`persistSession: false` no cliente público.** Sem isso, um moderador que tivesse acabado
+de usar o painel continuaria autenticado ao abrir `oracoes.html` e, pela política de admin,
+veria pedidos **pendentes** numa página pública.
+
+**`noindex` em vez de `Disallow`.** `oracoes.html` traz `<meta robots noindex>` e o
+`robots.txt` **não** a bloqueia — de propósito. `Disallow` impediria o robô de ler a meta e
+ele ainda poderia indexar a URL a seco. Deixar rastrear é o que faz a ordem ser obedecida.
+
+**Regras de conteúdo antes do limite por IP.** Ordem invertida durante a verificação: quem
+cola um telefone sem pensar recebe o aviso e corrige, em vez de ficar uma hora de castigo.
+O teto de estrago não muda — o limite continua guardando a fila do moderador, e nada
+recusado chega a ser gravado.
+
+**Armadilha anti-robô recortada no lugar** (`clip-path: inset(50%)`) e não em
+`left: -9999px`: não cria risco de rolagem lateral e não entrega ao robô a pista fácil.
+
+**Marcar em vez de bloquear vocabulário ofensivo.** Como tudo passa por aprovação prévia,
+um falso positivo só muda a ordem da fila. Bloquear calado silenciaria alguém aflito.
+
+## Evidências de verificação
+1. **HTML** — 6 páginas com `html.parser`: 0 tags sem fechar, 0 erros de aninhamento.
+   JSON-LD parseado em todas (index: WebSite/Organization/Church; eventos e mural:
+   BreadcrumbList/CollectionPage).
+2. **Sintaxe JS** — 11 blocos inline + 4 arquivos passam em `node --check`.
+3. **Filtros de conteúdo** — `node supabase/testar-filtros.mjs`: **32 casos, todos passam**.
+   O script lê o `filtros.ts` de produção e tira só as anotações de tipo, então testa o
+   código que roda de verdade. Inclui 8 pedidos legítimos que **não** podem ser recusados.
+4. **Layout** — varredura de 320px a 1440px (16 larguras × 6 páginas = 96 combinações):
+   zero estouro horizontal, zero conteúdo cortado, console limpo.
+   O menu passou de 6 para 7 itens e **cabe** em toda a faixa (565px de largura a 768px;
+   833px a partir de 1200px) — medido no navegador, não estimado.
+5. **Sonda de layout afinada** — passou a distinguir moldura decorativa (`::before` com
+   `inset` negativo) de conteúdo realmente cortado. Sem isso o relatório traria alarme falso
+   permanente em `.manual-mock`, e alarme falso permanente treina a gente a ignorar relatório.
+6. **Scripts para rodar contra o projeto real** (ainda não executados — dependem das chaves):
+   `supabase/verificar-rls.mjs` e `supabase/verificar-funcao.mjs`.
+
+## O que falta — só o usuário pode fazer (precisa do painel do Supabase)
+Passo a passo completo em `supabase/README.md`. Resumo:
+1. Rodar as 4 migrações no SQL Editor.
+2. **Desligar** Authentication → Providers → Email → *Enable sign ups*.
+3. Criar o(s) moderador(es) e inserir o `user_id` em `public.admins`.
+4. Criar o segredo `IP_PEPPER` e implantar a função `enviar-pedido`.
+5. Preencher URL e chave `anon` em `app/assets/supabase-client.js`.
+6. Rodar `node supabase/verificar-rls.mjs` e `node supabase/verificar-funcao.mjs`.
+   **Enquanto esses dois não passarem inteiros, o site não deve ir ao ar.**
+7. Cadastrar as Oficinas de Oração e Vida pelo painel.
+
+## Achados fora do escopo (§6.1) — registrados, não corrigidos
+**`app/manual.html:977-978` — credenciais em texto puro no JavaScript do cliente.**
+`VALID_USER = 'São Vicente de Paulo'`, `VALID_PASS = 'Afésemobrasémortaemsimesma'`, com a
+sessão marcada em `sessionStorage` (`:979, 992, 1001, 1245`). Qualquer visitante lê isso em
+"ver código-fonte" — não é autenticação, é um aviso de porta. **Não corrigido de propósito:**
+a correção muda quem tem acesso ao Manual, e isso é decisão do usuário. Duas saídas, agora
+que existe Supabase Auth no projeto: (a) se o Manual é público na prática, tirar a tela de
+login; (b) se não é, usar o mesmo Supabase Auth do painel.
+
+**Pré-existentes e benignos** (conferidos contra o `HEAD`, idênticos antes e depois — não
+são regressão): `.manual-mock` e `.hero-frame` aparecem com `scrollWidth > clientWidth` na
+sonda. São, respectivamente, a moldura decorativa `::before { inset: -8px }` e o recorte
+proposital da foto do hero. Nenhum texto é cortado e o documento não rola na horizontal.
+
+## Riscos residuais
+- **Sem captcha.** Sem conta Cloudflare, as barreiras são armadilha + tempo + limite por IP.
+  Barram robô comum, não ataque dirigido. Se a fila for inundada, ligar o Turnstile custa
+  ~15 linhas na Edge Function.
+- **Sem aviso automático de pedido novo.** A opção não foi marcada. O painel mostra a
+  contagem de pendentes, mas nada avisa por fora — a fila precisa ser olhada. Um
+  *Database Webhook* por e-mail resolve depois.
+- **Moderação é humana.** Nenhum filtro pega ironia ou boato bem escrito. A garantia real
+  de que nada impróprio entre no ar é a aprovação prévia.
+- **Chave `anon` visível no HTML.** É o modelo do Supabase e está correto — *desde que* a
+  RLS esteja como descrito. Por isso a verificação começa por ela.
+- **LGPD.** Pedido de oração costuma ser dado sensível de terceiro. O desenho reduz o risco
+  (primeiro nome, texto curto, consentimento, expiração em 60 dias, `noindex`, IP
+  pseudonimizado por SHA-256 com pepper, purga diária), mas não elimina: alguém pode
+  escrever mais do que devia. O moderador é quem segura isso.
+- **Plano gratuito do Supabase** pausa projeto sem tráfego por 7 dias. Se acontecer, as
+  páginas caem no estado de degradação (aviso cordial, nunca tela em branco).
+- **Deno não está instalado** nesta máquina, então a Edge Function não foi executada
+  localmente. A lógica de filtros foi testada em Node contra o arquivo real; o resto da
+  função só será exercitado por `verificar-funcao.mjs` depois da implantação.
