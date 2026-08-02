@@ -685,6 +685,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      /* Item de grid tem min-width:auto e cresceria além da coluna por causa
+         do medalhão; sem isto o max-width dele não teria contra o que resolver. */
+      min-width: 0;
       padding: 56px 40px;
       background:
         radial-gradient(circle at center, rgba(201, 165, 103, 0.18), transparent 70%),
@@ -696,8 +699,10 @@
 
     .ssvp-emblem-medal {
       position: relative;
+      /* Fluido: abaixo de ~410px de viewport, 280px fixos estouravam o container. */
       width: 280px;
-      height: 280px;
+      max-width: 100%;
+      aspect-ratio: 1;
       display: flex;
       align-items: center;
       justify-content: center;
