@@ -153,3 +153,54 @@ aparece quando alguém compartilha o link. Corrigir depois exige reindexação.
    cegas teria destruído as referências legítimas ao Conselho Particular. Os padrões foram
    ancorados em "Conferência ..." e a varredura final imprimiu as sobras para conferência
    manual.
+
+---
+
+## Histórico de migração vazio: `db push` reexecuta tudo (03/08/2026)
+
+**O que aconteceu.** Ao aplicar a migração 005 (anexo do mural), `supabase db push --dry-run`
+listou as **cinco** migrações para subir — inclusive as quatro de 02/08, que já estavam
+aplicadas no banco. As tabelas existiam (`admins`, `mural_posts`, `pedidos_oracao`,
+`private.rate_limit`), mas `supabase migration list` mostrava `remote` vazio nas cinco.
+
+**Causa raiz.** As quatro primeiras foram aplicadas **fora da CLI** (pelo editor SQL do
+painel). O banco ficou com o schema certo e o histórico
+(`supabase_migrations.schema_migrations`) vazio — a CLI não tinha como saber que já tinham
+rodado.
+
+**Por que doeu (ou doeria).** Um `db push` cego teria reexecutado as quatro. As três
+primeiras são idempotentes (`create table if not exists`, `drop policy if exists`), mas a 004
+agenda job no `pg_cron`: reexecutar duplicaria o agendamento de purga em produção. "É só
+rodar de novo, é idempotente" é uma aposta, não uma verificação.
+
+**Regras preventivas.**
+1. **Antes de qualquer `db push`, rodar `supabase migration list`** e comparar `local` com
+   `remote`. Divergência não é detalhe: é sinal de que o banco e o repositório contam
+   histórias diferentes.
+2. **Migração já aplicada por fora se conserta com `supabase migration repair --status
+   applied <versão>`** — que só carimba o histórico, sem reexecutar SQL. Nunca "empurrar de
+   novo e torcer".
+3. **Confirmar o estado real antes de carimbar.** Carimbar como aplicada uma migração que
+   *não* rodou deixa o banco permanentemente atrás do repositório, e o erro só aparece
+   quando alguém usa a coluna que não existe. Aqui a conferência foi
+   `supabase inspect db table-stats`: as quatro tabelas estavam lá.
+4. **`--dry-run` primeiro, sempre.** Foi ele que revelou o problema antes de qualquer
+   escrita.
+
+---
+
+## RLS nega antes do CHECK — teste de constraint precisa de outra chave (03/08/2026)
+
+**O que aconteceu.** O plano previa provar o CHECK de `anexo_url` "por fora, pela chave anon",
+no mesmo formato das provas de RLS já feitas. Não funciona: a chave `anon` não tem política de
+INSERT em `mural_posts`, então o PostgREST devolve 401 **antes** de o Postgres avaliar a
+restrição. O teste passaria com o CHECK escrito errado — ou sem CHECK nenhum.
+
+**Causa raiz.** Confundir duas camadas que negam pelo mesmo canal. RLS decide *se a linha pode
+ser escrita*; CHECK decide *se o valor é válido*. Um 401 não distingue as duas.
+
+**Regra preventiva.** **Cada camada se prova com um sujeito que passa pelas anteriores.** Para
+testar CHECK, escrever com quem a RLS já deixa passar (moderador autenticado ou, na falta de
+senha, a chave de serviço). Um teste cuja negativa viria de qualquer jeito não é evidência.
+Corolário do que já estava escrito em `verificar-rls.mjs`: toda negativa precisa do par
+positivo que prova que a operação passaria se fosse legítima.

@@ -441,3 +441,47 @@ Mesma correção de fato, aplicada ao material de redes sociais.
   (editar legenda; slide errado exige repostar).
 - A data do almoço (24/05/2026) já passou — o post 2 está desatualizado por outro motivo,
   fora do escopo desta correção.
+
+---
+
+# Anexo para download no mural — folheto das Oficinas de Oração e Vida (03/08/2026)
+
+**Pedido:** deixar o PDF `Oficinas de Oração e Vida 2 sem. 01.08 v5.pdf` disponível para
+download no cartaz das Oficinas, no mural.
+
+## Feito
+- [x] **PDF otimizado: 19,67 MB → 2,64 MB** (`build/otimizar_pdf_anexo.py`, PyMuPDF
+      `rewrite_images`, JPEG q=82, resolução preservada). Publicado em
+      `app/assets/oficinas-oracao-e-vida-2026-2.pdf`. O original de 19,67 MB não entra no
+      git (`.gitignore`).
+- [x] **Perda conferida por número, não a olho:** PSNR das 10 páginas entre 39,6 e 42,5 dB
+      (>35 dB = imperceptível); 10 páginas na entrada, 10 na saída.
+- [x] **Migração 005** (`20260803180000_mural_anexo.sql`): colunas `anexo_url` e
+      `anexo_rotulo` em `mural_posts`, com CHECK que aceita `/assets/<arquivo>.(pdf|jpg|jpeg|png)`
+      ou `https://`, e recusa o resto. RLS e grants intocados.
+- [x] **Histórico de migração da CLI reparado** — as 4 migrações de 02/08 estavam aplicadas
+      no banco mas ausentes do histórico (foram pelo painel). `migration repair --status
+      applied` nas quatro, e só a 005 subiu. Ver `tasks/lessons.md`.
+- [x] **Prova do CHECK contra o banco real: 22 casos, 0 falhas**
+      (`node supabase/verificar-anexo.mjs`) — incluindo `javascript:`, `data:`, `http://`,
+      `..`, caminho fora de `/assets`, subpasta, `.exe` e limites de tamanho. As linhas de
+      teste nascem despublicadas e são apagadas no `finally`.
+- [x] `linkAnexoSeguro()` em `app/assets/supabase-client.js` — irmã de `linkSeguro()`, que
+      recusa caminho relativo por usar `new URL()`. Duas funções, dois contratos.
+- [x] Render do mural contra o Supabase real: o cartaz mostra **"Saiba mais"** (tovbrasil,
+      `nofollow`+`_blank`) **e** "Folheto do 2º semestre (PDF, 2,6 MB)" (`download`, sem
+      `target`, sem `nofollow` — o arquivo é nosso). Console limpo.
+- [x] Layout em 360 px: sem estouro horizontal (`scrollWidth == clientWidth`).
+- [x] Painel: os dois campos existem, rotulados, e `form.reset()` os limpa. Console limpo.
+- [x] Cartaz atualizado no banco (`anexo_url`, `anexo_rotulo`); `link_externo` intacto.
+
+## Achados fora do escopo (§6.1) — registrados, não corrigidos
+**Dois endereços oficiais concorrentes para o mesmo movimento.** O cartaz aponta "Saiba mais"
+para `https://www.tovbrasil.com.br`, mas a última página do folheto dá como site oficial
+`https://oficinasdeoracaoevida.org.br` e o Instagram `@oficinasdeoracaoevida`. Não corrigido
+porque decidir qual divulgar é da Fernanda / da Conferência, não minha. Pendente de resposta
+do usuário.
+
+**Folheto sem camada de texto.** As 10 páginas são imagens; o PDF não é pesquisável nem
+legível por leitor de tela. Corrigir exige OCR e é tarefa própria — a otimização não piorou
+nada nesse ponto, só herdou o problema do arquivo de origem.

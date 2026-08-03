@@ -107,3 +107,28 @@ export function linkSeguro(url) {
     return null;
   }
 }
+
+/**
+ * Anexo para download de um cartaz do mural.
+ *
+ * Existe separada de linkSeguro() porque aquela usa `new URL()`, que recusa
+ * caminho relativo — e o caso comum aqui é justamente um arquivo do próprio
+ * site ("/assets/folheto.pdf"), guardado sem domínio para valer igual no
+ * preview local, no preview da Vercel e em produção.
+ *
+ * Afrouxar linkSeguro() para aceitar relativo sairia caro: ela guarda o link de
+ * terceiro, onde `javascript:` é a ameaça real. Duas funções, dois contratos.
+ *
+ * O formato aceito é o mesmo do CHECK em `mural_posts.anexo_url` (migração
+ * 005). A validação de verdade é a do banco; esta aqui é o cinto de segurança
+ * de quem escreve o href.
+ */
+const ANEXO_INTERNO = /^\/assets\/[A-Za-z0-9._-]+\.(pdf|jpe?g|png)$/i;
+
+export function linkAnexoSeguro(url) {
+  if (!url) return null;
+  const limpo = String(url).trim();
+  if (ANEXO_INTERNO.test(limpo)) return limpo;
+  const externo = linkSeguro(limpo);
+  return externo && externo.startsWith("https:") ? externo : null;
+}

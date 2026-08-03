@@ -2,3 +2,11 @@
 
 # PNGs dos slides: gerados por social/render/render.py a partir de all-slides.html
 social/instagram-launch/*/slides-png/
+
+# Originais pesados que os grupos nos mandam. O que vai para o site é a versão
+# otimizada em app/assets/, gerada por build/otimizar_pdf_anexo.py.
+/Oficinas de Oração e Vida *.pdf
+
+# Estado local da CLI do Supabase (projeto ligado, versões, URL do pooler).
+# É por máquina, não por repositório.
+supabase/.temp/

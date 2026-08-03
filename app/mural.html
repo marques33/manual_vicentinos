@@ -729,7 +729,7 @@
     }
 
     try {
-      const { clientePublico, escapar, linkSeguro, CONFIGURADO } =
+      const { clientePublico, escapar, linkSeguro, linkAnexoSeguro, CONFIGURADO } =
         await import('./assets/supabase-client.js');
 
       if (!CONFIGURADO) {
@@ -743,7 +743,7 @@
         // não há filtro de status a fazer aqui.
         const { data, error } = await clientePublico()
           .from('mural_posts')
-          .select('id,titulo,organizacao,resumo,periodo,contato_nome,contato_fone,link_externo,categoria,destaque,publicado_em')
+          .select('id,titulo,organizacao,resumo,periodo,contato_nome,contato_fone,link_externo,anexo_url,anexo_rotulo,categoria,destaque,publicado_em')
           .order('destaque', { ascending: false })
           .order('ordem', { ascending: true })
           .order('publicado_em', { ascending: false, nullsFirst: false })
@@ -791,6 +791,22 @@
                 '<a class="mural-link" href="' + escapar(href) + '" target="_blank" ' +
                 'rel="noopener noreferrer nofollow">Saiba mais ' +
                 '<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></span>');
+            }
+            const anexo = linkAnexoSeguro(post.anexo_url);
+            if (anexo) {
+              const rotulo = (post.anexo_rotulo || '').trim() || 'Baixar arquivo';
+              // Arquivo nosso: `download` salva direto, e é o que o celular
+              // precisa para não abrir o leitor embutido e perder o arquivo.
+              // Arquivo de terceiro: `download` é ignorado entre origens — em
+              // vez de fingir que baixa, abre em outra aba e não tira o
+              // paroquiano do mural.
+              const modo = anexo.startsWith('/')
+                ? 'download'
+                : 'target="_blank" rel="noopener noreferrer nofollow"';
+              meta.push('<span class="mural-meta-item"><i class="fa-regular fa-file-pdf"></i> ' +
+                '<a class="mural-link" href="' + escapar(anexo) + '" ' + modo + '>' +
+                escapar(rotulo) +
+                ' <i class="fa-solid fa-download" aria-hidden="true"></i></a></span>');
             }
             if (meta.length) {
               partes.push('<div class="mural-meta">' + meta.join('') + '</div>');

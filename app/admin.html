@@ -389,6 +389,18 @@
           </div>
           <div class="grade-2">
             <div class="campo">
+              <label for="mural-anexo">Arquivo para download</label>
+              <input type="text" id="mural-anexo" maxlength="300" placeholder="/assets/folheto.pdf">
+              <span class="dica">Arquivo do próprio site: comece com <code>/assets/</code> (PDF, JPG ou PNG). Arquivo de outro site: endereço https completo.</span>
+            </div>
+            <div class="campo">
+              <label for="mural-anexo-rotulo">Texto do botão</label>
+              <input type="text" id="mural-anexo-rotulo" maxlength="60" placeholder="Ex.: Folheto do 2º semestre (PDF, 2,6 MB)">
+              <span class="dica">Diga o que é e quanto pesa — quem abre pelo celular decide antes de gastar dados. Em branco = &ldquo;Baixar arquivo&rdquo;.</span>
+            </div>
+          </div>
+          <div class="grade-2">
+            <div class="campo">
               <label for="mural-ordem">Ordem</label>
               <input type="number" id="mural-ordem" value="0" step="1">
               <span class="dica">Menor aparece primeiro.</span>
@@ -709,6 +721,8 @@
         contato_nome: document.getElementById('mural-contato-nome').value.trim() || null,
         contato_fone: document.getElementById('mural-contato-fone').value.trim() || null,
         link_externo: document.getElementById('mural-link').value.trim() || null,
+        anexo_url: document.getElementById('mural-anexo').value.trim() || null,
+        anexo_rotulo: document.getElementById('mural-anexo-rotulo').value.trim() || null,
         categoria: document.getElementById('mural-categoria').value,
         expira_em: document.getElementById('mural-expira').value || null,
         ordem: Number(document.getElementById('mural-ordem').value) || 0,
@@ -808,6 +822,8 @@
         document.getElementById('mural-contato-nome').value = m.contato_nome || '';
         document.getElementById('mural-contato-fone').value = m.contato_fone || '';
         document.getElementById('mural-link').value = m.link_externo || '';
+        document.getElementById('mural-anexo').value = m.anexo_url || '';
+        document.getElementById('mural-anexo-rotulo').value = m.anexo_rotulo || '';
         document.getElementById('mural-expira').value = m.expira_em || '';
         document.getElementById('mural-ordem').value = m.ordem ?? 0;
         document.getElementById('mural-publicado').checked = !!m.publicado;
