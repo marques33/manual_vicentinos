@@ -362,3 +362,42 @@ proposital da foto do hero. Nenhum texto é cortado e o documento não rola na h
 - **Deno não está instalado** nesta máquina, então a Edge Function não foi executada
   localmente. A lógica de filtros foi testada em Node contra o arquivo real; o resto da
   função só será exercitado por `verificar-funcao.mjs` depois da implantação.
+
+---
+
+# Correção da identidade da Conferência (03/08/2026)
+
+**Fato corrigido pelo usuário.** O site inteiro chamava a Conferência de *Nossa Senhora de
+Fátima*. O nome correto é **Conferência Nossa Senhora do Carmo** — *Nossa Senhora de Fátima*
+é o **Conselho Particular** a que ela é vinculada e subordinada. Além disso: fundada em
+**23/03/1992**, agregada em **14/06/1999**, e as reuniões passam a ser **somente aos
+sábados, 17h** (eram terças e sábados).
+
+## O que foi alterado
+- `app/index.html`, `app/eventos.html`, `app/manual.html`, `app/mural.html`,
+  `app/oracoes.html`, `app/admin.html` — nome da Conferência em títulos, metas, OG/Twitter,
+  JSON-LD, cabeçalho, rodapé e corpo.
+- `app/index.html` — parágrafo "Quem somos" com fundação/agregação e vínculo ao Conselho;
+  cards da seção *Nossa Conferência* (Padroeira, Conselho Particular, Fundação e agregação);
+  bloco de contato com linha do Conselho Particular; JSON-LD com `foundingDate` e
+  `parentOrganization` aninhado (Conselho → SSVP).
+- `app/eventos.html` — agenda com um único card (Sábado, 17h); CSS `.agenda-grid` de duas
+  colunas para uma, centralizada.
+- `.claude/skills/vicentino-seo-audit/SKILL.md` — tabela de entidades JSON-LD.
+
+## Evidências
+- JSON-LD dos 6 HTML parseado com `json.loads` — todos válidos.
+- Balanceamento de tags conferido nos 6 arquivos — nenhum erro, nenhuma tag aberta.
+- Servidor local (127.0.0.1:8123) + Chrome DevTools: seção *Nossa Conferência* renderiza os
+  6 cards em grade 2×3; agenda de eventos com card único centralizado; `oracoes.html` e
+  `mural.html` sem nenhuma ocorrência de "Fátima" ou "terça" no texto renderizado; console
+  sem erros.
+
+## Achados fora do escopo (NÃO corrigidos — decisão do usuário)
+- `social/instagram-launch/**` (13 arquivos) e `social/render/all-slides.html`: todo o pacote
+  de lançamento do Instagram traz o nome errado *e* "toda terça-feira, 17h". Ex.:
+  `social/instagram-launch/bio.md:14`, `social/render/all-slides.html:320,423,511`.
+  **Impacto:** se publicado como está, propaga o nome errado e o horário antigo. Também há
+  slide "Padroeiros (N. S. do Carmo & N. S. de Fátima)" — conceito errado.
+  **Por que não corrigi:** é copy de campanha e os slides viram imagem renderizada; mexer
+  nisso é uma tarefa própria, com revisão visual. Pendente de aprovação.

@@ -120,3 +120,36 @@ verificável. O caminho manual não era só mais chato — era pior.
    tarefa que a usa, não confiar no que ficou escrito em sessão anterior.
 4. `WARNING: Docker is not running` no `functions deploy` **não é erro** — a CLI envia os
    arquivos pela API. Ler a última linha antes de concluir que falhou.
+
+---
+
+## Dado institucional não se deduz — se pergunta (03/08/2026)
+
+**O que aconteceu.** O site foi construído inteiro sobre um fato errado: a Conferência foi
+batizada de *Nossa Senhora de Fátima* em ~50 lugares (títulos, metas, JSON-LD, cabeçalho,
+rodapé, corpo, pacote de Instagram). O nome real é *Nossa Senhora do Carmo*; *Fátima* é o
+Conselho Particular ao qual ela se subordina. O usuário só percebeu ao ver a página pronta.
+
+**Causa raiz.** O nome foi *inferido* a partir do material disponível, provavelmente
+confundindo o Conselho com a Conferência, e nunca foi confirmado. Depois, propagou-se por
+cópia: cada página nova herdou o erro da anterior, e o pacote de redes sociais herdou de
+todas. Um dado não verificado, replicado, vira "consenso" dentro do próprio repositório.
+
+**Por que doeu.** Erro de identidade é o mais caro de todos os erros de conteúdo: aparece em
+`<title>`, canonical, Open Graph e Schema.org — ou seja, é o que o Google indexa e o que
+aparece quando alguém compartilha o link. Corrigir depois exige reindexação.
+
+**Regras preventivas.**
+1. **Nome próprio de instituição, data de fundação, hierarquia e vínculo são fatos de
+   entrada, não de dedução.** Se o usuário não forneceu, perguntar antes de escrever — e
+   nunca inferir a partir de um nome parecido no contexto (paróquia, conselho, padroeiro e
+   conferência podem ter nomes distintos e frequentemente têm).
+2. **Fato institucional mora em um lugar só.** Espalhar a mesma string por 6 HTML é convidar
+   a divergência. Se voltar a crescer, extrair para um bloco único (partial/JS) — hoje o
+   controle é o script de substituição + varredura de sobras.
+3. **Ao corrigir um fato replicado, varrer o repositório inteiro** (`grep -rn`), não só o
+   arquivo que o usuário apontou — e listar explicitamente o que ficou de fora e por quê.
+4. **Substituição em massa precisa de padrão ancorado.** Trocar "Nossa Senhora de Fátima" às
+   cegas teria destruído as referências legítimas ao Conselho Particular. Os padrões foram
+   ancorados em "Conferência ..." e a varredura final imprimiu as sobras para conferência
+   manual.
