@@ -393,11 +393,51 @@ sábados, 17h** (eram terças e sábados).
   `mural.html` sem nenhuma ocorrência de "Fátima" ou "terça" no texto renderizado; console
   sem erros.
 
-## Achados fora do escopo (NÃO corrigidos — decisão do usuário)
-- `social/instagram-launch/**` (13 arquivos) e `social/render/all-slides.html`: todo o pacote
-  de lançamento do Instagram traz o nome errado *e* "toda terça-feira, 17h". Ex.:
-  `social/instagram-launch/bio.md:14`, `social/render/all-slides.html:320,423,511`.
-  **Impacto:** se publicado como está, propaga o nome errado e o horário antigo. Também há
-  slide "Padroeiros (N. S. do Carmo & N. S. de Fátima)" — conceito errado.
-  **Por que não corrigi:** é copy de campanha e os slides viram imagem renderizada; mexer
-  nisso é uma tarefa própria, com revisão visual. Pendente de aprovação.
+## Achados fora do escopo — aprovados e corrigidos em seguida
+- `social/instagram-launch/**` e `social/render/all-slides.html`: todo o pacote de lançamento
+  do Instagram trazia o nome errado *e* "toda terça-feira, 17h", além do slide "Padroeiros
+  (N. S. do Carmo & N. S. de Fátima)". Reportado, aprovado pelo usuário e corrigido — ver
+  seção abaixo.
+
+---
+
+# Correção do pacote de Instagram (03/08/2026)
+
+Mesma correção de fato, aplicada ao material de redes sociais.
+
+## O que foi alterado
+- **Legendas:** `01-apresentacao/caption.md` (nome + fundação/agregação + vínculo ao Conselho
+  + sábado), `02-almoco-convite/caption.md` (nome), `03-como-ajudar/caption.md` (sábado).
+- **Roteiros de slide:** `01-apresentacao/slides.md` (capa, slide 3 reescrito, grade 2x2 com
+  Padroeira e sábado), `02-almoco-convite/slides.md` (nome), `03-como-ajudar/slides.md`
+  (capa, CTA e slide de reuniões).
+- **Perfil:** `bio.md` (nome + sábados, dentro dos 150 caracteres), `destaques.md`
+  (Padroeiros → Padroeira, mais destaques de fundação e Conselho), `stories-iniciais.md`,
+  `README.md` (título).
+- **Hashtags:** `#NossaSenhoraDeFatima` → `#ConferenciaNossaSenhoraDoCarmo` nos posts 1 e 2.
+- **Layout renderizado:** `social/render/all-slides.html` — capa, slide 3, grade 2x2, capa do
+  post 3, chip de voluntariado e slide de reuniões.
+- **PNGs:** os 15 slides re-renderizados com `python social/render/render.py`.
+
+## Evidências
+- Varredura final em `social/`: nenhuma ocorrência de "terça"; as 4 de "Fátima" restantes são
+  todas o Conselho Particular, corretas.
+- Render executado sem erro (15 slides). Inspeção visual de `01/01`, `01/03`, `01/07`,
+  `03/01`, `03/05` e `03/06`: nome novo na capa, texto do slide 3 dentro da caixa, grade 2x2
+  com "Todo sábado" e "Padroeira / N. S. do Carmo / Conferência desde 1992", chip e título de
+  reuniões com sábado.
+
+## Corrigido de passagem
+- `social/instagram-launch/README.md`: o texto dizia que a renderização "fica para o Canva",
+  mas `social/render/render.py` já gera os PNGs dos posts 1 e 3 desde antes desta tarefa.
+  Doc atualizada, com o aviso de que editar o `.md` sem editar `all-slides.html` faz o
+  roteiro divergir da imagem.
+
+## Riscos residuais
+- **O post 2 (almoço) não tem layout em `all-slides.html`** — só roteiro `.md`. Se for para o
+  ar, é montagem manual no Canva, sem a proteção do render.
+- **Conteúdo já publicado no Instagram não é alcançado por esta correção.** Se algum destes
+  posts já foi ao ar com o nome antigo, a correção precisa ser feita na própria plataforma
+  (editar legenda; slide errado exige repostar).
+- A data do almoço (24/05/2026) já passou — o post 2 está desatualizado por outro motivo,
+  fora do escopo desta correção.

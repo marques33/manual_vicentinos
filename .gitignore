@@ -1,1 +1,4 @@
 .vercel
+
+# PNGs dos slides: gerados por social/render/render.py a partir de all-slides.html
+social/instagram-launch/*/slides-png/

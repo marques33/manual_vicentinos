@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Slides — Vicentinos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --wine-deep: #4A1818;
+    --wine: #5C1F1B;
+    --wine-mid: #7A2A24;
+    --gold: #C9A567;
+    --gold-bright: #E0BE7E;
+    --gold-deep: #A8843E;
+    --cream: #F5E6D3;
+    --cream-light: #FAF5EC;
+    --ivory: #FCFAF5;
+    --text: #2A1B14;
+    --text-soft: #6B5747;
+    --text-muted: #9A8470;
+    --border: rgba(201, 165, 103, 0.35);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #222; padding: 30px; }
+
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    margin: 0 0 40px 0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: 'Cormorant Garamond', 'Georgia', serif; font-weight: 600; letter-spacing: 0.01em; line-height: 1.15; }
+
+  /* Backgrounds */
+  .bg-vinho {
+    background:
+      radial-gradient(ellipse at top, rgba(201, 165, 103, 0.14), transparent 60%),
+      linear-gradient(135deg, var(--wine-deep) 0%, var(--wine) 100%);
+    color: var(--cream);
+  }
+  .bg-creme { background: var(--ivory); }
+  .bg-creme-warm {
+    background:
+      radial-gradient(ellipse at center, rgba(201, 165, 103, 0.12), transparent 60%),
+      var(--cream-light);
+  }
+
+  /* Common content layout */
+  .pad { padding: 110px 100px; }
+  .center-flex {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 100px;
+  }
+
+  /* Eyebrow */
+  .eyebrow {
+    font-size: 24px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 28px;
+  }
+  .eyebrow.on-vinho { color: var(--gold-bright); }
+
+  /* Titles */
+  h1.hero { font-size: 96px; color: var(--gold-bright); }
+  h2.title { font-size: 78px; color: var(--wine-deep); margin-bottom: 36px; }
+  h2.title.on-vinho { color: var(--gold-bright); }
+  h3.title-sm { font-size: 56px; color: var(--wine-deep); margin-bottom: 24px; }
+
+  /* Body */
+  p.body { font-size: 32px; line-height: 1.55; color: var(--text-soft); margin-bottom: 22px; }
+  p.body.on-vinho { color: rgba(245, 230, 211, 0.92); }
+  p.body strong { color: var(--wine-deep); }
+  p.body.on-vinho strong { color: var(--gold-bright); font-weight: 700; }
+
+  /* Ornaments */
+  .ornament {
+    display: flex; align-items: center; justify-content: center;
+    gap: 22px; color: var(--gold);
+    margin-bottom: 32px;
+  }
+  .ornament::before, .ornament::after {
+    content: ''; flex: 0 0 100px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .ornament i { font-size: 26px; }
+  .ornament.on-vinho { color: var(--gold-bright); }
+  .ornament.on-vinho::before, .ornament.on-vinho::after {
+    background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+  }
+
+  /* Capa: brasão + lema */
+  .crest {
+    width: 180px; height: 180px;
+    border-radius: 50%; overflow: hidden;
+    background: var(--cream-light);
+    border: 4px solid var(--gold);
+    padding: 12px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.35);
+    margin-bottom: 50px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .crest img { width: 100%; height: 100%; object-fit: contain; }
+
+  .footer-soft {
+    position: absolute; bottom: 80px; left: 0; right: 0;
+    text-align: center;
+    font-size: 26px; line-height: 1.7;
+    color: rgba(245, 230, 211, 0.85);
+    letter-spacing: 0.04em;
+  }
+  .footer-soft.dark { color: var(--text-soft); }
+
+  /* Lema enorme — Christum Annuntiare */
+  .lema {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 158px;
+    line-height: 1.05;
+    color: var(--gold-bright);
+    text-align: center;
+  }
+  .lema-sub {
+    margin-top: 38px;
+    font-size: 30px;
+    color: rgba(245, 230, 211, 0.88);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Lista de ações com ícones */
+  ul.icon-list {
+    list-style: none; margin-top: 30px;
+    display: flex; flex-direction: column; gap: 32px;
+  }
+  ul.icon-list li {
+    display: flex; gap: 28px; align-items: flex-start;
+  }
+  ul.icon-list .item-icon {
+    flex: 0 0 76px; height: 76px;
+    border-radius: 50%;
+    background: var(--cream-light);
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-deep);
+    font-size: 30px;
+  }
+  ul.icon-list .item-text strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    color: var(--wine-deep);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  ul.icon-list .item-text span {
+    font-size: 28px;
+    color: var(--text-soft);
+    line-height: 1.5;
+  }
+
+  /* Citação */
+  blockquote.quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 78px;
+    line-height: 1.18;
+    color: var(--gold-bright);
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  blockquote.quote.on-creme { color: var(--wine-deep); }
+  cite {
+    display: block;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 26px;
+    letter-spacing: 0.06em;
+    color: rgba(245, 230, 211, 0.82);
+    text-align: center;
+  }
+  cite.on-creme { color: var(--text-soft); }
+
+  /* Grade 2x2 */
+  .grid-2x2 {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 26px; margin-top: 36px;
+  }
+  .info-card {
+    background: var(--cream-light);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 32px 28px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .info-card i {
+    font-size: 36px;
+    color: var(--gold-deep);
+    margin-bottom: 4px;
+  }
+  .info-card .lbl {
+    font-size: 18px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 600;
+  }
+  .info-card .val {
+    font-size: 28px; color: var(--wine-deep); font-weight: 600; line-height: 1.3;
+  }
+  .info-card .val small {
+    display: block; font-size: 22px; color: var(--text-soft); font-weight: 400; margin-top: 4px;
+  }
+
+  /* Cards de "três caminhos" */
+  .way-card {
+    background: var(--cream-light);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 80px 70px;
+    text-align: center;
+    height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .way-icon {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cream-light) 0%, #fff 100%);
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-deep);
+    font-size: 52px;
+    margin-bottom: 36px;
+    box-shadow: 0 6px 24px rgba(74, 24, 24, 0.08);
+  }
+  .way-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 70px;
+    color: var(--wine-deep);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .way-card p {
+    font-size: 30px;
+    line-height: 1.55;
+    color: var(--text-soft);
+    max-width: 760px;
+  }
+  .chip-cta {
+    margin-top: 36px;
+    display: inline-block;
+    padding: 16px 32px;
+    background: var(--gold);
+    color: var(--wine-deep);
+    border-radius: 100px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  /* CTA final / contato */
+  .cta-block {
+    margin-top: 32px;
+    font-size: 28px;
+    line-height: 1.9;
+    color: rgba(245, 230, 211, 0.92);
+    text-align: center;
+  }
+  .cta-block.dark { color: var(--text-soft); }
+  .cta-block strong { color: var(--gold-bright); font-weight: 600; }
+  .cta-block.dark strong { color: var(--wine-deep); }
+
+  /* Reuniões card destaque (vinho) */
+  .reunioes-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 130px;
+    line-height: 1.05;
+    color: var(--gold-bright);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .reunioes-addr {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.7;
+    color: rgba(245, 230, 211, 0.92);
+  }
+
+  /* small marca d'agua canto */
+  .corner-mark {
+    position: absolute;
+    bottom: 50px; left: 0; right: 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: rgba(201, 165, 103, 0.7);
+    letter-spacing: 0.08em;
+  }
+  .corner-mark.dark { color: var(--gold-deep); }
+</style>
+</head>
+<body>
+
+<!-- ========================================================== -->
+<!-- POST 1 — APRESENTAÇÃO (8 slides) -->
+<!-- ========================================================== -->
+
+<!-- 1.1 — Capa -->
+<div class="slide bg-vinho center-flex" id="01-apresentacao_01">
+  <div class="crest"><img src="../../app/assets/logo-ssvp.png" alt=""></div>
+  <h1 class="serif hero">Conferência<br>Nossa Senhora<br>do Carmo</h1>
+  <p class="footer-soft">
+    Sociedade de São Vicente de Paulo<br>
+    Paróquia do Carmo · Brasília — DF
+  </p>
+</div>
+
+<!-- 1.2 — Quem somos -->
+<div class="slide bg-creme pad" id="01-apresentacao_02">
+  <div class="eyebrow">Quem somos</div>
+  <h2 class="serif title">Uma fraternidade nascida<br>do amor aos pobres.</h2>
+  <p class="body">
+    A <strong>Sociedade de São Vicente de Paulo</strong> foi fundada em
+    <strong>Paris, em 1833</strong>, pelo bem-aventurado <strong>Frédéric Ozanam</strong>
+    e um pequeno grupo de jovens estudantes — para traduzir a fé em obras concretas,
+    visitando famílias pobres em seus próprios lares.
+  </p>
+  <div class="corner-mark dark">Christum Annuntiare</div>
+</div>
+
+<!-- 1.3 — No Brasil desde 1872 -->
+<div class="slide bg-creme pad" id="01-apresentacao_03">
+  <div class="eyebrow">Aqui no Brasil</div>
+  <h2 class="serif title">No Brasil desde 1872.<br>Em Brasília, na casa do Carmo.</h2>
+  <p class="body">
+    Nossa Conferência foi fundada em <strong>1992</strong>, na
+    <strong>Paróquia Santuário Nossa Senhora do Carmo</strong>,
+    na 913 Sul — Asa Sul, Brasília. É vinculada ao
+    <strong>Conselho Particular Nossa Senhora de Fátima</strong>.
+  </p>
+  <div class="corner-mark dark">Christum Annuntiare</div>
+</div>
+
+<!-- 1.4 — Christum Annuntiare -->
+<div class="slide bg-vinho center-flex" id="01-apresentacao_04">
+  <div class="ornament on-vinho"><i class="fa-solid fa-cross"></i></div>
+  <div class="lema">Christum<br>Annuntiare</div>
+  <p class="lema-sub">Anunciar Cristo<br>com palavras e obras de caridade.</p>
+</div>
+
+<!-- 1.5 — O que fazemos -->
+<div class="slide bg-creme pad" id="01-apresentacao_05">
+  <div class="eyebrow">O que fazemos</div>
+  <h2 class="serif title">Caridade que escuta,<br>visita e acompanha.</h2>
+  <ul class="icon-list">
+    <li>
+      <div class="item-icon"><i class="fa-solid fa-door-open"></i></div>
+      <div class="item-text">
+        <strong>Visitas às famílias</strong>
+        <span>Encontros nos lares — escuta, oração e fraternidade.</span>
+      </div>
+    </li>
+    <li>
+      <div class="item-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+      <div class="item-text">
+        <strong>Apoio material</strong>
+        <span>Cestas básicas, remédios, documentos e necessidades imediatas.</span>
+      </div>
+    </li>
+    <li>
+      <div class="item-icon"><i class="fa-solid fa-dove"></i></div>
+      <div class="item-text">
+        <strong>Apoio espiritual</strong>
+        <span>Oração em comum, sacramentos e acompanhamento da fé.</span>
+      </div>
+    </li>
+    <li>
+      <div class="item-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+      <div class="item-text">
+        <strong>Orientação de direitos</strong>
+        <span>Apoio para acessar benefícios sociais, saúde e justiça.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- 1.6 — Citação Ozanam -->
+<div class="slide bg-vinho center-flex" id="01-apresentacao_06">
+  <div class="ornament on-vinho"><i class="fa-solid fa-quote-left"></i></div>
+  <blockquote class="quote">
+    “Não basta socorrer<br>os pobres dia a dia.<br>É preciso ainda ir<br>à raiz do mal.”
+  </blockquote>
+  <cite>Bem-aventurado Frédéric Ozanam</cite>
+</div>
+
+<!-- 1.7 — Onde nos encontrar -->
+<div class="slide bg-creme pad" id="01-apresentacao_07">
+  <div class="eyebrow">Visite-nos</div>
+  <h2 class="serif title">Você é bem-vindo<br>na casa do Carmo.</h2>
+  <div class="grid-2x2">
+    <div class="info-card">
+      <i class="fa-solid fa-church"></i>
+      <div class="lbl">Paróquia</div>
+      <div class="val">Santuário<br>N. S. do Carmo</div>
+    </div>
+    <div class="info-card">
+      <i class="fa-solid fa-location-dot"></i>
+      <div class="lbl">Endereço</div>
+      <div class="val">913 Sul<br><small>AV. W5 SGAS · Conjunto A</small></div>
+    </div>
+    <div class="info-card">
+      <i class="fa-regular fa-calendar"></i>
+      <div class="lbl">Reuniões</div>
+      <div class="val">Todo sábado<br>às 17h</div>
+    </div>
+    <div class="info-card">
+      <i class="fa-solid fa-hands-holding-circle"></i>
+      <div class="lbl">Padroeira</div>
+      <div class="val">N. S. do Carmo<br><small>Conferência desde 1992</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- 1.8 — CTA final -->
+<div class="slide bg-vinho center-flex" id="01-apresentacao_08">
+  <div class="ornament on-vinho"><i class="fa-solid fa-heart"></i></div>
+  <div class="lema" style="font-size:120px;">Há lugar<br>para você<br>nesta missão.</div>
+  <p class="cta-block">
+    ✦ Siga esta página<br>
+    ✦ Conheça o <strong>Manual Vicentino</strong> no link da bio<br>
+    ✦ WhatsApp <strong>(61) 99653-8206</strong>
+  </p>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- POST 3 — COMO AJUDAR (7 slides) -->
+<!-- ========================================================== -->
+
+<!-- 3.1 — Capa -->
+<div class="slide bg-vinho center-flex" id="03-como-ajudar_01">
+  <div class="ornament on-vinho"><i class="fa-solid fa-heart"></i></div>
+  <div class="lema" style="font-size:130px;">Há lugar<br>para você<br>nesta missão.</div>
+  <p class="footer-soft">
+    Conferência Nossa Senhora do Carmo<br>
+    Vicentinos · Paróquia do Carmo
+  </p>
+</div>
+
+<!-- 3.2 — Três caminhos -->
+<div class="slide bg-creme pad" id="03-como-ajudar_02">
+  <div class="eyebrow">Como ajudar</div>
+  <h2 class="serif title">Três caminhos.<br>Igualmente importantes<br>diante de Deus.</h2>
+  <p class="body" style="margin-top: 30px;">
+    Toda vocação vicentina nasce de um chamado pessoal — e nem todos são chamados
+    a fazer a mesma coisa. O que importa é responder.
+  </p>
+  <div class="corner-mark dark">Christum Annuntiare</div>
+</div>
+
+<!-- 3.3 — Oração -->
+<div class="slide bg-creme-warm" id="03-como-ajudar_03" style="display:flex;align-items:center;justify-content:center;">
+  <div class="way-card" style="margin: 100px; width: calc(100% - 200px);">
+    <div class="way-icon"><i class="fa-solid fa-hands-praying"></i></div>
+    <h3>Oração</h3>
+    <p>
+      Reze pelas famílias que visitamos, pelos vicentinos e por todos os pobres.
+      A oração é o motor da nossa caridade — sem ela, nada permanece.
+    </p>
+  </div>
+</div>
+
+<!-- 3.4 — Doação -->
+<div class="slide bg-creme-warm" id="03-como-ajudar_04" style="display:flex;align-items:center;justify-content:center;">
+  <div class="way-card" style="margin: 100px; width: calc(100% - 200px);">
+    <div class="way-icon"><i class="fa-solid fa-gift"></i></div>
+    <h3>Doação</h3>
+    <p>
+      Alimentos não perecíveis, roupas, remédios e contribuição financeira chegam,
+      por nossas mãos, a quem precisa.
+    </p>
+    <div class="chip-cta"><i class="fa-brands fa-whatsapp"></i> &nbsp; (61) 99653-8206</div>
+  </div>
+</div>
+
+<!-- 3.5 — Voluntariado -->
+<div class="slide bg-creme-warm" id="03-como-ajudar_05" style="display:flex;align-items:center;justify-content:center;">
+  <div class="way-card" style="margin: 100px; width: calc(100% - 200px);">
+    <div class="way-icon"><i class="fa-solid fa-people-arrows"></i></div>
+    <h3>Voluntariado</h3>
+    <p>
+      Junte-se à Conferência. Visitar famílias com seus irmãos vicentinos
+      é uma escola de fé e de humanidade.
+    </p>
+    <div class="chip-cta"><i class="fa-regular fa-calendar"></i> &nbsp; Sábados, 17h · Paróquia do Carmo</div>
+  </div>
+</div>
+
+<!-- 3.6 — Reuniões -->
+<div class="slide bg-vinho center-flex" id="03-como-ajudar_06">
+  <div class="ornament on-vinho"><i class="fa-regular fa-calendar"></i></div>
+  <div class="reunioes-title">Todo<br>sábado,<br>às 17h.</div>
+  <p class="reunioes-addr">
+    Paróquia Santuário<br>
+    Nossa Senhora do Carmo<br>
+    AV. W5 SGAS · Quadra 913 · Conjunto A<br>
+    Brasília — DF
+  </p>
+</div>
+
+<!-- 3.7 — CTA final com citação -->
+<div class="slide bg-creme-warm center-flex" id="03-como-ajudar_07">
+  <div class="ornament"><i class="fa-solid fa-cross"></i></div>
+  <blockquote class="quote on-creme">
+    “Anunciar Cristo<br>com palavras e obras<br>de caridade.”
+  </blockquote>
+  <cite class="on-creme">Christum Annuntiare ✦</cite>
+  <p class="cta-block dark" style="margin-top: 60px;">
+    🔗 Manual Vicentino no link da bio<br>
+    <strong>WhatsApp (61) 99653-8206</strong>
+  </p>
+</div>
+
+</body>
+</html>
