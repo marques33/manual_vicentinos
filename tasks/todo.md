@@ -313,14 +313,20 @@ certo era dizer "não sei". Agora o script confere primeiro se a chave é aceita
 `exit 2` se não for. (A causa da chave errada fui eu: quebrei o literal em três pedaços para
 o `ref` ficar legível, e o script só leu o primeiro.)
 
-### Falta — só no painel do Supabase
-1. **Desligar** Authentication → Providers → Email → *Enable sign ups*.
-2. Criar o segredo `IP_PEPPER` e implantar `enviar-pedido` (a CLI do Supabase não está
-   instalada nesta máquina; dá para colar os dois arquivos no editor do painel, com
-   *Verify JWT* **desligado**).
-3. Rodar `node supabase/verificar-funcao.mjs`.
-   **Enquanto não passar inteiro, a página de orações não deve ir ao ar.**
-4. **Trocar as senhas de banco dos dois projetos** — as duas trafegaram por chat.
+### Instalação concluída em 2026-08-03
+1. [x] **Cadastro público desligado** — Authentication → Providers → Email →
+   *Enable sign ups* (feito pelo usuário no painel).
+2. [x] **Segredo `IP_PEPPER` criado e `enviar-pedido` implantada** pela CLI do Supabase
+   (`supabase secrets set` + `supabase functions deploy --project-ref cqkymbseyrebmsufimni`).
+   A CLI **está** instalada nesta máquina (2.111.0) — a anotação anterior estava errada.
+   `supabase functions list` confirma `verify_jwt: false` e `status: ACTIVE`.
+   O deploy não precisou de Docker (a CLI avisa e envia os arquivos pela API).
+3. [x] `node supabase/verificar-funcao.mjs` — **15 de 15 passaram, 0 falharam**, incluindo
+   o limite por IP (429 já na 3ª tentativa). Evidência completa no commit desta data.
+4. [ ] **Apagar os pedidos de teste** que o verificador deixou na fila: 1 do caminho
+   legítimo ("Pela saúde de quem cuida…") + 2 de "Teste de limite número N". Todos estão
+   como *pendente* (nunca chegaram à página pública). Botão **Excluir** em `admin.html`.
+5. [ ] **Trocar as senhas de banco dos dois projetos** — as duas trafegaram por chat.
 
 ## Achados fora do escopo (§6.1) — registrados, não corrigidos
 **`app/manual.html:977-978` — credenciais em texto puro no JavaScript do cliente.**

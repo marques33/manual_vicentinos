@@ -91,3 +91,32 @@ servidor `waitress` que redireciona para https, o que faz o Playwright falhar co
 `ERR_TIMED_OUT` — um erro que não sugere "porta ocupada". Servir a partir de uma porta livre
 escolhida pelo sistema (`porta 0`) dentro do próprio script de verificação elimina a classe
 inteira de problema.
+
+---
+
+## 2026-08-03 · "A ferramenta não está instalada" também é uma afirmação que precisa de prova
+
+**O que aconteceu.** O plano registrou, como fato, que *a CLI do Supabase não está instalada
+nesta máquina*, e por causa disso empurrou para o usuário quatro passos manuais no painel:
+colar dois arquivos `.ts` no editor web, marcar *Verify JWT* desligado e criar o segredo à
+mão. A CLI estava instalada — versão 2.111.0, já autenticada — e o serviço inteiro subiu com
+dois comandos (`supabase secrets set`, `supabase functions deploy`).
+
+**Causa raiz.** Afirmei a ausência de uma ferramenta sem executar a checagem que custa um
+segundo (`supabase --version`). Ausência foi tratada como default; presença, como algo que
+precisaria de prova. É o inverso do certo: o custo de checar é ~0 e o custo de errar é
+transferir trabalho manual, propenso a erro, para o usuário.
+
+**Agravante.** Copiar `.ts` no editor do painel não é equivalente ao deploy: perde o
+`config.toml` (`verify_jwt = false`), perde o versionamento e não deixa evidência
+verificável. O caminho manual não era só mais chato — era pior.
+
+**Regras preventivas.**
+1. Antes de escrever "X não está instalado / não está disponível", **rodar o comando de
+   versão**. Sem saída do terminal, a frase não entra em documento nenhum.
+2. Antes de propor procedimento manual no painel de um serviço, checar se existe CLI ou API
+   oficial para o mesmo passo. Painel é o último recurso, não o primeiro.
+3. Anotação de ambiente (o que existe na máquina) **envelhece**: reconfirmar no início da
+   tarefa que a usa, não confiar no que ficou escrito em sessão anterior.
+4. `WARNING: Docker is not running` no `functions deploy` **não é erro** — a CLI envia os
+   arquivos pela API. Ler a última linha antes de concluir que falhou.
