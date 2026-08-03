@@ -260,16 +260,38 @@ um falso positivo só muda a ordem da fila. Bloquear calado silenciaria alguém 
 6. **Scripts para rodar contra o projeto real** (ainda não executados — dependem das chaves):
    `supabase/verificar-rls.mjs` e `supabase/verificar-funcao.mjs`.
 
-## O que falta — só o usuário pode fazer (precisa do painel do Supabase)
-Passo a passo completo em `supabase/README.md`. Resumo:
-1. Rodar as 4 migrações no SQL Editor.
+## Estado da instalação no projeto Supabase
+
+Projeto `nvnaxawszomhjqrmziqi` (região sa-east-1), PostgreSQL 17.6.
+
+**Feito** (aplicado por conexão direta ao banco):
+- [x] As 4 migrações rodaram sem erro, `pg_cron` incluído.
+- [x] RLS ativa em `admins`, `mural_posts` e `pedidos_oracao`; 5 políticas no lugar.
+- [x] `anon` tem SELECT em exatamente 6 colunas de `pedidos_oracao`
+      (id, nome, intencao, privilegiado_semana, aprovado_em, criado_em) e em mais nada.
+- [x] Job `purga-oracoes` agendado e ativo (03:15, diário).
+- [x] **Prova da RLS assumindo o papel `anon` dentro do banco: 26 casos, 0 falhas.**
+      Com duas linhas semeadas (uma aprovada, uma pendente) e três cartazes (publicado,
+      rascunho, vencido): `anon` viu 1 pedido e 1 cartaz; toda coluna interna, toda
+      escrita, `public.admins`, `private.*` e `registrar_tentativa()` foram recusados; e
+      todas essas operações passaram como `service_role` — o que prova que a recusa é
+      controle de acesso, não banco quebrado. A semente foi desfeita (as três tabelas
+      estão vazias).
+- [x] `SUPABASE_URL` preenchida em `app/assets/supabase-client.js`.
+
+**Falta** — depende do painel, que só o usuário acessa:
+1. Colar a chave **anon public** (Settings → API) em `app/assets/supabase-client.js`.
 2. **Desligar** Authentication → Providers → Email → *Enable sign ups*.
-3. Criar o(s) moderador(es) e inserir o `user_id` em `public.admins`.
-4. Criar o segredo `IP_PEPPER` e implantar a função `enviar-pedido`.
-5. Preencher URL e chave `anon` em `app/assets/supabase-client.js`.
-6. Rodar `node supabase/verificar-rls.mjs` e `node supabase/verificar-funcao.mjs`.
-   **Enquanto esses dois não passarem inteiros, o site não deve ir ao ar.**
-7. Cadastrar as Oficinas de Oração e Vida pelo painel.
+3. Criar o(s) moderador(es) em Authentication → Users → *Add user* (com *Auto Confirm*),
+   e inserir o `user_id` em `public.admins`.
+4. Criar o segredo `IP_PEPPER` e implantar `enviar-pedido`
+   (`npx supabase functions deploy enviar-pedido`, ou pelo editor do painel com
+   *Verify JWT* desligado).
+5. Rodar `node supabase/verificar-funcao.mjs`.
+   **Enquanto não passar inteiro, a página de orações não deve ir ao ar.**
+6. Cadastrar as Oficinas de Oração e Vida pelo painel.
+7. **Trocar a senha do banco** (Settings → Database → Reset database password): a string de
+   conexão foi passada por chat e ficou registrada na transcrição.
 
 ## Achados fora do escopo (§6.1) — registrados, não corrigidos
 **`app/manual.html:977-978` — credenciais em texto puro no JavaScript do cliente.**
