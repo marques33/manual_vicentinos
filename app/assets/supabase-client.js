@@ -16,12 +16,17 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 
 // ---------------------------------------------------------------------------
-// FALTA PREENCHER a chave: Dashboard → Settings → API → "anon public".
-// (Só a chave "anon". Nunca a "service_role" — essa dá acesso irrestrito e vive
-//  apenas como segredo da Edge Function.)
+// Projeto "vicentinos" (ref cqkymbseyrebmsufimni).
+//
+// A chave abaixo é a "anon public" — pública por definição, e o payload dela diz
+// apenas `"role":"anon"`. Nunca troque por uma que diga "service_role": essa
+// ignora toda a RLS e vive só como segredo da Edge Function.
 // ---------------------------------------------------------------------------
-export const SUPABASE_URL = "https://nvnaxawszomhjqrmziqi.supabase.co";
-export const SUPABASE_ANON_KEY = "COLE_AQUI_A_CHAVE_ANON";
+export const SUPABASE_URL = "https://cqkymbseyrebmsufimni.supabase.co";
+export const SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" +
+  ".eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxa3ltYnNleXJlYm1zdWZpbW5pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU3MTY3NDAsImV4cCI6MjEwMTI5Mjc0MH0" +
+  ".jIN3lVfx9bpP8Tp3xJBsetWbCZ72J-b9oMI81UcwChc";
 
 export const URL_ENVIAR_PEDIDO = `${SUPABASE_URL}/functions/v1/enviar-pedido`;
 
