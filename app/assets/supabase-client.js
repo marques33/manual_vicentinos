@@ -16,9 +16,11 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 
 // ---------------------------------------------------------------------------
-// PREENCHER: Dashboard → Settings → API → Project URL e a chave "anon public".
+// FALTA PREENCHER a chave: Dashboard → Settings → API → "anon public".
+// (Só a chave "anon". Nunca a "service_role" — essa dá acesso irrestrito e vive
+//  apenas como segredo da Edge Function.)
 // ---------------------------------------------------------------------------
-export const SUPABASE_URL = "https://SEU-PROJETO.supabase.co";
+export const SUPABASE_URL = "https://nvnaxawszomhjqrmziqi.supabase.co";
 export const SUPABASE_ANON_KEY = "COLE_AQUI_A_CHAVE_ANON";
 
 export const URL_ENVIAR_PEDIDO = `${SUPABASE_URL}/functions/v1/enviar-pedido`;
