@@ -285,23 +285,42 @@ encontrei (0 tabelas em `public`, 0 usuários). Nenhum dado do usuário existia 
 
 ### Feito
 - [x] `SUPABASE_URL` e chave `anon` do projeto vicentinos em `app/assets/supabase-client.js`.
-      Conferido: o `ref` do payload bate com a URL, o `role` é `anon` e a chave autentica
-      (a API responde 404 na tabela, não 401 na chave).
+      Os três `ref` (usuário do banco, payload do JWT, URL) conferidos antes de aplicar.
+- [x] As 4 migrações aplicadas em `cqkymbseyrebmsufimni`, `pg_cron` incluído e job ativo.
+- [x] Moderador `renanmrqs32@gmail.com` (usuário já existia, confirmado) inserido em
+      `public.admins`; `is_admin()` devolve `true` para ele.
+- [x] **Prova de RLS de dentro do banco: 26 casos, 0 falhas.**
+- [x] **Prova de RLS por fora, pela chave anon e pelo PostgREST: 18 casos, 0 falhas.**
+- [x] Cartaz das Oficinas de Oração e Vida publicado (destaque, com link, contato da
+      Fernanda). Site de destino conferido: `https://www.tovbrasil.com.br` responde 200.
+- [x] Render contra o Supabase real: mural mostra o cartaz com `rel="noopener noreferrer
+      nofollow"`; orações mostra os dois estados vazios corretos; painel mostra login com o
+      painel escondido. Console limpo nas três.
+- [x] Varredura de layout refeita já com dado real: 96 combinações, zero estouro.
 
-### Falta
-1. Aplicar as 4 migrações em `cqkymbseyrebmsufimni` (o usuário vai mandar a string de
-   conexão) e repetir a prova de RLS de dentro do banco.
-2. **Desligar** Authentication → Providers → Email → *Enable sign ups*.
-3. Criar o moderador `renanmrqs32@gmail.com` em Authentication → Users → *Add user*
-   (com *Auto Confirm*) e inserir o `user_id` em `public.admins`.
-4. Criar o segredo `IP_PEPPER` e implantar `enviar-pedido`
-   (`npx supabase functions deploy enviar-pedido`, ou pelo editor do painel com
-   *Verify JWT* desligado).
-5. Rodar `node supabase/verificar-rls.mjs` e `node supabase/verificar-funcao.mjs`.
-   **Enquanto não passarem inteiros, o site não deve ir ao ar.**
-6. Cadastrar as Oficinas de Oração e Vida pelo painel.
-7. **Trocar as senhas de banco que trafegaram por chat** (Settings → Database → Reset
-   database password), nos dois projetos.
+### Dois defeitos encontrados por usar o sistema de verdade
+
+**`link_externo` com `{4,300}` na regex.** O Postgres limita repetição a 255 (RE_DUP_MAX) e
+recusa a expressão inteira. Efeito: **nenhum cartaz com link podia ser cadastrado**. Escapou
+de todos os testes anteriores porque o `CHECK` só avalia a regex quando o link não é nulo, e
+até então todos os casos usavam link nulo. Lição: um `CHECK` com `is null or ...` tem dois
+caminhos, e o teste precisa passar pelos dois.
+
+**O verificador mentiu.** Com a chave `anon` montada errada, `verificar-rls.mjs` reportou
+14 "OK": as operações proibidas eram mesmo recusadas, só que por causa da chave inválida e
+não da RLS. É o pior modo de falha de um teste de segurança — dizer "protegido" quando o
+certo era dizer "não sei". Agora o script confere primeiro se a chave é aceita e aborta com
+`exit 2` se não for. (A causa da chave errada fui eu: quebrei o literal em três pedaços para
+o `ref` ficar legível, e o script só leu o primeiro.)
+
+### Falta — só no painel do Supabase
+1. **Desligar** Authentication → Providers → Email → *Enable sign ups*.
+2. Criar o segredo `IP_PEPPER` e implantar `enviar-pedido` (a CLI do Supabase não está
+   instalada nesta máquina; dá para colar os dois arquivos no editor do painel, com
+   *Verify JWT* **desligado**).
+3. Rodar `node supabase/verificar-funcao.mjs`.
+   **Enquanto não passar inteiro, a página de orações não deve ir ao ar.**
+4. **Trocar as senhas de banco dos dois projetos** — as duas trafegaram por chat.
 
 ## Achados fora do escopo (§6.1) — registrados, não corrigidos
 **`app/manual.html:977-978` — credenciais em texto puro no JavaScript do cliente.**

@@ -39,6 +39,53 @@ silenciosa é a pior categoria: não dispara alarme e não chega como bug report
 4. Vale para qualquer serviço com múltiplos ambientes/projetos (Vercel, Render, Firebase):
    antes de aplicar, confirmar que o alvo é o que se pensa que é.
 
+---
+
+## 2026-08-02 · Um teste de segurança que dizia "protegido" sem saber
+
+**O que aconteceu.** `verificar-rls.mjs` reportou 14 verificações "OK" enquanto usava uma
+chave `anon` inválida. Cada operação proibida era de fato recusada — mas por causa da chave,
+não da RLS. O relatório afirmava exatamente o oposto do que tinha provado.
+
+**Causa raiz.** O script comprovava apenas negativas. Uma negativa não distingue "bem
+protegido" de "nem cheguei a entrar". Eu tinha escrito no próprio script um aviso sobre isso
+(a seção do par negado/permitido) e ainda assim deixei o corpo dele passar sem uma
+conferência de entrada.
+
+**Regra preventiva.** Todo teste que comprova **ausência** de acesso precisa, antes, provar
+que o canal funciona — uma leitura que **tem** que dar certo. Sem essa âncora, o resultado
+"tudo negado" é indistinguível de "tudo quebrado", e a mensagem honesta não seria "protegido"
+e sim "não sei". Quando não der para provar o lado positivo, o script deve dizer que não
+provou, nunca reportar sucesso.
+
+**Corolário.** Não deixar valor lido por ferramenta ficar "bonito" no fonte. Quebrei a chave
+em três literais concatenados para o `ref` ficar legível em diff; o extrator leu só o
+primeiro pedaço. Legibilidade que quebra parsing custa mais do que entrega.
+
+---
+
+## 2026-08-02 · CHECK com `is null or ...` tem dois caminhos
+
+**O que aconteceu.** A coluna `mural_posts.link_externo` tinha
+`check (link_externo is null or link_externo ~ '^https://[^[:space:]]{4,300}$')`. O Postgres
+limita repetição em regex a 255 (RE_DUP_MAX) e recusa a expressão inteira com
+`invalid repetition count(s)`. Resultado: nenhum cartaz com link podia ser inserido. Só
+apareceu ao cadastrar o primeiro cartaz real.
+
+**Causa raiz.** Todos os testes anteriores usavam `link_externo` nulo. O `is null or` faz
+curto-circuito e a regex nunca era avaliada — o caminho defeituoso nunca foi executado.
+
+**Regras preventivas.**
+1. Constraint com alternativa (`is null or`, `case`, `or`) tem mais de um caminho: o teste
+   precisa passar por **todos**, inclusive o "campo preenchido".
+2. Em regex do Postgres, repetição limitada vai até 255. Teto de tamanho pertence ao
+   `char_length`, não à chave de repetição.
+3. Fixture de teste tem que satisfazer as **outras** constraints, senão o erro que aparece
+   não é o que se está investigando (perdi uma rodada com `titulo` de 1 caractere batendo
+   num CHECK diferente e parecendo falha do link).
+
+---
+
 **Também aprendido nesta tarefa (menor).** A porta 8000 desta máquina está ocupada por um
 servidor `waitress` que redireciona para https, o que faz o Playwright falhar com
 `ERR_TIMED_OUT` — um erro que não sugere "porta ocupada". Servir a partir de uma porta livre
