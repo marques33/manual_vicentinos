@@ -20,7 +20,17 @@ create table if not exists public.mural_posts (
 
   -- Só https. Fecha javascript: e data: no banco, antes de qualquer
   -- cuidado que o front venha (ou não) a tomar.
-  link_externo text check (link_externo is null or link_externo ~ '^https://[^[:space:]]{4,300}$'),
+  --
+  -- O teto de tamanho fica no char_length, e não como {4,300} dentro da regex:
+  -- o Postgres limita repetição a 255 (RE_DUP_MAX) e recusa a expressão inteira
+  -- com "invalid repetition count(s)". Como o CHECK só avalia a regex quando o
+  -- link não é nulo, o erro só apareceria no primeiro cartaz COM link.
+  link_externo text check (
+    link_externo is null or (
+      link_externo ~ '^https://[^[:space:]]+$'
+      and char_length(link_externo) between 12 and 300
+    )
+  ),
 
   categoria    text not null default 'movimento'
                  check (categoria in ('movimento','pastoral','curso','campanha','outro')),

@@ -73,6 +73,23 @@ const negado = (r) => r.status === 401 || r.status === 403 || r.status === 404 |
   (r.status >= 400 && r.status < 500);
 
 // ---------------------------------------------------------------------------
+// Porta de entrada: a chave é sequer aceita?
+//
+// Sem esta conferência, uma chave inválida faz TODO o restante do script passar
+// — cada operação proibida seria recusada, sim, mas por causa da chave e não da
+// RLS. É o modo de falha mais perigoso que um teste de segurança pode ter: ele
+// diz "protegido" quando o certo seria dizer "não sei". Já aconteceu aqui.
+// ---------------------------------------------------------------------------
+const porta = await chamar("/mural_posts?select=id&limit=1");
+if (porta.status === 401) {
+  console.error("\nA chave anon foi RECUSADA pelo projeto — nada abaixo teria sentido.");
+  console.error(`  ${JSON.stringify(porta.dados)}`);
+  console.error("\n  Confira em app/assets/supabase-client.js se a chave está completa e");
+  console.error("  se o `ref` dentro dela é o mesmo da SUPABASE_URL.");
+  process.exit(2);
+}
+
+// ---------------------------------------------------------------------------
 console.log("\n=== 1. Leitura pública: só o que já foi moderado ===");
 
 const aprovados = await chamar(
