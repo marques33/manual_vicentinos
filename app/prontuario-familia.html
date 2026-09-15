@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Família · Prontuário de Atendimento · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Prontuário de Atendimento</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <a href="prontuario.html" class="btn btn-claro btn-pequeno">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Famílias</a>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section class="login" id="tela-login" hidden>
+    <h1>Entrar</h1>
+    <p>Acesso restrito aos confrades ativos da Conferência.</p>
+    <form id="form-login">
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" autocomplete="username" required>
+      </div>
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-ouro" style="width:100%" id="btn-entrar">
+        <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Entrar
+      </button>
+      <p class="aviso erro" id="aviso-login" role="alert"></p>
+    </form>
+  </section>
+
+  <main class="painel wrap" id="tela-painel" hidden>
+    <p class="aviso" id="aviso-painel" role="status"></p>
+    <div id="nao-encontrada" class="vazio" hidden>
+      <i class="fa-regular fa-circle-question"></i>
+      <p>Família não encontrada.</p>
+    </div>
+
+    <div id="conteudo-familia" hidden>
+      <!-- ---------- Dados cadastrais ---------- -->
+      <div class="editor">
+        <h2 id="titulo-familia">Família</h2>
+        <p class="cartao-interno" id="resumo-renda" style="margin-bottom:18px;"></p>
+        <form id="form-familia">
+          <div class="grade-2">
+            <div class="campo">
+              <label for="f-bairro">Bairro *</label>
+              <input type="text" id="f-bairro" maxlength="120" required>
+            </div>
+            <div class="campo">
+              <label for="f-codigo">Código</label>
+              <input type="text" id="f-codigo" maxlength="40">
+            </div>
+          </div>
+          <div class="grade-3">
+            <div class="campo">
+              <label for="f-logradouro">Logradouro</label>
+              <input type="text" id="f-logradouro" maxlength="150">
+            </div>
+            <div class="campo">
+              <label for="f-numero">Número</label>
+              <input type="text" id="f-numero" maxlength="20">
+            </div>
+            <div class="campo">
+              <label for="f-complemento">Complemento</label>
+              <input type="text" id="f-complemento" maxlength="80">
+            </div>
+          </div>
+          <div class="campo">
+            <label for="f-referencia">Referência</label>
+            <input type="text" id="f-referencia" maxlength="200">
+          </div>
+          <div class="grade-2">
+            <div class="campo">
+              <label for="f-telefone">Telefone de contato</label>
+              <input type="text" id="f-telefone" maxlength="30">
+            </div>
+            <div class="campo">
+              <label for="f-status">Status</label>
+              <select id="f-status">
+                <option value="ativa">Ativa</option>
+                <option value="em_avaliacao">Em avaliação</option>
+                <option value="inativa">Inativa</option>
+                <option value="encerrada">Encerrada</option>
+              </select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="f-observacoes">Observações</label>
+            <textarea id="f-observacoes" maxlength="4000"></textarea>
+          </div>
+          <button type="submit" class="btn btn-ouro" id="btn-salvar-familia">
+            <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Salvar dados da família
+          </button>
+          <p class="aviso" id="aviso-familia" role="status"></p>
+        </form>
+      </div>
+
+      <!-- ---------- Nova pessoa ---------- -->
+      <div class="editor">
+        <h2>Adicionar pessoa</h2>
+        <form id="form-nova-pessoa">
+          <div class="grade-2">
+            <div class="campo">
+              <label for="np-nome">Nome completo *</label>
+              <input type="text" id="np-nome" maxlength="150" required>
+            </div>
+            <div class="campo">
+              <label for="np-nascimento">Data de nascimento *</label>
+              <input type="date" id="np-nascimento" required>
+            </div>
+          </div>
+          <div class="grade-3">
+            <div class="campo">
+              <label for="np-parentesco">Parentesco na família *</label>
+              <select id="np-parentesco" required>
+                <option value="responsavel">Responsável</option>
+                <option value="conjuge">Cônjuge</option>
+                <option value="filho">Filho</option>
+                <option value="filha">Filha</option>
+                <option value="neto">Neto</option>
+                <option value="neta">Neta</option>
+                <option value="pai">Pai</option>
+                <option value="mae">Mãe</option>
+                <option value="irmao">Irmão</option>
+                <option value="irma">Irmã</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="np-sexo">Sexo</label>
+              <select id="np-sexo">
+                <option value="nao_informado">Não informado</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="np-cpf">CPF (opcional)</label>
+              <input type="text" id="np-cpf" maxlength="11" placeholder="Só números">
+            </div>
+          </div>
+          <div class="caixa-linha">
+            <input type="checkbox" id="np-pcd">
+            <label for="np-pcd">Pessoa com deficiência</label>
+          </div>
+          <div class="caixa-linha">
+            <input type="checkbox" id="np-impedimento">
+            <label for="np-impedimento">Impedimento de longo prazo (2 anos ou mais)</label>
+          </div>
+          <div class="caixa-linha">
+            <input type="checkbox" id="np-situacao-rua">
+            <label for="np-situacao-rua">Situação de rua</label>
+          </div>
+          <button type="submit" class="btn btn-ouro" id="btn-criar-pessoa">
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Adicionar pessoa
+          </button>
+          <p class="aviso" id="aviso-nova-pessoa" role="status"></p>
+        </form>
+      </div>
+
+      <!-- ---------- Pessoas ---------- -->
+      <h2 style="font-size:1.4rem;color:var(--wine-deep);margin-bottom:14px;">Pessoas da família</h2>
+      <div id="lista-pessoas"></div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { clienteAdmin, escapar, formatarData, CONFIGURADO } from './assets/supabase-client.js';
+
+    const params = new URLSearchParams(window.location.search);
+    const familiaId = params.get('id');
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const topoUsuario = document.getElementById('topo-usuario');
+    const avisoLogin = document.getElementById('aviso-login');
+    const avisoPainel = document.getElementById('aviso-painel');
+    const conteudo = document.getElementById('conteudo-familia');
+    const naoEncontrada = document.getElementById('nao-encontrada');
+
+    const sb = clienteAdmin();
+    let usuario = null;
+    let familia = null;
+    let pessoas = [];
+    let fontesRenda = new Map();      // pessoa_id -> array
+    let necessidades = new Map();     // pessoa_id -> array
+    let intervencoes = new Map();     // pessoa_id -> array
+    let parentescos = new Map();      // pessoa_id -> array de { id, outraPessoa, outraFamilia, tipo_relacao }
+    let elegibilidade = new Map();    // pessoa_id -> resultado da RPC (cache até nova consulta)
+    const abertas = new Set();        // ids de pessoa com acordeão aberto
+
+    const TIPO_RENDA = {
+      salario: 'Salário', autonomo_informal: 'Autônomo/informal', bolsa_familia: 'Bolsa Família',
+      bpc_loas: 'BPC/LOAS', aposentadoria: 'Aposentadoria', pensao: 'Pensão',
+      auxilio_outro: 'Outro auxílio', prato_cheio: 'Cartão Prato Cheio', df_social: 'Plano DF Social', outro: 'Outro'
+    };
+    const TIPO_NECESSIDADE = { financeira: 'Financeira', material: 'Material', saude: 'Saúde', moradia: 'Moradia', juridica: 'Jurídica', outra: 'Outra' };
+    const STATUS_NECESSIDADE = { aberta: 'Aberta', em_atendimento: 'Em atendimento', atendida: 'Atendida', encerrada_sem_atendimento: 'Encerrada sem atendimento' };
+    const TIPO_INTERVENCAO = { visita: 'Visita', encaminhamento: 'Encaminhamento', doacao_financeira: 'Doação financeira', doacao_material: 'Doação material', orientacao: 'Orientação', acompanhamento: 'Acompanhamento', outro: 'Outro' };
+    const TIPO_RELACAO = { irmao_irma: 'Irmão/irmã', pai_mae_filho: 'Pai/mãe e filho(a)', avo_neto: 'Avô/avó e neto(a)', tio_sobrinho: 'Tio(a) e sobrinho(a)', primo: 'Primo(a)', ex_conjuge: 'Ex-cônjuge', outro: 'Outro' };
+    const PARENTESCO_FAMILIAR = { responsavel: 'Responsável', conjuge: 'Cônjuge', filho: 'Filho', filha: 'Filha', neto: 'Neto', neta: 'Neta', pai: 'Pai', mae: 'Mãe', irmao: 'Irmão', irma: 'Irmã', outro: 'Outro' };
+
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+      if (tipo === 'ok') setTimeout(() => { el.className = 'aviso'; }, 4000);
+    }
+
+    function calcularIdade(dataNascimentoISO) {
+      if (!dataNascimentoISO) return null;
+      const hoje = new Date();
+      const nasc = new Date(dataNascimentoISO + 'T12:00:00');
+      let idade = hoje.getFullYear() - nasc.getFullYear();
+      const m = hoje.getMonth() - nasc.getMonth();
+      if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
+      return idade;
+    }
+
+    function formatarMoeda(valor) {
+      return 'R$ ' + Number(valor || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+    }
+
+    if (!CONFIGURADO) {
+      telaLogin.hidden = false;
+      document.getElementById('form-login').hidden = true;
+      mostrarAviso(avisoLogin, 'Preencha a URL do projeto e a chave anon em assets/supabase-client.js.', 'erro');
+    } else if (!familiaId) {
+      telaPainel.hidden = false;
+      naoEncontrada.hidden = false;
+    }
+
+    // -------------------------------------------------------------------------
+    // Sessão
+    // -------------------------------------------------------------------------
+    async function verificarSessao() {
+      const { data: { session } } = await sb.auth.getSession();
+      if (!session) return mostrarLogin();
+
+      const { data: ehConfrade, error } = await sb.rpc('is_confrade_ativo');
+      if (error || !ehConfrade) {
+        await sb.auth.signOut();
+        mostrarLogin('Esta conta não tem acesso ao Prontuário. Fale com a Conferência.');
+        return;
+      }
+
+      usuario = session.user;
+      topoUsuario.hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+      await carregarTudo();
+    }
+
+    function mostrarLogin(mensagem) {
+      telaPainel.hidden = true;
+      topoUsuario.hidden = true;
+      telaLogin.hidden = false;
+      if (mensagem) mostrarAviso(avisoLogin, mensagem, 'erro');
+    }
+
+    document.getElementById('form-login').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-entrar');
+      botao.disabled = true;
+      avisoLogin.className = 'aviso';
+      const { error } = await sb.auth.signInWithPassword({
+        email: document.getElementById('email').value.trim(),
+        password: document.getElementById('senha').value
+      });
+      botao.disabled = false;
+      if (error) { mostrarAviso(avisoLogin, 'E-mail ou senha incorretos.', 'erro'); return; }
+      document.getElementById('senha').value = '';
+      await verificarSessao();
+    });
+
+    document.getElementById('btn-sair').addEventListener('click', async () => {
+      await sb.auth.signOut();
+      mostrarLogin();
+    });
+
+    // -------------------------------------------------------------------------
+    // Carregar tudo
+    // -------------------------------------------------------------------------
+    async function carregarTudo() {
+      if (!familiaId) { naoEncontrada.hidden = false; return; }
+
+      const { data: f, error } = await sb.from('familias').select('*').eq('id', familiaId).maybeSingle();
+      if (error || !f) { naoEncontrada.hidden = false; return; }
+      familia = f;
+      conteudo.hidden = false;
+      preencherFormFamilia();
+
+      const { data: renda } = await sb.from('vw_renda_familiar').select('*').eq('familia_id', familiaId).maybeSingle();
+      document.getElementById('resumo-renda').textContent = renda
+        ? renda.qtd_pessoas_ativas + ' pessoa(s) ativa(s) · renda total ' + formatarMoeda(renda.renda_total_mensal) +
+          ' · renda per capita ' + (renda.renda_per_capita != null ? formatarMoeda(renda.renda_per_capita) : '—')
+        : 'Sem pessoas cadastradas ainda.';
+
+      await carregarPessoas();
+    }
+
+    function preencherFormFamilia() {
+      document.getElementById('titulo-familia').textContent = familia.endereco_bairro || 'Família';
+      document.getElementById('f-bairro').value = familia.endereco_bairro || '';
+      document.getElementById('f-codigo').value = familia.codigo || '';
+      document.getElementById('f-logradouro').value = familia.endereco_logradouro || '';
+      document.getElementById('f-numero').value = familia.endereco_numero || '';
+      document.getElementById('f-complemento').value = familia.endereco_complemento || '';
+      document.getElementById('f-referencia').value = familia.referencia_localizacao || '';
+      document.getElementById('f-telefone').value = familia.telefone_contato || '';
+      document.getElementById('f-status').value = familia.status || 'ativa';
+      document.getElementById('f-observacoes').value = familia.observacoes || '';
+    }
+
+    document.getElementById('form-familia').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-salvar-familia');
+      botao.disabled = true;
+      const registro = {
+        endereco_bairro: document.getElementById('f-bairro').value.trim(),
+        codigo: document.getElementById('f-codigo').value.trim() || null,
+        endereco_logradouro: document.getElementById('f-logradouro').value.trim() || null,
+        endereco_numero: document.getElementById('f-numero').value.trim() || null,
+        endereco_complemento: document.getElementById('f-complemento').value.trim() || null,
+        referencia_localizacao: document.getElementById('f-referencia').value.trim() || null,
+        telefone_contato: document.getElementById('f-telefone').value.trim() || null,
+        status: document.getElementById('f-status').value,
+        observacoes: document.getElementById('f-observacoes').value.trim() || null,
+      };
+      const { error } = await sb.from('familias').update(registro).eq('id', familiaId);
+      botao.disabled = false;
+      if (error) { mostrarAviso(document.getElementById('aviso-familia'), 'Erro: ' + error.message, 'erro'); return; }
+      mostrarAviso(document.getElementById('aviso-familia'), 'Dados da família salvos.', 'ok');
+      document.getElementById('titulo-familia').textContent = registro.endereco_bairro || 'Família';
+    });
+
+    // -------------------------------------------------------------------------
+    // Pessoas
+    // -------------------------------------------------------------------------
+    async function carregarPessoas() {
+      const { data, error } = await sb.from('pessoas').select('*')
+        .eq('familia_id', familiaId).order('criado_em', { ascending: true });
+      if (error) { mostrarAviso(avisoPainel, 'Erro ao carregar pessoas: ' + error.message, 'erro'); return; }
+      pessoas = data || [];
+
+      const ids = pessoas.map(p => p.id);
+      fontesRenda = new Map(); necessidades = new Map(); intervencoes = new Map(); parentescos = new Map();
+
+      if (ids.length) {
+        const [{ data: fr }, { data: nec }, { data: interv }, { data: par1 }, { data: par2 }] = await Promise.all([
+          sb.from('fontes_renda').select('*').in('pessoa_id', ids).order('criado_em', { ascending: false }),
+          sb.from('necessidades').select('*').in('pessoa_id', ids).order('criado_em', { ascending: false }),
+          sb.from('intervencoes').select('*').in('pessoa_id', ids).order('data_ocorrencia', { ascending: false }),
+          sb.from('parentescos_cruzados').select('*').in('pessoa_id_1', ids),
+          sb.from('parentescos_cruzados').select('*').in('pessoa_id_2', ids),
+        ]);
+
+        for (const p of pessoas) {
+          fontesRenda.set(p.id, (fr || []).filter(x => x.pessoa_id === p.id));
+          necessidades.set(p.id, (nec || []).filter(x => x.pessoa_id === p.id));
+          intervencoes.set(p.id, (interv || []).filter(x => x.pessoa_id === p.id));
+        }
+
+        // Parentescos: junta os dois lados e busca dados da "outra pessoa".
+        const todosParentescos = [...(par1 || []), ...(par2 || [])]
+          .filter((v, i, arr) => arr.findIndex(x => x.id === v.id) === i);
+        const outrosIds = [...new Set(todosParentescos.flatMap(x => [x.pessoa_id_1, x.pessoa_id_2]))]
+          .filter(id => !ids.includes(id));
+        let outrasPessoas = new Map();
+        if (outrosIds.length) {
+          const { data: op } = await sb.from('pessoas').select('id, nome_completo, familia_id').in('id', outrosIds);
+          const familiaIdsOutras = [...new Set((op || []).map(x => x.familia_id))];
+          const { data: of } = await sb.from('familias').select('id, endereco_bairro').in('id', familiaIdsOutras);
+          const familiasPorId = new Map((of || []).map(x => [x.id, x]));
+          outrasPessoas = new Map((op || []).map(x => [x.id, { ...x, familia: familiasPorId.get(x.familia_id) }]));
+        }
+        const pessoasPorId = new Map(pessoas.map(p => [p.id, p]));
+
+        for (const par of todosParentescos) {
+          const meuId = ids.includes(par.pessoa_id_1) ? par.pessoa_id_1 : par.pessoa_id_2;
+          const outroId = meuId === par.pessoa_id_1 ? par.pessoa_id_2 : par.pessoa_id_1;
+          const outra = outrasPessoas.get(outroId) || pessoasPorId.get(outroId);
+          if (!parentescos.has(meuId)) parentescos.set(meuId, []);
+          parentescos.get(meuId).push({ id: par.id, tipo_relacao: par.tipo_relacao, outra });
+        }
+      }
+
+      renderizarPessoas();
+    }
+
+    document.getElementById('form-nova-pessoa').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-criar-pessoa');
+      botao.disabled = true;
+      const cpf = document.getElementById('np-cpf').value.trim();
+      const registro = {
+        familia_id: familiaId,
+        nome_completo: document.getElementById('np-nome').value.trim(),
+        data_nascimento: document.getElementById('np-nascimento').value,
+        parentesco_familiar: document.getElementById('np-parentesco').value,
+        sexo: document.getElementById('np-sexo').value,
+        cpf: cpf || null,
+        pcd: document.getElementById('np-pcd').checked,
+        impedimento_longo_prazo: document.getElementById('np-impedimento').checked,
+        situacao_rua: document.getElementById('np-situacao-rua').checked,
+      };
+      const { error } = await sb.from('pessoas').insert(registro);
+      botao.disabled = false;
+      const aviso = document.getElementById('aviso-nova-pessoa');
+      if (error) { mostrarAviso(aviso, 'Erro: ' + error.message, 'erro'); return; }
+      mostrarAviso(aviso, 'Pessoa adicionada.', 'ok');
+      ev.target.reset();
+      await carregarTudo();
+    });
+
+    function renderizarPessoas() {
+      const lista = document.getElementById('lista-pessoas');
+      if (!pessoas.length) {
+        lista.innerHTML = '<div class="vazio"><i class="fa-regular fa-user"></i><p>Nenhuma pessoa cadastrada ainda nesta família.</p></div>';
+        return;
+      }
+
+      lista.innerHTML = pessoas.map(p => {
+        const idade = calcularIdade(p.data_nascimento);
+        const aberta = abertas.has(p.id);
+        const elegRes = elegibilidade.get(p.id);
+
+        return '<article class="pessoa" data-pessoa-id="' + p.id + '">' +
+          '<div class="pessoa-cabecalho" data-acao="alternar" role="button" tabindex="0" aria-expanded="' + aberta + '">' +
+            '<div><span class="pessoa-nome">' + escapar(p.nome_completo) + '</span> ' +
+              '<span class="pessoa-meta">' + escapar(PARENTESCO_FAMILIAR[p.parentesco_familiar] || p.parentesco_familiar) +
+              (idade != null ? ' · ' + idade + ' anos' : '') + (p.pcd ? ' · PCD' : '') + (!p.ativo ? ' · inativa' : '') + '</span></div>' +
+            '<i class="fa-solid fa-chevron-' + (aberta ? 'up' : 'down') + '"></i>' +
+          '</div>' +
+          '<div class="pessoa-corpo" ' + (aberta ? '' : 'hidden') + '>' + (aberta ? renderizarCorpoPessoa(p, elegRes) : '') + '</div>' +
+        '</article>';
+      }).join('');
+    }
+
+    function renderizarCorpoPessoa(p, elegRes) {
+      const fontes = fontesRenda.get(p.id) || [];
+      const necs = necessidades.get(p.id) || [];
+      const intervs = intervencoes.get(p.id) || [];
+      const pars = parentescos.get(p.id) || [];
+
+      return '' +
+        // ---- elegibilidade ----
+        '<div class="pessoa-secao">' +
+          '<h4>Elegibilidade estimada a benefícios</h4>' +
+          '<button type="button" class="btn btn-neutro btn-pequeno" data-acao="calcular-elegibilidade" data-pessoa="' + p.id + '">' +
+            '<i class="fa-solid fa-calculator"></i> ' + (elegRes ? 'Recalcular' : 'Calcular') + '</button>' +
+          renderizarBadgesElegibilidade(elegRes) +
+        '</div>' +
+
+        // ---- dados pessoais ----
+        '<div class="pessoa-secao">' +
+          '<h4>Dados pessoais</h4>' +
+          '<form data-acao="salvar-pessoa" data-pessoa="' + p.id + '">' +
+            '<div class="grade-3">' +
+              '<div class="campo"><label>Nome completo</label><input type="text" name="nome_completo" maxlength="150" value="' + escapar(p.nome_completo) + '" required></div>' +
+              '<div class="campo"><label>Data de nascimento</label><input type="date" name="data_nascimento" value="' + escapar(p.data_nascimento || '') + '" required></div>' +
+              '<div class="campo"><label>CPF</label><input type="text" name="cpf" maxlength="11" value="' + escapar(p.cpf || '') + '"></div>' +
+            '</div>' +
+            '<div class="grade-3">' +
+              '<div class="campo"><label>Parentesco</label><select name="parentesco_familiar">' +
+                Object.entries(PARENTESCO_FAMILIAR).map(([v, r]) => '<option value="' + v + '"' + (v === p.parentesco_familiar ? ' selected' : '') + '>' + r + '</option>').join('') +
+              '</select></div>' +
+              '<div class="campo"><label>Status</label><select name="ativo"><option value="true"' + (p.ativo ? ' selected' : '') + '>Ativa na família</option><option value="false"' + (!p.ativo ? ' selected' : '') + '>Inativa (saiu/faleceu)</option></select></div>' +
+              '<div></div>' +
+            '</div>' +
+            '<div class="caixa-linha"><input type="checkbox" name="pcd" id="pcd-' + p.id + '"' + (p.pcd ? ' checked' : '') + '><label for="pcd-' + p.id + '">PCD</label></div>' +
+            '<div class="caixa-linha"><input type="checkbox" name="impedimento_longo_prazo" id="imp-' + p.id + '"' + (p.impedimento_longo_prazo ? ' checked' : '') + '><label for="imp-' + p.id + '">Impedimento de longo prazo</label></div>' +
+            '<div class="caixa-linha"><input type="checkbox" name="situacao_rua" id="rua-' + p.id + '"' + (p.situacao_rua ? ' checked' : '') + '><label for="rua-' + p.id + '">Situação de rua</label></div>' +
+            '<div class="campo"><label>Observações</label><textarea name="observacoes" maxlength="4000">' + escapar(p.observacoes || '') + '</textarea></div>' +
+            '<button type="submit" class="btn btn-ouro btn-pequeno"><i class="fa-solid fa-floppy-disk"></i> Salvar pessoa</button> ' +
+            '<span class="aviso" data-aviso-pessoa="' + p.id + '"></span>' +
+          '</form>' +
+        '</div>' +
+
+        // ---- fontes de renda ----
+        '<div class="pessoa-secao">' +
+          '<h4>Fontes de renda</h4>' +
+          (fontes.length ? '<table class="subtabela"><thead><tr><th>Tipo</th><th>Descrição</th><th>Valor mensal</th><th>Ativa</th><th></th></tr></thead><tbody>' +
+            fontes.map(f => '<tr><td>' + escapar(TIPO_RENDA[f.tipo] || f.tipo) + '</td><td>' + escapar(f.descricao || '') + '</td>' +
+              '<td>' + formatarMoeda(f.valor_mensal) + '</td><td>' + (f.ativa ? 'Sim' : 'Não') + '</td>' +
+              '<td class="col-acao"><button type="button" class="btn btn-erro btn-pequeno" data-acao="remover-renda" data-id="' + f.id + '" data-pessoa="' + p.id + '"><i class="fa-regular fa-trash-can"></i></button></td></tr>').join('') +
+            '</tbody></table>' : '<p class="cartao-texto" style="margin-bottom:10px;">Nenhuma fonte de renda cadastrada.</p>') +
+          '<form data-acao="nova-renda" data-pessoa="' + p.id + '">' +
+            '<div class="grade-3">' +
+              '<div class="campo"><label>Tipo</label><select name="tipo">' +
+                Object.entries(TIPO_RENDA).map(([v, r]) => '<option value="' + v + '">' + r + '</option>').join('') + '</select></div>' +
+              '<div class="campo"><label>Descrição</label><input type="text" name="descricao" maxlength="200"></div>' +
+              '<div class="campo"><label>Valor mensal (R$)</label><input type="number" name="valor_mensal" step="0.01" min="0" required></div>' +
+            '</div>' +
+            '<button type="submit" class="btn btn-neutro btn-pequeno"><i class="fa-solid fa-plus"></i> Adicionar fonte de renda</button>' +
+          '</form>' +
+        '</div>' +
+
+        // ---- necessidades ----
+        '<div class="pessoa-secao">' +
+          '<h4>Necessidades</h4>' +
+          (necs.length ? '<table class="subtabela"><thead><tr><th>Tipo</th><th>Descrição</th><th>Urgência</th><th>Status</th></tr></thead><tbody>' +
+            necs.map(n => '<tr><td>' + escapar(TIPO_NECESSIDADE[n.tipo] || n.tipo) + '</td><td>' + escapar(n.descricao) + '</td>' +
+              '<td>' + escapar(n.urgencia) + '</td><td><select data-acao="status-necessidade" data-id="' + n.id + '" data-pessoa="' + p.id + '">' +
+              Object.entries(STATUS_NECESSIDADE).map(([v, r]) => '<option value="' + v + '"' + (v === n.status ? ' selected' : '') + '>' + r + '</option>').join('') +
+              '</select></td></tr>').join('') + '</tbody></table>' : '<p class="cartao-texto" style="margin-bottom:10px;">Nenhuma necessidade registrada.</p>') +
+          '<form data-acao="nova-necessidade" data-pessoa="' + p.id + '">' +
+            '<div class="grade-3">' +
+              '<div class="campo"><label>Tipo</label><select name="tipo">' +
+                Object.entries(TIPO_NECESSIDADE).map(([v, r]) => '<option value="' + v + '">' + r + '</option>').join('') + '</select></div>' +
+              '<div class="campo"><label>Urgência</label><select name="urgencia"><option value="baixa">Baixa</option><option value="normal" selected>Normal</option><option value="alta">Alta</option><option value="urgente">Urgente</option></select></div>' +
+              '<div class="campo"><label>Descrição</label><input type="text" name="descricao" maxlength="500" required></div>' +
+            '</div>' +
+            '<button type="submit" class="btn btn-neutro btn-pequeno"><i class="fa-solid fa-plus"></i> Registrar necessidade</button>' +
+          '</form>' +
+        '</div>' +
+
+        // ---- intervenções / histórico ----
+        '<div class="pessoa-secao">' +
+          '<h4>Histórico de atendimento</h4>' +
+          (intervs.length ? '<table class="subtabela"><thead><tr><th>Data</th><th>Tipo</th><th>Descrição</th><th>Valor</th><th></th></tr></thead><tbody>' +
+            intervs.map(i => '<tr><td>' + escapar(formatarData(i.data_ocorrencia)) + '</td><td>' + escapar(TIPO_INTERVENCAO[i.tipo] || i.tipo) + '</td>' +
+              '<td>' + escapar(i.descricao) + '</td><td>' + (i.valor_doado != null ? formatarMoeda(i.valor_doado) : '—') + '</td>' +
+              '<td class="col-acao"><button type="button" class="btn btn-erro btn-pequeno" data-acao="remover-intervencao" data-id="' + i.id + '" data-pessoa="' + p.id + '"><i class="fa-regular fa-trash-can"></i></button></td></tr>').join('') +
+            '</tbody></table>' : '<p class="cartao-texto" style="margin-bottom:10px;">Nenhum atendimento registrado ainda.</p>') +
+          '<form data-acao="nova-intervencao" data-pessoa="' + p.id + '">' +
+            '<div class="grade-3">' +
+              '<div class="campo"><label>Tipo</label><select name="tipo">' +
+                Object.entries(TIPO_INTERVENCAO).map(([v, r]) => '<option value="' + v + '">' + r + '</option>').join('') + '</select></div>' +
+              '<div class="campo"><label>Data</label><input type="date" name="data_ocorrencia" value="' + new Date().toISOString().slice(0, 10) + '" required></div>' +
+              '<div class="campo"><label>Valor doado (R$, se houver)</label><input type="number" name="valor_doado" step="0.01" min="0"></div>' +
+            '</div>' +
+            '<div class="campo"><label>Descrição *</label><input type="text" name="descricao" maxlength="500" required></div>' +
+            '<button type="submit" class="btn btn-neutro btn-pequeno"><i class="fa-solid fa-plus"></i> Registrar atendimento</button>' +
+          '</form>' +
+        '</div>' +
+
+        // ---- parentesco cruzado ----
+        '<div class="pessoa-secao">' +
+          '<h4>Parentesco com pessoas de outras famílias</h4>' +
+          (pars.length ? '<table class="subtabela"><thead><tr><th>Pessoa</th><th>Família</th><th>Relação</th><th></th></tr></thead><tbody>' +
+            pars.map(par => '<tr><td>' + escapar(par.outra?.nome_completo || '(pessoa removida)') + '</td>' +
+              '<td>' + escapar(par.outra?.familia?.endereco_bairro || '—') + '</td>' +
+              '<td>' + escapar(TIPO_RELACAO[par.tipo_relacao] || par.tipo_relacao) + '</td>' +
+              '<td class="col-acao"><button type="button" class="btn btn-erro btn-pequeno" data-acao="remover-parentesco" data-id="' + par.id + '" data-pessoa="' + p.id + '"><i class="fa-regular fa-trash-can"></i></button></td></tr>').join('') +
+            '</tbody></table>' : '<p class="cartao-texto" style="margin-bottom:10px;">Nenhum vínculo com outras famílias registrado.</p>') +
+          '<div class="grade-3">' +
+            '<div class="campo"><label>Buscar pessoa (outra família)</label><input type="text" data-busca-parentesco="' + p.id + '" placeholder="Nome da pessoa" minlength="3"></div>' +
+            '<div class="campo"><label>Tipo de relação</label><select data-relacao-parentesco="' + p.id + '">' +
+              Object.entries(TIPO_RELACAO).map(([v, r]) => '<option value="' + v + '">' + r + '</option>').join('') + '</select></div>' +
+            '<div><label style="display:block;font-size:0.76rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--wine-mid);margin-bottom:7px;">&nbsp;</label>' +
+              '<button type="button" class="btn btn-neutro btn-pequeno" data-acao="buscar-parentesco" data-pessoa="' + p.id + '"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button></div>' +
+          '</div>' +
+          '<div data-resultado-parentesco="' + p.id + '" style="margin-top:10px;"></div>' +
+        '</div>';
+    }
+
+    function renderizarBadgesElegibilidade(r) {
+      if (!r) return '<p class="badge-aviso">Clique em "Calcular" para ver a estimativa de elegibilidade.</p>';
+      if (r.erro) return '<p class="badge-aviso">Não foi possível calcular: ' + escapar(r.erro) + '</p>';
+
+      const badges = [];
+      const bpc = r.bpc_loas || {};
+      if (bpc.elegivel_padrao) badges.push('<span class="badge badge--elegivel"><i class="fa-solid fa-check"></i> BPC/LOAS — provável</span>');
+      else if (bpc.elegivel_faixa_ampliada) badges.push('<span class="badge badge--parcial"><i class="fa-solid fa-circle-half-stroke"></i> BPC/LOAS — faixa ampliada</span>');
+      else badges.push('<span class="badge badge--nao">BPC/LOAS — improvável</span>');
+
+      const faixaDf = { extrema_pobreza: 'Extrema pobreza', pobreza: 'Pobreza', baixa_renda: 'Baixa renda', acima_do_limite: 'Acima do limite' };
+      const faixa = r.df_social?.faixa;
+      if (faixa && faixa !== 'acima_do_limite') badges.push('<span class="badge badge--elegivel"><i class="fa-solid fa-check"></i> Plano DF Social — ' + escapar(faixaDf[faixa] || faixa) + '</span>');
+      else badges.push('<span class="badge badge--nao">Plano DF Social — ' + escapar(faixaDf[faixa] || 'sem dados') + '</span>');
+
+      if (r.prato_cheio?.elegivel_provavel) badges.push('<span class="badge badge--elegivel"><i class="fa-solid fa-check"></i> Cartão Prato Cheio — provável</span>');
+      else badges.push('<span class="badge badge--nao">Cartão Prato Cheio — improvável</span>');
+
+      return '<div class="badges">' + badges.join('') + '</div>' +
+        '<p class="badge-aviso">Renda per capita: ' + (r.renda_per_capita_geral != null ? formatarMoeda(r.renda_per_capita_geral) : '—') +
+        ' · ' + escapar(r.aviso || 'Estimativa de triagem, não decisão automática.') + '</p>';
+    }
+
+    // -------------------------------------------------------------------------
+    // Eventos delegados dentro da lista de pessoas
+    // -------------------------------------------------------------------------
+    function alternarAcordeao(elemento) {
+      const id = elemento.closest('.pessoa').dataset.pessoaId;
+      if (abertas.has(id)) abertas.delete(id); else abertas.add(id);
+      renderizarPessoas();
+    }
+
+    document.getElementById('lista-pessoas').addEventListener('click', async (ev) => {
+      const cabecalho = ev.target.closest('[data-acao="alternar"]');
+      if (cabecalho) { alternarAcordeao(cabecalho); return; }
+
+      const botao = ev.target.closest('button[data-acao]');
+      if (!botao) return;
+      const { acao, pessoa: pessoaId, id } = botao.dataset;
+      botao.disabled = true;
+
+      if (acao === 'calcular-elegibilidade') {
+        const { data, error } = await sb.rpc('calcular_elegibilidade_pessoa', { p_pessoa_id: pessoaId });
+        elegibilidade.set(pessoaId, error ? { erro: error.message } : data);
+        botao.disabled = false;
+        renderizarPessoas();
+        return;
+      }
+
+      if (acao === 'remover-renda') {
+        if (!confirm('Remover esta fonte de renda?')) { botao.disabled = false; return; }
+        await sb.from('fontes_renda').delete().eq('id', id);
+        elegibilidade.delete(pessoaId);
+        await carregarPessoas();
+      } else if (acao === 'remover-intervencao') {
+        if (!confirm('Remover este registro de atendimento?')) { botao.disabled = false; return; }
+        await sb.from('intervencoes').delete().eq('id', id);
+        await carregarPessoas();
+      } else if (acao === 'remover-parentesco') {
+        if (!confirm('Remover este vínculo?')) { botao.disabled = false; return; }
+        await sb.from('parentescos_cruzados').delete().eq('id', id);
+        await carregarPessoas();
+      } else if (acao === 'buscar-parentesco') {
+        const termo = document.querySelector('[data-busca-parentesco="' + pessoaId + '"]').value.trim();
+        const alvo = document.querySelector('[data-resultado-parentesco="' + pessoaId + '"]');
+        if (termo.length < 3) { alvo.innerHTML = '<p class="badge-aviso">Digite ao menos 3 letras.</p>'; botao.disabled = false; return; }
+
+        const idsFamilia = pessoas.map(p => p.id);
+        const { data: encontrados, error } = await sb.from('pessoas')
+          .select('id, nome_completo, familia_id')
+          .ilike('nome_completo', '%' + termo + '%')
+          .limit(10);
+        botao.disabled = false;
+        if (error) { alvo.innerHTML = '<p class="badge-aviso">Erro na busca: ' + escapar(error.message) + '</p>'; return; }
+
+        const fora = (encontrados || []).filter(x => !idsFamilia.includes(x.id));
+        if (!fora.length) { alvo.innerHTML = '<p class="badge-aviso">Nenhuma pessoa de outra família encontrada com este nome.</p>'; return; }
+
+        const familiaIdsResultado = [...new Set(fora.map(x => x.familia_id))];
+        const { data: familiasResultado } = await sb.from('familias').select('id, endereco_bairro').in('id', familiaIdsResultado);
+        const familiasPorId = new Map((familiasResultado || []).map(x => [x.id, x]));
+
+        alvo.innerHTML = fora.map(x => '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);">' +
+          '<span>' + escapar(x.nome_completo) + ' <span class="pessoa-meta">(' + escapar(familiasPorId.get(x.familia_id)?.endereco_bairro || 'família não identificada') + ')</span></span>' +
+          '<button type="button" class="btn btn-ouro btn-pequeno" data-acao="vincular-parentesco" data-pessoa="' + pessoaId + '" data-outra="' + x.id + '"><i class="fa-solid fa-link"></i> Vincular</button>' +
+        '</div>').join('');
+        return;
+      } else if (acao === 'vincular-parentesco') {
+        const outraId = botao.dataset.outra;
+        const tipoRelacao = document.querySelector('[data-relacao-parentesco="' + pessoaId + '"]').value;
+        const { error } = await sb.from('parentescos_cruzados').insert({
+          pessoa_id_1: pessoaId, pessoa_id_2: outraId, tipo_relacao: tipoRelacao
+        });
+        if (error) { alert('Erro ao vincular: ' + error.message); botao.disabled = false; return; }
+        await carregarPessoas();
+      }
+      botao.disabled = false;
+    });
+
+    document.getElementById('lista-pessoas').addEventListener('keydown', (ev) => {
+      const cabecalho = ev.target.closest('[data-acao="alternar"]');
+      if (!cabecalho || (ev.key !== 'Enter' && ev.key !== ' ')) return;
+      ev.preventDefault();
+      alternarAcordeao(cabecalho);
+    });
+
+    document.getElementById('lista-pessoas').addEventListener('change', async (ev) => {
+      const select = ev.target.closest('select[data-acao="status-necessidade"]');
+      if (!select) return;
+      await sb.from('necessidades').update({ status: select.value }).eq('id', select.dataset.id);
+      await carregarPessoas();
+    });
+
+    document.getElementById('lista-pessoas').addEventListener('submit', async (ev) => {
+      const form = ev.target.closest('form[data-acao]');
+      if (!form) return;
+      ev.preventDefault();
+      const acao = form.dataset.acao;
+      const pessoaId = form.dataset.pessoa;
+      const dados = new FormData(form);
+      const botao = form.querySelector('button[type="submit"]');
+      botao.disabled = true;
+
+      let erro = null;
+      if (acao === 'salvar-pessoa') {
+        const registro = {
+          nome_completo: dados.get('nome_completo').trim(),
+          data_nascimento: dados.get('data_nascimento'),
+          cpf: dados.get('cpf').trim() || null,
+          parentesco_familiar: dados.get('parentesco_familiar'),
+          ativo: dados.get('ativo') === 'true',
+          pcd: dados.has('pcd'),
+          impedimento_longo_prazo: dados.has('impedimento_longo_prazo'),
+          situacao_rua: dados.has('situacao_rua'),
+          observacoes: dados.get('observacoes').trim() || null,
+        };
+        ({ error: erro } = await sb.from('pessoas').update(registro).eq('id', pessoaId));
+        if (!erro) { elegibilidade.delete(pessoaId); mostrarAviso(form.querySelector('[data-aviso-pessoa]'), 'Salvo.', 'ok'); }
+      } else if (acao === 'nova-renda') {
+        const registro = {
+          pessoa_id: pessoaId, tipo: dados.get('tipo'),
+          descricao: dados.get('descricao').trim() || null,
+          valor_mensal: Number(dados.get('valor_mensal')),
+        };
+        ({ error: erro } = await sb.from('fontes_renda').insert(registro));
+        if (!erro) elegibilidade.delete(pessoaId);
+      } else if (acao === 'nova-necessidade') {
+        const registro = {
+          pessoa_id: pessoaId, familia_id: familiaId,
+          tipo: dados.get('tipo'), urgencia: dados.get('urgencia'),
+          descricao: dados.get('descricao').trim(),
+        };
+        ({ error: erro } = await sb.from('necessidades').insert(registro));
+      } else if (acao === 'nova-intervencao') {
+        const valorDoado = dados.get('valor_doado');
+        const registro = {
+          pessoa_id: pessoaId, familia_id: familiaId,
+          tipo: dados.get('tipo'), descricao: dados.get('descricao').trim(),
+          data_ocorrencia: dados.get('data_ocorrencia'),
+          valor_doado: valorDoado ? Number(valorDoado) : null,
+          realizado_por: usuario.id,
+        };
+        ({ error: erro } = await sb.from('intervencoes').insert(registro));
+      }
+
+      botao.disabled = false;
+      if (erro) { alert('Erro ao salvar: ' + erro.message); return; }
+      if (acao !== 'salvar-pessoa') await carregarPessoas();
+      else await carregarTudo();
+    });
+
+    if (CONFIGURADO && familiaId) verificarSessao();
+  </script>
+</body>
+</html>

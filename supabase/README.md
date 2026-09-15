@@ -1,8 +1,9 @@
-# Supabase — mural e pedidos de oração
+# Supabase — mural, pedidos de oração e prontuário de atendimento
 
-Backend das páginas `app/mural.html`, `app/oracoes.html` e `app/admin.html`.
-Nada aqui é publicado pela Vercel: o site continua 100% estático
-(`vercel.json` → `outputDirectory: app`).
+Backend das páginas `app/mural.html`, `app/oracoes.html`, `app/admin.html`,
+`app/prontuario.html` e `app/prontuario-familia.html`. Nada aqui é publicado
+pela Vercel: o site continua 100% estático (`vercel.json` → `outputDirectory:
+app`).
 
 ## Ideia central
 
@@ -17,6 +18,11 @@ Nada aqui é publicado pela Vercel: o site continua 100% estático
 
 Não existe política de `INSERT`, `UPDATE` ou `DELETE` para `anon` em nenhuma tabela.
 
+**O Prontuário de Atendimento é mais restrito ainda:** nenhuma das suas
+tabelas tem qualquer grant ou policy para `anon` — é dado sensível (LGPD),
+sem leitura pública alguma. Acesso exige `authenticated` + estar em
+`public.confrades` com `ativo = true`.
+
 ## Instalação, na ordem
 
 1. **Migrações** — Dashboard → SQL Editor, rodando na ordem dos nomes:
@@ -27,6 +33,13 @@ Não existe política de `INSERT`, `UPDATE` ou `DELETE` para `anon` em nenhuma t
    | `20260802120100_mural_posts.sql` | `public.mural_posts` + RLS |
    | `20260802120200_pedidos_oracao.sql` | `public.pedidos_oracao` + RLS + grants por coluna |
    | `20260802120300_limite_e_retencao.sql` | `private.rate_limit`, `registrar_tentativa()`, purga diária |
+   | `20260803180000_mural_anexo.sql` | anexo para download no mural |
+   | `20260915120000_confrades.sql` | `public.confrades`, `is_confrade_ativo()` |
+   | `20260915120100_prontuario_familias_pessoas.sql` | `public.familias`, `public.pessoas` + RLS |
+   | `20260915120200_prontuario_rendas.sql` | `public.fontes_renda`, `vw_renda_familiar` |
+   | `20260915120300_prontuario_necessidades_intervencoes.sql` | `public.necessidades`, `public.intervencoes` |
+   | `20260915120400_prontuario_parentescos_cruzados.sql` | `public.parentescos_cruzados` (vínculo entre famílias) |
+   | `20260915120500_parametros_beneficios.sql` | `public.parametros_beneficios`, `calcular_elegibilidade_pessoa()` |
 
    Ou, com a CLI: `npx supabase db push`.
 
@@ -44,6 +57,17 @@ Não existe política de `INSERT`, `UPDATE` ou `DELETE` para `anon` em nenhuma t
    insert into public.admins (user_id, nome)
    select id, 'Nome de quem modera' from auth.users where email = 'moderador@exemplo.com';
    ```
+
+   **Criar os confrades com acesso ao Prontuário** — mesma tela (*Add user*),
+   depois no SQL Editor:
+
+   ```sql
+   insert into public.confrades (user_id, nome_completo, papel)
+   select id, 'Nome do confrade', 'vicentino' from auth.users where email = 'confrade@exemplo.com';
+   ```
+
+   `admins` e `confrades` são tabelas independentes — quem modera o site *e*
+   usa o prontuário precisa de uma linha em cada uma.
 
 4. **Segredos da Edge Function** — Edge Functions → Secrets:
 
@@ -64,6 +88,9 @@ Não existe política de `INSERT`, `UPDATE` ou `DELETE` para `anon` em nenhuma t
 
 7. **Conferir** — `node supabase/verificar-rls.mjs` (instruções no topo do arquivo).
    Enquanto esse script não passar inteiro, o site não deve ir ao ar.
+   Para o Prontuário, rodar também `node supabase/verificar-rls-prontuario.mjs`
+   (instruções no topo do arquivo) — ele precisa de um confrade de teste real
+   em `public.confrades` para provar o lado positivo, além da chave `anon`.
 
 ## Retenção de dados
 
@@ -76,3 +103,28 @@ Não existe política de `INSERT`, `UPDATE` ou `DELETE` para `anon` em nenhuma t
 Pedido de oração é dado pessoal — em geral sensível, e quase sempre de um
 terceiro. Guardar só o necessário, pelo tempo necessário, é parte do desenho,
 não um extra.
+
+## Prontuário de Atendimento
+
+`app/prontuario.html` (lista/cadastro de famílias) e
+`app/prontuario-familia.html` (detalhe: pessoas, renda, necessidades,
+intervenções, elegibilidade e parentesco entre famílias). Acesso só para
+quem está em `public.confrades` com `ativo = true`.
+
+**Atualizar os parâmetros de benefício quando sair novo decreto** (ex.:
+mudança no valor do Cartão Prato Cheio ou nas faixas do Plano DF Social) —
+nunca dar `UPDATE` na linha vigente, sempre fechar e abrir uma nova, para
+que atendimentos antigos continuem referenciando a regra da época:
+
+```sql
+update public.parametros_beneficios
+   set vigente_ate = current_date - 1
+ where vigente_ate is null;
+
+insert into public.parametros_beneficios (salario_minimo, decreto_referencia, prato_cheio_valor_parcela)
+values (1518.00, 'Decreto XX.XXX/2027', 280.00);
+```
+
+A função `calcular_elegibilidade_pessoa()` é uma **estimativa de triagem**
+para orientar o vicentino — não é decisão automática de benefício. A UI já
+deixa isso explícito ao lado de cada selo de elegibilidade.

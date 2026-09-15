@@ -485,3 +485,61 @@ do usuário.
 **Folheto sem camada de texto.** As 10 páginas são imagens; o PDF não é pesquisável nem
 legível por leitor de tela. Corrigir exige OCR e é tarefa própria — a otimização não piorou
 nada nesse ponto, só herdou o problema do arquivo de origem.
+
+---
+
+# Prontuário de Atendimento — primeiro módulo (15/09/2026)
+
+## Contexto
+Pedido maior do usuário (histórico de atendimento, renda per capita e benefícios,
+necessidades/intervenções, cruzamento de parentesco, controle financeiro da conta
+poupança BRB e coletas, atas de reunião). Decomposto em 3 sub-projetos via
+brainstorming — este é o primeiro: **Prontuário de Atendimento**. Atas e Financeiro
+ficam para ciclos de planejamento seguintes. Plano completo em
+`C:\Users\renan\.claude\plans\cozy-scribbling-bird.md`.
+
+## Decisões confirmadas com o usuário
+- CPF opcional; data de nascimento obrigatória (necessária para elegibilidade por idade ao BPC).
+- Todo confrade ativo vê todas as famílias (sem restrição por vicentino responsável nesta fase).
+- Tabela de acesso chama-se `confrades` (não `membros` — ajuste pedido pelo usuário).
+- Vínculo entre famílias diferentes é por parentesco (não endereço/indicação/histórico de quem atendeu).
+- Nenhum modelo de ficha pré-existente — desenhado do zero com base na pesquisa sobre a SSVP
+  e nas regras de renda/benefícios levantadas em `biblioteca/`.
+
+## Tarefas
+- [x] 6 migrations novas (`confrades`, `familias`+`pessoas`, `fontes_renda`+view de renda,
+      `necessidades`+`intervencoes`, `parentescos_cruzados`, `parametros_beneficios`+função
+      de elegibilidade), seguindo fielmente o padrão de `admins.sql`/`mural_posts.sql`.
+- [x] `supabase/verificar-rls-prontuario.mjs` — prova anon negado, authenticated não-confrade
+      negado, confrade ativo permitido (par negado/permitido, lição de 02/08 aplicada).
+- [x] `app/prontuario.html` (login + lista/busca/cadastro de famílias).
+- [x] `app/prontuario-familia.html` (dados da família, pessoas, renda, necessidades,
+      intervenções/histórico, badges de elegibilidade via RPC, parentesco cruzado com
+      busca entre famílias).
+- [x] `app/assets/prontuario.css` extraído (evita duplicar ~250 linhas de tokens entre as
+      duas páginas novas).
+- [x] `supabase/README.md` atualizado (novo módulo, ordem das migrations, como criar
+      confrade, como atualizar `parametros_beneficios` por decreto).
+- [x] Verificação estática: balanceamento de tags HTML (0 erros nos 2 arquivos novos),
+      sintaxe JS dos módulos inline (`node --check`, 0 erros).
+- [ ] Verificação visual (layout/console) — **bloqueada**: o MCP chrome-devtools usa um
+      profile único (`~/.cache/chrome-devtools-mcp/chrome-profile`) já ocupado por outra
+      sessão/processo Chrome ativo na máquina. Não encerrei os processos `chrome.exe` para
+      não afetar sessão de terceiro. Verificação estática (tags balanceadas + sintaxe JS)
+      já passou; falta a checagem visual de layout/console no navegador real.
+- [ ] **Migrations NÃO aplicadas ao Supabase de produção ainda** — decisão de aplicar
+      (`supabase db push`) fica para confirmação explícita do usuário, dado que altera
+      banco em produção (ver riscos abaixo).
+- [ ] `verificar-rls-prontuario.mjs` só pode rodar de verdade depois das migrations
+      aplicadas e de pelo menos 1 confrade de teste cadastrado.
+
+## Riscos residuais / próximos passos
+- Aplicar as 6 migrations ao projeto `cqkymbseyrebmsufimni` exige rodar `supabase db push`
+  (ou colar no SQL Editor) — ação em banco de produção, só com confirmação do usuário.
+- Depois de aplicado: cadastrar os confrades reais em `public.confrades` (Dashboard →
+  Authentication → Add user, depois INSERT — instruções no README).
+- Sem restrição por vicentino responsável nesta fase — todo confrade ativo vê todas as
+  famílias (decisão explícita do usuário, documentada no plano como "fora de escopo").
+- Sem política de retenção/anonimização LGPD para os dados do prontuário — decisão
+  institucional pendente, documentada no plano.
+- Sub-projetos de Atas de Reunião e Controle Financeiro ainda não planejados.

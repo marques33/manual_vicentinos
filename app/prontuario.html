@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Prontuário de Atendimento · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Prontuário de Atendimento</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-nome"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= LOGIN ============= -->
+  <section class="login" id="tela-login" hidden>
+    <h1>Entrar</h1>
+    <p>Acesso restrito aos confrades ativos da Conferência.</p>
+    <form id="form-login">
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" autocomplete="username" required>
+      </div>
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-ouro" style="width:100%" id="btn-entrar">
+        <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Entrar
+      </button>
+      <p class="aviso erro" id="aviso-login" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- ============= LISTA DE FAMÍLIAS ============= -->
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <p class="aviso" id="aviso-painel" role="status"></p>
+
+    <div class="editor">
+      <h2>Nova família</h2>
+      <form id="form-nova-familia">
+        <div class="grade-2">
+          <div class="campo">
+            <label for="nf-bairro">Bairro *</label>
+            <input type="text" id="nf-bairro" maxlength="120" required>
+          </div>
+          <div class="campo">
+            <label for="nf-codigo">Código (opcional)</label>
+            <input type="text" id="nf-codigo" maxlength="40" placeholder="Ex.: F-2026-014">
+          </div>
+        </div>
+        <div class="grade-2">
+          <div class="campo">
+            <label for="nf-logradouro">Logradouro</label>
+            <input type="text" id="nf-logradouro" maxlength="150">
+          </div>
+          <div class="campo">
+            <label for="nf-numero">Número</label>
+            <input type="text" id="nf-numero" maxlength="20">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="nf-referencia">Referência (para endereço informal)</label>
+          <input type="text" id="nf-referencia" maxlength="200" placeholder="Ex.: atrás da igreja, casa azul">
+        </div>
+        <div class="campo">
+          <label for="nf-telefone">Telefone de contato</label>
+          <input type="text" id="nf-telefone" maxlength="30">
+        </div>
+        <button type="submit" class="btn btn-ouro" id="btn-criar-familia">
+          <i class="fa-solid fa-plus" aria-hidden="true"></i> Cadastrar família
+        </button>
+        <p class="aviso" id="aviso-nova-familia" role="status"></p>
+      </form>
+    </div>
+
+    <div class="barra">
+      <div class="campo" style="flex:1;min-width:220px;margin-bottom:0;">
+        <label for="busca">Buscar</label>
+        <input type="text" id="busca" placeholder="Bairro, código ou observação">
+      </div>
+      <div class="filtros" id="filtros-status">
+        <button class="filtro ativo" data-status="ativa">Ativas</button>
+        <button class="filtro" data-status="em_avaliacao">Em avaliação</button>
+        <button class="filtro" data-status="inativa">Inativas</button>
+        <button class="filtro" data-status="encerrada">Encerradas</button>
+        <button class="filtro" data-status="todas">Todas</button>
+      </div>
+    </div>
+
+    <div class="lista" id="lista-familias"></div>
+  </main>
+
+  <script type="module">
+    import { clienteAdmin, escapar, CONFIGURADO } from './assets/supabase-client.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const topoUsuario = document.getElementById('topo-usuario');
+    const avisoLogin = document.getElementById('aviso-login');
+    const avisoPainel = document.getElementById('aviso-painel');
+
+    const sb = clienteAdmin();
+    let familiasCache = [];
+    let rendaPorFamilia = new Map();
+    let filtroStatus = 'ativa';
+
+    const STATUS_ROTULO = {
+      ativa: 'Ativa', inativa: 'Inativa', em_avaliacao: 'Em avaliação', encerrada: 'Encerrada'
+    };
+
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+      if (tipo === 'ok') setTimeout(() => { el.className = 'aviso'; }, 4000);
+    }
+
+    if (!CONFIGURADO) {
+      telaLogin.hidden = false;
+      document.getElementById('form-login').hidden = true;
+      mostrarAviso(avisoLogin,
+        'Preencha a URL do projeto e a chave anon em assets/supabase-client.js antes de usar o prontuário.',
+        'erro');
+    }
+
+    // -------------------------------------------------------------------------
+    // Sessão — estar autenticado não basta: quem manda é a tabela `confrades`.
+    // -------------------------------------------------------------------------
+    async function verificarSessao() {
+      const { data: { session } } = await sb.auth.getSession();
+      if (!session) return mostrarLogin();
+
+      const { data: ehConfrade, error } = await sb.rpc('is_confrade_ativo');
+      if (error || !ehConfrade) {
+        await sb.auth.signOut();
+        mostrarLogin('Esta conta não tem acesso ao Prontuário. Fale com a Conferência.');
+        return;
+      }
+
+      const { data: confrade } = await sb.from('confrades')
+        .select('nome_completo').eq('user_id', session.user.id).maybeSingle();
+      document.getElementById('usuario-nome').textContent = confrade?.nome_completo || session.user.email;
+
+      topoUsuario.hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+      await carregarFamilias();
+    }
+
+    function mostrarLogin(mensagem) {
+      telaPainel.hidden = true;
+      topoUsuario.hidden = true;
+      telaLogin.hidden = false;
+      if (mensagem) mostrarAviso(avisoLogin, mensagem, 'erro');
+    }
+
+    document.getElementById('form-login').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-entrar');
+      botao.disabled = true;
+      avisoLogin.className = 'aviso';
+
+      const { error } = await sb.auth.signInWithPassword({
+        email: document.getElementById('email').value.trim(),
+        password: document.getElementById('senha').value
+      });
+
+      botao.disabled = false;
+      if (error) {
+        mostrarAviso(avisoLogin, 'E-mail ou senha incorretos.', 'erro');
+        return;
+      }
+      document.getElementById('senha').value = '';
+      await verificarSessao();
+    });
+
+    document.getElementById('btn-sair').addEventListener('click', async () => {
+      await sb.auth.signOut();
+      mostrarLogin();
+    });
+
+    // -------------------------------------------------------------------------
+    // Nova família
+    // -------------------------------------------------------------------------
+    document.getElementById('form-nova-familia').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-criar-familia');
+      botao.disabled = true;
+
+      const registro = {
+        endereco_bairro: document.getElementById('nf-bairro').value.trim(),
+        codigo: document.getElementById('nf-codigo').value.trim() || null,
+        endereco_logradouro: document.getElementById('nf-logradouro').value.trim() || null,
+        endereco_numero: document.getElementById('nf-numero').value.trim() || null,
+        referencia_localizacao: document.getElementById('nf-referencia').value.trim() || null,
+        telefone_contato: document.getElementById('nf-telefone').value.trim() || null,
+      };
+
+      const { data, error } = await sb.from('familias').insert(registro).select('id').single();
+      botao.disabled = false;
+      if (error) {
+        mostrarAviso(document.getElementById('aviso-nova-familia'),
+          'Não foi possível cadastrar: ' + error.message, 'erro');
+        return;
+      }
+      window.location.href = 'prontuario-familia.html?id=' + data.id;
+    });
+
+    // -------------------------------------------------------------------------
+    // Lista de famílias
+    // -------------------------------------------------------------------------
+    document.querySelectorAll('#filtros-status .filtro').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('#filtros-status .filtro')
+          .forEach(o => o.classList.toggle('ativo', o === b));
+        filtroStatus = b.dataset.status;
+        renderizarLista();
+      });
+    });
+    document.getElementById('busca').addEventListener('input', renderizarLista);
+
+    async function carregarFamilias() {
+      const { data, error } = await sb.from('familias')
+        .select('*')
+        .order('criado_em', { ascending: false })
+        .limit(500);
+
+      if (error) {
+        mostrarAviso(avisoPainel, 'Erro ao carregar famílias: ' + error.message, 'erro');
+        return;
+      }
+      familiasCache = data || [];
+
+      if (familiasCache.length) {
+        const ids = familiasCache.map(f => f.id);
+        const { data: rendas } = await sb.from('vw_renda_familiar')
+          .select('*').in('familia_id', ids);
+        rendaPorFamilia = new Map((rendas || []).map(r => [r.familia_id, r]));
+      }
+
+      renderizarLista();
+    }
+
+    function renderizarLista() {
+      const lista = document.getElementById('lista-familias');
+      const termo = document.getElementById('busca').value.trim().toLowerCase();
+
+      let filtradas = familiasCache;
+      if (filtroStatus !== 'todas') filtradas = filtradas.filter(f => f.status === filtroStatus);
+      if (termo) {
+        filtradas = filtradas.filter(f =>
+          (f.endereco_bairro || '').toLowerCase().includes(termo) ||
+          (f.codigo || '').toLowerCase().includes(termo) ||
+          (f.observacoes || '').toLowerCase().includes(termo));
+      }
+
+      if (!filtradas.length) {
+        lista.innerHTML = '<div class="vazio"><i class="fa-regular fa-folder-open"></i>' +
+          '<p>Nenhuma família encontrada com este filtro.</p></div>';
+        return;
+      }
+
+      lista.innerHTML = filtradas.map(f => {
+        const renda = rendaPorFamilia.get(f.id);
+        const perCapita = renda?.renda_per_capita != null
+          ? 'R$ ' + Number(renda.renda_per_capita).toLocaleString('pt-BR', { minimumFractionDigits: 2 })
+          : '—';
+        const qtdPessoas = renda?.qtd_pessoas_ativas ?? 0;
+
+        return '<a class="cartao cartao-link" href="prontuario-familia.html?id=' + f.id + '">' +
+          '<div class="cartao-topo"><div>' +
+            '<span class="selo selo--' + (f.status === 'ativa' ? 'aprovado' : f.status === 'encerrada' ? 'rejeitado' : 'pendente') + '">' +
+              escapar(STATUS_ROTULO[f.status] || f.status) + '</span>' +
+          '</div>' +
+          (f.codigo ? '<span class="cartao-data">' + escapar(f.codigo) + '</span>' : '') +
+          '</div>' +
+          '<div class="cartao-corpo">' +
+            '<h3>' + escapar(f.endereco_bairro || 'Bairro não informado') + '</h3>' +
+            '<p class="cartao-texto">' +
+              (f.endereco_logradouro ? escapar(f.endereco_logradouro) + (f.endereco_numero ? ', ' + escapar(f.endereco_numero) : '') : escapar(f.referencia_localizacao || 'Sem endereço detalhado')) +
+            '</p>' +
+          '</div>' +
+          '<div class="cartao-interno">' +
+            qtdPessoas + ' pessoa(s) · renda per capita ' + perCapita +
+          '</div>' +
+        '</a>';
+      }).join('');
+    }
+
+    if (CONFIGURADO) verificarSessao();
+  </script>
+</body>
+</html>
