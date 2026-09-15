@@ -522,24 +522,61 @@ ficam para ciclos de planejamento seguintes. Plano completo em
       confrade, como atualizar `parametros_beneficios` por decreto).
 - [x] Verificação estática: balanceamento de tags HTML (0 erros nos 2 arquivos novos),
       sintaxe JS dos módulos inline (`node --check`, 0 erros).
-- [ ] Verificação visual (layout/console) — **bloqueada**: o MCP chrome-devtools usa um
-      profile único (`~/.cache/chrome-devtools-mcp/chrome-profile`) já ocupado por outra
-      sessão/processo Chrome ativo na máquina. Não encerrei os processos `chrome.exe` para
-      não afetar sessão de terceiro. Verificação estática (tags balanceadas + sintaxe JS)
-      já passou; falta a checagem visual de layout/console no navegador real.
-- [ ] **Migrations NÃO aplicadas ao Supabase de produção ainda** — decisão de aplicar
-      (`supabase db push`) fica para confirmação explícita do usuário, dado que altera
-      banco em produção (ver riscos abaixo).
-- [ ] `verificar-rls-prontuario.mjs` só pode rodar de verdade depois das migrations
-      aplicadas e de pelo menos 1 confrade de teste cadastrado.
+- [x] Verificação visual em produção: `prontuario.html` renderizado via chrome-devtools MCP
+      (o usuário liberou o profile do Chrome) em 1280×900 e 375×812 — layout correto, sem
+      estouro horizontal, console sem erros nas duas larguras.
+- [x] **6 migrations + 1 de ajuste aplicadas ao Supabase de produção** (projeto
+      `cqkymbseyrebmsufimni`), via SQL Editor no Dashboard dirigido pelo browser
+      (chrome-devtools MCP) — a CLI local estava autenticada numa conta sem acesso ao
+      projeto (achado registrado, ver Achados abaixo). Aplicação em blocos base64
+      verificados por tamanho a cada passo (ver Achados abaixo — `type_text` corrompeu o
+      conteúdo por autocomplete do Monaco).
+- [x] Migration extra `20260915120600_confrades_papel_administrador.sql`: o check de
+      `confrades.papel` só previa hierarquia SSVP: o usuário esclareceu que sua conta é
+      "administrador" (mantém o site/banco, não é vicentino em visita) — adicionado esse
+      valor ao invés de forçar um papel que não reflete a realidade.
+- [x] Verificação pós-deploy direto no banco: 8 tabelas com RLS ativa, 0 grants indevidos
+      para `anon`, 3 funções criadas, 1 parâmetro de benefício vigente. Teste funcional da
+      elegibilidade com fixture real (família de 2, idosa 70 anos sem renda) — resultado
+      bateu exatamente com o caso 2 do plano (per capita R$0, BPC elegível, extrema
+      pobreza, Prato Cheio elegível). Fixture removida depois do teste.
+- [x] Conta do usuário (`renanmrqs32@gmail.com`) cadastrada em `public.confrades`
+      (papel `administrador`, ativo).
+- [x] Commit (só os arquivos do Prontuário — não tocou nas dezenas de mudanças pendentes
+      não relacionadas já presentes no working tree) + push para `main` — Vercel publicou
+      automaticamente; `prontuario.html` responde 200 em produção.
+- [ ] `verificar-rls-prontuario.mjs` documentado mas ainda não executado de ponta a ponta
+      (o teste manual via SQL Editor já cobriu RLS/elegibilidade; rodar o script formal
+      fica como follow-up, com `CONFRADE_EMAIL`/`CONFRADE_SENHA` reais).
+- [ ] Teste de ponta a ponta pela UI (login real → cadastrar família → ver badges de
+      elegibilidade) — página aberta em produção para o usuário logar; aguardando
+      confirmação dele do resultado.
+
+## Achados fora do escopo / lições desta tarefa
+- **CLI do Supabase autenticada em conta sem acesso ao projeto `vicentinos`.**
+  `supabase migration list` voltou 403; `supabase projects list` só mostrou os projetos
+  `aprovados`/`financial`/`claude-memory` de outra organização. Não tentei contornar —
+  troquei para aplicar via SQL Editor no Dashboard, dirigido pelo browser. Fica pendente:
+  rodar `supabase login` com a conta certa e depois `supabase migration repair --status
+  applied` para as 7 versões novas (mesmo cuidado do incidente de 03/08 — histórico da CLI
+  ficou vazio para migrations aplicadas por fora dela).
+- **`type_text` do chrome-devtools MCP corrompe SQL longo no editor Monaco do Supabase**
+  — o IntelliSense intercepta e aceita sugestões/indentação durante a digitação simulada,
+  embaralhando o conteúdo sem erro aparente. Detectado só porque o comprimento final não
+  batia com o esperado. Corrigido usando `model.setValue()` via `evaluate_script`
+  (bypassa o teclado), com o conteúdo em base64 dividido em blocos de 800 caracteres e
+  comprimento conferido a cada bloco — sem isso, um erro de transcrição de 1 caractere em
+  10) mil passaria despercebido e corromperia a migration aplicada.
+- **CTE com INSERT + chamada de função no mesmo statement não vê a própria escrita** —
+  ao testar a elegibilidade com fixture criada via `WITH ... INSERT ... RETURNING`, a
+  função (que lê `public.pessoas` diretamente, não via CTE) devolveu "pessoa não
+  encontrada" porque todas as sub-declarações do `WITH` compartilham o mesmo snapshot.
+  Resolvido rodando a inserção e a chamada da função em statements separados.
 
 ## Riscos residuais / próximos passos
-- Aplicar as 6 migrations ao projeto `cqkymbseyrebmsufimni` exige rodar `supabase db push`
-  (ou colar no SQL Editor) — ação em banco de produção, só com confirmação do usuário.
-- Depois de aplicado: cadastrar os confrades reais em `public.confrades` (Dashboard →
-  Authentication → Add user, depois INSERT — instruções no README).
 - Sem restrição por vicentino responsável nesta fase — todo confrade ativo vê todas as
   famílias (decisão explícita do usuário, documentada no plano como "fora de escopo").
 - Sem política de retenção/anonimização LGPD para os dados do prontuário — decisão
   institucional pendente, documentada no plano.
 - Sub-projetos de Atas de Reunião e Controle Financeiro ainda não planejados.
+- Acesso da CLI do Supabase à conta certa precisa ser restaurado (ver achados acima).

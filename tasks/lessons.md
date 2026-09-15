@@ -204,3 +204,66 @@ testar CHECK, escrever com quem a RLS já deixa passar (moderador autenticado ou
 senha, a chave de serviço). Um teste cuja negativa viria de qualquer jeito não é evidência.
 Corolário do que já estava escrito em `verificar-rls.mjs`: toda negativa precisa do par
 positivo que prova que a operação passaria se fosse legítima.
+
+---
+
+## 2026-09-15 · `type_text` simulado corrompe SQL longo em editor Monaco com IntelliSense
+
+**O que aconteceu.** Ao aplicar migrations no SQL Editor do Supabase via automação de
+navegador, usei `type_text` (digitação simulada tecla a tecla) para inserir uma migration
+de ~700 caracteres. O resultado ficou com trechos de autocomplete inseridos no meio do
+texto (`aguid`, `discovery_cached_at`, `authentication_method`, etc.) e indentação
+crescente linha a linha — o IntelliSense do editor aceitava sugestões e auto-indentava
+durante a digitação simulada, sem qualquer erro reportado pela ferramenta.
+
+**Por que doeu.** Nada indicava falha — a chamada retornou sucesso, e só percebi ao
+conferir `model.getValue()` e notar que o comprimento não batia com o esperado.
+Se eu não tivesse conferido, teria rodado SQL corrompido contra um banco de produção.
+
+**Regras preventivas.**
+1. **Nunca usar digitação simulada (`type_text`/`press_key` em sequência) para inserir
+   código longo em editores com autocomplete (Monaco, CodeMirror).** Preferir
+   `evaluate_script` chamando a API do editor diretamente (`model.setValue(texto)`), que
+   insere o conteúdo como um bloco, sem passar pelo pipeline de teclas.
+2. **Texto longo passado por `evaluate_script` corre risco de perda de caractere na
+   transcrição** (uma string de 6408 caracteres perdeu 1 char duas vezes seguidas ao ser
+   colada inteira). Girar em base64 e dividir em blocos pequenos (~800 chars), conferindo
+   o comprimento acumulado a cada bloco antes do próximo, torna o erro imediatamente
+   visível em vez de silencioso.
+3. **Sempre conferir o conteúdo final** (comprimento em bytes decodificados vs. o
+   arquivo de origem, início e fim do texto) antes de executar/rodar qualquer coisa que
+   dependa dele.
+
+---
+
+## 2026-09-15 · CTE com INSERT e leitura da própria escrita no mesmo statement
+
+**O que aconteceu.** Testei uma função (`calcular_elegibilidade_pessoa`) logo após criar
+a fixture de teste num único `WITH ... AS (INSERT ... RETURNING ...) SELECT
+funcao(id) FROM cte`. A função (que lê a tabela diretamente, não via CTE) devolveu
+"registro não encontrado" mesmo com o INSERT no mesmo comando.
+
+**Causa raiz.** Todas as sub-declarações de um `WITH` em PostgreSQL compartilham o mesmo
+snapshot MVCC do início do comando. Uma função chamada na consulta principal que lê a
+tabela por fora da cadeia de CTEs não enxerga a escrita feita por uma CTE anterior dentro
+do mesmo statement.
+
+**Regra preventiva.** Para testar uma função/consulta contra dado recém-inserido, rodar o
+INSERT e a chamada da função em **statements separados** (duas execuções), nunca no mesmo
+`WITH`. Vale para qualquer teste manual via SQL Editor, não só para este caso.
+
+---
+
+## 2026-09-15 · CLI autenticada não implica acesso ao projeto que se quer usar
+
+**O que aconteceu.** Antes de aplicar migrations, `supabase migration list` devolveu 403.
+`supabase projects list` mostrou 3 projetos de uma conta (`aprovados`, `financial`,
+`claude-memory`) — nenhum era o projeto `vicentinos` que este repositório usa. A mesma CLI
+tinha aplicado migrations com sucesso neste projeto em 03/08; a conta logada mudou entre
+sessões (provavelmente por uso da máquina em outro projeto/cliente).
+
+**Regra preventiva.** "CLI logada" não é o mesmo fato que "CLI logada na conta certa".
+Antes de qualquer `db push`/`migration list`, se o comando falhar com 403, checar
+`supabase projects list` e confirmar que o projeto alvo aparece — não presumir que a
+sessão de uma tarefa anterior continua válida. Nesta máquina, múltiplos projetos Supabase
+de contextos diferentes competem pela mesma sessão da CLI.
