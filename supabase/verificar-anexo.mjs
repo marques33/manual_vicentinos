@@ -26,7 +26,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const aqui = dirname(fileURLToPath(import.meta.url));
-const REF = "cqkymbseyrebmsufimni";
+const REF = "zyzyttkayblvgnfqkapq";
 const MARCA = "ZZ-TESTE-ANEXO-005";
 
 function daConfiguracao(nome) {

@@ -8,7 +8,8 @@
   <meta name="keywords" content="manual vicentino, direitos sociais Brasília, vicentinos Brasília, Paróquia do Carmo, Lei Maria da Penha DF, BPC LOAS, Defensoria Pública DF, Cadastro Único, ECA Brasília, Procon DF, justiça gratuita DF, manual de direitos vulnerabilidade, SSVP Brasília">
   <title>Manual Vicentino de Direitos · Vicentinos Brasília — Paróquia do Carmo</title>
   <link rel="canonical" href="https://manual-vicentinos.vercel.app/manual.html">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <!-- Pagina interna da Area do Vicentino: nao ha o que indexar atras do login. -->
+  <meta name="robots" content="noindex, nofollow">
   <meta name="author" content="Conferência Vicentina Nossa Senhora do Carmo">
   <meta name="geo.region" content="BR-DF">
   <meta name="geo.placename" content="Brasília">
@@ -108,147 +109,43 @@
       overflow-x: hidden;
     }
 
-    /* ===== LOGIN SCREEN ===== */
-    #login-screen {
+    /* ===== VERIFICACAO DE ACESSO ===== */
+    #gate {
       position: fixed;
       inset: 0;
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      z-index: 9999;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-
-    #login-screen.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .login-container {
-      width: 90%;
-      max-width: 380px;
+      gap: 18px;
+      padding: 24px;
       text-align: center;
-      animation: fadeInUp 0.8s ease;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
     }
+    /* Precisa vencer o `display:flex` da regra acima, que o atributo `hidden`
+       sozinho nao desfaz. */
+    #gate[hidden] { display: none; }
 
-    .login-logo {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 16px;
+    .gate-logo {
+      width: 92px;
+      height: 92px;
+      padding: 12px;
       border-radius: 50%;
       background: rgba(255,255,255,0.15);
-      padding: 12px;
-      backdrop-filter: blur(10px);
     }
-
-    .login-logo img {
+    .gate-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
     }
-
-    .login-title {
-      color: #fff;
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .login-subtitle {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.85rem;
-      margin-bottom: 28px;
-      font-weight: 300;
-    }
-
-    .login-form {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .input-group {
-      position: relative;
-    }
-
-    .input-group i {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: rgba(255,255,255,0.5);
-      font-size: 0.9rem;
-    }
-
-    .login-form input {
-      width: 100%;
-      padding: 14px 14px 14px 42px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-sm);
-      color: #fff;
-      font-size: 0.95rem;
-      font-family: inherit;
-      outline: none;
-      transition: var(--transition);
-    }
-
-    .login-form input::placeholder {
-      color: rgba(255,255,255,0.5);
-    }
-
-    .login-form input:focus {
-      background: rgba(255,255,255,0.18);
-      border-color: rgba(255,255,255,0.4);
-    }
-
-    .login-btn {
-      padding: 14px;
-      background: var(--gold);
-      color: var(--primary-dark);
-      border: none;
-      border-radius: var(--radius-sm);
-      font-size: 1rem;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: var(--transition);
-      margin-top: 4px;
-    }
-
-    .login-btn:hover { background: #e0b84e; transform: translateY(-1px); }
-    .login-btn:active { transform: translateY(0); }
-
-    .login-error {
-      color: #ff6b6b;
-      font-size: 0.85rem;
-      min-height: 20px;
-      margin-top: 4px;
-      transition: var(--transition);
-    }
-
-    .login-motto {
+    .gate-texto { color: rgba(255,255,255,0.85); font-size: 0.92rem; }
+    .gate-motto {
       color: rgba(255,255,255,0.4);
       font-size: 0.75rem;
-      margin-top: 28px;
       font-style: italic;
     }
-
-    .login-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 18px;
-      color: rgba(255,255,255,0.55);
-      font-size: 0.78rem;
-      text-decoration: none;
-      transition: var(--transition);
-    }
-    .login-back:hover { color: #fff; }
-    .login-back i { font-size: 0.7rem; }
 
     /* ===== APP LAYOUT ===== */
     #app {
@@ -896,31 +793,11 @@
 </head>
 <body>
 
-  <!-- LOGIN SCREEN -->
-  <div id="login-screen">
-    <div class="login-container">
-      <div class="login-logo">
-        <img src="assets/logo-ssvp.png" alt="SSVP">
-      </div>
-      <h1 class="login-title">Manual Vicentino</h1>
-      <p class="login-subtitle">Direitos e Auxílios para Pessoas em Vulnerabilidade</p>
-      <form class="login-form" onsubmit="return handleLogin(event)">
-        <div class="input-group">
-          <i class="fas fa-user"></i>
-          <input type="text" id="login-user" placeholder="Usuário" autocomplete="off" autofocus>
-        </div>
-        <div class="input-group">
-          <i class="fas fa-lock"></i>
-          <input type="password" id="login-pass" placeholder="Senha" autocomplete="off">
-        </div>
-        <button type="submit" class="login-btn">Entrar</button>
-        <div class="login-error" id="login-error"></div>
-      </form>
-      <p class="login-motto">Serviens in Spe &mdash; Servindo na Esperan&ccedil;a</p>
-      <a href="index.html" class="login-back">
-        <i class="fas fa-arrow-left"></i> Voltar &agrave; p&aacute;gina da Confer&ecirc;ncia
-      </a>
-    </div>
+  <!-- VERIFICACAO DE ACESSO -->
+  <div id="gate">
+    <div class="gate-logo"><img src="assets/logo-ssvp.png" alt="SSVP"></div>
+    <p class="gate-texto">Verificando seu acesso…</p>
+    <p class="gate-motto">Serviens in Spe — Servindo na Esperança</p>
   </div>
 
   <!-- APP -->
@@ -967,40 +844,16 @@
   <!-- Content -->
   <script src="content.js"></script>
   <script>
-    // ===== AUTH =====
-    const VALID_USER = 'São Vicente de Paulo';
-    const VALID_PASS = 'Afésemobrasémortaemsimesma';
-
-    function handleLogin(e) {
-      e.preventDefault();
-      const user = document.getElementById('login-user').value.trim();
-      const pass = document.getElementById('login-pass').value;
-      if (user === VALID_USER && pass === VALID_PASS) {
-        sessionStorage.setItem('auth', '1');
-        document.getElementById('login-screen').classList.add('hidden');
-        document.getElementById('app').classList.add('active');
-        navigate('home');
-      } else {
-        document.getElementById('login-error').textContent = 'Usuário ou senha incorretos';
-        document.getElementById('login-pass').value = '';
-        document.getElementById('login-pass').focus();
-      }
-      return false;
-    }
-
+    // ===== ACESSO =====
+    // Quem guarda esta pagina agora e a sessao da Area do Vicentino
+    // (assets/area-vicentino.js), verificada no modulo ao final do arquivo.
+    //
+    // Ate 16/09/2026 havia aqui um usuario e uma senha escritos em texto puro,
+    // iguais para toda a Conferencia e legiveis por qualquer visitante que
+    // abrisse o codigo-fonte da pagina. Nao ha substituto: a credencial saiu do
+    // navegador e passou a ser a conta pessoal do confrade no Supabase.
     function logout() {
-      sessionStorage.removeItem('auth');
-      document.getElementById('login-screen').classList.remove('hidden');
-      document.getElementById('app').classList.remove('active');
-      document.getElementById('login-user').value = '';
-      document.getElementById('login-pass').value = '';
-      document.getElementById('login-error').textContent = '';
-    }
-
-    // Check auth on load
-    if (sessionStorage.getItem('auth') === '1') {
-      document.getElementById('login-screen').classList.add('hidden');
-      document.getElementById('app').classList.add('active');
+      if (window.sairDaArea) window.sairDaArea();
     }
 
     // ===== NAVIGATION =====
@@ -1242,15 +1095,31 @@
     });
 
     // ===== INIT =====
-    if (sessionStorage.getItem('auth') === '1') {
-      navigate('home');
-    }
-
-    // Configure marked
     marked.setOptions({
       breaks: true,
       gfm: true
     });
+
+    // A primeira tela so e desenhada depois que a sessao for confirmada, no
+    // modulo abaixo. Antes disso o que esta no ar e o #gate.
+    window.iniciarManual = () => navigate('home');
+  </script>
+
+  <script type="module">
+    import { exigirAcesso, sair } from './assets/area-vicentino.js';
+
+    // `logout()` vive no script classico acima (chamado por onclick no HTML) e
+    // nao enxerga este modulo; a ponte e esta linha.
+    window.sairDaArea = sair;
+
+    // Sem sessao, `exigirAcesso()` ja redireciona para a Area do Vicentino
+    // guardando o destino, e o #gate fica no ar ate a troca de pagina.
+    const acesso = await exigirAcesso();
+    if (acesso) {
+      document.getElementById('gate').hidden = true;
+      document.getElementById('app').classList.add('active');
+      window.iniciarManual();
+    }
   </script>
 </body>
 </html>

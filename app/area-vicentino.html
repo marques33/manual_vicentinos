@@ -297,6 +297,123 @@
       color: var(--text-muted);
     }
 
+    /* ===== LOGIN ===== */
+    .login-wrap { padding: 80px 0 110px; background: var(--ivory); }
+    .login-card {
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 38px 32px;
+      background: linear-gradient(180deg, #fff 0%, var(--cream-light) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .login-card h2 {
+      font-size: 1.8rem;
+      color: var(--wine-deep);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .login-card .login-sub {
+      text-align: center;
+      color: var(--text-soft);
+      font-size: 0.93rem;
+      margin-bottom: 26px;
+    }
+    .campo { margin-bottom: 16px; }
+    .campo label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+    .campo input {
+      width: 100%;
+      padding: 12px 14px;
+      font: inherit;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+    .campo input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201, 165, 103, 0.2);
+    }
+    .btn-ouro {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 20px;
+      font: inherit;
+      font-weight: 600;
+      color: var(--wine-deep);
+      background: var(--gold);
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-ouro:hover:not(:disabled) { background: var(--gold-bright); transform: translateY(-1px); }
+    .btn-ouro:disabled { opacity: 0.6; cursor: progress; }
+    .aviso-login {
+      margin: 14px 0 0;
+      min-height: 1.3em;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #96281B;
+    }
+    .login-rodape {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Barra de identificacao do confrade, acima dos cartoes */
+    .area-usuario {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: fit-content;
+      margin: 0 auto 34px;
+      padding: 12px 18px;
+      background: rgba(201, 165, 103, 0.12);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+    .area-usuario strong { color: var(--wine-deep); }
+    .btn-sair {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--wine);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-sair:hover { background: var(--wine); color: var(--cream-light); border-color: var(--wine); }
+
     /* ===== FOOTER ===== */
     footer {
       background: var(--wine-deep);
@@ -397,8 +514,7 @@
           <li><a href="oracoes.html">Orações</a></li>
           <li><a href="eventos.html">Eventos</a></li>
           <li><a href="index.html#ajudar">Como Ajudar</a></li>
-          <li><a href="area-vicentino.html" class="active">Área do Vicentino</a></li>
-          <li><a href="manual.html" class="cta">Manual de Direitos</a></li>
+          <li><a href="area-vicentino.html" class="cta active">Área do Vicentino</a></li>
         </ul>
       </nav>
     </div>
@@ -415,29 +531,64 @@
         <span>Área do Vicentino</span>
       </div>
       <h1>Área do <em>Vicentino</em></h1>
-      <p>
-        Ferramentas de uso interno da Conferência. O acesso é restrito aos
-        confrades — cada uma pede login próprio.
+      <p id="hero-texto">
+        Ferramentas de uso interno da Conferência. Entre uma vez com a conta de
+        confrade e use as três livremente.
       </p>
     </div>
   </section>
 
-  <!-- ============= FERRAMENTAS ============= -->
-  <section class="area" id="area">
+  <!-- ============= LOGIN ============= -->
+  <section class="login-wrap" id="tela-login" hidden>
     <div class="container">
+      <div class="login-card">
+        <h2>Entrar</h2>
+        <p class="login-sub">Acesso restrito aos confrades da Conferência.</p>
+        <form id="form-login">
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" autocomplete="username" required>
+          </div>
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" autocomplete="current-password" required>
+          </div>
+          <button type="submit" class="btn-ouro" id="btn-entrar">
+            <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Entrar
+          </button>
+          <p class="aviso-login" id="aviso-login" role="alert"></p>
+        </form>
+        <p class="login-rodape">
+          Ainda não tem acesso? Fale com a Conferência nas reuniões de sábado
+          ou pelo WhatsApp.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FERRAMENTAS ============= -->
+  <section class="area" id="area" hidden>
+    <div class="container">
+      <div class="area-usuario">
+        <span><i class="fa-solid fa-user-check" aria-hidden="true"></i>
+          Conectado como <strong id="usuario-nome"></strong></span>
+        <button type="button" class="btn-sair" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+
       <div class="area-head">
         <div class="ornament"><i class="fa-solid fa-key"></i></div>
         <h2>Ferramentas da Conferência</h2>
         <p>
-          Escolha a ferramenta — o login é individual em cada uma, com a conta
-          cadastrada pela Conferência.
+          Seu acesso já está liberado nas três. Escolha por onde começar — não
+          haverá novo pedido de senha.
         </p>
       </div>
 
       <div class="area-grid">
         <article class="area-card">
           <div class="area-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-          <span class="area-badge"><i class="fa-solid fa-lock"></i> Login de confrade</span>
           <h3>Prontuário de Atendimento</h3>
           <p>
             Registro do acompanhamento das famílias visitadas: histórico de
@@ -450,7 +601,6 @@
 
         <article class="area-card">
           <div class="area-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <span class="area-badge"><i class="fa-solid fa-lock"></i> Login de moderador</span>
           <h3>Painel de Moderação</h3>
           <p>
             Aprovação dos pedidos de oração e das divulgações do Mural da
@@ -463,7 +613,6 @@
 
         <article class="area-card">
           <div class="area-icon"><i class="fa-solid fa-book-open"></i></div>
-          <span class="area-badge"><i class="fa-solid fa-lock"></i> Senha da Conferência</span>
           <h3>Manual de Direitos</h3>
           <p>
             Direitos, benefícios e caminhos legais para orientar as famílias
@@ -476,8 +625,8 @@
       </div>
 
       <p class="area-nota">
-        Sem acesso a alguma ferramenta? Fale com a Conferência nas reuniões de
-        sábado ou pelo WhatsApp.
+        O Manual de Direitos saiu do menu público: é ferramenta de trabalho do
+        vicentino e mora aqui dentro, junto do Prontuário e do Painel.
       </p>
     </div>
   </section>
@@ -506,6 +655,91 @@
     const navList = document.getElementById('navList');
     if (toggle) {
       toggle.addEventListener('click', () => navList.classList.toggle('open'));
+    }
+  </script>
+
+  <script type="module">
+    // ------------------------------------------------------------------------
+    // Esta página tem dois estados: a tela de login, para quem chega de fora, e
+    // o hub das ferramentas, para quem já entrou. Nenhum dos dois aparece antes
+    // da resposta do Supabase — piscar o hub e depois trocá-lo pelo login seria
+    // dizer ao visitante que ele esteve dentro por um instante.
+    // ------------------------------------------------------------------------
+    import { sb, sessaoDaArea, destinoSeguro, sair, CONFIGURADO }
+      from './assets/area-vicentino.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaArea = document.getElementById('area');
+    const avisoLogin = document.getElementById('aviso-login');
+    const heroTexto = document.getElementById('hero-texto');
+
+    // De onde a pessoa veio, quando caiu aqui por tentar abrir uma ferramenta
+    // direto. Validado no módulo: só página interna conhecida passa.
+    const destino = destinoSeguro(new URLSearchParams(location.search).get('destino'));
+
+    function mostrarLogin(mensagem) {
+      telaArea.hidden = true;
+      telaLogin.hidden = false;
+      heroTexto.textContent = destino
+        ? 'Essa ferramenta é de uso interno. Entre com a conta de confrade para continuar.'
+        : 'Ferramentas de uso interno da Conferência. Entre uma vez com a conta de confrade e use as três livremente.';
+      if (mensagem) avisoLogin.textContent = mensagem;
+      document.getElementById('email').focus();
+    }
+
+    function mostrarHub(nome) {
+      telaLogin.hidden = true;
+      telaArea.hidden = false;
+      document.getElementById('usuario-nome').textContent = nome;
+      heroTexto.textContent =
+        'Um login, três ferramentas: Prontuário, Painel de Moderação e Manual de Direitos.';
+    }
+
+    async function decidirTela() {
+      const acesso = await sessaoDaArea();
+      if (!acesso) return mostrarLogin();
+      // Entrou para chegar a algum lugar: leva direto, sem passar pelo hub.
+      if (destino) return location.replace(destino);
+      mostrarHub(acesso.nome);
+    }
+
+    document.getElementById('form-login').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-entrar');
+      botao.disabled = true;
+      avisoLogin.textContent = '';
+
+      const { error } = await sb.auth.signInWithPassword({
+        email: document.getElementById('email').value.trim(),
+        password: document.getElementById('senha').value
+      });
+      document.getElementById('senha').value = '';
+      botao.disabled = false;
+
+      if (error) {
+        // Mesma frase para e-mail inexistente e senha errada: quem tenta
+        // adivinhar não descobre por aqui qual das duas coisas acertou.
+        avisoLogin.textContent = 'E-mail ou senha incorretos.';
+        return;
+      }
+
+      const acesso = await sessaoDaArea();
+      if (!acesso) {
+        avisoLogin.textContent =
+          'Esta conta não tem acesso à Área do Vicentino. Fale com a Conferência.';
+        return;
+      }
+      if (destino) return location.replace(destino);
+      mostrarHub(acesso.nome);
+    });
+
+    document.getElementById('btn-sair').addEventListener('click', sair);
+
+    if (CONFIGURADO) {
+      decidirTela();
+    } else {
+      mostrarLogin('Configure a URL e a chave anon em assets/supabase-client.js.');
+      document.getElementById('form-login').hidden = true;
     }
   </script>
 </body>

@@ -16,7 +16,12 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 
 // ---------------------------------------------------------------------------
-// Projeto "vicentinos" (ref cqkymbseyrebmsufimni).
+// Projeto "vicentinos" (ref zyzyttkayblvgnfqkapq).
+//
+// Recriado em 16/09/2026: o projeto anterior (cqkymbseyrebmsufimni) ficou em
+// conta/organização sem acesso pela CLI. Todas as 13 migrations foram
+// reaplicadas do zero neste projeto novo; nenhum dado do banco antigo foi
+// migrado (não havia confrade, mural ou pedido de oração reais até então).
 //
 // A chave abaixo é a "anon public" — pública por definição, e o payload dela diz
 // apenas `"role":"anon"`. Nunca troque por uma que diga "service_role": essa
@@ -26,8 +31,8 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 // do arquivo, e quebrá-la em pedaços já fez um deles montar uma chave inválida
 // e reportar catorze verificações "OK" — negadas por chave ruim, não por RLS.
 // ---------------------------------------------------------------------------
-export const SUPABASE_URL = "https://cqkymbseyrebmsufimni.supabase.co";
-export const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxa3ltYnNleXJlYm1zdWZpbW5pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU3MTY3NDAsImV4cCI6MjEwMTI5Mjc0MH0.jIN3lVfx9bpP8Tp3xJBsetWbCZ72J-b9oMI81UcwChc";
+export const SUPABASE_URL = "https://zyzyttkayblvgnfqkapq.supabase.co";
+export const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5enl0dGtheWJsdmduZnFrYXBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk1NjgxNzQsImV4cCI6MjEwNTE0NDE3NH0.yveWoN5nXZzDxvX2DnBVaeVBNsFyLSagCwCVLzjITFk";
 
 export const URL_ENVIAR_PEDIDO = `${SUPABASE_URL}/functions/v1/enviar-pedido`;
 

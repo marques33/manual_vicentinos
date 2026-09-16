@@ -35,23 +35,11 @@
     </div>
   </div>
 
-  <section class="login" id="tela-login" hidden>
-    <h1>Entrar</h1>
-    <p>Acesso restrito aos confrades ativos da Conferência.</p>
-    <form id="form-login">
-      <div class="campo">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" autocomplete="username" required>
-      </div>
-      <div class="campo">
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" autocomplete="current-password" required>
-      </div>
-      <button type="submit" class="btn btn-ouro" style="width:100%" id="btn-entrar">
-        <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Entrar
-      </button>
-      <p class="aviso erro" id="aviso-login" role="alert"></p>
-    </form>
+  <!-- O login em si acontece em area-vicentino.html — uma porta só para
+       Manual, Prontuário e Painel (assets/area-vicentino.js). Sem sessão,
+       exigirAcesso() já redireciona para lá antes que este texto suma. -->
+  <section class="login" id="tela-login">
+    <p>Verificando seu acesso…</p>
   </section>
 
   <main class="painel wrap" id="tela-painel" hidden>
@@ -192,7 +180,8 @@
   </main>
 
   <script type="module">
-    import { clienteAdmin, escapar, formatarData, CONFIGURADO } from './assets/supabase-client.js';
+    import { escapar, formatarData } from './assets/supabase-client.js';
+    import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
 
     const params = new URLSearchParams(window.location.search);
     const familiaId = params.get('id');
@@ -200,12 +189,10 @@
     const telaLogin = document.getElementById('tela-login');
     const telaPainel = document.getElementById('tela-painel');
     const topoUsuario = document.getElementById('topo-usuario');
-    const avisoLogin = document.getElementById('aviso-login');
     const avisoPainel = document.getElementById('aviso-painel');
     const conteudo = document.getElementById('conteudo-familia');
     const naoEncontrada = document.getElementById('nao-encontrada');
 
-    const sb = clienteAdmin();
     let usuario = null;
     let familia = null;
     let pessoas = [];
@@ -247,62 +234,23 @@
       return 'R$ ' + Number(valor || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
     }
 
-    if (!CONFIGURADO) {
-      telaLogin.hidden = false;
-      document.getElementById('form-login').hidden = true;
-      mostrarAviso(avisoLogin, 'Preencha a URL do projeto e a chave anon em assets/supabase-client.js.', 'erro');
-    } else if (!familiaId) {
-      telaPainel.hidden = false;
-      naoEncontrada.hidden = false;
-    }
-
     // -------------------------------------------------------------------------
-    // Sessão
+    // Sessão — a autenticação em si é da Área do Vicentino (área comum a
+    // Manual, Prontuário e Painel). Sem acesso, exigirAcesso() já redireciona
+    // para lá, preservando o "?id=" desta família como destino de volta.
     // -------------------------------------------------------------------------
     async function verificarSessao() {
-      const { data: { session } } = await sb.auth.getSession();
-      if (!session) return mostrarLogin();
+      const acesso = await exigirAcesso();
+      if (!acesso) return;
 
-      const { data: ehConfrade, error } = await sb.rpc('is_confrade_ativo');
-      if (error || !ehConfrade) {
-        await sb.auth.signOut();
-        mostrarLogin('Esta conta não tem acesso ao Prontuário. Fale com a Conferência.');
-        return;
-      }
-
-      usuario = session.user;
+      usuario = acesso.session.user;
       topoUsuario.hidden = false;
       telaLogin.hidden = true;
       telaPainel.hidden = false;
       await carregarTudo();
     }
 
-    function mostrarLogin(mensagem) {
-      telaPainel.hidden = true;
-      topoUsuario.hidden = true;
-      telaLogin.hidden = false;
-      if (mensagem) mostrarAviso(avisoLogin, mensagem, 'erro');
-    }
-
-    document.getElementById('form-login').addEventListener('submit', async (ev) => {
-      ev.preventDefault();
-      const botao = document.getElementById('btn-entrar');
-      botao.disabled = true;
-      avisoLogin.className = 'aviso';
-      const { error } = await sb.auth.signInWithPassword({
-        email: document.getElementById('email').value.trim(),
-        password: document.getElementById('senha').value
-      });
-      botao.disabled = false;
-      if (error) { mostrarAviso(avisoLogin, 'E-mail ou senha incorretos.', 'erro'); return; }
-      document.getElementById('senha').value = '';
-      await verificarSessao();
-    });
-
-    document.getElementById('btn-sair').addEventListener('click', async () => {
-      await sb.auth.signOut();
-      mostrarLogin();
-    });
+    document.getElementById('btn-sair').addEventListener('click', sair);
 
     // -------------------------------------------------------------------------
     // Carregar tudo
@@ -752,7 +700,7 @@
       else await carregarTudo();
     });
 
-    if (CONFIGURADO && familiaId) verificarSessao();
+    verificarSessao();
   </script>
 </body>
 </html>
