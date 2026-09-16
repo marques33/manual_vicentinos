@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5C1F1B">
+  <meta name="description" content="Área do Vicentino — acesso restrito aos confrades da Conferência Nossa Senhora do Carmo: Prontuário de Atendimento, Painel de Moderação e Manual de Direitos.">
+  <title>Área do Vicentino · Conferência N. S. do Carmo</title>
+  <link rel="canonical" href="https://manual-vicentinos.vercel.app/area-vicentino.html">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Conferência Vicentina Nossa Senhora do Carmo">
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --wine-deep: #4A1818;
+      --wine: #5C1F1B;
+      --wine-mid: #7A2A24;
+      --wine-light: #8E3E37;
+      --gold: #C9A567;
+      --gold-bright: #E0BE7E;
+      --gold-deep: #A8843E;
+      --cream: #F5E6D3;
+      --cream-light: #FAF5EC;
+      --ivory: #FCFAF5;
+      --text: #2A1B14;
+      --text-soft: #6B5747;
+      --text-muted: #9A8470;
+      --border: rgba(201, 165, 103, 0.25);
+      --shadow-sm: 0 2px 8px rgba(74, 24, 24, 0.08);
+      --shadow: 0 8px 32px rgba(74, 24, 24, 0.12);
+      --shadow-gold: 0 8px 32px rgba(201, 165, 103, 0.25);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .ornament i { font-size: 0.9rem; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(92, 31, 27, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 165, 103, 0.2);
+      transition: var(--transition);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--cream);
+    }
+    .header-brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      padding: 3px;
+      background: var(--cream-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.4);
+    }
+    .header-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .header-brand-text strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold-bright);
+    }
+    .header-brand-text span {
+      font-size: 0.72rem;
+      color: rgba(245, 230, 211, 0.75);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    nav ul { display: flex; list-style: none; gap: 2px; align-items: center; }
+    nav a {
+      color: rgba(245, 230, 211, 0.85);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 8px 10px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    nav a:hover { color: var(--gold-bright); background: rgba(201, 165, 103, 0.1); }
+    nav a.active { color: var(--gold-bright); }
+    nav a.cta {
+      background: var(--gold);
+      color: var(--wine-deep);
+      font-weight: 600;
+      padding: 9px 14px;
+    }
+    nav a.cta:hover { background: var(--gold-bright); transform: translateY(-1px); }
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--cream);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* ===== HERO da página ===== */
+    .page-hero {
+      position: relative;
+      padding: 160px 0 80px;
+      background:
+        radial-gradient(ellipse at top, rgba(201, 165, 103, 0.1), transparent 60%),
+        linear-gradient(135deg, var(--wine-deep) 0%, var(--wine) 100%);
+      color: var(--cream);
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      color: var(--cream-light);
+      margin-bottom: 16px;
+    }
+    .page-hero h1 em {
+      color: var(--gold-bright);
+      font-style: normal;
+      font-weight: 700;
+    }
+    .page-hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      color: rgba(245, 230, 211, 0.85);
+      font-size: 1.05rem;
+    }
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 18px;
+    }
+    .breadcrumb a { color: var(--gold); transition: var(--transition); }
+    .breadcrumb a:hover { color: var(--gold-bright); }
+
+    /* ===== ÁREA — cartões ===== */
+    .area { padding: 90px 0; background: var(--ivory); }
+    .area-head { text-align: center; margin-bottom: 46px; }
+    .area-head .ornament i { color: var(--gold-deep); }
+    .area-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--wine-deep);
+      margin-bottom: 12px;
+    }
+    .area-head p {
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--text-soft);
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .area-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      min-width: 0;
+      height: 100%;
+      padding: 32px 28px;
+      background: linear-gradient(180deg, #fff 0%, var(--cream-light) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .area-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: var(--shadow);
+    }
+    .area-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(201, 165, 103, 0.14);
+      color: var(--wine);
+      font-size: 1.3rem;
+    }
+    .area-card h3 {
+      font-size: 1.4rem;
+      color: var(--wine-deep);
+    }
+    .area-card p {
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+    .area-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(201, 165, 103, 0.16);
+      border: 1px solid var(--border);
+      color: var(--gold-deep);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .area-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 8px;
+      font-weight: 600;
+      font-size: 0.94rem;
+      color: var(--wine);
+      transition: var(--transition);
+    }
+    .area-link:hover { color: var(--gold-deep); gap: 14px; }
+    .area-link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    .area-nota {
+      max-width: 640px;
+      margin: 46px auto 0;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--wine-deep);
+      color: rgba(245, 230, 211, 0.85);
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+    .footer-emblems {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+    .footer-emblems img {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+    .footer-logo-ssvp {
+      padding: 4px;
+      background: var(--cream-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      height: 56px !important;
+      width: 56px;
+    }
+    .footer-logo-paroquia { border-radius: 6px; height: 64px !important; }
+    .footer-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(201, 165, 103, 0.3);
+    }
+    footer h3 { font-size: 1.4rem; color: var(--gold-bright); margin-bottom: 6px; }
+    footer p { font-size: 0.9rem; max-width: 600px; margin: 0 auto 20px; }
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(201, 165, 103, 0.25);
+      font-size: 0.85rem;
+      color: rgba(245, 230, 211, 0.85);
+    }
+    .footer-bottom em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 720px) {
+      .menu-toggle { display: block; }
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        flex-direction: column;
+        background: var(--wine-deep);
+        padding: 12px;
+        gap: 4px;
+        border-top: 1px solid rgba(201, 165, 103, 0.2);
+      }
+      nav ul.open { display: flex; }
+      nav a { display: block; }
+      .page-hero { padding: 130px 0 60px; }
+      .header-brand-text strong { font-size: 0.95rem; }
+      .header-brand-text span { font-size: 0.65rem; }
+      .footer-emblems img { height: 44px; }
+      .area { padding: 60px 0; }
+    }
+    @media (max-width: 400px) {
+      .area-grid { grid-template-columns: 1fr; }
+      .area-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="header-brand">
+        <img src="assets/logo-ssvp.png" alt="Sociedade de São Vicente de Paulo">
+        <div class="header-brand-text">
+          <strong>Conferência N. S. do Carmo</strong>
+          <span>Vicentinos · Paróquia N. S. do Carmo</span>
+        </div>
+      </a>
+      <nav>
+        <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="navList">
+          <li><a href="index.html#sobre">Quem Somos</a></li>
+          <li><a href="index.html#conferencia">Nossa Conferência</a></li>
+          <li><a href="mural.html">Mural</a></li>
+          <li><a href="oracoes.html">Orações</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="index.html#ajudar">Como Ajudar</a></li>
+          <li><a href="area-vicentino.html" class="active">Área do Vicentino</a></li>
+          <li><a href="manual.html" class="cta">Manual de Direitos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ============= HERO ============= -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:0.6rem;" aria-hidden="true"></i>
+        <span>Área do Vicentino</span>
+      </div>
+      <h1>Área do <em>Vicentino</em></h1>
+      <p>
+        Ferramentas de uso interno da Conferência. O acesso é restrito aos
+        confrades — cada uma pede login próprio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============= FERRAMENTAS ============= -->
+  <section class="area" id="area">
+    <div class="container">
+      <div class="area-head">
+        <div class="ornament"><i class="fa-solid fa-key"></i></div>
+        <h2>Ferramentas da Conferência</h2>
+        <p>
+          Escolha a ferramenta — o login é individual em cada uma, com a conta
+          cadastrada pela Conferência.
+        </p>
+      </div>
+
+      <div class="area-grid">
+        <article class="area-card">
+          <div class="area-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+          <span class="area-badge"><i class="fa-solid fa-lock"></i> Login de confrade</span>
+          <h3>Prontuário de Atendimento</h3>
+          <p>
+            Registro do acompanhamento das famílias visitadas: histórico de
+            visitas, necessidades e providências de cada uma.
+          </p>
+          <a href="prontuario.html" class="area-link">
+            Acessar o Prontuário <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="area-card">
+          <div class="area-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <span class="area-badge"><i class="fa-solid fa-lock"></i> Login de moderador</span>
+          <h3>Painel de Moderação</h3>
+          <p>
+            Aprovação dos pedidos de oração e das divulgações do Mural da
+            Comunidade antes de irem ao ar.
+          </p>
+          <a href="admin.html" class="area-link">
+            Acessar o Painel <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="area-card">
+          <div class="area-icon"><i class="fa-solid fa-book-open"></i></div>
+          <span class="area-badge"><i class="fa-solid fa-lock"></i> Senha da Conferência</span>
+          <h3>Manual de Direitos</h3>
+          <p>
+            Direitos, benefícios e caminhos legais para orientar as famílias
+            visitadas — do BPC/LOAS à Lei Maria da Penha.
+          </p>
+          <a href="manual.html" class="area-link">
+            Acessar o Manual <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+      </div>
+
+      <p class="area-nota">
+        Sem acesso a alguma ferramenta? Fale com a Conferência nas reuniões de
+        sábado ou pelo WhatsApp.
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-emblems">
+        <img src="assets/logo-ssvp.png" alt="SSVP" loading="lazy" decoding="async" class="footer-logo-ssvp">
+        <span class="footer-divider" aria-hidden="true"></span>
+        <img src="assets/brasao-paroquia.jpg" alt="Brasão Paróquia"
+             loading="lazy" decoding="async" class="footer-logo-paroquia">
+      </div>
+      <h3>Conferência Nossa Senhora do Carmo</h3>
+      <p>Sociedade de São Vicente de Paulo · Paróquia Santuário Nossa Senhora do Carmo · Brasília — DF</p>
+      <div class="footer-bottom">
+        <em>“Christum Annuntiare”</em><br>
+        Anunciar Cristo com palavras e obras de caridade.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const navList = document.getElementById('navList');
+    if (toggle) {
+      toggle.addEventListener('click', () => navList.classList.toggle('open'));
+    }
+  </script>
+</body>
+</html>
