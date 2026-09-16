@@ -28,28 +28,6 @@ grant select, insert, update on public.categorias_financeiras to authenticated;
 -- (ativa = false) é o jeito de "remover" uma categoria da UI sem quebrar
 -- histórico.
 
-drop policy if exists "confrade ativo lê categorias_financeiras" on public.categorias_financeiras;
-create policy "confrade ativo lê categorias_financeiras"
-  on public.categorias_financeiras
-  for select
-  to authenticated
-  using (public.is_confrade_ativo());
-
-drop policy if exists "tesoureiro/admin insere categorias_financeiras" on public.categorias_financeiras;
-create policy "tesoureiro/admin insere categorias_financeiras"
-  on public.categorias_financeiras
-  for insert
-  to authenticated
-  with check (public.pode_lancar_financeiro());
-
-drop policy if exists "tesoureiro/admin atualiza categorias_financeiras" on public.categorias_financeiras;
-create policy "tesoureiro/admin atualiza categorias_financeiras"
-  on public.categorias_financeiras
-  for update
-  to authenticated
-  using (public.pode_lancar_financeiro())
-  with check (public.pode_lancar_financeiro());
-
 -- ----------------------------------------------------------------------------
 -- pode_lancar_financeiro() — quem lança/edita dado financeiro.
 --
@@ -78,6 +56,28 @@ comment on function public.pode_lancar_financeiro() is
 
 revoke all on function public.pode_lancar_financeiro() from public, anon;
 grant execute on function public.pode_lancar_financeiro() to authenticated;
+
+drop policy if exists "confrade ativo lê categorias_financeiras" on public.categorias_financeiras;
+create policy "confrade ativo lê categorias_financeiras"
+  on public.categorias_financeiras
+  for select
+  to authenticated
+  using (public.is_confrade_ativo());
+
+drop policy if exists "tesoureiro/admin insere categorias_financeiras" on public.categorias_financeiras;
+create policy "tesoureiro/admin insere categorias_financeiras"
+  on public.categorias_financeiras
+  for insert
+  to authenticated
+  with check (public.pode_lancar_financeiro());
+
+drop policy if exists "tesoureiro/admin atualiza categorias_financeiras" on public.categorias_financeiras;
+create policy "tesoureiro/admin atualiza categorias_financeiras"
+  on public.categorias_financeiras
+  for update
+  to authenticated
+  using (public.pode_lancar_financeiro())
+  with check (public.pode_lancar_financeiro());
 
 -- Seed inicial — editável depois pela UI, sem migration nova.
 insert into public.categorias_financeiras (tipo, nome) values
