@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Relatório Orçamentário · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+  <style>
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+    .stat-card { padding: 20px 22px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    .stat-card .valor { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--wine-deep); line-height: 1.1; }
+    .stat-card .rotulo { display: block; margin-top: 6px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+
+    .grafico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .grafico-card { padding: 22px 24px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    .grafico-card h2 { font-size: 1.15rem; color: var(--wine-deep); margin-bottom: 4px; }
+    .grafico-card .grafico-nota { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 14px; }
+    .grafico-caixa { position: relative; height: 260px; }
+    .grafico-caixa canvas { width: 100% !important; height: 100% !important; }
+
+    @media (max-width: 640px) {
+      .stat-grid, .grafico-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Relatório Orçamentário</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-nome"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section class="login" id="tela-login">
+    <p>Verificando seu acesso…</p>
+  </section>
+
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <p class="aviso" id="aviso-painel" role="status"></p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><span class="valor" id="stat-saldo">—</span><span class="rotulo">Saldo atual</span></div>
+      <div class="stat-card"><span class="valor" id="stat-entradas-12m">—</span><span class="rotulo">Entradas — últimos 12 meses</span></div>
+      <div class="stat-card"><span class="valor" id="stat-saidas-12m">—</span><span class="rotulo">Saídas — últimos 12 meses</span></div>
+    </div>
+
+    <h2 class="secao-titulo" style="font-size:1.4rem;color:var(--wine-deep);margin-bottom:16px;">Movimento ao longo do tempo</h2>
+    <div class="grafico-grid">
+      <div class="grafico-card">
+        <h2>Entradas vs. saídas por mês</h2>
+        <p class="grafico-nota">Últimos 12 meses.</p>
+        <div class="grafico-caixa"><canvas id="grafico-entradas-saidas"></canvas></div>
+      </div>
+      <div class="grafico-card">
+        <h2>Saldo acumulado</h2>
+        <p class="grafico-nota">Saldo no fim de cada um dos últimos 12 meses.</p>
+        <div class="grafico-caixa"><canvas id="grafico-saldo-acumulado"></canvas></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script type="module">
+    import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const topoUsuario = document.getElementById('topo-usuario');
+    const avisoPainel = document.getElementById('aviso-painel');
+
+    function formatarMoeda(valor) {
+      return 'R$ ' + Number(valor || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+    }
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+    }
+
+    document.getElementById('btn-sair').addEventListener('click', sair);
+
+    // -------------------------------------------------------------------------
+    // Sessão — igual às outras ferramentas da Área do Vicentino. Diferente do
+    // Dashboard de Efetividade (Fase 2, só-admin), este relatório é visível a
+    // todo confrade ativo — mesma leitura ampla do extrato em financeiro.html.
+    // -------------------------------------------------------------------------
+    async function verificarSessao() {
+      const acesso = await exigirAcesso();
+      if (!acesso) return;
+
+      document.getElementById('usuario-nome').textContent = acesso.nome;
+      topoUsuario.hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+      await carregarDados();
+    }
+
+    // -------------------------------------------------------------------------
+    // Janela fixa dos últimos 12 meses — mesma aritmética de ano/mês da Fase 2
+    // (não usa Date + toISOString, pra não depender do fuso do navegador).
+    // -------------------------------------------------------------------------
+    function chaveAnoMes(ano, mesBase0) { return ano + '-' + String(mesBase0 + 1).padStart(2, '0'); }
+
+    function chavesDosUltimosMeses() {
+      const agora = new Date();
+      let ano = agora.getFullYear();
+      let mes = agora.getMonth() - 11;
+      while (mes < 0) { mes += 12; ano -= 1; }
+      const chaves = [];
+      for (let i = 0; i < 12; i++) {
+        chaves.push(chaveAnoMes(ano, mes));
+        mes += 1;
+        if (mes > 11) { mes = 0; ano += 1; }
+      }
+      return chaves;
+    }
+
+    function rotuloMes(chave) {
+      const [ano, mes] = chave.split('-').map(Number);
+      return new Date(ano, mes - 1, 1).toLocaleDateString('pt-BR', { month: 'short', year: '2-digit' }).replace('.', '');
+    }
+
+    // Primeiro dia do mês seguinte a uma chave "AAAA-MM", como string ISO —
+    // usado como limite superior exclusivo ao somar lançamentos até o fim do mês.
+    function inicioDoMesSeguinte(chave) {
+      const [ano, mes] = chave.split('-').map(Number);
+      const proximo = mes === 12 ? ano + 1 : ano;
+      const mesProximo = mes === 12 ? 1 : mes + 1;
+      return proximo + '-' + String(mesProximo).padStart(2, '0') + '-01';
+    }
+
+    async function carregarDados() {
+      const chaves = chavesDosUltimosMeses();
+      const desde12m = chaves[0] + '-01';
+
+      const [{ data: saldo, error: erroSaldo }, { data: todos, error: erroLancamentos }] = await Promise.all([
+        sb.from('vw_saldo_financeiro').select('*').maybeSingle(),
+        sb.from('lancamentos_financeiros').select('tipo, valor, data_movimento').is('removido_em', null),
+      ]);
+
+      const erro = erroSaldo || erroLancamentos;
+      if (erro) { mostrarAviso(avisoPainel, 'Erro ao carregar dados: ' + erro.message, 'erro'); return; }
+
+      const lancamentos = todos || [];
+      const lancamentos12m = lancamentos.filter(l => l.data_movimento >= desde12m);
+      const entradas12m = lancamentos12m.filter(l => l.tipo === 'entrada').reduce((s, l) => s + Number(l.valor), 0);
+      const saidas12m = lancamentos12m.filter(l => l.tipo === 'saida').reduce((s, l) => s + Number(l.valor), 0);
+
+      document.getElementById('stat-saldo').textContent = formatarMoeda(saldo?.saldo_atual);
+      document.getElementById('stat-entradas-12m').textContent = formatarMoeda(entradas12m);
+      document.getElementById('stat-saidas-12m').textContent = formatarMoeda(saidas12m);
+
+      renderizarEntradasSaidasPorMes(lancamentos12m, chaves);
+      renderizarSaldoAcumulado(lancamentos, chaves, Number(saldo?.saldo_inicial || 0), saldo?.data_referencia_inicial || '1900-01-01');
+    }
+
+    let graficoEntradasSaidas, graficoSaldoAcumulado;
+
+    function renderizarEntradasSaidasPorMes(lancamentos12m, chaves) {
+      const entradas = chaves.map(c => lancamentos12m
+        .filter(l => l.tipo === 'entrada' && String(l.data_movimento).slice(0, 7) === c)
+        .reduce((s, l) => s + Number(l.valor), 0));
+      const saidas = chaves.map(c => lancamentos12m
+        .filter(l => l.tipo === 'saida' && String(l.data_movimento).slice(0, 7) === c)
+        .reduce((s, l) => s + Number(l.valor), 0));
+
+      graficoEntradasSaidas?.destroy();
+      graficoEntradasSaidas = new Chart(document.getElementById('grafico-entradas-saidas'), {
+        type: 'bar',
+        data: {
+          labels: chaves.map(rotuloMes),
+          datasets: [
+            { label: 'Entradas', data: entradas, backgroundColor: '#2E6B4F' },
+            { label: 'Saídas', data: saidas, backgroundColor: '#9B2C22' },
+          ],
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: { y: { beginAtZero: true, ticks: { callback: v => 'R$ ' + v } } },
+          plugins: { legend: { position: 'bottom' } },
+        },
+      });
+    }
+
+    function renderizarSaldoAcumulado(todosLancamentos, chaves, saldoInicial, dataReferenciaInicial) {
+      const validos = todosLancamentos
+        .filter(l => l.data_movimento >= dataReferenciaInicial)
+        .sort((a, b) => a.data_movimento.localeCompare(b.data_movimento));
+
+      const saldos = chaves.map(chave => {
+        const limite = inicioDoMesSeguinte(chave);
+        const dentro = validos.filter(l => l.data_movimento < limite);
+        const total = dentro.reduce((s, l) => s + (l.tipo === 'entrada' ? Number(l.valor) : -Number(l.valor)), 0);
+        return saldoInicial + total;
+      });
+
+      graficoSaldoAcumulado?.destroy();
+      graficoSaldoAcumulado = new Chart(document.getElementById('grafico-saldo-acumulado'), {
+        type: 'line',
+        data: {
+          labels: chaves.map(rotuloMes),
+          datasets: [{ label: 'Saldo (R$)', data: saldos, borderColor: '#C9A567', backgroundColor: 'rgba(201,165,103,0.18)', fill: true, tension: 0.25 }],
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: { y: { ticks: { callback: v => 'R$ ' + v } } },
+          plugins: { legend: { display: false } },
+        },
+      });
+    }
+
+    verificarSessao();
+  </script>
+</body>
+</html>
