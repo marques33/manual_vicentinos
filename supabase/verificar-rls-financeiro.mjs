@@ -57,16 +57,21 @@ function relatar(ok, titulo, detalhe = "") {
   else { falhou++; console.log(`  FALHA ${titulo}${detalhe ? "\n        " + detalhe : ""}`); }
 }
 
-async function chamar(caminho, { token = ANON, metodo = "GET", corpo, extra = {}, base = REST } = {}) {
+// `corpoBruto`, quando presente, vai no corpo exatamente como está — sem
+// JSON.stringify e sem forçar content-type: application/json — porque um
+// upload de Storage é um arquivo, não um registro JSON. `corpo` continua
+// servindo as chamadas de tabela (PostgREST), como antes.
+async function chamar(caminho, { token = ANON, metodo = "GET", corpo, corpoBruto, extra = {}, base = REST } = {}) {
+  const temCorpoJson = corpo !== undefined;
   const r = await fetch(`${base}${caminho}`, {
     method: metodo,
     headers: {
       apikey: ANON,
       Authorization: `Bearer ${token}`,
-      ...(corpo ? { "content-type": "application/json" } : {}),
+      ...(temCorpoJson ? { "content-type": "application/json" } : {}),
       ...extra,
     },
-    body: corpo ? JSON.stringify(corpo) : undefined,
+    body: corpoBruto !== undefined ? corpoBruto : (temCorpoJson ? JSON.stringify(corpo) : undefined),
   });
   let dados = null;
   const texto = await r.text();
@@ -88,8 +93,17 @@ const negado = (r) => r.status === 401 || r.status === 403 || r.status === 404 |
 
 const TABELAS = ["categorias_financeiras", "lancamentos_financeiros",
   "saldo_inicial_financeiro", "conciliacoes_financeiras"];
-const idFalso = "00000000-0000-0000-0000-000000000000";
+
+// CAMINHO_TESTE é a "fixture": precisa EXISTIR de verdade antes das seções 2
+// e 4, porque os dois testam "leitura negada" — um GET num objeto que não
+// existe também devolve 4xx, o que faria o teste passar mesmo sem RLS
+// nenhuma. Por isso é criado na preparação (seção 0), abaixo, e só apagado
+// no final do script. CAMINHO_TESTE_LANCAMENTO é outro objeto, exclusivo do
+// ciclo próprio de upload/leitura/apagar da seção 5 — mantê-los separados
+// evita que o "upload" do tesoureiro colida (409) com o arquivo que a
+// preparação já deixou lá.
 const CAMINHO_TESTE = "verificacao/arquivo-de-teste.pdf";
+const CAMINHO_TESTE_LANCAMENTO = "verificacao/arquivo-de-teste-secao5.pdf";
 const CONTEUDO_TESTE = "arquivo descartável de verificar-rls-financeiro.mjs";
 
 // ---------------------------------------------------------------------------
@@ -103,6 +117,66 @@ if (testeChave.status === 401 && /invalid/i.test(JSON.stringify(testeChave.dados
 }
 
 // ---------------------------------------------------------------------------
+// 0. Preparação — dados reais para os testes que, sem isso, "passariam" pelo
+// motivo errado (ver 3a/3b da revisão): um arquivo de verdade no bucket para
+// as checagens de leitura negada, e uma categoria + um usuário válidos para
+// os corpos de INSERT negado não esbarrarem em NOT NULL antes da RLS.
+// ---------------------------------------------------------------------------
+console.log("\n=== 0. preparação: comprovante real para as seções 2/4 e dados válidos para os INSERTs negados ===");
+
+let categoriaFixture = null;
+let usuarioFixture = null;
+let arquivoFixtureExiste = false;
+
+if (TESOUREIRO_EMAIL && TESOUREIRO_SENHA) {
+  const sessaoPreparo = await login(TESOUREIRO_EMAIL, TESOUREIRO_SENHA);
+  if (!sessaoPreparo.access_token) {
+    console.log(`  AVISO: login do tesoureiro falhou na preparação (${JSON.stringify(sessaoPreparo).slice(0, 160)}) — seções 2/4 testam leitura contra um arquivo inexistente, e os INSERTs negados ficam sem categoria/usuário válidos.`);
+  } else {
+    const jwtPreparo = sessaoPreparo.access_token;
+    usuarioFixture = sessaoPreparo.user.id;
+
+    const categoria = await chamar("/categorias_financeiras?select=id&tipo=eq.entrada&ativa=eq.true&limit=1", { token: jwtPreparo });
+    categoriaFixture = categoria.dados?.[0]?.id ?? null;
+    relatar(!!categoriaFixture, "preparação: existe categoria de entrada ativa para os corpos de teste",
+      JSON.stringify(categoria.dados).slice(0, 160));
+
+    const upload = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
+      base: STORAGE, token: jwtPreparo, metodo: "POST",
+      extra: { "content-type": "application/pdf" }, corpoBruto: CONTEUDO_TESTE,
+    });
+    arquivoFixtureExiste = upload.status === 200 || upload.status === 201;
+    relatar(arquivoFixtureExiste, "preparação: comprovante de teste enviado (existe para as seções 2 e 4 mirarem)",
+      `status ${upload.status}: ${JSON.stringify(upload.dados).slice(0, 160)}`);
+  }
+} else {
+  console.log("  (sem TESOUREIRO_EMAIL/TESOUREIRO_SENHA) — seções 2/4 testam leitura contra um arquivo inexistente (não prova a RLS de SELECT do bucket), e os INSERTs negados ficam sem categoria/usuário válidos.");
+}
+
+// Corpo mínimo, mas com os campos NOT NULL preenchidos, para cada tabela —
+// assim um 4xx no INSERT negado só pode ser a RLS, nunca uma coluna faltando.
+function corpoInsercaoValida(tabela) {
+  switch (tabela) {
+    case "categorias_financeiras":
+      return { tipo: "entrada", nome: "Teste RLS negativo " + Date.now() };
+    case "lancamentos_financeiros":
+      return {
+        tipo: "entrada", valor: 1.23, data_movimento: "2026-01-01",
+        categoria_id: categoriaFixture, criado_por: usuarioFixture,
+      };
+    case "saldo_inicial_financeiro":
+      return { valor: 100, data_referencia: "2026-01-01", observacoes: "Teste RLS negativo" };
+    case "conciliacoes_financeiras":
+      return {
+        data_referencia: "2026-01-01", saldo_extrato: 100, saldo_sistema: 100,
+        conciliado_por: usuarioFixture,
+      };
+    default:
+      return {};
+  }
+}
+
+// ---------------------------------------------------------------------------
 console.log("\n=== 1. anon: nenhuma leitura/escrita em nenhuma tabela do financeiro ===");
 
 for (const tabela of TABELAS) {
@@ -111,7 +185,7 @@ for (const tabela of TABELAS) {
   relatar(!vazou && negado(leitura), `anon NÃO lê ${tabela}`,
     `status ${leitura.status}: ${JSON.stringify(leitura.dados).slice(0, 160)}`);
 
-  const insert = await chamar(`/${tabela}`, { metodo: "POST", corpo: {} });
+  const insert = await chamar(`/${tabela}`, { metodo: "POST", corpo: corpoInsercaoValida(tabela) });
   relatar(negado(insert), `anon NÃO consegue INSERT em ${tabela}`,
     `status ${insert.status}: ${JSON.stringify(insert.dados).slice(0, 160)}`);
 }
@@ -128,7 +202,7 @@ relatar(negado(rpcAnon), "anon NÃO executa pode_lancar_financeiro",
 console.log("\n=== 2. anon: nenhum acesso ao bucket de comprovantes ===");
 
 const uploadAnon = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
-  base: STORAGE, metodo: "POST", extra: { "content-type": "text/plain" }, corpo: null,
+  base: STORAGE, metodo: "POST", extra: { "content-type": "application/pdf" }, corpoBruto: CONTEUDO_TESTE,
 });
 relatar(negado(uploadAnon), "anon NÃO consegue enviar arquivo ao bucket",
   `status ${uploadAnon.status}: ${JSON.stringify(uploadAnon.dados).slice(0, 160)}`);
@@ -185,7 +259,7 @@ if (CONFRADE_EMAIL && CONFRADE_SENHA) {
       relatar(leitura.status === 200, `confrade comum LÊ ${tabela}`,
         `status ${leitura.status}: ${JSON.stringify(leitura.dados).slice(0, 160)}`);
 
-      const insert = await chamar(`/${tabela}`, { token: jwt, metodo: "POST", corpo: {} });
+      const insert = await chamar(`/${tabela}`, { token: jwt, metodo: "POST", corpo: corpoInsercaoValida(tabela) });
       relatar(negado(insert), `confrade comum NÃO consegue INSERT em ${tabela}`,
         `status ${insert.status}: ${JSON.stringify(insert.dados).slice(0, 160)}`);
     }
@@ -252,29 +326,46 @@ if (TESOUREIRO_EMAIL && TESOUREIRO_SENHA) {
       }
     }
 
-    const upload = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
+    const upload = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE_LANCAMENTO}`, {
       base: STORAGE, token: jwt, metodo: "POST",
-      extra: { "content-type": "application/pdf" },
+      extra: { "content-type": "application/pdf" }, corpoBruto: CONTEUDO_TESTE,
     });
-    // upload via fetch simples de texto puro (sem multipart) — o endpoint
-    // aceita o corpo bruto quando content-type não é multipart/form-data.
     relatar(upload.status === 200 || upload.status === 201,
       "tesoureiro consegue enviar arquivo ao bucket",
       `status ${upload.status}: ${JSON.stringify(upload.dados).slice(0, 160)}`);
 
-    const leituraOk = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, { token: jwt, base: STORAGE });
+    const leituraOk = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE_LANCAMENTO}`, { token: jwt, base: STORAGE });
     relatar(leituraOk.status === 200, "tesoureiro consegue ler o arquivo que enviou",
       `status ${leituraOk.status}`);
 
-    const apagar = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
+    const apagar = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE_LANCAMENTO}`, {
       token: jwt, metodo: "DELETE", base: STORAGE,
     });
-    relatar(apagar.status === 200, "limpeza: arquivo de teste apagado do bucket",
+    relatar(apagar.status === 200, "limpeza: arquivo de teste da seção 5 apagado do bucket",
       `status ${apagar.status}`);
   }
 } else {
   console.log("\n=== 5. (pulado) — defina TESOUREIRO_EMAIL/TESOUREIRO_SENHA (papel 'tesoureiro' ou 'administrador') ===");
   console.log("  Sem esse par, 'tudo negado' não distingue 'protegido' de 'tudo quebrado'.");
+}
+
+// ---------------------------------------------------------------------------
+// Limpeza final — o arquivo criado na preparação (seção 0) só é apagado
+// aqui, depois de todas as outras seções já terem lido/tentado ler contra
+// ele. Login próprio (não reaproveita o da seção 5) para manter cada bloco
+// independente de ordem de execução.
+// ---------------------------------------------------------------------------
+if (arquivoFixtureExiste && TESOUREIRO_EMAIL && TESOUREIRO_SENHA) {
+  const sessaoLimpeza = await login(TESOUREIRO_EMAIL, TESOUREIRO_SENHA);
+  if (sessaoLimpeza.access_token) {
+    const apagarFixture = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
+      token: sessaoLimpeza.access_token, metodo: "DELETE", base: STORAGE,
+    });
+    relatar(apagarFixture.status === 200, "limpeza: comprovante de teste da preparação (seção 0) apagado do bucket",
+      `status ${apagarFixture.status}`);
+  } else {
+    console.log("  AVISO: não foi possível autenticar para apagar o comprovante de teste da preparação — remover manualmente 'verificacao/arquivo-de-teste.pdf' do bucket comprovantes-financeiros.");
+  }
 }
 
 // ---------------------------------------------------------------------------
