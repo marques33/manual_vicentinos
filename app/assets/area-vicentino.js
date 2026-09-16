@@ -47,6 +47,8 @@ const DESTINOS = new Set([
   'prontuario-familia.html',
   'admin.html',
   'prontuario-dashboard.html',
+  'financeiro.html',
+  'financeiro-relatorio.html',
 ]);
 
 const QUERY_ACEITA = /^\?id=[0-9a-f-]{1,40}$/i;

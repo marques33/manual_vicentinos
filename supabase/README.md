@@ -40,6 +40,11 @@ sem leitura pública alguma. Acesso exige `authenticated` + estar em
    | `20260915120300_prontuario_necessidades_intervencoes.sql` | `public.necessidades`, `public.intervencoes` |
    | `20260915120400_prontuario_parentescos_cruzados.sql` | `public.parentescos_cruzados` (vínculo entre famílias) |
    | `20260915120500_parametros_beneficios.sql` | `public.parametros_beneficios`, `calcular_elegibilidade_pessoa()` |
+   | `20260916150000_financeiro_categorias.sql` | `public.categorias_financeiras`, `pode_lancar_financeiro()` |
+   | `20260916150100_financeiro_lancamentos.sql` | `public.lancamentos_financeiros` + RLS + soft delete |
+   | `20260916150200_financeiro_saldo_inicial.sql` | `public.saldo_inicial_financeiro` (linha única) |
+   | `20260916150300_financeiro_conciliacoes.sql` | `public.conciliacoes_financeiras`, `vw_saldo_financeiro` |
+   | `20260916150400_financeiro_storage.sql` | bucket privado `comprovantes-financeiros` + policies |
 
    Ou, com a CLI: `npx supabase db push`.
 
@@ -128,3 +133,40 @@ values (1518.00, 'Decreto XX.XXX/2027', 280.00);
 A função `calcular_elegibilidade_pessoa()` é uma **estimativa de triagem**
 para orientar o vicentino — não é decisão automática de benefício. A UI já
 deixa isso explícito ao lado de cada selo de elegibilidade.
+
+## Controle Orçamentário
+
+`app/financeiro.html` (saldo, extrato, lançamento, categorias, conciliação) e
+`app/financeiro-relatorio.html` (gráficos). Leitura para qualquer confrade
+ativo (`is_confrade_ativo()`); lançar/editar exige `pode_lancar_financeiro()`
+— confrade ativo com `confrades.papel in ('tesoureiro','administrador')`.
+
+**Cadastrar um tesoureiro** — mesma tela de sempre (Authentication → Users →
+*Add user*), depois:
+
+```sql
+insert into public.confrades (user_id, nome_completo, papel)
+select id, 'Nome do tesoureiro', 'tesoureiro' from auth.users where email = 'tesoureiro@exemplo.com';
+```
+
+Ou, para quem já está em `confrades` com outro papel:
+
+```sql
+update public.confrades set papel = 'tesoureiro' where user_id = (select id from auth.users where email = 'tesoureiro@exemplo.com');
+```
+
+**Ajustar o saldo inicial da conta BRB** (só deve mudar se o ponto de
+partida do controle estiver errado — não é para lançamentos do dia a dia,
+que entram por `lancamentos_financeiros`):
+
+```sql
+insert into public.saldo_inicial_financeiro (id, valor, data_referencia, observacoes)
+values (true, 1000.00, '2026-09-16', 'Ajuste do saldo inicial.')
+on conflict (id) do update set
+  valor = excluded.valor, data_referencia = excluded.data_referencia,
+  observacoes = excluded.observacoes, atualizado_em = now();
+```
+
+Conferir com `node supabase/verificar-rls-financeiro.mjs` (instruções no topo
+do arquivo) — precisa de um confrade de teste com papel `tesoureiro` (ou
+`administrador`) e outro com papel comum, para provar os dois lados do RBAC.
