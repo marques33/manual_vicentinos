@@ -104,6 +104,11 @@ const TABELAS = ["categorias_financeiras", "lancamentos_financeiros",
 // preparação já deixou lá.
 const CAMINHO_TESTE = "verificacao/arquivo-de-teste.pdf";
 const CAMINHO_TESTE_LANCAMENTO = "verificacao/arquivo-de-teste-secao5.pdf";
+// Caminho próprio para a tentativa de upload do anon (seção 2) — se anon
+// mirasse em CAMINHO_TESTE (já existente pela preparação), um upload sem
+// upsert bateria em 409 "já existe" e passaria mesmo sem RLS nenhuma, o
+// mesmo defeito que a preparação existe para evitar nas checagens de leitura.
+const CAMINHO_TESTE_ANON = "verificacao/arquivo-de-teste-anon.pdf";
 const CONTEUDO_TESTE = "arquivo descartável de verificar-rls-financeiro.mjs";
 
 // ---------------------------------------------------------------------------
@@ -143,7 +148,11 @@ if (TESOUREIRO_EMAIL && TESOUREIRO_SENHA) {
 
     const upload = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
       base: STORAGE, token: jwtPreparo, metodo: "POST",
-      extra: { "content-type": "application/pdf" }, corpoBruto: CONTEUDO_TESTE,
+      // x-upsert: uma rodada anterior que morreu entre a preparação e a
+      // limpeza final deixaria este objeto para trás; sem upsert, a próxima
+      // rodada bateria em 409 aqui, arquivoFixtureExiste ficaria false, e as
+      // seções 2/4 voltariam silenciosamente a testar contra "não existe".
+      extra: { "content-type": "application/pdf", "x-upsert": "true" }, corpoBruto: CONTEUDO_TESTE,
     });
     arquivoFixtureExiste = upload.status === 200 || upload.status === 201;
     relatar(arquivoFixtureExiste, "preparação: comprovante de teste enviado (existe para as seções 2 e 4 mirarem)",
@@ -201,7 +210,7 @@ relatar(negado(rpcAnon), "anon NÃO executa pode_lancar_financeiro",
 
 console.log("\n=== 2. anon: nenhum acesso ao bucket de comprovantes ===");
 
-const uploadAnon = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
+const uploadAnon = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE_ANON}`, {
   base: STORAGE, metodo: "POST", extra: { "content-type": "application/pdf" }, corpoBruto: CONTEUDO_TESTE,
 });
 relatar(negado(uploadAnon), "anon NÃO consegue enviar arquivo ao bucket",
