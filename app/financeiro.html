@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Controle Orçamentário · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+  <style>
+    /* ===== Extras só desta página — saldo em destaque e tabela do extrato. ===== */
+    .saldo-card { padding: 24px 26px; margin-bottom: 24px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-wrap: wrap; gap: 28px; align-items: baseline; }
+    .saldo-valor { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: var(--wine-deep); }
+    .saldo-nota { font-size: 0.8rem; color: var(--text-muted); }
+    .saldo-mini { display: flex; gap: 22px; flex-wrap: wrap; }
+    .saldo-mini span { display: block; font-size: 0.78rem; color: var(--text-muted); }
+    .saldo-mini strong { display: block; font-size: 1.1rem; }
+    .valor-entrada { color: var(--ok); font-weight: 700; }
+    .valor-saida { color: var(--erro); font-weight: 700; }
+    .extrato-tabela { width: 100%; }
+    .col-comprovante { text-align: center; width: 40px; }
+    @media (max-width: 640px) { .saldo-card { flex-direction: column; gap: 12px; } }
+  </style>
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Controle Orçamentário</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-nome"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= ACESSO ============= -->
+  <section class="login" id="tela-login">
+    <p>Verificando seu acesso…</p>
+  </section>
+
+  <!-- ============= PAINEL ============= -->
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <p class="aviso" id="aviso-painel" role="status"></p>
+
+    <div class="saldo-card">
+      <div>
+        <span class="saldo-nota">Saldo atual</span>
+        <span class="saldo-valor" id="saldo-valor">—</span>
+      </div>
+      <div class="saldo-mini">
+        <div><span>Entradas (desde o saldo inicial)</span><strong class="valor-entrada" id="saldo-entradas">—</strong></div>
+        <div><span>Saídas (desde o saldo inicial)</span><strong class="valor-saida" id="saldo-saidas">—</strong></div>
+        <div><span>Saldo inicial</span><strong id="saldo-inicial-valor">—</strong></div>
+      </div>
+    </div>
+
+    <!-- ---------- Novo lançamento (só tesoureiro/admin) ---------- -->
+    <div class="editor" id="editor-lancamento" hidden>
+      <h2>Novo lançamento</h2>
+      <form id="form-lancamento">
+        <input type="hidden" id="lf-id">
+        <div class="grade-2">
+          <div class="campo">
+            <label for="lf-tipo">Tipo *</label>
+            <select id="lf-tipo" required>
+              <option value="entrada">Entrada</option>
+              <option value="saida">Saída</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="lf-valor">Valor (R$) *</label>
+            <input type="number" id="lf-valor" min="0.01" step="0.01" required>
+          </div>
+        </div>
+        <div class="grade-2">
+          <div class="campo">
+            <label for="lf-data">Data *</label>
+            <input type="date" id="lf-data" required>
+          </div>
+          <div class="campo">
+            <label for="lf-categoria">Categoria *</label>
+            <select id="lf-categoria" required></select>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="lf-descricao">Descrição</label>
+          <textarea id="lf-descricao" maxlength="500"></textarea>
+        </div>
+        <div class="campo">
+          <label for="lf-comprovante">Comprovante (imagem ou PDF, até 5 MB)</label>
+          <input type="file" id="lf-comprovante" accept="image/jpeg,image/png,application/pdf">
+          <span class="dica" id="lf-comprovante-atual"></span>
+        </div>
+
+        <div class="campo" id="bloco-vinculo" hidden>
+          <label>Vincular a uma intervenção do Prontuário (opcional)</label>
+          <span class="dica">Só para saídas que já são uma ajuda registrada no Prontuário — evita lançar o mesmo valor duas vezes.</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+            <input type="text" id="lf-busca-familia" placeholder="Bairro ou código da família" minlength="3" style="flex:1;min-width:200px;">
+            <button type="button" class="btn btn-neutro btn-pequeno" id="btn-buscar-familia"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+          </div>
+          <div id="resultado-busca-familia" style="margin-top:10px;"></div>
+          <div id="vinculo-atual" style="margin-top:10px;" hidden>
+            <span class="badge badge--elegivel" id="vinculo-atual-texto"></span>
+            <button type="button" class="btn btn-neutro btn-pequeno" id="btn-remover-vinculo">Remover vínculo</button>
+          </div>
+          <input type="hidden" id="lf-intervencao-id">
+        </div>
+
+        <button type="submit" class="btn btn-ouro" id="btn-salvar-lancamento">
+          <i class="fa-solid fa-plus" aria-hidden="true"></i> Adicionar lançamento
+        </button>
+        <button type="button" class="btn btn-neutro" id="btn-cancelar-lancamento" hidden>Cancelar edição</button>
+        <p class="aviso" id="aviso-lancamento" role="status"></p>
+      </form>
+    </div>
+
+    <!-- ---------- Extrato (todo confrade ativo vê) ---------- -->
+    <h2 class="secao-titulo" style="font-size:1.4rem;color:var(--wine-deep);margin-bottom:16px;">Extrato</h2>
+    <div class="barra">
+      <div class="filtros" id="filtros-tipo">
+        <button class="filtro ativo" data-tipo="todas">Todas</button>
+        <button class="filtro" data-tipo="entrada">Entradas</button>
+        <button class="filtro" data-tipo="saida">Saídas</button>
+      </div>
+      <div class="campo" style="flex:1;min-width:220px;margin-bottom:0;">
+        <label for="busca-extrato">Buscar</label>
+        <input type="text" id="busca-extrato" placeholder="Categoria ou descrição">
+      </div>
+    </div>
+    <table class="subtabela extrato-tabela">
+      <thead>
+        <tr><th>Data</th><th>Categoria</th><th>Descrição</th><th>Valor</th><th class="col-comprovante">Comp.</th><th class="col-acao">Ações</th></tr>
+      </thead>
+      <tbody id="lista-extrato"></tbody>
+    </table>
+    <div class="vazio" id="extrato-vazio" hidden><i class="fa-regular fa-folder-open"></i><p>Nenhum lançamento encontrado.</p></div>
+
+    <!-- ---------- Categorias (só tesoureiro/admin) ---------- -->
+    <div class="editor" id="editor-categorias" hidden>
+      <h2>Categorias</h2>
+      <form id="form-categoria">
+        <div class="grade-2">
+          <div class="campo">
+            <label for="cat-tipo">Tipo *</label>
+            <select id="cat-tipo" required>
+              <option value="entrada">Entrada</option>
+              <option value="saida">Saída</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="cat-nome">Nome *</label>
+            <input type="text" id="cat-nome" maxlength="80" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-ouro btn-pequeno"><i class="fa-solid fa-plus" aria-hidden="true"></i> Adicionar categoria</button>
+        <p class="aviso" id="aviso-categoria" role="status"></p>
+      </form>
+      <table class="subtabela" style="margin-top:16px;">
+        <thead><tr><th>Tipo</th><th>Nome</th><th class="col-acao">Ativa</th></tr></thead>
+        <tbody id="lista-categorias"></tbody>
+      </table>
+    </div>
+
+    <!-- ---------- Conciliação (só tesoureiro/admin) ---------- -->
+    <div class="editor" id="editor-conciliacao" hidden>
+      <h2>Conciliação com o extrato do BRB</h2>
+      <form id="form-conciliacao">
+        <div class="grade-2">
+          <div class="campo">
+            <label for="cc-data">Data do extrato *</label>
+            <input type="date" id="cc-data" required>
+          </div>
+          <div class="campo">
+            <label for="cc-saldo">Saldo no extrato do BRB (R$) *</label>
+            <input type="number" id="cc-saldo" step="0.01" required>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="cc-observacoes">Observações</label>
+          <textarea id="cc-observacoes" maxlength="500"></textarea>
+        </div>
+        <button type="submit" class="btn btn-ouro btn-pequeno"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Registrar conciliação</button>
+        <p class="aviso" id="aviso-conciliacao" role="status"></p>
+      </form>
+      <table class="subtabela" style="margin-top:16px;">
+        <thead><tr><th>Data</th><th>Extrato</th><th>Sistema</th><th>Diferença</th><th>Observações</th></tr></thead>
+        <tbody id="lista-conciliacoes"></tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <script type="module">
+    import { escapar } from './assets/supabase-client.js';
+    import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const topoUsuario = document.getElementById('topo-usuario');
+    const avisoPainel = document.getElementById('aviso-painel');
+
+    let usuario = null;
+    let souLancador = false;
+    let categoriasCache = [];
+    let lancamentosCache = [];
+    let filtroTipo = 'todas';
+
+    function formatarMoeda(valor) {
+      return 'R$ ' + Number(valor || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+    }
+
+    // Mesmo cuidado de formatarData() em supabase-client.js: uma data pura do
+    // Postgres é meia-noite UTC, que em Brasília é o dia anterior. Ancora ao
+    // meio-dia antes de formatar, versão curta pra caber na tabela.
+    function formatarDataCurta(iso) {
+      if (!iso) return '';
+      const texto = /^\d{4}-\d{2}-\d{2}$/.test(iso) ? `${iso}T12:00:00` : iso;
+      const d = new Date(texto);
+      if (Number.isNaN(d.getTime())) return '';
+      return d.toLocaleDateString('pt-BR');
+    }
+
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+      if (tipo === 'ok') setTimeout(() => { el.className = 'aviso'; }, 4000);
+    }
+
+    document.getElementById('btn-sair').addEventListener('click', sair);
+
+    // -------------------------------------------------------------------------
+    // Sessão
+    // -------------------------------------------------------------------------
+    async function verificarSessao() {
+      const acesso = await exigirAcesso();
+      if (!acesso) return;
+      usuario = acesso.session.user;
+
+      document.getElementById('usuario-nome').textContent = acesso.nome;
+      topoUsuario.hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+
+      const { data } = await sb.rpc('pode_lancar_financeiro');
+      souLancador = !!data;
+      document.getElementById('editor-lancamento').hidden = !souLancador;
+      document.getElementById('editor-categorias').hidden = !souLancador;
+      document.getElementById('editor-conciliacao').hidden = !souLancador;
+
+      document.getElementById('lf-data').valueAsDate = new Date();
+      document.getElementById('cc-data').valueAsDate = new Date();
+
+      await carregarCategorias();
+      await carregarSaldoEExtrato();
+      if (souLancador) await carregarConciliacoes();
+    }
+
+    // -------------------------------------------------------------------------
+    // Saldo + extrato
+    // -------------------------------------------------------------------------
+    async function carregarSaldoEExtrato() {
+      const [{ data: saldo, error: erroSaldo }, { data: lancamentos, error: erroLancamentos }] = await Promise.all([
+        sb.from('vw_saldo_financeiro').select('*').maybeSingle(),
+        sb.from('lancamentos_financeiros').select('*').is('removido_em', null)
+          .order('data_movimento', { ascending: false }).limit(500),
+      ]);
+
+      const erro = erroSaldo || erroLancamentos;
+      if (erro) { mostrarAviso(avisoPainel, 'Erro ao carregar dados: ' + erro.message, 'erro'); return; }
+
+      document.getElementById('saldo-valor').textContent = formatarMoeda(saldo?.saldo_atual);
+      document.getElementById('saldo-entradas').textContent = formatarMoeda(saldo?.total_entradas);
+      document.getElementById('saldo-saidas').textContent = formatarMoeda(saldo?.total_saidas);
+      document.getElementById('saldo-inicial-valor').textContent = formatarMoeda(saldo?.saldo_inicial);
+
+      lancamentosCache = lancamentos || [];
+      renderizarExtrato();
+    }
+
+    document.querySelectorAll('#filtros-tipo .filtro').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('#filtros-tipo .filtro').forEach(o => o.classList.toggle('ativo', o === b));
+        filtroTipo = b.dataset.tipo;
+        renderizarExtrato();
+      });
+    });
+    document.getElementById('busca-extrato').addEventListener('input', renderizarExtrato);
+
+    function renderizarExtrato() {
+      const corpo = document.getElementById('lista-extrato');
+      const vazio = document.getElementById('extrato-vazio');
+      const termo = document.getElementById('busca-extrato').value.trim().toLowerCase();
+      const mapaCategorias = new Map(categoriasCache.map(c => [c.id, c]));
+
+      let filtrados = lancamentosCache;
+      if (filtroTipo !== 'todas') filtrados = filtrados.filter(l => l.tipo === filtroTipo);
+      if (termo) {
+        filtrados = filtrados.filter(l =>
+          (mapaCategorias.get(l.categoria_id)?.nome || '').toLowerCase().includes(termo) ||
+          (l.descricao || '').toLowerCase().includes(termo));
+      }
+
+      if (!filtrados.length) {
+        corpo.innerHTML = '';
+        vazio.hidden = false;
+        return;
+      }
+      vazio.hidden = true;
+
+      corpo.innerHTML = filtrados.map(l => {
+        const categoria = mapaCategorias.get(l.categoria_id);
+        const classeValor = l.tipo === 'entrada' ? 'valor-entrada' : 'valor-saida';
+        const sinal = l.tipo === 'entrada' ? '+ ' : '− ';
+        const acoes = souLancador
+          ? '<button type="button" class="btn btn-neutro btn-pequeno" data-acao="editar-lancamento" data-id="' + l.id + '"><i class="fa-solid fa-pen"></i></button> ' +
+            '<button type="button" class="btn btn-erro btn-pequeno" data-acao="remover-lancamento" data-id="' + l.id + '"><i class="fa-regular fa-trash-can"></i></button>'
+          : '';
+        const comprovante = l.comprovante_path && souLancador
+          ? '<button type="button" class="btn btn-neutro btn-pequeno" data-acao="ver-comprovante" data-path="' + escapar(l.comprovante_path) + '"><i class="fa-regular fa-file"></i></button>'
+          : (l.comprovante_path ? '<i class="fa-regular fa-file" title="Há comprovante anexado" aria-hidden="true"></i>' : '');
+
+        return '<tr>' +
+          '<td>' + formatarDataCurta(l.data_movimento) + '</td>' +
+          '<td>' + escapar(categoria?.nome || '—') + '</td>' +
+          '<td>' + escapar(l.descricao || '') + '</td>' +
+          '<td class="' + classeValor + '">' + sinal + formatarMoeda(l.valor) + '</td>' +
+          '<td class="col-comprovante">' + comprovante + '</td>' +
+          '<td class="col-acao">' + acoes + '</td>' +
+        '</tr>';
+      }).join('');
+    }
+
+    // -------------------------------------------------------------------------
+    // Categorias
+    // -------------------------------------------------------------------------
+    async function carregarCategorias() {
+      const { data, error } = await sb.from('categorias_financeiras').select('*').order('tipo').order('nome');
+      if (error) { mostrarAviso(avisoPainel, 'Erro ao carregar categorias: ' + error.message, 'erro'); return; }
+      categoriasCache = data || [];
+      preencherSelectCategorias();
+      if (souLancador) renderizarListaCategorias();
+    }
+
+    function preencherSelectCategorias() {
+      const select = document.getElementById('lf-categoria');
+      const tipoAtual = document.getElementById('lf-tipo').value;
+      const idAtual = select.value;
+      const opcoes = categoriasCache.filter(c => c.tipo === tipoAtual && (c.ativa || c.id === idAtual));
+      select.innerHTML = opcoes.map(c => '<option value="' + c.id + '">' + escapar(c.nome) + '</option>').join('');
+    }
+
+    document.getElementById('lf-tipo').addEventListener('change', () => {
+      preencherSelectCategorias();
+      document.getElementById('bloco-vinculo').hidden = document.getElementById('lf-tipo').value !== 'saida';
+    });
+
+    function renderizarListaCategorias() {
+      document.getElementById('lista-categorias').innerHTML = categoriasCache.map(c =>
+        '<tr><td>' + (c.tipo === 'entrada' ? 'Entrada' : 'Saída') + '</td><td>' + escapar(c.nome) + '</td>' +
+        '<td class="col-acao"><input type="checkbox" data-acao="alternar-categoria" data-id="' + c.id + '" ' + (c.ativa ? 'checked' : '') + '></td></tr>'
+      ).join('');
+    }
+
+    document.getElementById('form-categoria').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const aviso = document.getElementById('aviso-categoria');
+      const { error } = await sb.from('categorias_financeiras').insert({
+        tipo: document.getElementById('cat-tipo').value,
+        nome: document.getElementById('cat-nome').value.trim(),
+      });
+      if (error) { mostrarAviso(aviso, 'Não foi possível criar: ' + error.message, 'erro'); return; }
+      document.getElementById('cat-nome').value = '';
+      mostrarAviso(aviso, 'Categoria criada.', 'ok');
+      await carregarCategorias();
+    });
+
+    document.getElementById('lista-categorias').addEventListener('change', async (ev) => {
+      const alvo = ev.target.closest('[data-acao="alternar-categoria"]');
+      if (!alvo) return;
+      await sb.from('categorias_financeiras').update({ ativa: alvo.checked }).eq('id', alvo.dataset.id);
+      await carregarCategorias();
+    });
+
+    // -------------------------------------------------------------------------
+    // Vínculo com intervenção (só quando tipo = saida)
+    // -------------------------------------------------------------------------
+    document.getElementById('btn-buscar-familia').addEventListener('click', async () => {
+      const termo = document.getElementById('lf-busca-familia').value.trim();
+      const alvo = document.getElementById('resultado-busca-familia');
+      if (termo.length < 3) { alvo.innerHTML = '<span class="dica">Digite ao menos 3 caracteres.</span>'; return; }
+
+      const { data: familias } = await sb.from('familias')
+        .select('id, endereco_bairro, codigo')
+        .or('endereco_bairro.ilike.%' + termo + '%,codigo.ilike.%' + termo + '%')
+        .limit(10);
+
+      if (!familias?.length) { alvo.innerHTML = '<span class="dica">Nenhuma família encontrada.</span>'; return; }
+      alvo.innerHTML = familias.map(f =>
+        '<button type="button" class="btn btn-neutro btn-pequeno" data-acao="listar-intervencoes" data-familia="' + f.id + '" style="margin:3px 6px 3px 0;">' +
+          escapar(f.endereco_bairro || 'Sem bairro') + (f.codigo ? ' · ' + escapar(f.codigo) : '') +
+        '</button>').join('');
+    });
+
+    document.getElementById('resultado-busca-familia').addEventListener('click', async (ev) => {
+      const listar = ev.target.closest('[data-acao="listar-intervencoes"]');
+      if (listar) {
+        const { data: intervencoes } = await sb.from('intervencoes')
+          .select('id, tipo, descricao, valor_doado, data_ocorrencia')
+          .eq('familia_id', listar.dataset.familia)
+          .not('valor_doado', 'is', null)
+          .order('data_ocorrencia', { ascending: false })
+          .limit(10);
+
+        const alvo = document.getElementById('resultado-busca-familia');
+        if (!intervencoes?.length) { alvo.innerHTML = '<span class="dica">Essa família não tem intervenção com valor doado.</span>'; return; }
+        alvo.innerHTML = intervencoes.map(i =>
+          '<div style="margin:4px 0;"><button type="button" class="btn btn-ouro btn-pequeno" data-acao="vincular-intervencao" ' +
+            'data-id="' + i.id + '" data-rotulo="' + escapar(escapar(i.descricao).slice(0, 60)) + ' — ' + formatarMoeda(i.valor_doado) + ' (' + formatarDataCurta(i.data_ocorrencia) + ')">' +
+            '<i class="fa-solid fa-link"></i> Vincular</button> ' +
+            escapar(i.descricao).slice(0, 60) + ' — ' + formatarMoeda(i.valor_doado) + ' (' + formatarDataCurta(i.data_ocorrencia) + ')</div>'
+        ).join('');
+        return;
+      }
+
+      const vincular = ev.target.closest('[data-acao="vincular-intervencao"]');
+      if (vincular) {
+        document.getElementById('lf-intervencao-id').value = vincular.dataset.id;
+        document.getElementById('vinculo-atual-texto').textContent = vincular.dataset.rotulo;
+        document.getElementById('vinculo-atual').hidden = false;
+        document.getElementById('resultado-busca-familia').innerHTML = '';
+        document.getElementById('lf-busca-familia').value = '';
+      }
+    });
+
+    document.getElementById('btn-remover-vinculo').addEventListener('click', () => {
+      document.getElementById('lf-intervencao-id').value = '';
+      document.getElementById('vinculo-atual').hidden = true;
+    });
+
+    // -------------------------------------------------------------------------
+    // Novo lançamento / edição
+    // -------------------------------------------------------------------------
+    function limparFormularioLancamento() {
+      document.getElementById('form-lancamento').reset();
+      document.getElementById('lf-id').value = '';
+      document.getElementById('lf-data').valueAsDate = new Date();
+      document.getElementById('lf-comprovante-atual').textContent = '';
+      document.getElementById('lf-intervencao-id').value = '';
+      document.getElementById('vinculo-atual').hidden = true;
+      document.getElementById('bloco-vinculo').hidden = true;
+      document.getElementById('btn-cancelar-lancamento').hidden = true;
+      document.getElementById('btn-salvar-lancamento').innerHTML = '<i class="fa-solid fa-plus" aria-hidden="true"></i> Adicionar lançamento';
+      preencherSelectCategorias();
+    }
+
+    document.getElementById('btn-cancelar-lancamento').addEventListener('click', limparFormularioLancamento);
+
+    document.getElementById('form-lancamento').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-salvar-lancamento');
+      const aviso = document.getElementById('aviso-lancamento');
+      botao.disabled = true;
+
+      const idEdicao = document.getElementById('lf-id').value || null;
+      const arquivo = document.getElementById('lf-comprovante').files[0];
+      const idRegistro = idEdicao || crypto.randomUUID();
+
+      let comprovantePath;
+      if (arquivo) {
+        if (arquivo.size > 5 * 1024 * 1024) {
+          mostrarAviso(aviso, 'Comprovante maior que 5 MB.', 'erro');
+          botao.disabled = false;
+          return;
+        }
+        const nomeSanitizado = arquivo.name.replace(/[^A-Za-z0-9._-]/g, '_');
+        const caminho = idRegistro + '/' + Date.now() + '-' + nomeSanitizado;
+        const { error: erroUpload } = await sb.storage.from('comprovantes-financeiros')
+          .upload(caminho, arquivo, { contentType: arquivo.type, upsert: false });
+        if (erroUpload) {
+          mostrarAviso(aviso, 'Não foi possível enviar o comprovante: ' + erroUpload.message, 'erro');
+          botao.disabled = false;
+          return;
+        }
+        comprovantePath = caminho;
+      }
+
+      const registro = {
+        tipo: document.getElementById('lf-tipo').value,
+        valor: parseFloat(document.getElementById('lf-valor').value),
+        data_movimento: document.getElementById('lf-data').value,
+        categoria_id: document.getElementById('lf-categoria').value,
+        descricao: document.getElementById('lf-descricao').value.trim() || null,
+        intervencao_id: document.getElementById('lf-intervencao-id').value || null,
+      };
+      if (comprovantePath) registro.comprovante_path = comprovantePath;
+
+      let erro;
+      if (idEdicao) {
+        registro.atualizado_por = usuario.id;
+        ({ error: erro } = await sb.from('lancamentos_financeiros').update(registro).eq('id', idEdicao));
+      } else {
+        registro.id = idRegistro;
+        registro.criado_por = usuario.id;
+        ({ error: erro } = await sb.from('lancamentos_financeiros').insert(registro));
+      }
+
+      botao.disabled = false;
+      if (erro) { mostrarAviso(aviso, 'Não foi possível salvar: ' + erro.message, 'erro'); return; }
+
+      mostrarAviso(aviso, 'Lançamento salvo.', 'ok');
+      limparFormularioLancamento();
+      await carregarSaldoEExtrato();
+    });
+
+    async function rotuloIntervencao(intervencaoId) {
+      const { data: interv } = await sb.from('intervencoes')
+        .select('id, descricao, valor_doado, data_ocorrencia, familia_id').eq('id', intervencaoId).maybeSingle();
+      if (!interv) return 'Intervenção não encontrada.';
+      const { data: familia } = await sb.from('familias').select('endereco_bairro, codigo').eq('id', interv.familia_id).maybeSingle();
+      const nomeFamilia = familia?.endereco_bairro || familia?.codigo || 'família';
+      return escapar(nomeFamilia) + ' — ' + escapar(interv.descricao || '').slice(0, 60) + ' (' + formatarDataCurta(interv.data_ocorrencia) + ')';
+    }
+
+    document.getElementById('lista-extrato').addEventListener('click', async (ev) => {
+      const editar = ev.target.closest('[data-acao="editar-lancamento"]');
+      if (editar) {
+        const l = lancamentosCache.find(x => x.id === editar.dataset.id);
+        if (!l) return;
+        document.getElementById('lf-id').value = l.id;
+        document.getElementById('lf-tipo').value = l.tipo;
+        preencherSelectCategorias();
+        document.getElementById('lf-categoria').value = l.categoria_id;
+        document.getElementById('lf-valor').value = l.valor;
+        document.getElementById('lf-data').value = l.data_movimento;
+        document.getElementById('lf-descricao').value = l.descricao || '';
+        document.getElementById('lf-comprovante-atual').textContent = l.comprovante_path ? 'Já tem comprovante — enviar outro arquivo substitui.' : '';
+        document.getElementById('bloco-vinculo').hidden = l.tipo !== 'saida';
+        if (l.intervencao_id) {
+          document.getElementById('lf-intervencao-id').value = l.intervencao_id;
+          document.getElementById('vinculo-atual-texto').textContent = await rotuloIntervencao(l.intervencao_id);
+          document.getElementById('vinculo-atual').hidden = false;
+        }
+        document.getElementById('btn-cancelar-lancamento').hidden = false;
+        document.getElementById('btn-salvar-lancamento').innerHTML = '<i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Salvar edição';
+        document.getElementById('editor-lancamento').scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      const remover = ev.target.closest('[data-acao="remover-lancamento"]');
+      if (remover) {
+        if (!confirm('Remover este lançamento? Ele sai do extrato e do saldo, mas fica registrado.')) return;
+        const { error } = await sb.from('lancamentos_financeiros')
+          .update({ removido_em: new Date().toISOString(), removido_por: usuario.id })
+          .eq('id', remover.dataset.id);
+        if (error) { mostrarAviso(avisoPainel, 'Não foi possível remover: ' + error.message, 'erro'); return; }
+        await carregarSaldoEExtrato();
+        return;
+      }
+
+      const verComprovante = ev.target.closest('[data-acao="ver-comprovante"]');
+      if (verComprovante) {
+        const { data, error } = await sb.storage.from('comprovantes-financeiros')
+          .createSignedUrl(verComprovante.dataset.path, 60);
+        if (error) { mostrarAviso(avisoPainel, 'Não foi possível abrir o comprovante: ' + error.message, 'erro'); return; }
+        window.open(data.signedUrl, '_blank', 'noopener,noreferrer');
+      }
+    });
+
+    // -------------------------------------------------------------------------
+    // Conciliação
+    // -------------------------------------------------------------------------
+    async function carregarConciliacoes() {
+      const { data, error } = await sb.from('conciliacoes_financeiras').select('*')
+        .order('data_referencia', { ascending: false }).limit(24);
+      if (error) return;
+      document.getElementById('lista-conciliacoes').innerHTML = (data || []).map(c => {
+        const classeDif = Number(c.diferenca) === 0 ? '' : (Number(c.diferenca) > 0 ? 'valor-entrada' : 'valor-saida');
+        return '<tr><td>' + formatarDataCurta(c.data_referencia) + '</td>' +
+          '<td>' + formatarMoeda(c.saldo_extrato) + '</td>' +
+          '<td>' + formatarMoeda(c.saldo_sistema) + '</td>' +
+          '<td class="' + classeDif + '">' + formatarMoeda(c.diferenca) + '</td>' +
+          '<td>' + escapar(c.observacoes || '') + '</td></tr>';
+      }).join('');
+    }
+
+    document.getElementById('form-conciliacao').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const aviso = document.getElementById('aviso-conciliacao');
+
+      const { data: saldo, error: erroSaldo } = await sb.from('vw_saldo_financeiro').select('saldo_atual').maybeSingle();
+      if (erroSaldo) { mostrarAviso(aviso, 'Erro ao calcular saldo do sistema: ' + erroSaldo.message, 'erro'); return; }
+
+      const { error } = await sb.from('conciliacoes_financeiras').insert({
+        data_referencia: document.getElementById('cc-data').value,
+        saldo_extrato: parseFloat(document.getElementById('cc-saldo').value),
+        saldo_sistema: saldo.saldo_atual,
+        observacoes: document.getElementById('cc-observacoes').value.trim() || null,
+        conciliado_por: usuario.id,
+      });
+      if (error) { mostrarAviso(aviso, 'Não foi possível registrar: ' + error.message, 'erro'); return; }
+
+      document.getElementById('form-conciliacao').reset();
+      document.getElementById('cc-data').valueAsDate = new Date();
+      mostrarAviso(aviso, 'Conciliação registrada.', 'ok');
+      await carregarConciliacoes();
+    });
+
+    verificarSessao();
+  </script>
+</body>
+</html>
