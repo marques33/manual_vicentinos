@@ -220,6 +220,13 @@
       gap: 24px;
     }
 
+    /* Sem isso, o `hidden` do card do Dashboard (só-admin) não tem efeito
+       visual: `.area-card { display: flex }` abaixo tem a mesma
+       especificidade do `[hidden]` do agente do usuário, e a origem
+       "autor" sempre vence a origem "user agent" no cascata, então o
+       flex ganha mesmo com o atributo presente. */
+    #area-card-dashboard[hidden] { display: none !important; }
+
     .area-card {
       display: flex;
       flex-direction: column;
@@ -628,6 +635,22 @@
           </a>
         </article>
 
+        <!-- Só aparece para quem é public.admins — checagem de is_admin() no
+             módulo abaixo. Confrade comum nem chega a ver o card; o próprio
+             prontuario-dashboard.html confere de novo por conta própria. -->
+        <article class="area-card" id="area-card-dashboard" hidden>
+          <div class="area-icon"><i class="fa-solid fa-chart-column"></i></div>
+          <h3>Dashboard de Efetividade</h3>
+          <p>
+            Panorama das famílias e pessoas assistidas, necessidades em
+            aberto por tipo e urgência, e o ritmo das intervenções ao longo
+            do tempo.
+          </p>
+          <a href="prontuario-dashboard.html" class="area-link">
+            Acessar o Dashboard <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
         <article class="area-card">
           <div class="area-icon"><i class="fa-solid fa-book-open"></i></div>
           <h3>Manual de Direitos</h3>
@@ -712,12 +735,21 @@
         'Um login, três ferramentas: Prontuário, Painel de Moderação e Manual de Direitos.';
     }
 
+    // Card do Dashboard de Efetividade é só para administradores — mesma
+    // checagem que admin.html usa pra mostrar a aba "Usuários". Roda em
+    // paralelo com a decisão de tela, não bloqueia o hub por causa dela.
+    async function revelarCardDashboard() {
+      const { data: souAdmin } = await sb.rpc('is_admin');
+      if (souAdmin) document.getElementById('area-card-dashboard').hidden = false;
+    }
+
     async function decidirTela() {
       const acesso = await sessaoDaArea();
       if (!acesso) return mostrarLogin();
       // Entrou para chegar a algum lugar: leva direto, sem passar pelo hub.
       if (destino) return location.replace(destino);
       mostrarHub(acesso.nome);
+      revelarCardDashboard();
     }
 
     document.getElementById('form-login').addEventListener('submit', async (ev) => {
@@ -748,6 +780,7 @@
       }
       if (destino) return location.replace(destino);
       mostrarHub(acesso.nome);
+      revelarCardDashboard();
     });
 
     document.getElementById('btn-sair').addEventListener('click', sair);

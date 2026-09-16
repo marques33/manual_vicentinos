@@ -723,3 +723,78 @@ de convites por e-mail ou de bloquear self-signup público.
   necessidades, intervenções).
 - Fase 3: controle orçamentário (schema novo do zero — precisa de conversa
   sobre categorias, quem lança, etc.).
+
+---
+
+# 2026-09-16 · Fase 2 de 3 — Dashboard de Efetividade
+
+## Contexto
+Continuação do pedido de 3 fases (perfis de acesso → dashboard → controle
+orçamentário). Esta fase usa só dados que já existem no Prontuário
+(`familias`, `pessoas`, `necessidades`, `intervencoes`) — sem migration nova.
+Decisões fechadas com o usuário: só administradores veem o painel, página
+nova (`prontuario-dashboard.html`), métricas de panorama geral + necessidades
+por tipo/urgência + intervenções ao longo do tempo, gráficos via Chart.js
+(primeira dependência JS externa do site).
+
+## Feito
+- `app/prontuario-dashboard.html` (novo): painel geral (6 cartões), 4
+  gráficos Chart.js (necessidades por tipo, necessidades em aberto por
+  urgência, intervenções por mês e valor doado por mês — últimos 12 meses
+  fixos). Segue o esqueleto de `prontuario.html`/`admin.html`, agregação
+  100% client-side (sem view/RPC nova), sem seletor de período.
+- Gate de admin cobre a página inteira (`sb.rpc('is_admin')`, mesma função da
+  Fase 1), com tela "Acesso restrito" pra quem é confrade mas não admin.
+- `app/assets/area-vicentino.js`: `prontuario-dashboard.html` adicionado ao
+  `Set` `DESTINOS`, senão o redirecionamento pós-login não devolveria a
+  pessoa direto pro dashboard.
+- `app/area-vicentino.html`: 4º card "Dashboard de Efetividade" na grade de
+  ferramentas, escondido por padrão e revelado só se `is_admin()`.
+
+## Bug encontrado e corrigido durante a própria verificação (não é achado
+## fora de escopo — é o código desta fase que eu mesmo escrevi)
+`hidden` no card novo não escondia nada visualmente: `.area-card { display:
+flex }` já existente no `<style>` de `area-vicentino.html` tem a mesma
+especificidade do `[hidden]` do user-agent, e origem "autor" sempre vence
+origem "user agent" no cascata — então o card aparecia pra qualquer confrade,
+admin ou não. Corrigido com `#area-card-dashboard[hidden] { display: none
+!important; }`, escopado só a este id.
+
+Um segundo bug do mesmo tipo: a função que revela o card (`revelarCardDashboard`)
+só era chamada dentro de `decidirTela()` (sessão já existente ao carregar a
+página). O formulário de login interativo tem seu próprio `mostrarHub(...)`
+separado e não chamava a função — um admin que loga na hora não via o card
+até recarregar a página. Corrigido chamando `revelarCardDashboard()` também
+ali.
+
+## Verificado ao vivo (Chrome DevTools MCP — claude-in-chrome não conectou
+## nesta sessão, usado o MCP alternativo)
+Servido localmente (`python -m http.server`, porta 8791, não a 8000 —
+ocupada nesta máquina). Duas contas descartáveis criadas via Admin API
+(service_role só em memória, CLI): uma confrade comum, uma admin.
+- Confrade comum: card do Dashboard não aparece em `area-vicentino.html`;
+  acesso direto a `prontuario-dashboard.html` mostra "Acesso restrito", não
+  o painel.
+- Admin: card aparece (nos dois caminhos — sessão restaurada E login
+  interativo), painel carrega, todos os 4 gráficos instanciam
+  (`Chart.getChart()` confirmado via `evaluate_script`), sem erros no
+  console, cartões corretos com base vazia (tudo zerado).
+- Inseridos 1 família ativa + 1 pessoa + 1 necessidade financeira urgente
+  aberta + 1 necessidade de saúde atendida + 1 intervenção de R$150 este
+  mês (dados descartáveis) — todos os 6 cartões e os 4 gráficos bateram
+  exatamente com os números esperados (screenshot conferido).
+- Toda a massa de teste apagada ao final: família (cascade cuida do resto)
+  e as duas contas de autenticação. Confirmado via API que nenhuma sobrou.
+
+## Erro cometido durante a limpeza (registrado, não repetir)
+Para derrubar o servidor local, rodei `taskkill /F /IM python.exe`, que mata
+por nome do processo — derrubou TODOS os python.exe da máquina (9 processos),
+não só o servidor que eu tinha subido. Deveria ter capturado o PID do
+processo em segundo plano lançado por este próprio Bash e matado só aquele.
+Avisado ao usuário na hora. Regra pra próxima vez: nunca `taskkill /IM` nem
+`pkill -f <padrão amplo>` pra encerrar algo que eu mesmo lancei — guardar o
+PID no momento do `&`/`run_in_background` e matar só ele.
+
+## Próximos passos
+- Fase 3: controle orçamentário (schema novo do zero — precisa de conversa
+  sobre categorias, quem lança, etc.), conforme já combinado.

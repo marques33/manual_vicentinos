@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dashboard de Efetividade · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+  <style>
+    /* ===== Extras só deste painel — cartões de número e caixas de gráfico. ===== */
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+    .stat-card { padding: 20px 22px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    .stat-card .valor { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--wine-deep); line-height: 1.1; }
+    .stat-card .rotulo { display: block; margin-top: 6px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+
+    .grafico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .grafico-card { padding: 22px 24px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    .grafico-card h2 { font-size: 1.15rem; color: var(--wine-deep); margin-bottom: 4px; }
+    .grafico-card .grafico-nota { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 14px; }
+    .grafico-caixa { position: relative; height: 260px; }
+    .grafico-caixa canvas { width: 100% !important; height: 100% !important; }
+
+    .secao-titulo { font-size: 1.4rem; color: var(--wine-deep); margin-bottom: 16px; }
+
+    @media (max-width: 640px) {
+      .stat-grid, .grafico-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Dashboard de Efetividade</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-nome"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= ACESSO ============= -->
+  <!-- O login em si acontece em area-vicentino.html — uma porta só para
+       Manual, Prontuário e Painel (assets/area-vicentino.js). Sem sessão,
+       exigirAcesso() já redireciona para lá antes que este texto suma. -->
+  <section class="login" id="tela-login">
+    <p>Verificando seu acesso…</p>
+  </section>
+
+  <!-- ============= RESTRITO A ADMINISTRADORES ============= -->
+  <section class="login" id="tela-restrito" hidden>
+    <h1>Acesso restrito</h1>
+    <p>Este painel é restrito a administradores da Conferência.</p>
+    <a class="btn btn-ouro" href="area-vicentino.html" style="width:100%;">
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar à Área do Vicentino
+    </a>
+  </section>
+
+  <!-- ============= PAINEL ============= -->
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <p class="aviso" id="aviso-painel" role="status"></p>
+
+    <h2 class="secao-titulo">Panorama geral</h2>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="valor" id="stat-familias-ativas">—</span>
+        <span class="rotulo">Famílias ativas (de cadastradas)</span>
+      </div>
+      <div class="stat-card">
+        <span class="valor" id="stat-pessoas-assistidas">—</span>
+        <span class="rotulo">Pessoas atualmente assistidas</span>
+      </div>
+      <div class="stat-card">
+        <span class="valor" id="stat-necessidades-abertas">—</span>
+        <span class="rotulo">Necessidades em aberto</span>
+      </div>
+      <div class="stat-card">
+        <span class="valor" id="stat-necessidades-atendidas">—</span>
+        <span class="rotulo">Necessidades atendidas (histórico)</span>
+      </div>
+      <div class="stat-card">
+        <span class="valor" id="stat-intervencoes-12m">—</span>
+        <span class="rotulo">Intervenções nos últimos 12 meses</span>
+      </div>
+      <div class="stat-card">
+        <span class="valor" id="stat-valor-doado-12m">—</span>
+        <span class="rotulo">Total doado nos últimos 12 meses</span>
+      </div>
+    </div>
+
+    <h2 class="secao-titulo">Necessidades</h2>
+    <div class="grafico-grid">
+      <div class="grafico-card">
+        <h2>Por tipo</h2>
+        <p class="grafico-nota">Em aberto (aberta + em atendimento) vs. atendidas, desde o início do registro.</p>
+        <div class="grafico-caixa"><canvas id="grafico-necessidades-tipo"></canvas></div>
+      </div>
+      <div class="grafico-card">
+        <h2>Em aberto, por urgência</h2>
+        <p class="grafico-nota">Só as necessidades ainda não atendidas — mostra o que pede atenção agora.</p>
+        <div class="grafico-caixa"><canvas id="grafico-necessidades-urgencia"></canvas></div>
+      </div>
+    </div>
+
+    <h2 class="secao-titulo">Intervenções ao longo do tempo</h2>
+    <div class="grafico-grid">
+      <div class="grafico-card">
+        <h2>Intervenções por mês</h2>
+        <p class="grafico-nota">Últimos 12 meses — visitas, encaminhamentos, doações, orientações.</p>
+        <div class="grafico-caixa"><canvas id="grafico-intervencoes-mes"></canvas></div>
+      </div>
+      <div class="grafico-card">
+        <h2>Valor doado por mês</h2>
+        <p class="grafico-nota">Últimos 12 meses — soma das doações financeiras registradas nas intervenções.</p>
+        <div class="grafico-caixa"><canvas id="grafico-valor-mes"></canvas></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script type="module">
+    import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaRestrito = document.getElementById('tela-restrito');
+    const telaPainel = document.getElementById('tela-painel');
+    const topoUsuario = document.getElementById('topo-usuario');
+    const avisoPainel = document.getElementById('aviso-painel');
+
+    const TIPO_NECESSIDADE = { financeira: 'Financeira', material: 'Material', saude: 'Saúde', moradia: 'Moradia', juridica: 'Jurídica', outra: 'Outra' };
+    const URGENCIA_ROTULO = { baixa: 'Baixa', normal: 'Normal', alta: 'Alta', urgente: 'Urgente' };
+    const COR_URGENCIA = { baixa: '#E0BE7E', normal: '#C9A567', alta: '#A8843E', urgente: '#4A1818' };
+
+    function formatarMoeda(valor) {
+      return 'R$ ' + Number(valor || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+    }
+
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+    }
+
+    document.getElementById('btn-sair').addEventListener('click', sair);
+
+    // -------------------------------------------------------------------------
+    // Sessão — igual às outras ferramentas da Área do Vicentino, mais uma
+    // checagem extra: este painel só é visível para administradores. A RLS
+    // das tabelas do prontuário já libera leitura pra qualquer confrade ativo
+    // (é assim desde a Fase 1), então quem decide QUEM VÊ os números
+    // agregados aqui é esta tela — conforto de UI, não fronteira de dado.
+    // -------------------------------------------------------------------------
+    async function verificarSessao() {
+      const acesso = await exigirAcesso();
+      if (!acesso) return;
+
+      document.getElementById('usuario-nome').textContent = acesso.nome;
+      topoUsuario.hidden = false;
+      telaLogin.hidden = true;
+
+      const { data: souAdmin } = await sb.rpc('is_admin');
+      if (!souAdmin) {
+        telaRestrito.hidden = false;
+        return;
+      }
+
+      telaPainel.hidden = false;
+      await carregarDados();
+    }
+
+    // -------------------------------------------------------------------------
+    // Janela fixa dos últimos 12 meses (sem seletor de período) — construída
+    // com aritmética simples de ano/mês, não com Date + toISOString, pra não
+    // depender do fuso horário do navegador de quem está olhando o painel.
+    // -------------------------------------------------------------------------
+    function chaveAnoMes(ano, mesBase0) {
+      return ano + '-' + String(mesBase0 + 1).padStart(2, '0');
+    }
+
+    function chavesDosUltimosMeses() {
+      const agora = new Date();
+      let ano = agora.getFullYear();
+      let mes = agora.getMonth() - 11;
+      while (mes < 0) { mes += 12; ano -= 1; }
+
+      const chaves = [];
+      for (let i = 0; i < 12; i++) {
+        chaves.push(chaveAnoMes(ano, mes));
+        mes += 1;
+        if (mes > 11) { mes = 0; ano += 1; }
+      }
+      return chaves;
+    }
+
+    function rotuloMes(chave) {
+      const [ano, mes] = chave.split('-').map(Number);
+      const data = new Date(ano, mes - 1, 1);
+      return data.toLocaleDateString('pt-BR', { month: 'short', year: '2-digit' }).replace('.', '');
+    }
+
+    async function carregarDados() {
+      const chaves = chavesDosUltimosMeses();
+      const desde = chaves[0] + '-01';
+
+      const [
+        { data: familias, error: erroFamilias },
+        { data: pessoas, error: erroPessoas },
+        { data: necessidades, error: erroNecessidades },
+        { data: intervencoes, error: erroIntervencoes },
+      ] = await Promise.all([
+        sb.from('familias').select('id, status'),
+        sb.from('pessoas').select('id, familia_id, ativo'),
+        sb.from('necessidades').select('id, tipo, urgencia, status'),
+        sb.from('intervencoes').select('id, valor_doado, data_ocorrencia').gte('data_ocorrencia', desde),
+      ]);
+
+      const erro = erroFamilias || erroPessoas || erroNecessidades || erroIntervencoes;
+      if (erro) {
+        mostrarAviso(avisoPainel, 'Erro ao carregar dados: ' + erro.message, 'erro');
+        return;
+      }
+
+      renderizarPainelGeral(familias || [], pessoas || [], necessidades || [], intervencoes || []);
+      renderizarNecessidadesPorTipo(necessidades || []);
+      renderizarNecessidadesPorUrgencia(necessidades || []);
+      renderizarIntervencoesPorMes(intervencoes || [], chaves);
+    }
+
+    function renderizarPainelGeral(familias, pessoas, necessidades, intervencoes) {
+      const familiasAtivas = familias.filter(f => f.status === 'ativa');
+      const idsFamiliasAtivas = new Set(familiasAtivas.map(f => f.id));
+      const pessoasAssistidas = pessoas.filter(p => p.ativo && idsFamiliasAtivas.has(p.familia_id));
+      const necessidadesAbertas = necessidades.filter(n => n.status === 'aberta' || n.status === 'em_atendimento');
+      const necessidadesAtendidas = necessidades.filter(n => n.status === 'atendida');
+      const totalDoado = intervencoes.reduce((soma, i) => soma + Number(i.valor_doado || 0), 0);
+
+      document.getElementById('stat-familias-ativas').textContent = familiasAtivas.length + ' de ' + familias.length;
+      document.getElementById('stat-pessoas-assistidas').textContent = pessoasAssistidas.length;
+      document.getElementById('stat-necessidades-abertas').textContent = necessidadesAbertas.length;
+      document.getElementById('stat-necessidades-atendidas').textContent = necessidadesAtendidas.length;
+      document.getElementById('stat-intervencoes-12m').textContent = intervencoes.length;
+      document.getElementById('stat-valor-doado-12m').textContent = formatarMoeda(totalDoado);
+    }
+
+    let graficoTipo, graficoUrgencia, graficoIntervencoesMes, graficoValorMes;
+
+    function renderizarNecessidadesPorTipo(necessidades) {
+      const tipos = Object.keys(TIPO_NECESSIDADE);
+      const emAberto = tipos.map(t => necessidades.filter(n =>
+        n.tipo === t && (n.status === 'aberta' || n.status === 'em_atendimento')).length);
+      const atendidas = tipos.map(t => necessidades.filter(n => n.tipo === t && n.status === 'atendida').length);
+
+      graficoTipo?.destroy();
+      graficoTipo = new Chart(document.getElementById('grafico-necessidades-tipo'), {
+        type: 'bar',
+        data: {
+          labels: tipos.map(t => TIPO_NECESSIDADE[t]),
+          datasets: [
+            { label: 'Em aberto', data: emAberto, backgroundColor: '#7A2A24' },
+            { label: 'Atendidas', data: atendidas, backgroundColor: '#C9A567' },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, ticks: { precision: 0 } } },
+          plugins: { legend: { position: 'bottom' } },
+        },
+      });
+    }
+
+    function renderizarNecessidadesPorUrgencia(necessidades) {
+      const urgencias = Object.keys(URGENCIA_ROTULO);
+      const emAberto = necessidades.filter(n => n.status === 'aberta' || n.status === 'em_atendimento');
+      const contagens = urgencias.map(u => emAberto.filter(n => n.urgencia === u).length);
+
+      graficoUrgencia?.destroy();
+      graficoUrgencia = new Chart(document.getElementById('grafico-necessidades-urgencia'), {
+        type: 'bar',
+        data: {
+          labels: urgencias.map(u => URGENCIA_ROTULO[u]),
+          datasets: [{ label: 'Necessidades em aberto', data: contagens, backgroundColor: urgencias.map(u => COR_URGENCIA[u]) }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+          plugins: { legend: { display: false } },
+        },
+      });
+    }
+
+    function renderizarIntervencoesPorMes(intervencoes, chaves) {
+      const porMes = new Map(chaves.map(c => [c, { qtd: 0, valor: 0 }]));
+      intervencoes.forEach(i => {
+        const bucket = porMes.get(String(i.data_ocorrencia).slice(0, 7));
+        if (bucket) { bucket.qtd += 1; bucket.valor += Number(i.valor_doado || 0); }
+      });
+
+      const rotulos = chaves.map(rotuloMes);
+      const quantidades = chaves.map(c => porMes.get(c).qtd);
+      const valores = chaves.map(c => porMes.get(c).valor);
+
+      graficoIntervencoesMes?.destroy();
+      graficoIntervencoesMes = new Chart(document.getElementById('grafico-intervencoes-mes'), {
+        type: 'bar',
+        data: { labels: rotulos, datasets: [{ label: 'Intervenções', data: quantidades, backgroundColor: '#7A2A24' }] },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+          plugins: { legend: { display: false } },
+        },
+      });
+
+      graficoValorMes?.destroy();
+      graficoValorMes = new Chart(document.getElementById('grafico-valor-mes'), {
+        type: 'bar',
+        data: { labels: rotulos, datasets: [{ label: 'Valor doado (R$)', data: valores, backgroundColor: '#C9A567' }] },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: { y: { beginAtZero: true, ticks: { callback: v => 'R$ ' + v } } },
+          plugins: { legend: { display: false } },
+        },
+      });
+    }
+
+    verificarSessao();
+  </script>
+</body>
+</html>

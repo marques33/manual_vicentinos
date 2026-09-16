@@ -267,3 +267,62 @@ Antes de qualquer `db push`/`migration list`, se o comando falhar com 403, checa
 `supabase projects list` e confirmar que o projeto alvo aparece — não presumir que a
 sessão de uma tarefa anterior continua válida. Nesta máquina, múltiplos projetos Supabase
 de contextos diferentes competem pela mesma sessão da CLI.
+
+---
+
+## 2026-09-16 · `hidden` que não escondia nada (cascata CSS: origem vence especificidade)
+
+**O que aconteceu.** Na Fase 2 (Dashboard de Efetividade), escondi um card admin-only com o
+atributo `hidden` e revelei via JS (`el.hidden = false`) — o mesmo padrão já usado em
+`admin.html` pra aba "Usuários". Testando ao vivo com conta confrade comum, o card apareceu
+mesmo assim. `el.hidden` no DOM estava `true`; visualmente, visível.
+
+**Causa raiz.** `area-vicentino.html` tem `.area-card { display: flex; ... }` no próprio
+`<style>`. O `[hidden] { display: none }` do user-agent e a classe `.area-card` têm a
+*mesma* especificidade (0,1,0) — mas isso não decide o empate: a cascata resolve por
+**origem** antes de especificidade, e origem "autor" sempre vence origem "user agent",
+não importa a ordem ou a especificidade. `prontuario.css` (usado por `prontuario.html`,
+`admin.html`, etc.) tem uma regra explícita `[hidden] { display: none !important; }` que
+mascarava esse problema em todas as páginas que já usavam o padrão — só notei porque esta
+página nova não carrega `prontuario.css`.
+
+**Regra preventiva.**
+1. `hidden` só é garantidamente visual se a página tiver `[hidden] { display: none
+   !important; }` no próprio CSS (como `prontuario.css` já tem) — ou se nenhuma regra do
+   autor definir `display` para aquele elemento/classe.
+2. Ao adicionar `hidden` num elemento cuja classe já tem `display` explícito no CSS da
+   página, checar isso ANTES de confiar no padrão — não presumir que funciona só porque
+   funcionou em outra página com outro stylesheet.
+3. Verificação ao vivo (não só leitura de código) foi o que pegou isso — reforça: gate de
+   acesso em UI sempre se testa logado como a conta que DEVE ser barrada, não só como a
+   que deve passar.
+4. Bug irmão no mesmo commit: a função que revela o elemento só era chamada num dos dois
+   caminhos de login (sessão restaurada), não no login interativo — os dois fluxos que
+   levam ao mesmo estado de tela têm código duplicado (`mostrarHub` em dois lugares) e
+   davam pra divergir silenciosamente. Ao adicionar comportamento condicionado à sessão,
+   checar TODOS os pontos de entrada que levam à mesma tela, não só o mais óbvio.
+
+---
+
+## 2026-09-16 · `taskkill /IM python.exe` matou processos de fora da tarefa
+
+**O que aconteceu.** Pra derrubar um servidor HTTP local de verificação (`python -m
+http.server`, lançado em background com `&`), rodei `taskkill //F //IM python.exe` — mata
+por nome de imagem, não por PID. Derrubou os 9 processos python.exe da máquina, não só o
+que eu tinha subido. Sem saber o que mais rodava, não dá pra saber o que foi perdido.
+
+**Causa raiz.** Não capturei o PID no momento em que lancei o processo em segundo plano
+(`(comando &)` no Bash não expõe o PID do subshell de forma óbvia), e recorri a matar por
+nome como atalho — sem considerar que "nome do processo" não é "processo que eu lancei"
+numa máquina onde o usuário pode ter outros scripts Python rodando.
+
+**Regra preventiva.**
+1. Nunca `taskkill /IM <nome>` nem `pkill -f <padrão amplo>` para encerrar algo que eu
+   mesmo lancei — isso é uma ação destrutiva de raio de alcance amplo (mesma categoria que
+   `rm -rf`, `git reset --hard`) e as instruções globais já pedem cautela nelas.
+2. Ao lançar processo em background para verificação, capturar o PID de verdade: `comando
+   & PID=$!` (bash) e guardar `$PID` pra matar depois com `kill $PID`, ou usar
+   `run_in_background` do próprio Bash tool e encerrar pelo mecanismo do harness, não por
+   `taskkill`/`pkill` manual.
+3. Se não for possível isolar o PID com segurança, perguntar ao usuário antes de matar por
+   nome — nunca assumir que "só eu" rodo processos com aquele nome na máquina dele.
