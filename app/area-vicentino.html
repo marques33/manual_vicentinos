@@ -540,7 +540,7 @@
       <h1>Área do <em>Vicentino</em></h1>
       <p id="hero-texto">
         Ferramentas de uso interno da Conferência. Entre uma vez com a conta de
-        confrade e use as três livremente.
+        confrade e use as seis livremente.
       </p>
     </div>
   </section>
@@ -605,7 +605,7 @@
         <div class="ornament"><i class="fa-solid fa-key"></i></div>
         <h2>Ferramentas da Conferência</h2>
         <p>
-          Seu acesso já está liberado nas três. Escolha por onde começar — não
+          Seu acesso já está liberado nas seis. Escolha por onde começar — não
           haverá novo pedido de senha.
         </p>
       </div>
@@ -747,7 +747,7 @@
       telaLogin.hidden = false;
       heroTexto.textContent = destino
         ? 'Essa ferramenta é de uso interno. Entre com a conta de confrade para continuar.'
-        : 'Ferramentas de uso interno da Conferência. Entre uma vez com a conta de confrade e use as três livremente.';
+        : 'Ferramentas de uso interno da Conferência. Entre uma vez com a conta de confrade e use as seis livremente.';
       if (mensagem) avisoLogin.textContent = mensagem;
       document.getElementById('email').focus();
     }
@@ -757,7 +757,8 @@
       telaArea.hidden = false;
       document.getElementById('usuario-nome').textContent = nome;
       heroTexto.textContent =
-        'Um login, três ferramentas: Prontuário, Painel de Moderação e Manual de Direitos.';
+        'Um login, seis ferramentas: Prontuário, Painel de Moderação, Dashboard de Efetividade, ' +
+        'Controle Orçamentário, Relatório Orçamentário e Manual de Direitos.';
     }
 
     // Card do Dashboard de Efetividade é só para administradores — mesma

@@ -8,7 +8,7 @@
 // resposta valia só na página onde foi dada.
 //
 // Aqui a pergunta é feita uma vez, em area-vicentino.html, e a resposta vale
-// para as três ferramentas.
+// para as seis ferramentas.
 //
 // Nada disto é a fronteira de segurança. O que protege os dados é a RLS do
 // Postgres: `is_membro_area()` é consultada aqui só para decidir o que a tela
@@ -111,7 +111,7 @@ export async function exigirAcesso() {
   return null;
 }
 
-/** Encerra a sessão das três ferramentas de uma vez e volta para a Área. */
+/** Encerra a sessão das seis ferramentas de uma vez e volta para a Área. */
 export async function sair() {
   await sb.auth.signOut();
   window.location.href = PAGINA_AREA;
