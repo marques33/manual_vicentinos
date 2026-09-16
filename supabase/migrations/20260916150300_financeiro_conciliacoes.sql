@@ -49,12 +49,14 @@ create policy "tesoureiro/admin registra conciliacoes_financeiras"
 -- vw_saldo_financeiro — saldo corrente = saldo inicial + entradas − saídas
 -- (só lançamentos não removidos, desde a data_referencia do saldo inicial).
 --
--- View simples, sem SECURITY DEFINER: roda com os direitos de quem consulta,
--- protegida pela RLS de lancamentos_financeiros/saldo_inicial_financeiro por
--- baixo — mesmo padrão de vw_renda_familiar (migração 008). Sempre devolve
--- exatamente uma linha (a CTE `base` não depende de FROM).
+-- View com security_invoker = true: roda com os direitos de quem consulta
+-- (não do dono da view), então a RLS de lancamentos_financeiros/
+-- saldo_inicial_financeiro é avaliada normalmente por baixo — sem isso, uma
+-- "create or replace view" comum roda como o dono (postgres), ignorando RLS.
+-- Sempre devolve exatamente uma linha (a CTE `base` não depende de FROM).
 -- ----------------------------------------------------------------------------
-create or replace view public.vw_saldo_financeiro as
+create or replace view public.vw_saldo_financeiro
+  with (security_invoker = true) as
 with base as (
   select
     coalesce((select valor from public.saldo_inicial_financeiro limit 1), 0) as saldo_inicial,
@@ -86,5 +88,8 @@ select
       ), 0) as saldo_atual
 from base;
 
+revoke all on public.vw_saldo_financeiro from anon, authenticated;
+grant select on public.vw_saldo_financeiro to authenticated;
+
 comment on view public.vw_saldo_financeiro is
-  'Saldo corrente único (uma linha): saldo inicial + entradas − saídas não removidas desde a data do saldo inicial.';
+  'Saldo corrente único (uma linha): saldo inicial + entradas − saídas não removidas desde a data do saldo inicial. security_invoker = true garante que a RLS de lancamentos_financeiros/saldo_inicial_financeiro seja avaliada como o usuário que consulta, não como o dono da view.';
