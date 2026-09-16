@@ -6,3 +6,9 @@ project_id = "manual-vicentinos"
 # site. Quem guarda a porta são as conferências dentro da própria função —
 # origem, honeypot, tempo de preenchimento, limite por IP e regras de conteúdo.
 verify_jwt = false
+
+[functions.gerenciar-usuarios]
+# Ao contrário de enviar-pedido, aqui a verificação de JWT fica LIGADA
+# (padrão): só usuário autenticado chega ao código, que ainda confere
+# is_admin() antes de qualquer operação com a chave de serviço.
+verify_jwt = true

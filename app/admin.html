@@ -296,6 +296,13 @@
       <button class="aba" id="aba-mural" role="tab" aria-selected="false" aria-controls="painel-mural">
         Mural da comunidade
       </button>
+      <!-- Só aparece para quem é public.admins — ver checagem extra de
+           is_admin() no módulo abaixo. Confrade comum nem chega a ver o
+           botão, e a function gerenciar-usuarios confere de novo por conta
+           própria, então esconder aqui é conforto de UI, não a fronteira. -->
+      <button class="aba" id="aba-usuarios" role="tab" aria-selected="false" aria-controls="painel-usuarios" hidden>
+        Usuários
+      </button>
     </div>
 
     <p class="aviso" id="aviso-painel" role="status"></p>
@@ -416,6 +423,76 @@
 
       <div class="lista" id="lista-mural"></div>
     </section>
+
+    <!-- ---------- Usuários (só is_admin) ---------- -->
+    <section id="painel-usuarios" role="tabpanel" aria-labelledby="aba-usuarios" hidden>
+      <div class="editor">
+        <h2>Adicionar vicentino</h2>
+        <form id="form-novo-usuario">
+          <div class="grade-2">
+            <div class="campo">
+              <label for="nu-nome">Nome completo *</label>
+              <input type="text" id="nu-nome" maxlength="150" required>
+            </div>
+            <div class="campo">
+              <label for="nu-email">E-mail *</label>
+              <input type="email" id="nu-email" maxlength="200" required>
+            </div>
+          </div>
+          <div class="grade-2">
+            <div class="campo">
+              <label for="nu-papel">Papel</label>
+              <select id="nu-papel">
+                <option value="vicentino">Vicentino</option>
+                <option value="presidente">Presidente</option>
+                <option value="vice_presidente">Vice-presidente</option>
+                <option value="tesoureiro">Tesoureiro</option>
+                <option value="secretario">Secretário</option>
+                <option value="confrade_espiritual">Confrade espiritual</option>
+                <option value="administrador">Administrador (técnico do site)</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="nu-senha">Senha inicial *</label>
+              <div style="display:flex; gap:8px;">
+                <input type="text" id="nu-senha" maxlength="72" required style="flex:1;">
+                <button type="button" class="btn btn-neutro btn-pequeno" id="btn-gerar-senha">Gerar</button>
+              </div>
+              <span class="dica">Mínimo 8 caracteres. Aparece uma vez só — anote e repasse ao vicentino.</span>
+            </div>
+          </div>
+          <div class="caixa-linha">
+            <input type="checkbox" id="nu-tambem-admin">
+            <label for="nu-tambem-admin">Também administrador (Painel completo + gerenciar usuários)</label>
+          </div>
+          <button type="submit" class="btn btn-ouro" id="btn-criar-usuario">
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Criar usuário
+          </button>
+          <p class="aviso" id="aviso-novo-usuario" role="status"></p>
+        </form>
+      </div>
+
+      <div class="editor" id="painel-redefinir" hidden>
+        <h2>Redefinir senha de <span id="redefinir-nome"></span></h2>
+        <form id="form-redefinir-senha">
+          <input type="hidden" id="redefinir-user-id">
+          <div class="campo">
+            <label for="redefinir-senha">Nova senha *</label>
+            <div style="display:flex; gap:8px;">
+              <input type="text" id="redefinir-senha" maxlength="72" required style="flex:1;">
+              <button type="button" class="btn btn-neutro btn-pequeno" id="btn-gerar-senha-redefinir">Gerar</button>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="submit" class="btn btn-ouro" id="btn-confirmar-redefinir">Confirmar</button>
+            <button type="button" class="btn btn-neutro" id="btn-cancelar-redefinir">Cancelar</button>
+          </div>
+          <p class="aviso" id="aviso-redefinir" role="status"></p>
+        </form>
+      </div>
+
+      <div class="lista" id="lista-usuarios"></div>
+    </section>
   </main>
 
   <script type="module">
@@ -458,7 +535,20 @@
       topoUsuario.hidden = false;
       telaLogin.hidden = true;
       telaPainel.hidden = false;
-      await Promise.all([carregarOracoes(), carregarMural()]);
+
+      const tarefas = [carregarOracoes(), carregarMural()];
+
+      // A aba "Usuários" é mais sensível que moderar mural/oração — fica
+      // restrita a public.admins, não a qualquer confrade da Área do
+      // Vicentino. Esconder aqui é só conforto de UI: a function
+      // gerenciar-usuarios confere is_admin() de novo, do lado dela.
+      const { data: souAdmin } = await sb.rpc('is_admin');
+      if (souAdmin) {
+        document.getElementById('aba-usuarios').hidden = false;
+        tarefas.push(carregarUsuarios());
+      }
+
+      await Promise.all(tarefas);
     }
 
     document.getElementById('btn-sair').addEventListener('click', sair);
@@ -468,7 +558,8 @@
     // -------------------------------------------------------------------------
     const abas = [
       { botao: document.getElementById('aba-oracoes'), painel: document.getElementById('painel-oracoes') },
-      { botao: document.getElementById('aba-mural'), painel: document.getElementById('painel-mural') }
+      { botao: document.getElementById('aba-mural'), painel: document.getElementById('painel-mural') },
+      { botao: document.getElementById('aba-usuarios'), painel: document.getElementById('painel-usuarios') }
     ];
     abas.forEach(({ botao }, i) => {
       botao.addEventListener('click', () => {
@@ -786,6 +877,158 @@
       if (erro) mostrarAviso(avisoPainel, 'Não foi possível salvar: ' + erro.message, 'erro');
       else mostrarAviso(avisoPainel, 'Pronto.', 'ok');
       await carregarMural();
+    });
+
+    // -------------------------------------------------------------------------
+    // Usuários — a única tela do site que cria conta e redefine senha de
+    // terceiro. Chama a Edge Function gerenciar-usuarios, que roda com a
+    // chave de serviço do lado dela; o navegador nunca vê essa chave.
+    // sb.functions.invoke() já manda o JWT da sessão atual sozinho.
+    // -------------------------------------------------------------------------
+    const PAPEL_ROTULO = {
+      vicentino: 'Vicentino', presidente: 'Presidente', vice_presidente: 'Vice-presidente',
+      tesoureiro: 'Tesoureiro', secretario: 'Secretário',
+      confrade_espiritual: 'Confrade espiritual', administrador: 'Administrador',
+    };
+
+    async function chamarGerenciarUsuarios(corpo) {
+      const { data, error } = await sb.functions.invoke('gerenciar-usuarios', { body: corpo });
+      if (error) {
+        // FunctionsHttpError traz a resposta em error.context; é onde está o
+        // {ok:false, erro:"..."} que a function devolveu.
+        const corpoErro = await error.context?.json?.().catch(() => null);
+        return { ok: false, erro: corpoErro?.erro || 'falha_comunicacao' };
+      }
+      return data;
+    }
+
+    function gerarSenha() {
+      const alfabeto = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+      const aleatorio = crypto.getRandomValues(new Uint32Array(14));
+      return Array.from(aleatorio, (n) => alfabeto[n % alfabeto.length]).join('');
+    }
+
+    document.getElementById('btn-gerar-senha').addEventListener('click', () => {
+      document.getElementById('nu-senha').value = gerarSenha();
+    });
+    document.getElementById('btn-gerar-senha-redefinir').addEventListener('click', () => {
+      document.getElementById('redefinir-senha').value = gerarSenha();
+    });
+
+    async function carregarUsuarios() {
+      const lista = document.getElementById('lista-usuarios');
+      const resultado = await chamarGerenciarUsuarios({ acao: 'listar' });
+      if (!resultado.ok) {
+        lista.innerHTML = `<div class="vazio"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+          Não foi possível carregar os usuários (${escapar(resultado.erro)}).</div>`;
+        return;
+      }
+      if (!resultado.usuarios.length) {
+        lista.innerHTML = '<div class="vazio">Nenhum usuário cadastrado ainda.</div>';
+        return;
+      }
+      lista.innerHTML = resultado.usuarios.map((u) => `
+        <article class="cartao">
+          <div class="cartao-topo">
+            <h3>${escapar(u.nome)}</h3>
+            <span>
+              ${u.admin ? '<span class="selo selo--aprovado">Administrador</span>' : ''}
+              ${u.confrade_ativo ? '<span class="selo selo--pendente">Confrade ativo</span>' : ''}
+            </span>
+          </div>
+          <p class="cartao-texto">${escapar(u.email)}${u.papel ? ' · ' + escapar(PAPEL_ROTULO[u.papel] || u.papel) : ''}</p>
+          <div class="cartao-acoes">
+            <button type="button" class="btn btn-neutro btn-pequeno btn-redefinir"
+              data-id="${escapar(u.user_id)}" data-nome="${escapar(u.nome)}">
+              <i class="fa-solid fa-key" aria-hidden="true"></i> Redefinir senha
+            </button>
+          </div>
+        </article>
+      `).join('');
+
+      lista.querySelectorAll('.btn-redefinir').forEach((botao) => {
+        botao.addEventListener('click', () => {
+          document.getElementById('redefinir-user-id').value = botao.dataset.id;
+          document.getElementById('redefinir-nome').textContent = botao.dataset.nome;
+          document.getElementById('redefinir-senha').value = '';
+          document.getElementById('aviso-redefinir').className = 'aviso';
+          const painel = document.getElementById('painel-redefinir');
+          painel.hidden = false;
+          painel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    }
+
+    document.getElementById('form-novo-usuario').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-criar-usuario');
+      botao.disabled = true;
+
+      const senha = document.getElementById('nu-senha').value;
+      if (senha.length < 8) {
+        mostrarAviso(document.getElementById('aviso-novo-usuario'), 'A senha precisa ter ao menos 8 caracteres.', 'erro');
+        botao.disabled = false;
+        return;
+      }
+
+      const resultado = await chamarGerenciarUsuarios({
+        acao: 'criar_usuario',
+        nome: document.getElementById('nu-nome').value.trim(),
+        email: document.getElementById('nu-email').value.trim(),
+        papel: document.getElementById('nu-papel').value,
+        senha,
+        tambem_admin: document.getElementById('nu-tambem-admin').checked,
+      });
+
+      botao.disabled = false;
+      const avisoEl = document.getElementById('aviso-novo-usuario');
+      if (!resultado.ok) {
+        const mensagens = {
+          email_ja_cadastrado: 'Já existe uma conta com este e-mail.',
+          email_invalido: 'E-mail inválido.',
+          senha_curta: 'A senha precisa ter ao menos 8 caracteres.',
+          nome_invalido: 'Informe o nome completo (ao menos 3 caracteres).',
+          papel_invalido: 'Papel inválido.',
+        };
+        mostrarAviso(avisoEl, mensagens[resultado.erro] || 'Não foi possível criar o usuário.', 'erro');
+        return;
+      }
+
+      mostrarAviso(avisoEl,
+        `Usuário criado. Senha: ${senha} — anote agora, ela não aparece de novo.`, 'ok');
+      document.getElementById('form-novo-usuario').reset();
+      await carregarUsuarios();
+    });
+
+    document.getElementById('btn-cancelar-redefinir').addEventListener('click', () => {
+      document.getElementById('painel-redefinir').hidden = true;
+    });
+
+    document.getElementById('form-redefinir-senha').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-confirmar-redefinir');
+      botao.disabled = true;
+
+      const senha = document.getElementById('redefinir-senha').value;
+      const avisoEl = document.getElementById('aviso-redefinir');
+      if (senha.length < 8) {
+        mostrarAviso(avisoEl, 'A senha precisa ter ao menos 8 caracteres.', 'erro');
+        botao.disabled = false;
+        return;
+      }
+
+      const resultado = await chamarGerenciarUsuarios({
+        acao: 'redefinir_senha',
+        user_id: document.getElementById('redefinir-user-id').value,
+        senha,
+      });
+
+      botao.disabled = false;
+      if (!resultado.ok) {
+        mostrarAviso(avisoEl, 'Não foi possível redefinir a senha.', 'erro');
+        return;
+      }
+      mostrarAviso(avisoEl, `Senha redefinida: ${senha} — anote agora, ela não aparece de novo.`, 'ok');
     });
 
     verificarSessao();

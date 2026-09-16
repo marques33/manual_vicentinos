@@ -572,9 +572,26 @@
       <div class="area-usuario">
         <span><i class="fa-solid fa-user-check" aria-hidden="true"></i>
           Conectado como <strong id="usuario-nome"></strong></span>
+        <button type="button" class="btn-sair" id="btn-alterar-senha">
+          <i class="fa-solid fa-key" aria-hidden="true"></i> Alterar senha
+        </button>
         <button type="button" class="btn-sair" id="btn-sair">
           <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
         </button>
+      </div>
+
+      <div class="login-card" id="painel-alterar-senha" style="max-width:430px; margin:0 auto 34px;" hidden>
+        <h2 style="font-size:1.3rem;">Alterar minha senha</h2>
+        <form id="form-alterar-senha">
+          <div class="campo">
+            <label for="nova-senha">Nova senha</label>
+            <input type="text" id="nova-senha" minlength="8" required>
+          </div>
+          <button type="submit" class="btn-ouro">
+            <i class="fa-solid fa-check" aria-hidden="true"></i> Salvar nova senha
+          </button>
+          <p class="aviso-login" id="aviso-alterar-senha" role="status"></p>
+        </form>
       </div>
 
       <div class="area-head">
@@ -734,6 +751,36 @@
     });
 
     document.getElementById('btn-sair').addEventListener('click', sair);
+
+    // ------------------------------------------------------------------------
+    // Alterar a própria senha. Diferente de criar usuário ou redefinir senha
+    // de terceiro, isto não precisa de service_role nem de Edge Function:
+    // sb.auth.updateUser() vale para a sessão já autenticada de qualquer
+    // confrade/admin, sobre a própria conta.
+    // ------------------------------------------------------------------------
+    const painelSenha = document.getElementById('painel-alterar-senha');
+    document.getElementById('btn-alterar-senha').addEventListener('click', () => {
+      painelSenha.hidden = !painelSenha.hidden;
+      if (!painelSenha.hidden) document.getElementById('nova-senha').focus();
+    });
+
+    document.getElementById('form-alterar-senha').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const avisoSenha = document.getElementById('aviso-alterar-senha');
+      const campoSenha = document.getElementById('nova-senha');
+      avisoSenha.textContent = '';
+
+      if (campoSenha.value.length < 8) {
+        avisoSenha.textContent = 'A senha precisa ter ao menos 8 caracteres.';
+        return;
+      }
+
+      const { error } = await sb.auth.updateUser({ password: campoSenha.value });
+      campoSenha.value = '';
+      avisoSenha.textContent = error
+        ? 'Não foi possível alterar a senha. Tente novamente.'
+        : 'Senha alterada com sucesso.';
+    });
 
     if (CONFIGURADO) {
       decidirTela();
