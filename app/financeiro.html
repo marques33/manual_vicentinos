@@ -186,6 +186,7 @@
           <div class="campo">
             <label for="cc-data">Data do extrato *</label>
             <input type="date" id="cc-data" required>
+            <span class="dica">Use a data de hoje — o sistema compara com o saldo calculado agora.</span>
           </div>
           <div class="campo">
             <label for="cc-saldo">Saldo no extrato do BRB (R$) *</label>
@@ -266,6 +267,7 @@
 
       document.getElementById('lf-data').valueAsDate = new Date();
       document.getElementById('cc-data').valueAsDate = new Date();
+      document.getElementById('cc-data').max = new Date().toISOString().slice(0, 10);
 
       await carregarCategorias();
       await carregarSaldoEExtrato();
@@ -406,12 +408,16 @@
       const alvo = document.getElementById('resultado-busca-familia');
       if (termo.length < 3) { alvo.innerHTML = '<span class="dica">Digite ao menos 3 caracteres.</span>'; return; }
 
-      const { data: familias } = await sb.from('familias')
-        .select('id, endereco_bairro, codigo')
-        .or('endereco_bairro.ilike.%' + termo + '%,codigo.ilike.%' + termo + '%')
-        .limit(10);
+      const padrao = '%' + termo + '%';
+      const [{ data: porBairro }, { data: porCodigo }] = await Promise.all([
+        sb.from('familias').select('id, endereco_bairro, codigo').ilike('endereco_bairro', padrao).limit(10),
+        sb.from('familias').select('id, endereco_bairro, codigo').ilike('codigo', padrao).limit(10),
+      ]);
+      const familias = [...(porBairro || []), ...(porCodigo || [])]
+        .filter((f, i, arr) => arr.findIndex(x => x.id === f.id) === i)
+        .slice(0, 10);
 
-      if (!familias?.length) { alvo.innerHTML = '<span class="dica">Nenhuma família encontrada.</span>'; return; }
+      if (!familias.length) { alvo.innerHTML = '<span class="dica">Nenhuma família encontrada.</span>'; return; }
       alvo.innerHTML = familias.map(f =>
         '<button type="button" class="btn btn-neutro btn-pequeno" data-acao="listar-intervencoes" data-familia="' + f.id + '" style="margin:3px 6px 3px 0;">' +
           escapar(f.endereco_bairro || 'Sem bairro') + (f.codigo ? ' · ' + escapar(f.codigo) : '') +
