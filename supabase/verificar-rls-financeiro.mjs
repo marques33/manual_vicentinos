@@ -89,7 +89,7 @@ const negado = (r) => r.status === 401 || r.status === 403 || r.status === 404 |
 const TABELAS = ["categorias_financeiras", "lancamentos_financeiros",
   "saldo_inicial_financeiro", "conciliacoes_financeiras"];
 const idFalso = "00000000-0000-0000-0000-000000000000";
-const CAMINHO_TESTE = "verificacao/arquivo-de-teste.txt";
+const CAMINHO_TESTE = "verificacao/arquivo-de-teste.pdf";
 const CONTEUDO_TESTE = "arquivo descartável de verificar-rls-financeiro.mjs";
 
 // ---------------------------------------------------------------------------
@@ -254,7 +254,7 @@ if (TESOUREIRO_EMAIL && TESOUREIRO_SENHA) {
 
     const upload = await chamar(`/object/comprovantes-financeiros/${CAMINHO_TESTE}`, {
       base: STORAGE, token: jwt, metodo: "POST",
-      extra: { "content-type": "text/plain" },
+      extra: { "content-type": "application/pdf" },
     });
     // upload via fetch simples de texto puro (sem multipart) — o endpoint
     // aceita o corpo bruto quando content-type não é multipart/form-data.
