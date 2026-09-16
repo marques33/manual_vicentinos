@@ -674,3 +674,52 @@ ativo em outra conta, com o schema completo mas nenhum dado real (a julgar pelo
 que o usuário informou). Ninguém mais deveria escrever nele — nenhum serviço
 aponta mais para essa URL. Fica como candidato a exclusão futura, a critério do
 usuário, depois de confirmar que não há nada a recuperar de lá.
+
+---
+
+# 2026-09-16 · Fase 1 de 3 — Perfis de acesso e gerenciamento de usuários
+
+## Contexto
+Pedido do usuário: trocar a própria senha, adicionar novos usuários e trocar
+senha de terceiros direto pela plataforma, com perfis de acesso diferentes —
+confrade vê o básico, administrador vê páginas de gestão extras. Escolhido
+fazer em 3 fases (esta é a 1ª); dashboard de efetividade (fase 2) e controle
+orçamentário (fase 3) ficam para planos futuros.
+
+## Feito
+- Conta real de administrador criada: `renanmrqs32@gmail.com`, em
+  `public.admins` e `public.confrades` (papel `administrador`).
+- Edge Function `supabase/functions/gerenciar-usuarios` (nova, `verify_jwt =
+  true`): ações `listar`, `criar_usuario`, `redefinir_senha`. Confere
+  `is_admin()` com o JWT de quem chama antes de tocar na chave de serviço.
+- `admin.html`: aba "Usuários" (só aparece se `is_admin()`) — lista usuários,
+  formulário para criar vicentino/administrador com gerador de senha, e
+  redefinição de senha por usuário.
+- `area-vicentino.html`: "Alterar minha senha" — self-service para qualquer
+  confrade/admin logado, sem precisar da Edge Function (usa
+  `sb.auth.updateUser()` direto).
+
+## Verificado ao vivo (Chrome DevTools MCP + chamadas diretas à function)
+- `listar`/`criar_usuario`/`redefinir_senha` funcionam como admin; a mesma
+  chamada como confrade comum recebe 403 (`acesso_negado`).
+- Confrade comum não vê a aba "Usuários" no Painel.
+- Criar usuário pela UI → login com a senha gerada funciona.
+- Redefinir senha pela UI → login com a senha antiga falha, com a nova
+  funciona.
+- "Alterar minha senha" → login com a senha antiga falha, com a nova funciona.
+- Console sem erros nas páginas testadas.
+- Todas as contas de teste (CLI e UI) foram apagadas ao final.
+
+## Pendência conhecida (não bloqueia esta fase)
+Site URL / Redirect URLs / "Enable sign ups" do novo projeto Supabase
+(`zyzyttkayblvgnfqkapq`) provavelmente ainda estão nos valores padrão de
+desenvolvimento (mesma pendência que já existiu no projeto antigo). Não afeta
+esta fase porque nenhum fluxo daqui depende de e-mail. Corrigir manualmente no
+Dashboard (Authentication → URL Configuration / Providers) quando for cuidar
+de convites por e-mail ou de bloquear self-signup público.
+
+## Próximos passos
+- Fase 2: dashboard de efetividade (dados do Prontuário: famílias,
+  necessidades, intervenções).
+- Fase 3: controle orçamentário (schema novo do zero — precisa de conversa
+  sobre categorias, quem lança, etc.).
