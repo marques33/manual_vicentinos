@@ -10,3 +10,6 @@ social/instagram-launch/*/slides-png/
 # Estado local da CLI do Supabase (projeto ligado, versões, URL do pooler).
 # É por máquina, não por repositório.
 supabase/.temp/
+
+# Worktrees isolados de execução de planos (superpowers), scratch local.
+.worktrees/
