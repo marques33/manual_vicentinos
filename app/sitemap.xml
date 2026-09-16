@@ -22,16 +22,12 @@
     <priority>0.8</priority>
   </url>
   <!-- oracoes.html fica fora do sitemap: é "noindex" por conter dado pessoal. -->
+  <!-- manual.html fica fora do sitemap desde 16/09/2026: é "noindex" (área
+       interna, atrás de login) desde que saiu do menu público. -->
   <url>
     <loc>https://manual-vicentinos.vercel.app/mural.html</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://manual-vicentinos.vercel.app/manual.html</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>

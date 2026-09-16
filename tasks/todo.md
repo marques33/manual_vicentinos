@@ -604,3 +604,73 @@ ficam para ciclos de planejamento seguintes. Plano completo em
 - Configurar SMTP próprio (Resend/SendGrid/etc.) antes de convidar mais de ~2 pessoas na
   mesma hora — o limite embutido do Supabase (2 e-mails/h) não escala para isso.
 - Repetir a checagem de Site URL/Redirect URLs se o domínio de produção mudar.
+
+---
+
+# 2026-09-16 · Acesso único pela Área do Vicentino
+
+## Objetivo
+O Manual de Direitos sai do menu público. A "Área do Vicentino" passa a ser a
+porta: clicar nela leva direto à tela de login e, autenticado uma única vez, o
+confrade acessa livremente Manual, Painel de Moderação e Prontuário — sem senha
+diferente para cada um.
+
+## Decisão do usuário (16/09/2026)
+Confrade ativo acessa tudo, inclusive moderação. Consequência aceita e declarada:
+todo confrade cadastrado passa a ver os pedidos de oração ainda não moderados,
+que contêm dado pessoal de terceiros.
+
+## Plano
+- [x] 1. Migração `is_membro_area()` = `is_admin() OR is_confrade_ativo()`; políticas
+      de moderação de `mural_posts` e `pedidos_oracao` passam a usá-la.
+      **Aplicar ANTES do deploy do front** — o gate do front chama essa RPC.
+- [x] 2. `app/assets/area-vicentino.js` — módulo único de sessão (cliente, gate,
+      redirecionamento com `?destino=`, sair).
+- [x] 3. `area-vicentino.html` vira a tela de login + hub pós-login.
+- [x] 4. `manual.html` — remover usuário/senha fixos no código; passar a usar a sessão.
+- [x] 5. `prontuario.html`, `prontuario-familia.html`, `admin.html` — remover os três
+      formulários de login próprios; gate compartilhado + link de volta ao hub.
+- [x] 6. Menus de `index`, `mural`, `oracoes`, `eventos`, `area-vicentino`: remover
+      "Manual de Direitos"; "Área do Vicentino" vira o botão destacado.
+- [x] 7. Links públicos do `index` para o manual apontam para a Área.
+- [x] 8. `sitemap.xml` sem `manual.html`; `manual.html` vira `noindex`.
+- [x] 9. Verificação local + Playwright em produção após o deploy.
+
+## Critérios de aceitação
+- [x] Menu público não cita o Manual em nenhuma página.
+- [x] `area-vicentino.html` sem sessão mostra o login; com sessão mostra o hub.
+- [x] Um login libera as três ferramentas sem novo pedido de senha.
+- [x] Acessar `manual.html`/`admin.html`/`prontuario*.html` sem sessão redireciona
+      para a Área (com retorno ao destino após entrar).
+- [x] Nenhuma senha em texto no código do front.
+
+## Concluído em 16/09/2026 — commits `e15610b` e `3735326`
+
+Retomando de onde a sessão anterior parou (itens 1-4 já estavam escritos mas não
+commitados nem publicados): terminei a migração de `admin.html`, `prontuario.html`
+e `prontuario-familia.html` para o gate único (item 5), ajustei os links públicos
+restantes do `index.html` e o `sitemap.xml` (itens 7-8), e apliquei tudo em produção.
+
+**Imprevisto descoberto no meio do caminho:** o projeto Supabase original
+(`cqkymbseyrebmsufimni`) ficou associado a uma conta/organização diferente da que
+tinha acesso pela CLI nesta máquina. Não havia como confirmar se a migration
+`20260916120000` já tinha sido aplicada nele, nem aplicar caso não tivesse.
+Decisão do usuário: recriar o projeto do zero numa conta com CLI configurada
+(`zyzyttkayblvgnfqkapq`), já que não havia dado real de prontuário até então.
+Passos feitos: `supabase projects create`, `supabase link`, `supabase db push`
+(as 13 migrations, incluindo a de acesso único), `supabase secrets set IP_PEPPER`
+e `supabase functions deploy enviar-pedido`, e atualização de
+`app/assets/supabase-client.js` com a nova URL/anon key.
+
+**Verificação de ponta a ponta** (Chrome DevTools MCP, em produção): criada uma
+conta de confrade descartável via Admin API (service_role obtida só em memória
+pela CLI, nunca gravada em arquivo), login único em `area-vicentino.html`,
+confirmado acesso direto — sem pedir senha de novo — a `prontuario.html`,
+`admin.html` e `manual.html`, e logout devolvendo à tela de login. Conta de
+teste apagada ao final (`auth.users` + `confrades`).
+
+**Risco residual:** o projeto Supabase antigo (`cqkymbseyrebmsufimni`) continua
+ativo em outra conta, com o schema completo mas nenhum dado real (a julgar pelo
+que o usuário informou). Ninguém mais deveria escrever nele — nenhum serviço
+aponta mais para essa URL. Fica como candidato a exclusão futura, a critério do
+usuário, depois de confirmar que não há nada a recuperar de lá.
