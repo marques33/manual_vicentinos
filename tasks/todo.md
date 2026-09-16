@@ -580,3 +580,27 @@ ficam para ciclos de planejamento seguintes. Plano completo em
   institucional pendente, documentada no plano.
 - Sub-projetos de Atas de Reunião e Controle Financeiro ainda não planejados.
 - Acesso da CLI do Supabase à conta certa precisa ser restaurado (ver achados acima).
+
+## Login de ponta a ponta confirmado (16/09/2026)
+
+- [x] Achado e corrigido: **Site URL do projeto Supabase ainda era `http://localhost:3000`**
+      (valor padrão de template), sem nenhuma Redirect URL cadastrada. Todo link de
+      e-mail de auth (redefinição de senha, magic link, convite) redirecionava para um
+      endereço local morto. Corrigido: Site URL → `https://manual-vicentinos.vercel.app`;
+      Redirect URL → `https://manual-vicentinos.vercel.app/**`.
+- [x] Achado: **limite de 2 e-mails/hora** no serviço de e-mail embutido do Supabase
+      (Authentication → Rate Limits). A tentativa manual do usuário + 2 reenvios meus
+      esgotaram a cota da hora. Não configuramos SMTP próprio agora (fica como
+      pendência caso mais confrades precisem ser convidados por e-mail no futuro).
+- [x] Contorno usado: senha definida diretamente via SQL
+      (`extensions.crypt('...', extensions.gen_salt('bf'))` em `auth.users.encrypted_password`
+      — `pgcrypto` está instalada no schema `extensions` neste projeto, não em `public`).
+      Senha escolhida pelo próprio usuário.
+- [x] **Login testado ao vivo em produção**: `prontuario.html` autentica, mostra "Renan
+      Marques" no topo, formulário de nova família e lista (vazia, estado correto) sem
+      nenhum erro no console.
+
+## Pendências para quando mais vicentinos forem cadastrados
+- Configurar SMTP próprio (Resend/SendGrid/etc.) antes de convidar mais de ~2 pessoas na
+  mesma hora — o limite embutido do Supabase (2 e-mails/h) não escala para isso.
+- Repetir a checagem de Site URL/Redirect URLs se o domínio de produção mudar.
