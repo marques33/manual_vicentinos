@@ -63,7 +63,7 @@ async function chamar(caminho, { token = ANON, metodo = "GET", corpo, extra = {}
     headers: {
       apikey: ANON,
       Authorization: `Bearer ${token}`,
-      "content-type": "application/json",
+      ...(corpo ? { "content-type": "application/json" } : {}),
       ...extra,
     },
     body: corpo ? JSON.stringify(corpo) : undefined,
