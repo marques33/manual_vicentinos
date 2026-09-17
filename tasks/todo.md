@@ -798,3 +798,120 @@ PID no momento do `&`/`run_in_background` e matar só ele.
 ## Próximos passos
 - Fase 3: controle orçamentário (schema novo do zero — precisa de conversa
   sobre categorias, quem lança, etc.), conforme já combinado.
+
+---
+
+# 2026-09-16 · Fase 3 de 3 — Controle Orçamentário
+
+## Contexto
+Última das 3 fases (perfis de acesso → dashboard de efetividade → controle
+orçamentário). Schema novo do zero: entradas/saídas da conta poupança BRB da
+Conferência, categorias abertas, conciliação periódica, comprovantes em
+Storage privado. Executado via Subagent-Driven Development (um subagente
+implementador + um revisor por task, revisão final de branch inteira antes
+do merge) — plano e spec em `docs/superpowers/plans/` e
+`docs/superpowers/specs/`.
+
+## Feito
+- 6 migrações (`20260916150000` a `20260916150500`): `categorias_financeiras`
+  (seed de 8 categorias), `pode_lancar_financeiro()` (RBAC — tesoureiro ou
+  administrador), `lancamentos_financeiros` (soft delete, vínculo opcional
+  com `intervencoes`, comprovante opcional), `saldo_inicial_financeiro`
+  (singleton), `conciliacoes_financeiras` + `vw_saldo_financeiro` (saldo
+  corrente), bucket privado `comprovantes-financeiros` (primeiro uso de
+  Storage no projeto — só tesoureiro/admin lê ou escreve, mais restrito que
+  o extrato).
+- `app/financeiro.html`: saldo, extrato, lançamento (com upload de
+  comprovante e busca/vínculo com intervenção do Prontuário), categorias,
+  conciliação. Leitura ampla (`is_confrade_ativo()`), escrita restrita
+  (`pode_lancar_financeiro()`), com o gate replicado na UI (esconde as
+  seções de edição, não só desabilita).
+- `app/financeiro-relatorio.html`: 2 gráficos Chart.js (entradas/saídas por
+  mês, saldo acumulado), leitura ampla, 100% client-side.
+- `supabase/verificar-rls-financeiro.mjs`: script de verificação das duas
+  camadas de RLS (leitura ampla vs. escrita restrita) e do bucket.
+- Integração no hub (`area-vicentino.html`/`area-vicentino.js`) e
+  documentação em `supabase/README.md`.
+
+## Achados de segurança corrigidos (não silenciosos)
+- **Crítico, corrigido antes de qualquer deploy:** `vw_saldo_financeiro`
+  nasceu sem `security_invoker = true` nem `revoke`/`grant` próprio — a view
+  rodaria com os direitos do dono (bypass de RLS), expondo o saldo real da
+  Conferência a qualquer `authenticated`, RBAC ou não. Corrigido antes da
+  Task 6 (aplicar em produção).
+- **Crítico, fora do escopo desta fase mas real e já em produção:** o mesmo
+  defeito existia em `vw_renda_familiar` (Fase 1/Prontuário, já publicada).
+  Confirmado ao vivo com sonda anônima (`GET` retornava 200 em vez de 401,
+  igual às tabelas revogadas) antes de tocar em qualquer coisa. Corrigido,
+  verificado (confrade ativo continua lendo, anon agora barrado) e já
+  mesclado/publicado em `main` separadamente, com aprovação prévia.
+- Revisão final de branch (modelo mais capaz, sozinho, olhando as 11 tasks
+  juntas) achou mais 3 problemas reais que a revisão tarefa-por-tarefa não
+  pegaria por construção: injeção de filtro PostgREST na busca de família
+  (bug funcional, não escalada de privilégio), uma conciliação com data
+  retroativa podia mostrar "dinheiro sumido" falso (o sistema comparava o
+  saldo de agora contra uma data passada), e o próprio script de verificação
+  tinha 2 classes de asserção que "passavam" pelo motivo errado (testava
+  contra um arquivo que ainda não existia; INSERT negado com corpo vazio
+  falhava por NOT NULL antes de a RLS ser avaliada) — o "38/38" original
+  não provava o que dizia provar. Todos corrigidos e re-revisados.
+- A própria correção do script introduziu uma nova falha do mesmo tipo
+  (upload negado do anon passou a mirar no arquivo que a correção anterior
+  já tinha criado, dando 409 em vez de testar a RLS de verdade) — pega pela
+  re-revisão, corrigida na hora. Rodada final ao vivo: **41/41 checagens,
+  0 falhas**, contra produção, com contas descartáveis.
+
+## Verificado ao vivo
+- Schema aplicado em produção (`zyzyttkayblvgnfqkapq`) via `supabase db push`
+  (sempre `--dry-run` primeiro). Um bug de ordem (função referenciada por
+  uma policy antes de ser definida no mesmo arquivo) só apareceu no `db
+  push` de verdade — corrigido, reaplicado.
+- QA visual: extensão Claude in Chrome não conectou nesta sessão; a pedido
+  do usuário, QA feito com Playwright (instalado na hora,
+  `npx playwright install chromium`) contra a produção
+  (`manual-vicentinos.vercel.app`). **35/35 checagens, 0 falhas, 0 erros de
+  console**, confrade comum e tesoureiro, duas larguras de tela. Comprovante
+  verificado na camada de rede (interceptar a signed URL e buscá-la de
+  verdade), não só "abriu uma aba" — headless não renderiza PDF, então
+  confiar no popup teria sido falso positivo.
+- Toda massa de teste (contas de auth, família/pessoa/intervenção fixture do
+  Prontuário, categoria/lançamentos/conciliação de teste) apagada ao final e
+  confirmada via API — inclusive um caso onde `ON DELETE RESTRICT` em
+  `criado_por` exigiu apagar o lançamento de teste antes de conseguir apagar
+  a conta de auth (soft delete não é hard delete: a linha continua na
+  tabela até alguém apagar de verdade).
+
+## Pendência — saldo inicial real
+`saldo_inicial_financeiro` está sem linha (o usuário optou por cadastrar o
+valor real da conta BRB depois, não durante a Task 6). `vw_saldo_financeiro`
+degrada para saldo_inicial = 0 nesse caso, o que é seguro mas indistinguível
+de "saldo zero de verdade" na UI — cadastrar assim que tiver o valor e a
+data (SQL pronto em `supabase/README.md`, seção "Controle Orçamentário").
+
+## Riscos residuais (registrados, não corrigidos — decisão consciente)
+- `comprovante_path` (nome do arquivo original, sanitizado mas legível) é
+  visível a qualquer confrade ativo via `select('*')` em
+  `lancamentos_financeiros`, mesmo o arquivo em si sendo só para
+  tesoureiro/admin — um nome de arquivo pode conter dado de terceiro (ex.:
+  nome em comprovante de PIX). Correção real exige grant por coluna (tem
+  precedente em `pedidos_oracao`) e tirar as duas páginas de `select('*')`.
+- `criado_por`/`atualizado_por`/`removido_por`/`conciliado_por` são
+  preenchidos pelo client, não amarrados a `auth.uid()` no banco — um
+  tesoureiro poderia atribuir um lançamento a outro confrade. Mesmo padrão
+  do resto do projeto (não é regressão desta fase), mas este módulo é o que
+  mais depende de trilha de auditoria.
+- `financeiro-relatorio.html` lê `lancamentos_financeiros` sem `.limit()`/
+  `.order()` — o teto padrão de 1000 linhas da API do Supabase truncaria o
+  gráfico de saldo acumulado silenciosamente em alto volume. Anos de
+  distância no volume desta Conferência.
+- Upload de comprovante acontece antes do INSERT do lançamento (um lançamento
+  rejeitado deixa arquivo órfão no bucket); editar um lançamento substitui a
+  referência ao comprovante mas nunca apaga o arquivo antigo.
+- Pequenos: opção de categoria desativada some do formulário ao editar um
+  lançamento antigo que a usava (falha segura, mas sem explicação na tela);
+  extrato limitado a 500 linhas sem indicação visual.
+
+## Próximos passos
+- Cadastrar o saldo inicial real da conta BRB quando o usuário informar.
+- Nenhuma Fase 4 combinada até agora — as 3 fases planejadas estão
+  concluídas.
