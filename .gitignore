@@ -13,3 +13,24 @@ supabase/.temp/
 
 # Worktrees isolados de execução de planos (superpowers), scratch local.
 .worktrees/
+
+# Bytecode do Python (build_pdf_abnt.py, fix_textual.py e afins).
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Fontes legais primarias baixadas para consulta (vade mecum, CF/88, ECA,
+# LOAS...). ~40 MB, regeneraveis a partir das fontes oficiais. Consultadas
+# pelas skills, nunca editadas pelo projeto.
+biblioteca/
+
+# PDFs gerados por build_pdf_abnt.py. Artefato de build, nao fonte.
+Manual_Vicentino_ABNT.pdf
+Manual_Vicentino_ABNT_v3.pdf
+Manual_Vicentino_ABNT_v3.tex
+Manual_Vicentino_Completo.pdf
+
+# Fotos originais (paroquia, almoco, capturas de tela). O que vai para o site
+# e a versao otimizada em app/assets/.
+*.jpg
+*.jpeg
