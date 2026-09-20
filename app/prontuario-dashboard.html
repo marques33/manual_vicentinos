@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/prontuario.css">
+  <link rel="stylesheet" href="assets/ui-comum.css">
   <style>
     /* ===== Extras só deste painel — cartões de número e caixas de gráfico. ===== */
     .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
@@ -137,6 +138,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <script type="module">
     import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+    import { montarNavegacaoComPapel } from './assets/ui-comum.js';
 
     const telaLogin = document.getElementById('tela-login');
     const telaRestrito = document.getElementById('tela-restrito');
@@ -169,6 +171,8 @@
     async function verificarSessao() {
       const acesso = await exigirAcesso();
       if (!acesso) return;
+
+      await montarNavegacaoComPapel(sb);
 
       document.getElementById('usuario-nome').textContent = acesso.nome;
       topoUsuario.hidden = false;

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/prontuario.css">
+  <link rel="stylesheet" href="assets/ui-comum.css">
   <style>
     /* ===== Extras só desta página — saldo em destaque e tabela do extrato. ===== */
     .saldo-card { padding: 24px 26px; margin-bottom: 24px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-wrap: wrap; gap: 28px; align-items: baseline; }
@@ -211,6 +212,7 @@
   <script type="module">
     import { escapar } from './assets/supabase-client.js';
     import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+    import { montarNavegacaoComPapel } from './assets/ui-comum.js';
 
     const telaLogin = document.getElementById('tela-login');
     const telaPainel = document.getElementById('tela-painel');
@@ -252,6 +254,8 @@
     async function verificarSessao() {
       const acesso = await exigirAcesso();
       if (!acesso) return;
+
+      await montarNavegacaoComPapel(sb);
       usuario = acesso.session.user;
 
       document.getElementById('usuario-nome').textContent = acesso.nome;
