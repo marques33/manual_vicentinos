@@ -102,6 +102,74 @@ export function formatarData(iso) {
   return d.toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" });
 }
 
+/**
+ * Erro do Postgres/PostgREST traduzido para uma frase que diz o que fazer.
+ *
+ * Existe porque a tela mostrava a mensagem crua do banco. Um confrade que
+ * digitasse o CPF com ponto lia `new row for relation "pessoas" violates check
+ * constraint "pessoas_cpf_check"` — que não diz onde está o erro nem como
+ * corrigir, e por isso virou o bug report "não consigo adicionar pessoas".
+ *
+ * A busca é pelo NOME DA CONSTRAINT dentro da mensagem, não pelo código: o
+ * mesmo `23514` cobre toda restrição CHECK do banco, e só o nome distingue
+ * "CPF incompleto" de "intenção curta demais". O código é o segundo recurso.
+ */
+const MENSAGEM_POR_CONSTRAINT = {
+  pessoas_cpf_check:
+    'O CPF precisa ter exatamente 11 dígitos. Confira se não faltou algum número.',
+  pessoas_nome_completo_check:
+    'O nome completo precisa ter entre 3 e 150 caracteres.',
+  familias_codigo_key:
+    'Já existe uma família cadastrada com esse código. Use outro para diferenciar.',
+  pedidos_oracao_consentimento_check:
+    'O pedido só pode ser publicado com o consentimento de quem pediu.',
+  pedidos_oracao_aprovacao_coerente:
+    'Um pedido aprovado precisa de data de aprovação, e só pedido aprovado pode ser privilegiado da semana.',
+  pedidos_oracao_nome_check:
+    'O nome deve ter de 2 a 40 letras, sem números nem pontuação. Deixe em branco para pedido anônimo.',
+  pedidos_oracao_intencao_check:
+    'A intenção precisa ter entre 10 e 280 caracteres.',
+  mural_posts_titulo_check: 'O título precisa ter entre 3 e 120 caracteres.',
+  mural_posts_resumo_check: 'O resumo precisa ter entre 20 e 800 caracteres.',
+  mural_posts_organizacao_check: 'A organização precisa ter entre 2 e 120 caracteres.',
+  mural_posts_link_externo_check:
+    'O link precisa começar com https:// e não pode conter espaços.',
+};
+
+const MENSAGEM_POR_CODIGO = {
+  23505: 'Já existe um registro com esse valor, e ele não pode se repetir.',
+  23503: 'Este registro depende de outro que não existe (ou foi removido).',
+  23514: 'Algum campo está fora do formato aceito. Revise os dados e tente de novo.',
+  23502: 'Falta preencher um campo obrigatório.',
+  '22P02': 'Um dos valores enviados está em formato inválido.',
+  42501: 'Seu acesso não permite esta operação. Fale com um administrador da Conferência.',
+  PGRST301: 'Sua sessão expirou. Entre novamente para continuar.',
+};
+
+export function mensagemDeErro(error, alternativa = 'Não foi possível concluir a operação.') {
+  if (!error) return '';
+
+  const texto = `${error.message ?? ''} ${error.details ?? ''} ${error.hint ?? ''}`;
+  for (const [constraint, frase] of Object.entries(MENSAGEM_POR_CONSTRAINT)) {
+    if (texto.includes(constraint)) return frase;
+  }
+
+  const porCodigo = MENSAGEM_POR_CODIGO[error.code];
+  if (porCodigo) return porCodigo;
+
+  // Falha de rede não tem `code` do Postgres e costuma vir como TypeError.
+  if (error.message && /fetch|network|failed to/i.test(error.message)) {
+    return 'Não foi possível falar com o servidor. Verifique sua conexão e tente de novo.';
+  }
+
+  return error.message || alternativa;
+}
+
+/** Mantém só os dígitos — para CPF/telefone digitados com ponto, traço ou espaço. */
+export function somenteDigitos(texto) {
+  return String(texto ?? '').replace(/\D+/g, '');
+}
+
 /** Só aceita http(s) — barra javascript: e data: antes de virar href. */
 export function linkSeguro(url) {
   if (!url) return null;

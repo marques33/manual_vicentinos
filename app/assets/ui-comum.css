@@ -1,0 +1,194 @@
+/* ============================================================================
+   Componentes comuns às páginas internas (Área do Vicentino).
+
+   Dois componentes moram aqui:
+
+   1. A NAVEGAÇÃO do topo. Até 19/09/2026 as seis páginas internas tinham uma
+      barra `.topo` sem um único link: quem entrava no Prontuário só voltava ao
+      hub pelo botão do navegador.
+
+   2. A NOTIFICAÇÃO (toast). O cadastro avisava o resultado num texto discreto
+      ao pé do formulário — ou, no caso da família, não avisava nada, apenas
+      navegava. E o erro de salvar pessoa usava `alert()`, que trava a página.
+
+   Tudo aqui é prefixado com `vic-` de propósito: `admin.html` não carrega
+   `prontuario.css` e tem o próprio `<style>` inline, então nomes genéricos
+   (.nav, .toast) colidiriam. As variáveis têm valor de reserva porque nem toda
+   página define a paleta no mesmo lugar.
+   ============================================================================ */
+
+/* ===== NAVEGAÇÃO ===== */
+
+.vic-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.vic-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 6px;
+  color: rgba(245, 230, 211, 0.85);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition, 0.25s ease);
+}
+
+.vic-nav a:hover {
+  color: var(--gold-bright, #E0BE7E);
+  background: rgba(201, 165, 103, 0.14);
+}
+
+.vic-nav a:focus-visible {
+  outline: 2px solid var(--gold-deep, #A8843E);
+  outline-offset: 2px;
+}
+
+/* A página em que já se está: marcada por cor e por uma barra embaixo, para
+   não depender só de cor (contraste/daltonismo). */
+.vic-nav a[aria-current="page"] {
+  color: var(--gold-bright, #E0BE7E);
+  background: rgba(201, 165, 103, 0.18);
+  box-shadow: inset 0 -2px 0 var(--gold, #C9A567);
+}
+
+/* O hub é o destino de volta — recebe o destaque de ação primária. */
+.vic-nav a.vic-nav-hub {
+  color: var(--gold-bright, #E0BE7E);
+  border: 1px solid rgba(201, 165, 103, 0.4);
+}
+
+.vic-nav a.vic-nav-hub:hover {
+  background: rgba(201, 165, 103, 0.22);
+}
+
+.vic-nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: rgba(245, 230, 211, 0.14);
+  border: 1px solid rgba(201, 165, 103, 0.35);
+  border-radius: 6px;
+  color: var(--cream, #F5E6D3);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* A barra do topo passa a ter três blocos (marca · navegação · usuário).
+   `.topo-inner` já é flex nas duas folhas de estilo; aqui só se garante que a
+   navegação possa quebrar para a própria linha em tela estreita. */
+.vic-topo-nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .vic-topo-nav { order: 3; flex-basis: 100%; justify-content: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .vic-nav-toggle { display: inline-flex; }
+  .vic-topo-nav { justify-content: center; }
+  .vic-nav {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 2px;
+    padding-top: 10px;
+  }
+  .vic-nav.vic-aberta { display: flex; }
+  .vic-nav a { padding: 10px 12px; }
+}
+
+/* ===== AUXILIARES ===== */
+
+/* Um `<a class="btn">` vinha sublinhado pelo navegador — o projeto já usava o
+   padrão (o botão "Famílias" do topo), só não tinha a regra. */
+a.btn { text-decoration: none; }
+
+/* Fila de botões que quebra em tela estreita em vez de estourar a largura. */
+.linha-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== NOTIFICAÇÃO (TOAST) ===== */
+
+.vic-toasts {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(380px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.vic-toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 13px 15px;
+  border-radius: var(--radius, 10px);
+  border-left: 4px solid var(--ok, #2E6B4F);
+  background: #fff;
+  color: var(--text, #2A1B14);
+  box-shadow: 0 10px 34px rgba(74, 24, 24, 0.20);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  pointer-events: auto;
+  animation: vic-toast-entra 0.22s ease-out;
+}
+
+.vic-toast i { margin-top: 2px; color: var(--ok, #2E6B4F); flex-shrink: 0; }
+.vic-toast-texto { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+
+.vic-toast.vic-erro { border-left-color: var(--erro, #9B2C22); }
+.vic-toast.vic-erro i { color: var(--erro, #9B2C22); }
+
+.vic-toast-fechar {
+  background: none;
+  border: none;
+  color: var(--text-muted, #9A8470);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 2px 4px;
+  flex-shrink: 0;
+}
+
+.vic-toast-fechar:hover { color: var(--text, #2A1B14); }
+
+.vic-toast.vic-saindo { animation: vic-toast-sai 0.2s ease-in forwards; }
+
+@keyframes vic-toast-entra {
+  from { opacity: 0; transform: translateX(18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes vic-toast-sai {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(18px); }
+}
+
+/* Quem pediu menos animação recebe a notificação sem movimento — ela continua
+   aparecendo, que é o que importa. */
+@media (prefers-reduced-motion: reduce) {
+  .vic-toast, .vic-toast.vic-saindo { animation: none; }
+}
