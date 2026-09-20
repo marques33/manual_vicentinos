@@ -30,7 +30,9 @@ Manual_Vicentino_ABNT_v3.pdf
 Manual_Vicentino_ABNT_v3.tex
 Manual_Vicentino_Completo.pdf
 
-# Fotos originais (paroquia, almoco, capturas de tela). O que vai para o site
-# e a versao otimizada em app/assets/.
-*.jpg
-*.jpeg
+# Fotos originais (paroquia, almoco, capturas de tela) largadas na raiz. O que
+# vai para o site e a versao otimizada em app/assets/ — que fica de fora da
+# regra, senao uma imagem nova do site seria ignorada em silencio e daria 404.
+/*.jpg
+/*.jpeg
+!app/assets/
