@@ -4,9 +4,9 @@
 
 O Bolsa Família é um programa do governo federal que transfere dinheiro diretamente para famílias em situação de pobreza e extrema pobreza. O objetivo e garantir uma renda mínima para que essas famílias possam se alimentar e viver com mais dignidade.
 
-O programa está previsto na **Lei 14.601/2023** e garante um valor mínimo de **R$ 600,00 por família por mês**.
+O programa está previsto na **Lei 14.601/2023** e garante um valor mínimo de **R$ 691,00 por família por mês**.
 
-> **Em resumo:** Se sua família tem renda muito baixa, o governo deposita um valor todo mês na sua conta da Caixa Econômica Federal. O valor pode ser maior que R$ 600,00, dependendo de quantas crianças e gestantes tem na família.
+> **Em resumo:** Se sua família tem renda muito baixa, o governo deposita um valor todo mês na sua conta da Caixa Econômica Federal. O valor pode ser maior que R$ 691,00, dependendo de quantas crianças e gestantes tem na família.
 
 ---
 
@@ -25,24 +25,29 @@ Para receber o Bolsa Família, a família precisa cumprir **dois requisitos:**
 
 O valor do Bolsa Família depende do tamanho e da composição da família. Veja como funciona:
 
+> **Valores reajustados pelo Decreto 13.120, de 17/09/2026, com efeito a partir de
+> 1º de outubro de 2026.** Até 30/09/2026 ainda valem os valores anteriores
+> (Renda de Cidadania R$ 142,00, piso de R$ 600,00, Primeira Infância R$ 150,00 e
+> Variável Familiar R$ 50,00). A renda de até R$ 218,00 por pessoa **não mudou**.
+
 | Parcela do Benefício | Valor | Quem Recebe |
 |---------------------|-------|-------------|
-| **Renda de Cidadania** | R$ 142,00 | Cada pessoa da família |
-| **Complementar** | Variavel | Completa o valor até chegar ao mínimo de R$ 600,00 |
-| **Primeira Infância** | R$ 150,00 | Cada criança de 0 a 6 anos |
-| **Variavel Familiar** | R$ 50,00 | Cada gestante, nutriz (mãe que amamenta), criança ou adolescente de 7 a 17 anos |
-| **Extraordinario de Transição** | Variavel | Garante que ninguém receba menos do que recebia antes |
+| **Renda de Cidadania** | R$ 164,00 | Cada pessoa da família |
+| **Complementar** | Variável | Completa o valor até chegar ao mínimo de R$ 691,00 |
+| **Primeira Infância** | R$ 173,00 | Cada criança de 0 a 6 anos (até completar 7) |
+| **Variável Familiar** | R$ 58,00 | Cada gestante, nutriz (mãe que amamenta), criança ou adolescente de 7 a 17 anos |
+| **Extraordinário de Transição** | Variável | Garante que ninguém receba menos do que recebia antes |
 
 ### Exemplo Prático
 
-Uma família com mãe, pai, um bebe de 2 anos é uma criança de 8 anos:
+Uma família com mãe, pai, um bebê de 2 anos e uma criança de 8 anos:
 
-- 4 pessoas x R$ 142,00 (Renda de Cidadania) = **R$ 568,00**
-- 1 criança de 0 a 6 anos x R$ 150,00 (Primeira Infância) = **R$ 150,00**
-- 1 criança de 7 a 17 anos x R$ 50,00 (Variavel Familiar) = **R$ 50,00**
-- **Total: R$ 768,00 por mês**
+- 4 pessoas x R$ 164,00 (Renda de Cidadania) = **R$ 656,00**
+- 1 criança de 0 a 6 anos x R$ 173,00 (Primeira Infância) = **R$ 173,00**
+- 1 criança de 7 a 17 anos x R$ 58,00 (Variável Familiar) = **R$ 58,00**
+- **Total: R$ 887,00 por mês**
 
-> **Valor mínimo garantido:** Nenhuma família recebe menos de R$ 600,00 por mês. Se a soma das parcelas der menos que isso, o governo complementa até chegar a R$ 600,00.
+> **Valor mínimo garantido:** Nenhuma família recebe menos de R$ 691,00 por mês. Se a soma das parcelas der menos que isso, o governo complementa até chegar a R$ 691,00.
 
 ---
 
