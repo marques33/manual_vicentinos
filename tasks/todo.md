@@ -1,3 +1,56 @@
+# ONDE ESTAMOS (retomada — atualizado em 20/09/2026)
+
+Tudo que foi feito está commitado, no ar e verificado. Árvore limpa, `main`
+igual ao remoto, 21 migrations aplicadas, nada pendente.
+
+**Para retomar, leia nesta ordem:**
+1. Esta seção.
+2. `tasks/lessons.md` — as lições, principalmente as quatro de 19 e 20/09.
+3. `tasks/site-vs-manual.md` — o relatório do `content.js` (decisão em aberto).
+
+## Feito nesta rodada (19–20/09/2026)
+
+| # | Entrega | Verificação |
+|---|---|---|
+| 1 | Cadastro de pessoa voltou a funcionar (era o CPF digitado com ponto/traço) | Playwright 31/31 |
+| 2 | Notificações de sucesso/erro + botão "Concluir família" | idem |
+| 3 | Menu de navegação nas 6 páginas internas (+ correção do menu no celular) | idem |
+| 4 | Painel passou a registrar pedido de oração e privilegiado da semana | idem |
+| 5 | Acentuação do manual concluída (1.096 linhas) e 3 defeitos dela corrigidos | diff normalizado |
+| 6 | Telefone da Defensoria corrigido em 143 pontos (o antigo estava errado) | fontes oficiais |
+| 7 | Bolsa Família reajustado (Decreto 13.120/2026) com aviso de vigência | — |
+| 8 | Prontuário sem nenhum campo obrigatório (migration 021) | Playwright 16/16 |
+
+## Decisões em aberto (esperando o usuário)
+
+1. **Renda zero x renda não informada** — sem fonte de renda cadastrada, a tela
+   diz "Extrema pobreza" e "Prato Cheio — provável". Mesmo tipo de erro já
+   corrigido no BPC. Proposta ao final deste arquivo.
+2. **`app/content.js` fora de sincronia com os `.md`** — o site não lê os
+   arquivos do manual, carrega uma cópia embutida. Ver `tasks/site-vs-manual.md`;
+   há uma armadilha que desaconselha regenerar às cegas.
+3. **Divergência de autorização no prontuário** — portão de tela é
+   `is_membro_area()`, RLS é `is_confrade_ativo()`. Hoje não afeta ninguém.
+4. **Campo "Código" da família usado como nome** — e ele é UNIQUE, então dois
+   atendidos homônimos quebram o cadastro.
+5. **Saldo inicial da conta BRB** — `saldo_inicial_financeiro` segue sem linha.
+6. **`biblioteca/` e `build/` fora do `.gitignore`** — quase entraram 40 MB num
+   commit; convém ignorá-los de vez.
+
+## Como rodar a verificação de novo
+
+Os scripts de QA com Playwright viviam no diretório temporário da sessão e
+**se perdem ao limpar o contexto**. Se forem úteis de novo, peça para
+recriá-los — o padrão é: conta descartável via API de admin do Supabase,
+servidor local em porta livre (ou `ALVO_BASE` para produção), e limpeza da
+massa no `finally`, sempre conferida por varredura independente depois.
+
+A chave `service_role` sai de
+`supabase projects api-keys --project-ref zyzyttkayblvgnfqkapq -o json`
+(a saída é uma LISTA, não um objeto com `keys`).
+
+---
+
 # Correções pedidas em 19/09/2026
 
 Quatro pedidos do usuário, tratados "em partes" conforme solicitado.
