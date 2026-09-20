@@ -464,3 +464,55 @@ repositório público.
    `A` é sinal de erro de escopo.
 4. Diretório grande que não deve ser versionado merece entrada no `.gitignore`
    — "nunca foi adicionado" não é proteção nenhuma.
+
+---
+
+## 2026-09-20 · Script de "correcao" automatica de texto quase inverteu a instrucao de renda
+
+**O que aconteceu.** O `/review` pegou `fix_textual.py` antes do primeiro commit. O script
+reescreve markdown **in-place** e fazia duas coisas erradas ao mesmo tempo.
+
+A primeira: `ROOT.rglob("*.md")` excluindo so `build/`. Isso alcancava 92 arquivos, nao os
+53 do manual. Entre eles `biblioteca/` (vade mecum, CF/88, ECA — fontes legais primarias,
+**nao rastreadas pelo git**, logo sem baseline para recuperar) e `.claude/skills/`, onde a
+`vicentino-section-writer` tem o exemplo `"Voce" -> "voce"`: aplicar o dicionario reescreve
+os dois lados da seta e apaga a propria instrucao. O script se destruia.
+
+A segunda, pior: o dicionario troca palavra por palavra, sem contexto. `divida` -> `divida`
+esta certo em "pagar a divida" e **errado** em "some toda a renda da familia e divida pelo
+numero de pessoas" — que e a instrucao de renda per capita do Bolsa Familia
+(`02-bolsa-familia.md:17`) e do BPC/LOAS (`03-bpc-loas.md:40`). Duas ocorrencias vivas. A
+frase viraria "debito pelo numero de pessoas" para quem mais precisa dela estar certa.
+
+**Causa raiz.** Um dicionario `sem_acento -> com_acento` presume que a forma sem acento nao
+e uma palavra. Em portugues isso e falso para uma classe inteira: `divida`/`divida`,
+`previa`/`previa`, `faca`/`faca`, `carne`/`carne`, `esta`/`esta`, `marco`/`marco`. O autor
+percebeu o problema — existe o conjunto `DANGEROUS` com quatro dessas — mas trata-lo por
+lista manual e censo, e censo sempre fica incompleto.
+
+**Por que era perigoso.** Reescrita in-place nao tem diff se o arquivo nao esta versionado,
+e o unico controle era a frase "use `git diff` antes de comitar" no docstring. Controle que
+depende de alguem lembrar nao e controle. E o dano sai como portugues bem-formado: nao
+quebra build, nao dispara teste, nao vira bug report. So um leitor calculando renda errado.
+
+**Dado que fechou o caso:** depois de restringir o escopo, o dry-run acusou **0 de 53
+arquivos alterados** — o conteudo ja estava acentuado por um passe anterior. O glob de 92
+arquivos era risco puro, sem nenhum ganho em troca.
+
+**Regras preventivas.**
+1. **Script que reescreve in-place declara o escopo por allowlist, nunca por `rglob` menos
+   exclusoes.** Exclusao esquece o diretorio que ainda nao existe. Allowlist so alcanca o
+   que foi nomeado. `content_files()` lista as pastas e diz no docstring por que cada
+   excluida ficou de fora.
+2. **Antes de rodar qualquer reescrita em massa, medir o alcance:** contar arquivos por
+   diretorio de topo e conferir se bate com a intencao. 92 != 53 apareceria na hora.
+3. **Substituicao de palavra sem contexto nao entra em texto que da instrucao.** Se a forma
+   sem acento e palavra valida, sai do dicionario e vira padrao com contexto
+   (`NOUN_PATTERNS`). Na duvida, nao mexer: acento faltando e barato, sentido invertido nao.
+4. **Funcao pura merece teste antes do primeiro commit.** `fix_text()` e `apply_rules()`
+   nao tinham nenhum. Os 37 testes de `tests/test_fix_textual.py` levaram minutos e travam
+   exatamente as duas frases de renda lendo os arquivos reais.
+5. **Guarda na ultima etapa nao protege as anteriores** (essa o Codex me apontou; eu tinha
+   corrigido pela metade). `require_pandoc()` estava em `render_pdf()`, a ultima chamada de
+   `main()` — quando disparava, o script ja havia sobrescrito `build/` e 358 KB de
+   intermediario. Validacao de pre-requisito vai no **inicio**, antes da primeira escrita.
