@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/ui-comum.css">
   <style>
     :root {
       --wine-deep: #4A1818;
@@ -309,6 +310,67 @@
 
     <!-- ---------- Pedidos de oração ---------- -->
     <section id="painel-oracoes" role="tabpanel" aria-labelledby="aba-oracoes">
+
+      <!-- Cadastro direto de pedido.
+           Até 19/09/2026 o painel só sabia MODERAR o que chegava pelo
+           formulário público — não havia como registrar o pedido recolhido na
+           reunião ou na visita. Como "privilegiado da semana" é uma marca em
+           cima de um pedido já aprovado, e não um registro próprio, sem esta
+           porta a lista ficava vazia e a estrela nunca aparecia.
+
+           Quem digita aqui é o moderador, que já conferiu o conteúdo: o pedido
+           nasce aprovado. Os três campos que o banco exige em conjunto
+           (consentimento, status e data de aprovação) são preenchidos no envio. -->
+      <div class="editor">
+        <h2>Registrar pedido de oração</h2>
+        <p class="cartao-texto" style="margin-bottom:14px;">
+          Para pedidos recebidos pessoalmente. Ele entra já aprovado e aparece na
+          página pública de Orações.
+        </p>
+        <form id="form-novo-pedido">
+          <div class="grade-2">
+            <div class="campo">
+              <label for="np-oracao-nome">Nome de quem pediu</label>
+              <input type="text" id="np-oracao-nome" maxlength="40"
+                     autocomplete="off" placeholder="Deixe em branco para anônimo"
+                     aria-describedby="np-oracao-nome-dica">
+              <small id="np-oracao-nome-dica" class="dica">
+                Só o primeiro nome, de 2 a 40 letras, sem números.
+              </small>
+            </div>
+            <div class="campo">
+              <label for="np-oracao-validade">Publicar até</label>
+              <input type="date" id="np-oracao-validade" aria-describedby="np-oracao-validade-dica">
+              <small id="np-oracao-validade-dica" class="dica">
+                Em branco: 60 dias, como nos pedidos do site.
+              </small>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="np-oracao-intencao">Intenção *</label>
+            <textarea id="np-oracao-intencao" minlength="10" maxlength="280" required
+                      aria-describedby="np-oracao-intencao-dica"></textarea>
+            <small id="np-oracao-intencao-dica" class="dica">
+              De 10 a 280 caracteres. <span id="np-oracao-contador">0</span>/280.
+            </small>
+          </div>
+          <div class="caixa-linha">
+            <input type="checkbox" id="np-oracao-privilegiado">
+            <label for="np-oracao-privilegiado">Marcar como privilegiado da semana</label>
+          </div>
+          <div class="caixa-linha">
+            <input type="checkbox" id="np-oracao-consentimento" required>
+            <label for="np-oracao-consentimento">
+              Quem pediu autorizou a publicação do pedido *
+            </label>
+          </div>
+          <button type="submit" class="btn btn-ouro" id="btn-criar-pedido">
+            <i class="fa-solid fa-hands-praying" aria-hidden="true"></i> Registrar pedido
+          </button>
+          <p class="aviso" id="aviso-novo-pedido" role="status"></p>
+        </form>
+      </div>
+
       <div class="barra">
         <div class="filtros" id="filtros-oracoes">
           <button class="filtro ativo" data-status="pendente">Pendentes</button>
@@ -496,8 +558,9 @@
   </main>
 
   <script type="module">
-    import { escapar, formatarData } from './assets/supabase-client.js';
+    import { escapar, formatarData, mensagemDeErro } from './assets/supabase-client.js';
     import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+    import { montarNavegacaoComPapel, notificarOk, notificarErro } from './assets/ui-comum.js';
 
     const telaLogin = document.getElementById('tela-login');
     const telaPainel = document.getElementById('tela-painel');
@@ -529,6 +592,8 @@
     async function verificarSessao() {
       const acesso = await exigirAcesso();
       if (!acesso) return;
+
+      await montarNavegacaoComPapel(sb);
 
       usuario = acesso.session.user;
       document.getElementById('usuario-email').textContent = acesso.nome;
@@ -574,14 +639,30 @@
     // -------------------------------------------------------------------------
     // Pedidos de oração
     // -------------------------------------------------------------------------
+    function selecionarFiltroOracoes(status) {
+      filtroOracoes = status;
+      document.querySelectorAll('#filtros-oracoes .filtro')
+        .forEach(o => o.classList.toggle('ativo', o.dataset.status === status));
+    }
+
     document.querySelectorAll('#filtros-oracoes .filtro').forEach(b => {
       b.addEventListener('click', () => {
-        document.querySelectorAll('#filtros-oracoes .filtro')
-          .forEach(o => o.classList.toggle('ativo', o === b));
-        filtroOracoes = b.dataset.status;
+        selecionarFiltroOracoes(b.dataset.status);
         carregarOracoes();
       });
     });
+
+    /**
+     * Leva a lista para "Aprovados".
+     *
+     * Usado depois de registrar um pedido pelo painel: ele nasce aprovado, e o
+     * filtro padrão é "Pendentes" — sem isto o pedido recém-criado sumiria da
+     * tela e pareceria não ter sido salvo. É também onde a estrela de
+     * "privilegiado da semana" aparece, já que ela só existe para aprovados.
+     */
+    function mostrarAprovados() {
+      selecionarFiltroOracoes('aprovado');
+    }
 
     async function carregarOracoes() {
       const lista = document.getElementById('lista-oracoes');
@@ -703,8 +784,22 @@
         ({ error: erro } = await sb.from('pedidos_oracao').update(mudanca).eq('id', id));
       }
 
-      if (erro) mostrarAviso(avisoPainel, 'Não foi possível salvar: ' + erro.message, 'erro');
-      else mostrarAviso(avisoPainel, 'Pronto.', 'ok');
+      if (erro) {
+        const texto = mensagemDeErro(erro, 'Não foi possível salvar.');
+        mostrarAviso(avisoPainel, texto, 'erro');
+        notificarErro(texto);
+      } else {
+        const CONFIRMACAO = {
+          aprovar: 'Pedido aprovado e publicado.',
+          rejeitar: 'Pedido rejeitado.',
+          excluir: 'Pedido excluído.',
+          destaque: botao.dataset.valor === '1'
+            ? 'Pedido marcado como privilegiado da semana.'
+            : 'Pedido retirado dos privilegiados da semana.',
+        };
+        mostrarAviso(avisoPainel, 'Pronto.', 'ok');
+        notificarOk(CONFIRMACAO[acao] || 'Alteração salva.');
+      }
       await carregarOracoes();
     });
 
@@ -713,8 +808,93 @@
       const { error } = await sb.from('pedidos_oracao')
         .update({ privilegiado_semana: false })
         .eq('privilegiado_semana', true);
-      if (error) mostrarAviso(avisoPainel, 'Erro: ' + error.message, 'erro');
-      else mostrarAviso(avisoPainel, 'Lista da semana limpa.', 'ok');
+      if (error) {
+        const texto = mensagemDeErro(error, 'Não foi possível limpar a lista.');
+        mostrarAviso(avisoPainel, texto, 'erro');
+        notificarErro(texto);
+      } else {
+        mostrarAviso(avisoPainel, 'Lista da semana limpa.', 'ok');
+        notificarOk('Lista de privilegiados da semana limpa.');
+      }
+      await carregarOracoes();
+    });
+
+    // -------------------------------------------------------------------------
+    // Registrar pedido de oração recebido pessoalmente
+    //
+    // O banco impõe duas restrições que andam juntas e precisam ser satisfeitas
+    // no mesmo INSERT — comprovadas falhando antes de esta tela existir:
+    //   · `consentimento` tem CHECK de valor verdadeiro: sem ele, 23514;
+    //   · `pedidos_oracao_aprovacao_coerente`: status 'aprovado' exige
+    //     `aprovado_em` preenchido, e só pedido aprovado pode ser privilegiado.
+    // Por isso os três campos saem daqui sempre no mesmo pacote.
+    // -------------------------------------------------------------------------
+    const formNovoPedido = document.getElementById('form-novo-pedido');
+    const avisoNovoPedido = document.getElementById('aviso-novo-pedido');
+    const campoIntencao = document.getElementById('np-oracao-intencao');
+    const contadorIntencao = document.getElementById('np-oracao-contador');
+
+    campoIntencao.addEventListener('input', () => {
+      contadorIntencao.textContent = campoIntencao.value.trim().length;
+    });
+
+    formNovoPedido.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-criar-pedido');
+
+      const nome = document.getElementById('np-oracao-nome').value.trim();
+      const intencao = campoIntencao.value.trim();
+      const validade = document.getElementById('np-oracao-validade').value;
+      const privilegiado = document.getElementById('np-oracao-privilegiado').checked;
+      const consentiu = document.getElementById('np-oracao-consentimento').checked;
+
+      // Conferido aqui para o moderador ler a explicação em vez de um 23514.
+      if (!consentiu) {
+        const texto = 'Marque que a pessoa autorizou a publicação antes de registrar.';
+        mostrarAviso(avisoNovoPedido, texto, 'erro');
+        notificarErro(texto);
+        return;
+      }
+      if (intencao.length < 10 || intencao.length > 280) {
+        const texto = `A intenção precisa ter entre 10 e 280 caracteres — esta tem ${intencao.length}.`;
+        mostrarAviso(avisoNovoPedido, texto, 'erro');
+        notificarErro(texto);
+        campoIntencao.focus();
+        return;
+      }
+
+      botao.disabled = true;
+      const registro = {
+        nome: nome || null,
+        intencao,
+        consentimento: true,
+        status: 'aprovado',
+        aprovado_em: new Date().toISOString(),
+        aprovado_por: usuario.id,
+        privilegiado_semana: privilegiado,
+      };
+      if (validade) registro.expira_em = validade;
+
+      const { error } = await sb.from('pedidos_oracao').insert(registro);
+      botao.disabled = false;
+
+      if (error) {
+        const texto = mensagemDeErro(error, 'Não foi possível registrar o pedido.');
+        mostrarAviso(avisoNovoPedido, texto, 'erro');
+        notificarErro(texto);
+        return;
+      }
+
+      mostrarAviso(avisoNovoPedido, 'Pedido registrado e publicado.', 'ok');
+      notificarOk(privilegiado
+        ? 'Pedido registrado como privilegiado da semana.'
+        : 'Pedido registrado e já visível na página de Orações.');
+      formNovoPedido.reset();
+      contadorIntencao.textContent = '0';
+
+      // O filtro padrão é "Pendentes" e o pedido nasce aprovado — sem trocar
+      // de filtro, ele sumiria da tela e pareceria não ter sido criado.
+      mostrarAprovados();
       await carregarOracoes();
     });
 
