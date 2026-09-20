@@ -1,9 +1,9 @@
-# Violência Doméstica -- Como Proceder e Direitos das Vítimas
+# Violência Doméstica — Como Proceder e Direitos das Vítimas
 
 > **Se você está em perigo agora, ligue 190 (Polícia Militar).**
-> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) — 24 horas, gratuito.**
 
-Esta seção do Manual Vicentino reune tudo o que você precisa saber sobre violência doméstica: o que é, como denunciar, quais sao seus direitos e onde buscar ajuda no Distrito Federal.
+Esta seção do Manual Vicentino reúne tudo o que você precisa saber sobre violência doméstica: o que é, como denunciar, quais são seus direitos e onde buscar ajuda no Distrito Federal.
 
 A violência doméstica não é um problema particular. E um crime. E você não esta sozinha.
 
@@ -15,8 +15,8 @@ A violência doméstica não é um problema particular. E um crime. E você não
 |-------|-------------|
 | [01 - Lei Maria da Penha](01-lei-maria-da-penha.md) | O que diz a lei, os cinco tipos de violência doméstica e seus direitos |
 | [02 - Como Denunciar](02-como-denunciar.md) | Telefones, delegacias, boletim de ocorrência online e denúncia anônima |
-| [03 - Medidas Protetivas](03-medidas-protetivas.md) | O que sao, como pedir é o que acontece se o agressor descumprir |
-| [04 - Rede de Proteção no DF](04-rede-proteção-df.md) | Casa da Mulher, CEAMs, Casa Abrigo, Defensoria, PROVID -- com endereços e telefones |
+| [03 - Medidas Protetivas](03-medidas-protetivas.md) | O que são, como pedir é o que acontece se o agressor descumprir |
+| [04 - Rede de Proteção no DF](04-rede-proteção-df.md) | Casa da Mulher, CEAMs, Casa Abrigo, Defensoria, PROVID — com endereços e telefones |
 | [05 - Violência contra Idosos, Crianças e PCD](05-violência-idosos-crianças.md) | Disque 100, Estatuto do Idoso, ECA e proteção a pessoa com deficiência |
 | [06 - Feminicidio, Stalking e Violência Psicológica](06-feminicidio-stalking.md) | Crimes graves: feminicidio, perseguicao e violência psicológica |
 
@@ -30,10 +30,10 @@ A violência doméstica não é um problema particular. E um crime. E você não
 | Central de Atendimento a Mulher | **180** | 24 horas |
 | Direitos Humanos (idosos, crianças, PCD) | **100** | 24 horas |
 | Polícia Civil (denúncia anônima) | **197** | 24 horas |
-| DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
-| DEAM II -- Ceilandia | (61) 3207-7391 | 24 horas |
+| DEAM I — Asa Sul | (61) 3207-6172 | 24 horas |
+| DEAM II — Ceilândia | (61) 3207-7391 | 24 horas |
 | Casa da Mulher Brasileira | (61) 98312-0763 | 24 horas |
-| Defensoria Pública (Brasilia) | (61) 99359-0024 | Dias úteis |
+| Defensoria Pública (Brasília) | (61) 99359-0024 | Dias úteis |
 
 ---
 

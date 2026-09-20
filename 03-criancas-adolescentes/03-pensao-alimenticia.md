@@ -1,4 +1,4 @@
-# Pensão Alimentícia -- Guia Completo
+# Pensão Alimentícia — Guia Completo
 
 A pensão alimentícia é um direito de quem não consegue se sustentar sozinho. Este guia explica tudo o que você precisa saber: quem paga, como pedir, quanto e, o que fazer quando não pagam, e muito mais.
 
@@ -28,19 +28,19 @@ A obrigação de pagar pensão alimentícia pode recair sobre:
 | Pais | Filhos menores de idade |
 | Filhos | Pais idosos ou que não podem se manter |
 | Ex-marido ou ex-esposa | O outro, se comprovar necessidade |
-| Ex-companheiro(a) | O outro, após fim da uniao estável |
+| Ex-companheiro(a) | O outro, após fim da união estável |
 | Avos | Netos (quando os pais não conseguem pagar) |
-| Irmaos | Irmaos necessitados (em ultimo caso) |
+| Irmãos | Irmãos necessitados (em último caso) |
 
-> **Atenção:** A obrigação e reciproca. Quem paga hoje pode precisar receber amanha. E a obrigação dos avos e subsidiaria e complementar -- só cabe quando os pais não tem condições de arcar com o valor total.
+> **Atenção:** A obrigação é recíproca. Quem paga hoje pode precisar receber amanhã. E a obrigação dos avos e subsidiária e complementar — só cabe quando os pais não tem condições de arcar com o valor total.
 
 ---
 
 ## Quem Tem Direito a Receber
 
-- **Filhos menores de idade** -- a necessidade e presumida (não precisa provar).
-- **Filhos até 24 anos** que estejam cursando ensino superior ou tecnico (entendimento da jurisprudencia, não e lei expressa).
-- **Filhos com deficiência** -- sem limite de idade, enquanto durar a necessidade.
+- **Filhos menores de idade** — a necessidade é presumida (não precisa provar).
+- **Filhos até 24 anos** que estejam cursando ensino superior ou técnico (entendimento da jurisprudencia, não e lei expressa).
+- **Filhos com deficiência** — sem limite de idade, enquanto durar a necessidade.
 - **Ex-cônjuge ou ex-companheiro(a)** que comprove que precisa.
 - **Pais idosos** ou que não possam se sustentar.
 - **Parentes necessitados** que não consigam prover o próprio sustento.
@@ -55,9 +55,9 @@ Este é o caminho mais comum para quem não tem condições de pagar um advogado
 
 **Passo a Passo:**
 
-1. **Reuna os documentos:**
+1. **Reúna os documentos:**
    - RG e CPF seus e da criança
-   - Certidao de nascimento do filho
+   - Certidão de nascimento do filho
    - Comprovante de residência atualizado
    - Comprovante de renda (ou declaração de desemprego)
    - Informações sobre quem vai pagar: nome completo, endereço, local de trabalho e renda estimada
@@ -78,7 +78,7 @@ Você pode contratar um advogado para entrar diretamente com a ação na Vara de
 
 ## Como Funciona a Ação de Alimentos
 
-A ação de alimentos segue um rito especial (mais rapido que uma ação comum):
+A ação de alimentos segue um rito especial (mais rápido que uma ação comum):
 
 **1. Petição inicial**
 O advogado ou Defensor Público apresenta o pedido ao juiz.
@@ -107,7 +107,7 @@ Se quem paga e empregado registrado, o juiz determina o desconto direto no salá
 
 Não existe um valor fixo na lei. O juiz analisa três fatores:
 
-- **Necessidade:** Quanto a criança (ou quem recebe) precisa? Quais sao os gastos com alimentação, moradia, saúde, educação, roupas, transporte?
+- **Necessidade:** Quanto a criança (ou quem recebe) precisa? Quais são os gastos com alimentação, moradia, saúde, educação, roupas, transporte?
 - **Possibilidade:** Quanto quem paga ganha? Qual é a capacidade financeira real?
 - **Proporcionalidade:** O valor deve ser justo para os dois lados.
 
@@ -123,64 +123,64 @@ A lei não fixa percentuais, mas os tribunais brasileiros costumam usar estes va
 | Alimentante autônomo ou informal | **30% a 50% do salário mínimo por filho** |
 | Alimentante desempregado | **Geralmente 30% do salário mínimo** |
 
-> **Atenção:** Esses percentuais sao apenas referências. O juiz pode fixar valores maiores ou menores, analisando cada caso. O fato de estar desempregado NAO elimina a obrigação de pagar.
+> **Atenção:** Esses percentuais são apenas referências. O juiz pode fixar valores maiores ou menores, analisando cada caso. O fato de estar desempregado NÃO elimina a obrigação de pagar.
 
-### O que Entra na Base de Calculo (TJDFT)
+### O que Entra na Base de Cálculo (TJDFT)
 
 A pensão incide sobre a **remuneração bruta**, descontados apenas:
 - Imposto de Renda Retido na Fonte (IRRF)
 - Contribuição previdenciaria (INSS)
 
-**Entram na base de calculo:**
+**Entram na base de cálculo:**
 - Salário
 - Horas extras
 - Participação nos Lucros e Resultados (PLR)
 - Verbas de natureza remuneratoria
 
-**NAO entra na base de calculo:**
+**NÃO entra na base de cálculo:**
 - Auxílio-moradia de natureza indenizatoria
 
 ---
 
 ## Quando Não Pagam: Execução de Alimentos
 
-Se quem deve pagar a pensão não esta pagando, você pode cobrar na Justica. Ha dois caminhos:
+Se quem deve pagar a pensão não esta pagando, você pode cobrar na Justiça. Ha dois caminhos:
 
 ### Caminho 1: Execução com Risco de Prisão
 
 **(Artigo 528 do Código de Processo Civil)**
 
-- Serve para cobrar as **3 ultimas parcelas vencidas** + as que vencerem durante o processo.
+- Serve para cobrar as **3 últimas parcelas vencidas** + as que vencerem durante o processo.
 - O devedor e citado para **pagar em 3 dias** ou justificar por que não pode.
 - Se não pagar nem justificar: **prisão de 1 a 3 meses** em regime fechado.
-- Se pagar a divida toda, sai da prisão imediatamente.
-- A prisão não apaga a divida -- mesmo preso, contínua devendo.
+- Se pagar a dívida toda, sai da prisão imediatamente.
+- A prisão não apaga a dívida — mesmo preso, contínua devendo.
 
-> **Saiba:** A prisão por divida de pensão alimentícia é a **única prisão por divida permitida** no Brasil. Esta na Constituição Federal, artigo 5, inciso LXVII.
+> **Saiba:** A prisão por dívida de pensão alimentícia é a **única prisão por dívida permitida** no Brasil. Esta na Constituição Federal, artigo 5, inciso LXVII.
 
 ### Caminho 2: Execução com Penhora de Bens
 
 **(Artigo 528, paragrafo 8, e artigo 913 do CPC)**
 
-- Serve para cobrar parcelas **mais antigas** (anteriores as 3 ultimas).
+- Serve para cobrar parcelas **mais antigas** (anteriores as 3 últimas).
 - O juiz pode determinar: penhora de bens, bloqueio de contas bancarias, desconto em folha de pagamento.
 - O desconto em folha não pode ultrapassar **50% dos ganhos liquidos** do devedor.
 - Não leva a prisão, mas permite apreender bens e dinheiro.
 
-> **Dica prática:** Você pode usar os dois caminhos ao mesmo tempo -- prisão para as parcelas recentes e penhora para as mais antigas.
+> **Dica prática:** Você pode usar os dois caminhos ao mesmo tempo — prisão para as parcelas recentes e penhora para as mais antigas.
 
-### Sumula 309 do STJ (explicada de forma simples)
+### Súmula 309 do STJ (explicada de forma simples)
 
-O Superior Tribunal de Justica definiu que só cabe prisão pelas **3 ultimas parcelas** antes de entrar com a cobrança, mais as parcelas que vencerem enquanto o processo estiver em andamento. Dividas mais antigas sao cobradas por penhora, sem prisão.
+O Superior Tribunal de Justiça definiu que só cabe prisão pelas **3 últimas parcelas** antes de entrar com a cobrança, mais as parcelas que vencerem enquanto o processo estiver em andamento. Dívidas mais antigas são cobradas por penhora, sem prisão.
 
-### Quando NAO Cabe Prisão
+### Quando NÃO Cabe Prisão
 
-- Se o devedor comprovar que e **absolutamente impossível** pagar (desemprego comprovado, doenca grave).
-- Para dividas anteriores as 3 ultimas parcelas.
+- Se o devedor comprovar que e **absolutamente impossível** pagar (desemprego comprovado, doença grave).
+- Para dívidas anteriores as 3 últimas parcelas.
 
 ### Passo a Passo para Cobrar Pensão Atrasada
 
-1. Reuna os comprovantes de que a pensão não foi paga (extratos bancarios, recibos).
+1. Reúna os comprovantes de que a pensão não foi paga (extratos bancarios, recibos).
 2. Procure a **Defensoria Pública** ou seu advogado.
 3. Entre com a **execução de alimentos** na Vara de Família.
 4. O juiz intima o devedor para pagar em 3 dias.
@@ -188,11 +188,11 @@ O Superior Tribunal de Justica definiu que só cabe prisão pelas **3 ultimas pa
 
 ---
 
-## Alimentos Gravidicos -- Pensão Durante a Gravidez
+## Alimentos Gravidicos — Pensão Durante a Gravidez
 
 **(Lei 11.804/2008)**
 
-### O que sao
+### O que são
 
 A mulher gravida tem direito a receber uma pensão do suposto pai **durante a gravidez**, sem precisar esperar o bebe nascer.
 
@@ -208,7 +208,7 @@ A mulher gravida tem direito a receber uma pensão do suposto pai **durante a gr
 
 ### O que é Preciso para Pedir
 
-- **Indicios de paternidade** -- não precisa de exame de DNA. Basta apresentar indicios (mensagens, fotos, testemunhos).
+- **Indicios de paternidade** — não precisa de exame de DNA. Basta apresentar indicios (mensagens, fotos, testemunhos).
 - Comprovação das necessidades da gestante.
 
 ### Passo a Passo
@@ -221,7 +221,7 @@ A mulher gravida tem direito a receber uma pensão do suposto pai **durante a gr
 
 ---
 
-## Revisão de Pensão -- Quando o Valor Precisa Mudar
+## Revisão de Pensão — Quando o Valor Precisa Mudar
 
 Qualquer uma das partes (quem paga ou quem recebe) pode pedir revisão do valor da pensão quando houver **mudança significativa** nas condições.
 
@@ -236,7 +236,7 @@ Qualquer uma das partes (quem paga ou quem recebe) pode pedir revisão do valor 
 - Quem paga teve outros filhos é a renda não e suficiente para todos.
 - As necessidades de quem recebe diminuiram.
 
-> **Atenção (TJDFT):** O simples nascimento de outro filho NAO e, por si só, motivo suficiente para reduzir a pensão. E preciso comprovar que a capacidade financeira realmente diminuiu.
+> **Atenção (TJDFT):** O simples nascimento de outro filho NÃO e, por si só, motivo suficiente para reduzir a pensão. É preciso comprovar que a capacidade financeira realmente diminuiu.
 
 ### Como Pedir Revisão
 
@@ -246,7 +246,7 @@ Qualquer uma das partes (quem paga ou quem recebe) pode pedir revisão do valor 
 
 ---
 
-## Exoneração -- Quando a Pensão Pode Acabar
+## Exoneração — Quando a Pensão Pode Acabar
 
 ### O que é
 
@@ -254,13 +254,13 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 
 ### Quando se Pode Pedir
 
-- O filho completou **18 anos** -- mas atenção: a maioridade, sozinha, NAO encerra automaticamente a pensão.
+- O filho completou **18 anos** — mas atenção: a maioridade, sozinha, NÃO encerra automaticamente a pensão.
 - O filho passou a ter **renda própria** suficiente.
 - O filho **concluiu o ensino superior** (a jurisprudencia costuma manter a pensão até aproximadamente 24 anos, se o filho estiver estudando).
 
 ### Regras Importantes
 
-> **Sumula 358 do STJ:** O cancelamento da pensão alimentícia de filho maior de idade depende de decisão judicial. Não pode ser feito automaticamente.
+> **Súmula 358 do STJ:** O cancelamento da pensão alimentícia de filho maior de idade depende de decisão judicial. Não pode ser feito automaticamente.
 
 > **NUNCA pare de pagar a pensão por conta própria.** Mesmo que o filho tenha completado 18 anos, você DEVE entrar com ação judicial para pedir a exoneração. Se simplesmente parar de pagar, pode ser preso.
 
@@ -273,38 +273,38 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 
 ---
 
-## Jurisprudencia Importante -- STJ e TJDFT
+## Jurisprudencia Importante — STJ e TJDFT
 
-### Sumulas do STJ sobre Pensão Alimentícia
+### Súmulas do STJ sobre Pensão Alimentícia
 
-| Sumula | O que diz (em linguagem simples) |
+| Súmula | O que diz (em linguagem simples) |
 |--------|----------------------------------|
-| **309** | Só cabe prisão pelas 3 ultimas parcelas atrasadas + as que vencerem durante o processo |
+| **309** | Só cabe prisão pelas 3 últimas parcelas atrasadas + as que vencerem durante o processo |
 | **358** | A pensão de filho maior de idade só pode ser cancelada por decisão judicial |
-| **596** | A obrigação dos avos de pagar pensão e complementar -- só quando os pais não conseguem |
+| **596** | A obrigação dos avos de pagar pensão e complementar — só quando os pais não conseguem |
 
 ### Entendimentos do TJDFT
 
 - A guarda compartilhada **não elimina** a obrigação de pagar pensão.
-- Participação nos Lucros (PLR) **entra** na base de calculo da pensão.
-- Auxílio-moradia de natureza indenizatoria **não entra** na base de calculo.
+- Participação nos Lucros (PLR) **entra** na base de cálculo da pensão.
+- Auxílio-moradia de natureza indenizatoria **não entra** na base de cálculo.
 - Na penhora em folha de pagamento, o limite e de **50% dos ganhos liquidos**.
 - Filhos maiores de idade **não podem viver indefinidamente** de pensão.
 
 ---
 
-## Resumo Prático -- Guia Rapido
+## Resumo Prático — Guia Rapido
 
 ### Se você precisa de pensão para seu filho:
 
-1. Reuna: RG, CPF, certidao de nascimento do filho, comprovante de residência e renda.
+1. Reúna: RG, CPF, certidão de nascimento do filho, comprovante de residência e renda.
 2. Ligue para a Defensoria Pública: **(61) 2196-4300**.
 3. A Defensoria entra com a ação é o juiz fixa pensão provisória rapidamente.
 
-### Se o pai/mae não esta pagando a pensão:
+### Se o pai/mãe não esta pagando a pensão:
 
 1. Procure a Defensoria Pública ou seu advogado.
-2. Entre com execução de alimentos (rito de prisão para as ultimas 3 parcelas).
+2. Entre com execução de alimentos (rito de prisão para as últimas 3 parcelas).
 3. O devedor e citado para pagar em 3 dias ou será preso.
 
 ### Se você está gravida é o pai não quer ajudar:
@@ -321,11 +321,11 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 
 ---
 
-## Documentos Necessários -- Resumo
+## Documentos Necessários — Resumo
 
 | Tipo de ação | Documentos |
 |--------------|------------|
-| Pedir pensão | RG, CPF, certidao de nascimento, comprovante de residência e renda, dados do alimentante |
+| Pedir pensão | RG, CPF, certidão de nascimento, comprovante de residência e renda, dados do alimentante |
 | Cobrar pensão atrasada | Os mesmos acima + comprovantes do não pagamento (extratos, recibos) |
 | Alimentos gravidicos | RG, CPF, exames de gravidez, indicios de paternidade (mensagens, fotos, testemunhos) |
 | Revisão de pensão | RG, CPF, comprovantes da mudança de situação, copia da decisão anterior |
@@ -338,21 +338,21 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 | Serviço | Telefone |
 |---------|----------|
 | Defensoria Pública do DF | (61) 2196-4300 |
-| TJDFT -- Informações gerais | (61) 3103-7070 |
+| TJDFT — Informações gerais | (61) 3103-7070 |
 | Disque Direitos Humanos | 100 (gratuito) |
-| Ministerio Público do DF | (61) 3343-9500 |
+| Ministério Público do DF | (61) 3343-9500 |
 
 ---
 
 ## Fontes e Referências
 
-- **Lei 5.478/1968** -- Lei de Alimentos.
-- **Lei 11.804/2008** -- Alimentos Gravidicos: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11804.htm
-- **Código Civil**, artigos 1.694 a 1.710 -- Alimentos.
-- **Código de Processo Civil**, artigos 528 a 533 -- Execução de alimentos.
-- **Sumula 309 do STJ:** https://www.stj.jus.br/publicacaoinstitucional/index.php/sumstj/article/viewFile/5727/5847
-- **Sumula 358 do STJ** -- Cancelamento de pensão após maioridade.
-- **Sumula 596 do STJ** -- Obrigação alimentar dos avos.
-- **TJDFT -- Jurisprudencia sobre alimentos:** https://www.tjdft.jus.br/consultas/jurisprudencia/jurisprudencia-em-temas/jurisprudencia-em-perguntas/direito-civil-e-processual-civil/alimentos
-- **STJ -- Decisoes sobre exoneração:** https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias-antigas/2016/2016-10-16_08-00_Decisoes-impedem-que-filhos-maiores-vivam-indefinidamente-de-pensão.aspx
+- **Lei 5.478/1968** — Lei de Alimentos.
+- **Lei 11.804/2008** — Alimentos Gravidicos: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11804.htm
+- **Código Civil**, artigos 1.694 a 1.710 — Alimentos.
+- **Código de Processo Civil**, artigos 528 a 533 — Execução de alimentos.
+- **Súmula 309 do STJ:** https://www.stj.jus.br/publicacaoinstitucional/index.php/sumstj/article/viewFile/5727/5847
+- **Súmula 358 do STJ** — Cancelamento de pensão após maioridade.
+- **Súmula 596 do STJ** — Obrigação alimentar dos avos.
+- **TJDFT — Jurisprudencia sobre alimentos:** https://www.tjdft.jus.br/consultas/jurisprudencia/jurisprudencia-em-temas/jurisprudencia-em-perguntas/direito-civil-e-processual-civil/alimentos
+- **STJ — Decisoes sobre exoneração:** https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias-antigas/2016/2016-10-16_08-00_Decisoes-impedem-que-filhos-maiores-vivam-indefinidamente-de-pensão.aspx
 - **Defensoria Pública do DF:** https://www.defensoria.df.gov.br

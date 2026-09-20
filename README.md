@@ -77,7 +77,7 @@ Como buscar assistência jurídica gratuita.
 - [Defensoria Pública do DF](08-acesso-justica/01-defensoria-pública-df.md)
 - [Justiça Gratuita](08-acesso-justica/02-justica-gratuita.md)
 - [Juizados Especiais](08-acesso-justica/03-juizados-especiais.md)
-- [Núcleos de Universidades](08-acesso-justica/04-nucleos-universidades.md)
+- [Núcleos de Universidades](08-acesso-justica/04-núcleos-universidades.md)
 
 ### 9. [Direitos Fundamentais](09-direitos-fundamentais/README.md)
 Constituição Federal e Lei Orgânica do DF.
@@ -98,7 +98,7 @@ Constituição Federal e Lei Orgânica do DF.
 | **Disque Saúde / SUS** | **136** |
 | **INSS** | **135** |
 | **PROCON-DF** | **151** |
-| **Defensoria Pública do DF** | **(61) 3318-4300** |
+| **Defensoria Pública do DF** | **129 ou (61) 2196-4300** |
 | **Conselho Tutelar (DF)** | **(61) 3213-0657** |
 
 ---
@@ -116,7 +116,7 @@ Constituição Federal e Lei Orgânica do DF.
 - As informações deste manual têm caráter orientativo e não substituem o aconselhamento jurídico profissional
 - Valores, critérios e endereços podem sofrer alterações — verifique sempre nos sites oficiais
 - Em caso de dúvida, procure a **Defensoria Pública do DF** para orientação gratuita
-- Última atualização: Março/2026
+- Última atualização: Maio/2026
 
 ---
 

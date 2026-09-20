@@ -1,14 +1,14 @@
-# Defensoria Pública do DF -- Assistência Jurídica Gratuita
+# Defensoria Pública do DF — Assistência Jurídica Gratuita
 
-A Defensoria Pública do Distrito Federal é o órgão que presta **assistência jurídica integral é gratuita** a pessoas que não podem pagar advogado. Se você precisa de ajuda com qualquer problema jurídico -- divorcio, pensão alimentícia, problemas trabalhistas, defesa criminal, questoes de moradia, benefícios negados -- a Defensoria pode ajudar.
+A Defensoria Pública do Distrito Federal é o órgão que presta **assistência jurídica integral e gratuita** a pessoas que não podem pagar advogado. Se você precisa de ajuda com qualquer problema jurídico — divórcio, pensão alimentícia, problemas trabalhistas, defesa criminal, questões de moradia, benefícios negados — a Defensoria pode ajudar.
 
 ---
 
 ## 1. Quem Pode Ser Atendido
 
-A Defensoria Pública atende pessoas que **não tem condições de pagar advogado** sem comprometer o sustento da família. Você não precisa ser miseravel -- basta comprovar que pagar um advogado particular prejudicaria seu orcamento.
+A Defensoria Pública atende pessoas que **não tem condições de pagar advogado** sem comprometer o sustento da família. Você não precisa ser miserável — basta comprovar que pagar um advogado particular prejudicaria seu orcamento.
 
-> **Dica:** Na duvida, procure a Defensoria mesmo assim. Eles vao avaliar sua situação e orientar você.
+> **Dica:** Na dúvida, procure a Defensoria mesmo assim. Eles vao avaliar sua situação e orientar você.
 
 ---
 
@@ -18,35 +18,34 @@ O primeiro passo e entrar em contato com a Central de Relacionamento:
 
 | Canal | Contato |
 |-------|---------|
-| **Telefone** | (61) 2196-4300 |
+| **Disque Defensoria** | 129 |
+| **Telefone (fora do DF)** | (61) 2196-4300 |
 | **Horário** | 9h as 17h, dias úteis |
-| **WhatsApp Civel** | (61) 98272-6829 |
-| **WhatsApp Criminal** | (61) 98349-2485 e (61) 98297-0064 |
 | **Agendamento online** | https://agenda.df.gov.br |
 
 ---
 
-## 3. Nucleos Regionais -- Endereços e Contatos
+## 3. Núcleos Regionais — Endereços e Contatos
 
-A Defensoria tem nucleos espalhados pelo Distrito Federal para atender a populacao de diferentes regioes:
+A Defensoria tem núcleos espalhados pelo Distrito Federal para atender a população de diferentes regiões:
 
-| Nucleo | Endereço | Contato |
+| Núcleo | Endereço | Contato |
 |--------|----------|---------|
-| **Brasilia** | Forum de Brasilia, Praca Municipal, Lote 1 | (61) 2196-4300 |
-| **Taguatinga** | CNB 03, Lote 07, Setor Comercial Norte | (61) 2196-4586 / WhatsApp: (61) 98244-5928 |
-| **Ceilandia** | Forum de Ceilandia, QNM 11, Area Especial n. 01 | WhatsApp: (61) 98349-2485 |
-| **Samambaia** | Forum Des. Raimundo Macedo, Centro Urbano, Q. 302, Conj. 01, Lt. 01, Samambaia Sul | WhatsApp Família: (61) 99458-3470 / WhatsApp Civel: (61) 98349-4258 |
-| **Gama** | Forum do Gama | Através da CRC: (61) 2196-4300 |
-| **Paranoa / Itapoa** | Forum do Paranoa | Através da CRC: (61) 2196-4300 |
-| **Recanto das Emas** | Forum do Recanto das Emas | Através da CRC: (61) 2196-4300 |
+| **Brasília** | Fórum de Brasília, Praça Municipal, Lote 1 | Agendar pela CRC: 129 ou (61) 2196-4300 |
+| **Taguatinga** | CNB 03, Lote 07, Setor Comercial Norte | Agendar pela CRC: 129 ou (61) 2196-4300 |
+| **Ceilândia** | Fórum de Ceilândia, QNM 11, Area Especial n. 01 | Agendar pela CRC: 129 ou (61) 2196-4300 |
+| **Samambaia** | Fórum Des. Raimundo Macedo, Centro Urbano, Q. 302, Conj. 01, Lt. 01, Samambaia Sul | Agendar pela CRC: 129 ou (61) 2196-4300 |
+| **Gama** | Fórum do Gama | Agendar pela CRC: 129 ou (61) 2196-4300 |
+| **Paranoá / Itapoã** | Fórum do Paranoá | Agendar pela CRC: 129 ou (61) 2196-4300 |
+| **Recanto das Emas** | Fórum do Recanto das Emas | Agendar pela CRC: 129 ou (61) 2196-4300 |
 
 ### Defensoria nas Unidades Na Hora
 
 - **Na Hora Taguatinga:** CNB 03, Lote 07, Setor Comercial Norte, Taguatinga
 
-### Defensoria Pública da Uniao (DPU)
+### Defensoria Pública da União (DPU)
 
-Para questoes que envolvem órgãos federais (INSS, justica federal, Uniao), procure a **Defensoria Pública da Uniao**, que também esta disponível nas unidades Na Hora.
+Para questões que envolvem órgãos federais (INSS, justiça federal, União), procure a **Defensoria Pública da União**, que também esta disponível nas unidades Na Hora.
 
 ---
 
@@ -54,9 +53,9 @@ Para questoes que envolvem órgãos federais (INSS, justica federal, Uniao), pro
 
 ### Passo a Passo
 
-1. **Ligue para a Central de Relacionamento:** (61) 2196-4300 (dias úteis, 9h as 17h)
+1. **Ligue para a Central de Relacionamento:** 129 ou (61) 2196-4300 (dias úteis, 9h as 17h)
 2. **Ou acesse o agendamento online:** https://agenda.df.gov.br
-3. **Ou envie mensagem por WhatsApp** para o nucleo da sua regiao (veja tabela acima)
+3. **Ou envie mensagem por WhatsApp** para o núcleo da sua região (veja tabela acima)
 4. Informe qual é o seu problema jurídico
 5. Agende dia e horário para atendimento
 
@@ -67,7 +66,7 @@ Para situações que **não podem esperar** o horário normal de atendimento:
 - **Após as 19h em dias úteis**
 - **24 horas aos sabados, domingos e feriados**
 
-> **Exemplos de casos urgentes:** Prisão em flagrante, violência doméstica com risco imediato, internacao compulsoria, mandado de despejo com prazo curto.
+> **Exemplos de casos urgentes:** Prisão em flagrante, violência doméstica com risco imediato, internação compulsoria, mandado de despejo com prazo curto.
 
 ---
 
@@ -88,12 +87,12 @@ Depende do tipo de caso, mas leve tudo que tiver:
 
 | Tipo de Problema | Documentos Úteis |
 |------------------|------------------|
-| **Família** (divorcio, pensão, guarda) | Certidao de casamento, certidao de nascimento dos filhos, comprovante de renda do outro |
+| **Família** (divórcio, pensão, guarda) | Certidão de casamento, certidão de nascimento dos filhos, comprovante de renda do outro |
 | **Trabalhista** | Carteira de trabalho, contracheque, carta de demissão, extrato FGTS |
 | **Criminal** | Boletim de Ocorrência, laudos médicos, fotos, prints de mensagens |
 | **Consumidor** | Nota fiscal, contrato, comprovantes de pagamento, prints de conversa |
 | **Moradia** | Contrato de aluguel, notificação de despejo, comprovante de pagamento |
-| **Benefícios** (INSS, BPC) | Carta de indeferimento, laudos médicos, documentos do CadUnico |
+| **Benefícios** (INSS, BPC) | Carta de indeferimento, laudos médicos, documentos do CadÚnico |
 
 > **Importante:** Mesmo que você não tenha todos os documentos, va ao atendimento. O defensor vai orientar sobre o que ainda precisa.
 
@@ -103,11 +102,11 @@ Depende do tipo de caso, mas leve tudo que tiver:
 
 A Defensoria Pública atua em praticamente todas as areas do Direito:
 
-- **Direito de família:** divorcio, pensão alimentícia, guarda de filhos, reconhecimento de paternidade
+- **Direito de família:** divórcio, pensão alimentícia, guarda de filhos, reconhecimento de paternidade
 - **Direito criminal:** defesa de acusados, acompanhamento de presos, habeas corpus
 - **Direito do consumidor:** ações contra empresas, planos de saúde, bancos
-- **Direito a moradia:** defesa contra despejo, regularizacao fundiaria
-- **Direito previdenciário:** benefícios do INSS negados (BPC, aposentadoria, auxílio-doenca)
+- **Direito a moradia:** defesa contra despejo, regularização fundiaria
+- **Direito previdenciário:** benefícios do INSS negados (BPC, aposentadoria, auxílio-doença)
 - **Direito a saúde:** ações para obter medicamentos e tratamentos pelo SUS
 - **Violência doméstica:** medidas protetivas, acompanhamento da vítima
 
@@ -117,9 +116,8 @@ A Defensoria Pública atua em praticamente todas as areas do Direito:
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Central da Defensoria DF | (61) 2196-4300 |
-| WhatsApp Civel | (61) 98272-6829 |
-| WhatsApp Criminal | (61) 98349-2485 / (61) 98297-0064 |
+| Disque Defensoria | 129 |
+| Central da Defensoria DF (fora do DF) | (61) 2196-4300 |
 | WhatsApp Família (Samambaia) | (61) 99458-3470 |
 | Agendamento online | agenda.df.gov.br |
 | Site da Defensoria | www.defensoria.df.gov.br |
@@ -128,7 +126,7 @@ A Defensoria Pública atua em praticamente todas as areas do Direito:
 
 ## Fontes e Referências
 
-- Defensoria Pública do DF -- Nucleos Regionais: https://www.defensoria.df.gov.br/?page_id=434
-- Defensoria Pública do DF -- Site oficial: https://www.defensoria.df.gov.br
-- Constituição Federal -- Art. 5o, LXXIV (Assistência jurídica gratuita): https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm
+- Defensoria Pública do DF — Site oficial: https://www.defensoria.df.gov.br
+- Constituição Federal — Art. 5º, LXXIV (Assistência jurídica gratuita): https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm
 - Agendamento DF: https://agenda.df.gov.br
+- MOREIRA, Thiago de Miranda Queiroz. A constitucionalização da Defensoria Pública: disputas por espaço no sistema de justiça. Opinião Pública, Campinas, v. 23, n. 3, 2017. DOI: 10.1590/1807-01912017233647. Disponível em: https://www.scielo.br/j/op/a/rMvxvccB5ZNV6ZTNhJddDWz/?lang=pt

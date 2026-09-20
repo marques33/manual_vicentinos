@@ -1,7 +1,7 @@
 # Como Denunciar Violência Doméstica
 
 > **Se você está em perigo agora, ligue 190 (Polícia Militar).**
-> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) — 24 horas, gratuito.**
 
 ---
 
@@ -16,15 +16,15 @@
 
 ---
 
-Denunciar é o primeiro passo para sair de uma situação de violência. Existem varios caminhos para isso, e você pode escolher o que for mais seguro para a sua situação. **Qualquer pessoa pode denunciar** -- a própria vítima, um familiar, vizinho, amigo ou colega de trabalho.
+Denunciar é o primeiro passo para sair de uma situação de violência. Existem vários caminhos para isso, e você pode escolher o que for mais seguro para a sua situação. **Qualquer pessoa pode denunciar** — a própria vítima, um familiar, vizinho, amigo ou colega de trabalho.
 
 ---
 
-## Ligue 180 -- Central de Atendimento a Mulher
+## Ligue 180 — Central de Atendimento a Mulher
 
 O Ligue 180 é o principal canal de apoio a mulher vítima de violência no Brasil.
 
-- **Telefone:** 180 (ligacao gratuita, de qualquer telefone)
+- **Telefone:** 180 (ligação gratuita, de qualquer telefone)
 - **WhatsApp:** (61) 9610-0180
 - **Funciona:** 24 horas por dia, 7 dias por semana, inclusive feriados
 - **A denúncia pode ser anônima**
@@ -33,13 +33,13 @@ O Ligue 180 é o principal canal de apoio a mulher vítima de violência no Bras
 - Recebe denúncias de violência contra mulheres
 - Orienta sobre leis é direitos
 - Encaminha para delegacias, Defensoria Pública, Casa Abrigo e outros serviços
-- As denúncias sao enviadas a Segurança Pública, Ministerio Público e Secretaria de Politicas para Mulheres
+- As denúncias são enviadas a Segurança Pública, Ministério Público e Secretaria de Politicas para Mulheres
 
 > **Qualquer pessoa pode ligar:** a vítima, familiares, vizinhos, colegas. Não precisa se identificar.
 
 ---
 
-## Ligue 190 -- Polícia Militar (Emergência)
+## Ligue 190 — Polícia Militar (Emergência)
 
 - **Telefone:** 190
 - **Funciona:** 24 horas
@@ -51,7 +51,7 @@ Ao ligar para o 190, uma viatura e enviada imediatamente ao local. O agressor po
 
 ---
 
-## Ligue 197 -- Polícia Civil (Denúncia Anonima)
+## Ligue 197 — Polícia Civil (Denúncia Anonima)
 
 - **Telefone:** 197
 - **Serviço:** denúncia anônima de crimes em geral
@@ -63,20 +63,20 @@ Ao ligar para o 190, uma viatura e enviada imediatamente ao local. O agressor po
 
 O Distrito Federal tem **duas DEAMs especializadas** em violência contra a mulher. As duas funcionam **24 horas, todos os dias**, inclusive feriados.
 
-### DEAM I -- Asa Sul (Brasilia)
+### DEAM I — Asa Sul (Brasília)
 
 | Informação | Detalhe |
 |------------|---------|
-| **Endereço** | EQS 204/205 -- Asa Sul -- Brasilia/DF -- CEP: 70234-400 |
+| **Endereço** | EQS 204/205 — Asa Sul — Brasília/DF — CEP: 70234-400 |
 | **Plantao** | (61) 3207-6172 / (61) 3207-6195 |
 | **Administrativo** | (61) 3207-6173 |
 | **Horário** | 24 horas, todos os dias |
 
-### DEAM II -- Ceilandia
+### DEAM II — Ceilândia
 
 | Informação | Detalhe |
 |------------|---------|
-| **Endereço** | Setor M, QNM 2 (ao lado da 15a DP) -- Ceilandia -- CEP: 72210-515 |
+| **Endereço** | Setor M, QNM 2 (ao lado da 15a DP) — Ceilândia — CEP: 72210-515 |
 | **Plantao** | (61) 3207-7391 / (61) 3207-7408 / (61) 3207-7438 |
 | **Administrativo** | (61) 3207-7377 |
 | **Horário** | 24 horas, todos os dias |
@@ -85,7 +85,7 @@ O Distrito Federal tem **duas DEAMs especializadas** em violência contra a mulh
 
 ---
 
-## Boletim de Ocorrência Online (Delegacia Eletrônica -- PCDF)
+## Boletim de Ocorrência Online (Delegacia Eletrônica — PCDF)
 
 Você pode registrar Boletim de Ocorrência pela internet, sem sair de casa.
 
@@ -124,13 +124,13 @@ Você não precisa se identificar para denunciar. Os seguintes canais aceitam de
 
 ### Se você está em perigo imediato:
 1. Ligue **190** (Polícia Militar)
-2. Saia do local se for possível -- va para a casa de familiar, vizinho ou amigo de confianca
-3. Se tiver lesoes, va ao hospital -- o atendimento é obrigatório é gratuito pelo SUS
+2. Saia do local se for possível — va para a casa de familiar, vizinho ou amigo de confianca
+3. Se tiver lesoes, va ao hospital — o atendimento é obrigatório é gratuito pelo SUS
 
 ### Para denunciar e buscar proteção:
 1. Ligue **180** para orientação (24 horas, gratuito)
-2. Va a uma delegacia (de preferencia a DEAM) e registre o Boletim de Ocorrência
-3. Peca a **medida protetiva de urgência** -- o delegado encaminha ao juiz, que decide em até 48 horas
+2. Va a uma delegacia (de preferência a DEAM) e registre o Boletim de Ocorrência
+3. Peca a **medida protetiva de urgência** — o delegado encaminha ao juiz, que decide em até 48 horas
 4. Você não precisa de advogado para pedir a medida protetiva
 
 ### Se não quiser ir a delegacia agora:
@@ -142,10 +142,10 @@ Você não precisa se identificar para denunciar. Os seguintes canais aceitam de
 
 ## Dicas de Segurança ao Denunciar
 
-- Se possível, guarde provas: fotos de lesoes, mensagens de ameaca, audios, videos
+- Se possível, guarde provas: fotos de lesoes, mensagens de ameaça, audios, videos
 - Conte para alguém de confianca o que está acontecendo
 - Tenha um plano de saida: saiba para onde ir em caso de emergência
-- Guarde documentos importantes (RG, CPF, certidao de nascimento dos filhos) em local seguro, fora de casa se possível
+- Guarde documentos importantes (RG, CPF, certidão de nascimento dos filhos) em local seguro, fora de casa se possível
 - Se precisar sair de casa as pressas, va direto a uma delegacia ou a Casa da Mulher Brasileira
 
 > **Você não precisa ter vergonha de pedir ajuda. A culpa e do agressor, nunca da vítima.**

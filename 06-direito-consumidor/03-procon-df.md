@@ -1,4 +1,4 @@
-# PROCON-DF -- Como Reclamar e Defender Seus Direitos
+# PROCON-DF — Como Reclamar e Defender Seus Direitos
 
 O PROCON-DF (Instituto de Defesa do Consumidor do Distrito Federal) é o órgão público que ajuda você a resolver problemas com empresas, lojas, bancos e prestadores de serviço. O atendimento e **gratuito**.
 
@@ -37,7 +37,7 @@ Você pode reclamar de três formas: **presencialmente**, **online** ou **por te
 
 ### Online (Pela Internet)
 
-**Opcao 1 -- Site do PROCON-DF:**
+**Opcao 1 — Site do PROCON-DF:**
 
 1. Acesse o site **www.procon.df.gov.br**
 2. Clique em "Registrar Reclamação"
@@ -47,7 +47,7 @@ Você pode reclamar de três formas: **presencialmente**, **online** ou **por te
 6. Anexe os documentos que comprovam o problema
 7. Você precisa ter cadastro no portal **gov.br** para acessar
 
-**Opcao 2 -- Consumidor.gov.br (Plataforma Nacional):**
+**Opcao 2 — Consumidor.gov.br (Plataforma Nacional):**
 
 1. Acesse **www.consumidor.gov.br**
 2. Verifique se a empresa está cadastrada na plataforma
@@ -64,7 +64,7 @@ Você pode reclamar de três formas: **presencialmente**, **online** ou **por te
 
 ### Sede do PROCON-DF
 
-- **Endereço:** SCS, Quadra 08, Edificio Venancio Shopping, Bloco B-60, Sala 240, Brasilia-DF, CEP 70.333-900
+- **Endereço:** SCS, Quadra 08, Edificio Venancio Shopping, Bloco B-60, Sala 240, Brasília-DF, CEP 70.333-900
 - **Telefone:** 151 (24 horas)
 - **Horário:** Segunda a sexta-feira, 8h as 17h
 - **Site:** www.procon.df.gov.br
@@ -73,12 +73,12 @@ Você pode reclamar de três formas: **presencialmente**, **online** ou **por te
 
 | Unidade | Endereço | Telefone |
 |---------|----------|----------|
-| **Na Hora Rodoviaria** | Plataforma Inferior da Rodoviaria de Brasilia | (61) 2244-1146 |
-| **Na Hora Taguatinga** | QS 03, Lote 11, lojas 4 e 8, Pistao Sul, Aguas Claras | (61) 2244-1158 |
-| **Na Hora Ceilandia** | Shopping Popular de Ceilandia, Piso Superior, QNM 11, Area Especial, Ceilandia Sul | -- |
+| **Na Hora Rodoviaria** | Plataforma Inferior da Rodoviaria de Brasília | (61) 2244-1146 |
+| **Na Hora Taguatinga** | QS 03, Lote 11, lojas 4 e 8, Pistao Sul, Águas Claras | (61) 2244-1158 |
+| **Na Hora Ceilândia** | Shopping Popular de Ceilândia, Piso Superior, QNM 11, Area Especial, Ceilândia Sul | — |
 | **Na Hora Gama** | Gama Shopping, Setor Central EQ 55/56, AE Leste, Gama | (61) 2244-1156 |
 | **Na Hora Sobradinho** | Quadra 6, Area Especial 8, Sobradinho | (61) 2244-1170 |
-| **Na Hora Brazlandia** | Area Especial 4, Lote 3, Setor Tradicional | (61) 2244-1176 |
+| **Na Hora Brazlândia** | Area Especial 4, Lote 3, Setor Tradicional | (61) 2244-1176 |
 | **Na Hora Riacho Fundo** | Shopping Riacho Mall, 2o andar, QN 7, Area Especial 1, Riacho Fundo I | (61) 2244-1187 |
 
 ### Horário das Unidades Na Hora
@@ -101,7 +101,7 @@ Leve tudo que puder para comprovar o problema:
 - **Prints** de conversas (WhatsApp, e-mail, chat)
 - **Número do protocolo** de atendimento anterior com a empresa
 
-> **Importante:** Quanto mais provas você tiver, mais fácil será resolver seu problema. Mesmo que não tenha todos os documentos, va ao PROCON assim mesmo -- eles vao orientar você.
+> **Importante:** Quanto mais provas você tiver, mais fácil será resolver seu problema. Mesmo que não tenha todos os documentos, va ao PROCON assim mesmo — eles vao orientar você.
 
 ---
 
@@ -130,8 +130,8 @@ Leve tudo que puder para comprovar o problema:
 
 ## Fontes e Referências
 
-- PROCON-DF -- Canais de Atendimento: https://www.procon.df.gov.br/canais-de-atendimento/
-- PROCON-DF -- Postos de Atendimento: https://www.procon.df.gov.br/postos-de-atendimento-2/
-- Na Hora DF -- Unidades PROCON: https://www.nahora.df.gov.br/procon-2/
+- PROCON-DF — Canais de Atendimento: https://www.procon.df.gov.br/canais-de-atendimento/
+- PROCON-DF — Postos de Atendimento: https://www.procon.df.gov.br/postos-de-atendimento-2/
+- Na Hora DF — Unidades PROCON: https://www.nahora.df.gov.br/procon-2/
 - Consumidor.gov.br: https://www.consumidor.gov.br
-- Código de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+- Código de Defesa do Consumidor — Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm

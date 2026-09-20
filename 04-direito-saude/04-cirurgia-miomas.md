@@ -1,6 +1,6 @@
 # Cirurgia para Remocao de Miomas pelo SUS
 
-Miomas uterinos sao tumores benignos (não cancerosos) que crescem no utero. Sao muito comuns e podem causar dor, sangramento forte e outros problemas. O SUS oferece tratamento completo para miomas, incluindo cirurgias, de forma gratuita.
+Miomas uterinos são tumores benignos (não cancerosos) que crescem no utero. São muito comuns e podem causar dor, sangramento forte e outros problemas. O SUS oferece tratamento completo para miomas, incluindo cirurgias, de forma gratuita.
 
 ---
 
@@ -31,7 +31,7 @@ A cirurgia para miomas e indicada quando o mioma causa:
 ### Histerectomia
 
 - Remocao do utero (total ou parcial)
-- Indicada quando os miomas sao muito grandes, em grande quantidade, ou quando ha outras indicacoes clinicas
+- Indicada quando os miomas são muito grandes, em grande quantidade, ou quando há outras indicacoes clinicas
 - Procedimento definitivo — a mulher não poderá mais engravidar
 
 ---
@@ -40,7 +40,7 @@ A cirurgia para miomas e indicada quando o mioma causa:
 
 ### Passo 1 — Va a UBS (Unidade Básica de Saúde)
 
-Procure a UBS mais proxima de onde você mora com a queixa ginecologica (sangramento, dor, etc.). O médico da atenção primaria vai fazer a avaliação inicial e pedir exames, como a ultrassonografia pelvica ou transvaginal. Se o mioma for confirmado, você será encaminhada para um especialista.
+Procure a UBS mais próxima de onde você mora com a queixa ginecológica (sangramento, dor, etc.). O médico da atenção primaria vai fazer a avaliação inicial e pedir exames, como a ultrassonografia pelvica ou transvaginal. Se o mioma for confirmado, você será encaminhada para um especialista.
 
 ### Passo 2 — Regulacao pelo SISREG
 
@@ -62,7 +62,7 @@ O procedimento será realizado no hospital de referência.
 
 ## Tempo de Espera — Quanto Tempo Posso Esperar?
 
-Os prazos considerados razoaveis, conforme o Enunciado 93 da I Jornada de Direito da Saúde do Conselho Nacional de Justica (CNJ), sao:
+Os prazos considerados razoaveis, conforme o Enunciado 93 da I Jornada de Direito da Saúde do Conselho Nacional de Justiça (CNJ), são:
 
 | Tipo de atendimento | Prazo máximo razoavel |
 |---------------------|----------------------|
@@ -83,21 +83,21 @@ Os prazos considerados razoaveis, conforme o Enunciado 93 da I Jornada de Direit
 
 ## Quando a Espera e Demais — Como Judicializar
 
-Se a espera for excessiva e estiver prejudicando sua saúde, você tem o direito de pedir ajuda da Justica.
+Se a espera for excessiva e estiver prejudicando sua saúde, você tem o direito de pedir ajuda da Justiça.
 
-### O que a Justica já decidiu
+### O que a Justiça já decidiu
 
-O Tribunal de Justica do Distrito Federal (TJDFT) já decidiu que:
+O Tribunal de Justiça do Distrito Federal (TJDFT) já decidiu que:
 
 - O Estado tem o dever constitucional de fornecer assistência médica, incluindo cirurgias essenciais.
 - O TJDFT já condenou o Distrito Federal a pagar **R$ 20.000 em danos morais** a paciente que esperou quase 10 anos por cirurgia na rede pública.
 - Em casos de risco de piora clinica, o TJDFT determinou que o DF deve submeter o paciente a cirurgia **em até 30 dias** na rede pública ou na rede privada as custas do Estado, sob pena de multa diaria.
 
-> **A Justica entende que demoras injustificadas retiram a efetividade real do direito a saúde.**
+> **A Justiça entende que demoras injustificadas retiram a efetividade real do direito a saúde.**
 
 ### Passo a passo para judicializar
 
-**Passo 1 — Reuna seus documentos:**
+**Passo 1 — Reúna seus documentos:**
 - Laudos médicos mostrando a necessidade da cirurgia
 - Comprovante de inscrição no SISREG
 - Protocolos de solicitação na UBS
@@ -105,7 +105,7 @@ O Tribunal de Justica do Distrito Federal (TJDFT) já decidiu que:
 
 **Passo 2 — Procure a Defensoria Pública do DF**
 O atendimento é gratuito para quem não pode pagar advogado.
-Telefone: **(61) 3318-2000**
+Telefone: **129** ou **(61) 2196-4300**
 Site: www.defensoria.df.gov.br
 
 **Passo 3 — Ação judicial**
@@ -120,8 +120,8 @@ O defensor pode ingressar com uma ação de obrigação de fazer com pedido de t
 | Central de Regulacao SES-DF | **160** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
-| Ministerio Público do DF | **(61) 3343-6000** |
+| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Ministério Público do DF | **(61) 3343-6000** |
 
 ---
 
@@ -129,6 +129,6 @@ O defensor pode ingressar com uma ação de obrigação de fazer com pedido de t
 
 - Constituição Federal de 1988, art. 196
 - Lei 8.080/1990 — Lei Organica da Saúde (Lei do SUS)
-- Enunciado 93, I Jornada de Direito da Saúde do CNJ — Prazos maximos de espera
-- Jurisprudencia do Tribunal de Justica do Distrito Federal e Territorios (TJDFT)
+- Enunciado 93, I Jornada de Direito da Saúde do CNJ — Prazos máximos de espera
+- Jurisprudencia do Tribunal de Justiça do Distrito Federal e Territorios (TJDFT)
 - Portaria MS n. 2.048/2002 — Sistema de Regulacao

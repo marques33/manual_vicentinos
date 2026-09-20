@@ -4,9 +4,9 @@ Este capítulo explica, em linguagem simples, os crimes que mais atingem pessoas
 
 ---
 
-## 1. Estelionato -- Golpes e Fraudes
+## 1. Estelionato — Golpes e Fraudes
 
-**O que é:** Quando alguém engana você para tirar vantagem, geralmente dinheiro. O golpista mente, se disfaraca ou inventa historias para convencer você a entregar algo.
+**O que é:** Quando alguém engana você para tirar vantagem, geralmente dinheiro. O golpista mente, se disfaraca ou inventa histórias para convencer você a entregar algo.
 
 **Pena:** 1 a 5 anos de prisão + multa.
 
@@ -14,9 +14,9 @@ Este capítulo explica, em linguagem simples, os crimes que mais atingem pessoas
 
 | Golpe | Como Funciona | Como Se Proteger |
 |-------|---------------|------------------|
-| **Golpe do PIX** | O criminoso se passa por parente ou amigo e pede transferencia urgente | Sempre ligue para a pessoa antes de transferir. Confirme a voz. |
+| **Golpe do PIX** | O criminoso se passa por parente ou amigo e pede transferência urgente | Sempre ligue para a pessoa antes de transferir. Confirme a voz. |
 | **Falso emprego** | Anuncio de vaga que pede pagamento antecipado | Empresa seria nunca cobra para dar emprego |
-| **Falso boleto** | Enviam boleto falsificado por e-mail ou WhatsApp | Confira os dados do beneficiario antes de pagar |
+| **Falso boleto** | Enviam boleto falsificado por e-mail ou WhatsApp | Confira os dados do beneficiário antes de pagar |
 | **Golpe do emprestimo** | Prometem emprestimo fácil, mas cobram "taxa" antes de liberar | Banco serio desconta taxas do valor emprestado, não cobra antes |
 | **Clonagem de WhatsApp** | O criminoso assume sua conta e pede dinheiro aos seus contatos | Ative a verificação em duas etapas no WhatsApp |
 
@@ -28,16 +28,16 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 
 ### O Que Fazer Se Cair em Um Golpe
 
-1. **Registre BO** imediatamente -- na Delegacia Eletrônica (delegaciaeletronica.pcdf.df.gov.br) ou presencialmente
-2. **Guarde todas as provas:** prints de conversa, comprovante de transferencia PIX, dados do golpista
-3. **Avise seu banco** -- peca o bloqueio da transacao é o MED (Mecanismo Especial de Devolucao do PIX)
+1. **Registre BO** imediatamente — na Delegacia Eletrônica (delegaciaeletronica.pcdf.df.gov.br) ou presencialmente
+2. **Guarde todas as provas:** prints de conversa, comprovante de transferência PIX, dados do golpista
+3. **Avise seu banco** — peca o bloqueio da transacao é o MED (Mecanismo Especial de Devolucao do PIX)
 4. Se for golpe de WhatsApp, **avise seus contatos** para que ninguém mais caia
 
 ---
 
 ## 2. Ameaca
 
-**O que é:** Quando alguém ameaca causar mal grave a você ou a sua família, seja por palavras, por escrito, por mensagem ou por gesto.
+**O que é:** Quando alguém ameaça causar mal grave a você ou a sua família, seja por palavras, por escrito, por mensagem ou por gesto.
 
 **Pena:** 1 a 6 meses de prisão, ou multa.
 
@@ -46,9 +46,9 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 ### O Que Fazer
 
 1. **Guarde provas:** prints de mensagens, gravacoes de audio ou video
-2. **Registre BO** -- pode ser na Delegacia Eletrônica se não houve violência física
-3. **Manifeste vontade de processar** (representacao) na delegacia -- você tem 6 meses para fazer isso
-4. Se a ameaca for grave e constante, peca **medida protetiva** na delegacia ou na Defensoria Pública
+2. **Registre BO** — pode ser na Delegacia Eletrônica se não houve violência física
+3. **Manifeste vontade de processar** (representacao) na delegacia — você tem 6 meses para fazer isso
+4. Se a ameaça for grave e constante, peca **medida protetiva** na delegacia ou na Defensoria Pública
 
 ---
 
@@ -58,12 +58,12 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 
 | Tipo | O Que Significa | Pena |
 |------|-----------------|------|
-| **Leve** | Sem sequelas graves (hematomas, arranhoes) | 3 meses a 1 ano |
+| **Leve** | Sem sequelas graves (hematomas, arranhões) | 3 meses a 1 ano |
 | **Grave** | Incapacidade para trabalho por mais de 30 dias, perigo de vida | 1 a 5 anos |
-| **Gravissima** | Incapacidade permanente, deformidade, doenca incuravel | 2 a 8 anos |
-| **Seguida de morte** | A agressão causa a morte (sem intencao de matar) | 4 a 12 anos |
+| **Gravissima** | Incapacidade permanente, deformidade, doença incuravel | 2 a 8 anos |
+| **Seguida de morte** | A agressão causa a morte (sem intenção de matar) | 4 a 12 anos |
 
-> **Violência doméstica (Lei Maria da Penha):** Agressão contra mulher no ambito doméstico tem pena de 3 meses a 3 anos. O processo segue **mesmo que a vítima desista** -- e ação pública incondicionada.
+> **Violência doméstica (Lei Maria da Penha):** Agressão contra mulher no ambito doméstico tem pena de 3 meses a 3 anos. O processo segue **mesmo que a vítima desista** — e ação pública incondicionada.
 
 ### O Que Fazer Se For Agredido
 
@@ -72,7 +72,7 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 3. Registre BO na delegacia (para violência doméstica, procure a DEAM)
 4. Tire fotos das lesoes
 5. Anote nomes de testemunhas
-6. Procure a Defensoria Pública para orientação -- (61) 2196-4300
+6. Procure a Defensoria Pública para orientação — (61) 2196-4300
 
 ---
 
@@ -80,7 +80,7 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 
 ### Furto (Sem Violência)
 
-**O que é:** Quando alguém pega algo que e seu **sem usar forca nem ameaca**. Exemplo: furto de celular no onibus, furto de bicicleta.
+**O que é:** Quando alguém pega algo que e seu **sem usar forca nem ameaça**. Exemplo: furto de celular no onibus, furto de bicicleta.
 
 | Tipo | Pena |
 |------|------|
@@ -90,22 +90,22 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 
 ### Roubo (Com Violência ou Ameaca)
 
-**O que é:** Quando alguém pega algo que e seu **usando forca ou ameaca**. Exemplo: assalto a mao armada.
+**O que é:** Quando alguém pega algo que e seu **usando forca ou ameaça**. Exemplo: assalto a mao armada.
 
 | Tipo | Pena |
 |------|------|
 | Roubo simples | 4 a 10 anos + multa |
 | Com arma de fogo | Pena aumentada em 2/3 |
 | Com lesao corporal grave | 7 a 18 anos |
-| Com morte (latrocinio -- crime hediondo) | 20 a 30 anos |
+| Com morte (latrocinio — crime hediondo) | 20 a 30 anos |
 
-> **Diferenca fundamental:** No furto, o criminoso não tem contato com você. No roubo, ha violência ou ameaca direta.
+> **Diferença fundamental:** No furto, o criminoso não tem contato com você. No roubo, ha violência ou ameaça direta.
 
 ### O Que Fazer
 
-1. Se for roubo, **não reaja** -- sua vida vale mais que qualquer bem material
-2. Tente memorizar as caracteristicas do criminoso (roupas, altura, veículo, placa)
-3. Registre BO o mais rapido possível (presencial para roubo, pode ser online para furto)
+1. Se for roubo, **não reaja** — sua vida vale mais que qualquer bem material
+2. Tente memorizar as características do criminoso (roupas, altura, veículo, placa)
+3. Registre BO o mais rápido possível (presencial para roubo, pode ser online para furto)
 4. Se tiver celular roubado, registre o IMEI no BO e bloqueie na operadora
 
 ---
@@ -114,21 +114,21 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 
 ### Injuria Racial
 
-**O que é:** Ofender a honra de uma **pessoa específica** usando palavras referentes a raca, cor, etnia, religiao ou origem. Exemplo: xingar alguém com termo racista.
+**O que é:** Ofender a honra de uma **pessoa específica** usando palavras referentes a raça, cor, etnia, religião ou origem. Exemplo: xingar alguém com termo racista.
 
 **Pena:** 2 a 5 anos de prisão + multa.
 
 ### Racismo
 
-**O que é:** Discriminar ou impedir o acesso de uma **coletividade** por motivo de raca, cor, etnia, religiao ou origem. Exemplo: impedir entrada em estabelecimento por causa da cor da pele.
+**O que é:** Discriminar ou impedir o acesso de uma **coletividade** por motivo de raça, cor, etnia, religião ou origem. Exemplo: impedir entrada em estabelecimento por causa da cor da pele.
 
 **Pena:** 2 a 5 anos de prisão.
 
-> **Muito importante:** Desde 2023, tanto a injuria racial quanto o racismo sao crimes **inafiancaveis** (o acusado não pode pagar fianca para sair) e **imprescritiveis** (podem ser processados a qualquer tempo, não tem prazo de validade).
+> **Muito importante:** Desde 2023, tanto a injuria racial quanto o racismo são crimes **inafiançáveis** (o acusado não pode pagar fianca para sair) e **imprescritíveis** (podem ser processados a qualquer tempo, não tem prazo de validade).
 
 ### O Que Fazer
 
-1. **Registre BO imediatamente** -- na delegacia mais proxima
+1. **Registre BO imediatamente** — na delegacia mais próxima
 2. **Guarde todas as provas:** grave audios, tire prints de mensagens, identifique testemunhas
 3. **Procure a Defensoria Pública** para pedir indenização por danos morais
 4. Se aconteceu em estabelecimento comercial, anote nome da empresa, endereço e nome dos funcionários
@@ -141,7 +141,7 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 
 **Pena:** 1 a 5 anos de prisão.
 
-**Exemplos que sao crime:**
+**Exemplos que são crime:**
 - Encostar ou "encoxar" alguém no transporte público
 - Toques não consentidos de carater sexual
 - Ejacular em pessoa no onibus ou metro
@@ -157,10 +157,10 @@ Compartilhar fotos ou videos de nudez ou sexo de alguém sem autorizacao (a cham
 ### O Que Fazer
 
 1. Se estiver no transporte público, **peca ajuda** ao motorista ou passageiros e ligue 190
-2. Tente identificar o agressor (caracteristicas fisicas, roupas)
+2. Tente identificar o agressor (características físicas, roupas)
 3. **Registre BO** presencialmente na delegacia
 4. Se forem imagens intimas vazadas, **notifique a rede social ou site** para remocao imediata (a lei obriga a plataforma a retirar)
-5. Procure a Defensoria Pública para orientação -- (61) 2196-4300
+5. Procure a Defensoria Pública para orientação — (61) 2196-4300
 
 ---
 
@@ -177,12 +177,12 @@ Compartilhar fotos ou videos de nudez ou sexo de alguém sem autorizacao (a cham
 O Marco Civil da Internet (Lei 12.965/2014) garante:
 
 - **Privacidade** das suas comunicacoes online
-- Redes sociais e sites sao **obrigados a remover conteudo ilicito** após ordem judicial
+- Redes sociais e sites são **obrigados a remover conteudo ilicito** após ordem judicial
 - Para conteudo de nudez/sexo sem consentimento, a plataforma deve remover **após simples notificação da vítima** (sem precisar de ordem judicial)
 
 ### O Que Fazer Se For Vítima de Crime Digital
 
-1. **Não apague nada** -- guarde prints, links, e-mails e mensagens
+1. **Não apague nada** — guarde prints, links, e-mails e mensagens
 2. Registre BO na **Delegacia de Crimes Ciberneticos (DRCC)** ou na Delegacia Eletrônica
 3. Notifique a plataforma ou rede social para remover o conteudo
 4. Altere suas senhas imediatamente
@@ -205,11 +205,11 @@ O Marco Civil da Internet (Lei 12.965/2014) garante:
 
 ## Fontes e Referências
 
-- Código Penal Brasileiro -- Decreto-Lei 2.848/1940: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
+- Código Penal Brasileiro — Decreto-Lei 2.848/1940: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
 - Lei 14.155/2021 (Fraude Eletrônica): https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14155.htm
 - Lei 7.716/1989 (Racismo): https://www.planalto.gov.br/ccivil_03/leis/l7716compilado.htm
 - Lei 14.532/2023 (Injuria Racial equiparada a Racismo): https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm
 - Lei 13.718/2018 (Importunacao Sexual): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13718.htm
 - Lei 12.737/2012 (Lei Carolina Dieckmann): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12737.htm
-- Marco Civil da Internet -- Lei 12.965/2014: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm
+- Marco Civil da Internet — Lei 12.965/2014: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm
 - Delegacia Eletrônica PCDF: https://www.pcdf.df.gov.br/serviços/delegacia-eletrônica

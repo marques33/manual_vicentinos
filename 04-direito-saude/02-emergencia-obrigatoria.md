@@ -1,6 +1,6 @@
 # Atendimento de Emergência Obrigatório
 
-> **NENHUM HOSPITAL PODE RECUSAR ATENDIMENTO DE EMERGENCIA. Nem hospital público, nem hospital particular. Isso vale para qualquer pessoa, com ou sem plano de saúde, com ou sem dinheiro. Recusar atendimento de emergência e CRIME.**
+> **NENHUM HOSPITAL PODE RECUSAR ATENDIMENTO DE EMERGÊNCIA. Nem hospital público, nem hospital particular. Isso vale para qualquer pessoa, com ou sem plano de saúde, com ou sem dinheiro. Recusar atendimento de emergência e CRIME.**
 
 ---
 
@@ -10,13 +10,13 @@
 
 A Constituição Federal (art. 196) diz que a saúde é direito de todos é dever do Estado. A Lei 8.080/1990 (Lei do SUS) reafirma esse direito e determina que os serviços de saúde devem atender a todos com igualdade.
 
-### Todo hospital deve atender emergencias
+### Todo hospital deve atender emergências
 
 A Resolução do Conselho Federal de Medicina (CFM n. 2.077/2014) e clara:
 
 > **"Todo paciente que tiver acesso ao Serviço Hospitalar de Urgência e Emergência deverá, obrigatoriamente, ser atendido por um médico."**
 
-Isso vale para hospitais públicos E privados. O médico NAO pode recusar atendimento em caso de urgência ou emergência, especialmente quando não houver outro médico ou serviço disponível.
+Isso vale para hospitais públicos E privados. O médico NÃO pode recusar atendimento em caso de urgência ou emergência, especialmente quando não houver outro médico ou serviço disponível.
 
 ### O Código de Etica Médica confirma
 
@@ -38,13 +38,13 @@ Se a pessoa sofrer lesao corporal grave por causa da demora: a pena pode ser aum
 
 Se a pessoa morrer por causa da demora: a pena pode ser aumentada até o triplo.
 
-> **Você sabia?** Esta lei foi criada depois que o ex-secretario Duvanier Paiva Ferreira morreu de infarto em 2012, em Brasilia, porque hospitais se recusaram a atende-lo sem garantia financeira. Depois dessa tragedia, o Congresso aprovou a lei para que isso nunca mais aconteca.
+> **Você sabia?** Esta lei foi criada depois que o ex-secretario Duvanier Paiva Ferreira morreu de infarto em 2012, em Brasília, porque hospitais se recusaram a atende-lo sem garantia financeira. Depois dessa tragedia, o Congresso aprovou a lei para que isso nunca mais aconteca.
 
 ### Aviso obrigatório nos hospitais
 
-Todo hospital que atende emergencias deve ter um aviso em local visivel com os seguintes dizeres:
+Todo hospital que atende emergências deve ter um aviso em local visível com os seguintes dizeres:
 
-*"E crime exigir cheque-caucao, nota promissoria ou qualquer garantia, bem como o preenchimento prévio de formularios administrativos, como condição para o atendimento médico-hospitalar emergencial."*
+*"É crime exigir cheque-caucao, nota promissoria ou qualquer garantia, bem como o preenchimento prévio de formularios administrativos, como condição para o atendimento médico-hospitalar emergencial."*
 
 Se você não vir esse aviso, isso já é uma irregularidade que pode ser denunciada.
 
@@ -65,13 +65,13 @@ Deixar de prestar assistência a pessoa que está em perigo, quando é possível
 
 ---
 
-## O Que a Justica Diz
+## O Que a Justiça Diz
 
 ### Jurisprudencia do STJ e do TJDFT
 
 Os tribunais brasileiros já decidiram repetidamente que:
 
-- **Hospitais privados sao obrigados a prestar atendimento de emergência**, mesmo sem plano de saúde ou pagamento prévio. O hospital pode cobrar depois, mas NAO pode condicionar o atendimento a pagamento.
+- **Hospitais privados são obrigados a prestar atendimento de emergência**, mesmo sem plano de saúde ou pagamento prévio. O hospital pode cobrar depois, mas NÃO pode condicionar o atendimento a pagamento.
 - **Quando a rede pública não tem vagas** é o paciente precisa ir para um hospital particular, o Estado deve pagar as despesas.
 - **Hospitais e médicos que negam atendimento** podem ser condenados a pagar indenização por danos morais e materiais.
 
@@ -95,7 +95,7 @@ Anote ou peca para alguém anotar:
 - Motivo alegado para a recusa
 - Se possível, grave audio ou video (você tem esse direito)
 
-### Passo 3 — Faca um Boletim de Ocorrência
+### Passo 3 — Faça um Boletim de Ocorrência
 
 A recusa de atendimento de emergência é crime. Va a uma delegacia de polícia ou registre o BO online e relate o que aconteceu.
 
@@ -105,9 +105,9 @@ Ligue para o **Disque Saúde: 136** e registre a reclamação. Anote o número d
 
 ### Passo 5 — Procure a Defensoria Pública
 
-Se você ou seu familiar sofreu danos (fisicos ou emocionais) por causa da recusa de atendimento, a Defensoria Pública pode entrar na Justica pedindo indenização por danos morais e materiais. O serviço é gratuito.
+Se você ou seu familiar sofreu danos (físicos ou emocionais) por causa da recusa de atendimento, a Defensoria Pública pode entrar na Justiça pedindo indenização por danos morais e materiais. O serviço é gratuito.
 
-**Defensoria Pública do DF:** (61) 3318-2000
+**Defensoria Pública do DF:** 129 ou (61) 2196-4300
 
 ### Passo 6 — Denuncie ao Conselho de Medicina
 
@@ -117,7 +117,7 @@ Se um médico pessoalmente recusou o atendimento, você pode denunciar ao **CRM-
 
 ## Classificação de Risco — Como Funciona a Triagem
 
-Quando você chega a uma emergência, é feita uma triagem para avaliar a gravidade do seu caso. Isso NAO é uma recusa de atendimento — é uma forma de garantir que os casos mais graves sejam atendidos primeiro.
+Quando você chega a uma emergência, é feita uma triagem para avaliar a gravidade do seu caso. Isso NÃO é uma recusa de atendimento — é uma forma de garantir que os casos mais graves sejam atendidos primeiro.
 
 A Portaria MS n. 2.048/2002 determina que:
 
@@ -125,7 +125,7 @@ A Portaria MS n. 2.048/2002 determina que:
 - O objetivo e classificar a urgência do caso e colocar os pacientes em ordem de prioridade.
 - Mesmo se o seu caso não for o mais urgente, você TEM direito ao atendimento — apenas pode precisar esperar mais.
 
-> **Atenção:** Triagem NAO e recusa. Se você chegar a emergência e for classificado como caso de menor gravidade, você ainda será atendido. Mas se você for mandado embora sem atendimento, isso e irregular e você deve reclamar.
+> **Atenção:** Triagem NÃO e recusa. Se você chegar a emergência e for classificado como caso de menor gravidade, você ainda será atendido. Mas se você for mandado embora sem atendimento, isso e irregular e você deve reclamar.
 
 ---
 
@@ -135,8 +135,8 @@ A Portaria MS n. 2.048/2002 determina que:
 |----------|-------------|
 | Emergência em hospital público | Atendimento obrigatório é gratuito |
 | Emergência em hospital particular | Atendimento obrigatório, sem exigência de pagamento prévio |
-| Hospital pede cheque-caucao ou garantia | Isso e CRIME (art. 135-A do Código Penal) |
-| Hospital manda preencher formularios antes de atender | Isso e CRIME (art. 135-A do Código Penal) |
+| Hospital pede cheque-caucao ou garantia | Isso é CRIME (art. 135-A do Código Penal) |
+| Hospital manda preencher formularios antes de atender | Isso é CRIME (art. 135-A do Código Penal) |
 | Médico se recusa a atender emergência | Pode responder por omissão de socorro (art. 135 CP) e infringir o Código de Etica Médica |
 | Rede pública sem vagas | O Estado deve custear atendimento na rede privada |
 
@@ -149,7 +149,7 @@ A Portaria MS n. 2.048/2002 determina que:
 | SAMU (emergência) | **192** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
 | CRM-DF (denunciar médico) | **(61) 3445-5800** |
 | Polícia (Boletim de Ocorrência) | **190** |
 
@@ -165,4 +165,4 @@ A Portaria MS n. 2.048/2002 determina que:
 - Portaria MS n. 2.048/2002 — Classificação de Risco em Urgência e Emergência
 - Resolução CFM n. 2.077/2014 — Atendimento obrigatório em urgência e emergência
 - Resolução CFM n. 2.217/2018 — Código de Etica Médica
-- Jurisprudencia do Superior Tribunal de Justica (STJ) e do Tribunal de Justica do Distrito Federal e Territorios (TJDFT)
+- Jurisprudencia do Superior Tribunal de Justiça (STJ) e do Tribunal de Justiça do Distrito Federal e Territorios (TJDFT)

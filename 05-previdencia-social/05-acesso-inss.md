@@ -1,6 +1,6 @@
 # Como Acessar o INSS
 
-Este arquivo reune todas as formas de acessar os serviços do INSS: pela internet, pelo telefone, presencialmente nas agências do Distrito Federal e, quando necessário, pela Defensoria Pública da Uniao (DPU) ou pela Justica Federal.
+Este arquivo reúne todas as formas de acessar os serviços do INSS: pela internet, pelo telefone, presencialmente nas agências do Distrito Federal e, quando necessário, pela Defensoria Pública da União (DPU) ou pela Justiça Federal.
 
 ---
 
@@ -14,12 +14,12 @@ O Meu INSS é a principal ferramenta para acessar os serviços do INSS. A maiori
 ### O que você pode fazer pelo Meu INSS
 
 - Solicitar benefícios (aposentadorias, auxílios, pensões, salário-maternidade, BPC)
-- Agendar pericia médica
+- Agendar perícia médica
 - Solicitar prorrogação de benefícios
 - Consultar seu extrato de contribuições (CNIS)
 - Simular aposentadoria (verificar quanto falta para se aposentar)
-- Emitir certidoes e declarações
-- Consultar resultado de pericia médica
+- Emitir certidões e declarações
+- Consultar resultado de perícia médica
 - Acompanhar o andamento dos seus pedidos
 - Solicitar recurso contra decisão do INSS
 
@@ -47,8 +47,8 @@ Se você não tem acesso a internet ou prefere falar com uma pessoa, pode ligar 
 | Informação | Detalhe |
 |------------|---------|
 | Número | **135** |
-| Horário | Segunda a sabado, das **7h as 22h** (horário de Brasilia) |
-| Custo | Gratuito de telefone fixo. De celular, custo de ligacao local |
+| Horário | Segunda a sabado, das **7h as 22h** (horário de Brasília) |
+| Custo | Gratuito de telefone fixo. De celular, custo de ligação local |
 
 ### O que você pode fazer pelo 135
 
@@ -58,11 +58,11 @@ Se você não tem acesso a internet ou prefere falar com uma pessoa, pode ligar 
 - Solicitar prorrogação de auxílio
 - Consultar andamento de pedidos
 
-> **Dica:** Tenha em maos seu CPF e documentos pessoais antes de ligar. Isso agiliza o atendimento.
+> **Dica:** Tenha em mãos seu CPF e documentos pessoais antes de ligar. Isso agiliza o atendimento.
 
 ---
 
-## 3. Agencias do INSS no Distrito Federal
+## 3. Agências do INSS no Distrito Federal
 
 Embora a maioria dos serviços possa ser feita pelo Meu INSS ou pelo 135, em alguns casos pode ser necessário ir pessoalmente a uma agência. Veja as agências disponíveis no DF:
 
@@ -70,40 +70,38 @@ Embora a maioria dos serviços possa ser feita pelo Meu INSS ou pelo 135, em alg
 |---------|----------|---------|
 | **Asa Sul** | AV W3 Sul, CRS 502, Bloco B, Lote 08 a 12, Terreo, 1o e 2o andares — Asa Sul, CEP 70330-520 | 7h as 17h |
 | **Taguatinga** | CNB 02, Lote 01 — Taguatinga Norte, CEP 72115-025 | 7h as 17h |
-| **Ceilandia** | QNM 17, Conjunto A, Lote 21 — Ceilandia Sul, CEP 72215-171 | 7h as 17h |
-| **Ceilandia (Na Hora)** | QNM 11, Area Especial, Lote 03 — Ceilandia Sul, CEP 72215-110 | 7h30 as 18h30 |
+| **Ceilândia** | QNM 17, Conjunto A, Lote 21 — Ceilândia Sul, CEP 72215-171 | 7h as 17h |
+| **Ceilândia (Na Hora)** | QNM 11, Area Especial, Lote 03 — Ceilândia Sul, CEP 72215-110 | 7h30 as 18h30 |
 | **Planaltina** | Quadra 1, Bloco H, Setor Tradicional — Planaltina, CEP 73310-308 | 7h as 17h |
 | **Sobradinho** | Quadra Central, Area Administrativa, Bloco H, s/n — Sobradinho | 7h as 17h |
 | **Gama (Na Hora)** | Gama Shopping, Setor Central, EQ 55/56, AE Leste — Gama | 7h30 as 13h |
 
-**Posto na Rodoviaria do Plano Piloto:** Ha um posto de atendimento do INSS na Estacao Rodoviaria de Brasilia.
+**Posto na Rodoviaria do Plano Piloto:** Ha um posto de atendimento do INSS na Estacao Rodoviaria de Brasília.
 
 > **Importante:** Antes de ir a uma agência, tente resolver pelo Meu INSS ou pelo 135. Muitas vezes, a ida presencial não é necessária e você evita filas e deslocamentos.
 
 ---
 
-## 4. Defensoria Pública da Uniao (DPU) — Assistência Jurídica Gratuita
+## 4. Defensoria Pública da União (DPU) — Assistência Jurídica Gratuita
 
-A DPU é o órgão que oferece **assistência jurídica gratuita** para quem não pode pagar advogado. Ela atende questoes contra o INSS, como benefícios negados, cancelados ou suspensos.
+A DPU é o órgão que oferece **assistência jurídica gratuita** para quem não pode pagar advogado. Ela atende questões contra o INSS, como benefícios negados, cancelados ou suspensos.
 
 ### Quem pode ser atendido pela DPU
 
-- Pessoas com renda familiar de até **R$ 2.000,00**
-- Ou pessoas que demonstrem impossibilidade de pagar as custas do processo
+- Pessoas que demonstrem **insuficiência de recursos** para pagar advogado e custas
+- Em matéria previdenciaria, a DPU atua em demandas contra o **INSS** e outros órgãos federais
 - O atendimento e **totalmente gratuito**
 
-### Onde fica a DPU em Brasilia
+### Como acessar a DPU em 2026
 
 | Informação | Detalhe |
 |------------|---------|
-| Atendimento ao público | SBS Quadra 2, Bloco H, Lote 14, Edificio Cleto Meirelles |
-| Sede administrativa | SBN Quadra 1, Bloco F, Edificio Palacio da Agricultura — Asa Norte, CEP 70040-908 |
-| Horário | Segunda a sexta, **8h as 18h** (senhas até 17h) |
-| Telefone | **(61) 3318-4300** |
-| Plantao (após 18h) | **(61) 98258-0136** |
-| WhatsApp DPU Cidadão | **(61) 3318-7617** |
+| Canal principal | **DPU Digital**: https://web-dpudigital.dpu.def.br/ |
+| E-mail de atendimento | **atendimento@dpu.def.br** |
+| Unidade em Brasília | SBS Quadra 2, Bloco H, Lote 14 — Asa Sul |
+| Informações institucionais | https://www.dpu.def.br |
 
-### O que a DPU pode fazer por você em questoes do INSS
+### O que a DPU pode fazer por você em questões do INSS
 
 - Orientar sobre seus direitos previdenciários
 - Acompanhar pedidos que foram negados pelo INSS
@@ -113,39 +111,39 @@ A DPU é o órgão que oferece **assistência jurídica gratuita** para quem nã
 
 ### Passo a Passo para ser Atendido pela DPU
 
-1. Va ao endereço de atendimento ao público (SBS Quadra 2, Bloco H, Lote 14)
-2. Chegue cedo para pegar senha (senhas até 17h)
-3. Leve seus documentos pessoais (RG, CPF, comprovante de renda, comprovante de endereço)
-4. Leve também os documentos relacionados ao seu caso no INSS (carta de negativa, laudos médicos, etc.)
-5. Você será atendido por um defensor público que vai analisar seu caso
+1. Acesse o **DPU Digital** e abra seu pedido de atendimento
+2. Anexe seus documentos pessoais (RG, CPF, comprovante de renda e comprovante de endereço)
+3. Anexe também os documentos do caso no INSS (carta de negativa, laudos médicos, CNIS, comprovantes de contribuição etc.)
+4. Se necessário, a DPU poderá orientar atendimento complementar presencial ou remoto
+5. Guarde o número do protocolo e acompanhe o andamento
 
 ---
 
-## 5. Juizado Especial Federal (JEF) — Justica sem Advogado
+## 5. Juizado Especial Federal (JEF) — Justiça sem Advogado
 
-O Juizado Especial Federal é o tribunal que julga causas contra o INSS de até 60 salários minimos. A grande vantagem e que, **para causas de até 20 salários minimos, você não precisa de advogado**.
+O Juizado Especial Federal é o tribunal que julga causas contra o INSS de até 60 salários mínimos. A grande vantagem e que, **para causas de até 20 salários mínimos, você não precisa de advogado**.
 
 ### Onde fica o JEF no Distrito Federal
 
 | Informação | Detalhe |
 |------------|---------|
-| Endereço | SAUS Quadra 2, Bloco A, Praca dos Tribunais Superiores — Brasilia/DF, CEP 70070-900 |
-| Telefone | **(61) 3314-5225** |
+| Endereço | SAU/SUL Quadra 2, Bloco G, Lote 8 — Brasília/DF, CEP 70070-933 |
+| Telefone | **(61) 3221-6600** |
 | Site | www.trf1.jus.br/sjdf |
 | Varas previdenciarias | 31a, 32a, 34a, 36a e 40a Varas Federais |
 
 ### Como entrar com ação no JEF
 
-**Sem advogado (para causas de até 20 salários minimos):**
+**Sem advogado (para causas de até 20 salários mínimos):**
 
 1. Va pessoalmente ao JEF no endereço acima
 2. Solicite a **"atermacao"** — isso significa que um funcionário vai registrar seu pedido por escrito, sem que você precise de advogado
-3. Você também pode agendar a atermacao pelo site **agenda.df.gov.br**
+3. Consulte antes os canais de atendimento e eventual balcao virtual no portal da **SJDF/TRF1**
 
 **Com advogado ou defensor público:**
 
 1. Procure a DPU (se não pode pagar advogado) ou um advogado particular
-2. O advogado ou defensor ira preparar e protocolar a ação
+2. O advogado ou defensor irá preparar e protocolar a ação
 
 ### Documentos Necessários para Ação no JEF
 
@@ -156,7 +154,7 @@ O Juizado Especial Federal é o tribunal que julga causas contra o INSS de até 
 - Comprovantes de contribuição (CNIS, Carteira de Trabalho)
 - Procuracao (se for representado por advogado)
 
-> **Atenção:** E obrigatório ter feito o pedido ao INSS antes de entrar na Justica (decisão do STF, Tema 350). Ou seja, você precisa primeiro pedir ao INSS e, se for negado, ai sim pode ir ao JEF.
+> **Atenção:** É obrigatório ter feito o pedido ao INSS antes de entrar na Justiça (decisão do STF, Tema 350). Ou seja, você precisa primeiro pedir ao INSS e, se for negado, ai sim pode ir ao JEF.
 
 ---
 
@@ -165,10 +163,10 @@ O Juizado Especial Federal é o tribunal que julga causas contra o INSS de até 
 | Situação | Onde ir |
 |----------|---------|
 | Pedir qualquer benefício do INSS | Meu INSS (meu.inss.gov.br) ou telefone 135 |
-| Dificuldade com a internet | Telefone 135 ou agência do INSS mais proxima |
+| Dificuldade com a internet | Telefone 135 ou agência do INSS mais próxima |
 | Benefício negado pelo INSS | Recurso pelo Meu INSS (até 30 dias) |
-| Precisa de advogado gratuito | DPU — (61) 3318-4300 |
-| Quer entrar na Justica | JEF — SAUS Quadra 2, Bloco A, Brasilia |
+| Precisa de advogado gratuito | DPU Digital — web-dpudigital.dpu.def.br |
+| Quer entrar na Justiça | JEF/SJDF — SAU/SUL Quadra 2, Bloco G, Lote 8, Brasília |
 | Não sabe o que fazer | Ligue para o 135 ou procure a DPU |
 
 ---
@@ -178,10 +176,9 @@ O Juizado Especial Federal é o tribunal que julga causas contra o INSS de até 
 | Serviço | Telefone | Horário |
 |---------|----------|---------|
 | Central do INSS | **135** | Segunda a sabado, 7h as 22h |
-| DPU Brasilia | **(61) 3318-4300** | Segunda a sexta, 8h as 18h |
-| DPU Plantao (após 18h) | **(61) 98258-0136** | Após 18h |
-| DPU WhatsApp | **(61) 3318-7617** | Horário comercial |
-| Justica Federal (SJDF) | **(61) 3314-5225** | Horário comercial |
+| DPU Digital | **web-dpudigital.dpu.def.br** | Atendimento remoto |
+| DPU (e-mail) | **atendimento@dpu.def.br** | Atendimento remoto |
+| Justiça Federal (SJDF) | **(61) 3221-6600** | Horário comercial |
 
 ---
 
@@ -194,6 +191,7 @@ O Juizado Especial Federal é o tribunal que julga causas contra o INSS de até 
 
 ### Fontes consultadas (marco/2026)
 - Portal gov.br/inss
+- DPU Digital: https://web-dpudigital.dpu.def.br/
 - Portal da DPU (dpu.def.br)
-- Portal do TRF1/SJDF (trf1.jus.br/sjdf)
+- Justiça Federal no DF — Endereços e Telefones: https://www.trf1.jus.br/sjdf/institucional/enderecos-e-telefones
 - Portal Na Hora DF (nahora.df.gov.br)

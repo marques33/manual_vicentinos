@@ -1,7 +1,7 @@
 # Rede de Proteção no Distrito Federal
 
 > **Se você está em perigo agora, ligue 190 (Polícia Militar).**
-> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) — 24 horas, gratuito.**
 
 ---
 
@@ -12,24 +12,24 @@
 | Polícia Militar (emergência) | **190** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
 | Direitos Humanos | **100** | 24 horas |
-| DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
-| DEAM II -- Ceilandia | (61) 3207-7391 | 24 horas |
+| DEAM I — Asa Sul | (61) 3207-6172 | 24 horas |
+| DEAM II — Ceilândia | (61) 3207-7391 | 24 horas |
 
 ---
 
 O Distrito Federal tem uma rede de serviços gratuitos para proteger e apoiar mulheres vítimas de violência doméstica. Aqui você encontra endereços, telefones e informações sobre cada serviço.
 
-**Todos os serviços listados abaixo sao gratuitos.**
+**Todos os serviços listados abaixo são gratuitos.**
 
 ---
 
-## Casa da Mulher Brasileira -- Ceilandia
+## Casa da Mulher Brasileira — Ceilândia
 
-A Casa da Mulher Brasileira é um centro que reune varios serviços em um só lugar. Funciona **24 horas, todos os dias**.
+A Casa da Mulher Brasileira é um centro que reúne vários serviços em um só lugar. Funciona **24 horas, todos os dias**.
 
 | Informação | Detalhe |
 |------------|---------|
-| **Endereço** | CNM 1, Bloco I, Lote 3 -- Ceilandia -- CEP: 72215-110 |
+| **Endereço** | CNM 1, Bloco I, Lote 3 — Ceilândia — CEP: 72215-110 |
 | **Recepcao** | (61) 98312-0763 |
 | **Portaria** | (61) 3181-1474 |
 | **Coordenacao** | (61) 3181-2228 |
@@ -41,19 +41,19 @@ A Casa da Mulher Brasileira é um centro que reune varios serviços em um só lu
 - Apoio psicossocial
 - Delegacia especializada
 - Defensoria Pública
-- Ministerio Público
+- Ministério Público
 - Juizado de Violência Doméstica
 
 > **A Casa da Mulher Brasileira é um otimo ponto de partida.** La você encontra tudo o que precisa em um só lugar, 24 horas por dia.
 
 ---
 
-## CEAMs -- Centros Especializados de Atendimento a Mulher
+## CEAMs — Centros Especializados de Atendimento a Mulher
 
-Os CEAMs oferecem acolhimento e acompanhamento com equipe de assistentes sociais, psicologos, pedagogos e orientação jurídica. O serviço e **gratuito** e dura em media 6 meses.
+Os CEAMs oferecem acolhimento e acompanhamento com equipe de assistentes sociais, psicologos, pedagogos e orientação jurídica. O serviço e **gratuito** e dura em média 6 meses.
 
 **Quem pode usar:** Mulheres a partir de 18 anos em situação de violência.
-**Documentos:** De preferencia RG e CPF, mas a falta de documentos não impede o atendimento.
+**Documentos:** De preferência RG e CPF, mas a falta de documentos não impede o atendimento.
 **Agendamento:** Pelo site agenda.df.gov.br ou por telefone.
 
 ### Unidades dos CEAMs
@@ -89,12 +89,12 @@ Funcionamento: segunda a sexta, 9h as 18h.
 |---------|----------|
 | Recanto das Emas | (61) 3181-2665 |
 | Sol Nascente | (61) 3181-2255 |
-| Sao Sebastiao | (61) 3181-2661 |
+| São Sebastião | (61) 3181-2661 |
 | Sobradinho II | (61) 3181-2663 |
 
 ---
 
-## Casa Abrigo -- Para Situações de Risco de Morte
+## Casa Abrigo — Para Situações de Risco de Morte
 
 A Casa Abrigo é um local seguro e sigiloso para mulheres vítimas de violência doméstica que correm **risco de morte**, junto com seus filhos.
 
@@ -102,7 +102,7 @@ A Casa Abrigo é um local seguro e sigiloso para mulheres vítimas de violência
 |------------|---------|
 | **Endereço** | Sigiloso (para proteção das abrigadas) |
 | **Capacidade** | Até 40 pessoas (vítimas e dependentes) |
-| **Permanencia** | Até 90 dias, podendo ser prorrogada |
+| **Permanência** | Até 90 dias, podendo ser prorrogada |
 
 ### Serviços oferecidos:
 - Moradia segura com dormitorios e alimentação
@@ -118,7 +118,7 @@ A Casa Abrigo é um local seguro e sigiloso para mulheres vítimas de violência
 
 ### Como solicitar abrigo:
 
-1. Registre Boletim de Ocorrência na DEAM ou delegacia mais proxima, relatando **risco de morte**
+1. Registre Boletim de Ocorrência na DEAM ou delegacia mais próxima, relatando **risco de morte**
 2. Se houver lesoes, será encaminhada ao IML para exame
 3. A autoridade policial faz o encaminhamento formal a Casa Abrigo
 4. O encaminhamento também pode ser feito por ordem judicial ou pela Casa da Mulher Brasileira
@@ -135,42 +135,42 @@ Os Espacos Acolher oferecem atendimento psicossocial a todas as pessoas envolvid
 
 | Unidade | Telefone | Endereço |
 |---------|----------|----------|
-| **Plano Piloto** | (61) 3181-2236 / 99323-6567 | SQS 112/312, Asa Sul -- CEP 70375-000 |
-| **Ceilandia** | (61) 3181-2240 / 98314-0882 | QNM 02, conjunto F, lote 1/3, Ceilandia Centro |
-| **Brazlandia** | (61) 3181-2244 / 99103-0058 | Ed. Forum de Brazlandia, Area Especial 04, 1o andar, Setor Tradicional -- CEP 72720-640 |
-| **Gama** | (61) 3181-2239 / 99120-5114 | Ed. Promotoria de Justica do Gama, Qd. 01, lotes 860/800, subsolo, Setor Industrial -- CEP 72445-010 |
-| **Paranoa** | (61) 3181-2243 / 99206-6281 | Ed. Promotoria de Justica do Paranoa, Qd. 04, conj. B, sala 111 -- CEP 71570-402 |
-| **Planaltina** | (61) 3181-2242 / 99199-4674 | Ed. Promotoria de Justica de Planaltina, Area Especial 10/A, terreo -- CEP 73310-100 |
-| **Santa Maria** | (61) 3181-2238 / 99516-1772 | Ed. Promotoria de Justica de Santa Maria, QR 211, conj. A, lote 14 -- CEP 72511-100 |
-| **Sobradinho** | (61) 3181-2241 / 99501-6007 | Qd. 3, Area Especial 5, Ed. Gran Via, sala 115 -- CEP 73031-030 |
+| **Plano Piloto** | (61) 3181-2236 / 99323-6567 | SQS 112/312, Asa Sul — CEP 70375-000 |
+| **Ceilândia** | (61) 3181-2240 / 98314-0882 | QNM 02, conjunto F, lote 1/3, Ceilândia Centro |
+| **Brazlândia** | (61) 3181-2244 / 99103-0058 | Ed. Fórum de Brazlândia, Area Especial 04, 1o andar, Setor Tradicional — CEP 72720-640 |
+| **Gama** | (61) 3181-2239 / 99120-5114 | Ed. Promotoria de Justiça do Gama, Qd. 01, lotes 860/800, subsolo, Setor Industrial — CEP 72445-010 |
+| **Paranoá** | (61) 3181-2243 / 99206-6281 | Ed. Promotoria de Justiça do Paranoá, Qd. 04, conj. B, sala 111 — CEP 71570-402 |
+| **Planaltina** | (61) 3181-2242 / 99199-4674 | Ed. Promotoria de Justiça de Planaltina, Area Especial 10/A, terreo — CEP 73310-100 |
+| **Santa Maria** | (61) 3181-2238 / 99516-1772 | Ed. Promotoria de Justiça de Santa Maria, QR 211, conj. A, lote 14 — CEP 72511-100 |
+| **Sobradinho** | (61) 3181-2241 / 99501-6007 | Qd. 3, Area Especial 5, Ed. Gran Via, sala 115 — CEP 73031-030 |
 | **Samambaia** | (61) 3181-2237 / 99530-9675 | Ed. Arena Mall, QS 406, conj. E, lote 3, loja 4, Samambaia Norte |
 
 **Horário de todas as unidades:** Segunda a sexta, 8h ou 9h as 18h.
 
 ---
 
-## Defensoria Pública do DF -- Assistência Jurídica Gratuita
+## Defensoria Pública do DF — Assistência Jurídica Gratuita
 
-A Defensoria Pública oferece advogado gratuito para mulheres vítimas de violência doméstica. Você tem direito a acompanhamento jurídico em todos os processos, civeis e criminais.
+A Defensoria Pública oferece advogado gratuito para mulheres vítimas de violência doméstica. Você tem direito a acompanhamento jurídico em todos os processos, cíveis e criminais.
 
 ### Contatos por localidade
 
 | Localidade | Contato |
 |------------|---------|
-| **Brasilia (Plano Piloto)** | (61) 3103-1926 / 3103-1928 / 3103-1765 |
-| **Brasilia -- WhatsApp** | (61) 99359-0024 |
-| **Taguatinga -- WhatsApp geral** | (61) 99359-0058 |
-| **Taguatinga -- Violência doméstica** | (61) 99359-0038 |
-| **Planaltina -- WhatsApp** | (61) 99882-4085 |
+| **Brasília (Plano Piloto)** | (61) 3103-1926 / 3103-1928 / 3103-1765 |
+| **Brasília — WhatsApp** | (61) 99359-0024 |
+| **Taguatinga — WhatsApp geral** | (61) 99359-0058 |
+| **Taguatinga — Violência doméstica** | (61) 99359-0038 |
+| **Planaltina — WhatsApp** | (61) 99882-4085 |
 | **Plantao Criminal e Violência Doméstica** | (61) 99359-0081 (dias úteis, 12h-19h) |
 
-**Endereço em Brasilia:** Forum Jose Julio Leal Fagundes -- Setor de Multiplas Atividades Sul, Trecho 3, Lotes 4/6.
+**Endereço em Brasília:** Fórum Jose Julio Leal Fagundes — Setor de Multiplas Atividades Sul, Trecho 3, Lotes 4/6.
 
 > **Você não precisa pagar advogado.** A Defensoria Pública atende gratuitamente.
 
 ---
 
-## PROVID -- Polícia Militar de Prevenção a Violência Doméstica
+## PROVID — Polícia Militar de Prevenção a Violência Doméstica
 
 O PROVID é um programa da Polícia Militar do DF que faz acompanhamento preventivo de famílias em situação de violência doméstica.
 
@@ -182,17 +182,17 @@ O PROVID é um programa da Polícia Militar do DF que faz acompanhamento prevent
 ### Quem pode solicitar:
 - A própria vítima
 - Qualquer pessoa que denuncie
-- Órgãos públicos (Ministerio Público, Juizado, CRAS, Conselho Tutelar)
+- Órgãos públicos (Ministério Público, Juizado, CRAS, Conselho Tutelar)
 
 ### Contato da Sede Principal (CPCDH)
 
 | Informação | Detalhe |
 |------------|---------|
-| **Endereço** | Avenida Sibipiruna, Lote 3/5 -- Aguas Claras |
+| **Endereço** | Avenida Sibipiruna, Lote 3/5 — Águas Claras |
 | **Telefone** | (61) 3910-1669 |
 | **E-mail** | pmdf.cpcdh.provid@gmail.com |
 
-O PROVID também tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradinho, Planaltina, Sao Sebastiao e Santa Maria.
+O PROVID também tem unidades em Taguatinga, Gama, Ceilândia, Samambaia, Sobradinho, Planaltina, São Sebastião e Santa Maria.
 
 ---
 
@@ -202,8 +202,8 @@ O PROVID também tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradi
 
 | Sede | Endereço | Telefone |
 |------|----------|----------|
-| **Sede I** | Palacio do Buriti, Ed. Anexo, 8o andar -- CEP 70306-905 | (61) 3181-1445 |
-| **Sede II** | SBN Quadra 02, Bloco P, Edificio Sede 2 -- CEP 70040-035 | (61) 3181-1449 |
+| **Sede I** | Palacio do Buriti, Ed. Anexo, 8o andar — CEP 70306-905 | (61) 3181-1445 |
+| **Sede II** | SBN Quadra 02, Bloco P, Edificio Sede 2 — CEP 70040-035 | (61) 3181-1449 |
 
 ### Programas Importantes
 
@@ -223,7 +223,7 @@ O PROVID também tem unidades em Taguatinga, Gama, Ceilandia, Samambaia, Sobradi
 | Orientação e denúncia | Ligue 180 | 180 |
 | Registrar B.O. e pedir medida protetiva | DEAM I ou DEAM II | (61) 3207-6172 / 3207-7391 |
 | Atendimento completo em um só lugar | Casa da Mulher Brasileira | (61) 98312-0763 |
-| Apoio psicológico e social | CEAM ou Espaco Acolher | Ver lista acima |
+| Apoio psicológico e social | CEAM ou Espaço Acolher | Ver lista acima |
 | Advogado gratuito | Defensoria Pública | (61) 99359-0024 |
 | Abrigo (risco de morte) | Casa Abrigo (via DEAM) | Registre B.O. na DEAM |
 | Auxílio moradia | Aluguel Social | (61) 3181-1467 |

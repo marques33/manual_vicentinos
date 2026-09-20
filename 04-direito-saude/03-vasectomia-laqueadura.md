@@ -1,8 +1,8 @@
 # Vasectomia e Laqueadura pelo SUS
 
-O SUS oferece gratuitamente a vasectomia (para homens) é a laqueadura (para mulheres) como metodos de planejamento familiar. A Lei 14.443/2022 trouxe mudanças importantes que facilitaram o acesso a esses procedimentos.
+O SUS oferece gratuitamente a vasectomia (para homens) é a laqueadura (para mulheres) como métodos de planejamento familiar. A Lei 14.443/2022 trouxe mudanças importantes que facilitaram o acesso a esses procedimentos.
 
-> **Mudanca importante:** Desde 2023, NAO e mais necessário o consentimento do cônjuge para realizar vasectomia ou laqueadura. A decisão e individual.
+> **Mudança importante:** Desde 2023, NÃO e mais necessário o consentimento do cônjuge para realizar vasectomia ou laqueadura. A decisão e individual.
 
 ---
 
@@ -13,10 +13,10 @@ O SUS oferece gratuitamente a vasectomia (para homens) é a laqueadura (para mul
 | Idade mínima | **21 anos** com capacidade civil plena |
 | Alternativa a idade | Ter **2 filhos vivos** (a partir de 18 anos) |
 | Prazo de reflexao | **60 dias** entre a manifestação por escrito é a cirurgia |
-| Consentimento do cônjuge | **NAO e mais necessário** |
+| Consentimento do cônjuge | **NÃO e mais necessário** |
 | Manifestacao por escrito | **Obrigatória** |
 
-> **Comparando com a lei antiga:** Antes era preciso ter 25 anos (agora sao 21) é o cônjuge precisava concordar (agora não precisa mais).
+> **Comparando com a lei antiga:** Antes era preciso ter 25 anos (agora são 21) é o cônjuge precisava concordar (agora não precisa mais).
 
 ---
 
@@ -24,25 +24,25 @@ O SUS oferece gratuitamente a vasectomia (para homens) é a laqueadura (para mul
 
 ### O que é
 
-A vasectomia é uma cirurgia simples que impede o homem de ter filhos. O procedimento interrompe o caminho dos espermatozoides. E feita com anestesia local, sem necessidade de internacao.
+A vasectomia é uma cirurgia simples que impede o homem de ter filhos. O procedimento interrompe o caminho dos espermatozoides. E feita com anestesia local, sem necessidade de internação.
 
 ### O procedimento
 
-- Cirurgia rapida, feita no ambulatório
+- Cirurgia rápida, feita no ambulatório
 - Anestesia local
-- Riscos minimos (pequeno sangramento ou infeccao)
+- Riscos mínimos (pequeno sangramento ou infeccao)
 - Após a cirurgia, é necessário fazer um exame chamado **espermograma** entre 60 e 90 dias depois
-- Só e seguro parar de usar outros metodos anticoncepcionais depois que o espermograma confirmar que não ha mais espermatozoides
+- Só e seguro parar de usar outros métodos anticoncepcionais depois que o espermograma confirmar que não ha mais espermatozoides
 
-> **Atenção:** A vasectomia NAO faz efeito imediato. Continue usando outros metodos até o espermograma confirmar que o procedimento funcionou.
+> **Atenção:** A vasectomia NÃO faz efeito imediato. Continue usando outros métodos até o espermograma confirmar que o procedimento funcionou.
 
 ### Passo a passo no Distrito Federal
 
-**Passo 1 — Va a UBS mais proxima**
-Procure a Unidade Básica de Saúde (UBS) mais proxima de onde você mora e diga que quer fazer a vasectomia.
+**Passo 1 — Va a UBS mais próxima**
+Procure a Unidade Básica de Saúde (UBS) mais próxima de onde você mora e diga que quer fazer a vasectomia.
 
 **Passo 2 — Orientação com equipe de saúde**
-Você será atendido por uma equipe de planejamento familiar (médicos, enfermeiros, psicologos ou assistentes sociais) que vai explicar os metodos disponíveis e tirar suas duvidas.
+Você será atendido por uma equipe de planejamento familiar (médicos, enfermeiros, psicologos ou assistentes sociais) que vai explicar os métodos disponíveis e tirar suas dúvidas.
 
 **Passo 3 — Assine o termo e aguarde 60 dias**
 Você vai assinar um documento dizendo que quer fazer o procedimento. A cirurgia só pode ser marcada depois de 60 dias.
@@ -58,9 +58,9 @@ Realizacao da cirurgia e acompanhamento depois, incluindo o espermograma de cont
 | Hospital | Sigla |
 |----------|-------|
 | Hospital Regional da Asa Norte | HRAN |
-| Hospital Regional de Ceilandia | HRC |
+| Hospital Regional de Ceilândia | HRC |
 | Hospital Regional do Gama | HRG |
-| Hospital Regional da Regiao Leste (Paranoa) | HRL |
+| Hospital Regional da Região Leste (Paranoá) | HRL |
 | Hospital Regional de Sobradinho | HRS |
 | Hospital Regional de Santa Maria | HRSM |
 | Hospital Regional de Taguatinga | HRT |
@@ -73,7 +73,7 @@ Realizacao da cirurgia e acompanhamento depois, incluindo o espermograma de cont
 
 ### O que é
 
-A laqueadura (ligadura de trompas) é uma cirurgia que impede a mulher de engravidar. O procedimento interrompe o caminho do ovulo até o utero. E um metodo definitivo.
+A laqueadura (ligadura de trompas) é uma cirurgia que impede a mulher de engravidar. O procedimento interrompe o caminho do ovulo até o utero. E um método definitivo.
 
 ### Laqueadura durante o parto ou cesarea
 
@@ -81,21 +81,21 @@ A laqueadura (ligadura de trompas) é uma cirurgia que impede a mulher de engrav
 
 ### Passo a passo no Distrito Federal
 
-**Passo 1 — Va a UBS mais proxima**
-Procure a Unidade Básica de Saúde (UBS) mais proxima e diga que quer fazer a laqueadura.
+**Passo 1 — Va a UBS mais próxima**
+Procure a Unidade Básica de Saúde (UBS) mais próxima e diga que quer fazer a laqueadura.
 
 **Passo 2 — Programa de Planejamento Familiar**
-Você será encaminhada para o programa de planejamento familiar, onde vai receber orientação sobre todos os metodos anticoncepcionais.
+Você será encaminhada para o programa de planejamento familiar, onde vai receber orientação sobre todos os métodos anticoncepcionais.
 
 **Passo 3 — Orientação multidisciplinar e prazo de reflexao**
 A SES-DF oferece orientação com médicos, psicologos, enfermeiros ou assistentes sociais. Você deve assinar o documento de manifestação de desejo com pelo menos 60 dias de antecedencia da cirurgia.
 
 **Passo 4 — Encaminhamento para cirurgia**
-Você será regulada e encaminhada para ambulatório de cirurgia ginecologica, onde passara por consulta com ginecologista, avaliação clinica e exames pre-operatorios.
+Você será regulada e encaminhada para ambulatório de cirurgia ginecológica, onde passara por consulta com ginecologista, avaliação clinica e exames pre-operatorios.
 
 **Opcoes de quando fazer a cirurgia:**
 
-- **Cirurgia eletiva agendada** — em um dos 11 hospitais do DF que realizam laqueaduras programadas (incluindo o Hospital Materno Infantil de Brasilia é o Hospital Universitario de Brasilia).
+- **Cirurgia eletiva agendada** — em um dos 11 hospitais do DF que realizam laqueaduras programadas (incluindo o Hospital Materno Infantil de Brasília é o Hospital Universitario de Brasília).
 - **Durante o parto ou pos-parto** — em qualquer uma das 12 maternidades da rede pública do DF (precisa ter sido solicitado durante o pre-natal).
 
 ---
@@ -103,7 +103,7 @@ Você será regulada e encaminhada para ambulatório de cirurgia ginecologica, o
 ## Documentos Necessários (para vasectomia e laqueadura)
 
 - Documento de identidade com foto
-- Cartao SUS (se não tiver, pode fazer na própria UBS)
+- Cartão SUS (se não tiver, pode fazer na própria UBS)
 - Comprovante de residência
 
 ---
@@ -124,13 +124,13 @@ Entre a manifestação da vontade é a cirurgia, tanto para vasectomia quanto pa
 ## Perguntas Frequentes
 
 **Preciso da autorizacao do meu marido/esposa?**
-NAO. Desde a Lei 14.443/2022, a decisão e individual. Não é necessário consentimento do cônjuge.
+NÃO. Desde a Lei 14.443/2022, a decisão e individual. Não é necessário consentimento do cônjuge.
 
 **Posso fazer se não tenho filhos?**
 SIM, desde que tenha 21 anos ou mais e capacidade civil plena.
 
 **A vasectomia/laqueadura e reversivel?**
-Sao considerados metodos definitivos. Embora existam cirurgias de reversao, o resultado não é garantido. Por isso o aconselhamento antes e tao importante.
+São considerados métodos definitivos. Embora existam cirurgias de reversao, o resultado não é garantido. Por isso o aconselhamento antes e tão importante.
 
 **Quanto custa?**
 NADA. Pelo SUS, o procedimento e totalmente gratuito.
@@ -144,7 +144,7 @@ NADA. Pelo SUS, o procedimento e totalmente gratuito.
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
 | Central de Regulacao SES-DF | **160** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
 
 ---
 

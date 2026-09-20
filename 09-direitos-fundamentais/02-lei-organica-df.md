@@ -1,6 +1,6 @@
-# Lei Organica do DF -- Seus Direitos no Distrito Federal
+# Lei Organica do DF — Seus Direitos no Distrito Federal
 
-A Lei Organica do Distrito Federal (LODF) funciona como a "Constituição" do DF. Foi criada em **8 de junho de 1993** e define os direitos é deveres específicos dos moradores do Distrito Federal. Ela complementa a Constituição Federal com regras próprias para a nossa regiao.
+A Lei Organica do Distrito Federal (LODF) funciona como a "Constituição" do DF. Foi criada em **8 de junho de 1993** e define os direitos é deveres específicos dos moradores do Distrito Federal. Ela complementa a Constituição Federal com regras próprias para a nossa região.
 
 ---
 
@@ -14,7 +14,7 @@ A LODF estabelece que o governo do DF deve:
 
 - Garantir e promover os **direitos humanos**
 - Priorizar **educação, saúde, trabalho, transporte, segurança, moradia, saneamento básico, lazer e assistência social**
-- Combater as **causas da pobreza** é a desnutricao
+- Combater as **causas da pobreza** é a desnutrição
 - Promover a **integracao social** das pessoas em situação vulnerável
 - Garantir o **bem-estar** de todos os moradores do DF
 
@@ -26,7 +26,7 @@ A Lei Organica determina que o governo do DF deve garantir:
 
 ### Saúde
 
-- Prestar serviços de **assistência a saúde** para toda a populacao
+- Prestar serviços de **assistência a saúde** para toda a população
 - Manter hospitais, UBSs e UPAs funcionando adequadamente
 - Garantir acesso a **medicamentos e tratamentos**
 
@@ -34,13 +34,13 @@ A Lei Organica determina que o governo do DF deve garantir:
 
 - Proteger **pessoas com deficiência**
 - Manter programas de **proteção a crianças, adolescentes e idosos**
-- Garantir **CRAS e CREAS** funcionando nas regioes administrativas
+- Garantir **CRAS e CREAS** funcionando nas regiões administrativas
 - Implementar programas de **geracao de emprego e renda** para populacoes vulneráveis
 
 ### Saneamento Básico
 
-- Garantir **agua tratada e esgoto** para todas as regioes administrativas
-- Nenhuma regiao do DF pode ser deixada sem esses serviços básicos
+- Garantir **água tratada e esgoto** para todas as regiões administrativas
+- Nenhuma região do DF pode ser deixada sem esses serviços básicos
 
 ### Educação
 
@@ -52,11 +52,11 @@ A Lei Organica determina que o governo do DF deve garantir:
 
 ## 3. Direito a Moradia no DF
 
-A Lei Organica determina que o governo do DF deve promover **programas habitacionais** para a populacao de baixa renda. O órgão responsável por isso é a **CODHAB-DF** (Companhia de Desenvolvimento Habitacional do DF).
+A Lei Organica determina que o governo do DF deve promover **programas habitacionais** para a população de baixa renda. O órgão responsável por isso é a **CODHAB-DF** (Companhia de Desenvolvimento Habitacional do DF).
 
 ### O Que a CODHAB Faz
 
-| Serviço | Descricao |
+| Serviço | Descrição |
 |---------|-----------|
 | **Cadastro habitacional** | Inscrição para programas de moradia popular |
 | **Regularizacao fundiaria** | Legalizacao de terrenos e casas em areas irregulares |
@@ -67,13 +67,13 @@ A Lei Organica determina que o governo do DF deve promover **programas habitacio
 
 1. Acesse o site **www.codhab.df.gov.br**
 2. Ou va presencialmente a sede da CODHAB
-3. Faca seu cadastro no programa habitacional
+3. Faça seu cadastro no programa habitacional
 4. Leve documentos pessoais (RG, CPF, comprovante de residência, comprovante de renda)
 5. Mantenha seu cadastro atualizado
 
 **Telefone da CODHAB:** (61) 3214-1830
 
-> **Dica:** Estar inscrito no **Cadastro Único (CadUnico)** pode facilitar seu acesso aos programas habitacionais. Se você ainda não fez o CadUnico, procure o CRAS mais proximo da sua casa.
+> **Dica:** Estar inscrito no **Cadastro Único (CadÚnico)** pode facilitar seu acesso aos programas habitacionais. Se você ainda não fez o CadÚnico, procure o CRAS mais próximo da sua casa.
 
 ---
 
@@ -88,11 +88,11 @@ O Distrito Federal não tem municípios como os outros estados. Em vez disso, o 
 | **Serviços públicos locais** | Manutenção de ruas, pracas, iluminacao pública |
 | **Canal com o governo** | Receber demandas e reclamações dos moradores |
 | **Descentralizacao** | Levar serviços do governo para perto de onde você mora |
-| **Obras e manutenção** | Tapar buracos, limpar lotes, cuidar de espacos públicos |
+| **Obras e manutenção** | Tapar buracos, limpar lotes, cuidar de espaços públicos |
 
 ### Como Pedir Serviços
 
-- **Central 156 do GDF:** Ligue para pedir serviços públicos na sua regiao (tapar buracos, poda de arvores, iluminacao, limpeza)
+- **Central 156 do GDF:** Ligue para pedir serviços públicos na sua região (tapar buracos, poda de arvores, iluminacao, limpeza)
 - **Presencialmente:** Va a Administração Regional da sua cidade
 - **Ouvidoria do GDF:** Para reclamações e sugestoes sobre serviços públicos
 
@@ -100,22 +100,22 @@ O Distrito Federal não tem municípios como os outros estados. Em vez disso, o 
 
 ## 5. Participação Popular
 
-A Lei Organica garante que a populacao do DF tem direito de **participar das decisões do governo**. Você pode participar de varias formas:
+A Lei Organica garante que a população do DF tem direito de **participar das decisões do governo**. Você pode participar de várias formas:
 
 ### Formas de Participação
 
 | Forma | Como Funciona |
 |-------|---------------|
-| **Conselhos de segurança** | Conselhos comunitarios que discutem segurança pública na sua regiao |
-| **Audiencias públicas** | Reunioes abertas onde o governo apresenta e discute projetos com a populacao |
-| **Orcamento participativo** | Quando implementado, permite que a populacao ajude a decidir onde o dinheiro público será investido |
+| **Conselhos de segurança** | Conselhos comunitários que discutem segurança pública na sua região |
+| **Audiencias públicas** | Reunioes abertas onde o governo apresenta e discute projetos com a população |
+| **Orcamento participativo** | Quando implementado, permite que a população ajude a decidir onde o dinheiro público será investido |
 | **Direito de petição** | Você pode enviar pedido ou reclamação a qualquer órgão público, sem pagar nada |
-| **Conselhos de direitos** | Conselhos municipais de saúde, educação, assistência social -- com participação da sociedade civil |
+| **Conselhos de direitos** | Conselhos municipais de saúde, educação, assistência social — com participação da sociedade civil |
 
-> **Na prática:** Você tem o direito de cobrar do governo que ele cumpra suas obrigações. Se um serviço público não esta funcionando na sua regiao, você pode:
+> **Na prática:** Você tem o direito de cobrar do governo que ele cumpra suas obrigações. Se um serviço público não esta funcionando na sua região, você pode:
 > - Ligar para o **156** e registrar a reclamação
 > - Ir a **Administração Regional** e pedir providencias
-> - Participar de **audiencias públicas** e cobrar os responsáveis
+> - Participar de **audiências públicas** e cobrar os responsáveis
 > - Se nada funcionar, procurar a **Defensoria Pública** para exigir judicialmente
 
 ---
@@ -128,7 +128,7 @@ Você pode reclamar pelos canais oficiais (156, Ouvidoria, Administração Regio
 **A Lei Organica garante moradia para todos?**
 A Lei Organica determina que o governo deve ter programas habitacionais para quem precisa. Isso não significa que todo mundo vai receber uma casa automaticamente, mas o governo e obrigado a manter programas ativos e acessiveis.
 
-**Como fico sabendo das audiencias públicas na minha regiao?**
+**Como fico sabendo das audiências públicas na minha região?**
 Acompanhe o site do GDF, as redes sociais da sua Administração Regional e os murais informativos nos órgãos públicos da sua cidade. Você também pode ligar para o 156 e perguntar.
 
 ---
@@ -149,6 +149,6 @@ Acompanhe o site do GDF, as redes sociais da sua Administração Regional e os m
 ## Fontes e Referências
 
 - Lei Organica do Distrito Federal (1993): https://www.sinj.df.gov.br/sinj/Norma/66634/Lei_Org_nica__08_06_1993.html
-- CLDF -- Lei Organica do DF: https://www.cl.df.gov.br/-/lei-organica-do-distrito-federal-completa-20-anos
+- CLDF — Lei Organica do DF: https://www.cl.df.gov.br/-/lei-organica-do-distrito-federal-completa-20-anos
 - CODHAB-DF: https://www.codhab.df.gov.br
 - Constituição Federal de 1988: https://www.planalto.gov.br/ccivil_03/constituição/constituição.htm

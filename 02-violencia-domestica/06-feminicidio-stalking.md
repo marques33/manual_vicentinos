@@ -1,7 +1,7 @@
 # Feminicidio, Stalking e Violência Psicológica
 
 > **Se você está em perigo agora, ligue 190 (Polícia Militar).**
-> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) — 24 horas, gratuito.**
 
 ---
 
@@ -12,8 +12,8 @@
 | Polícia Militar (emergência) | **190** | 24 horas |
 | Central de Atendimento a Mulher | **180** | 24 horas |
 | Direitos Humanos | **100** | 24 horas |
-| DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
-| DEAM II -- Ceilandia | (61) 3207-7391 | 24 horas |
+| DEAM I — Asa Sul | (61) 3207-6172 | 24 horas |
+| DEAM II — Ceilândia | (61) 3207-7391 | 24 horas |
 
 ---
 
@@ -21,7 +21,7 @@ Esta seção trata de três crimes graves que costumam estar ligados a violênci
 
 ---
 
-## Feminicidio -- Matar Mulher por Ser Mulher
+## Feminicidio — Matar Mulher por Ser Mulher
 
 ### O Que E
 
@@ -29,7 +29,7 @@ O feminicídio é o assassinato de uma mulher por razões ligadas ao fato de ela
 
 Existe feminicidio quando o homicidio acontece em contexto de:
 - **Violência doméstica e familiar** (o agressor e marido, companheiro, namorado, ex-parceiro ou familiar)
-- **Menosprezo ou discriminacao contra a mulher** (matar porque a mulher quis se separar, porque se recusou a ter relacoes, por ciumes doentio, por controle)
+- **Menosprezo ou discriminação contra a mulher** (matar porque a mulher quis se separar, porque se recusou a ter relacoes, por ciumes doentio, por controle)
 
 ### Qual a Pena
 
@@ -46,21 +46,21 @@ Existe feminicidio quando o homicidio acontece em contexto de:
 A pena e ainda maior quando o feminicidio e praticado:
 
 - Durante a gestacao ou nos 3 meses após o parto
-- Contra menores de 14 anos, maiores de 60 anos, pessoas com deficiência ou com doencas que causam vulnerabilidade
+- Contra menores de 14 anos, maiores de 60 anos, pessoas com deficiência ou com doenças que causam vulnerabilidade
 - Na presenca (física ou virtual) de filhos ou pais da vítima
 - Em descumprimento de medida protetiva de urgência
 
 ### Por Que E Importante Conhecer o Feminicidio
 
-Muitas vezes, o feminicidio é o ponto final de uma escalada de violência que comecou com agressoes verbais, ameacas e violência física. Reconhecer os sinais de perigo pode salvar vidas.
+Muitas vezes, o feminicidio é o ponto final de uma escalada de violência que começou com agressoes verbais, ameaças e violência física. Reconhecer os sinais de perigo pode salvar vidas.
 
 **Sinais de alerta de risco de feminicidio:**
 - Ameacas de morte ("se você me deixar, eu te mato")
 - Posse ou acesso a armas
-- Historico de agressoes fisicas graves
+- Historico de agressoes físicas graves
 - Tentativas anteriores de estrangulamento
 - Ciumes excessivo e controle obsessivo
-- Perseguicao após separacao
+- Perseguicao após separação
 - Descumprimento de medidas protetivas
 - Ameaca de suicidio pelo agressor ("se você me deixar, eu me mato")
 
@@ -68,7 +68,7 @@ Muitas vezes, o feminicidio é o ponto final de uma escalada de violência que c
 
 ---
 
-## Stalking -- Crime de Perseguicao
+## Stalking — Crime de Perseguicao
 
 ### O Que E
 
@@ -77,7 +77,7 @@ Stalking é a perseguicao repetida contra uma pessoa, por qualquer meio, que cau
 ### O Que Configura Stalking
 
 Para ser considerado crime, a perseguicao precisa ser:
-- **Reiterada** (acontece varias vezes, não é um evento isolado)
+- **Reiterada** (acontece várias vezes, não é um evento isolado)
 - **Por qualquer meio** (presencial, por telefone, por redes sociais, por terceiros)
 - E precisa causar pelo menos um destes efeitos:
   - Ameaca a integridade física ou psicológica da vítima
@@ -107,8 +107,8 @@ Para ser considerado crime, a perseguicao precisa ser:
 
 ### O Que Fazer Se Você Sofre Stalking
 
-1. **Guarde todas as provas:** mensagens, e-mails, fotos, prints de redes sociais, registros de ligacoes
-2. **Não responda** ao perseguidor -- qualquer resposta pode encorajar a continuidade
+1. **Guarde todas as provas:** mensagens, e-mails, fotos, prints de redes sociais, registros de ligações
+2. **Não responda** ao perseguidor — qualquer resposta pode encorajar a continuidade
 3. **Registre Boletim de Ocorrência** na delegacia ou na DEAM
 4. **Peca medida protetiva de urgência** para que o juiz determine que o perseguidor mantenha distancia
 5. **Conte para pessoas de confianca** sobre a situação
@@ -117,7 +117,7 @@ Para ser considerado crime, a perseguicao precisa ser:
 
 ---
 
-## Violência Psicológica contra a Mulher -- E Crime
+## Violência Psicológica contra a Mulher — E Crime
 
 ### O Que E
 
@@ -127,15 +127,15 @@ Desde 2021, causar dano emocional a mulher com o objetivo de controlar, degradar
 
 Qualquer conduta que cause dano emocional é que vise controlar, degradar ou prejudicar a mulher, incluindo:
 
-- **Ameacar** -- dizer que vai agredir, matar, tirar os filhos
-- **Humilhar** -- xingar, ridicularizar, menosprezar em público ou em privado
-- **Manipular** -- distorcer fatos, fazer a mulher duvidar de si mesma (gaslighting)
-- **Isolar** -- proibir de ver familiares e amigos, controlar saidas
-- **Controlar** -- vigiar celular, decidir o que pode vestir, onde pode ir, com quem pode falar
-- **Chantagear** -- usar os filhos, dinheiro ou informações intimas para obrigar a mulher a fazer algo
-- **Vigiar constantemente** -- monitorar cada passo, exigir que preste contas de tudo
-- **Insultar** -- ofensas constantes que destroem a autoestima
-- **Limitar a liberdade** -- proibir de trabalhar, estudar ou sair de casa
+- **Ameacar** — dizer que vai agredir, matar, tirar os filhos
+- **Humilhar** — xingar, ridicularizar, menosprezar em público ou em privado
+- **Manipular** — distorcer fatos, fazer a mulher duvidar de si mesma (gaslighting)
+- **Isolar** — proibir de ver familiares e amigos, controlar saidas
+- **Controlar** — vigiar celular, decidir o que pode vestir, onde pode ir, com quem pode falar
+- **Chantagear** — usar os filhos, dinheiro ou informações intimas para obrigar a mulher a fazer algo
+- **Vigiar constantemente** — monitorar cada passo, exigir que preste contas de tudo
+- **Insultar** — ofensas constantes que destroem a autoestima
+- **Limitar a liberdade** — proibir de trabalhar, estudar ou sair de casa
 
 ### Qual a Pena
 
@@ -144,38 +144,38 @@ Qualquer conduta que cause dano emocional é que vise controlar, degradar ou pre
 | **Pena** | Reclusão de **6 meses a 2 anos** e multa |
 | **Condição** | Se a conduta não constituir crime mais grave |
 
-### A Diferenca entre Stalking e Violência Psicológica
+### A Diferença entre Stalking e Violência Psicológica
 
-Embora parecidos, sao crimes diferentes:
+Embora parecidos, são crimes diferentes:
 
 | Aspecto | Stalking (art. 147-A) | Violência Psicológica (art. 147-B) |
 |---------|----------------------|-------------------------------------|
 | **Foco** | Perseguicao reiterada | Dano emocional, controle e degradacao |
 | **Vítima** | Qualquer pessoa | Especificamente mulher |
 | **Contexto** | Pode ser dentro ou fora da relacao | Geralmente no contexto doméstico |
-| **Caracteristica principal** | Repetir condutas de perseguicao | Causar sofrimento emocional e controle |
+| **Característica principal** | Repetir condutas de perseguicao | Causar sofrimento emocional e controle |
 
 ---
 
-## A Escalada da Violência -- Como Reconhecer o Perigo
+## A Escalada da Violência — Como Reconhecer o Perigo
 
-A violência doméstica raramente comeca com agressão física grave. Ela costuma seguir uma escalada:
+A violência doméstica raramente começa com agressão física grave. Ela costuma seguir uma escalada:
 
-### Fase 1 -- Controle e Isolamento
+### Fase 1 — Controle e Isolamento
 - O agressor controla o que a mulher faz, com quem fala, onde vai
 - Isola a mulher de amigos e familiares
 - Faz criticas constantes para diminuir a autoestima
 
-### Fase 2 -- Ameacas e Violência Verbal
+### Fase 2 — Ameacas e Violência Verbal
 - Comeca a gritar, xingar e humilhar
-- Faz ameacas ("se você sair, vai se arrepender")
+- Faz ameaças ("se você sair, vai se arrepender")
 - Joga objetos, esmurra paredes
 
-### Fase 3 -- Violência Física
+### Fase 3 — Violência Física
 - Empurroes, tapas, socos
 - As agressoes se tornam mais frequentes e mais graves
 
-### Fase 4 -- Violência Extrema
+### Fase 4 — Violência Extrema
 - Agressoes que podem causar lesoes graves ou morte
 - Uso de armas ou objetos
 - Estrangulamento
@@ -194,7 +194,7 @@ A violência doméstica raramente comeca com agressão física grave. Ela costum
 4. Ligue **180** para orientação
 
 ### Em caso de violência psicológica:
-1. Reconheca que você está sofrendo violência -- violência psicológica é crime
+1. Reconheca que você está sofrendo violência — violência psicológica é crime
 2. Conte para alguém de confianca
 3. Procure um CEAM para apoio psicológico
 4. Registre B.O. e peca medida protetiva
@@ -217,10 +217,10 @@ A violência doméstica raramente comeca com agressão física grave. Ela costum
 |---------|---------|---------|
 | Polícia Militar (emergência) | 190 | 24 horas |
 | Central da Mulher | 180 | 24 horas |
-| DEAM I -- Asa Sul | (61) 3207-6172 | 24 horas |
-| DEAM II -- Ceilandia | (61) 3207-7391 | 24 horas |
+| DEAM I — Asa Sul | (61) 3207-6172 | 24 horas |
+| DEAM II — Ceilândia | (61) 3207-7391 | 24 horas |
 | Casa da Mulher Brasileira | (61) 98312-0763 | 24 horas |
-| Defensoria Pública (Brasilia) | (61) 99359-0024 | Dias úteis |
+| Defensoria Pública (Brasília) | (61) 99359-0024 | Dias úteis |
 | CEAM 102 Sul | (61) 3181-2245 | Seg-Sex, 8h-18h |
 | Casa Abrigo (risco de morte) | Via DEAM (registre B.O.) | 24 horas |
 

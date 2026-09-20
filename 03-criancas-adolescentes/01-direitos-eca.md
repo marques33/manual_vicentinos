@@ -7,7 +7,7 @@ O **Estatuto da Criança e do Adolescente** (Lei 8.069/1990) é a lei que proteg
 - **Criança** e quem tem até 12 anos incompletos.
 - **Adolescente** e quem tem entre 12 e 18 anos.
 
-> **Principio fundamental:** Crianças e adolescentes sao sujeitos de direitos e tem **prioridade absoluta** no atendimento. Isso significa que, em qualquer situação, eles devem ser atendidos primeiro.
+> **Principio fundamental:** Crianças e adolescentes são sujeitos de direitos e tem **prioridade absoluta** no atendimento. Isso significa que, em qualquer situação, eles devem ser atendidos primeiro.
 
 A base legal está no artigo 227 da Constituição Federal e na Lei 8.069/1990.
 
@@ -19,44 +19,44 @@ A base legal está no artigo 227 da Constituição Federal e na Lei 8.069/1990.
 
 Toda criança e adolescente tem direito a:
 
-- **Atendimento integral pelo SUS** -- prevenção, tratamento e recuperacao da saúde.
-- **Atendimento prioritario** em postos de saúde e hospitais. Crianças e adolescentes tem preferencia.
-- **Vacinacao obrigatória** conforme o calendário do Ministerio da Saúde.
+- **Atendimento integral pelo SUS** — prevenção, tratamento e recuperacao da saúde.
+- **Atendimento prioritario** em postos de saúde e hospitais. Crianças e adolescentes tem preferência.
+- **Vacinacao obrigatória** conforme o calendário do Ministério da Saúde.
 - **Gestante** tem direito a atendimento pre-natal e parto pelo SUS.
-- **Aleitamento materno** garantido, inclusive para maes que estão presas.
+- **Aleitamento materno** garantido, inclusive para mães que estão presas.
 
-> **Importante:** Profissionais de saúde sao obrigados por lei a comunicar ao Conselho Tutelar qualquer caso de maus-tratos ou suspeita de maus-tratos contra crianças e adolescentes.
+> **Importante:** Profissionais de saúde são obrigados por lei a comunicar ao Conselho Tutelar qualquer caso de maus-tratos ou suspeita de maus-tratos contra crianças e adolescentes.
 
 ### O que fazer se o atendimento for negado
 
 Se uma criança ou adolescente for impedida de receber atendimento de saúde no SUS:
 
-1. Procure o **Conselho Tutelar** da sua regiao.
-2. Se não resolver, procure a **Defensoria Pública do DF** -- telefone (61) 2196-4300.
+1. Procure o **Conselho Tutelar** da sua região.
+2. Se não resolver, procure a **Defensoria Pública do DF** — telefone (61) 2196-4300.
 3. A Defensoria pode entrar com ação judicial para garantir o atendimento.
 
 ---
 
-## Direito a Educação
+## Direito à Educação
 
 **(Artigos 53 a 59 do ECA)**
 
 Toda criança e adolescente tem direito a:
 
-- **Educação básica obrigatória é gratuita** -- inclui educação infantil, ensino fundamental e medio.
+- **Educação básica obrigatória é gratuita** — inclui educação infantil, ensino fundamental e médio.
 - **Creche e pre-escola** para crianças de 0 a 5 anos. A vaga e obrigação do Estado.
-- **Matricula garantida** -- a escola pública não pode recusar matricula.
-- **Escola proxima de casa** -- o ensino público deve ser acessível.
+- **Matricula garantida** — a escola pública não pode recusar matrícula.
+- **Escola próxima de casa** — o ensino público deve ser acessível.
 - Ser **respeitado pelos educadores**.
 - Participar de **entidades estudantis** (gremios, por exemplo).
 
 ### Passo a Passo: Se não conseguir vaga em creche ou escola
 
-1. Registre o pedido de vaga na escola ou na regional de ensino da sua regiao.
+1. Registre o pedido de vaga na escola ou na regional de ensino da sua região.
 2. Se a vaga for negada, procure o **Conselho Tutelar**.
 3. Se ainda não resolver, procure a **Defensoria Pública do DF** para entrar com ação judicial.
 
-> **Atenção:** A falta de documentos da criança não pode impedir a matricula. A escola deve aceitar a matricula e orientar a família a regularizar a documentacao.
+> **Atenção:** A falta de documentos da criança não pode impedir a matrícula. A escola deve aceitar a matrícula e orientar a família a regularizar a documentação.
 
 ---
 
@@ -66,7 +66,7 @@ Toda criança e adolescente tem direito a:
 
 - Toda criança tem direito a ser **criada e educada pela sua família**.
 - **Ninguém pode perder a guarda dos filhos apenas por ser pobre.** A falta de dinheiro não e motivo para tirar uma criança da família (artigo 23 do ECA).
-- Se a família não puder cuidar da criança, ela será colocada em **família substituta** (guarda, tutela ou adocao).
+- Se a família não puder cuidar da criança, ela será colocada em **família substituta** (guarda, tutela ou adoção).
 - O **acolhimento em abrigo** e medida temporária e excepcional. O prazo máximo e de 18 meses, salvo decisão do juiz.
 
 > **Fique sabendo:** Tirar uma criança da família exige processo judicial. Os pais tem direito a se defender antes de qualquer decisão.
@@ -112,7 +112,7 @@ O jovem aprendiz tem regras especiais:
 
 - **Idade:** entre 14 e 24 anos (sem limite de idade para pessoa com deficiência).
 - **Jornada máxima:** 6 horas por dia. Pode chegar a 8 horas se o aprendiz já concluiu o ensino fundamental (incluindo horas de aula teorica).
-- **Direitos do aprendiz:** salário mínimo-hora, FGTS (aliquota reduzida de 2%), ferias junto com as ferias escolares, vale-transporte e 13o salário.
+- **Direitos do aprendiz:** salário mínimo-hora, FGTS (alíquota reduzida de 2%), férias junto com as férias escolares, vale-transporte e 13º salário.
 - O aprendiz deve estar inscrito em programa de formacao profissional.
 - As atividades devem ser adequadas ao desenvolvimento do adolescente.
 
@@ -120,9 +120,9 @@ O jovem aprendiz tem regras especiais:
 
 Se você souber de uma criança ou adolescente trabalhando de forma irregular:
 
-1. Denuncie ao **Conselho Tutelar** da regiao.
+1. Denuncie ao **Conselho Tutelar** da região.
 2. Ligue para o **Disque 100** (gratuito, pode ser anônimo).
-3. Procure o **Ministerio Público do Trabalho** (MPT).
+3. Procure o **Ministério Público do Trabalho** (MPT).
 4. Procure a **Superintendencia Regional do Trabalho**.
 
 ---
@@ -131,19 +131,19 @@ Se você souber de uma criança ou adolescente trabalhando de forma irregular:
 
 **(Artigo 101 do ECA)**
 
-Quando os direitos de uma criança ou adolescente estão ameacados ou sendo violados, o Conselho Tutelar ou o Juiz pode aplicar medidas de proteção. Veja quais sao:
+Quando os direitos de uma criança ou adolescente estão ameacados ou sendo violados, o Conselho Tutelar ou o Juiz pode aplicar medidas de proteção. Veja quais são:
 
 | Medida | O que significa |
 |--------|-----------------|
 | Encaminhamento aos pais/responsável | A criança volta para a família com orientação |
 | Orientação e acompanhamento | A família recebe apoio de programas sociais |
 | Matricula obrigatória | A criança e inscrita em escola |
-| Programa comunitario | Inclusao em programas de apoio a família |
+| Programa comunitário | Inclusao em programas de apoio a família |
 | Tratamento médico ou psicológico | Atendimento de saúde em hospital ou ambulatório |
 | Programa de tratamento | Para casos de alcoolismo ou dependência quimica |
 | Acolhimento institucional (abrigo) | Medida temporária e excepcional |
 | Acolhimento familiar | A criança vai para uma família acolhedora |
-| Família substituta | Guarda, tutela ou adocao |
+| Família substituta | Guarda, tutela ou adoção |
 
 > **Atenção:** O acolhimento em abrigo só pode ser determinado por um **juiz**. Nenhum outro órgão pode tirar a criança da família sem decisão judicial.
 
@@ -153,7 +153,7 @@ Quando os direitos de uma criança ou adolescente estão ameacados ou sendo viol
 
 | Situação | Onde procurar | Contato |
 |----------|---------------|---------|
-| Maus-tratos, negligencia, violência | Conselho Tutelar | Veja endereços na seção 06 |
+| Maus-tratos, negligência, violência | Conselho Tutelar | Veja endereços na seção 06 |
 | Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
 | Falta de vaga em escola/creche | Conselho Tutelar ou Defensoria Pública | (61) 2196-4300 |
 | Trabalho infantil | Conselho Tutelar ou MPT | Disque 100 |
@@ -164,7 +164,7 @@ Quando os direitos de uma criança ou adolescente estão ameacados ou sendo viol
 
 ## Fontes e Referências
 
-- **Lei 8.069/1990** -- Estatuto da Criança e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
-- **Constituição Federal**, artigo 227 -- Proteção integral a criança e ao adolescente.
+- **Lei 8.069/1990** — Estatuto da Criança e do Adolescente (ECA): https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- **Constituição Federal**, artigo 227 — Proteção integral a criança e ao adolescente.
 - **Defensoria Pública do DF**: https://www.defensoria.df.gov.br
-- **Conselho Tutelar do DF** -- Endereços: https://conselhotutelar.sejus.df.gov.br/endereços/
+- **Conselho Tutelar do DF** — Endereços: https://conselhotutelar.sejus.df.gov.br/endereços/

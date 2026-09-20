@@ -1,13 +1,13 @@
-# A Lei Maria da Penha -- Seus Direitos Contra a Violência Doméstica
+# A Lei Maria da Penha — Seus Direitos Contra a Violência Doméstica
 
 > **Se você está em perigo agora, ligue 190 (Polícia Militar).**
-> **Para orientação e denúncia, ligue 180 (Central da Mulher) -- 24 horas, gratuito.**
+> **Para orientação e denúncia, ligue 180 (Central da Mulher) — 24 horas, gratuito.**
 
 ---
 
-## O Que E a Lei Maria da Penha?
+## O Que É a Lei Maria da Penha?
 
-A Lei Maria da Penha (Lei 11.340/2006) é a principal lei brasileira de proteção a mulher contra a violência doméstica e familiar. Ela garante que toda mulher -- independente de classe social, raca, idade, religiao ou orientação sexual -- tem o direito de viver sem violência.
+A Lei Maria da Penha (Lei 11.340/2006) é a principal lei brasileira de proteção à mulher contra a violência doméstica e familiar. Ela garante que toda mulher — independente de classe social, raça, idade, religião ou orientação sexual — tem o direito de viver sem violência.
 
 Essa lei foi declarada constitucional pelo Supremo Tribunal Federal (STF) em 2012 e é uma das mais avancadas do mundo na proteção das mulheres.
 
@@ -15,17 +15,17 @@ Essa lei foi declarada constitucional pelo Supremo Tribunal Federal (STF) em 201
 
 A Lei Maria da Penha se aplica quando a violência acontece:
 
-- **Dentro de casa** -- no espaco onde as pessoas convivem, com ou sem vínculo familiar (exemplo: agregados, empregados domésticos)
-- **Na família** -- entre pessoas unidas por lacos de parentesco, afinidade ou vontade (exemplo: sogra, cunhada, madrasta)
-- **Em qualquer relacao de afeto** -- quando o agressor convive ou já conviveu com a vítima, mesmo que não morem juntos (exemplo: namorado, ex-namorado, ex-marido)
+- **Dentro de casa** — no espaço onde as pessoas convivem, com ou sem vínculo familiar (exemplo: agregados, empregados domésticos)
+- **Na família** — entre pessoas unidas por laços de parentesco, afinidade ou vontade (exemplo: sogra, cunhada, madrasta)
+- **Em qualquer relacao de afeto** — quando o agressor convive ou já conviveu com a vítima, mesmo que não morem juntos (exemplo: namorado, ex-namorado, ex-marido)
 
-> **Importante:** Não é preciso morar junto para a lei valer. Ex-namorados, ex-maridos e ex-companheiros estão sujeitos a Lei Maria da Penha (Sumula 600 do STJ).
+> **Importante:** Não é preciso morar junto para a lei valer. Ex-namorados, ex-maridos e ex-companheiros estão sujeitos à Lei Maria da Penha (Súmula 600 do STJ).
 
 ---
 
 ## Os Cinco Tipos de Violência Doméstica
 
-A lei reconhece **cinco formas** de violência contra a mulher (artigo 7o). Violência não e só agressão física. Veja:
+A lei reconhece **cinco formas** de violência contra a mulher (artigo 7º). Violência não é só agressão física. Veja:
 
 ### 1. Violência Física
 
@@ -41,7 +41,7 @@ Qualquer atitude que cause dano emocional, diminua a autoestima ou tente control
 - Ameacar
 - Humilhar e xingar
 - Isolar a mulher de amigos e família
-- Controlar onde ela vai é o que faz
+- Controlar onde ela vai e o que faz
 - Vigiar o celular e as redes sociais
 - Fazer chantagem emocional
 - Ridicularizar em público
@@ -55,19 +55,19 @@ Qualquer ato que obrigue a mulher a participar de relacao sexual contra sua vont
 
 **Exemplos:**
 - Forcar relacao sexual (mesmo dentro do casamento)
-- Impedir o uso de metodo contraceptivo
+- Impedir o uso de método contraceptivo
 - Forcar gravidez ou aborto
 - Obrigar a prostituicao
 
-> **Importante:** Violência sexual dentro do casamento ou uniao estável e CRIME. O marido ou companheiro não tem "direito" ao corpo da mulher.
+> **Importante:** Violência sexual dentro do casamento ou união estável e CRIME. O marido ou companheiro não tem "direito" ao corpo da mulher.
 
 ### 4. Violência Patrimonial
 
 Qualquer ato que destrua, retenha ou tire bens, documentos ou recursos da mulher.
 
 **Exemplos:**
-- Destruir documentos pessoais (RG, CPF, certidoes)
-- Esconder cartao do banco ou reter salário
+- Destruir documentos pessoais (RG, CPF, certidões)
+- Esconder cartão do banco ou reter salário
 - Quebrar objetos pessoais ou de trabalho
 - Vender bens do casal sem consentimento
 - Destruir ferramentas de trabalho
@@ -90,33 +90,33 @@ A mulher vítima de violência doméstica tem os seguintes direitos:
 
 ### Proteção Imediata
 - Pedir **medidas protetivas de urgência** (o juiz decide em até 48 horas)
-- Ter o **agressor afastado de casa** -- e ele quem deve sair, não a mulher
+- Ter o **agressor afastado de casa** — e ele quem deve sair, não a mulher
 - Ser encaminhada a **Casa Abrigo** em caso de risco de morte
 
 ### Saúde
 - Atendimento médico de emergência (gratuito pelo SUS)
 - Exame de corpo de delito no IML
 - Atendimento psicológico
-- Contraceptivo de emergência e prevenção de doencas (em caso de violência sexual)
+- Contraceptivo de emergência e prevenção de doenças (em caso de violência sexual)
 - Prioridade em cirurgias plasticas reparadoras
 
 ### Trabalho
-- **Manutenção do emprego** por até 6 meses quando precisar se afastar do trabalho (artigo 9o, paragrafo 2o)
+- **Manutenção do emprego** por até 6 meses quando precisar se afastar do trabalho (artigo 9º, paragrafo 2o)
 - A empresa não pode demitir a mulher durante esse período
 - Direito a benefícios do INSS
 
 ### Moradia e Assistência Social
 - Prioridade em **programas habitacionais**
-- **Aluguel Social** no DF -- telefone: (61) 3181-1467
-- **Passe Livre** para transporte no DF -- telefone: (61) 3181-1470
+- **Aluguel Social** no DF — telefone: (61) 3181-1467
+- **Passe Livre** para transporte no DF — telefone: (61) 3181-1470
 - Inclusao em cadastro de programas assistenciais do governo
 - Prioridade na remocao para servidoras públicas
 
 ### Filhos
-- Matricula dos filhos em escola proxima ao novo domicílio, **mesmo sem vaga disponível**
+- Matricula dos filhos em escola próxima ao novo domicílio, **mesmo sem vaga disponível**
 - Restricao ou suspensão de visitas do agressor aos filhos menores
 
-### Justica
+### Justiça
 - Direito a **indenização por danos morais e materiais**, fixada na própria sentença criminal
 - Assistência jurídica **gratuita** pela Defensoria Pública
 - Não é necessário ter advogado para pedir medida protetiva
@@ -124,12 +124,12 @@ A mulher vítima de violência doméstica tem os seguintes direitos:
 
 ---
 
-## O Que a Justica Já Decidiu
+## O Que a Justiça Já Decidiu
 
-Para que você saiba: os tribunais brasileiros tem posicoes firmes em defesa da mulher:
+Para que você saiba: os tribunais brasileiros tem posições firmes em defesa da mulher:
 
-- O Ministerio Público pode processar o agressor **mesmo que a vítima não queira** (STF, ADI 4424)
-- O agressor **não pode** ter a pena privativa de liberdade substituída por penas restritivas de direitos -- como serviço comunitário (Súmula 588 do STJ) -- nem por cestas básicas ou prestação pecuniária (art. 17 da Lei 11.340/2006)
+- O Ministério Público pode processar o agressor **mesmo que a vítima não queira** (STF, ADI 4424)
+- O agressor **não pode** ter a pena privativa de liberdade substituída por penas restritivas de direitos — como serviço comunitário (Súmula 588 do STJ) — nem por cestas básicas ou prestação pecuniária (art. 17 da Lei 11.340/2006)
 - O agressor **não pode** se beneficiar de **suspensão condicional do processo** ou **transação penal** previstas na Lei 9.099/95 (Súmula 536 do STJ)
 - A reconciliacao do casal **não apaga** a responsabilidade criminal do agressor
 - Violência doméstica **não e** crime de menor potencial ofensivo
@@ -141,7 +141,7 @@ Para que você saiba: os tribunais brasileiros tem posicoes firmes em defesa da 
 1. **Em perigo imediato:** ligue **190** (Polícia Militar)
 2. **Para denúncia e orientação:** ligue **180** (24 horas, gratuito, pode ser anônimo)
 3. **Registre Boletim de Ocorrência** na DEAM ou em qualquer delegacia
-4. **Peca medida protetiva de urgência** -- você não precisa de advogado para isso
+4. **Peca medida protetiva de urgência** — você não precisa de advogado para isso
 5. **Busque apoio:** Defensoria Pública, CEAM, Casa da Mulher Brasileira
 
 > **Você não tem culpa. Violência doméstica é crime. Buscar ajuda é um ato de coragem.**

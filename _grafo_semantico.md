@@ -127,8 +127,8 @@ manual_vicentinos/
 ├── README.md                          (índice geral)
 ├── 01-beneficios-sociais/
 │   ├── README.md                      (índice da seção)
-│   ├── 01-cadastro-unico.md
-│   ├── 02-bolsa-familia.md
+│   ├── 01-cadastro-único.md
+│   ├── 02-bolsa-família.md
 │   ├── 03-bpc-loas.md
 │   ├── 04-seguro-desemprego.md
 │   ├── 05-auxilio-reclusao.md
@@ -139,9 +139,9 @@ manual_vicentinos/
 │   ├── 02-como-denunciar.md
 │   ├── 03-medidas-protetivas.md
 │   ├── 04-rede-protecao-df.md
-│   ├── 05-violencia-idosos-criancas.md
+│   ├── 05-violencia-idosos-crianças.md
 │   └── 06-feminicidio-stalking.md
-├── 03-criancas-adolescentes/
+├── 03-crianças-adolescentes/
 │   ├── README.md
 │   ├── 01-direitos-eca.md
 │   ├── 02-guarda-adocao.md
@@ -152,7 +152,7 @@ manual_vicentinos/
 ├── 04-direito-saude/
 │   ├── README.md
 │   ├── 01-direitos-paciente-sus.md
-│   ├── 02-emergencia-obrigatoria.md
+│   ├── 02-emergência-obrigatória.md
 │   ├── 03-vasectomia-laqueadura.md
 │   ├── 04-cirurgia-miomas.md
 │   ├── 05-medicamentos.md
@@ -163,25 +163,25 @@ manual_vicentinos/
 │   ├── 01-aposentadorias.md
 │   ├── 02-auxilio-incapacidade.md
 │   ├── 03-pensao-por-morte.md
-│   ├── 04-salario-maternidade.md
+│   ├── 04-salário-maternidade.md
 │   └── 05-acesso-inss.md
 ├── 06-direito-consumidor/
 │   ├── README.md
 │   ├── 01-direitos-basicos-cdc.md
 │   ├── 02-superendividamento.md
 │   ├── 03-procon-df.md
-│   └── 04-servicos-essenciais.md
+│   └── 04-serviços-essenciais.md
 ├── 07-nocoes-direito-penal/
 │   ├── README.md
 │   ├── 01-quando-ir-delegacia.md
 │   ├── 02-crimes-comuns.md
-│   └── 03-direitos-preso-familia.md
+│   └── 03-direitos-preso-família.md
 ├── 08-acesso-justica/
 │   ├── README.md
 │   ├── 01-defensoria-publica-df.md
 │   ├── 02-justica-gratuita.md
 │   ├── 03-juizados-especiais.md
-│   └── 04-nucleos-universidades.md
+│   └── 04-núcleos-universidades.md
 └── 09-direitos-fundamentais/
     ├── README.md
     ├── 01-constituicao-direitos-sociais.md

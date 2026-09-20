@@ -1,20 +1,20 @@
 # Saúde Mental no SUS
 
-Problemas de saúde mental sao tao serios quanto qualquer outro problema de saúde. Depressao, ansiedade, crises de panico, dependência de álcool ou drogas, pensamentos suicidas — tudo isso tem tratamento, é o SUS oferece atendimento gratuito e especializado.
+Problemas de saúde mental são tão serios quanto qualquer outro problema de saúde. Depressao, ansiedade, crises de panico, dependência de álcool ou drogas, pensamentos suicidas — tudo isso tem tratamento, é o SUS oferece atendimento gratuito e especializado.
 
-> **Você não esta sozinho. Se você ou alguém proximo esta passando por uma crise, procure ajuda. O primeiro passo é o mais importante.**
+> **Você não esta sozinho. Se você ou alguém próximo esta passando por uma crise, procure ajuda. O primeiro passo é o mais importante.**
 
 ---
 
 ## CAPS — Centro de Atenção Psicossocial
 
-### O que sao
+### O que são
 
-Os CAPS sao serviços especializados em saúde mental que funcionam na comunidade. Sao lugares onde você pode receber tratamento com psicologos, psiquiatras, assistentes sociais e outros profissionais.
+Os CAPS são serviços especializados em saúde mental que funcionam na comunidade. São lugares onde você pode receber tratamento com psicologos, psiquiatras, assistentes sociais e outros profissionais.
 
-> **Você NAO precisa de encaminhamento para ir ao CAPS. E só chegar. O atendimento e de porta aberta.**
+> **Você NÃO precisa de encaminhamento para ir ao CAPS. E só chegar. O atendimento e de porta aberta.**
 
-O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as regioes de saúde.
+O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as regiões de saúde.
 
 ### Tipos de CAPS
 
@@ -38,16 +38,16 @@ O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as r
 
 ### Como acessar
 
-1. Va diretamente ao CAPS da sua regiao — não precisa de agendamento nem de encaminhamento
+1. Va diretamente ao CAPS da sua região — não precisa de agendamento nem de encaminhamento
 2. O acolhimento é feito por equipe multidisciplinar no mesmo dia
 
 ### Documentos necessários
 
 - Documento de identificação válido
-- Cartao Nacional do SUS
-- Cartao SES-DF (pode ser feito no primeiro atendimento)
+- Cartão Nacional do SUS
+- Cartão SES-DF (pode ser feito no primeiro atendimento)
 
-### Como encontrar o CAPS mais proximo
+### Como encontrar o CAPS mais próximo
 
 - Acesse: https://info.saúde.df.gov.br/busca-saúde-caps/
 - Ou ligue para o **Disque Saúde 136**
@@ -63,7 +63,7 @@ O Distrito Federal conta atualmente com **18 CAPS**, distribuidos por todas as r
 
 ## Emergência Psiquiatrica — Onde Ir em Caso de Crise
 
-Algumas situações de saúde mental sao emergencias e precisam de atendimento imediato:
+Algumas situações de saúde mental são emergências e precisam de atendimento imediato:
 
 - Tentativa de suicidio ou risco iminente
 - Agitacao intensa com risco para si ou para outros
@@ -73,15 +73,15 @@ Algumas situações de saúde mental sao emergencias e precisam de atendimento i
 
 ### Onde buscar atendimento de emergência
 
-**1. Hospital Sao Vicente de Paulo (HSVP)**
-- Referência principal para emergencias psiquiatricas de adultos no DF
+**1. Hospital São Vicente de Paulo (HSVP)**
+- Referência principal para emergências psiquiatricas de adultos no DF
 - Funciona 24 horas, 7 dias por semana
 - 83 leitos psiquiatricos
 
 **2. Qualquer UPA ou pronto-socorro de hospital regional**
 - Todos realizam avaliação clinica inicial de saúde mental
 
-**3. SAMU 192 — Nucleo de Saúde Mental**
+**3. SAMU 192 — Núcleo de Saúde Mental**
 - Ligue **192** quando não for possível levar a pessoa ao hospital
 - Equipe especializada: assistente social, psicologo, enfermeiro e condutor socorrista
 - Atende crises de ansiedade, crises psicoticas, tentativas de suicidio, vítimas de violência e dependência quimica grave
@@ -90,10 +90,10 @@ Algumas situações de saúde mental sao emergencias e precisam de atendimento i
 
 | Hospital | Quantidade de leitos |
 |----------|---------------------|
-| Hospital Sao Vicente de Paulo (HSVP) | 83 |
+| Hospital São Vicente de Paulo (HSVP) | 83 |
 | Hospital de Base (HB) | 36 |
-| Hospital Universitario de Brasilia (HUB) | 1 |
-| Hospital da Criança de Brasilia (HCB) | 2 |
+| Hospital Universitario de Brasília (HUB) | 1 |
+| Hospital da Criança de Brasília (HCB) | 2 |
 | **Total no DF** | **122 leitos** |
 
 ---
@@ -102,7 +102,7 @@ Algumas situações de saúde mental sao emergencias e precisam de atendimento i
 
 Se você está passando por um momento difícil, com pensamentos suicidas ou precisando de apoio emocional, ligue para o CVV:
 
-> **Ligue 188 — 24 horas por dia, todos os dias. A ligacao é gratuita.**
+> **Ligue 188 — 24 horas por dia, todos os dias. A ligação é gratuita.**
 
 Você também pode conversar pelo chat: **www.cvv.org.br**
 
@@ -115,8 +115,8 @@ O CVV e formado por voluntários treinados que estão prontos para ouvir você, 
 - Você tem direito a tratamento gratuito pelo SUS
 - Você tem direito a ser tratado com dignidade e respeito
 - Você tem direito a recusar tratamento (exceto em situações de emergência com risco de vida)
-- Você tem direito a acompanhante durante internacao psiquiatrica
-- Internacao involuntaria (sem consentimento do paciente) só pode ser feita com laudo médico e deve ser comunicada ao Ministerio Público em até 72 horas
+- Você tem direito a acompanhante durante internação psiquiatrica
+- Internacao involuntaria (sem consentimento do paciente) só pode ser feita com laudo médico e deve ser comunicada ao Ministério Público em até 72 horas
 
 ---
 
@@ -128,7 +128,7 @@ O CVV e formado por voluntários treinados que estão prontos para ouvir você, 
 | SAMU (emergência) | **192** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
 
 ---
 

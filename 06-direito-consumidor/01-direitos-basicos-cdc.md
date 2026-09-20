@@ -9,9 +9,9 @@ O Código de Defesa do Consumidor (CDC) é a lei que protege toda pessoa que com
 Toda vez que você compra algo ou contrata um serviço, você tem direito a receber informações **claras e completas**. O vendedor ou prestador de serviço e obrigado a informar:
 
 - O **preço** do produto ou serviço (sempre em reais)
-- A **quantidade** e as **caracteristicas** do produto
+- A **quantidade** e as **características** do produto
 - Os **riscos** que o produto pode oferecer
-- A **composicao** é a **validade** (no caso de alimentos)
+- A **composição** é a **validade** (no caso de alimentos)
 - Os **juros** e encargos (no caso de compras parceladas)
 
 > **Na prática:** Se você comprar um produto sem rotulo, com informações confusas ou em outro idioma, a empresa esta violando a lei. Você pode reclamar no PROCON.
@@ -32,24 +32,24 @@ A lei proibe dois tipos de propaganda:
 
 **Propaganda abusiva:** quando a propaganda explora o medo, se aproveita de crianças, ou incentiva comportamentos perigosos.
 
-> **Importante:** Se a empresa fez propaganda, ela e obrigada a cumprir o que anunciou. Se o preço estava errado no panfleto ou no site, você tem direito de pagar o valor anunciado. E a empresa que deve provar que a propaganda e verdadeira -- você não precisa provar que e falsa.
+> **Importante:** Se a empresa fez propaganda, ela e obrigada a cumprir o que anunciou. Se o preço estava errado no panfleto ou no site, você tem direito de pagar o valor anunciado. E a empresa que deve provar que a propaganda e verdadeira — você não precisa provar que e falsa.
 
 ---
 
 ## 3. Direito de Arrependimento (7 Dias Para Devolver)
 
-Se você comprou um produto ou contratou um serviço **fora da loja física** -- por exemplo, pela internet, por telefone, por catalogo ou de um vendedor que foi até sua casa -- você pode **desistir em até 7 dias corridos**.
+Se você comprou um produto ou contratou um serviço **fora da loja física** — por exemplo, pela internet, por telefone, por catalogo ou de um vendedor que foi até sua casa — você pode **desistir em até 7 dias corridos**.
 
 ### Regras do Arrependimento
 
 | Regra | Explicacao |
 |-------|-----------|
 | **Prazo** | 7 dias corridos, contados a partir do dia que você recebeu o produto |
-| **Motivo** | Você não precisa dar nenhuma explicacao |
+| **Motivo** | Você não precisa dar nenhuma explicação |
 | **Devolucao do dinheiro** | A empresa deve devolver todo o valor pago, com correcao |
 | **Frete de devolucao** | Quem paga é a empresa, não você |
 
-> **Atenção:** Esse direito só vale para compras feitas **fora da loja**. Se você comprou dentro da loja física é o produto não tem defeito, a loja não e obrigada a trocar (embora muitas lojas facam por cortesia).
+> **Atenção:** Esse direito só vale para compras feitas **fora da loja**. Se você comprou dentro da loja física é o produto não tem defeito, a loja não e obrigada a trocar (embora muitas lojas façam por cortesia).
 
 ### Passo a Passo Para Exercer o Arrependimento
 
@@ -70,18 +70,18 @@ Todo produto vendido no Brasil tem **garantia automatica pela lei**, mesmo que o
 | Tipo de Produto | Prazo de Garantia |
 |-----------------|-------------------|
 | **Produtos não duráveis** (alimentos, produtos de limpeza, cosmeticos) | **30 dias** |
-| **Produtos duráveis** (eletrodomesticos, moveis, celulares, roupas) | **90 dias** |
+| **Produtos duráveis** (eletrodomesticos, móveis, celulares, roupas) | **90 dias** |
 
 ### Quando Comeca a Contar o Prazo
 
-- **Defeito visivel** (que da para ver logo): o prazo comeca no dia da entrega
-- **Defeito oculto** (que aparece depois de um tempo): o prazo comeca no dia que o defeito apareceu
+- **Defeito visível** (que da para ver logo): o prazo começa no dia da entrega
+- **Defeito oculto** (que aparece depois de um tempo): o prazo começa no dia que o defeito apareceu
 
 > **Dica:** Se o fabricante oferece 1 ano de garantia, você tem na verdade 1 ano + 90 dias, porque a garantia legal se soma a garantia do fabricante.
 
 ---
 
-## 5. Produto Com Defeito -- O Que Fazer
+## 5. Produto Com Defeito — O Que Fazer
 
 Quando o produto tem defeito (chamado "vicio" na lei), a empresa tem **30 dias para consertar**. Se não consertar nesse prazo, você pode escolher uma destas opcoes:
 
@@ -104,7 +104,7 @@ Se o produto causou algum dano a sua saúde ou a seus bens (por exemplo: um elet
 
 ## 6. Praticas Abusivas
 
-A lei proibe empresas de agirem de forma desleal com o consumidor. Veja as práticas mais comuns que sao **proibidas**:
+A lei proibe empresas de agirem de forma desleal com o consumidor. Veja as práticas mais comuns que são **proibidas**:
 
 ### Tabela de Praticas Abusivas
 
@@ -112,9 +112,9 @@ A lei proibe empresas de agirem de forma desleal com o consumidor. Veja as prát
 |------------------|-----------------|---------|
 | **Venda casada** | Condicionar a venda de um produto a compra de outro | Banco que obriga você a contratar seguro para conseguir emprestimo |
 | **Recusa de atendimento** | Negar venda de produto disponível | Farmacia que se recusa a vender um único comprimido |
-| **Envio sem pedido** | Mandar produto que você não pediu | Cartao de credito que chega sem você ter solicitado |
+| **Envio sem pedido** | Mandar produto que você não pediu | Cartão de crédito que chega sem você ter solicitado |
 | **Pressao sobre vulneráveis** | Se aproveitar da idade, saúde ou condição social da pessoa | Vendedor que pressiona idoso a comprar produto caro e desnecessario |
-| **Aumento abusivo de preço** | Subir o preço sem motivo justo | Aumentar preço de remedios ou alimentos em epoca de crise |
+| **Aumento abusivo de preço** | Subir o preço sem motivo justo | Aumentar preço de remédios ou alimentos em epoca de crise |
 | **Serviço sem autorizacao** | Fazer serviço sem orcamento prévio e aprovacao | Oficina que faz reparos que você não pediu e cobra |
 
 > **Importante:** Se você recebeu um produto que não pediu, a lei diz que e **amostra gratis**. Você não precisa pagar nem devolver.
@@ -141,6 +141,6 @@ A lei proibe empresas de agirem de forma desleal com o consumidor. Veja as prát
 
 ## Fontes e Referências
 
-- Código de Defesa do Consumidor -- Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
-- PROCON-DF -- Canais de Atendimento: https://www.procon.df.gov.br/canais-de-atendimento/
+- Código de Defesa do Consumidor — Lei 8.078/1990: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+- PROCON-DF — Canais de Atendimento: https://www.procon.df.gov.br/canais-de-atendimento/
 - Consumidor.gov.br: https://www.consumidor.gov.br

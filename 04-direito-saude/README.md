@@ -1,6 +1,6 @@
-# Direito a Saúde — Manual Vicentino
+# Direito à Saúde — Manual Vicentino
 
-Este capítulo reune orientações práticas sobre os direitos dos pacientes no Sistema Único de Saúde (SUS), com foco no Distrito Federal. A saúde é um direito de todos é um dever do Estado, garantido pela Constituição Federal (art. 196). Conhecer seus direitos é o primeiro passo para exigi-los.
+Este capítulo reúne orientações práticas sobre os direitos dos pacientes no Sistema Único de Saúde (SUS), com foco no Distrito Federal. A saúde é um direito de todos é um dever do Estado, garantido pela Constituição Federal (art. 196). Conhecer seus direitos é o primeiro passo para exigi-los.
 
 ---
 
@@ -26,7 +26,7 @@ Este capítulo reune orientações práticas sobre os direitos dos pacientes no 
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
 | CVV (apoio emocional / suicidio) | **188** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
 
 ---
 

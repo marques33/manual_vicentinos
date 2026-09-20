@@ -1,6 +1,6 @@
 # Ouvidoria do SUS e Como Reclamar
 
-Se você teve um problema no atendimento de saúde — demora excessiva, mau atendimento, falta de medicamento, recusa de atendimento — você tem o direito de reclamar. Existem varios canais oficiais para isso, e todos sao gratuitos.
+Se você teve um problema no atendimento de saúde — demora excessiva, mau atendimento, falta de medicamento, recusa de atendimento — você tem o direito de reclamar. Existem vários canais oficiais para isso, e todos são gratuitos.
 
 > **Reclamar é um direito seu. A ouvidoria existe para ouvir você e cobrar solucoes.**
 
@@ -36,7 +36,7 @@ A Ouvidoria da Secretaria de Saúde do DF é o canal para reclamações sobre ho
 
 | Canal | Informação |
 |-------|-----------|
-| Telefone | **162** (ligacao gratuita de fixo e celular) |
+| Telefone | **162** (ligação gratuita de fixo e celular) |
 | Horário | Segunda a sexta, 9h-12h e 14h-17h |
 | Online | Sistema **Participa-DF** (registro e acompanhamento por protocolo) |
 | Presencial | Ed. PO 700, 1. andar — SRTVN 701 Norte, Via W5, Lote D — CEP 70.719-040 |
@@ -81,12 +81,12 @@ Para quando o direito a saúde e negado e você precisa de ajuda jurídica gratu
 
 | Informação | Detalhe |
 |------------|---------|
-| Telefone | **(61) 3318-2000** |
+| Telefone | **129** ou **(61) 2196-4300** |
 | Site | www.defensoria.df.gov.br |
-| Quando procurar | Negativa de atendimento, demora excessiva, necessidade de entrar na Justica |
+| Quando procurar | Negativa de atendimento, demora excessiva, necessidade de entrar na Justiça |
 | Custo | Gratuito para quem não pode pagar advogado |
 
-### Ministerio Público do DF (MPDFT)
+### Ministério Público do DF (MPDFT)
 
 Para denúncias de irregularidades graves nos serviços de saúde.
 
@@ -131,8 +131,8 @@ Para problemas com planos de saúde em nivel nacional.
 |----------|---------------|
 | Problema em hospital ou UBS do SUS no DF | Ouvidoria SES-DF (162) ou Disque 136 |
 | Problema no SUS em qualquer estado | Disque 136 |
-| Precisa entrar na Justica por direito a saúde | Defensoria Pública (61) 3318-2000 |
-| Irregularidade grave no SUS | Ministerio Público (61) 3343-6000 |
+| Precisa entrar na Justiça por direito a saúde | Defensoria Pública 129 ou (61) 2196-4300 |
+| Irregularidade grave no SUS | Ministério Público (61) 3343-6000 |
 | Problema com plano de saúde | PROCON (151) ou ANS (0800 701 9656) |
 | Denúncia contra médico | CRM-DF (61) 3445-5800 |
 
@@ -144,8 +144,8 @@ Para problemas com planos de saúde em nivel nacional.
 |---------|----------|
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
-| Ministerio Público do DF | **(61) 3343-6000** |
+| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Ministério Público do DF | **(61) 3343-6000** |
 | PROCON-DF | **151** |
 | CRM-DF | **(61) 3445-5800** |
 | ANS (planos de saúde) | **0800 701 9656** |
@@ -156,7 +156,7 @@ Para problemas com planos de saúde em nivel nacional.
 
 - Constituição Federal de 1988, art. 196
 - Lei 8.080/1990 — Lei Organica da Saúde (Lei do SUS)
-- Lei 13.460/2017 — Lei de Defesa do Usuario de Serviços Publicos
-- Ouvidoria-Geral do SUS (OuvSUS) — Ministerio da Saúde
+- Lei 13.460/2017 — Lei de Defesa do Usuário de Serviços Publicos
+- Ouvidoria-Geral do SUS (OuvSUS) — Ministério da Saúde
 - Secretaria de Saúde do Distrito Federal (SES-DF) — Ouvidoria
 - Sistema Participa-DF
