@@ -1,917 +1,162 @@
-# Atualização do site — julho/2026
+# Correções pedidas em 19/09/2026
 
-## Contexto
-Site em `app/` (index.html, eventos.html, manual.html) publicado na Vercel.
-Mudanças pedidas pelo usuário:
-1. O almoço beneficente de 24/05/2026 já aconteceu → sair do site.
-2. Reuniões: além das terças, agora também aos sábados, 17h (decisão confirmada: terças **e** sábados).
-3. Incluir a obra atual: 9 famílias / 53 pessoas domiciliadas na Estrutural, cestas básicas,
-   auxílio material e espiritual.
-4. Página de eventos: zerada (só "em breve, novos encontros" + convite à doação).
-
-## Tarefas
-- [x] Mapear todas as ocorrências do evento e do horário das reuniões
-- [x] index.html — metas (description, og, twitter) com terças e sábados
-- [x] index.html — remover Event (almoço) do JSON-LD e enriquecer a Organization
-- [x] index.html — substituir o banner do almoço por seção "Nossa obra hoje" (9 famílias / 53 pessoas / Estrutural)
-- [x] index.html — atualizar os dois cards "Reuniões" (Conferência e Contato)
-- [x] index.html — trocar CSS `.event-feature*` por `.impact*` (inclusive media queries)
-- [x] eventos.html — metas, título, OG/Twitter e JSON-LD sem o almoço
-- [x] eventos.html — remover card do evento e CSS morto; página com estado "em breve" + doação
-- [x] sitemap.xml — remover imagem do encarte, atualizar lastmod
-- [x] Verificação: HTML/JSON-LD válidos, sem referências órfãs ao almoço, render local
-
-## Revisão final
-
-### O que mudou
-**app/index.html**
-- Metas (description, keywords, og, twitter) com "terças e sábados, 17h" e a obra atual.
-- JSON-LD: removido o nó `Event` do almoço; `Organization` agora descreve as 9 famílias /
-  53 pessoas na Estrutural, cestas básicas, auxílio material e espiritual; `areaServed`
-  passou a incluir Estrutural (SCIA); acrescentado `knowsAbout`.
-- Banner do almoço (markup + CSS `.event-feature*` + `.btn-whatsapp`) substituído pela
-  seção **"Nossa obra hoje"** (`.impact*`): texto + chips (cestas básicas / auxílio material /
-  apoio espiritual) + cartões 9 famílias, 53 pessoas e Estrutural — DF, com CTA para #ajudar.
-- Cards "Reuniões" (Nossa Conferência e Contato) → "Terças e sábados, às 17h".
-- Card "Visitas às famílias" cita as 9 famílias na Estrutural.
-
-**app/eventos.html**
-- Metas, título, OG/Twitter e JSON-LD sem o almoço (agora `BreadcrumbList` + `CollectionPage`);
-  imagem social passou a ser a de N. S. do Carmo.
-- Card do evento, cardápio, ingressos e CSS morto (`.event-*`, `.btn-outline`) removidos.
-- Nova seção "Nossos encontros semanais" (terça 17h / sábado 17h), estado "Em breve, novos
-  encontros" e bloco de doação com a obra atual (9 famílias / 53 pessoas na Estrutural).
-
-**app/sitemap.xml** — imagem do encarte removida, `lastmod` 2026-07-29, prioridade de
-eventos 0.9 → 0.8.
-
-### Evidências
-- JSON-LD das duas páginas parseado com `json.loads` — válido (index: WebSite, Organization,
-  Church/PlaceOfWorship; eventos: BreadcrumbList, CollectionPage).
-- Balanceamento de tags verificado com `html.parser`: 0 tags abertas sem fechar, 0 erros.
-- Render local (`python -m http.server`) no Chrome: seções novas conferidas em 1280px e em
-  ~500px (breakpoint mobile), sem overflow horizontal e sem erros/avisos no console.
-- `grep` confirma que não sobrou nenhuma referência a "almoço/ingresso/24-05/event-*"
-  fora da menção genérica a futuros almoços beneficentes.
-
-### Riscos residuais / próximos passos
-- `app/assets/almoco-vicentinos.jpg` foi removido do repositório (segue recuperável pelo
-  histórico do git, commit 3d8a067 e anteriores). Ainda é citado por dois documentos que não
-  fazem parte do site: `social/instagram-launch/02-almoco-convite/slides.md` e o checklist
-  `.claude/skills/vicentino-seo-audit/SKILL.md`.
-- Google Search Console pode levar alguns dias para derrubar o rich result do Event antigo;
-  o sitemap com `lastmod` novo acelera o recrawl.
-- Se as reuniões de terça mudarem de horário, atualizar: metas + JSON-LD da index, os dois
-  cards "Reuniões" e os cards da agenda em eventos.html.
-
-## Diagnóstico de indexação (29/07/2026)
-
-Consultas `site:manual-vicentinos.vercel.app` em DuckDuckGo/lite (índice Bing) e Brave:
-**nenhum resultado**. Busca por frases exatas do site ("Manual Vicentino de Direitos e
-Auxílios") também não retorna o domínio. O Google respondeu com CAPTCHA às consultas
-automatizadas — a confirmação definitiva precisa ser feita no Search Console.
-
-Lado técnico: tudo liberado para indexar.
-- `robots.txt`: `Allow: /` + sitemap declarado.
-- Cabeçalhos de produção: sem `X-Robots-Tag`; `<meta name="robots" content="index, follow">`.
-- `canonical` correto nas três páginas; `sitemap.xml` responde 200.
-- Meta `google-site-verification` presente (propriedade de prefixo de URL no GSC).
-
-Ações pendentes (exigem login no Search Console — só o usuário pode fazer):
-1. Sitemaps → enviar `https://manual-vicentinos.vercel.app/sitemap.xml`.
-2. Inspeção de URL → `/`, `/eventos.html`, `/manual.html` → "Solicitar indexação".
-3. Relatório "Páginas" → conferir o motivo caso apareçam como "Descoberta — não indexada".
-
-Fator de risco conhecido: domínio gratuito `*.vercel.app` e ausência de links externos
-apontando para o site. Um domínio próprio e links (site/redes da paróquia, bio do Instagram)
-aceleram bastante a descoberta.
+Quatro pedidos do usuário, tratados "em partes" conforme solicitado.
+Cada parte tem causa raiz **comprovada ao vivo** antes de qualquer correção.
 
 ---
 
-# Doação por PIX com QR Code — agosto/2026
+## Investigação — o que foi provado (não suposto)
 
-## Contexto
-Pedido: incluir no site a informação de doação e o QR Code para a chave PIX `984139596`.
+Ambiente conferido antes de tocar em código:
+- Projeto Supabase `zyzyttkayblvgnfqkapq` ("vicentinos"), `linked: true`, o mesmo
+  `ref` na URL de `assets/supabase-client.js:34` e na sessão da CLI.
+- `supabase migration list`: as 20 migrations locais estão aplicadas no remoto.
+  Banco e repositório contam a mesma história — o bug não é migration faltando.
+- `app/` e `supabase/` limpos e iguais a `origin/main` → o que está na Vercel é
+  o que está no repositório.
+- Controle positivo antes de qualquer negativa: `mural_posts` respondeu `200 []`
+  com a chave anon. O canal funciona; a chave é válida.
 
-Decisões confirmadas com o usuário:
-- A chave veio sem DDD. Confirmado **61** (Brasília) → chave final `+5561984139596`.
-- A conta está em nome de **Horcioni**, consócia da Conferência (não é conta em nome da
-  Conferência). Por isso o bloco avisa que é esse o nome que aparece no app do doador.
-- Bloco publicado nas **duas** páginas (index.html e eventos.html).
+Estado real dos dados (lido com service_role, somente leitura):
 
-## Tarefas
-- [x] Confirmar DDD e titular da conta antes de gerar qualquer código
-- [x] Gerar o BR Code (EMV MPM) estático com CRC16-CCITT-FALSE
-- [x] Gerar o QR Code como SVG (`app/assets/pix-qr.svg`)
-- [x] index.html — bloco PIX na seção "Como Ajudar" (+ CSS e responsivo)
-- [x] eventos.html — bloco PIX na seção de doação, WhatsApp mantido como alternativa
-- [x] Botões "copiar chave" e "copiar código" com fallback sem Clipboard API
-- [x] Acessibilidade: alt no QR, `:focus-visible` nos botões, `aria-live` no feedback
-- [x] Verificação: CRC, TLV, round-trip do QR, integridade do código no HTML, render local
-
-## Evidências de verificação
-1. **Algoritmo CRC** — check value canônico do CRC-16/CCITT-FALSE (`"123456789"` → `29B1`)
-   confere em duas implementações independentes (bitwise e table-driven).
-2. **Payload** — re-parse TLV completo fecha sem sobra de bytes; CRC do payload confere.
-3. **Round-trip do QR** — o SVG **como servido pelo site** foi rasterizado no navegador e
-   decodificado com pyzbar: devolve exatamente o BR Code esperado, chave `+5561984139596`.
-4. **Integridade no HTML** — os 4 botões (2 por página) carregam a chave e o BR Code
-   idênticos ao payload validado (conferido por script após cada reescrita de arquivo).
-5. **Funcional** — clique nos 4 botões grava o valor correto (writeText interceptado),
-   rótulo muda para "Copiado!"; console sem erros nas duas páginas.
-6. **Layout** — desktop 1280px e mobile emulado 375×812 (DPR 2); bloco PIX sem overflow.
-
-BR Code gerado:
-`00020126360014br.gov.bcb.pix0114+55619841395965204000053039865802BR5922CONFERENCIA N S FATIMA6008BRASILIA62070503***6304A866`
-
-## Riscos residuais / próximos passos
-- **Teste real de pagamento não foi feito.** A validação é do formato (CRC/TLV/decodificação),
-  não da titularidade. Antes de divulgar, alguém deve escanear e conferir se o app mostra o
-  nome da Horcioni — só o banco resolve a chave para a conta de destino.
-- O nome exibido no bloco é só "Horcioni"; se o app do banco mostrar o nome completo, pode
-  valer alinhar o texto do site com o que o doador realmente vê.
-- ~~Bug pré-existente: estouro horizontal de 10px a 375px.~~ **Corrigido** — ver seção
-  abaixo.
-
-
----
-
-# Correção do estouro horizontal em telas estreitas — agosto/2026
-
-## Contexto
-Achado durante a tarefa do PIX e reportado ao usuário, que pediu a correção.
-
-## Causa raiz (duas, encadeadas)
-1. `.ssvp-emblem-medal` tinha `width`/`height` fixos de 280px dentro de um `.ssvp-emblem`
-   com `padding: 56px 40px` → mínimo de **362px**. O `.container` oferece `largura - 48`,
-   então estourava em **qualquer viewport abaixo de ~410px** (não só a 375px).
-2. `.ssvp-emblem` é item de grid, e item de grid tem `min-width: auto`. Ele crescia além
-   da própria coluna, então um `max-width: 100%` no medalhão resolveria contra um pai
-   inflado pelo próprio medalhão — a primeira correção sozinha não bastava.
-
-## Achado fora do escopo (§6.1)
-`.impact-stats` (grid de 2 colunas, `min-content` de 276px) não cabia no `.impact-card`
-abaixo de ~378px de viewport e era **cortado** pelo `overflow: hidden` do cartão — texto
-some, sem barra de rolagem para denunciar. Corrigido em commit separado: uma coluna só
-abaixo de 400px.
-
-## Correções
-- `.ssvp-emblem-medal`: `max-width: 100%` + `aspect-ratio: 1` no lugar da altura fixa
-  (preserva o círculo ao encolher).
-- `.ssvp-emblem`: `min-width: 0`.
-- `.impact-stats`: uma coluna em `@media (max-width: 400px)`.
-
-## Evidências
-- Varredura de 320px a 1440px em `index.html`: **zero** elementos fora da viewport,
-  emblema sempre dentro da coluna do grid, medalhão sempre circular (161px a 280px).
-- Verificação adicional por `scrollWidth > clientWidth` em `.impact-stat`/`.impact-text`/
-  `.ssvp-emblem`: **zero** elementos com conteúdo cortado, até 290px de largura efetiva.
-- `eventos.html` e `manual.html` varridas em 320/375/414/768/1280: zero estouros.
-- Desktop inalterado: medalhão segue 280x280.
-
-## Riscos residuais
-- Entre 378px e 400px as estatísticas passam a ficar em uma coluna embora coubessem em
-  duas. Escolha deliberada: margem de segurança contra variação de fonte e tradução.
-
-
----
-
-# Mural da Comunidade e Pedidos de Oração (Supabase) — agosto/2026
-
-## Contexto
-Dois pedidos do usuário:
-1. **Mural** para divulgar outros grupos e movimentos — o caso concreto foi o folheto das
-   *Oficinas de Oração e Vida* (frei Ignácio Larrañaga; início em fevereiro e agosto;
-   contato Fernanda (61) 99970-7548; www.tovbrasil.com.br).
-2. **Pedidos de oração**, com os "privilegiados da semana", expostos na própria página.
-
-O segundo abre o site a conteúdo de desconhecidos. O usuário pediu explicitamente
-mecanismos contra fake news e discurso de ódio, e política de RLS protegendo o banco.
-
-## Decisões confirmadas com o usuário
-| Tema | Decisão |
+| tabela | linhas |
 |---|---|
-| Quem publica no mural | Só a Conferência, pelo painel. Sem formulário público. |
-| Pedidos de oração | Aprovação prévia — nada aparece antes de um moderador liberar. |
-| Exibição | Primeiro nome + intenção curta; opção anônima; expira em 60 dias. |
-| Formato | Duas páginas novas + faixa na home (não seções dentro da index). |
-| Cartazes | Só texto estruturado — sem upload de imagem, sem Storage. |
-| Infra | Conta Supabase já existia. Sem Cloudflare → sem Turnstile. |
+| `confrades` | 2 — ambos `papel: administrador`, `ativo: true` |
+| `admins` | 2 — os mesmos dois |
+| `familias` | 5+ — cadastro de família **funciona** |
+| `pessoas` | **0** |
+| `pedidos_oracao` | **0** |
+| `mural_posts` | **0** |
 
-## Princípio da arquitetura
-**O navegador nunca escreve no banco.** A chave `anon` que vai no HTML só tem `SELECT`,
-em colunas nomeadas, de linhas já moderadas. Não há política de INSERT/UPDATE/DELETE para
-`anon` em nenhuma tabela. A única porta de escrita pública é a Edge Function, que usa
-`service_role` do lado do servidor. A Vercel continua 100% estática — sem `api/`, sem
-`package.json`, sem tocar em `vercel.json`.
-
-## Tarefas
-- [x] Migrações: `admins` + `is_admin()`, `mural_posts`, `pedidos_oracao`, limite e retenção
-- [x] Proteção por **coluna** em `pedidos_oracao` (RLS é por linha e não esconderia
-      `contato`/`ip_hash` de uma linha aprovada)
-- [x] Edge Function `enviar-pedido` com 10 camadas de conferência
-- [x] `app/assets/supabase-client.js` — configuração única + auxiliares compartilhados
-- [x] `app/mural.html`, `app/oracoes.html`, `app/admin.html`
-- [x] Menus (index/eventos), faixa "Comunidade" na home, `sitemap.xml`, `robots.txt`
-- [x] Scripts de verificação: RLS, Edge Function e filtros de conteúdo
-- [x] Verificação: HTML, JSON-LD, sintaxe JS, filtros, varredura de layout
-
-## Decisões técnicas que merecem registro
-
-**Proteção por coluna, não só RLS.** `revoke all ... from anon` + `grant select (id, nome,
-intencao, privilegiado_semana, aprovado_em, criado_em)`. Sem isso, uma intenção aprovada
-entregaria `contato` e `ip_hash` a qualquer visitante — a RLS filtra linhas, não colunas.
-Consequência esperada: `select *` como anon dá **erro**, e o front pede as colunas pelo nome.
-
-**`persistSession: false` no cliente público.** Sem isso, um moderador que tivesse acabado
-de usar o painel continuaria autenticado ao abrir `oracoes.html` e, pela política de admin,
-veria pedidos **pendentes** numa página pública.
-
-**`noindex` em vez de `Disallow`.** `oracoes.html` traz `<meta robots noindex>` e o
-`robots.txt` **não** a bloqueia — de propósito. `Disallow` impediria o robô de ler a meta e
-ele ainda poderia indexar a URL a seco. Deixar rastrear é o que faz a ordem ser obedecida.
-
-**Regras de conteúdo antes do limite por IP.** Ordem invertida durante a verificação: quem
-cola um telefone sem pensar recebe o aviso e corrige, em vez de ficar uma hora de castigo.
-O teto de estrago não muda — o limite continua guardando a fila do moderador, e nada
-recusado chega a ser gravado.
-
-**Armadilha anti-robô recortada no lugar** (`clip-path: inset(50%)`) e não em
-`left: -9999px`: não cria risco de rolagem lateral e não entrega ao robô a pista fácil.
-
-**Marcar em vez de bloquear vocabulário ofensivo.** Como tudo passa por aprovação prévia,
-um falso positivo só muda a ordem da fila. Bloquear calado silenciaria alguém aflito.
-
-## Evidências de verificação
-1. **HTML** — 6 páginas com `html.parser`: 0 tags sem fechar, 0 erros de aninhamento.
-   JSON-LD parseado em todas (index: WebSite/Organization/Church; eventos e mural:
-   BreadcrumbList/CollectionPage).
-2. **Sintaxe JS** — 11 blocos inline + 4 arquivos passam em `node --check`.
-3. **Filtros de conteúdo** — `node supabase/testar-filtros.mjs`: **32 casos, todos passam**.
-   O script lê o `filtros.ts` de produção e tira só as anotações de tipo, então testa o
-   código que roda de verdade. Inclui 8 pedidos legítimos que **não** podem ser recusados.
-4. **Layout** — varredura de 320px a 1440px (16 larguras × 6 páginas = 96 combinações):
-   zero estouro horizontal, zero conteúdo cortado, console limpo.
-   O menu passou de 6 para 7 itens e **cabe** em toda a faixa (565px de largura a 768px;
-   833px a partir de 1200px) — medido no navegador, não estimado.
-5. **Sonda de layout afinada** — passou a distinguir moldura decorativa (`::before` com
-   `inset` negativo) de conteúdo realmente cortado. Sem isso o relatório traria alarme falso
-   permanente em `.manual-mock`, e alarme falso permanente treina a gente a ignorar relatório.
-6. **Scripts para rodar contra o projeto real** (ainda não executados — dependem das chaves):
-   `supabase/verificar-rls.mjs` e `supabase/verificar-funcao.mjs`.
-
-## Estado da instalação no projeto Supabase
-
-**Projeto correto: `cqkymbseyrebmsufimni` ("vicentinos").**
-
-### Tropeço registrado: instalei no projeto errado antes de conferir
-
-O usuário mandou primeiro a string de conexão do projeto `nvnaxawszomhjqrmziqi` e eu apliquei
-as 4 migrações lá. Depois, ao receber a chave `anon`, o `ref` do payload do JWT
-(`cqkymbseyrebmsufimni`) **não batia** com o do usuário do banco
-(`postgres.nvnaxawszomhjqrmziqi`) — eram dois projetos diferentes.
-
-Como cada projeto assina o JWT com um segredo próprio, a chave era recusada pelo outro com
-`Invalid API key`. Se eu não tivesse conferido, o site subiria com o mural **eternamente
-vazio e sem erro visível** — o pior tipo de falha, a silenciosa.
-
-**Regra que fica:** antes de aplicar qualquer coisa, decodificar o `ref` do JWT e comparar
-com o do usuário do banco. São dois pedaços de informação que vêm em mensagens diferentes e
-que ninguém confere de olho.
-
-Limpeza feita: as 3 tabelas, as 4 funções, o schema `private`, o job de purga e a extensão
-`pg_cron` foram removidos de `nvnaxawszomhjqrmziqi`, que voltou ao estado em que eu o
-encontrei (0 tabelas em `public`, 0 usuários). Nenhum dado do usuário existia lá.
-
-### Feito
-- [x] `SUPABASE_URL` e chave `anon` do projeto vicentinos em `app/assets/supabase-client.js`.
-      Os três `ref` (usuário do banco, payload do JWT, URL) conferidos antes de aplicar.
-- [x] As 4 migrações aplicadas em `cqkymbseyrebmsufimni`, `pg_cron` incluído e job ativo.
-- [x] Moderador `renanmrqs32@gmail.com` (usuário já existia, confirmado) inserido em
-      `public.admins`; `is_admin()` devolve `true` para ele.
-- [x] **Prova de RLS de dentro do banco: 26 casos, 0 falhas.**
-- [x] **Prova de RLS por fora, pela chave anon e pelo PostgREST: 18 casos, 0 falhas.**
-- [x] Cartaz das Oficinas de Oração e Vida publicado (destaque, com link, contato da
-      Fernanda). Site de destino conferido: `https://www.tovbrasil.com.br` responde 200.
-- [x] Render contra o Supabase real: mural mostra o cartaz com `rel="noopener noreferrer
-      nofollow"`; orações mostra os dois estados vazios corretos; painel mostra login com o
-      painel escondido. Console limpo nas três.
-- [x] Varredura de layout refeita já com dado real: 96 combinações, zero estouro.
-
-### Dois defeitos encontrados por usar o sistema de verdade
-
-**`link_externo` com `{4,300}` na regex.** O Postgres limita repetição a 255 (RE_DUP_MAX) e
-recusa a expressão inteira. Efeito: **nenhum cartaz com link podia ser cadastrado**. Escapou
-de todos os testes anteriores porque o `CHECK` só avalia a regex quando o link não é nulo, e
-até então todos os casos usavam link nulo. Lição: um `CHECK` com `is null or ...` tem dois
-caminhos, e o teste precisa passar pelos dois.
-
-**O verificador mentiu.** Com a chave `anon` montada errada, `verificar-rls.mjs` reportou
-14 "OK": as operações proibidas eram mesmo recusadas, só que por causa da chave inválida e
-não da RLS. É o pior modo de falha de um teste de segurança — dizer "protegido" quando o
-certo era dizer "não sei". Agora o script confere primeiro se a chave é aceita e aborta com
-`exit 2` se não for. (A causa da chave errada fui eu: quebrei o literal em três pedaços para
-o `ref` ficar legível, e o script só leu o primeiro.)
-
-### Instalação concluída em 2026-08-03
-1. [x] **Cadastro público desligado** — Authentication → Providers → Email →
-   *Enable sign ups* (feito pelo usuário no painel).
-2. [x] **Segredo `IP_PEPPER` criado e `enviar-pedido` implantada** pela CLI do Supabase
-   (`supabase secrets set` + `supabase functions deploy --project-ref cqkymbseyrebmsufimni`).
-   A CLI **está** instalada nesta máquina (2.111.0) — a anotação anterior estava errada.
-   `supabase functions list` confirma `verify_jwt: false` e `status: ACTIVE`.
-   O deploy não precisou de Docker (a CLI avisa e envia os arquivos pela API).
-3. [x] `node supabase/verificar-funcao.mjs` — **15 de 15 passaram, 0 falharam**, incluindo
-   o limite por IP (429 já na 3ª tentativa). Evidência completa no commit desta data.
-4. [ ] **Apagar os pedidos de teste** que o verificador deixou na fila: 1 do caminho
-   legítimo ("Pela saúde de quem cuida…") + 2 de "Teste de limite número N". Todos estão
-   como *pendente* (nunca chegaram à página pública). Botão **Excluir** em `admin.html`.
-5. [ ] **Trocar as senhas de banco dos dois projetos** — as duas trafegaram por chat.
-
-## Achados fora do escopo (§6.1) — registrados, não corrigidos
-**`app/manual.html:977-978` — credenciais em texto puro no JavaScript do cliente.**
-`VALID_USER = 'São Vicente de Paulo'`, `VALID_PASS = 'Afésemobrasémortaemsimesma'`, com a
-sessão marcada em `sessionStorage` (`:979, 992, 1001, 1245`). Qualquer visitante lê isso em
-"ver código-fonte" — não é autenticação, é um aviso de porta. **Não corrigido de propósito:**
-a correção muda quem tem acesso ao Manual, e isso é decisão do usuário. Duas saídas, agora
-que existe Supabase Auth no projeto: (a) se o Manual é público na prática, tirar a tela de
-login; (b) se não é, usar o mesmo Supabase Auth do painel.
-
-**Pré-existentes e benignos** (conferidos contra o `HEAD`, idênticos antes e depois — não
-são regressão): `.manual-mock` e `.hero-frame` aparecem com `scrollWidth > clientWidth` na
-sonda. São, respectivamente, a moldura decorativa `::before { inset: -8px }` e o recorte
-proposital da foto do hero. Nenhum texto é cortado e o documento não rola na horizontal.
-
-## Riscos residuais
-- **Sem captcha.** Sem conta Cloudflare, as barreiras são armadilha + tempo + limite por IP.
-  Barram robô comum, não ataque dirigido. Se a fila for inundada, ligar o Turnstile custa
-  ~15 linhas na Edge Function.
-- **Sem aviso automático de pedido novo.** A opção não foi marcada. O painel mostra a
-  contagem de pendentes, mas nada avisa por fora — a fila precisa ser olhada. Um
-  *Database Webhook* por e-mail resolve depois.
-- **Moderação é humana.** Nenhum filtro pega ironia ou boato bem escrito. A garantia real
-  de que nada impróprio entre no ar é a aprovação prévia.
-- **Chave `anon` visível no HTML.** É o modelo do Supabase e está correto — *desde que* a
-  RLS esteja como descrito. Por isso a verificação começa por ela.
-- **LGPD.** Pedido de oração costuma ser dado sensível de terceiro. O desenho reduz o risco
-  (primeiro nome, texto curto, consentimento, expiração em 60 dias, `noindex`, IP
-  pseudonimizado por SHA-256 com pepper, purga diária), mas não elimina: alguém pode
-  escrever mais do que devia. O moderador é quem segura isso.
-- **Plano gratuito do Supabase** pausa projeto sem tráfego por 7 dias. Se acontecer, as
-  páginas caem no estado de degradação (aviso cordial, nunca tela em branco).
-- **Deno não está instalado** nesta máquina, então a Edge Function não foi executada
-  localmente. A lógica de filtros foi testada em Node contra o arquivo real; o resto da
-  função só será exercitado por `verificar-funcao.mjs` depois da implantação.
+Isso derrubou a hipótese mais "óbvia" (descompasso de autorização entre o portão
+da tela, `is_membro_area()`, e a RLS do prontuário, `is_confrade_ativo()`): os
+dois usuários reais são confrades ativos, então a RLS **passa** para eles. Essa
+divergência existe e é um risco real, mas **não é** a causa deste bug — registrada
+abaixo como achado fora de escopo.
 
 ---
 
-# Correção da identidade da Conferência (03/08/2026)
+## Parte 1 — "Não está sendo possível adicionar pessoas" (BUG REAL)
 
-**Fato corrigido pelo usuário.** O site inteiro chamava a Conferência de *Nossa Senhora de
-Fátima*. O nome correto é **Conferência Nossa Senhora do Carmo** — *Nossa Senhora de Fátima*
-é o **Conselho Particular** a que ela é vinculada e subordinada. Além disso: fundada em
-**23/03/1992**, agregada em **14/06/1999**, e as reuniões passam a ser **somente aos
-sábados, 17h** (eram terças e sábados).
+**Causa raiz (reproduzida ao vivo, com conta descartável, em 19/09/2026):**
 
-## O que foi alterado
-- `app/index.html`, `app/eventos.html`, `app/manual.html`, `app/mural.html`,
-  `app/oracoes.html`, `app/admin.html` — nome da Conferência em títulos, metas, OG/Twitter,
-  JSON-LD, cabeçalho, rodapé e corpo.
-- `app/index.html` — parágrafo "Quem somos" com fundação/agregação e vínculo ao Conselho;
-  cards da seção *Nossa Conferência* (Padroeira, Conselho Particular, Fundação e agregação);
-  bloco de contato com linha do Conselho Particular; JSON-LD com `foundingDate` e
-  `parentOrganization` aninhado (Conselho → SSVP).
-- `app/eventos.html` — agenda com um único card (Sábado, 17h); CSS `.agenda-grid` de duas
-  colunas para uma, centralizada.
-- `.claude/skills/vicentino-seo-audit/SKILL.md` — tabela de entidades JSON-LD.
+| caso | payload | resultado |
+|---|---|---|
+| A | sem CPF | `201` criado |
+| B | CPF `123.456.789` | **`400` `23514 pessoas_cpf_check`** |
+| C | CPF `12345678901` | `201` criado |
 
-## Evidências
-- JSON-LD dos 6 HTML parseado com `json.loads` — todos válidos.
-- Balanceamento de tags conferido nos 6 arquivos — nenhum erro, nenhuma tag aberta.
-- Servidor local (127.0.0.1:8123) + Chrome DevTools: seção *Nossa Conferência* renderiza os
-  6 cards em grade 2×3; agenda de eventos com card único centralizado; `oracoes.html` e
-  `mural.html` sem nenhuma ocorrência de "Fátima" ou "terça" no texto renderizado; console
-  sem erros.
+O banco exige que o CPF seja exatamente 11 dígitos (migration `20260915120100`,
+linha 51). O campo do formulário (`prontuario-familia.html:154`) é
+`<input type="text" maxlength="11" placeholder="Só números">` — **sem máscara,
+sem `pattern`, sem limpar pontuação no JS** (o submit em :369 só faz `.trim()`).
 
-## Achados fora do escopo — aprovados e corrigidos em seguida
-- `social/instagram-launch/**` e `social/render/all-slides.html`: todo o pacote de lançamento
-  do Instagram trazia o nome errado *e* "toda terça-feira, 17h", além do slide "Padroeiros
-  (N. S. do Carmo & N. S. de Fátima)". Reportado, aprovado pelo usuário e corrigido — ver
-  seção abaixo.
+Quem digita CPF do jeito natural — `123.456.789-01` — tem o valor **truncado pelo
+`maxlength="11"` para `123.456.789`**, que *parece* completo na tela (11
+caracteres) e é rejeitado pelo banco. O usuário vê a mensagem crua do Postgres
+(`new row for relation "pessoas" violates check constraint "pessoas_cpf_check"`),
+que não diz o que fazer.
 
----
+Isso explica `pessoas = 0` com 5 famílias cadastradas: toda família tem um
+responsável, de quem se preenche o CPF — então toda tentativa falhou.
 
-# Correção do pacote de Instagram (03/08/2026)
+**Correções:**
+1. Aceitar CPF formatado: `inputmode="numeric"`, `maxlength="14"`, e limpar para
+   só dígitos no `input` e no submit. Enviar 11 dígitos ou nulo.
+2. Validar no cliente antes de enviar, com mensagem em português.
+3. **O formulário de edição tem o defeito idêntico** (:436) — corrigir junto.
+4. `minlength="3"` em `nome_completo` (o CHECK do banco exige 3 a 150).
+5. Tradutor de erro do Postgres para português, para o usuário nunca mais ler
+   "violates check constraint".
+6. `carregarTudo()` (:262) descarta o `error` e colapsa RLS, UUID inválido, JWT
+   vencido e "família não existe" no mesmo "Família não encontrada", deixando o
+   formulário escondido sem diagnóstico. Distinguir os casos.
 
-Mesma correção de fato, aplicada ao material de redes sociais.
+## Parte 2 — Notificação de conclusão + redirecionamento
 
-## O que foi alterado
-- **Legendas:** `01-apresentacao/caption.md` (nome + fundação/agregação + vínculo ao Conselho
-  + sábado), `02-almoco-convite/caption.md` (nome), `03-como-ajudar/caption.md` (sábado).
-- **Roteiros de slide:** `01-apresentacao/slides.md` (capa, slide 3 reescrito, grade 2x2 com
-  Padroeira e sábado), `02-almoco-convite/slides.md` (nome), `03-como-ajudar/slides.md`
-  (capa, CTA e slide de reuniões).
-- **Perfil:** `bio.md` (nome + sábados, dentro dos 150 caracteres), `destaques.md`
-  (Padroeiros → Padroeira, mais destaques de fundação e Conselho), `stories-iniciais.md`,
-  `README.md` (título).
-- **Hashtags:** `#NossaSenhoraDeFatima` → `#ConferenciaNossaSenhoraDoCarmo` nos posts 1 e 2.
-- **Layout renderizado:** `social/render/all-slides.html` — capa, slide 3, grade 2x2, capa do
-  post 3, chip de voluntariado e slide de reuniões.
-- **PNGs:** os 15 slides re-renderizados com `python social/render/render.py`.
+Hoje: cadastrar família **não mostra confirmação nenhuma** — navega direto para
+`prontuario-familia.html` (:170). Cadastrar pessoa mostra só um texto discreto.
 
-## Evidências
-- Varredura final em `social/`: nenhuma ocorrência de "terça"; as 4 de "Fátima" restantes são
-  todas o Conselho Particular, corretas.
-- Render executado sem erro (15 slides). Inspeção visual de `01/01`, `01/03`, `01/07`,
-  `03/01`, `03/05` e `03/06`: nome novo na capa, texto do slide 3 dentro da caixa, grade 2x2
-  com "Todo sábado" e "Padroeira / N. S. do Carmo / Conferência desde 1992", chip e título de
-  reuniões com sábado.
+**Decidido com o usuário:** ao salvar uma pessoa, mostrar notificação de sucesso,
+limpar o formulário e **permanecer na família** (quase sempre há mais moradores),
+com um botão explícito "Concluir família" que volta ao `prontuario.html`.
 
-## Corrigido de passagem
-- `social/instagram-launch/README.md`: o texto dizia que a renderização "fica para o Canva",
-  mas `social/render/render.py` já gera os PNGs dos posts 1 e 3 desde antes desta tarefa.
-  Doc atualizada, com o aviso de que editar o `.md` sem editar `all-slides.html` faz o
-  roteiro divergir da imagem.
+- Notificação (toast) visível de sucesso **e** de erro, compartilhada.
+- Família criada: confirma e segue para a família.
+- Pessoa criada: confirma, limpa, permanece; botão "Concluir família e voltar".
 
-## Riscos residuais
-- **O post 2 (almoço) não tem layout em `all-slides.html`** — só roteiro `.md`. Se for para o
-  ar, é montagem manual no Canva, sem a proteção do render.
-- **Conteúdo já publicado no Instagram não é alcançado por esta correção.** Se algum destes
-  posts já foi ao ar com o nome antigo, a correção precisa ser feita na própria plataforma
-  (editar legenda; slide errado exige repostar).
-- A data do almoço (24/05/2026) já passou — o post 2 está desatualizado por outro motivo,
-  fora do escopo desta correção.
+## Parte 3 — Menu de navegação no topo
 
----
+As 6 páginas internas (`prontuario`, `prontuario-familia`, `prontuario-dashboard`,
+`financeiro`, `financeiro-relatorio`, `admin`) têm uma barra `.topo` com **zero
+links de navegação**. O único caminho de volta ao hub é o botão voltar do
+navegador — exatamente o que o usuário relatou.
 
-# Anexo para download no mural — folheto das Oficinas de Oração e Vida (03/08/2026)
+- Nav compartilhada nas 6 páginas, na identidade wine/gold já existente.
+- Item do Dashboard só aparece para admin (`is_admin()`), como já é a regra do hub.
+- Responsiva; `admin.html` não carrega `prontuario.css`, então o CSS da nav é
+  autocontido e com nomes prefixados para não colidir com o `<style>` inline dele.
 
-**Pedido:** deixar o PDF `Oficinas de Oração e Vida 2 sem. 01.08 v5.pdf` disponível para
-download no cartaz das Oficinas, no mural.
+## Parte 4 — Painel: privilegiados da semana e pedidos de oração
 
-## Feito
-- [x] **PDF otimizado: 19,67 MB → 2,64 MB** (`build/otimizar_pdf_anexo.py`, PyMuPDF
-      `rewrite_images`, JPEG q=82, resolução preservada). Publicado em
-      `app/assets/oficinas-oracao-e-vida-2026-2.pdf`. O original de 19,67 MB não entra no
-      git (`.gitignore`).
-- [x] **Perda conferida por número, não a olho:** PSNR das 10 páginas entre 39,6 e 42,5 dB
-      (>35 dB = imperceptível); 10 páginas na entrada, 10 na saída.
-- [x] **Migração 005** (`20260803180000_mural_anexo.sql`): colunas `anexo_url` e
-      `anexo_rotulo` em `mural_posts`, com CHECK que aceita `/assets/<arquivo>.(pdf|jpg|jpeg|png)`
-      ou `https://`, e recusa o resto. RLS e grants intocados.
-- [x] **Histórico de migração da CLI reparado** — as 4 migrações de 02/08 estavam aplicadas
-      no banco mas ausentes do histórico (foram pelo painel). `migration repair --status
-      applied` nas quatro, e só a 005 subiu. Ver `tasks/lessons.md`.
-- [x] **Prova do CHECK contra o banco real: 22 casos, 0 falhas**
-      (`node supabase/verificar-anexo.mjs`) — incluindo `javascript:`, `data:`, `http://`,
-      `..`, caminho fora de `/assets`, subpasta, `.exe` e limites de tamanho. As linhas de
-      teste nascem despublicadas e são apagadas no `finally`.
-- [x] `linkAnexoSeguro()` em `app/assets/supabase-client.js` — irmã de `linkSeguro()`, que
-      recusa caminho relativo por usar `new URL()`. Duas funções, dois contratos.
-- [x] Render do mural contra o Supabase real: o cartaz mostra **"Saiba mais"** (tovbrasil,
-      `nofollow`+`_blank`) **e** "Folheto do 2º semestre (PDF, 2,6 MB)" (`download`, sem
-      `target`, sem `nofollow` — o arquivo é nosso). Console limpo.
-- [x] Layout em 360 px: sem estouro horizontal (`scrollWidth == clientWidth`).
-- [x] Painel: os dois campos existem, rotulados, e `form.reset()` os limpa. Console limpo.
-- [x] Cartaz atualizado no banco (`anexo_url`, `anexo_rotulo`); `link_externo` intacto.
+**Causa raiz: não há nada quebrado — a funcionalidade nunca foi construída.**
 
-## Achados fora do escopo (§6.1) — registrados, não corrigidos
-**Dois endereços oficiais concorrentes para o mesmo movimento.** O cartaz aponta "Saiba mais"
-para `https://www.tovbrasil.com.br`, mas a última página do folheto dá como site oficial
-`https://oficinasdeoracaoevida.org.br` e o Instagram `@oficinasdeoracaoevida`. Não corrigido
-porque decidir qual divulgar é da Fernanda / da Conferência, não minha. Pendente de resposta
-do usuário.
+- "Privilegiado da semana" **não é um registro**: é a coluna booleana
+  `pedidos_oracao.privilegiado_semana`. O botão de estrela só é desenhado para
+  pedidos já aprovados (`admin.html:634`), e o filtro padrão do painel é
+  "pendente" (:508).
+- O painel **não tem nenhum formulário de criação** de pedido de oração: o único
+  caminho de INSERT é o formulário público de `oracoes.html` para a Edge Function
+  `enviar-pedido` (service_role).
+- Com `pedidos_oracao` vazia, não há o que aprovar, logo não há o que destacar.
 
-**Folheto sem camada de texto.** As 10 páginas são imagens; o PDF não é pesquisável nem
-legível por leitor de tela. Corrigir exige OCR e é tarefa própria — a otimização não piorou
-nada nesse ponto, só herdou o problema do arquivo de origem.
+**Provado ao vivo que a correção é só de UI — nenhuma migration é necessária:**
+um membro da área autenticado conseguiu INSERT de pedido já aprovado (`201`) e
+PATCH de `privilegiado_semana` (`200`). Os dois CHECKs que o formulário precisa
+respeitar também foram provados falhando: sem consentimento, violação de
+`pedidos_oracao_consentimento_check`; aprovado sem `aprovado_em`, violação de
+`pedidos_oracao_aprovacao_coerente`.
+
+**Decidido com o usuário:** o pedido digitado no painel nasce **já aprovado e
+publicado** (quem digita é o moderador, que já conferiu).
+
+- Formulário "Novo pedido de oração" no painel, com opção de já marcar como
+  privilegiado da semana.
+- Payload obrigatório: consentimento verdadeiro, status aprovado, `aprovado_em`
+  e `aprovado_por` preenchidos.
+- Mensagens de erro em português.
 
 ---
 
-# Prontuário de Atendimento — primeiro módulo (15/09/2026)
-
-## Contexto
-Pedido maior do usuário (histórico de atendimento, renda per capita e benefícios,
-necessidades/intervenções, cruzamento de parentesco, controle financeiro da conta
-poupança BRB e coletas, atas de reunião). Decomposto em 3 sub-projetos via
-brainstorming — este é o primeiro: **Prontuário de Atendimento**. Atas e Financeiro
-ficam para ciclos de planejamento seguintes. Plano completo em
-`C:\Users\renan\.claude\plans\cozy-scribbling-bird.md`.
-
-## Decisões confirmadas com o usuário
-- CPF opcional; data de nascimento obrigatória (necessária para elegibilidade por idade ao BPC).
-- Todo confrade ativo vê todas as famílias (sem restrição por vicentino responsável nesta fase).
-- Tabela de acesso chama-se `confrades` (não `membros` — ajuste pedido pelo usuário).
-- Vínculo entre famílias diferentes é por parentesco (não endereço/indicação/histórico de quem atendeu).
-- Nenhum modelo de ficha pré-existente — desenhado do zero com base na pesquisa sobre a SSVP
-  e nas regras de renda/benefícios levantadas em `biblioteca/`.
-
-## Tarefas
-- [x] 6 migrations novas (`confrades`, `familias`+`pessoas`, `fontes_renda`+view de renda,
-      `necessidades`+`intervencoes`, `parentescos_cruzados`, `parametros_beneficios`+função
-      de elegibilidade), seguindo fielmente o padrão de `admins.sql`/`mural_posts.sql`.
-- [x] `supabase/verificar-rls-prontuario.mjs` — prova anon negado, authenticated não-confrade
-      negado, confrade ativo permitido (par negado/permitido, lição de 02/08 aplicada).
-- [x] `app/prontuario.html` (login + lista/busca/cadastro de famílias).
-- [x] `app/prontuario-familia.html` (dados da família, pessoas, renda, necessidades,
-      intervenções/histórico, badges de elegibilidade via RPC, parentesco cruzado com
-      busca entre famílias).
-- [x] `app/assets/prontuario.css` extraído (evita duplicar ~250 linhas de tokens entre as
-      duas páginas novas).
-- [x] `supabase/README.md` atualizado (novo módulo, ordem das migrations, como criar
-      confrade, como atualizar `parametros_beneficios` por decreto).
-- [x] Verificação estática: balanceamento de tags HTML (0 erros nos 2 arquivos novos),
-      sintaxe JS dos módulos inline (`node --check`, 0 erros).
-- [x] Verificação visual em produção: `prontuario.html` renderizado via chrome-devtools MCP
-      (o usuário liberou o profile do Chrome) em 1280×900 e 375×812 — layout correto, sem
-      estouro horizontal, console sem erros nas duas larguras.
-- [x] **6 migrations + 1 de ajuste aplicadas ao Supabase de produção** (projeto
-      `cqkymbseyrebmsufimni`), via SQL Editor no Dashboard dirigido pelo browser
-      (chrome-devtools MCP) — a CLI local estava autenticada numa conta sem acesso ao
-      projeto (achado registrado, ver Achados abaixo). Aplicação em blocos base64
-      verificados por tamanho a cada passo (ver Achados abaixo — `type_text` corrompeu o
-      conteúdo por autocomplete do Monaco).
-- [x] Migration extra `20260915120600_confrades_papel_administrador.sql`: o check de
-      `confrades.papel` só previa hierarquia SSVP: o usuário esclareceu que sua conta é
-      "administrador" (mantém o site/banco, não é vicentino em visita) — adicionado esse
-      valor ao invés de forçar um papel que não reflete a realidade.
-- [x] Verificação pós-deploy direto no banco: 8 tabelas com RLS ativa, 0 grants indevidos
-      para `anon`, 3 funções criadas, 1 parâmetro de benefício vigente. Teste funcional da
-      elegibilidade com fixture real (família de 2, idosa 70 anos sem renda) — resultado
-      bateu exatamente com o caso 2 do plano (per capita R$0, BPC elegível, extrema
-      pobreza, Prato Cheio elegível). Fixture removida depois do teste.
-- [x] Conta do usuário (`renanmrqs32@gmail.com`) cadastrada em `public.confrades`
-      (papel `administrador`, ativo).
-- [x] Commit (só os arquivos do Prontuário — não tocou nas dezenas de mudanças pendentes
-      não relacionadas já presentes no working tree) + push para `main` — Vercel publicou
-      automaticamente; `prontuario.html` responde 200 em produção.
-- [ ] `verificar-rls-prontuario.mjs` documentado mas ainda não executado de ponta a ponta
-      (o teste manual via SQL Editor já cobriu RLS/elegibilidade; rodar o script formal
-      fica como follow-up, com `CONFRADE_EMAIL`/`CONFRADE_SENHA` reais).
-- [ ] Teste de ponta a ponta pela UI (login real → cadastrar família → ver badges de
-      elegibilidade) — página aberta em produção para o usuário logar; aguardando
-      confirmação dele do resultado.
-
-## Achados fora do escopo / lições desta tarefa
-- **CLI do Supabase autenticada em conta sem acesso ao projeto `vicentinos`.**
-  `supabase migration list` voltou 403; `supabase projects list` só mostrou os projetos
-  `aprovados`/`financial`/`claude-memory` de outra organização. Não tentei contornar —
-  troquei para aplicar via SQL Editor no Dashboard, dirigido pelo browser. Fica pendente:
-  rodar `supabase login` com a conta certa e depois `supabase migration repair --status
-  applied` para as 7 versões novas (mesmo cuidado do incidente de 03/08 — histórico da CLI
-  ficou vazio para migrations aplicadas por fora dela).
-- **`type_text` do chrome-devtools MCP corrompe SQL longo no editor Monaco do Supabase**
-  — o IntelliSense intercepta e aceita sugestões/indentação durante a digitação simulada,
-  embaralhando o conteúdo sem erro aparente. Detectado só porque o comprimento final não
-  batia com o esperado. Corrigido usando `model.setValue()` via `evaluate_script`
-  (bypassa o teclado), com o conteúdo em base64 dividido em blocos de 800 caracteres e
-  comprimento conferido a cada bloco — sem isso, um erro de transcrição de 1 caractere em
-  10) mil passaria despercebido e corromperia a migration aplicada.
-- **CTE com INSERT + chamada de função no mesmo statement não vê a própria escrita** —
-  ao testar a elegibilidade com fixture criada via `WITH ... INSERT ... RETURNING`, a
-  função (que lê `public.pessoas` diretamente, não via CTE) devolveu "pessoa não
-  encontrada" porque todas as sub-declarações do `WITH` compartilham o mesmo snapshot.
-  Resolvido rodando a inserção e a chamada da função em statements separados.
-
-## Riscos residuais / próximos passos
-- Sem restrição por vicentino responsável nesta fase — todo confrade ativo vê todas as
-  famílias (decisão explícita do usuário, documentada no plano como "fora de escopo").
-- Sem política de retenção/anonimização LGPD para os dados do prontuário — decisão
-  institucional pendente, documentada no plano.
-- Sub-projetos de Atas de Reunião e Controle Financeiro ainda não planejados.
-- Acesso da CLI do Supabase à conta certa precisa ser restaurado (ver achados acima).
-
-## Login de ponta a ponta confirmado (16/09/2026)
-
-- [x] Achado e corrigido: **Site URL do projeto Supabase ainda era `http://localhost:3000`**
-      (valor padrão de template), sem nenhuma Redirect URL cadastrada. Todo link de
-      e-mail de auth (redefinição de senha, magic link, convite) redirecionava para um
-      endereço local morto. Corrigido: Site URL → `https://manual-vicentinos.vercel.app`;
-      Redirect URL → `https://manual-vicentinos.vercel.app/**`.
-- [x] Achado: **limite de 2 e-mails/hora** no serviço de e-mail embutido do Supabase
-      (Authentication → Rate Limits). A tentativa manual do usuário + 2 reenvios meus
-      esgotaram a cota da hora. Não configuramos SMTP próprio agora (fica como
-      pendência caso mais confrades precisem ser convidados por e-mail no futuro).
-- [x] Contorno usado: senha definida diretamente via SQL
-      (`extensions.crypt('...', extensions.gen_salt('bf'))` em `auth.users.encrypted_password`
-      — `pgcrypto` está instalada no schema `extensions` neste projeto, não em `public`).
-      Senha escolhida pelo próprio usuário.
-- [x] **Login testado ao vivo em produção**: `prontuario.html` autentica, mostra "Renan
-      Marques" no topo, formulário de nova família e lista (vazia, estado correto) sem
-      nenhum erro no console.
-
-## Pendências para quando mais vicentinos forem cadastrados
-- Configurar SMTP próprio (Resend/SendGrid/etc.) antes de convidar mais de ~2 pessoas na
-  mesma hora — o limite embutido do Supabase (2 e-mails/h) não escala para isso.
-- Repetir a checagem de Site URL/Redirect URLs se o domínio de produção mudar.
+## Verificação (exigida antes de concluir — §4 e pedido do usuário)
+- Playwright contra o site real, logado, exercitando os quatro fluxos.
+- Massa de teste criada com conta descartável e **apagada ao final**, confirmada
+  por API.
 
 ---
 
-# 2026-09-16 · Acesso único pela Área do Vicentino
+## Achados fora do escopo (registrados, §6.1)
 
-## Objetivo
-O Manual de Direitos sai do menu público. A "Área do Vicentino" passa a ser a
-porta: clicar nela leva direto à tela de login e, autenticado uma única vez, o
-confrade acessa livremente Manual, Painel de Moderação e Prontuário — sem senha
-diferente para cada um.
-
-## Decisão do usuário (16/09/2026)
-Confrade ativo acessa tudo, inclusive moderação. Consequência aceita e declarada:
-todo confrade cadastrado passa a ver os pedidos de oração ainda não moderados,
-que contêm dado pessoal de terceiros.
-
-## Plano
-- [x] 1. Migração `is_membro_area()` = `is_admin() OR is_confrade_ativo()`; políticas
-      de moderação de `mural_posts` e `pedidos_oracao` passam a usá-la.
-      **Aplicar ANTES do deploy do front** — o gate do front chama essa RPC.
-- [x] 2. `app/assets/area-vicentino.js` — módulo único de sessão (cliente, gate,
-      redirecionamento com `?destino=`, sair).
-- [x] 3. `area-vicentino.html` vira a tela de login + hub pós-login.
-- [x] 4. `manual.html` — remover usuário/senha fixos no código; passar a usar a sessão.
-- [x] 5. `prontuario.html`, `prontuario-familia.html`, `admin.html` — remover os três
-      formulários de login próprios; gate compartilhado + link de volta ao hub.
-- [x] 6. Menus de `index`, `mural`, `oracoes`, `eventos`, `area-vicentino`: remover
-      "Manual de Direitos"; "Área do Vicentino" vira o botão destacado.
-- [x] 7. Links públicos do `index` para o manual apontam para a Área.
-- [x] 8. `sitemap.xml` sem `manual.html`; `manual.html` vira `noindex`.
-- [x] 9. Verificação local + Playwright em produção após o deploy.
-
-## Critérios de aceitação
-- [x] Menu público não cita o Manual em nenhuma página.
-- [x] `area-vicentino.html` sem sessão mostra o login; com sessão mostra o hub.
-- [x] Um login libera as três ferramentas sem novo pedido de senha.
-- [x] Acessar `manual.html`/`admin.html`/`prontuario*.html` sem sessão redireciona
-      para a Área (com retorno ao destino após entrar).
-- [x] Nenhuma senha em texto no código do front.
-
-## Concluído em 16/09/2026 — commits `e15610b` e `3735326`
-
-Retomando de onde a sessão anterior parou (itens 1-4 já estavam escritos mas não
-commitados nem publicados): terminei a migração de `admin.html`, `prontuario.html`
-e `prontuario-familia.html` para o gate único (item 5), ajustei os links públicos
-restantes do `index.html` e o `sitemap.xml` (itens 7-8), e apliquei tudo em produção.
-
-**Imprevisto descoberto no meio do caminho:** o projeto Supabase original
-(`cqkymbseyrebmsufimni`) ficou associado a uma conta/organização diferente da que
-tinha acesso pela CLI nesta máquina. Não havia como confirmar se a migration
-`20260916120000` já tinha sido aplicada nele, nem aplicar caso não tivesse.
-Decisão do usuário: recriar o projeto do zero numa conta com CLI configurada
-(`zyzyttkayblvgnfqkapq`), já que não havia dado real de prontuário até então.
-Passos feitos: `supabase projects create`, `supabase link`, `supabase db push`
-(as 13 migrations, incluindo a de acesso único), `supabase secrets set IP_PEPPER`
-e `supabase functions deploy enviar-pedido`, e atualização de
-`app/assets/supabase-client.js` com a nova URL/anon key.
-
-**Verificação de ponta a ponta** (Chrome DevTools MCP, em produção): criada uma
-conta de confrade descartável via Admin API (service_role obtida só em memória
-pela CLI, nunca gravada em arquivo), login único em `area-vicentino.html`,
-confirmado acesso direto — sem pedir senha de novo — a `prontuario.html`,
-`admin.html` e `manual.html`, e logout devolvendo à tela de login. Conta de
-teste apagada ao final (`auth.users` + `confrades`).
-
-**Risco residual:** o projeto Supabase antigo (`cqkymbseyrebmsufimni`) continua
-ativo em outra conta, com o schema completo mas nenhum dado real (a julgar pelo
-que o usuário informou). Ninguém mais deveria escrever nele — nenhum serviço
-aponta mais para essa URL. Fica como candidato a exclusão futura, a critério do
-usuário, depois de confirmar que não há nada a recuperar de lá.
-
----
-
-# 2026-09-16 · Fase 1 de 3 — Perfis de acesso e gerenciamento de usuários
-
-## Contexto
-Pedido do usuário: trocar a própria senha, adicionar novos usuários e trocar
-senha de terceiros direto pela plataforma, com perfis de acesso diferentes —
-confrade vê o básico, administrador vê páginas de gestão extras. Escolhido
-fazer em 3 fases (esta é a 1ª); dashboard de efetividade (fase 2) e controle
-orçamentário (fase 3) ficam para planos futuros.
-
-## Feito
-- Conta real de administrador criada: `renanmrqs32@gmail.com`, em
-  `public.admins` e `public.confrades` (papel `administrador`).
-- Edge Function `supabase/functions/gerenciar-usuarios` (nova, `verify_jwt =
-  true`): ações `listar`, `criar_usuario`, `redefinir_senha`. Confere
-  `is_admin()` com o JWT de quem chama antes de tocar na chave de serviço.
-- `admin.html`: aba "Usuários" (só aparece se `is_admin()`) — lista usuários,
-  formulário para criar vicentino/administrador com gerador de senha, e
-  redefinição de senha por usuário.
-- `area-vicentino.html`: "Alterar minha senha" — self-service para qualquer
-  confrade/admin logado, sem precisar da Edge Function (usa
-  `sb.auth.updateUser()` direto).
-
-## Verificado ao vivo (Chrome DevTools MCP + chamadas diretas à function)
-- `listar`/`criar_usuario`/`redefinir_senha` funcionam como admin; a mesma
-  chamada como confrade comum recebe 403 (`acesso_negado`).
-- Confrade comum não vê a aba "Usuários" no Painel.
-- Criar usuário pela UI → login com a senha gerada funciona.
-- Redefinir senha pela UI → login com a senha antiga falha, com a nova
-  funciona.
-- "Alterar minha senha" → login com a senha antiga falha, com a nova funciona.
-- Console sem erros nas páginas testadas.
-- Todas as contas de teste (CLI e UI) foram apagadas ao final.
-
-## Pendência conhecida (não bloqueia esta fase)
-Site URL / Redirect URLs / "Enable sign ups" do novo projeto Supabase
-(`zyzyttkayblvgnfqkapq`) provavelmente ainda estão nos valores padrão de
-desenvolvimento (mesma pendência que já existiu no projeto antigo). Não afeta
-esta fase porque nenhum fluxo daqui depende de e-mail. Corrigir manualmente no
-Dashboard (Authentication → URL Configuration / Providers) quando for cuidar
-de convites por e-mail ou de bloquear self-signup público.
-
-## Próximos passos
-- Fase 2: dashboard de efetividade (dados do Prontuário: famílias,
-  necessidades, intervenções).
-- Fase 3: controle orçamentário (schema novo do zero — precisa de conversa
-  sobre categorias, quem lança, etc.).
-
----
-
-# 2026-09-16 · Fase 2 de 3 — Dashboard de Efetividade
-
-## Contexto
-Continuação do pedido de 3 fases (perfis de acesso → dashboard → controle
-orçamentário). Esta fase usa só dados que já existem no Prontuário
-(`familias`, `pessoas`, `necessidades`, `intervencoes`) — sem migration nova.
-Decisões fechadas com o usuário: só administradores veem o painel, página
-nova (`prontuario-dashboard.html`), métricas de panorama geral + necessidades
-por tipo/urgência + intervenções ao longo do tempo, gráficos via Chart.js
-(primeira dependência JS externa do site).
-
-## Feito
-- `app/prontuario-dashboard.html` (novo): painel geral (6 cartões), 4
-  gráficos Chart.js (necessidades por tipo, necessidades em aberto por
-  urgência, intervenções por mês e valor doado por mês — últimos 12 meses
-  fixos). Segue o esqueleto de `prontuario.html`/`admin.html`, agregação
-  100% client-side (sem view/RPC nova), sem seletor de período.
-- Gate de admin cobre a página inteira (`sb.rpc('is_admin')`, mesma função da
-  Fase 1), com tela "Acesso restrito" pra quem é confrade mas não admin.
-- `app/assets/area-vicentino.js`: `prontuario-dashboard.html` adicionado ao
-  `Set` `DESTINOS`, senão o redirecionamento pós-login não devolveria a
-  pessoa direto pro dashboard.
-- `app/area-vicentino.html`: 4º card "Dashboard de Efetividade" na grade de
-  ferramentas, escondido por padrão e revelado só se `is_admin()`.
-
-## Bug encontrado e corrigido durante a própria verificação (não é achado
-## fora de escopo — é o código desta fase que eu mesmo escrevi)
-`hidden` no card novo não escondia nada visualmente: `.area-card { display:
-flex }` já existente no `<style>` de `area-vicentino.html` tem a mesma
-especificidade do `[hidden]` do user-agent, e origem "autor" sempre vence
-origem "user agent" no cascata — então o card aparecia pra qualquer confrade,
-admin ou não. Corrigido com `#area-card-dashboard[hidden] { display: none
-!important; }`, escopado só a este id.
-
-Um segundo bug do mesmo tipo: a função que revela o card (`revelarCardDashboard`)
-só era chamada dentro de `decidirTela()` (sessão já existente ao carregar a
-página). O formulário de login interativo tem seu próprio `mostrarHub(...)`
-separado e não chamava a função — um admin que loga na hora não via o card
-até recarregar a página. Corrigido chamando `revelarCardDashboard()` também
-ali.
-
-## Verificado ao vivo (Chrome DevTools MCP — claude-in-chrome não conectou
-## nesta sessão, usado o MCP alternativo)
-Servido localmente (`python -m http.server`, porta 8791, não a 8000 —
-ocupada nesta máquina). Duas contas descartáveis criadas via Admin API
-(service_role só em memória, CLI): uma confrade comum, uma admin.
-- Confrade comum: card do Dashboard não aparece em `area-vicentino.html`;
-  acesso direto a `prontuario-dashboard.html` mostra "Acesso restrito", não
-  o painel.
-- Admin: card aparece (nos dois caminhos — sessão restaurada E login
-  interativo), painel carrega, todos os 4 gráficos instanciam
-  (`Chart.getChart()` confirmado via `evaluate_script`), sem erros no
-  console, cartões corretos com base vazia (tudo zerado).
-- Inseridos 1 família ativa + 1 pessoa + 1 necessidade financeira urgente
-  aberta + 1 necessidade de saúde atendida + 1 intervenção de R$150 este
-  mês (dados descartáveis) — todos os 6 cartões e os 4 gráficos bateram
-  exatamente com os números esperados (screenshot conferido).
-- Toda a massa de teste apagada ao final: família (cascade cuida do resto)
-  e as duas contas de autenticação. Confirmado via API que nenhuma sobrou.
-
-## Erro cometido durante a limpeza (registrado, não repetir)
-Para derrubar o servidor local, rodei `taskkill /F /IM python.exe`, que mata
-por nome do processo — derrubou TODOS os python.exe da máquina (9 processos),
-não só o servidor que eu tinha subido. Deveria ter capturado o PID do
-processo em segundo plano lançado por este próprio Bash e matado só aquele.
-Avisado ao usuário na hora. Regra pra próxima vez: nunca `taskkill /IM` nem
-`pkill -f <padrão amplo>` pra encerrar algo que eu mesmo lancei — guardar o
-PID no momento do `&`/`run_in_background` e matar só ele.
-
-## Próximos passos
-- Fase 3: controle orçamentário (schema novo do zero — precisa de conversa
-  sobre categorias, quem lança, etc.), conforme já combinado.
-
----
-
-# 2026-09-16 · Fase 3 de 3 — Controle Orçamentário
-
-## Contexto
-Última das 3 fases (perfis de acesso → dashboard de efetividade → controle
-orçamentário). Schema novo do zero: entradas/saídas da conta poupança BRB da
-Conferência, categorias abertas, conciliação periódica, comprovantes em
-Storage privado. Executado via Subagent-Driven Development (um subagente
-implementador + um revisor por task, revisão final de branch inteira antes
-do merge) — plano e spec em `docs/superpowers/plans/` e
-`docs/superpowers/specs/`.
-
-## Feito
-- 6 migrações (`20260916150000` a `20260916150500`): `categorias_financeiras`
-  (seed de 8 categorias), `pode_lancar_financeiro()` (RBAC — tesoureiro ou
-  administrador), `lancamentos_financeiros` (soft delete, vínculo opcional
-  com `intervencoes`, comprovante opcional), `saldo_inicial_financeiro`
-  (singleton), `conciliacoes_financeiras` + `vw_saldo_financeiro` (saldo
-  corrente), bucket privado `comprovantes-financeiros` (primeiro uso de
-  Storage no projeto — só tesoureiro/admin lê ou escreve, mais restrito que
-  o extrato).
-- `app/financeiro.html`: saldo, extrato, lançamento (com upload de
-  comprovante e busca/vínculo com intervenção do Prontuário), categorias,
-  conciliação. Leitura ampla (`is_confrade_ativo()`), escrita restrita
-  (`pode_lancar_financeiro()`), com o gate replicado na UI (esconde as
-  seções de edição, não só desabilita).
-- `app/financeiro-relatorio.html`: 2 gráficos Chart.js (entradas/saídas por
-  mês, saldo acumulado), leitura ampla, 100% client-side.
-- `supabase/verificar-rls-financeiro.mjs`: script de verificação das duas
-  camadas de RLS (leitura ampla vs. escrita restrita) e do bucket.
-- Integração no hub (`area-vicentino.html`/`area-vicentino.js`) e
-  documentação em `supabase/README.md`.
-
-## Achados de segurança corrigidos (não silenciosos)
-- **Crítico, corrigido antes de qualquer deploy:** `vw_saldo_financeiro`
-  nasceu sem `security_invoker = true` nem `revoke`/`grant` próprio — a view
-  rodaria com os direitos do dono (bypass de RLS), expondo o saldo real da
-  Conferência a qualquer `authenticated`, RBAC ou não. Corrigido antes da
-  Task 6 (aplicar em produção).
-- **Crítico, fora do escopo desta fase mas real e já em produção:** o mesmo
-  defeito existia em `vw_renda_familiar` (Fase 1/Prontuário, já publicada).
-  Confirmado ao vivo com sonda anônima (`GET` retornava 200 em vez de 401,
-  igual às tabelas revogadas) antes de tocar em qualquer coisa. Corrigido,
-  verificado (confrade ativo continua lendo, anon agora barrado) e já
-  mesclado/publicado em `main` separadamente, com aprovação prévia.
-- Revisão final de branch (modelo mais capaz, sozinho, olhando as 11 tasks
-  juntas) achou mais 3 problemas reais que a revisão tarefa-por-tarefa não
-  pegaria por construção: injeção de filtro PostgREST na busca de família
-  (bug funcional, não escalada de privilégio), uma conciliação com data
-  retroativa podia mostrar "dinheiro sumido" falso (o sistema comparava o
-  saldo de agora contra uma data passada), e o próprio script de verificação
-  tinha 2 classes de asserção que "passavam" pelo motivo errado (testava
-  contra um arquivo que ainda não existia; INSERT negado com corpo vazio
-  falhava por NOT NULL antes de a RLS ser avaliada) — o "38/38" original
-  não provava o que dizia provar. Todos corrigidos e re-revisados.
-- A própria correção do script introduziu uma nova falha do mesmo tipo
-  (upload negado do anon passou a mirar no arquivo que a correção anterior
-  já tinha criado, dando 409 em vez de testar a RLS de verdade) — pega pela
-  re-revisão, corrigida na hora. Rodada final ao vivo: **41/41 checagens,
-  0 falhas**, contra produção, com contas descartáveis.
-
-## Verificado ao vivo
-- Schema aplicado em produção (`zyzyttkayblvgnfqkapq`) via `supabase db push`
-  (sempre `--dry-run` primeiro). Um bug de ordem (função referenciada por
-  uma policy antes de ser definida no mesmo arquivo) só apareceu no `db
-  push` de verdade — corrigido, reaplicado.
-- QA visual: extensão Claude in Chrome não conectou nesta sessão; a pedido
-  do usuário, QA feito com Playwright (instalado na hora,
-  `npx playwright install chromium`) contra a produção
-  (`manual-vicentinos.vercel.app`). **35/35 checagens, 0 falhas, 0 erros de
-  console**, confrade comum e tesoureiro, duas larguras de tela. Comprovante
-  verificado na camada de rede (interceptar a signed URL e buscá-la de
-  verdade), não só "abriu uma aba" — headless não renderiza PDF, então
-  confiar no popup teria sido falso positivo.
-- Toda massa de teste (contas de auth, família/pessoa/intervenção fixture do
-  Prontuário, categoria/lançamentos/conciliação de teste) apagada ao final e
-  confirmada via API — inclusive um caso onde `ON DELETE RESTRICT` em
-  `criado_por` exigiu apagar o lançamento de teste antes de conseguir apagar
-  a conta de auth (soft delete não é hard delete: a linha continua na
-  tabela até alguém apagar de verdade).
-
-## Pendência — saldo inicial real
-`saldo_inicial_financeiro` está sem linha (o usuário optou por cadastrar o
-valor real da conta BRB depois, não durante a Task 6). `vw_saldo_financeiro`
-degrada para saldo_inicial = 0 nesse caso, o que é seguro mas indistinguível
-de "saldo zero de verdade" na UI — cadastrar assim que tiver o valor e a
-data (SQL pronto em `supabase/README.md`, seção "Controle Orçamentário").
-
-## Riscos residuais (registrados, não corrigidos — decisão consciente)
-- `comprovante_path` (nome do arquivo original, sanitizado mas legível) é
-  visível a qualquer confrade ativo via `select('*')` em
-  `lancamentos_financeiros`, mesmo o arquivo em si sendo só para
-  tesoureiro/admin — um nome de arquivo pode conter dado de terceiro (ex.:
-  nome em comprovante de PIX). Correção real exige grant por coluna (tem
-  precedente em `pedidos_oracao`) e tirar as duas páginas de `select('*')`.
-- `criado_por`/`atualizado_por`/`removido_por`/`conciliado_por` são
-  preenchidos pelo client, não amarrados a `auth.uid()` no banco — um
-  tesoureiro poderia atribuir um lançamento a outro confrade. Mesmo padrão
-  do resto do projeto (não é regressão desta fase), mas este módulo é o que
-  mais depende de trilha de auditoria.
-- `financeiro-relatorio.html` lê `lancamentos_financeiros` sem `.limit()`/
-  `.order()` — o teto padrão de 1000 linhas da API do Supabase truncaria o
-  gráfico de saldo acumulado silenciosamente em alto volume. Anos de
-  distância no volume desta Conferência.
-- Upload de comprovante acontece antes do INSERT do lançamento (um lançamento
-  rejeitado deixa arquivo órfão no bucket); editar um lançamento substitui a
-  referência ao comprovante mas nunca apaga o arquivo antigo.
-- Pequenos: opção de categoria desativada some do formulário ao editar um
-  lançamento antigo que a usava (falha segura, mas sem explicação na tela);
-  extrato limitado a 500 linhas sem indicação visual.
-
-## Próximos passos
-- Cadastrar o saldo inicial real da conta BRB quando o usuário informar.
-- Nenhuma Fase 4 combinada até agora — as 3 fases planejadas estão
-  concluídas.
+1. **53 arquivos `.md` de conteúdo com correções de acento não commitados**
+   (`CadUnico` para `CadÚnico` etc.), anteriores a esta tarefa. **Não serão
+   misturados** aos commits destas correções.
+2. **Divergência de autorização no Prontuário (risco real, não é este bug).**
+   O portão da tela é `is_membro_area()` (admin **ou** confrade ativo), mas a
+   RLS de `familias`, `pessoas`, `fontes_renda`, `necessidades`, `intervencoes` e
+   `parentescos_cruzados` é `is_confrade_ativo()`. Um usuário que seja admin sem
+   linha em `confrades` (caminho documentado em `20260802120000_admins.sql`)
+   entra na página e vê "Família não encontrada" em tudo, sem erro. Hoje não
+   afeta ninguém porque os 2 usuários reais são confrades ativos. Exige decisão
+   de produto, então não será corrigido em silêncio.
+3. **Campo "Código" da família está sendo usado como nome.** As 5 famílias reais
+   têm `codigo` igual ao nome da pessoa e `endereco_bairro` com o endereço
+   completo. O rótulo induz ao erro, e `codigo` é UNIQUE — dois atendidos
+   homônimos quebrariam o cadastro. Sugerir renomear o campo.
+4. **Erros engolidos em silêncio** além do da Parte 1: `prontuario-familia.html`
+   :267, :324-330, :345-347, :611 (descartam o erro) e :583, :588, :592, :641
+   (mutações sem checagem nenhuma); `admin.html` :545, :602-607;
+   `area-vicentino.js` :90.
+5. **`area-vicentino.js:82-88` faz signOut quando a RPC `is_membro_area` falha** —
+   uma oscilação de rede desloga o moderador sem explicação.
+6. Pendência anterior, ainda aberta: cadastrar o saldo inicial real da conta BRB
+   (`saldo_inicial_financeiro` sem linha).
