@@ -128,10 +128,33 @@ publicado** (quem digita é o moderador, que já conferiu).
 
 ---
 
-## Verificação (exigida antes de concluir — §4 e pedido do usuário)
-- Playwright contra o site real, logado, exercitando os quatro fluxos.
-- Massa de teste criada com conta descartável e **apagada ao final**, confirmada
-  por API.
+## Verificação — feita (§4 e pedido do usuário)
+
+**Playwright, 31/31 checagens, 0 falhas**, logado com conta descartável
+(confrade ativo + admin), primeiro contra o build local e depois **contra
+produção** (`manual-vicentinos.vercel.app`), já com o deploy no ar.
+
+O que cada parte provou na tela, e não só no código:
+
+- **P1** — CPF digitado com pontuação é formatado no campo (`529.982.247-25`),
+  a pessoa é aceita, e o banco recebe `52998224725` (só dígitos). Com CPF de 5
+  dígitos, a tela diz *"O CPF precisa ter 11 dígitos — você digitou 5"* e
+  **nunca** aparece `violates check constraint`.
+- **P2** — notificação ao cadastrar família antes de abrir a ficha; ao salvar
+  pessoa a tela permanece na família; "Concluir família" volta à lista.
+- **P3** — 7 links de navegação nas seis páginas internas, com a página atual
+  marcada, o item Dashboard visível para admin, e a troca de página feita pelo
+  menu (sem botão voltar do navegador).
+- **P4** — pedido registrado pelo painel nasce aprovado, já marcado como
+  privilegiado, aparece na lista do painel (com o botão "Tirar dos
+  privilegiados") **e** na página pública de Orações.
+- **Console limpo em produção: 0 erros.** No teste local apareciam 2 erros de
+  CORS da function `gerenciar-usuarios` — ela só aceita a origem de produção,
+  então era o controle funcionando, não defeito; em produção não ocorrem.
+
+Massa de teste apagada e **conferida por varredura independente**: restam
+apenas as 2 contas reais, 2 confrades, 2 admins e as 7 famílias reais; nenhuma
+linha com marca de QA.
 
 ---
 

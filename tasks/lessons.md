@@ -326,3 +326,68 @@ numa máquina onde o usuário pode ter outros scripts Python rodando.
    `taskkill`/`pkill` manual.
 3. Se não for possível isolar o PID com segurança, perguntar ao usuário antes de matar por
    nome — nunca assumir que "só eu" rodo processos com aquele nome na máquina dele.
+
+---
+
+## 2026-09-19 · `head` num script com limpeza mata o script antes da limpeza
+
+**O que aconteceu.** Rodei o QA do Playwright com `node qa.mjs 2>&1 | head -8` só
+para conferir rapidamente que ele tinha passado a apontar para produção. O `head`
+fechou o pipe, o `node` levou SIGPIPE e morreu no meio — **antes do bloco
+`finally` que apaga a massa de teste**. Ficaram no banco de produção uma conta de
+auth, uma linha em `confrades` e uma em `admins`, todas com privilégio de
+administrador. Só apareceram porque rodei uma varredura de sobras depois.
+
+**Causa raiz.** Tratei o script como se fosse só uma fonte de texto para ler. Ele
+não é: ele tem **responsabilidade transacional** — cria estado remoto e é o único
+que sabe desfazê-lo. Interromper a saída de um programa assim é interromper a
+transação dele.
+
+**Por que doeu.** A sobra era uma conta **administradora** num projeto de
+produção, o pior tipo de resíduo para esquecer. E a falha é silenciosa: o
+`head` devolve status 0 e a saída visível parecia normal, terminando em
+"PASSOU" — nada indicava que o programa tinha sido morto.
+
+**Regras preventivas.**
+1. **Script que cria estado remoto nunca vai para um pipe que fecha cedo**
+   (`head`, `tail`, `grep -q`, `| head -n`). Redirecionar para arquivo
+   (`> saida.txt 2>&1`) e ler o arquivo depois. O custo é zero.
+2. **Se o script tem `finally` de limpeza, a saída dele é indivisível.** Ver o
+   começo não vale o risco de perder o fim.
+3. **Depois de qualquer execução que cria massa de teste, rodar uma varredura de
+   sobras independente** — consultando o banco por prefixo/marca, não confiando
+   no relatório do próprio script que pode ter morrido antes de escrevê-lo.
+4. Marcar toda massa de teste com um prefixo reconhecível (`qa-`, `QA-`) existe
+   justamente para que a varredura do item 3 seja possível.
+
+---
+
+## 2026-09-19 · `str.replace()` que não casa devolve o texto intacto e diz "ok"
+
+**O que aconteceu.** Alterei o script de QA por um patch em Python
+(`s.replace(velho, novo, 1)`) para que ele aceitasse apontar para produção. O
+patch **não casou** (havia diferença de escape no trecho procurado), o `replace`
+devolveu a string original sem erro, o script imprimiu `ok` e eu rodei o QA
+"contra produção" — que na verdade continuou rodando contra `127.0.0.1`. Quase
+reportei ao usuário uma verificação de produção que nunca aconteceu.
+
+**Causa raiz.** `replace` não tem modo estrito: "não encontrei" e "substituí" têm
+exatamente a mesma cara. Imprimir `ok` no fim do script provava apenas que o
+Python chegou ao fim, não que a edição existiu.
+
+**O que salvou.** A saída do próprio QA dizia `servindo ... em
+http://127.0.0.1:51930` em vez de `QA contra PRODUÇÃO`. Conferir a **evidência
+do efeito** (o alvo que o programa imprimiu) e não a **confirmação do executor**
+(`ok`) foi o que pegou.
+
+**Regras preventivas.**
+1. **Patch programático se verifica depois, no arquivo** — `grep` pelo texto
+   novo, ou `assert velho in s` **antes** do replace. Um `replace` sem asserção
+   é uma edição que pode não ter acontecido.
+2. **Preferir a ferramenta de edição do harness** (Edit) a `sed`/`replace` em
+   script: ela falha alto quando o alvo não existe. Foi como a correção acabou
+   sendo feita.
+3. **Corolário geral, que vale para além deste caso:** ao afirmar "verifiquei em
+   X", a prova é a saída dizer X — não o comando ter sido escrito com X. Mesma
+   família do erro de 02/08 (projeto Supabase errado) e do teste de RLS que
+   reportou "protegido" com chave inválida.
