@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/prontuario.css">
+  <link rel="stylesheet" href="assets/ui-comum.css">
 </head>
 <body>
 
@@ -116,7 +117,7 @@
           <div class="grade-2">
             <div class="campo">
               <label for="np-nome">Nome completo *</label>
-              <input type="text" id="np-nome" maxlength="150" required>
+              <input type="text" id="np-nome" minlength="3" maxlength="150" required>
             </div>
             <div class="campo">
               <label for="np-nascimento">Data de nascimento *</label>
@@ -151,7 +152,10 @@
             </div>
             <div class="campo">
               <label for="np-cpf">CPF (opcional)</label>
-              <input type="text" id="np-cpf" maxlength="11" placeholder="Só números">
+              <input type="text" id="np-cpf" inputmode="numeric" maxlength="14"
+                     autocomplete="off" placeholder="000.000.000-00"
+                     data-cpf aria-describedby="np-cpf-dica">
+              <small id="np-cpf-dica" class="dica">Pode digitar com ponto e traço.</small>
             </div>
           </div>
           <div class="caixa-linha">
@@ -166,9 +170,16 @@
             <input type="checkbox" id="np-situacao-rua">
             <label for="np-situacao-rua">Situação de rua</label>
           </div>
-          <button type="submit" class="btn btn-ouro" id="btn-criar-pessoa">
-            <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Adicionar pessoa
-          </button>
+          <div class="linha-acoes">
+            <button type="submit" class="btn btn-ouro" id="btn-criar-pessoa">
+              <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Adicionar pessoa
+            </button>
+            <!-- Saída explícita: depois de cadastrar o último morador, é daqui
+                 que se volta à lista para começar outra família. -->
+            <a href="prontuario.html" class="btn btn-neutro" id="btn-concluir-familia">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Concluir família e voltar à lista
+            </a>
+          </div>
           <p class="aviso" id="aviso-nova-pessoa" role="status"></p>
         </form>
       </div>
@@ -180,8 +191,9 @@
   </main>
 
   <script type="module">
-    import { escapar, formatarData } from './assets/supabase-client.js';
+    import { escapar, formatarData, mensagemDeErro, somenteDigitos } from './assets/supabase-client.js';
     import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+    import { montarNavegacaoComPapel, notificarOk, notificarErro } from './assets/ui-comum.js';
 
     const params = new URLSearchParams(window.location.search);
     const familiaId = params.get('id');
@@ -220,6 +232,61 @@
       if (tipo === 'ok') setTimeout(() => { el.className = 'aviso'; }, 4000);
     }
 
+    // -------------------------------------------------------------------------
+    // CPF
+    //
+    // O banco exige exatamente 11 dígitos (`pessoas_cpf_check`). O campo antes
+    // tinha `maxlength="11"` e nenhuma limpeza: quem digitasse "123.456.789-01"
+    // — a forma natural — tinha o valor cortado em "123.456.789", que parece
+    // completo na tela e o banco recusa. Era a causa de "não consigo adicionar
+    // pessoas": o formulário aceitava, o banco negava, e a tela mostrava a
+    // mensagem crua do Postgres.
+    //
+    // Agora o campo aceita a pontuação, formata enquanto se digita e envia só
+    // os dígitos. A validação do banco continua sendo a que vale; esta aqui só
+    // evita a ida até o servidor para ouvir "não".
+    // -------------------------------------------------------------------------
+    function formatarCPF(valor) {
+      const d = somenteDigitos(valor).slice(0, 11);
+      if (d.length <= 3) return d;
+      if (d.length <= 6) return d.slice(0, 3) + '.' + d.slice(3);
+      if (d.length <= 9) return d.slice(0, 3) + '.' + d.slice(3, 6) + '.' + d.slice(6);
+      return d.slice(0, 3) + '.' + d.slice(3, 6) + '.' + d.slice(6, 9) + '-' + d.slice(9);
+    }
+
+    // Delegado no documento porque os formulários de edição são recriados a
+    // cada `carregarPessoas()` — um listener por campo se perderia na remontagem.
+    document.addEventListener('input', (ev) => {
+      const campo = ev.target.closest('input[data-cpf]');
+      if (!campo) return;
+      const formatado = formatarCPF(campo.value);
+      if (formatado !== campo.value) campo.value = formatado;
+    });
+
+    /**
+     * Devolve { ok, valor } com os 11 dígitos, ou { ok:false, erro } explicando.
+     * Campo vazio é válido: o CPF é opcional no cadastro.
+     */
+    function cpfParaBanco(bruto) {
+      const digitos = somenteDigitos(bruto);
+      if (!digitos) return { ok: true, valor: null };
+      if (digitos.length !== 11) {
+        return {
+          ok: false,
+          erro: `O CPF precisa ter 11 dígitos — você digitou ${digitos.length}. ` +
+                'Deixe em branco se não tiver o número agora.',
+        };
+      }
+      return { ok: true, valor: digitos };
+    }
+
+    /** Escreve o motivo no bloco "não encontrada" sem apagar o ícone dele. */
+    function explicarAusencia(texto) {
+      const paragrafo = naoEncontrada.querySelector('p');
+      if (paragrafo) paragrafo.textContent = texto;
+      naoEncontrada.hidden = false;
+    }
+
     function calcularIdade(dataNascimentoISO) {
       if (!dataNascimentoISO) return null;
       const hoje = new Date();
@@ -243,6 +310,7 @@
       const acesso = await exigirAcesso();
       if (!acesso) return;
 
+      await montarNavegacaoComPapel(sb);
       usuario = acesso.session.user;
       topoUsuario.hidden = false;
       telaLogin.hidden = true;
@@ -258,8 +326,21 @@
     async function carregarTudo() {
       if (!familiaId) { naoEncontrada.hidden = false; return; }
 
+      // O `error` já foi descartado aqui, e com ele a diferença entre "família
+      // não existe", "sem permissão", "id inválido" e "sessão expirada" — todos
+      // viravam o mesmo "Família não encontrada", com o formulário de pessoas
+      // escondido e nenhuma pista do motivo. Agora cada caso se explica.
       const { data: f, error } = await sb.from('familias').select('*').eq('id', familiaId).maybeSingle();
-      if (error || !f) { naoEncontrada.hidden = false; return; }
+      if (error) {
+        const texto = mensagemDeErro(error, 'Não foi possível carregar esta família.');
+        explicarAusencia(texto);
+        notificarErro(texto);
+        return;
+      }
+      if (!f) {
+        explicarAusencia('Família não encontrada. Ela pode ter sido removida, ou o endereço usado está incompleto.');
+        return;
+      }
       familia = f;
       conteudo.hidden = false;
       preencherFormFamilia();
@@ -366,24 +447,45 @@
       ev.preventDefault();
       const botao = document.getElementById('btn-criar-pessoa');
       botao.disabled = true;
-      const cpf = document.getElementById('np-cpf').value.trim();
+      const aviso = document.getElementById('aviso-nova-pessoa');
+
+      const cpf = cpfParaBanco(document.getElementById('np-cpf').value);
+      if (!cpf.ok) {
+        botao.disabled = false;
+        mostrarAviso(aviso, cpf.erro, 'erro');
+        notificarErro(cpf.erro);
+        document.getElementById('np-cpf').focus();
+        return;
+      }
+
+      const nome = document.getElementById('np-nome').value.trim();
       const registro = {
         familia_id: familiaId,
-        nome_completo: document.getElementById('np-nome').value.trim(),
+        nome_completo: nome,
         data_nascimento: document.getElementById('np-nascimento').value,
         parentesco_familiar: document.getElementById('np-parentesco').value,
         sexo: document.getElementById('np-sexo').value,
-        cpf: cpf || null,
+        cpf: cpf.valor,
         pcd: document.getElementById('np-pcd').checked,
         impedimento_longo_prazo: document.getElementById('np-impedimento').checked,
         situacao_rua: document.getElementById('np-situacao-rua').checked,
       };
       const { error } = await sb.from('pessoas').insert(registro);
       botao.disabled = false;
-      const aviso = document.getElementById('aviso-nova-pessoa');
-      if (error) { mostrarAviso(aviso, 'Erro: ' + error.message, 'erro'); return; }
+
+      if (error) {
+        const texto = mensagemDeErro(error, 'Não foi possível cadastrar a pessoa.');
+        mostrarAviso(aviso, texto, 'erro');
+        notificarErro(texto);
+        return;
+      }
+
+      // Sucesso: confirma, limpa e PERMANECE na família — quase sempre há mais
+      // de um morador para cadastrar. Quem terminou usa "Concluir família".
       mostrarAviso(aviso, 'Pessoa adicionada.', 'ok');
+      notificarOk(`${nome} foi cadastrada nesta família.`);
       ev.target.reset();
+      document.getElementById('np-nome').focus();
       await carregarTudo();
     });
 
@@ -431,9 +533,9 @@
           '<h4>Dados pessoais</h4>' +
           '<form data-acao="salvar-pessoa" data-pessoa="' + p.id + '">' +
             '<div class="grade-3">' +
-              '<div class="campo"><label>Nome completo</label><input type="text" name="nome_completo" maxlength="150" value="' + escapar(p.nome_completo) + '" required></div>' +
+              '<div class="campo"><label>Nome completo</label><input type="text" name="nome_completo" minlength="3" maxlength="150" value="' + escapar(p.nome_completo) + '" required></div>' +
               '<div class="campo"><label>Data de nascimento</label><input type="date" name="data_nascimento" value="' + escapar(p.data_nascimento || '') + '" required></div>' +
-              '<div class="campo"><label>CPF</label><input type="text" name="cpf" maxlength="11" value="' + escapar(p.cpf || '') + '"></div>' +
+              '<div class="campo"><label>CPF</label><input type="text" name="cpf" inputmode="numeric" maxlength="14" autocomplete="off" placeholder="000.000.000-00" data-cpf value="' + escapar(p.cpf || '') + '"><small class="dica">Pode digitar com ponto e traço.</small></div>' +
             '</div>' +
             '<div class="grade-3">' +
               '<div class="campo"><label>Parentesco</label><select name="parentesco_familiar">' +
@@ -654,10 +756,17 @@
 
       let erro = null;
       if (acao === 'salvar-pessoa') {
+        const cpf = cpfParaBanco(dados.get('cpf'));
+        if (!cpf.ok) {
+          botao.disabled = false;
+          mostrarAviso(form.querySelector('[data-aviso-pessoa]'), cpf.erro, 'erro');
+          notificarErro(cpf.erro);
+          return;
+        }
         const registro = {
           nome_completo: dados.get('nome_completo').trim(),
           data_nascimento: dados.get('data_nascimento'),
-          cpf: dados.get('cpf').trim() || null,
+          cpf: cpf.valor,
           parentesco_familiar: dados.get('parentesco_familiar'),
           ativo: dados.get('ativo') === 'true',
           pcd: dados.has('pcd'),
@@ -666,7 +775,11 @@
           observacoes: dados.get('observacoes').trim() || null,
         };
         ({ error: erro } = await sb.from('pessoas').update(registro).eq('id', pessoaId));
-        if (!erro) { elegibilidade.delete(pessoaId); mostrarAviso(form.querySelector('[data-aviso-pessoa]'), 'Salvo.', 'ok'); }
+        if (!erro) {
+          elegibilidade.delete(pessoaId);
+          mostrarAviso(form.querySelector('[data-aviso-pessoa]'), 'Salvo.', 'ok');
+          notificarOk('Dados de ' + registro.nome_completo + ' atualizados.');
+        }
       } else if (acao === 'nova-renda') {
         const registro = {
           pessoa_id: pessoaId, tipo: dados.get('tipo'),
@@ -695,7 +808,24 @@
       }
 
       botao.disabled = false;
-      if (erro) { alert('Erro ao salvar: ' + erro.message); return; }
+
+      // Antes era `alert()`: além de travar a página até alguém clicar em OK,
+      // mostrava a mensagem crua do Postgres.
+      if (erro) {
+        notificarErro(mensagemDeErro(erro, 'Não foi possível salvar.'));
+        return;
+      }
+
+      const CONFIRMACAO = {
+        'nova-renda': 'Fonte de renda adicionada.',
+        'nova-necessidade': 'Necessidade registrada.',
+        'nova-intervencao': 'Intervenção registrada.',
+      };
+      if (CONFIRMACAO[acao]) {
+        notificarOk(CONFIRMACAO[acao]);
+        form.reset();
+      }
+
       if (acao !== 'salvar-pessoa') await carregarPessoas();
       else await carregarTudo();
     });
