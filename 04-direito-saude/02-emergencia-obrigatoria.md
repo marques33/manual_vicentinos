@@ -107,7 +107,7 @@ Ligue para o **Disque Saúde: 136** e registre a reclamação. Anote o número d
 
 Se você ou seu familiar sofreu danos (físicos ou emocionais) por causa da recusa de atendimento, a Defensoria Pública pode entrar na Justiça pedindo indenização por danos morais e materiais. O serviço é gratuito.
 
-**Defensoria Pública do DF:** 129 ou (61) 2196-4300
+**Defensoria Pública do DF:** 129 ou (61) 3465-8200
 
 ### Passo 6 — Denuncie ao Conselho de Medicina
 
@@ -149,7 +149,7 @@ A Portaria MS n. 2.048/2002 determina que:
 | SAMU (emergência) | **192** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Defensoria Pública do DF | **129 ou (61) 3465-8200** |
 | CRM-DF (denunciar médico) | **(61) 3445-5800** |
 | Polícia (Boletim de Ocorrência) | **190** |
 

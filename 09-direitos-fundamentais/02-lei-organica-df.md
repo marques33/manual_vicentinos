@@ -140,7 +140,7 @@ Acompanhe o site do GDF, as redes sociais da sua Administração Regional e os m
 | Central do GDF | 156 |
 | CODHAB (moradia) | (61) 3214-1830 |
 | CODHAB (site) | www.codhab.df.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Ouvidoria do GDF | www.ouvidoria.df.gov.br |
 

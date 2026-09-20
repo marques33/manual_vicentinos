@@ -31,7 +31,7 @@ Conhecer esses direitos ajuda você a:
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Central do GDF | 156 |
 | CODHAB (moradia) | (61) 3214-1830 |

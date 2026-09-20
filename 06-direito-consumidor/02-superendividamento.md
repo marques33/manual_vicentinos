@@ -63,7 +63,7 @@ O mínimo existencial inclui gastos com:
 | Órgão | Como Procurar | O Que Fazem |
 |-------|---------------|-------------|
 | **PROCON-DF** | Telefone 151 (24 horas) | Orientação, mediacao e encaminhamento para renegociacao |
-| **Defensoria Pública do DF** | (61) 2196-4300 | Assistência jurídica gratuita para quem esta superendividado |
+| **Defensoria Pública do DF** | 129 ou (61) 3465-8200 | Assistência jurídica gratuita para quem esta superendividado |
 | **TJDFT — CEJUSC** | www.tjdft.jus.br | Centros de mediacao e conciliacao para resolver conflitos |
 | **Consumidor.gov.br** | www.consumidor.gov.br | Plataforma online para renegociar dívidas diretamente com as empresas |
 
@@ -87,7 +87,7 @@ O mínimo existencial inclui gastos com:
 | Serviço | Telefone / Canal |
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Consumidor.gov.br | www.consumidor.gov.br |
 | TJDFT — CEJUSC | www.tjdft.jus.br |
 

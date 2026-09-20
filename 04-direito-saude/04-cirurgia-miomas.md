@@ -105,7 +105,7 @@ O Tribunal de Justiça do Distrito Federal (TJDFT) já decidiu que:
 
 **Passo 2 — Procure a Defensoria Pública do DF**
 O atendimento é gratuito para quem não pode pagar advogado.
-Telefone: **129** ou **(61) 2196-4300**
+Telefone: **129** ou **(61) 3465-8200**
 Site: www.defensoria.df.gov.br
 
 **Passo 3 — Ação judicial**
@@ -120,7 +120,7 @@ O defensor pode ingressar com uma ação de obrigação de fazer com pedido de t
 | Central de Regulacao SES-DF | **160** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Defensoria Pública do DF | **129 ou (61) 3465-8200** |
 | Ministério Público do DF | **(61) 3343-6000** |
 
 ---

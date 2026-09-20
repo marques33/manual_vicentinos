@@ -293,7 +293,7 @@ Documento que garante **desconto de 50%** em passagens de transporte interestadu
 | Neoenergia Brasília (Tarifa Social Energia) | 116 ou WhatsApp (61) 3465-9318 |
 | CAESB (Tarifa Social Água) | 156 (opcao 1) |
 | CODHAB (Habitação) | https://www.codhab.df.gov.br |
-| Defensoria Pública do DF | 129 ou (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | CRAS | Veja lista em [01 - Cadastro Único](01-cadastro-único.md) |
 
 ---

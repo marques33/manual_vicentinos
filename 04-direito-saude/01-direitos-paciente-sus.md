@@ -67,7 +67,7 @@ Você tem direito de participar das decisões sobre o seu tratamento e também d
 
 1. **Registre o que aconteceu:** Anote o nome do hospital ou unidade de saúde, data, hora é o que ocorreu.
 2. **Reclame na Ouvidoria do SUS:** Ligue para o **Disque 136** ou procure a Ouvidoria da SES-DF pelo telefone **162**.
-3. **Procure a Defensoria Pública:** Se o problema for grave (negativa de atendimento, falta de medicamento essencial), a Defensoria pode ajudar. Telefone: **129** ou **(61) 2196-4300**.
+3. **Procure a Defensoria Pública:** Se o problema for grave (negativa de atendimento, falta de medicamento essencial), a Defensoria pode ajudar. Telefone: **129** ou **(61) 3465-8200**.
 
 ---
 
@@ -77,7 +77,7 @@ Você tem direito de participar das decisões sobre o seu tratamento e também d
 |---------|----------|
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Defensoria Pública do DF | **129 ou (61) 3465-8200** |
 | PROCON-DF | **151** |
 
 ---

@@ -61,7 +61,7 @@ Se você tem dívida antiga de água ou luz, saiba que:
 2. Peca o parcelamento da dívida — explique sua situação financeira
 3. Se não conseguir acordo, procure o PROCON-DF (151)
 4. Você também pode reclamar na agência reguladora (ANEEL para energia, ADASA para água)
-5. Se nada funcionar, procure a Defensoria Pública do DF — (61) 2196-4300
+5. Se nada funcionar, procure a Defensoria Pública do DF — 129 ou (61) 3465-8200
 
 ---
 
@@ -104,7 +104,7 @@ Se você e de família de baixa renda e esta inscrito no Cadastro Único (CadÚn
 | **ADASA** (reguladora de água no DF) | **(61) 3961-4600** | Reclamações sobre serviço de água no DF |
 | **ANATEL** (reguladora de telefonia) | **1331** | Reclamações sobre telefone e internet |
 | **PROCON-DF** | **151** | Reclamações gerais de consumo (24 horas) |
-| **Defensoria Pública do DF** | **(61) 2196-4300** | Assistência jurídica gratuita |
+| **Defensoria Pública do DF** | **129** ou **(61) 3465-8200** | Assistência jurídica gratuita |
 
 ---
 

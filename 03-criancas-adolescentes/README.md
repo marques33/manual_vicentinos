@@ -33,7 +33,7 @@ O que é o Conselho Tutelar, quando acionar, endereços e telefones no DF, e com
 | Canal | Telefone |
 |-------|----------|
 | Disque Direitos Humanos | 100 (gratuito) |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Ministério Público do DF | (61) 3343-9500 |
 | Polícia Civil do DF | 197 |
 | Violência contra a mulher | 180 (gratuito) |

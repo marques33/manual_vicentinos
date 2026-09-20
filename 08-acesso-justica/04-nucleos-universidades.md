@@ -94,7 +94,7 @@ Os núcleos de prática jurídica são serviços das faculdades de Direito onde 
 - Se aceitar, os estudantes é o professor vao cuidar de todo o processo judicial
 - Você será informado sobre o andamento do caso
 
-> **Dica importante:** Os núcleos de prática jurídica costumam ter **vagas limitadas** é o atendimento pode ter lista de espera. Se não conseguir vaga, procure a Defensoria Pública do DF — (61) 2196-4300.
+> **Dica importante:** Os núcleos de prática jurídica costumam ter **vagas limitadas** é o atendimento pode ter lista de espera. Se não conseguir vaga, procure a Defensoria Pública do DF — 129 ou (61) 3465-8200.
 
 ---
 
@@ -115,7 +115,7 @@ Os núcleos de prática jurídica são serviços das faculdades de Direito onde 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
 | UnB — Faculdade de Direito | http://direito.unb.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | TJDFT (Juizados Especiais) | www.tjdft.jus.br |
 
 ---

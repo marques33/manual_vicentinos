@@ -19,7 +19,7 @@ O primeiro passo e entrar em contato com a Central de Relacionamento:
 | Canal | Contato |
 |-------|---------|
 | **Disque Defensoria** | 129 |
-| **Telefone (fora do DF)** | (61) 2196-4300 |
+| **Telefone (fora do DF)** | (61) 3465-8200 |
 | **Horário** | 9h as 17h, dias úteis |
 | **Agendamento online** | https://agenda.df.gov.br |
 
@@ -31,13 +31,13 @@ A Defensoria tem núcleos espalhados pelo Distrito Federal para atender a popula
 
 | Núcleo | Endereço | Contato |
 |--------|----------|---------|
-| **Brasília** | Fórum de Brasília, Praça Municipal, Lote 1 | Agendar pela CRC: 129 ou (61) 2196-4300 |
-| **Taguatinga** | CNB 03, Lote 07, Setor Comercial Norte | Agendar pela CRC: 129 ou (61) 2196-4300 |
-| **Ceilândia** | Fórum de Ceilândia, QNM 11, Area Especial n. 01 | Agendar pela CRC: 129 ou (61) 2196-4300 |
-| **Samambaia** | Fórum Des. Raimundo Macedo, Centro Urbano, Q. 302, Conj. 01, Lt. 01, Samambaia Sul | Agendar pela CRC: 129 ou (61) 2196-4300 |
-| **Gama** | Fórum do Gama | Agendar pela CRC: 129 ou (61) 2196-4300 |
-| **Paranoá / Itapoã** | Fórum do Paranoá | Agendar pela CRC: 129 ou (61) 2196-4300 |
-| **Recanto das Emas** | Fórum do Recanto das Emas | Agendar pela CRC: 129 ou (61) 2196-4300 |
+| **Brasília** | Fórum de Brasília, Praça Municipal, Lote 1 | Agendar pela CRC: 129 ou (61) 3465-8200 |
+| **Taguatinga** | CNB 03, Lote 07, Setor Comercial Norte | Agendar pela CRC: 129 ou (61) 3465-8200 |
+| **Ceilândia** | Fórum de Ceilândia, QNM 11, Area Especial n. 01 | Agendar pela CRC: 129 ou (61) 3465-8200 |
+| **Samambaia** | Fórum Des. Raimundo Macedo, Centro Urbano, Q. 302, Conj. 01, Lt. 01, Samambaia Sul | Agendar pela CRC: 129 ou (61) 3465-8200 |
+| **Gama** | Fórum do Gama | Agendar pela CRC: 129 ou (61) 3465-8200 |
+| **Paranoá / Itapoã** | Fórum do Paranoá | Agendar pela CRC: 129 ou (61) 3465-8200 |
+| **Recanto das Emas** | Fórum do Recanto das Emas | Agendar pela CRC: 129 ou (61) 3465-8200 |
 
 ### Defensoria nas Unidades Na Hora
 
@@ -53,7 +53,7 @@ Para questões que envolvem órgãos federais (INSS, justiça federal, União), 
 
 ### Passo a Passo
 
-1. **Ligue para a Central de Relacionamento:** 129 ou (61) 2196-4300 (dias úteis, 9h as 17h)
+1. **Ligue para a Central de Relacionamento:** 129 ou (61) 3465-8200 (dias úteis, 9h as 17h)
 2. **Ou acesse o agendamento online:** https://agenda.df.gov.br
 3. **Ou envie mensagem por WhatsApp** para o núcleo da sua região (veja tabela acima)
 4. Informe qual é o seu problema jurídico
@@ -117,7 +117,7 @@ A Defensoria Pública atua em praticamente todas as areas do Direito:
 | Serviço | Telefone / Canal |
 |---------|-----------------|
 | Disque Defensoria | 129 |
-| Central da Defensoria DF (fora do DF) | (61) 2196-4300 |
+| Central da Defensoria DF (fora do DF) | (61) 3465-8200 |
 | WhatsApp Família (Samambaia) | (61) 99458-3470 |
 | Agendamento online | agenda.df.gov.br |
 | Site da Defensoria | www.defensoria.df.gov.br |

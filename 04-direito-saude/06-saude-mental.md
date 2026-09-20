@@ -128,7 +128,7 @@ O CVV e formado por voluntários treinados que estão prontos para ouvir você, 
 | SAMU (emergência) | **192** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Defensoria Pública do DF | **129 ou (61) 3465-8200** |
 
 ---
 

@@ -34,7 +34,7 @@ Se você está com um problema de consumo e não sabe o que fazer, siga estes pa
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Neoenergia/CEB (energia) | 116 |
 | CAESB (água) | 115 |
 | ANEEL (energia) | 167 |

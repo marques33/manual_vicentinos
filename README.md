@@ -98,7 +98,7 @@ Constituição Federal e Lei Orgânica do DF.
 | **Disque Saúde / SUS** | **136** |
 | **INSS** | **135** |
 | **PROCON-DF** | **151** |
-| **Defensoria Pública do DF** | **129 ou (61) 2196-4300** |
+| **Defensoria Pública do DF** | **129 ou (61) 3465-8200** |
 | **Conselho Tutelar (DF)** | **(61) 3213-0657** |
 
 ---

@@ -101,7 +101,7 @@ Constituição Federal e Lei Orgânica do DF.
 | **Disque Saúde / SUS** | **136** |
 | **INSS** | **135** |
 | **PROCON-DF** | **151** |
-| **Defensoria Pública do DF** | **(61) 2196-4300** ou **162** (gratuito DF) |
+| **Defensoria Pública do DF** | **129** ou **(61) 3465-8200** ou **162** (gratuito DF) |
 | **Conselho Tutelar (DF)** | **(61) 3213-0657** |
 
 ---
@@ -172,7 +172,7 @@ Se você está em situação difícil e não sabe por onde comecar, siga estes p
 | Neoenergia Brasília (Tarifa Social de Energia) | 116 |
 | CAESB (Tarifa Social de Água) | 156 (opção 1) |
 | BRB Mobilidade (Passe Livre) | (61) 3120-9500 |
-| Defensoria Pública do DF | (61) 2196-4300 ou 162 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 ou 162 |
 
 ---
 
@@ -368,9 +368,9 @@ Com o CadÚnico atualizado, você pode ter acesso aos seguintes programas:
 
 O Bolsa Família é um programa do governo federal que transfere dinheiro diretamente para famílias em situação de pobreza e extrema pobreza. O objetivo e garantir uma renda mínima para que essas famílias possam se alimentar e viver com mais dignidade.
 
-O programa está previsto na **Lei 14.601/2023** e garante um valor mínimo de **R$ 600,00 por família por mês**.
+O programa está previsto na **Lei 14.601/2023** e garante um valor mínimo de **R$ 691,00 por família por mês**.
 
-> **Em resumo:** Se sua família tem renda muito baixa, o governo deposita um valor todo mês na sua conta da Caixa Econômica Federal. O valor pode ser maior que R$ 600,00, dependendo de quantas crianças e gestantes tem na família.
+> **Em resumo:** Se sua família tem renda muito baixa, o governo deposita um valor todo mês na sua conta da Caixa Econômica Federal. O valor pode ser maior que R$ 691,00, dependendo de quantas crianças e gestantes tem na família.
 
 ---
 
@@ -389,24 +389,26 @@ Para receber o Bolsa Família, a família precisa cumprir **dois requisitos:**
 
 O valor do Bolsa Família depende do tamanho e da composicao da família. Veja como funciona:
 
+> **Valores reajustados pelo Decreto 13.120, de 17/09/2026, com efeito a partir de 1º de outubro de 2026.** Até 30/09/2026 ainda valem os valores anteriores (Renda de Cidadania R$ 142,00, piso de R$ 600,00, Primeira Infância R$ 150,00 e Variável Familiar R$ 50,00). A renda de até R$ 218,00 por pessoa **não mudou**.
+
 | Parcela do Benefício | Valor | Quem Recebe |
 |---------------------|-------|-------------|
-| **Renda de Cidadania** | R$ 142,00 | Cada pessoa da família |
-| **Complementar** | Variavel | Completa o valor até chegar ao mínimo de R$ 600,00 |
-| **Primeira Infância** | R$ 150,00 | Cada criança de 0 a 6 anos |
-| **Variavel Familiar** | R$ 50,00 | Cada gestante, nutriz (mãe que amamenta), criança ou adolescente de 7 a 17 anos |
+| **Renda de Cidadania** | R$ 164,00 | Cada pessoa da família |
+| **Complementar** | Variável | Completa o valor até chegar ao mínimo de R$ 691,00 |
+| **Primeira Infância** | R$ 173,00 | Cada criança de 0 a 6 anos (até completar 7) |
+| **Variável Familiar** | R$ 58,00 | Cada gestante, nutriz (mãe que amamenta), criança ou adolescente de 7 a 17 anos |
 | **Extraordinario de Transicao** | Variavel | Garante que ninguém receba menos do que recebia antes |
 
 ### Exemplo Prático
 
 Uma família com mãe, pai, um bebe de 2 anos é uma criança de 8 anos:
 
-- 4 pessoas x R$ 142,00 (Renda de Cidadania) = **R$ 568,00**
-- 1 criança de 0 a 6 anos x R$ 150,00 (Primeira Infância) = **R$ 150,00**
-- 1 criança de 7 a 17 anos x R$ 50,00 (Variavel Familiar) = **R$ 50,00**
-- **Total: R$ 768,00 por mês**
+- 4 pessoas x R$ 164,00 (Renda de Cidadania) = **R$ 656,00**
+- 1 criança de 0 a 6 anos x R$ 173,00 (Primeira Infância) = **R$ 173,00**
+- 1 criança de 7 a 17 anos x R$ 58,00 (Variável Familiar) = **R$ 58,00**
+- **Total: R$ 887,00 por mês**
 
-> **Valor mínimo garantido:** Nenhuma família recebe menos de R$ 600,00 por mês. Se a soma das parcelas der menos que isso, o governo complementa até chegar a R$ 600,00.
+> **Valor mínimo garantido:** Nenhuma família recebe menos de R$ 691,00 por mês. Se a soma das parcelas der menos que isso, o governo complementa até chegar a R$ 691,00.
 
 ---
 
@@ -592,7 +594,7 @@ Se o INSS negou seu BPC por causa da renda, você pode entrar na Justiça e apre
 - Dívidas essenciais
 - Outros fatores que mostrem vulnerabilidade
 
-> **Importante:** Para entrar na Justiça, você pode procurar a **Defensoria Pública do DF** -- telefone **(61) 2196-4300** (de fora do DF) ou **162** (gratuito no DF). O serviço é gratuito. Também é possível procurar o **Juizado Especial Federal** sem advogado, para causas de até 60 salários mínimos.
+> **Importante:** Para entrar na Justiça, você pode procurar a **Defensoria Pública do DF** -- telefone **(61) 3465-8200** (de fora do DF) ou **162** (gratuito no DF). O serviço é gratuito. Também é possível procurar o **Juizado Especial Federal** sem advogado, para causas de até 60 salários mínimos.
 
 ---
 
@@ -666,7 +668,7 @@ Se houver pendencias nos documentos, você terá **30 dias** para resolver a par
 
 **2. Ação judicial:**
 - Se o recurso administrativo também for negado, você pode entrar na Justiça
-- Procure a **Defensoria Pública do DF** -- telefone **(61) 2196-4300** ou **162** (gratuito no DF)
+- Procure a **Defensoria Pública do DF** -- telefone **129** ou **(61) 3465-8200** ou **162** (gratuito no DF)
 - Ou vá diretamente ao **Juizado Especial Federal** -- não precisa de advogado para causas de até 60 salários mínimos
 
 ---
@@ -688,7 +690,7 @@ Se houver pendencias nos documentos, você terá **30 dias** para resolver a par
 | INSS (agendar, tirar dúvidas, fazer pedido) | 135 |
 | Meu INSS (internet) | https://meu.inss.gov.br |
 | CRAS (fazer CadÚnico) | Veja lista em [01 - Cadastro Único](01-cadastro-único.md) |
-| Defensoria Pública do DF (ajuda jurídica gratuita) | (61) 2196-4300 ou 162 |
+| Defensoria Pública do DF (ajuda jurídica gratuita) | 129 ou (61) 3465-8200 ou 162 |
 | Disque Social | 121 |
 
 ---
@@ -1026,7 +1028,7 @@ O Auxílio-Reclusão e cancelado imediatamente quando:
 |---------|-----------------|
 | INSS (agendar, tirar dúvidas, fazer pedido) | 135 |
 | Meu INSS (internet) | https://meu.inss.gov.br |
-| Defensoria Pública do DF (ajuda jurídica gratuita) | (61) 2196-4300 ou 162 |
+| Defensoria Pública do DF (ajuda jurídica gratuita) | 129 ou (61) 3465-8200 ou 162 |
 
 ---
 
@@ -1338,7 +1340,7 @@ Documento que garante **desconto de 50%** em passagens de transporte interestadu
 | Neoenergia Brasília (Tarifa Social Energia) | 116 ou WhatsApp (61) 3465-9318 |
 | CAESB (Tarifa Social Água) | 156 (opção 1) |
 | CODHAB (Habitação) | https://www.codhab.df.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 ou 162 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 ou 162 |
 | CRAS | Veja lista em [01 - Cadastro Único](01-cadastro-único.md) |
 
 ---
@@ -2680,7 +2682,7 @@ O que é o Conselho Tutelar, quando acionar, endereços e telefones no DF, e com
 | Canal | Telefone |
 |-------|----------|
 | Disque Direitos Humanos | 100 (gratuito) |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Ministério Público do DF | (61) 3343-9500 |
 | Polícia Civil do DF | 197 |
 | Violência contra a mulher | 180 (gratuito) |
@@ -2727,7 +2729,7 @@ Toda criança e adolescente tem direito a:
 Se uma criança ou adolescente for impedida de receber atendimento de saúde no SUS:
 
 1. Procure o **Conselho Tutelar** da sua região.
-2. Se não resolver, procure a **Defensoria Pública do DF** -- telefone (61) 2196-4300.
+2. Se não resolver, procure a **Defensoria Pública do DF** -- telefone 129 ou (61) 3465-8200.
 3. A Defensoria pode entrar com ação judicial para garantir o atendimento.
 
 ---
@@ -2850,9 +2852,9 @@ Quando os direitos de uma criança ou adolescente estão ameacados ou sendo viol
 |----------|---------------|---------|
 | Maus-tratos, negligencia, violência | Conselho Tutelar | Veja endereços na seção 06 |
 | Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
-| Falta de vaga em escola/creche | Conselho Tutelar ou Defensoria Pública | (61) 2196-4300 |
+| Falta de vaga em escola/creche | Conselho Tutelar ou Defensoria Pública | 129 ou (61) 3465-8200 |
 | Trabalho infantil | Conselho Tutelar ou MPT | Disque 100 |
-| Orientação jurídica gratuita | Defensoria Pública do DF | (61) 2196-4300 |
+| Orientação jurídica gratuita | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Crimes contra crianças | Polícia Civil | 197 |
 
 ---
@@ -2913,7 +2915,7 @@ Na guarda compartilhada:
 
 - **Entre os pais:** Vara de Família.
 - **Se for outra pessoa (avó, tio, etc.):** Vara da Infância e Juventude.
-- **Quem não pode pagar advogado:** Defensoria Pública do DF -- telefone (61) 2196-4300.
+- **Quem não pode pagar advogado:** Defensoria Pública do DF -- telefone 129 ou (61) 3465-8200.
 
 ---
 
@@ -3002,10 +3004,10 @@ Documentos necessários:
 
 | Necessidade | Onde procurar | Contato |
 |-------------|---------------|---------|
-| Pedir guarda (gratuito) | Defensoria Pública do DF | (61) 2196-4300 |
+| Pedir guarda (gratuito) | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Informações sobre adoção | TJDFT -- Vara da Infância | (61) 3103-7070 |
 | Cadastro para adoção | Sistema Nacional de Adoção | https://sna.cnj.jus.br |
-| Orientação jurídica | Defensoria Pública do DF | (61) 2196-4300 |
+| Orientação jurídica | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 
 ---
 
@@ -3087,7 +3089,7 @@ Este é o caminho mais comum para quem não tem condições de pagar um advogado
    - Informações sobre quem vai pagar: nome completo, endereço, local de trabalho e renda estimada
 
 2. **Vá até a Defensoria Pública do DF:**
-   - Telefone: **(61) 2196-4300**
+   - Telefone: **129** ou **(61) 3465-8200**
    - Horário da central: 9h as 17h (dias úteis)
    - Atendimento presencial: 13h as 18h (dias úteis)
    - Agendamento online: https://agenda.df.gov.br/organização.html?organização=37885304
@@ -3322,7 +3324,7 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 ### Se você precisa de pensão para seu filho:
 
 1. Reuna: RG, CPF, certidão de nascimento do filho, comprovante de residência e renda.
-2. Ligue para a Defensoria Pública: **(61) 2196-4300**.
+2. Ligue para a Defensoria Pública: **129** ou **(61) 3465-8200**.
 3. A Defensoria entra com a ação é o juiz fixa pensão provisória rapidamente.
 
 ### Se o pai/mãe não esta pagando a pensão:
@@ -3361,7 +3363,7 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 
 | Serviço | Telefone |
 |---------|----------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | TJDFT -- Informações gerais | (61) 3103-7070 |
 | Disque Direitos Humanos | 100 (gratuito) |
 | Ministério Público do DF | (61) 3343-9500 |
@@ -3445,7 +3447,7 @@ Quando o juiz identifica que está havendo alienação parental, ele pode tomar 
 
 2. **Procure a Justiça:**
    - Vá a **Vara de Família** para pedir medidas judiciais.
-   - A **Defensoria Pública** pode representar você gratuitamente -- telefone (61) 2196-4300.
+   - A **Defensoria Pública** pode representar você gratuitamente -- telefone 129 ou (61) 3465-8200.
 
 3. **Acione o Conselho Tutelar:**
    - O Conselho Tutelar pode intervir para proteger a criança.
@@ -3474,7 +3476,7 @@ A alienação parental causa danos sérios a saúde emocional da criança:
 
 | Necessidade | Onde procurar | Contato |
 |-------------|---------------|---------|
-| Ação judicial contra alienação parental | Defensoria Pública do DF | (61) 2196-4300 |
+| Ação judicial contra alienação parental | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Proteção imediata da criança | Conselho Tutelar da região | Veja endereços na seção 06 |
 | Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
 | Acompanhamento psicológico | CREAS da região | Procure o CREAS mais próximo |
@@ -3585,7 +3587,7 @@ Este é o passo mais importante. Guarde tudo:
 **5. Procure a Defensoria Pública**
 
 - A Defensoria pode orientar sobre **ações cíveis de reparação** (indenização por danos morais).
-- Telefone: **(61) 2196-4300**.
+- Telefone: **129** ou **(61) 3465-8200**.
 
 **6. Ligue para o Disque 100**
 
@@ -3612,7 +3614,7 @@ Este é o passo mais importante. Guarde tudo:
 | Registrar ocorrência policial | Delegacia mais próxima | 197 (Polícia Civil) |
 | Cyberbullying | Delegacia de Crimes Ciberneticos (DRCC) | Procure a delegacia especializada |
 | Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
-| Orientação jurídica gratuita | Defensoria Pública do DF | (61) 2196-4300 |
+| Orientação jurídica gratuita | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Apoio psicológico | CREAS da região | Procure o CREAS mais próximo |
 
 ---
@@ -3750,7 +3752,7 @@ Setor de Multiplas Atividades Sul (SMAS), Trecho 3, Lotes 4/6, Bloco 5 -- Terreo
 Brasília/DF
 
 **Contato:**
-- Telefone: **(61) 2196-4300** (Central de Relacionamento)
+- Telefone: **129** ou **(61) 3465-8200** (Central de Relacionamento)
 - E-mail: najfamilia@defensoria.df.gov.br
 - Horário da central: **9h as 17h** (dias úteis)
 - Atendimento presencial: **13h as 18h** (dias úteis)
@@ -3812,7 +3814,7 @@ Leve os seguintes documentos:
 
 ### Se você precisa de ajuda jurídica gratuita:
 
-1. Ligue para a **Defensoria Pública**: **(61) 2196-4300**.
+1. Ligue para a **Defensoria Pública**: **129** ou **(61) 3465-8200**.
 2. Agende atendimento online ou vá presencialmente.
 3. Leve todos os documentos listados acima.
 
@@ -3868,7 +3870,7 @@ Este capítulo reune orientações práticas sobre os direitos dos pacientes no 
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
 | CVV (apoio emocional / suicidio) | **188** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 
 ---
 
@@ -3947,7 +3949,7 @@ Você tem direito de participar das decisões sobre o seu tratamento e também d
 
 1. **Registre o que aconteceu:** Anote o nome do hospital ou unidade de saúde, data, hora é o que ocorreu.
 2. **Reclame na Ouvidoria do SUS:** Ligue para o **Disque 136** ou procure a Ouvidoria da SES-DF pelo telefone **162**.
-3. **Procure a Defensoria Pública:** Se o problema for grave (negativa de atendimento, falta de medicamento essencial), a Defensoria pode ajudar. Telefone: **(61) 3318-2000**.
+3. **Procure a Defensoria Pública:** Se o problema for grave (negativa de atendimento, falta de medicamento essencial), a Defensoria pode ajudar. Telefone: **129** ou **(61) 3465-8200**.
 
 ---
 
@@ -3957,7 +3959,7 @@ Você tem direito de participar das decisões sobre o seu tratamento e também d
 |---------|----------|
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 | PROCON-DF | **151** |
 
 ---
@@ -4087,7 +4089,7 @@ Ligue para o **Disque Saúde: 136** e registre a reclamação. Anote o número d
 
 Se você ou seu familiar sofreu danos (físicos ou emocionais) por causa da recusa de atendimento, a Defensoria Pública pode entrar na Justiça pedindo indenização por danos morais e materiais. O serviço é gratuito.
 
-**Defensoria Pública do DF:** (61) 3318-2000
+**Defensoria Pública do DF:** 129 ou (61) 3465-8200
 
 ### Passo 6 — Denuncie ao Conselho de Medicina
 
@@ -4129,7 +4131,7 @@ A Portaria MS n. 2.048/2002 determina que:
 | SAMU (emergência) | **192** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 | CRM-DF (denunciar médico) | **(61) 3445-5800** |
 | Polícia (Boletim de Ocorrência) | **190** |
 
@@ -4297,7 +4299,7 @@ NADA. Pelo SUS, o procedimento e totalmente gratuito.
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
 | Central de Regulacao SES-DF | **160** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 
 ---
 
@@ -4419,7 +4421,7 @@ O Tribunal de Justiça do Distrito Federal (TJDFT) já decidiu que:
 
 **Passo 2 — Procure a Defensoria Pública do DF**
 O atendimento é gratuito para quem não pode pagar advogado.
-Telefone: **(61) 3318-2000**
+Telefone: **129** ou **(61) 3465-8200**
 Site: www.defensoria.df.gov.br
 
 **Passo 3 — Ação judicial**
@@ -4434,7 +4436,7 @@ O defensor pode ingressar com uma ação de obrigação de fazer com pedido de t
 | Central de Regulacao SES-DF | **160** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 | Ministério Público do DF | **(61) 3343-6000** |
 
 ---
@@ -4591,7 +4593,7 @@ O documento de negativa é essencial para entrar na Justiça.
 
 **Passo 4 — Procure a Defensoria Pública do DF**
 O atendimento é gratuito para quem não pode pagar advogado.
-Telefone: **(61) 3318-2000**
+Telefone: **129** ou **(61) 3465-8200**
 
 **Passo 5 — Ação judicial**
 O defensor vai entrar com uma ação pedindo que o Estado forneca o medicamento, podendo pedir liminar (ordem urgente) para fornecimento imediato.
@@ -4607,7 +4609,7 @@ O defensor vai entrar com uma ação pedindo que o Estado forneca o medicamento,
 | Farmacia de Alto Custo (agendamento) | **160, opção 3** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 
 ---
 
@@ -4754,7 +4756,7 @@ O CVV e formado por voluntários treinados que estão prontos para ouvir você, 
 | SAMU (emergência) | **192** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 
 ---
 
@@ -4853,7 +4855,7 @@ Para quando o direito a saúde e negado e você precisa de ajuda jurídica gratu
 
 | Informação | Detalhe |
 |------------|---------|
-| Telefone | **(61) 3318-2000** |
+| Telefone | **129** ou **(61) 3465-8200** |
 | Site | www.defensoria.df.gov.br |
 | Quando procurar | Negativa de atendimento, demora excessiva, necessidade de entrar na Justiça |
 | Custo | Gratuito para quem não pode pagar advogado |
@@ -4903,7 +4905,7 @@ Para problemas com planos de saúde em nível nacional.
 |----------|---------------|
 | Problema em hospital ou UBS do SUS no DF | Ouvidoria SES-DF (162) ou Disque 136 |
 | Problema no SUS em qualquer estado | Disque 136 |
-| Precisa entrar na Justiça por direito a saúde | Defensoria Pública (61) 3318-2000 |
+| Precisa entrar na Justiça por direito a saúde | Defensoria Pública 129 ou (61) 3465-8200 |
 | Irregularidade grave no SUS | Ministério Público (61) 3343-6000 |
 | Problema com plano de saúde | PROCON (151) ou ANS (0800 701 9656) |
 | Denúncia contra médico | CRM-DF (61) 3445-5800 |
@@ -4916,7 +4918,7 @@ Para problemas com planos de saúde em nível nacional.
 |---------|----------|
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **(61) 3318-2000** |
+| Defensoria Pública do DF | **129** ou **(61) 3465-8200** |
 | Ministério Público do DF | **(61) 3343-6000** |
 | PROCON-DF | **151** |
 | CRM-DF | **(61) 3445-5800** |
@@ -6085,7 +6087,7 @@ Se você está com um problema de consumo e não sabe o que fazer, siga estes pa
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Neoenergia/CEB (energia) | 116 |
 | Caesb (água) | 115 |
 | ANEEL (energia) | 167 |
@@ -6232,7 +6234,7 @@ A lei proíbe empresas de agirem de forma desleal com o consumidor. Veja as prá
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Juizados Especiais (TJDFT) | www.tjdft.jus.br |
 
 ---
@@ -6312,7 +6314,7 @@ O mínimo existencial inclui gastos com:
 | Órgão | Como Procurar | O Que Fazem |
 |-------|---------------|-------------|
 | **PROCON-DF** | Telefone 151 (24 horas) | Orientação, mediacao e encaminhamento para renegociacao |
-| **Defensoria Pública do DF** | (61) 2196-4300 | Assistência jurídica gratuita para quem está superendividado |
+| **Defensoria Pública do DF** | 129 ou (61) 3465-8200 | Assistência jurídica gratuita para quem está superendividado |
 | **TJDFT -- CEJUSC** | www.tjdft.jus.br | Centros de mediacao e conciliacao para resolver conflitos |
 | **Consumidor.gov.br** | www.consumidor.gov.br | Plataforma online para renegociar dívidas diretamente com as empresas |
 
@@ -6336,7 +6338,7 @@ O mínimo existencial inclui gastos com:
 | Serviço | Telefone / Canal |
 |---------|-----------------|
 | PROCON-DF | 151 (24 horas) |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Consumidor.gov.br | www.consumidor.gov.br |
 | TJDFT -- CEJUSC | www.tjdft.jus.br |
 
@@ -6478,7 +6480,7 @@ Leve tudo que puder para comprovar o problema:
 | PROCON-DF | 151 (24 horas) |
 | Site PROCON-DF | www.procon.df.gov.br |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Juizados Especiais (TJDFT) | www.tjdft.jus.br |
 
 ---
@@ -6558,7 +6560,7 @@ Se você tem dívida antiga de água ou luz, saiba que:
 2. Peça o parcelamento da dívida -- explique sua situação financeira
 3. Se não conseguir acordo, procure o PROCON-DF (151)
 4. Você também pode reclamar na agência reguladora (ANEEL para energia, ADASA para água)
-5. Se nada funcionar, procure a Defensoria Pública do DF -- (61) 2196-4300
+5. Se nada funcionar, procure a Defensoria Pública do DF -- 129 ou (61) 3465-8200
 
 ---
 
@@ -6601,7 +6603,7 @@ Se você e de família de baixa renda e esta inscrito no Cadastro Único (CadÚn
 | **ADASA** (reguladora de água no DF) | **(61) 3961-4600** | Reclamações sobre serviço de água no DF |
 | **ANATEL** (reguladora de telefonia) | **1331** | Reclamações sobre telefone e internet |
 | **PROCON-DF** | **151** | Reclamações gerais de consumo (24 horas) |
-| **Defensoria Pública do DF** | **(61) 2196-4300** | Assistência jurídica gratuita |
+| **Defensoria Pública do DF** | **129** ou **(61) 3465-8200** | Assistência jurídica gratuita |
 
 ---
 
@@ -6642,7 +6644,7 @@ Se você foi vítima de um crime e não sabe o que fazer:
 1. **Se estiver em perigo imediato, ligue 190** (Polícia Militar)
 2. **Registre um Boletim de Ocorrência (BO)** -- pode ser presencial em qualquer delegacia ou online pela Delegacia Eletrônica da PCDF
 3. **Guarde todas as provas** -- fotos, prints de conversa, comprovantes, nomes de testemunhas
-4. **Procure a Defensoria Pública** se precisar de orientação jurídica gratuita -- (61) 2196-4300
+4. **Procure a Defensoria Pública** se precisar de orientação jurídica gratuita -- 129 ou (61) 3465-8200
 
 > **Importante:** Registrar o BO é fundamental, mesmo que você ache que "não vai dar em nada". O BO é o primeiro passo para que a polícia investigue e para que você possa buscar seus direitos na Justiça.
 
@@ -6657,7 +6659,7 @@ Se você foi vítima de um crime e não sabe o que fazer:
 | Bombeiros | 193 |
 | Disque-Denúncia (PCDF) | 197 |
 | Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Central da Mulher | 180 |
 `,
@@ -6769,7 +6771,7 @@ Para facilitar o registro é a investigacao, leve o que puder:
 4. O Ministério Público decide se oferece denúncia (processo criminal)
 5. Se for crime de ação condicionada, você será chamado para confirmar que quer processar
 
-> **Dica:** Se você não tiver advogado, a **Defensoria Pública** pode acompanhar todo o processo gratuitamente. Ligue para (61) 2196-4300.
+> **Dica:** Se você não tiver advogado, a **Defensoria Pública** pode acompanhar todo o processo gratuitamente. Ligue para 129 ou (61) 3465-8200.
 
 ---
 
@@ -6780,7 +6782,7 @@ Para facilitar o registro é a investigacao, leve o que puder:
 | Polícia Militar (emergência) | 190 |
 | Disque-Denúncia (PCDF) | 197 |
 | Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Central da Mulher | 180 |
 | Disque Direitos Humanos | 100 |
 
@@ -6871,7 +6873,7 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 3. Registre BO na delegacia (para violência doméstica, procure a DEAM)
 4. Tire fotos das lesões
 5. Anote nomes de testemunhas
-6. Procure a Defensoria Pública para orientação -- (61) 2196-4300
+6. Procure a Defensoria Pública para orientação -- 129 ou (61) 3465-8200
 
 ---
 
@@ -6959,7 +6961,7 @@ Compartilhar fotos ou vídeos de nudez ou sexo de alguém sem autorizacao (a cha
 2. Tente identificar o agressor (características físicas, roupas)
 3. **Registre BO** presencialmente na delegacia
 4. Se forem imagens intimas vazadas, **notifique a rede social ou site** para remoção imediata (a lei obriga a plataforma a retirar)
-5. Procure a Defensoria Pública para orientação -- (61) 2196-4300
+5. Procure a Defensoria Pública para orientação -- 129 ou (61) 3465-8200
 
 ---
 
@@ -6997,7 +6999,7 @@ O Marco Civil da Internet (Lei 12.965/2014) garante:
 | Disque-Denúncia (PCDF) | 197 |
 | Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
 | Delegacia da Mulher (DEAM) | 180 ou 190 |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 
 ---
@@ -7038,7 +7040,7 @@ Todo preso tem direito a **assistência jurídica gratuita**, mesmo que não ten
 
 | Canal | Contato |
 |-------|---------|
-| Central de Relacionamento | (61) 2196-4300 |
+| Central de Relacionamento | 129 ou (61) 3465-8200 |
 | WhatsApp Criminal | (61) 98349-2485 |
 | WhatsApp Criminal (2) | (61) 98297-0064 |
 
@@ -7096,7 +7098,7 @@ O preso tem direito de receber visitas. Isso está na lei e não pode ser negado
 
 A visita íntima (entre o preso e seu cônjuge ou companheiro) **também é um direito reconhecido**. As regras variam conforme a unidade prisional.
 
-> **Se a visita for negada sem justificativa:** Procure a Defensoria Pública para garantir esse direito. O telefone e (61) 2196-4300.
+> **Se a visita for negada sem justificativa:** Procure a Defensoria Pública para garantir esse direito. O telefone e 129 ou (61) 3465-8200.
 
 ---
 
@@ -7178,7 +7180,7 @@ A legítima defesa acontece quando alguém, usando os meios necessários de form
 3. **Não fuja** do local -- fugir pode ser interpretado como culpa
 4. **Registre BO** dizendo que agiu em legítima defesa
 5. **Identifique testemunhas** que possam confirmar o que aconteceu
-6. **Procure a Defensoria Pública** o mais rápido possível -- (61) 2196-4300
+6. **Procure a Defensoria Pública** o mais rápido possível -- 129 ou (61) 3465-8200
 
 ---
 
@@ -7186,7 +7188,7 @@ A legítima defesa acontece quando alguém, usando os meios necessários de form
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | WhatsApp Criminal (Defensoria) | (61) 98349-2485 / (61) 98297-0064 |
 | INSS (auxílio-reclusão) | 135 |
 | Meu INSS (site) | meu.inss.gov.br |
@@ -7230,7 +7232,7 @@ Bem-vindo à seção de **Acesso à Justiça** do Manual Vicentino. Aqui você e
 
 Se você precisa de ajuda jurídica e não tem dinheiro para advogado:
 
-1. **Ligue para a Defensoria Pública do DF** -- (61) 2196-4300. Eles vao orientar você sobre o que fazer.
+1. **Ligue para a Defensoria Pública do DF** -- 129 ou (61) 3465-8200. Eles vao orientar você sobre o que fazer.
 2. **Para problemas simples** (até 20 salários mínimos), vá direto ao **Juizado Especial** -- você não precisa de advogado.
 3. **Se não conseguir atendimento na Defensoria**, procure os **núcleos de prática jurídica das universidades** -- eles também atendem de graça.
 
@@ -7242,7 +7244,7 @@ Se você precisa de ajuda jurídica e não tem dinheiro para advogado:
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | WhatsApp Cível (Defensoria) | (61) 98272-6829 |
 | WhatsApp Criminal (Defensoria) | (61) 98349-2485 |
 | Agendamento online (DF) | agenda.df.gov.br |
@@ -7273,7 +7275,7 @@ O primeiro passo e entrar em contato com a Central de Relacionamento:
 
 | Canal | Contato |
 |-------|---------|
-| **Telefone** | (61) 2196-4300 |
+| **Telefone** | 129 ou (61) 3465-8200 |
 | **Horário** | 9h as 17h, dias úteis |
 | **WhatsApp Cível** | (61) 98272-6829 |
 | **WhatsApp Criminal** | (61) 98349-2485 e (61) 98297-0064 |
@@ -7287,13 +7289,13 @@ A Defensoria tem núcleos espalhados pelo Distrito Federal para atender a popula
 
 | Núcleo | Endereço | Contato |
 |--------|----------|---------|
-| **Brasília** | Fórum de Brasília, Praça Municipal, Lote 1 | (61) 2196-4300 |
+| **Brasília** | Fórum de Brasília, Praça Municipal, Lote 1 | 129 ou (61) 3465-8200 |
 | **Taguatinga** | CNB 03, Lote 07, Setor Comercial Norte | (61) 2196-4586 / WhatsApp: (61) 98244-5928 |
 | **Ceilândia** | Fórum de Ceilândia, QNM 11, Area Especial n. 01 | WhatsApp: (61) 98349-2485 |
 | **Samambaia** | Fórum Des. Raimundo Macedo, Centro Urbano, Q. 302, Conj. 01, Lt. 01, Samambaia Sul | WhatsApp Família: (61) 99458-3470 / WhatsApp Cível: (61) 98349-4258 |
-| **Gama** | Fórum do Gama | Através da CRC: (61) 2196-4300 |
-| **Paranoá / Itapoã** | Fórum do Paranoá | Através da CRC: (61) 2196-4300 |
-| **Recanto das Emas** | Fórum do Recanto das Emas | Através da CRC: (61) 2196-4300 |
+| **Gama** | Fórum do Gama | Através da CRC: 129 ou (61) 3465-8200 |
+| **Paranoá / Itapoã** | Fórum do Paranoá | Através da CRC: 129 ou (61) 3465-8200 |
+| **Recanto das Emas** | Fórum do Recanto das Emas | Através da CRC: 129 ou (61) 3465-8200 |
 
 ### Defensoria nas Unidades Na Hora
 
@@ -7309,7 +7311,7 @@ Para questões que envolvem órgãos federais (INSS, justiça federal, União), 
 
 ### Passo a Passo
 
-1. **Ligue para a Central de Relacionamento:** (61) 2196-4300 (dias úteis, 9h as 17h)
+1. **Ligue para a Central de Relacionamento:** 129 ou (61) 3465-8200 (dias úteis, 9h as 17h)
 2. **Ou acesse o agendamento online:** https://agenda.df.gov.br
 3. **Ou envie mensagem por WhatsApp** para o núcleo da sua região (veja tabela acima)
 4. Informe qual é o seu problema jurídico
@@ -7372,7 +7374,7 @@ A Defensoria Pública atua em praticamente todas as areas do Direito:
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Central da Defensoria DF | (61) 2196-4300 |
+| Central da Defensoria DF | 129 ou (61) 3465-8200 |
 | WhatsApp Cível | (61) 98272-6829 |
 | WhatsApp Criminal | (61) 98349-2485 / (61) 98297-0064 |
 | WhatsApp Família (Samambaia) | (61) 99458-3470 |
@@ -7503,7 +7505,7 @@ Com justiça gratuita, você não paga custas nem honorarios do advogado da outr
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | WhatsApp Cível (Defensoria) | (61) 98272-6829 |
 | TJDFT (Juizados Especiais) | www.tjdft.jus.br |
 | Agendamento DF | agenda.df.gov.br |
@@ -7656,7 +7658,7 @@ Não. Nos Juizados Especiais cíveis, só pessoas físicas, microempresas e empr
 |---------|-----------------|
 | TJDFT (informações) | www.tjdft.jus.br |
 | Juizados Especiais | www.tjdft.jus.br/serviços/distribuição-e-atendimento |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 
 ---
 
@@ -7767,7 +7769,7 @@ Os núcleos de prática jurídica são serviços das faculdades de Direito onde 
 - Se aceitar, os estudantes é o professor vao cuidar de todo o processo judicial
 - Você será informado sobre o andamento do caso
 
-> **Dica importante:** Os núcleos de prática jurídica costumam ter **vagas limitadas** e o atendimento pode ter lista de espera. Se não conseguir vaga, procure a Defensoria Pública do DF -- (61) 2196-4300.
+> **Dica importante:** Os núcleos de prática jurídica costumam ter **vagas limitadas** e o atendimento pode ter lista de espera. Se não conseguir vaga, procure a Defensoria Pública do DF -- 129 ou (61) 3465-8200.
 
 ---
 
@@ -7788,7 +7790,7 @@ Os núcleos de prática jurídica são serviços das faculdades de Direito onde 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
 | UnB -- Faculdade de Direito | http://direito.unb.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | TJDFT (Juizados Especiais) | www.tjdft.jus.br |
 
 ---
@@ -7838,7 +7840,7 @@ Conhecer esses direitos ajuda você a:
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Central do GDF | 156 |
 | CODHAB (moradia) | (61) 3214-1830 |
@@ -7870,7 +7872,7 @@ O Artigo 5º é considerado o coracao da Constituição. Ele garante que **todos
 | **Certidão de nascimento e óbito gratuitas** | Para quem é reconhecidamente pobre, o registro civil é de graça |
 | **Habeas corpus gratuito** | Se alguém for preso ilegalmente, pode pedir habeas corpus sem pagar nada |
 
-> **Na prática:** Se você sofreu discriminação, violência, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituição esta do seu lado. Procure a Defensoria Pública -- (61) 2196-4300.
+> **Na prática:** Se você sofreu discriminação, violência, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituição esta do seu lado. Procure a Defensoria Pública -- 129 ou (61) 3465-8200.
 
 ---
 
@@ -8007,7 +8009,7 @@ Qualquer pessoa que saiba de maus-tratos, abandono, violência ou exploracao de 
 
 | Serviço | Telefone |
 |---------|----------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Central da Mulher | 180 |
 | INSS (benefícios) | 135 |
@@ -8169,7 +8171,7 @@ Acompanhe o site do GDF, as redes sociais da sua Administração Regional e os m
 | Central do GDF | 156 |
 | CODHAB (moradia) | (61) 3214-1830 |
 | CODHAB (site) | www.codhab.df.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Ouvidoria do GDF | www.ouvidoria.df.gov.br |
 

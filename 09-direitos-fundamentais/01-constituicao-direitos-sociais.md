@@ -21,7 +21,7 @@ O Artigo 5º é considerado o coração da Constituição. Ele garante que **tod
 | **Certidão de nascimento e óbito gratuitas** | Para quem e reconhecidamente pobre, o registro civil e de graça |
 | **Habeas corpus gratuito** | Se alguém for preso ilegalmente, pode pedir habeas corpus sem pagar nada |
 
-> **Na prática:** Se você sofreu discriminação, violência, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituição esta do seu lado. Procure a Defensoria Pública — (61) 2196-4300.
+> **Na prática:** Se você sofreu discriminação, violência, abuso de autoridade ou teve qualquer direito desrespeitado, a Constituição esta do seu lado. Procure a Defensoria Pública — 129 ou (61) 3465-8200.
 
 ---
 
@@ -158,7 +158,7 @@ Qualquer pessoa que saiba de maus-tratos, abandono, violência ou exploração d
 
 | Serviço | Telefone |
 |---------|----------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Central da Mulher | 180 |
 | INSS (benefícios) | 135 |

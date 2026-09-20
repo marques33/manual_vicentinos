@@ -39,7 +39,7 @@ Se você está em situação difícil e não sabe por onde começar, siga estes 
 | Neoenergia Brasília (Tarifa Social de Energia) | 116 |
 | CAESB (Tarifa Social de Água) | 156 (opcao 1) |
 | BRB Mobilidade (Passe Livre) | (61) 3120-9500 |
-| Defensoria Pública do DF | 129 ou (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 
 ---
 

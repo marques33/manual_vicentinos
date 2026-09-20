@@ -63,7 +63,7 @@ Este é o caminho mais comum para quem não tem condições de pagar um advogado
    - Informações sobre quem vai pagar: nome completo, endereço, local de trabalho e renda estimada
 
 2. **Va até a Defensoria Pública do DF:**
-   - Telefone: **(61) 2196-4300**
+   - Telefone: **129** ou **(61) 3465-8200**
    - Horário da central: 9h as 17h (dias úteis)
    - Atendimento presencial: 13h as 18h (dias úteis)
    - Agendamento online: https://agenda.df.gov.br/organização.html?organização=37885304
@@ -298,7 +298,7 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 ### Se você precisa de pensão para seu filho:
 
 1. Reúna: RG, CPF, certidão de nascimento do filho, comprovante de residência e renda.
-2. Ligue para a Defensoria Pública: **(61) 2196-4300**.
+2. Ligue para a Defensoria Pública: **129** ou **(61) 3465-8200**.
 3. A Defensoria entra com a ação é o juiz fixa pensão provisória rapidamente.
 
 ### Se o pai/mãe não esta pagando a pensão:
@@ -337,7 +337,7 @@ Exoneração é o pedido judicial para **encerrar** a obrigação de pagar pens�
 
 | Serviço | Telefone |
 |---------|----------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | TJDFT — Informações gerais | (61) 3103-7070 |
 | Disque Direitos Humanos | 100 (gratuito) |
 | Ministério Público do DF | (61) 3343-9500 |

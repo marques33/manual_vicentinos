@@ -19,7 +19,7 @@ Bem-vindo a seção de **Acesso à Justiça** do Manual Vicentino. Aqui você en
 
 Se você precisa de ajuda jurídica e não tem dinheiro para advogado:
 
-1. **Ligue para a Defensoria Pública do DF** — **129** ou **(61) 2196-4300**. Eles vao orientar você sobre o que fazer.
+1. **Ligue para a Defensoria Pública do DF** — **129** ou **(61) 3465-8200**. Eles vao orientar você sobre o que fazer.
 2. **Para problemas simples** (até 20 salários mínimos), va direto ao **Juizado Especial** — você não precisa de advogado.
 3. **Se não conseguir atendimento na Defensoria**, procure os **núcleos de prática jurídica das universidades** — eles também atendem de graça.
 
@@ -31,7 +31,7 @@ Se você precisa de ajuda jurídica e não tem dinheiro para advogado:
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Pública do DF | 129 ou (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | WhatsApp Cível (Defensoria) | (61) 98272-6829 |
 | WhatsApp Criminal (Defensoria) | (61) 98349-2485 |
 | Agendamento online (DF) | agenda.df.gov.br |

@@ -118,7 +118,7 @@ Setor de Multiplas Atividades Sul (SMAS), Trecho 3, Lotes 4/6, Bloco 5 — Terre
 Brasília/DF
 
 **Contato:**
-- Telefone: **(61) 2196-4300** (Central de Relacionamento)
+- Telefone: **129** ou **(61) 3465-8200** (Central de Relacionamento)
 - E-mail: najfamilia@defensoria.df.gov.br
 - Horário da central: **9h as 17h** (dias úteis)
 - Atendimento presencial: **13h as 18h** (dias úteis)
@@ -180,7 +180,7 @@ Leve os seguintes documentos:
 
 ### Se você precisa de ajuda jurídica gratuita:
 
-1. Ligue para a **Defensoria Pública**: **(61) 2196-4300**.
+1. Ligue para a **Defensoria Pública**: **129** ou **(61) 3465-8200**.
 2. Agende atendimento online ou va presencialmente.
 3. Leve todos os documentos listados acima.
 

@@ -19,7 +19,7 @@ Todo preso tem direito a **assistência jurídica gratuita**, mesmo que não ten
 
 | Canal | Contato |
 |-------|---------|
-| Central de Relacionamento | (61) 2196-4300 |
+| Central de Relacionamento | 129 ou (61) 3465-8200 |
 | WhatsApp Criminal | (61) 98349-2485 |
 | WhatsApp Criminal (2) | (61) 98297-0064 |
 
@@ -77,7 +77,7 @@ O preso tem direito de receber visitas. Isso está na lei e não pode ser negado
 
 A visita intima (entre o preso e seu cônjuge ou companheiro) **também é um direito reconhecido**. As regras variam conforme a unidade prisional.
 
-> **Se a visita for negada sem justificativa:** Procure a Defensoria Pública para garantir esse direito. O telefone e (61) 2196-4300.
+> **Se a visita for negada sem justificativa:** Procure a Defensoria Pública para garantir esse direito. O telefone e 129 ou (61) 3465-8200.
 
 ---
 
@@ -159,7 +159,7 @@ A legítima defesa acontece quando alguém, usando os meios necessários de form
 3. **Não fuja** do local — fugir pode ser interpretado como culpa
 4. **Registre BO** dizendo que agiu em legítima defesa
 5. **Identifique testemunhas** que possam confirmar o que aconteceu
-6. **Procure a Defensoria Pública** o mais rápido possível — (61) 2196-4300
+6. **Procure a Defensoria Pública** o mais rápido possível — 129 ou (61) 3465-8200
 
 ---
 
@@ -167,7 +167,7 @@ A legítima defesa acontece quando alguém, usando os meios necessários de form
 
 | Serviço | Telefone / Canal |
 |---------|-----------------|
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | WhatsApp Criminal (Defensoria) | (61) 98349-2485 / (61) 98297-0064 |
 | INSS (auxílio-reclusão) | 135 |
 | Meu INSS (site) | meu.inss.gov.br |

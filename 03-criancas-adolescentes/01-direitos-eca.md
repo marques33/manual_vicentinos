@@ -32,7 +32,7 @@ Toda criança e adolescente tem direito a:
 Se uma criança ou adolescente for impedida de receber atendimento de saúde no SUS:
 
 1. Procure o **Conselho Tutelar** da sua região.
-2. Se não resolver, procure a **Defensoria Pública do DF** — telefone (61) 2196-4300.
+2. Se não resolver, procure a **Defensoria Pública do DF** — telefone 129 ou (61) 3465-8200.
 3. A Defensoria pode entrar com ação judicial para garantir o atendimento.
 
 ---
@@ -155,9 +155,9 @@ Quando os direitos de uma criança ou adolescente estão ameacados ou sendo viol
 |----------|---------------|---------|
 | Maus-tratos, negligência, violência | Conselho Tutelar | Veja endereços na seção 06 |
 | Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
-| Falta de vaga em escola/creche | Conselho Tutelar ou Defensoria Pública | (61) 2196-4300 |
+| Falta de vaga em escola/creche | Conselho Tutelar ou Defensoria Pública | 129 ou (61) 3465-8200 |
 | Trabalho infantil | Conselho Tutelar ou MPT | Disque 100 |
-| Orientação jurídica gratuita | Defensoria Pública do DF | (61) 2196-4300 |
+| Orientação jurídica gratuita | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Crimes contra crianças | Polícia Civil | 197 |
 
 ---

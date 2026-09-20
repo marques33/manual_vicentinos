@@ -144,7 +144,7 @@ NADA. Pelo SUS, o procedimento e totalmente gratuito.
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
 | Central de Regulacao SES-DF | **160** |
-| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Defensoria Pública do DF | **129 ou (61) 3465-8200** |
 
 ---
 

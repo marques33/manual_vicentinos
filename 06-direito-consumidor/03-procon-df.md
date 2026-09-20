@@ -123,7 +123,7 @@ Leve tudo que puder para comprovar o problema:
 | PROCON-DF | 151 (24 horas) |
 | Site PROCON-DF | www.procon.df.gov.br |
 | Consumidor.gov.br | www.consumidor.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Juizados Especiais (TJDFT) | www.tjdft.jus.br |
 
 ---

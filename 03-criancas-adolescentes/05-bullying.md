@@ -90,7 +90,7 @@ Este é o passo mais importante. Guarde tudo:
 **5. Procure a Defensoria Pública**
 
 - A Defensoria pode orientar sobre **ações cíveis de reparação** (indenização por danos morais).
-- Telefone: **(61) 2196-4300**.
+- Telefone: **129** ou **(61) 3465-8200**.
 
 **6. Ligue para o Disque 100**
 
@@ -117,7 +117,7 @@ Este é o passo mais importante. Guarde tudo:
 | Registrar ocorrência policial | Delegacia mais próxima | 197 (Polícia Civil) |
 | Cyberbullying | Delegacia de Crimes Ciberneticos (DRCC) | Procure a delegacia especializada |
 | Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
-| Orientação jurídica gratuita | Defensoria Pública do DF | (61) 2196-4300 |
+| Orientação jurídica gratuita | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Apoio psicológico | CREAS da região | Procure o CREAS mais próximo |
 
 ---

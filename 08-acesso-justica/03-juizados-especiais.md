@@ -134,7 +134,7 @@ Não. Nos Juizados Especiais cíveis, só pessoas físicas, microempresas e empr
 |---------|-----------------|
 | TJDFT (informações) | www.tjdft.jus.br |
 | Juizados Especiais | www.tjdft.jus.br/serviços/distribuição-e-atendimento |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 
 ---
 

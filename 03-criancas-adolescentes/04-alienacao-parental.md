@@ -58,7 +58,7 @@ Quando o juiz identifica que está havendo alienação parental, ele pode tomar 
 
 2. **Procure a Justiça:**
    - Va a **Vara de Família** para pedir medidas judiciais.
-   - A **Defensoria Pública** pode representar você gratuitamente — telefone (61) 2196-4300.
+   - A **Defensoria Pública** pode representar você gratuitamente — telefone 129 ou (61) 3465-8200.
 
 3. **Acione o Conselho Tutelar:**
    - O Conselho Tutelar pode intervir para proteger a criança.
@@ -87,7 +87,7 @@ A alienação parental causa danos serios a saúde emocional da criança:
 
 | Necessidade | Onde procurar | Contato |
 |-------------|---------------|---------|
-| Ação judicial contra alienação parental | Defensoria Pública do DF | (61) 2196-4300 |
+| Ação judicial contra alienação parental | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Proteção imediata da criança | Conselho Tutelar da região | Veja endereços na seção 06 |
 | Denúncia anônima | Disque 100 | Ligue 100 (gratuito) |
 | Acompanhamento psicológico | CREAS da região | Procure o CREAS mais próximo |

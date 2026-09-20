@@ -138,7 +138,7 @@ O documento de negativa é essencial para entrar na Justiça.
 
 **Passo 4 — Procure a Defensoria Pública do DF**
 O atendimento é gratuito para quem não pode pagar advogado.
-Telefone: **129** ou **(61) 2196-4300**
+Telefone: **129** ou **(61) 3465-8200**
 
 **Passo 5 — Ação judicial**
 O defensor vai entrar com uma ação pedindo que o Estado forneca o medicamento, podendo pedir liminar (ordem urgente) para fornecimento imediato.
@@ -154,7 +154,7 @@ O defensor vai entrar com uma ação pedindo que o Estado forneca o medicamento,
 | Farmacia de Alto Custo (agendamento) | **160, opcao 3** |
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Defensoria Pública do DF | **129 ou (61) 3465-8200** |
 
 ---
 

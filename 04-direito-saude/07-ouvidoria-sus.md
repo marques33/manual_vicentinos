@@ -81,7 +81,7 @@ Para quando o direito a saúde e negado e você precisa de ajuda jurídica gratu
 
 | Informação | Detalhe |
 |------------|---------|
-| Telefone | **129** ou **(61) 2196-4300** |
+| Telefone | **129** ou **(61) 3465-8200** |
 | Site | www.defensoria.df.gov.br |
 | Quando procurar | Negativa de atendimento, demora excessiva, necessidade de entrar na Justiça |
 | Custo | Gratuito para quem não pode pagar advogado |
@@ -131,7 +131,7 @@ Para problemas com planos de saúde em nivel nacional.
 |----------|---------------|
 | Problema em hospital ou UBS do SUS no DF | Ouvidoria SES-DF (162) ou Disque 136 |
 | Problema no SUS em qualquer estado | Disque 136 |
-| Precisa entrar na Justiça por direito a saúde | Defensoria Pública 129 ou (61) 2196-4300 |
+| Precisa entrar na Justiça por direito a saúde | Defensoria Pública 129 ou (61) 3465-8200 |
 | Irregularidade grave no SUS | Ministério Público (61) 3343-6000 |
 | Problema com plano de saúde | PROCON (151) ou ANS (0800 701 9656) |
 | Denúncia contra médico | CRM-DF (61) 3445-5800 |
@@ -144,7 +144,7 @@ Para problemas com planos de saúde em nivel nacional.
 |---------|----------|
 | Disque Saúde / Ouvidoria SUS | **136** |
 | Ouvidoria SES-DF | **162** |
-| Defensoria Pública do DF | **129 ou (61) 2196-4300** |
+| Defensoria Pública do DF | **129 ou (61) 3465-8200** |
 | Ministério Público do DF | **(61) 3343-6000** |
 | PROCON-DF | **151** |
 | CRM-DF | **(61) 3445-5800** |

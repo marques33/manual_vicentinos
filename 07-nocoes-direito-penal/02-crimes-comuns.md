@@ -72,7 +72,7 @@ Se o golpe for contra **idoso ou pessoa vulnerável**, a pena aumenta ainda mais
 3. Registre BO na delegacia (para violência doméstica, procure a DEAM)
 4. Tire fotos das lesoes
 5. Anote nomes de testemunhas
-6. Procure a Defensoria Pública para orientação — (61) 2196-4300
+6. Procure a Defensoria Pública para orientação — 129 ou (61) 3465-8200
 
 ---
 
@@ -160,7 +160,7 @@ Compartilhar fotos ou videos de nudez ou sexo de alguém sem autorizacao (a cham
 2. Tente identificar o agressor (características físicas, roupas)
 3. **Registre BO** presencialmente na delegacia
 4. Se forem imagens intimas vazadas, **notifique a rede social ou site** para remocao imediata (a lei obriga a plataforma a retirar)
-5. Procure a Defensoria Pública para orientação — (61) 2196-4300
+5. Procure a Defensoria Pública para orientação — 129 ou (61) 3465-8200
 
 ---
 
@@ -198,7 +198,7 @@ O Marco Civil da Internet (Lei 12.965/2014) garante:
 | Disque-Denúncia (PCDF) | 197 |
 | Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
 | Delegacia da Mulher (DEAM) | 180 ou 190 |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 
 ---

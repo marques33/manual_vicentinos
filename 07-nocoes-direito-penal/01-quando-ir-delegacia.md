@@ -102,7 +102,7 @@ Para facilitar o registro é a investigação, leve o que puder:
 4. O Ministério Público decide se oferece denúncia (processo criminal)
 5. Se for crime de ação condicionada, você será chamado para confirmar que quer processar
 
-> **Dica:** Se você não tiver advogado, a **Defensoria Pública** pode acompanhar todo o processo gratuitamente. Ligue para (61) 2196-4300.
+> **Dica:** Se você não tiver advogado, a **Defensoria Pública** pode acompanhar todo o processo gratuitamente. Ligue para 129 ou (61) 3465-8200.
 
 ---
 
@@ -113,7 +113,7 @@ Para facilitar o registro é a investigação, leve o que puder:
 | Polícia Militar (emergência) | 190 |
 | Disque-Denúncia (PCDF) | 197 |
 | Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Central da Mulher | 180 |
 | Disque Direitos Humanos | 100 |
 

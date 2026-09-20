@@ -43,7 +43,7 @@ Na guarda compartilhada:
 
 - **Entre os pais:** Vara de Família.
 - **Se for outra pessoa (avo, tio, etc.):** Vara da Infância e Juventude.
-- **Quem não pode pagar advogado:** Defensoria Pública do DF — telefone (61) 2196-4300.
+- **Quem não pode pagar advogado:** Defensoria Pública do DF — telefone 129 ou (61) 3465-8200.
 
 ---
 
@@ -132,10 +132,10 @@ Documentos necessários:
 
 | Necessidade | Onde procurar | Contato |
 |-------------|---------------|---------|
-| Pedir guarda (gratuito) | Defensoria Pública do DF | (61) 2196-4300 |
+| Pedir guarda (gratuito) | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Informações sobre adoção | TJDFT — Vara da Infância | (61) 3103-7070 |
 | Cadastro para adoção | Sistema Nacional de Adoção | https://sna.cnj.jus.br |
-| Orientação jurídica | Defensoria Pública do DF | (61) 2196-4300 |
+| Orientação jurídica | Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 
 ---
 

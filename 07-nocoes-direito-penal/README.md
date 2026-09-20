@@ -21,7 +21,7 @@ Se você foi vítima de um crime e não sabe o que fazer:
 1. **Se estiver em perigo imediato, ligue 190** (Polícia Militar)
 2. **Registre um Boletim de Ocorrência (BO)** — pode ser presencial em qualquer delegacia ou online pela Delegacia Eletrônica da PCDF
 3. **Guarde todas as provas** — fotos, prints de conversa, comprovantes, nomes de testemunhas
-4. **Procure a Defensoria Pública** se precisar de orientação jurídica gratuita — (61) 2196-4300
+4. **Procure a Defensoria Pública** se precisar de orientação jurídica gratuita — 129 ou (61) 3465-8200
 
 > **Importante:** Registrar o BO é fundamental, mesmo que você ache que "não vai dar em nada". O BO é o primeiro passo para que a polícia investigue e para que você possa buscar seus direitos na Justiça.
 
@@ -36,6 +36,6 @@ Se você foi vítima de um crime e não sabe o que fazer:
 | Bombeiros | 193 |
 | Disque-Denúncia (PCDF) | 197 |
 | Delegacia Eletrônica PCDF | delegaciaeletronica.pcdf.df.gov.br |
-| Defensoria Pública do DF | (61) 2196-4300 |
+| Defensoria Pública do DF | 129 ou (61) 3465-8200 |
 | Disque Direitos Humanos | 100 |
 | Central da Mulher | 180 |
