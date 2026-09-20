@@ -98,8 +98,14 @@
 }
 
 @media (max-width: 640px) {
-  .vic-nav-toggle { display: inline-flex; }
-  .vic-topo-nav { justify-content: center; }
+  /* Em coluna: o botão fica ACIMA da lista. Como linha, o botão esticava ao
+     lado da lista aberta e virava uma faixa vertical vazia. */
+  .vic-topo-nav {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .vic-nav-toggle { display: inline-flex; justify-content: center; align-self: stretch; }
   .vic-nav {
     display: none;
     flex-direction: column;
