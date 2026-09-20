@@ -391,3 +391,76 @@ do efeito** (o alvo que o programa imprimiu) e não a **confirmação do executo
    X", a prova é a saída dizer X — não o comando ter sido escrito com X. Mesma
    família do erro de 02/08 (projeto Supabase errado) e do teste de RLS que
    reportou "protegido" com chave inválida.
+
+---
+
+## 2026-09-20 · Correção de acento em massa inverteu o sentido de uma frase
+
+**O que aconteceu.** Um script de restauração de acentos trocou `divida` por
+`dívida` em dois arquivos. A frase era a que ensina a calcular a renda por
+pessoa: *"some toda a renda da família e **divida** pelo número de pessoas"*.
+Virou *"e **dívida** pelo número de pessoas"* — o verbo dividir virou o
+substantivo débito, exatamente na instrução que alguém precisa seguir para
+saber se tem direito ao Bolsa Família e ao BPC.
+
+**Causa raiz.** O script tratou acentuação como transformação de texto, quando
+em português ela é **distintiva**: `divida`/`dívida`, `e`/`é`, `esta`/`está`,
+`secretaria`/`secretária`, `publica`/`pública`, `medica`/`médica` são pares em
+que o acento muda a classe da palavra. Uma tabela "sem acento → com acento"
+não tem como decidir entre eles sem olhar a frase.
+
+**Por que passou.** O diff tinha 1.400 linhas quase todas legítimas. Duas
+linhas erradas no meio disso não saltam aos olhos de ninguém — e o resultado
+continua sendo português bem formado, então nenhuma revisão ortográfica
+acusaria.
+
+**Regras preventivas.**
+1. **Separar o que é tipografia do que é conteúdo antes de revisar.** Normalizar
+   os dois lados do diff (tirar acento, unificar travessão e espaço) e comparar:
+   o que fica igual é tipografia e pode passar em bloco; o que fica diferente é
+   conteúdo e exige leitura. Foi isso que reduziu 1.400 linhas a 25 para ler.
+2. **Manter uma lista de pares mínimos perigosos** e varrer por ela depois de
+   qualquer passe de acentuação, olhando o contexto de cada ocorrência.
+3. **Só aplicar automaticamente o par cuja forma sem acento não é palavra
+   válida** (`nao`, `populacao`, `voce`, `numero`). Onde as duas formas existem,
+   a decisão é de quem lê a frase — o script apenas lista.
+4. **Citação de lei se confere na fonte, não no acento.** "assistência jurídica
+   integral **é** gratuita" só foi pego porque o texto do Art. 5º, LXXIV foi
+   buscado no Planalto: o oficial é "integral **e** gratuita", e o verbo é
+   "prestará", não "prestara".
+5. Substituição sensível à caixa deixa `Núcleo`, `População` e `Cobranças`
+   para trás — 41 ocorrências neste caso. Casar sem distinguir caixa e reaplicá-la
+   na saída.
+
+---
+
+## 2026-09-20 · `git add '*.md'` levou 40 MB de arquivo de terceiro para o commit
+
+**O que aconteceu.** Para commitar 54 arquivos de conteúdo, rodei
+`git add -- '*.md'`. O glob não distingue arquivo **rastreado e modificado** de
+arquivo **novo e não rastreado**: entraram junto 15 `.md` de `biblioteca/` (um
+vade mecum de terceiro, 40 MB), 3 de `build/` (gerados) e 6 skills. Só percebi
+porque o commit dizia "78 arquivos" onde eu esperava 54.
+
+**Causa raiz.** Pensei no glob como filtro de *quais arquivos me interessam* e
+esqueci que ele também decide *o que passa a ser versionado*. `biblioteca/` e
+`build/` não estão no `.gitignore` — estavam apenas fora do índice, e essa
+distinção é invisível quando se olha só o padrão.
+
+**Por que doeu (ou doeria).** Blob grande no histórico do git é praticamente
+irreversível: some do commit mas continua no pack, e todo mundo que clonar
+baixa. E é conteúdo licenciado de terceiro, que não deveria ir para um
+repositório público.
+
+**Regras preventivas.**
+1. **Para commitar alterações, usar `git add -u`**, que só encena arquivos já
+   rastreados. `git add <glob>` é para adicionar coisa nova, e aí o que entra
+   se escolhe um a um.
+2. **Conferir a contagem antes de commitar.** `git diff --cached --name-only |
+   wc -l` comparado com o número esperado teria pego isso antes do commit, não
+   depois.
+3. **`git diff --cached --name-status | grep '^A'` antes de qualquer commit de
+   manutenção**: num commit que só corrige texto existente, arquivo com status
+   `A` é sinal de erro de escopo.
+4. Diretório grande que não deve ser versionado merece entrada no `.gitignore`
+   — "nunca foi adicionado" não é proteção nenhuma.
