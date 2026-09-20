@@ -144,6 +144,10 @@ a { color: var(--wine-mid); }
 .badge--elegivel { background: rgba(46,107,79,0.14); color: var(--ok); }
 .badge--parcial { background: rgba(180,114,26,0.15); color: var(--alerta); }
 .badge--nao { background: rgba(154,132,112,0.14); color: var(--text-muted); }
+/* "Não dá para estimar" não é "não tem direito": a borda tracejada marca a
+   lacuna de dado, para não ser lida como uma negativa. */
+.badge--indefinido { background: rgba(180,114,26,0.08); color: var(--alerta);
+  border: 1px dashed rgba(180,114,26,0.55); }
 .badge-aviso { font-size: 0.74rem; color: var(--text-muted); font-style: italic; margin-top: 6px; }
 
 .subtabela { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-bottom: 10px; }

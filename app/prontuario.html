@@ -53,8 +53,8 @@
       <form id="form-nova-familia">
         <div class="grade-2">
           <div class="campo">
-            <label for="nf-bairro">Bairro *</label>
-            <input type="text" id="nf-bairro" maxlength="120" required>
+            <label for="nf-bairro">Bairro</label>
+            <input type="text" id="nf-bairro" maxlength="120">
           </div>
           <div class="campo">
             <label for="nf-codigo">Código (opcional)</label>
@@ -155,7 +155,7 @@
       botao.disabled = true;
 
       const registro = {
-        endereco_bairro: document.getElementById('nf-bairro').value.trim(),
+        endereco_bairro: document.getElementById('nf-bairro').value.trim() || null,
         codigo: document.getElementById('nf-codigo').value.trim() || null,
         endereco_logradouro: document.getElementById('nf-logradouro').value.trim() || null,
         endereco_numero: document.getElementById('nf-numero').value.trim() || null,

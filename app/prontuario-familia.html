@@ -58,8 +58,8 @@
         <form id="form-familia">
           <div class="grade-2">
             <div class="campo">
-              <label for="f-bairro">Bairro *</label>
-              <input type="text" id="f-bairro" maxlength="120" required>
+              <label for="f-bairro">Bairro</label>
+              <input type="text" id="f-bairro" maxlength="120">
             </div>
             <div class="campo">
               <label for="f-codigo">Código</label>
@@ -116,18 +116,22 @@
         <form id="form-nova-pessoa">
           <div class="grade-2">
             <div class="campo">
-              <label for="np-nome">Nome completo *</label>
-              <input type="text" id="np-nome" minlength="3" maxlength="150" required>
+              <label for="np-nome">Nome completo</label>
+              <input type="text" id="np-nome" maxlength="150"
+                     aria-describedby="np-nome-dica">
+              <small id="np-nome-dica" class="dica">Se preencher, use ao menos 3 letras.</small>
             </div>
             <div class="campo">
-              <label for="np-nascimento">Data de nascimento *</label>
-              <input type="date" id="np-nascimento" required>
+              <label for="np-nascimento">Data de nascimento</label>
+              <input type="date" id="np-nascimento" aria-describedby="np-nasc-dica">
+              <small id="np-nasc-dica" class="dica">Sem ela não dá para estimar benefícios por idade.</small>
             </div>
           </div>
           <div class="grade-3">
             <div class="campo">
-              <label for="np-parentesco">Parentesco na família *</label>
-              <select id="np-parentesco" required>
+              <label for="np-parentesco">Parentesco na família</label>
+              <select id="np-parentesco">
+                <option value="">Não informado</option>
                 <option value="responsavel">Responsável</option>
                 <option value="conjuge">Cônjuge</option>
                 <option value="filho">Filho</option>
@@ -264,6 +268,42 @@
     });
 
     /**
+     * Campo de texto vazio é ausência de informação, não string vazia.
+     *
+     * Importa porque as colunas do prontuário aceitam NULL mas mantêm os CHECK
+     * de formato: gravar "" em `nome_completo` violaria o mínimo de 3
+     * caracteres, enquanto NULL passa. Vazio e "não informado" têm que chegar
+     * ao banco como a mesma coisa.
+     */
+    function ouNulo(valor) {
+      const t = String(valor ?? '').trim();
+      return t === '' ? null : t;
+    }
+
+    /**
+     * Nome é opcional, mas o banco exige de 3 a 150 caracteres quando vem
+     * preenchido. Validado aqui, e não por `minlength`, para a pessoa ler uma
+     * frase em português em vez da bolha nativa do navegador — e pelo mesmo
+     * motivo do CPF: erro de formulário que não se explica vira bug report.
+     */
+    function nomeParaBanco(bruto) {
+      const t = String(bruto ?? '').trim();
+      if (t === '') return { ok: true, valor: null };
+      if (t.length < 3) {
+        return { ok: false, erro: 'O nome precisa ter ao menos 3 letras. Deixe em branco se ainda não souber.' };
+      }
+      return { ok: true, valor: t };
+    }
+
+    /** Número opcional: vazio vira null, não 0 — 0 é um valor afirmado. */
+    function numeroOuNulo(valor) {
+      const t = String(valor ?? '').trim();
+      if (t === '') return null;
+      const n = Number(t);
+      return Number.isFinite(n) ? n : null;
+    }
+
+    /**
      * Devolve { ok, valor } com os 11 dígitos, ou { ok:false, erro } explicando.
      * Campo vazio é válido: o CPF é opcional no cadastro.
      */
@@ -285,6 +325,11 @@
       const paragrafo = naoEncontrada.querySelector('p');
       if (paragrafo) paragrafo.textContent = texto;
       naoEncontrada.hidden = false;
+    }
+
+    /** Como chamar alguém cujo nome ainda não foi informado. */
+    function nomeDe(p) {
+      return p.nome_completo || '(sem nome informado)';
     }
 
     function calcularIdade(dataNascimentoISO) {
@@ -458,12 +503,20 @@
         return;
       }
 
-      const nome = document.getElementById('np-nome').value.trim();
+      const nomeCampo = nomeParaBanco(document.getElementById('np-nome').value);
+      if (!nomeCampo.ok) {
+        botao.disabled = false;
+        mostrarAviso(aviso, nomeCampo.erro, 'erro');
+        notificarErro(nomeCampo.erro);
+        document.getElementById('np-nome').focus();
+        return;
+      }
+      const nome = nomeCampo.valor;
       const registro = {
         familia_id: familiaId,
         nome_completo: nome,
-        data_nascimento: document.getElementById('np-nascimento').value,
-        parentesco_familiar: document.getElementById('np-parentesco').value,
+        data_nascimento: ouNulo(document.getElementById('np-nascimento').value),
+        parentesco_familiar: ouNulo(document.getElementById('np-parentesco').value),
         sexo: document.getElementById('np-sexo').value,
         cpf: cpf.valor,
         pcd: document.getElementById('np-pcd').checked,
@@ -483,7 +536,7 @@
       // Sucesso: confirma, limpa e PERMANECE na família — quase sempre há mais
       // de um morador para cadastrar. Quem terminou usa "Concluir família".
       mostrarAviso(aviso, 'Pessoa adicionada.', 'ok');
-      notificarOk(`${nome} foi cadastrada nesta família.`);
+      notificarOk((nome || 'Pessoa sem nome') + ' foi cadastrada nesta família.');
       ev.target.reset();
       document.getElementById('np-nome').focus();
       await carregarTudo();
@@ -503,8 +556,8 @@
 
         return '<article class="pessoa" data-pessoa-id="' + p.id + '">' +
           '<div class="pessoa-cabecalho" data-acao="alternar" role="button" tabindex="0" aria-expanded="' + aberta + '">' +
-            '<div><span class="pessoa-nome">' + escapar(p.nome_completo) + '</span> ' +
-              '<span class="pessoa-meta">' + escapar(PARENTESCO_FAMILIAR[p.parentesco_familiar] || p.parentesco_familiar) +
+            '<div><span class="pessoa-nome">' + escapar(nomeDe(p)) + '</span> ' +
+              '<span class="pessoa-meta">' + escapar(PARENTESCO_FAMILIAR[p.parentesco_familiar] || 'parentesco não informado') +
               (idade != null ? ' · ' + idade + ' anos' : '') + (p.pcd ? ' · PCD' : '') + (!p.ativo ? ' · inativa' : '') + '</span></div>' +
             '<i class="fa-solid fa-chevron-' + (aberta ? 'up' : 'down') + '"></i>' +
           '</div>' +
@@ -533,12 +586,13 @@
           '<h4>Dados pessoais</h4>' +
           '<form data-acao="salvar-pessoa" data-pessoa="' + p.id + '">' +
             '<div class="grade-3">' +
-              '<div class="campo"><label>Nome completo</label><input type="text" name="nome_completo" minlength="3" maxlength="150" value="' + escapar(p.nome_completo) + '" required></div>' +
-              '<div class="campo"><label>Data de nascimento</label><input type="date" name="data_nascimento" value="' + escapar(p.data_nascimento || '') + '" required></div>' +
+              '<div class="campo"><label>Nome completo</label><input type="text" name="nome_completo" maxlength="150" value="' + escapar(p.nome_completo || '') + '"></div>' +
+              '<div class="campo"><label>Data de nascimento</label><input type="date" name="data_nascimento" value="' + escapar(p.data_nascimento || '') + '"></div>' +
               '<div class="campo"><label>CPF</label><input type="text" name="cpf" inputmode="numeric" maxlength="14" autocomplete="off" placeholder="000.000.000-00" data-cpf value="' + escapar(p.cpf || '') + '"><small class="dica">Pode digitar com ponto e traço.</small></div>' +
             '</div>' +
             '<div class="grade-3">' +
               '<div class="campo"><label>Parentesco</label><select name="parentesco_familiar">' +
+                '<option value=""' + (p.parentesco_familiar ? '' : ' selected') + '>Não informado</option>' +
                 Object.entries(PARENTESCO_FAMILIAR).map(([v, r]) => '<option value="' + v + '"' + (v === p.parentesco_familiar ? ' selected' : '') + '>' + r + '</option>').join('') +
               '</select></div>' +
               '<div class="campo"><label>Status</label><select name="ativo"><option value="true"' + (p.ativo ? ' selected' : '') + '>Ativa na família</option><option value="false"' + (!p.ativo ? ' selected' : '') + '>Inativa (saiu/faleceu)</option></select></div>' +
@@ -566,7 +620,7 @@
               '<div class="campo"><label>Tipo</label><select name="tipo">' +
                 Object.entries(TIPO_RENDA).map(([v, r]) => '<option value="' + v + '">' + r + '</option>').join('') + '</select></div>' +
               '<div class="campo"><label>Descrição</label><input type="text" name="descricao" maxlength="200"></div>' +
-              '<div class="campo"><label>Valor mensal (R$)</label><input type="number" name="valor_mensal" step="0.01" min="0" required></div>' +
+              '<div class="campo"><label>Valor mensal (R$)</label><input type="number" name="valor_mensal" step="0.01" min="0" placeholder="Se souber"></div>' +
             '</div>' +
             '<button type="submit" class="btn btn-neutro btn-pequeno"><i class="fa-solid fa-plus"></i> Adicionar fonte de renda</button>' +
           '</form>' +
@@ -585,7 +639,7 @@
               '<div class="campo"><label>Tipo</label><select name="tipo">' +
                 Object.entries(TIPO_NECESSIDADE).map(([v, r]) => '<option value="' + v + '">' + r + '</option>').join('') + '</select></div>' +
               '<div class="campo"><label>Urgência</label><select name="urgencia"><option value="baixa">Baixa</option><option value="normal" selected>Normal</option><option value="alta">Alta</option><option value="urgente">Urgente</option></select></div>' +
-              '<div class="campo"><label>Descrição</label><input type="text" name="descricao" maxlength="500" required></div>' +
+              '<div class="campo"><label>Descrição</label><input type="text" name="descricao" maxlength="500"></div>' +
             '</div>' +
             '<button type="submit" class="btn btn-neutro btn-pequeno"><i class="fa-solid fa-plus"></i> Registrar necessidade</button>' +
           '</form>' +
@@ -603,10 +657,10 @@
             '<div class="grade-3">' +
               '<div class="campo"><label>Tipo</label><select name="tipo">' +
                 Object.entries(TIPO_INTERVENCAO).map(([v, r]) => '<option value="' + v + '">' + r + '</option>').join('') + '</select></div>' +
-              '<div class="campo"><label>Data</label><input type="date" name="data_ocorrencia" value="' + new Date().toISOString().slice(0, 10) + '" required></div>' +
+              '<div class="campo"><label>Data</label><input type="date" name="data_ocorrencia" value="' + new Date().toISOString().slice(0, 10) + '"></div>' +
               '<div class="campo"><label>Valor doado (R$, se houver)</label><input type="number" name="valor_doado" step="0.01" min="0"></div>' +
             '</div>' +
-            '<div class="campo"><label>Descrição *</label><input type="text" name="descricao" maxlength="500" required></div>' +
+            '<div class="campo"><label>Descrição</label><input type="text" name="descricao" maxlength="500"></div>' +
             '<button type="submit" class="btn btn-neutro btn-pequeno"><i class="fa-solid fa-plus"></i> Registrar atendimento</button>' +
           '</form>' +
         '</div>' +
@@ -615,7 +669,7 @@
         '<div class="pessoa-secao">' +
           '<h4>Parentesco com pessoas de outras famílias</h4>' +
           (pars.length ? '<table class="subtabela"><thead><tr><th>Pessoa</th><th>Família</th><th>Relação</th><th></th></tr></thead><tbody>' +
-            pars.map(par => '<tr><td>' + escapar(par.outra?.nome_completo || '(pessoa removida)') + '</td>' +
+            pars.map(par => '<tr><td>' + escapar(par.outra ? nomeDe(par.outra) : '(pessoa removida)') + '</td>' +
               '<td>' + escapar(par.outra?.familia?.endereco_bairro || '—') + '</td>' +
               '<td>' + escapar(TIPO_RELACAO[par.tipo_relacao] || par.tipo_relacao) + '</td>' +
               '<td class="col-acao"><button type="button" class="btn btn-erro btn-pequeno" data-acao="remover-parentesco" data-id="' + par.id + '" data-pessoa="' + p.id + '"><i class="fa-regular fa-trash-can"></i></button></td></tr>').join('') +
@@ -637,8 +691,20 @@
 
       const badges = [];
       const bpc = r.bpc_loas || {};
+      // `null` do banco significa "não dá para estimar" e é diferente de
+      // `false`. Os dois são falsos em JavaScript, e tratar um pelo outro faria
+      // a tela afirmar "improvável" para quem apenas está sem data de
+      // nascimento — um vicentino poderia deixar de encaminhar um idoso por
+      // causa disso. Por isso o caso indeterminado é testado ANTES.
+      // Não basta olhar `elegivel_padrao`/`elegivel_faixa_ampliada`: em SQL
+      // `NULL and false` é **false**, não NULL, então um termo falso na
+      // expressão (renda fora da faixa) apaga o "não sei" e devolve um "não".
+      // O sinal confiável é o critério etário isolado, que a função publica
+      // justamente para isto.
+      const indeterminado = bpc.criterio_etario_ou_deficiencia == null;
       if (bpc.elegivel_padrao) badges.push('<span class="badge badge--elegivel"><i class="fa-solid fa-check"></i> BPC/LOAS — provável</span>');
       else if (bpc.elegivel_faixa_ampliada) badges.push('<span class="badge badge--parcial"><i class="fa-solid fa-circle-half-stroke"></i> BPC/LOAS — faixa ampliada</span>');
+      else if (indeterminado) badges.push('<span class="badge badge--indefinido"><i class="fa-solid fa-circle-question"></i> BPC/LOAS — falta a data de nascimento</span>');
       else badges.push('<span class="badge badge--nao">BPC/LOAS — improvável</span>');
 
       const faixaDf = { extrema_pobreza: 'Extrema pobreza', pobreza: 'Pobreza', baixa_renda: 'Baixa renda', acima_do_limite: 'Acima do limite' };
@@ -651,6 +717,9 @@
 
       return '<div class="badges">' + badges.join('') + '</div>' +
         '<p class="badge-aviso">Renda per capita: ' + (r.renda_per_capita_geral != null ? formatarMoeda(r.renda_per_capita_geral) : '—') +
+        (r.idade_conhecida === false
+          ? ' · idade desconhecida, então as regras por idade não foram avaliadas'
+          : '') +
         ' · ' + escapar(r.aviso || 'Estimativa de triagem, não decisão automática.') + '</p>';
     }
 
@@ -714,7 +783,7 @@
         const familiasPorId = new Map((familiasResultado || []).map(x => [x.id, x]));
 
         alvo.innerHTML = fora.map(x => '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);">' +
-          '<span>' + escapar(x.nome_completo) + ' <span class="pessoa-meta">(' + escapar(familiasPorId.get(x.familia_id)?.endereco_bairro || 'família não identificada') + ')</span></span>' +
+          '<span>' + escapar(nomeDe(x)) + ' <span class="pessoa-meta">(' + escapar(familiasPorId.get(x.familia_id)?.endereco_bairro || 'família não identificada') + ')</span></span>' +
           '<button type="button" class="btn btn-ouro btn-pequeno" data-acao="vincular-parentesco" data-pessoa="' + pessoaId + '" data-outra="' + x.id + '"><i class="fa-solid fa-link"></i> Vincular</button>' +
         '</div>').join('');
         return;
@@ -763,28 +832,35 @@
           notificarErro(cpf.erro);
           return;
         }
+        const nomeEdit = nomeParaBanco(dados.get('nome_completo'));
+        if (!nomeEdit.ok) {
+          botao.disabled = false;
+          mostrarAviso(form.querySelector('[data-aviso-pessoa]'), nomeEdit.erro, 'erro');
+          notificarErro(nomeEdit.erro);
+          return;
+        }
         const registro = {
-          nome_completo: dados.get('nome_completo').trim(),
-          data_nascimento: dados.get('data_nascimento'),
+          nome_completo: nomeEdit.valor,
+          data_nascimento: ouNulo(dados.get('data_nascimento')),
           cpf: cpf.valor,
-          parentesco_familiar: dados.get('parentesco_familiar'),
+          parentesco_familiar: ouNulo(dados.get('parentesco_familiar')),
           ativo: dados.get('ativo') === 'true',
           pcd: dados.has('pcd'),
           impedimento_longo_prazo: dados.has('impedimento_longo_prazo'),
           situacao_rua: dados.has('situacao_rua'),
-          observacoes: dados.get('observacoes').trim() || null,
+          observacoes: ouNulo(dados.get('observacoes')),
         };
         ({ error: erro } = await sb.from('pessoas').update(registro).eq('id', pessoaId));
         if (!erro) {
           elegibilidade.delete(pessoaId);
           mostrarAviso(form.querySelector('[data-aviso-pessoa]'), 'Salvo.', 'ok');
-          notificarOk('Dados de ' + registro.nome_completo + ' atualizados.');
+          notificarOk('Dados de ' + (registro.nome_completo || 'pessoa sem nome') + ' atualizados.');
         }
       } else if (acao === 'nova-renda') {
         const registro = {
           pessoa_id: pessoaId, tipo: dados.get('tipo'),
-          descricao: dados.get('descricao').trim() || null,
-          valor_mensal: Number(dados.get('valor_mensal')),
+          descricao: ouNulo(dados.get('descricao')),
+          valor_mensal: numeroOuNulo(dados.get('valor_mensal')),
         };
         ({ error: erro } = await sb.from('fontes_renda').insert(registro));
         if (!erro) elegibilidade.delete(pessoaId);
@@ -792,18 +868,22 @@
         const registro = {
           pessoa_id: pessoaId, familia_id: familiaId,
           tipo: dados.get('tipo'), urgencia: dados.get('urgencia'),
-          descricao: dados.get('descricao').trim(),
+          descricao: ouNulo(dados.get('descricao')),
         };
         ({ error: erro } = await sb.from('necessidades').insert(registro));
       } else if (acao === 'nova-intervencao') {
-        const valorDoado = dados.get('valor_doado');
         const registro = {
           pessoa_id: pessoaId, familia_id: familiaId,
-          tipo: dados.get('tipo'), descricao: dados.get('descricao').trim(),
-          data_ocorrencia: dados.get('data_ocorrencia'),
-          valor_doado: valorDoado ? Number(valorDoado) : null,
+          tipo: dados.get('tipo'),
+          descricao: ouNulo(dados.get('descricao')),
+          valor_doado: numeroOuNulo(dados.get('valor_doado')),
           realizado_por: usuario.id,
         };
+        // `data_ocorrencia` segue NOT NULL, com default `current_date`. Mandar
+        // null explícito violaria a coluna em vez de cair no default, então a
+        // chave é OMITIDA quando o campo está vazio — deixar o banco decidir.
+        const quando = ouNulo(dados.get('data_ocorrencia'));
+        if (quando) registro.data_ocorrencia = quando;
         ({ error: erro } = await sb.from('intervencoes').insert(registro));
       }
 
