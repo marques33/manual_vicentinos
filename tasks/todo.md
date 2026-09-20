@@ -183,3 +183,41 @@ linha com marca de QA.
    uma oscilação de rede desloga o moderador sem explicação.
 6. Pendência anterior, ainda aberta: cadastrar o saldo inicial real da conta BRB
    (`saldo_inicial_financeiro` sem linha).
+
+---
+
+# 20/09/2026 · Prontuário sem campos obrigatórios — concluído
+
+Migration 021 + telas. Verificado com Playwright, 16/16, local e em produção.
+Detalhes no commit `feat(prontuario): nenhum campo de preenchimento obrigatório`.
+
+## Achado novo, do mesmo tipo, NÃO corrigido (§6.1)
+
+**"Renda zero" e "renda não informada" continuam indistinguíveis na estimativa.**
+
+Com uma pessoa recém-cadastrada e nenhuma fonte de renda registrada, a tela
+exibe:
+
+- `Plano DF Social — Extrema pobreza`
+- `Cartão Prato Cheio — provável`
+
+Isso vem de `coalesce(sum(fr.valor_mensal), 0)` na
+`calcular_elegibilidade_pessoa` e na `vw_renda_familiar`: sem nenhuma linha de
+renda, a soma é 0, e 0 per capita cai na faixa de extrema pobreza. Aritmética
+correta, leitura errada — a família não declarou renda nenhuma, apenas ainda
+não teve a renda cadastrada.
+
+É exatamente o problema que acabou de ser corrigido no BPC (ausência de dado
+aparecendo como conclusão), só que na outra tarja. E ficou **mais provável**
+agora: com o cadastro sem campos obrigatórios, pessoa sem nenhuma informação
+passa a ser o caso comum nas primeiras visitas.
+
+**Correção proposta** (não aplicada, muda o que a tela diz para toda família):
+distinguir "sem nenhuma linha em `fontes_renda` na família" de "linhas somando
+zero". No primeiro caso, devolver as faixas como indeterminadas e exibir a
+mesma tarja tracejada, com "falta cadastrar a renda". No segundo, manter a
+estimativa — renda declarada como zero é informação.
+
+Exige decisão: há famílias que de fato não têm renda alguma, e para elas a
+tarja atual está certa. A diferença está em ter sido *perguntado*, o que o
+sistema hoje não registra.
