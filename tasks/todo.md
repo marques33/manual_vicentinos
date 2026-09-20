@@ -274,3 +274,58 @@ estimativa — renda declarada como zero é informação.
 Exige decisão: há famílias que de fato não têm renda alguma, e para elas a
 tarja atual está certa. A diferença está em ter sido *perguntado*, o que o
 sistema hoje não registra.
+
+---
+
+## Revisao /review de 20/09/2026 — scripts nao commitados
+
+Rodada sobre `build_pdf_abnt.py`, `fix_textual.py` e as 5 skills novas (nao ha
+diff contra `origin/main`; tudo era untracked). Corrigido nesta rodada: escopo do
+glob, homografos `divida`/`previa`, guarda do pandoc, ordenacao NBR 6023 das
+referencias, nome do PDF na skill `vicentino-pdf-build`, `.gitignore` (43,7 MB ->
+2,06 MB), regra morta `idade e menor` e 37 testes de regressao em `tests/`.
+
+### Registrado, NAO corrigido
+
+6. **Referencias duplicadas no PDF.** `build_pdf_abnt.py` mantem as 43 secoes
+   "Fontes e Referencias" no corpo dos capitulos E ainda acrescenta a secao
+   REFERENCIAS consolidada no fim. O docstring promete consolidacao. Decidir:
+   remover do corpo, remover a consolidada, ou assumir que as duas sao
+   intencionais (por capitulo ajuda na versao impressa). Exige decisao editorial.
+7. **As 184 "referencias" nao estao em ABNT NBR 6023.** 176 sao links markdown
+   crus (`[CNJ -- Medidas protetivas](https://...)`); so as 8 hardcoded em
+   `build_references()` seguem AUTOR. Titulo. Local: Editora, ano. Converter as
+   176 e trabalho de conteudo, nao de codigo.
+8. **Lacuna do dicionario de acentuacao.** ~230 palavras sem acento aparecem no
+   conteudo e nao sao cobertas. O subconjunto com final `-cao`/`-coes`/`-encia`
+   e quase todo defeito real: `Organica`, `Jurisprudencia`, `relacao`,
+   `perseguicao`, `autorizacao`, `Estacao`, `Proibicao`, `conciliacao`,
+   `Intimidacao`, `Regulacao`, `atuacao`. Cuidado: terminacoes `-aria`/`-oria`/
+   `-ica` dao falso positivo (`Defensoria`, `Ouvidoria`, `aposentadoria`,
+   `Portaria`, `significa` estao CORRETOS sem acento).
+9. **Homografos ainda armados no dicionario** (sem ocorrencia viva hoje, achados
+   pelo Codex): `faca`->`faca` (faca = objeto, relevante no capitulo de
+   violencia), `carne`->`carne`, `media`->`media`, `Gas`->`Gas`, e as formas de
+   futuro `fara`/`tera`/`dara`/`podera`/`devera`. Mesma classe do `divida`. Se
+   entrar conteudo novo com essas palavras, corrompe. Tratar como o `divida`:
+   tirar do DICT e criar padrao de contexto em `NOUN_PATTERNS`.
+10. **`build/` (2,06 MB) segue fora do `.gitignore`.** E 100% artefato:
+    `abnt_header.tex` e `abnt_titlepage.tex` sao escritos por
+    `write_header_tex()`/`write_titlepage_tex()`, o resto e markdown/txt
+    intermediario. Nao entrou no ignore porque nao estava na pergunta.
+11. **Falhas que falham abertas em `build_pdf_abnt.py`** (achados do Codex,
+    confirmados por leitura): capitulo ausente so emite AVISO e o PDF e dado
+    como pronto (`:198-202`); `pre_sumario` depende do literal `## Sumario` e,
+    se o heading mudar, insere o README inteiro como APRESENTACAO (`:172-178`);
+    `clean_md()` remove o destino de qualquer link cujo URL contenha `.md`;
+    `demote_headings()` nao rastreia blocos de codigo cercados e nao rebaixa H6.
+12. **`re.sub(r"^#...")` sem `re.MULTILINE`** em `:195` e `:205`. Hoje os 53
+    arquivos comecam com H1 e funciona; um arquivo com frontmatter passa a gerar
+    `\chapter` solto no meio do capitulo, em silencio.
+13. **Duplicacao de `demote_headings()`** reescrita inline em `:208-217`.
+14. **Import dinamico de `fix_accents_v3.py` sem validacao** (`fix_textual.py`
+    :27-32): se o arquivo sumir ou `CANDIDATES` mudar de tipo, traceback cru.
+15. **Chaves duplicadas e no-ops no dicionario** (cosmetico): `viuvo`/`viuva`/
+    `viuvos`/`viuvas` e `media`/`carne`/`carnes` aparecem duas vezes; `vasectomia`
+    `laqueadura`, `miomas`, `reunir`, `pericial` mapeiam para si mesmos (o filtro
+    `k != v` ja os descarta).
