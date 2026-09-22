@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ata da reunião · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+  <link rel="stylesheet" href="assets/ui-comum.css">
+  <link rel="stylesheet" href="assets/ata-documento.css">
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Ata da reunião</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-nome"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- O login acontece em area-vicentino.html — uma porta só (area-vicentino.js).
+       exigirAcesso() redireciona antes que este texto chegue a sumir. -->
+  <section class="login" id="tela-login">
+    <p>Verificando seu acesso…</p>
+  </section>
+
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <div class="ata-barra nao-imprime">
+      <a class="btn btn-claro btn-pequeno" href="atas.html">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Livro de atas
+      </a>
+      <span class="ata-selo-status" id="selo-status"></span>
+      <span class="ata-espaco"></span>
+
+      <button type="button" class="btn btn-neutro btn-pequeno" id="btn-modo-editar" hidden>
+        <i class="fa-solid fa-pen" aria-hidden="true"></i> Editar
+      </button>
+      <button type="button" class="btn btn-neutro btn-pequeno" id="btn-modo-ver">
+        <i class="fa-solid fa-eye" aria-hidden="true"></i> Visualizar
+      </button>
+      <button type="button" class="btn btn-neutro btn-pequeno" id="btn-odt">
+        <i class="fa-regular fa-file-word" aria-hidden="true"></i> Exportar ODT
+      </button>
+      <button type="button" class="btn btn-neutro btn-pequeno" id="btn-pdf">
+        <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Exportar PDF
+      </button>
+      <button type="button" class="btn btn-ok btn-pequeno" id="btn-aprovar" hidden>
+        <i class="fa-solid fa-check" aria-hidden="true"></i> Aprovar ata
+      </button>
+      <button type="button" class="btn btn-claro btn-pequeno" id="btn-reabrir" hidden>
+        <i class="fa-solid fa-lock-open" aria-hidden="true"></i> Reabrir
+      </button>
+    </div>
+
+    <div class="ata-trancada nao-imprime" id="aviso-trancada" hidden></div>
+    <p class="aviso nao-imprime" id="aviso-painel" role="status"></p>
+
+    <!-- ===================== EDITOR ===================== -->
+    <form id="tela-editor" class="nao-imprime" hidden>
+
+      <div class="editor">
+        <h2>Identificação da reunião</h2>
+        <div class="grade-3">
+          <div class="campo">
+            <label for="f-numero">Número da reunião</label>
+            <input type="number" id="f-numero" min="1" step="1" required>
+          </div>
+          <div class="campo">
+            <label for="f-data">Data</label>
+            <input type="date" id="f-data" required>
+          </div>
+          <div class="campo">
+            <label for="f-hora">Hora</label>
+            <input type="time" id="f-hora">
+          </div>
+        </div>
+        <div class="grade-3">
+          <div class="campo">
+            <label for="f-tipo">Tipo</label>
+            <select id="f-tipo">
+              <option value="ordinaria">Ordinária</option>
+              <option value="extraordinaria">Extraordinária</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-local">Sala</label>
+            <input type="text" id="f-local" maxlength="120" placeholder="Ex.: paroquial">
+            <span class="dica">Entra na frase "na sala ______".</span>
+          </div>
+          <div class="campo">
+            <label for="f-presidida">Presidida pelo(a) confrade/consócia</label>
+            <input type="text" id="f-presidida" maxlength="150">
+          </div>
+        </div>
+      </div>
+
+      <div class="editor">
+        <h2>Presença</h2>
+        <p class="ata-dica">
+          Quem não for marcado simplesmente não entra na lista da ata. Os
+          justificados aparecem no campo "Justificativas".
+        </p>
+        <div class="barra">
+          <div class="filtros">
+            <button type="button" class="filtro" id="btn-todos-presentes">Marcar todos como presentes</button>
+            <button type="button" class="filtro" id="btn-limpar-presencas">Limpar marcações</button>
+          </div>
+        </div>
+        <div class="ata-presencas" id="lista-presencas"></div>
+
+        <div class="grade-2" style="margin-top:18px;">
+          <div class="campo">
+            <label for="f-visitantes">Visitantes</label>
+            <input type="text" id="f-visitantes" maxlength="300">
+          </div>
+          <div class="campo">
+            <label for="f-justificativas">Justificativas (texto livre)</label>
+            <input type="text" id="f-justificativas" maxlength="300">
+            <span class="dica">Some-se aos nomes marcados como "justificou".</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="editor">
+        <h2>Leitura espiritual</h2>
+        <div class="grade-2">
+          <div class="campo">
+            <label for="f-leitura-obra">Obra lida</label>
+            <input type="text" id="f-leitura-obra" maxlength="200" placeholder="Ex.: Regra da SSVP">
+          </div>
+          <div class="campo">
+            <label for="f-leitura-trecho">Trecho retirado</label>
+            <input type="text" id="f-leitura-trecho" maxlength="200" placeholder="Ex.: artigo 2">
+          </div>
+        </div>
+      </div>
+
+      <div class="editor">
+        <h2>Estado do caixa</h2>
+        <p class="ata-dica">
+          Os valores ficam gravados nesta ata. Corrigir um lançamento no
+          Controle Orçamentário depois <strong>não</strong> altera ata já
+          lavrada — é o registro do que a tesoureira apresentou no dia.
+        </p>
+        <button type="button" class="btn btn-claro btn-pequeno" id="btn-sugerir-caixa"
+                style="margin-bottom:16px;">
+          <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+          Sugerir a partir do Financeiro
+        </button>
+
+        <div class="grade-3">
+          <div class="campo">
+            <label for="f-saldo-anterior">Saldo anterior</label>
+            <input type="number" id="f-saldo-anterior" step="0.01" inputmode="decimal">
+          </div>
+          <div class="campo">
+            <label for="f-coleta">Coleta</label>
+            <input type="number" id="f-coleta" step="0.01" inputmode="decimal">
+          </div>
+          <div class="campo">
+            <label for="f-outras-fontes">Outras fontes</label>
+            <input type="number" id="f-outras-fontes" step="0.01" inputmode="decimal">
+          </div>
+        </div>
+        <div class="grade-3">
+          <div class="campo ata-calculado">
+            <label for="f-soma-receita">Soma da receita</label>
+            <input type="number" id="f-soma-receita" step="0.01" readonly>
+          </div>
+          <div class="campo">
+            <label for="f-auxilio">Auxílio financeiro aos assistidos</label>
+            <input type="number" id="f-auxilio" step="0.01" inputmode="decimal">
+          </div>
+          <div class="campo">
+            <label for="f-despesas">Despesas diversas</label>
+            <input type="number" id="f-despesas" step="0.01" inputmode="decimal">
+          </div>
+        </div>
+        <div class="grade-3">
+          <div class="campo">
+            <label for="f-decima">Décima</label>
+            <input type="number" id="f-decima" step="0.01" inputmode="decimal">
+          </div>
+          <div class="campo ata-calculado">
+            <label for="f-soma-despesa">Soma da despesa</label>
+            <input type="number" id="f-soma-despesa" step="0.01" readonly>
+          </div>
+          <div class="campo ata-calculado">
+            <label for="f-saldo-atual">Saldo atual</label>
+            <input type="number" id="f-saldo-atual" step="0.01" readonly>
+          </div>
+        </div>
+      </div>
+
+      <div class="editor">
+        <h2>Notícias e expediente</h2>
+        <div class="campo">
+          <label for="f-noticias">Notícias das famílias e outras notícias</label>
+          <textarea id="f-noticias" rows="6"
+            placeholder="Uma notícia por linha."></textarea>
+          <span class="dica">Cada linha vira um parágrafo no documento.</span>
+        </div>
+        <div class="campo">
+          <label for="f-expediente">Expediente da Conferência</label>
+          <textarea id="f-expediente" rows="6"
+            placeholder="Notícias dos Conselhos e o que foi decidido. Havendo sindicância, anotar nome, endereço e se foi aprovada."></textarea>
+        </div>
+        <div class="grade-2">
+          <div class="campo">
+            <label for="f-escala">Escalas de visitas às famílias</label>
+            <textarea id="f-escala" rows="3"></textarea>
+          </div>
+          <div class="campo">
+            <label for="f-privilegiados">Privilegiados da semana</label>
+            <textarea id="f-privilegiados" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="f-redigida">Ata lavrada por</label>
+          <input type="text" id="f-redigida" maxlength="150">
+          <span class="dica">Entra na frase "Eu ______ lavrei a presente ata".</span>
+        </div>
+
+        <button type="submit" class="btn btn-ouro" id="btn-salvar">
+          <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Salvar ata
+        </button>
+      </div>
+    </form>
+
+    <!-- ===================== DOCUMENTO ===================== -->
+    <div id="tela-documento" hidden></div>
+
+  </main>
+
+  <script type="module">
+    import { escapar, mensagemDeErro } from './assets/supabase-client.js';
+    import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+    import { montarNavegacaoComPapel, notificarOk, notificarErro } from './assets/ui-comum.js';
+    import { htmlDocumento, nomeDoArquivo } from './assets/ata-documento.js';
+    import { baixarOdt } from './assets/ata-odt.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const telaEditor = document.getElementById('tela-editor');
+    const telaDocumento = document.getElementById('tela-documento');
+    const avisoPainel = document.getElementById('aviso-painel');
+
+    // Estado da página. `ata` e `presencas` são o que o documento renderiza;
+    // `confrades` é a lista ativa que monta as caixas de seleção.
+    let ata = null;
+    let presencas = [];
+    let confrades = [];
+    let podeRedigir = false;
+    let podeReabrir = false;
+
+    const ID = new URLSearchParams(location.search).get('id');
+
+    function mostrarAviso(texto, tipo) {
+      avisoPainel.textContent = texto;
+      avisoPainel.className = 'aviso visivel nao-imprime ' + tipo;
+      if (tipo === 'ok') setTimeout(() => { avisoPainel.className = 'aviso nao-imprime'; }, 4000);
+    }
+
+    /** Campo numérico vazio vira null, não 0 — "não informado" ≠ "zero". */
+    const num = (id) => {
+      const v = document.getElementById(id).value;
+      return v === '' ? null : Number(v);
+    };
+    const texto = (id) => document.getElementById(id).value.trim() || null;
+    const pôr = (id, valor) => { document.getElementById(id).value = valor ?? ''; };
+
+    // -------------------------------------------------------------------------
+    // Sessão
+    // -------------------------------------------------------------------------
+    async function iniciar() {
+      const acesso = await exigirAcesso();
+      if (!acesso) return;
+
+      await montarNavegacaoComPapel(sb);
+      document.getElementById('usuario-nome').textContent = acesso.nome;
+      document.getElementById('topo-usuario').hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+
+      if (!ID) {
+        mostrarAviso('Nenhuma ata indicada. Volte ao livro de atas e escolha uma.', 'erro');
+        return;
+      }
+
+      // As duas perguntas de papel, em paralelo — nenhuma depende da outra.
+      // Erro de rede vira "não pode", que é a falha segura: a tela fica de
+      // leitura e quem guarda a escrita é a RLS, não este booleano.
+      //
+      // `pode_reabrir_ata` e não `is_admin`: são cadastros diferentes
+      // (public.admins x confrades.papel) e é a primeira que a policy de
+      // UPDATE consulta. Perguntar a outra faria o botão "Reabrir" aparecer
+      // para quem o banco vai recusar — foi o defeito da migração 022,
+      // consertado na 024.
+      const [redator, reabridor] = await Promise.all([
+        sb.rpc('pode_redigir_ata'),
+        sb.rpc('pode_reabrir_ata'),
+      ]);
+      podeRedigir = redator.data === true;
+      podeReabrir = reabridor.data === true;
+
+      await carregar();
+    }
+
+    document.getElementById('btn-sair').addEventListener('click', sair);
+
+    // -------------------------------------------------------------------------
+    // Carga
+    // -------------------------------------------------------------------------
+    async function carregar() {
+      const [resAta, resPresencas, resConfrades] = await Promise.all([
+        sb.from('atas').select('*').eq('id', ID).maybeSingle(),
+        sb.from('atas_presencas').select('*').eq('ata_id', ID),
+        sb.from('confrades').select('user_id, nome_completo')
+          .eq('ativo', true).order('nome_completo'),
+      ]);
+
+      if (resAta.error || !resAta.data) {
+        mostrarAviso(mensagemDeErro(resAta.error, 'Ata não encontrada.'), 'erro');
+        return;
+      }
+
+      ata = resAta.data;
+      presencas = resPresencas.data || [];
+      confrades = resConfrades.data || [];
+
+      document.title = `Ata ${ata.numero} · Conferência N. S. do Carmo`;
+
+      preencherFormulario();
+      montarPresencas();
+      aplicarPermissoes();
+      // Ata aprovada abre no documento (é o que se quer dela); rascunho abre
+      // no editor, que é o trabalho pendente.
+      trocarModo(travada() ? 'ver' : 'editar');
+    }
+
+    /**
+     * A tela aceita edição agora?
+     *
+     * Espelha, termo a termo, `ata_aberta_para_edicao()` do banco (migração
+     * 024): quem LAVRA alcança o rascunho; quem REABRE alcança a linha em
+     * qualquer status. Espelhar em vez de aproximar é o ponto — uma tela mais
+     * frouxa que a policy oferece um botão que o banco recusa, e uma tela mais
+     * rígida esconde uma ação permitida sem explicar por quê.
+     */
+    const podeEditarAgora = () => (podeRedigir && ata.status === 'rascunho') || podeReabrir;
+    const travada = () => !podeEditarAgora();
+
+    function preencherFormulario() {
+      pôr('f-numero', ata.numero);
+      pôr('f-data', ata.data_reuniao);
+      pôr('f-hora', ata.hora ? String(ata.hora).slice(0, 5) : '');
+      pôr('f-tipo', ata.tipo || 'ordinaria');
+      pôr('f-local', ata.local);
+      pôr('f-presidida', ata.presidida_por);
+      pôr('f-visitantes', ata.visitantes);
+      pôr('f-justificativas', ata.justificativas);
+      pôr('f-leitura-obra', ata.leitura_obra);
+      pôr('f-leitura-trecho', ata.leitura_trecho);
+      pôr('f-saldo-anterior', ata.saldo_anterior);
+      pôr('f-coleta', ata.coleta);
+      pôr('f-outras-fontes', ata.outras_fontes);
+      pôr('f-auxilio', ata.auxilio_assistidos);
+      pôr('f-despesas', ata.despesas_diversas);
+      pôr('f-decima', ata.decima);
+      pôr('f-noticias', ata.noticias_familias);
+      pôr('f-expediente', ata.expediente);
+      pôr('f-escala', ata.escala_visitas);
+      pôr('f-privilegiados', ata.privilegiados);
+      pôr('f-redigida', ata.redigida_por);
+      recalcularCaixa();
+    }
+
+    // -------------------------------------------------------------------------
+    // Presença
+    // -------------------------------------------------------------------------
+    const SITUACOES = [
+      ['presente', 'Presente'],
+      ['justificado', 'Justificou'],
+      ['ausente', 'Ausente'],
+    ];
+
+    function montarPresencas() {
+      const marcado = new Map(presencas.map(p => [p.confrade_id, p.situacao]));
+      const lista = document.getElementById('lista-presencas');
+
+      if (!confrades.length) {
+        lista.innerHTML = '<div class="vazio"><i class="fa-regular fa-user"></i>' +
+          '<p>Nenhum confrade ativo cadastrado.</p></div>';
+        return;
+      }
+
+      lista.innerHTML = confrades.map(c => {
+        const atual = marcado.get(c.user_id) || '';
+        const opcoes = SITUACOES.map(([valor, rotulo]) => {
+          const id = `p-${c.user_id}-${valor}`;
+          return `<input type="radio" name="presenca-${c.user_id}" id="${id}" value="${valor}"` +
+            `${atual === valor ? ' checked' : ''}>` +
+            `<label for="${id}">${rotulo}</label>`;
+        }).join('');
+
+        return `<div class="ata-presenca-linha" data-confrade="${escapar(c.user_id)}" ` +
+          `data-nome="${escapar(c.nome_completo)}">` +
+          `<span class="ata-presenca-nome">${escapar(c.nome_completo)}</span>` +
+          `<span class="ata-presenca-opcoes">${opcoes}</span></div>`;
+      }).join('');
+    }
+
+    /** O que está marcado na tela, no formato das linhas de atas_presencas. */
+    function presencasDaTela() {
+      return [...document.querySelectorAll('.ata-presenca-linha')].map(linha => {
+        const escolhido = linha.querySelector('input:checked');
+        if (!escolhido) return null;
+        return {
+          ata_id: ID,
+          confrade_id: linha.dataset.confrade,
+          // O nome é copiado agora, de propósito: renomear o confrade depois
+          // não pode reescrever esta ata (migração 023).
+          nome: linha.dataset.nome,
+          situacao: escolhido.value,
+        };
+      }).filter(Boolean);
+    }
+
+    document.getElementById('btn-todos-presentes').addEventListener('click', () => {
+      document.querySelectorAll('.ata-presenca-linha').forEach(l => {
+        const r = l.querySelector('input[value="presente"]');
+        if (r && !r.disabled) r.checked = true;
+      });
+    });
+
+    document.getElementById('btn-limpar-presencas').addEventListener('click', () => {
+      document.querySelectorAll('.ata-presenca-linha input').forEach(r => {
+        if (!r.disabled) r.checked = false;
+      });
+    });
+
+    // -------------------------------------------------------------------------
+    // Caixa
+    // -------------------------------------------------------------------------
+    const CAMPOS_CAIXA = ['f-saldo-anterior', 'f-coleta', 'f-outras-fontes',
+      'f-auxilio', 'f-despesas', 'f-decima'];
+
+    /**
+     * Os três totais, recalculados a cada digitação.
+     *
+     * Ficam em campos gravados (e não numa fórmula na hora de exibir) porque a
+     * ata impressa mostra números. Se todos os componentes estiverem vazios o
+     * total também fica vazio — senão um rascunho recém-criado já nasceria
+     * afirmando "soma da receita R$ 0,00", que é diferente de não informado.
+     */
+    function recalcularCaixa() {
+      const v = (id) => num(id) ?? 0;
+      const algum = (...ids) => ids.some(id => num(id) !== null);
+
+      const receita = algum('f-coleta', 'f-outras-fontes')
+        ? v('f-coleta') + v('f-outras-fontes') : null;
+      const despesa = algum('f-auxilio', 'f-despesas', 'f-decima')
+        ? v('f-auxilio') + v('f-despesas') + v('f-decima') : null;
+      const atual = algum('f-saldo-anterior', 'f-coleta', 'f-outras-fontes',
+        'f-auxilio', 'f-despesas', 'f-decima')
+        ? v('f-saldo-anterior') + (receita ?? 0) - (despesa ?? 0) : null;
+
+      const duas = (n) => n === null ? '' : Number(n.toFixed(2));
+      pôr('f-soma-receita', duas(receita));
+      pôr('f-soma-despesa', duas(despesa));
+      pôr('f-saldo-atual', duas(atual));
+    }
+
+    CAMPOS_CAIXA.forEach(id =>
+      document.getElementById(id).addEventListener('input', recalcularCaixa));
+
+    /**
+     * Sugere o caixa a partir do Controle Orçamentário.
+     *
+     * O período vai da data da ata ANTERIOR (exclusive) até a data desta
+     * (inclusive) — é o intervalo que a tesoureira apresenta na reunião. Não
+     * havendo ata anterior, o saldo inicial vem de vw_saldo_financeiro e o
+     * período começa no primeiro lançamento.
+     */
+    const MAPA_CATEGORIA = {
+      'Coleta em reunião': 'f-coleta',
+      'Ajuda a família': 'f-auxilio',
+      'Repasse ao Conselho Particular': 'f-decima',
+      'Despesa administrativa': 'f-despesas',
+      'Outra': 'f-despesas',
+    };
+
+    document.getElementById('btn-sugerir-caixa').addEventListener('click', async () => {
+      const botao = document.getElementById('btn-sugerir-caixa');
+      botao.disabled = true;
+      try {
+        const dataAtual = document.getElementById('f-data').value;
+        if (!dataAtual) { notificarErro('Informe a data da reunião primeiro.'); return; }
+
+        const { data: anterior } = await sb.from('atas')
+          .select('data_reuniao, saldo_atual')
+          .lt('numero', Number(document.getElementById('f-numero').value || 0))
+          .order('numero', { ascending: false })
+          .limit(1).maybeSingle();
+
+        let saldoAnterior = anterior?.saldo_atual ?? null;
+        if (saldoAnterior === null) {
+          const { data: saldo } = await sb.from('vw_saldo_financeiro')
+            .select('saldo_inicial').maybeSingle();
+          saldoAnterior = saldo?.saldo_inicial ?? null;
+        }
+
+        let consulta = sb.from('lancamentos_financeiros')
+          .select('tipo, valor, categorias_financeiras(nome)')
+          .is('removido_em', null)
+          .lte('data_movimento', dataAtual);
+        if (anterior?.data_reuniao) consulta = consulta.gt('data_movimento', anterior.data_reuniao);
+
+        const { data: lancamentos, error } = await consulta;
+        if (error) { notificarErro(mensagemDeErro(error, 'Não foi possível ler o financeiro.')); return; }
+
+        const soma = { 'f-coleta': 0, 'f-outras-fontes': 0, 'f-auxilio': 0, 'f-despesas': 0, 'f-decima': 0 };
+        for (const l of lancamentos || []) {
+          const nome = l.categorias_financeiras?.nome;
+          // Categoria criada depois pela UI e não mapeada aqui cai no balde
+          // genérico do próprio tipo — some no total certo em vez de sumir.
+          const campo = MAPA_CATEGORIA[nome]
+            || (l.tipo === 'entrada' ? 'f-outras-fontes' : 'f-despesas');
+          soma[campo] += Number(l.valor);
+        }
+
+        pôr('f-saldo-anterior', saldoAnterior === null ? '' : Number(saldoAnterior));
+        for (const [campo, valor] of Object.entries(soma)) pôr(campo, Number(valor.toFixed(2)));
+        recalcularCaixa();
+
+        notificarOk(`Sugestão a partir de ${(lancamentos || []).length} lançamento(s). Confira antes de salvar.`);
+      } finally {
+        botao.disabled = false;
+      }
+    });
+
+    // -------------------------------------------------------------------------
+    // Permissões na tela
+    //
+    // Isto é conveniência de interface, não proteção: quem recusa a escrita é a
+    // policy de `atas` (migração 022). A tela desabilita para não oferecer uma
+    // ação que o banco vai negar.
+    // -------------------------------------------------------------------------
+    function aplicarPermissoes() {
+      const bloqueado = travada();
+
+      telaEditor.querySelectorAll('input, textarea, select, button').forEach(el => {
+        el.disabled = bloqueado;
+      });
+
+      const selo = document.getElementById('selo-status');
+      selo.textContent = ata.status === 'aprovada' ? 'Ata aprovada' : 'Rascunho';
+      selo.className = 'ata-selo-status ' + ata.status;
+
+      // Ata já aprovada não se aprova de novo — nem para quem pode reabri-la
+      // e, portanto, passa em `bloqueado`.
+      document.getElementById('btn-aprovar').hidden = bloqueado || ata.status === 'aprovada';
+      document.getElementById('btn-reabrir').hidden = !(ata.status === 'aprovada' && podeReabrir);
+
+      const aviso = document.getElementById('aviso-trancada');
+      if (ata.status === 'aprovada') {
+        aviso.hidden = false;
+        aviso.innerHTML = '<i class="fa-solid fa-lock" aria-hidden="true"></i> ' +
+          'Esta ata foi lida e aprovada — está fechada para edição. ' +
+          (podeReabrir ? 'Como administrador, você pode reabri-la.'
+                       : 'Só um administrador pode reabri-la.');
+      } else if (!podeRedigir) {
+        aviso.hidden = false;
+        aviso.textContent = 'Você pode ler e exportar esta ata, mas lavrá-la é do ' +
+          'secretário, presidente ou vice-presidente.';
+      } else {
+        aviso.hidden = true;
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // Modos: editar / visualizar
+    // -------------------------------------------------------------------------
+    function trocarModo(modo) {
+      const vendo = modo === 'ver';
+      // No modo "ver" o documento reflete o que está NA TELA, e não o que está
+      // no banco — assim a secretária confere o texto antes de salvar.
+      if (vendo) telaDocumento.innerHTML = htmlDocumento(ataDaTela(), presencasDaTela());
+
+      telaDocumento.hidden = !vendo;
+      telaEditor.hidden = vendo;
+      document.getElementById('btn-modo-ver').hidden = vendo;
+      document.getElementById('btn-modo-editar').hidden = !vendo || travada();
+    }
+
+    document.getElementById('btn-modo-ver').addEventListener('click', () => trocarModo('ver'));
+    document.getElementById('btn-modo-editar').addEventListener('click', () => trocarModo('editar'));
+
+    /** A ata como está no formulário agora (sem passar pelo banco). */
+    function ataDaTela() {
+      return {
+        ...ata,
+        numero: num('f-numero'),
+        data_reuniao: document.getElementById('f-data').value || null,
+        hora: document.getElementById('f-hora').value || null,
+        tipo: document.getElementById('f-tipo').value,
+        local: texto('f-local'),
+        presidida_por: texto('f-presidida'),
+        visitantes: texto('f-visitantes'),
+        justificativas: texto('f-justificativas'),
+        leitura_obra: texto('f-leitura-obra'),
+        leitura_trecho: texto('f-leitura-trecho'),
+        saldo_anterior: num('f-saldo-anterior'),
+        coleta: num('f-coleta'),
+        outras_fontes: num('f-outras-fontes'),
+        soma_receita: num('f-soma-receita'),
+        auxilio_assistidos: num('f-auxilio'),
+        despesas_diversas: num('f-despesas'),
+        decima: num('f-decima'),
+        soma_despesa: num('f-soma-despesa'),
+        saldo_atual: num('f-saldo-atual'),
+        noticias_familias: texto('f-noticias'),
+        expediente: texto('f-expediente'),
+        escala_visitas: texto('f-escala'),
+        privilegiados: texto('f-privilegiados'),
+        redigida_por: texto('f-redigida'),
+      };
+    }
+
+    // -------------------------------------------------------------------------
+    // Exportação
+    // -------------------------------------------------------------------------
+    /** O que sai no arquivo é o que está na tela — igual ao modo "ver". */
+    const paraExportar = () => [ataDaTela(), presencasDaTela()];
+
+    document.getElementById('btn-odt').addEventListener('click', () => {
+      try {
+        baixarOdt(...paraExportar());
+        notificarOk('Arquivo ODT gerado.');
+      } catch (erro) {
+        notificarErro('Não foi possível gerar o ODT: ' + erro.message);
+      }
+    });
+
+    /**
+     * PDF = impressão desta mesma página.
+     *
+     * Três cuidados:
+     *  - o documento precisa estar montado, senão imprime a folha vazia;
+     *  - o Chrome usa o document.title como nome sugerido do arquivo no
+     *    diálogo "Salvar como PDF", então ele vira o nome da ata e volta ao
+     *    normal depois;
+     *  - `afterprint` também dispara quando o usuário CANCELA o diálogo, que é
+     *    justamente o caso em que restaurar o título importa.
+     */
+    document.getElementById('btn-pdf').addEventListener('click', () => {
+      const [a, p] = paraExportar();
+      telaDocumento.innerHTML = htmlDocumento(a, p);
+      telaDocumento.hidden = false;
+
+      const tituloOriginal = document.title;
+      const voltar = () => {
+        document.title = tituloOriginal;
+        if (telaEditor.hidden === false) telaDocumento.hidden = true;
+        window.removeEventListener('afterprint', voltar);
+      };
+      window.addEventListener('afterprint', voltar);
+
+      document.title = nomeDoArquivo(a);
+      window.print();
+    });
+
+    // -------------------------------------------------------------------------
+    // Salvar
+    // -------------------------------------------------------------------------
+    telaEditor.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      await salvar();
+    });
+
+    async function salvar({ silencioso = false } = {}) {
+      const botao = document.getElementById('btn-salvar');
+      botao.disabled = true;
+      try {
+        const registro = ataDaTela();
+        // Colunas de controle não são do formulário — mandá-las de volta só
+        // daria à policy a chance de recusar por motivo errado.
+        delete registro.id; delete registro.status;
+        delete registro.criado_por; delete registro.criado_em;
+        delete registro.aprovada_em; delete registro.aprovada_por;
+        delete registro.atualizado_em;
+
+        const { data: { user } } = await sb.auth.getUser();
+        registro.atualizado_por = user?.id ?? null;
+
+        const { error } = await sb.from('atas').update(registro).eq('id', ID);
+        if (error) {
+          const t = mensagemDeErro(error, 'Não foi possível salvar a ata.');
+          mostrarAviso(t, 'erro'); notificarErro(t);
+          return false;
+        }
+
+        if (!(await salvarPresencas())) return false;
+
+        // Reler em vez de confiar no que foi enviado: triggers e defaults do
+        // banco (atualizado_em) só existem depois do round-trip.
+        const { data } = await sb.from('atas').select('*').eq('id', ID).maybeSingle();
+        if (data) ata = data;
+
+        if (!silencioso) {
+          notificarOk('Ata salva.');
+          mostrarAviso('Ata salva.', 'ok');
+        }
+        return true;
+      } finally {
+        botao.disabled = false;
+      }
+    }
+
+    /**
+     * Sincroniza a lista de presença.
+     *
+     * Apaga as linhas que deixaram de estar marcadas e faz upsert do resto.
+     * O upsert (em vez de apagar tudo e reinserir) preserva a linha de quem
+     * não mudou — e evita a janela em que a ata fica sem nenhum presente, que
+     * é o estado que apareceria se o segundo comando falhasse.
+     */
+    async function salvarPresencas() {
+      const marcadas = presencasDaTela();
+      const idsMarcados = marcadas.map(p => p.confrade_id);
+
+      let remover = sb.from('atas_presencas').delete().eq('ata_id', ID);
+      if (idsMarcados.length) {
+        // Cada uuid entre aspas: é a forma que o PostgREST documenta para
+        // `in.()`, e a que não depende de o valor não ter vírgula ou hífen.
+        const lista = idsMarcados.map(i => `"${i}"`).join(',');
+        remover = remover.not('confrade_id', 'in', `(${lista})`);
+      }
+      const { error: erroRemover } = await remover;
+      if (erroRemover) {
+        notificarErro(mensagemDeErro(erroRemover, 'Não foi possível atualizar a presença.'));
+        return false;
+      }
+
+      if (marcadas.length) {
+        const { error } = await sb.from('atas_presencas')
+          .upsert(marcadas, { onConflict: 'ata_id,confrade_id' });
+        if (error) {
+          notificarErro(mensagemDeErro(error, 'Não foi possível salvar a presença.'));
+          return false;
+        }
+      }
+
+      presencas = marcadas;
+      return true;
+    }
+
+    // -------------------------------------------------------------------------
+    // Aprovar e reabrir
+    // -------------------------------------------------------------------------
+    document.getElementById('btn-aprovar').addEventListener('click', async () => {
+      // O botão está FORA do <form>, então aprovar não passa pela validação
+      // nativa — e aprovar é justamente o passo que tranca a ata. Sem isto,
+      // uma ata sem número ou sem data só falharia lá no banco, depois do
+      // "confirmar", com a mensagem de uma coluna NOT NULL.
+      //
+      // A troca de modo vem ANTES da validação, e não depois: reportValidity()
+      // precisa focar o campo inválido para mostrar o balão, e um campo dentro
+      // de um bloco `hidden` não é focável — o aviso simplesmente não apareceria.
+      trocarModo('editar');
+      if (!telaEditor.reportValidity()) {
+        notificarErro('Há campo obrigatório por preencher (número e data da reunião).');
+        return;
+      }
+
+      if (!confirm('Aprovar esta ata? Depois de aprovada ela fica fechada para ' +
+        'edição, e só um administrador pode reabri-la.')) return;
+
+      // Salva antes: aprovar descartando o que está na tela seria perder o
+      // texto sem avisar — e depois de aprovada não há como redigitá-lo.
+      if (!(await salvar({ silencioso: true }))) return;
+
+      const { data: { user } } = await sb.auth.getUser();
+      const { error } = await sb.from('atas').update({
+        status: 'aprovada',
+        aprovada_em: new Date().toISOString(),
+        aprovada_por: user?.id ?? null,
+      }).eq('id', ID);
+
+      if (error) {
+        notificarErro(mensagemDeErro(error, 'Não foi possível aprovar a ata.'));
+        return;
+      }
+      notificarOk('Ata aprovada.');
+      await carregar();
+    });
+
+    document.getElementById('btn-reabrir').addEventListener('click', async () => {
+      if (!confirm('Reabrir esta ata para edição?')) return;
+      const { error } = await sb.from('atas')
+        .update({ status: 'rascunho', aprovada_em: null, aprovada_por: null })
+        .eq('id', ID);
+      if (error) {
+        notificarErro(mensagemDeErro(error, 'Não foi possível reabrir a ata.'));
+        return;
+      }
+      notificarOk('Ata reaberta.');
+      await carregar();
+    });
+
+    iniciar();
+  </script>
+</body>
+</html>

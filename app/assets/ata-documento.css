@@ -1,0 +1,266 @@
+/* ============================================================================
+   A ata como documento: na tela e no papel.
+
+   Este arquivo tem duas metades. A primeira desenha a folha que aparece na
+   visualização; a segunda, o bloco @media print, é o que gera o PDF —
+   "Exportar PDF" é window.print() sobre ESTE MESMO DOM.
+
+   Essa é a razão de ser do arquivo: o PDF não pode divergir do que a
+   secretária viu na tela, e a única forma de garantir isso é ele não ser um
+   segundo desenho. Uma biblioteca de PDF exigiria redesenhar o layout, e aí
+   seriam duas fontes de verdade — a mesma armadilha que ata-documento.js
+   evita no texto.
+
+   Depende de prontuario.css (variáveis de cor, .wrap, .btn, .campo) e de
+   ui-comum.css (navegação e toasts), como as outras páginas internas.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   A folha
+   -------------------------------------------------------------------------- */
+.ata-documento {
+  background: #fff;
+  color: #1a1a1a;
+  /* Serifada de propósito: é um documento institucional, lido e assinado em
+     papel — não uma tela do sistema. */
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  /* 21cm − 2cm de margem de cada lado = a mancha de texto que o @page produz;
+     o que se vê na tela é a largura que vai sair impressa. */
+  max-width: 17cm;
+  margin: 0 auto;
+  padding: 2cm 1.6cm;
+  border: 1px solid #e3d9d9;
+  border-radius: 6px;
+  box-shadow: 0 6px 28px rgba(74, 24, 24, .10);
+}
+
+.ata-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+/* A bandeira do formulário impresso, como SVG embutido — sem requisição e sem
+   arquivo novo em assets/. Ela existe só aqui e na impressão: o ODT leva o
+   cabeçalho em texto (ver o comentário no topo de ata-odt.js). */
+.ata-bandeira {
+  width: 46px;
+  height: 32px;
+  flex: none;
+  border: 1px solid rgba(0, 0, 0, .15);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 70'%3E%3Crect width='100' height='70' fill='%23009B3A'/%3E%3Cpath d='M50 7 L93 35 L50 63 L7 35 Z' fill='%23FFCC29'/%3E%3Ccircle cx='50' cy='35' r='16' fill='%23002776'/%3E%3C/svg%3E");
+}
+
+.ata-conselho { font-weight: 700; font-size: 1.25rem; }
+
+.ata-titulo {
+  text-align: center;
+  font-size: 1.45rem;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  margin: 10px 0 6px;
+}
+
+.ata-subtitulo { text-align: center; margin: 0 0 22px; }
+
+.ata-corpo,
+.ata-livre,
+.ata-fecho { text-align: justify; margin: 0 0 12px; }
+
+.ata-secao {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .98rem;
+  font-weight: 700;
+  margin: 22px 0 8px;
+}
+
+.ata-nota {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .82rem;
+  font-style: italic;
+  color: #5a4a4a;
+  margin: 0 0 10px;
+  text-align: justify;
+}
+
+.ata-fecho { margin-top: 18px; }
+
+/* Campo que ficou em branco. Discreto na tela, mas visível — a ata impressa
+   precisa mostrar ONDE falta preencher, que é o que a linha pontilhada do
+   formulário de papel faz. */
+.ata-lacuna { color: #9b8f8f; letter-spacing: .04em; }
+
+/* ---------------------------------------------------------------------------
+   Barra de ações (fora do documento — não vai para o papel)
+   -------------------------------------------------------------------------- */
+.ata-barra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.ata-barra .ata-espaco { flex: 1 1 auto; }
+
+.ata-selo-status {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.ata-selo-status.rascunho { background: #fdf2d8; color: #7a5a10; }
+.ata-selo-status.aprovada { background: #dff0e0; color: #1f5c28; }
+
+/* Aviso de ata travada, no topo do editor. */
+.ata-trancada {
+  font-family: Inter, system-ui, sans-serif;
+  background: #dff0e0;
+  border-left: 4px solid #1f5c28;
+  color: #1f5c28;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-size: .92rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Lista de presença
+   -------------------------------------------------------------------------- */
+.ata-presencas { display: grid; gap: 6px; }
+
+.ata-presenca-linha {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid #ece3e3;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.ata-presenca-nome { flex: 1 1 180px; font-weight: 500; }
+
+.ata-presenca-opcoes { display: flex; gap: 4px; flex: none; }
+
+/* Rádio escondido com o rótulo virando botão — mas escondido de um jeito que
+   o leitor de tela e o foco por teclado ainda alcançam (nunca display:none,
+   que tira o campo da ordem de tabulação). */
+.ata-presenca-opcoes input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.ata-presenca-opcoes label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .78rem;
+  padding: 5px 11px;
+  border: 1px solid #ddd0d0;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  background: #fff;
+}
+
+.ata-presenca-opcoes input:focus-visible + label { outline: 2px solid #4A1818; outline-offset: 2px; }
+.ata-presenca-opcoes input:checked + label { border-color: transparent; font-weight: 600; }
+.ata-presenca-opcoes input[value="presente"]:checked + label { background: #dff0e0; color: #1f5c28; }
+.ata-presenca-opcoes input[value="justificado"]:checked + label { background: #fdf2d8; color: #7a5a10; }
+.ata-presenca-opcoes input[value="ausente"]:checked + label { background: #f6e0e0; color: #8a2020; }
+.ata-presenca-opcoes input:disabled + label { cursor: default; opacity: .65; }
+
+/* ---------------------------------------------------------------------------
+   Tesouraria
+   -------------------------------------------------------------------------- */
+/* Os três totais são calculados na tela a cada digitação, mas GRAVADOS na ata
+   (a ata impressa mostra números, não fórmulas). Readonly e não disabled: um
+   campo `disabled` não é lido por leitor de tela ao navegar pelo formulário, e
+   estes são justamente os números que interessam conferir. */
+.ata-calculado input {
+  background: #f7f3f3;
+  font-weight: 600;
+}
+
+.ata-dica {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .8rem;
+  color: #6b5a5a;
+  margin: -6px 0 14px;
+}
+
+/* ---------------------------------------------------------------------------
+   IMPRESSÃO — é isto que vira o PDF
+   -------------------------------------------------------------------------- */
+@media print {
+  /* A4 com 2 cm, a mesma medida do <style:page-layout> em ata-odt.js, para
+     que o PDF do navegador e o ODT impresso tenham a mesma mancha. */
+  @page { size: A4; margin: 2cm; }
+
+  /* Tudo que é interface some. `.nao-imprime` é a marca genérica que as
+     páginas aplicam no que não é documento. */
+  .topo,
+  .vic-toasts,
+  .ata-barra,
+  .nao-imprime {
+    display: none !important;
+  }
+
+  html, body {
+    background: #fff !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* `.wrap` tem max-width de 1060px e padding lateral, e `.painel` tem 30px em
+     cima e 70px embaixo — medidas de tela que, no papel, viram uma margem a
+     mais somada à do @page e empurram a ata para baixo. */
+  .wrap, .painel {
+    max-width: none !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* A folha na tela tem sombra, borda e margem; no papel, a margem é do @page
+     e o resto só gastaria tinta. */
+  .ata-documento {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 12pt;
+  }
+
+  /* Deixar um título de seção sozinho no pé da página, com o texto dele na
+     página seguinte, é o defeito clássico de impressão — e numa ata ele
+     separaria "Notícias das famílias" das notícias. */
+  .ata-secao { break-after: avoid; page-break-after: avoid; }
+  .ata-corpo, .ata-livre, .ata-fecho, .ata-nota {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* O fundo da bandeira é imagem: sem isto o Chrome a omite por padrão
+     ("Gráficos de segundo plano" desmarcado). */
+  .ata-bandeira {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

@@ -26,6 +26,7 @@ import { escapar } from './supabase-client.js';
  */
 const DESTINOS = [
   { href: 'prontuario.html', rotulo: 'Prontuário', icone: 'fa-clipboard-list' },
+  { href: 'atas.html', rotulo: 'Atas', icone: 'fa-file-signature' },
   { href: 'financeiro.html', rotulo: 'Financeiro', icone: 'fa-sack-dollar' },
   { href: 'financeiro-relatorio.html', rotulo: 'Relatório', icone: 'fa-chart-line' },
   { href: 'admin.html', rotulo: 'Moderação', icone: 'fa-shield-halved' },
@@ -55,9 +56,14 @@ export function montarNavegacao({ ehAdmin = false } = {}) {
   if (!barra || barra.querySelector('.vic-nav')) return;
 
   const atual = paginaAtual();
-  // prontuario-familia.html não tem item próprio (só se chega nela por uma
-  // família); o item do Prontuário fica marcado para situar quem está lá.
-  const equivalente = atual === 'prontuario-familia.html' ? 'prontuario.html' : atual;
+  // Páginas de detalhe não têm item próprio (só se chega nelas por um registro
+  // da lista); o item da lista correspondente fica marcado para situar quem
+  // está lá.
+  const EQUIVALENTE = {
+    'prontuario-familia.html': 'prontuario.html',
+    'ata.html': 'atas.html',
+  };
+  const equivalente = EQUIVALENTE[atual] || atual;
 
   const itens = DESTINOS
     .filter(d => !d.somenteAdmin || ehAdmin)

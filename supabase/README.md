@@ -50,6 +50,9 @@ sem leitura pública alguma. Acesso exige `authenticated` + estar em
    | `20260916150400_financeiro_storage.sql` | bucket privado `comprovantes-financeiros` + policies |
    | `20260916150500_financeiro_revoke_consistencia.sql` | `revoke` nas funções do financeiro + trigger de consistência |
    | `20260920120000_prontuario_sem_campos_obrigatorios.sql` | remove obrigatoriedade dos campos do prontuário |
+   | `20260922130000_atas.sql` | `public.atas`, `pode_redigir_ata()` + RLS (trava da ata aprovada) |
+   | `20260922130100_atas_presencas.sql` | `public.atas_presencas`, `ata_aberta_para_edicao()` |
+   | `20260922130200_atas_reabertura.sql` | `pode_reabrir_ata()` + conserto da reabertura da ata aprovada |
 
    Ou, com a CLI: `npx supabase db push`.
 
@@ -138,6 +141,41 @@ values (1518.00, 'Decreto XX.XXX/2027', 280.00);
 A função `calcular_elegibilidade_pessoa()` é uma **estimativa de triagem**
 para orientar o vicentino — não é decisão automática de benefício. A UI já
 deixa isso explícito ao lado de cada selo de elegibilidade.
+
+## Livro de Atas
+
+`app/atas.html` (histórico) e `app/ata.html` (a ata: editor, visualização e
+exportação em ODT e PDF). Leitura e exportação para qualquer confrade ativo
+(`is_confrade_ativo()`); lavrar exige `pode_redigir_ata()` — confrade ativo com
+`confrades.papel in ('secretario','presidente','vice_presidente','administrador')`.
+
+**A ata aprovada trava, e quem trava é o banco.** A policy de `UPDATE` só
+alcança a linha enquanto ela é rascunho; depois de aprovada, só
+`pode_reabrir_ata()` (moderador em `public.admins` **ou** confrade ativo com
+papel `administrador`) chega nela. A tela desabilita os campos, mas isso é
+conveniência — a fronteira é a RLS. O mesmo vale para `atas_presencas`, via
+`ata_aberta_para_edicao()`: sem ela, dava para trocar a lista de presentes de
+uma ata já assinada.
+
+**Cadastrar uma secretária:**
+
+```sql
+insert into public.confrades (user_id, nome_completo, papel)
+select id, 'Nome da secretária', 'secretario' from auth.users where email = 'secretaria@exemplo.com';
+```
+
+**O número da ata continua o livro de papel.** `atas.numero` é `unique` e não
+uma sequence: a última ata manuscrita é a 243, e a primeira ata do sistema
+recebe o número à mão. Daí em diante a tela sugere `max(numero) + 1`.
+
+**Os nove valores da tesouraria são gravados na ata, não calculados.** A tela
+sugere a partir de `lancamentos_financeiros`, mas o que fica é o retrato do que
+a tesoureira apresentou naquele dia — corrigir um lançamento meses depois não
+pode reescrever uma ata já lida e aprovada.
+
+Conferir com `node supabase/verificar-rls-atas.mjs` (instruções no topo do
+arquivo). Ele precisa de contas de teste com os papéis para provar o lado
+positivo e a trava; cria atas com `numero >= 990000` e diz no fim como limpá-las.
 
 ## Controle Orçamentário
 

@@ -329,3 +329,123 @@ referencias, nome do PDF na skill `vicentino-pdf-build`, `.gitignore` (43,7 MB -
     `viuvos`/`viuvas` e `media`/`carne`/`carnes` aparecem duas vezes; `vasectomia`
     `laqueadura`, `miomas`, `reunir`, `pericial` mapeiam para si mesmos (o filtro
     `k != v` ja os descarta).
+
+---
+
+# Livro de Atas — 7ª ferramenta da Área do Vicentino (22/09/2026)
+
+Pedido: redigir as atas das reuniões na própria página, manter o histórico,
+visualizar em HTML e exportar em ODT e PDF. Modelo: os dois lados da "MINUTA DA
+ATA DA CONFERENCIA" impressa (fotos `ata- frente.jpeg` / `ata- verso.jpeg`).
+
+Decisões tomadas com o usuário antes de codar:
+presença por caixas de seleção sobre `confrades`; tesouraria pré-preenchida do
+Controle Orçamentário mas editável e **gravada** na ata; só secretário /
+presidente / vice / administrador lavram, e ata aprovada trava; PDF pela
+impressão do navegador.
+
+## O que foi entregue
+
+| # | Arquivo | Papel |
+|---|---|---|
+| 1 | `supabase/migrations/20260922130000_atas.sql` | `public.atas` (24 colunas da minuta) + `pode_redigir_ata()` + RLS |
+| 2 | `supabase/migrations/20260922130100_atas_presencas.sql` | `public.atas_presencas` + `ata_aberta_para_edicao()` |
+| 3 | `supabase/migrations/20260922130200_atas_reabertura.sql` | **conserto** da reabertura (ver abaixo) + `pode_reabrir_ata()` |
+| 4 | `app/assets/ata-documento.js` | fonte única do texto da minuta; devolve blocos em texto puro |
+| 5 | `app/assets/ata-odt.js` | empacota o `.odt` (fflate via esm.sh) |
+| 6 | `app/assets/ata-documento.css` | a folha na tela + `@media print` (é o que vira o PDF) |
+| 7 | `app/ata.html` | editor + visualização + exportação + aprovação |
+| 8 | `app/atas.html` | histórico e abertura de ata nova |
+| 9 | `supabase/verificar-rls-atas.mjs` | prova da RLS, no molde do script do financeiro |
+
+Registro da ferramenta nova: `DESTINOS` em `assets/area-vicentino.js` e em
+`assets/ui-comum.js`, card em `area-vicentino.html`, e "seis ferramentas" → sete.
+`mensagemDeErro()` ganhou as constraints de ata.
+
+## Bug encontrado e corrigido durante a revisão (antes de ir ao ar)
+
+A policy de UPDATE da migração 022 era
+`using (pode_redigir_ata() and (status = 'rascunho' or is_admin()))`, e o
+comentário ao lado afirmava que `is_admin()` era o caminho de reabertura. Era
+falso: `pode_redigir_ata()` lê `confrades.papel` e `is_admin()` lê
+`public.admins` — **cadastros independentes** (dito na própria migração 006). Com
+o `and` por fora, reabrir exigia estar nos dois ao mesmo tempo, e na prática
+**ninguém reabria** — enquanto `ata.html` mostrava o botão "Reabrir" com base só
+em `is_admin()`. Botão visível que não fazia nada.
+
+Conserto na migração 024: as duas perguntas viraram duas funções
+(`pode_redigir_ata()` / `pode_reabrir_ata()`), a policy passou a
+`(pode_redigir_ata() and status='rascunho') or pode_reabrir_ata()`, e a tela
+passou a espelhar exatamente essa expressão em `podeEditarAgora()`.
+
+## Evidências
+
+- **Migrações aplicadas** no projeto `zyzyttkayblvgnfqkapq` (`db push` × 3).
+- **RLS, fronteira anon**: `node supabase/verificar-rls-atas.mjs` → 6/6 OK
+  (anon não lê nem escreve `atas`/`atas_presencas`, não executa as três RPCs).
+- **Documento**: 47/47 num teste de mesa sobre `ata-documento.js` — todas as
+  frases fixas da minuta, fuso da data (19, não 18), campo vazio virando lacuna
+  e não `"null"`, escape de `<script>`, `&` e aspa.
+- **ODT**: 11/11 na inspeção do pacote (`mimetype` é o 1º membro e está
+  *Stored*; CRC de todos os membros; os 4 XML bem formados; sem U+FFFD;
+  caractere de controle removido; as 3 notícias viram 3 `<text:p>`) **e o
+  LibreOffice abriu e converteu o arquivo para PDF sem erro**, com acentuação
+  correta e layout fiel ao modelo de papel.
+- **Navegador** (Chrome, servidor local): os módulos carregam, o `fflate` do
+  esm.sh resolve, o ODT é gerado na página (3.142 bytes); `destinoSeguro()`
+  aceita `ata.html?id=<uuid>` e recusa externo e `?nova=1`; o CSS do documento
+  não sofre interferência da página; no modo impressão o topo e a barra somem,
+  `.wrap`/`.painel` são neutralizados e as quebras de página ficam protegidas.
+- **Consistência**: script cruzando os 24 campos editáveis da migração com o
+  formulário, o `salvar()` e o documento — 100% cobertos; nenhum `id` referenciado
+  no JS sem existir no HTML; nenhum `<label for>` órfão.
+
+## O que NÃO foi verificado — precisa das contas de teste
+
+As seções 2, 3 e 4 de `verificar-rls-atas.mjs` ficaram **puladas**: exigem contas
+de teste que não estão versionadas (mesma exigência de
+`verificar-rls-financeiro.mjs`). Falta provar ao vivo:
+
+- confrade comum lê a ata mas não a lavra;
+- secretário cria, edita e aprova;
+- **a trava**: ata aprovada recusa UPDATE e recusa mudança de presença;
+- a reabertura consertada na 024;
+- e, na interface, o ciclo completo salvar → aprovar → reabrir.
+
+Para rodar (criando antes os usuários no Dashboard e as linhas em `confrades`):
+
+```
+SECRETARIO_EMAIL=... SECRETARIO_SENHA=... \
+CONFRADE_EMAIL=...   CONFRADE_SENHA=... \
+NAO_CONFRADE_EMAIL=... NAO_CONFRADE_SENHA=... \
+node supabase/verificar-rls-atas.mjs
+```
+
+O script cria atas com `numero >= 990000` e, como `atas` não tem grant de
+DELETE, **imprime no fim o SQL de limpeza** — ou limpa sozinho se receber
+`SUPABASE_SERVICE_ROLE_KEY`.
+
+## Riscos residuais e próximos passos
+
+1. **A primeira ata precisa do número certo.** O livro de papel vai até a 243;
+   a tela só sugere `max(numero)+1` depois que existir uma ata. Na primeira, a
+   secretária digita.
+2. **O ODT sai sem a bandeira** do cabeçalho (a tela e o PDF têm). Embutir
+   imagem em ODF exige membro binário em `Pictures/`, entrada no manifesto e um
+   `<draw:frame>`. Melhoria possível, custo pequeno, não urgente.
+3. **`saldo_inicial_financeiro` segue sem linha** (item já aberto acima). Até
+   ela existir, o "Sugerir a partir do Financeiro" propõe saldo anterior vazio
+   na primeira ata.
+4. **Relatório de frequência** ("quem faltou quantas vezes") agora é possível —
+   o dado existe em `atas_presencas` —, mas a tela é outra tarefa.
+5. Ata de Conselho Particular não está contemplada; esta minuta é a da
+   Conferência.
+
+## Achados fora do escopo
+
+- **`supabase/README.md` omitia 5 migrações** na tabela de instalação
+  (`confrades_papel_administrador`, `area_vicentino_acesso_unico`,
+  `fix_vw_renda_familiar_rls_bypass`, `financeiro_revoke_consistencia`,
+  `prontuario_sem_campos_obrigatorios`). Quem seguisse aquelas instruções
+  montaria um banco **sem `is_membro_area()`**, de que a Área inteira depende.
+  Trivial e contido → **corrigido**, em commit separado.

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Livro de Atas · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+  <link rel="stylesheet" href="assets/ui-comum.css">
+  <link rel="stylesheet" href="assets/ata-documento.css">
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Livro de Atas</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-nome"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section class="login" id="tela-login">
+    <p>Verificando seu acesso…</p>
+  </section>
+
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <p class="aviso" id="aviso-painel" role="status"></p>
+
+    <!-- Só para quem lavra ata (pode_redigir_ata). Quem lê e exporta não vê. -->
+    <div class="editor" id="bloco-nova" hidden>
+      <h2>Nova ata</h2>
+      <p class="ata-dica">
+        O número continua o livro de papel. A sugestão abaixo é o último número
+        registrado mais um — na primeira ata do sistema, digite o número certo.
+      </p>
+      <form id="form-nova-ata">
+        <div class="grade-3">
+          <div class="campo">
+            <label for="na-numero">Número da reunião</label>
+            <input type="number" id="na-numero" min="1" step="1" required>
+          </div>
+          <div class="campo">
+            <label for="na-data">Data da reunião</label>
+            <input type="date" id="na-data" required>
+          </div>
+          <div class="campo">
+            <label for="na-tipo">Tipo</label>
+            <select id="na-tipo">
+              <option value="ordinaria">Ordinária</option>
+              <option value="extraordinaria">Extraordinária</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-ouro" id="btn-criar-ata">
+          <i class="fa-solid fa-plus" aria-hidden="true"></i> Abrir ata
+        </button>
+        <p class="aviso" id="aviso-nova-ata" role="status"></p>
+      </form>
+    </div>
+
+    <div class="barra">
+      <div class="campo" style="flex:1;min-width:220px;margin-bottom:0;">
+        <label for="busca">Buscar</label>
+        <input type="text" id="busca" placeholder="Número, quem presidiu ou quem lavrou">
+      </div>
+      <div class="filtros" id="filtros-status">
+        <button class="filtro ativo" data-status="todas">Todas</button>
+        <button class="filtro" data-status="rascunho">Rascunhos</button>
+        <button class="filtro" data-status="aprovada">Aprovadas</button>
+      </div>
+    </div>
+
+    <div class="lista" id="lista-atas"></div>
+  </main>
+
+  <script type="module">
+    import { escapar, mensagemDeErro, formatarData } from './assets/supabase-client.js';
+    import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+    import { montarNavegacaoComPapel, notificarOk, notificarErro } from './assets/ui-comum.js';
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const avisoPainel = document.getElementById('aviso-painel');
+
+    let atasCache = [];
+    let filtroStatus = 'todas';
+
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+      if (tipo === 'ok') setTimeout(() => { el.className = 'aviso'; }, 4000);
+    }
+
+    // -------------------------------------------------------------------------
+    // Sessão
+    // -------------------------------------------------------------------------
+    async function iniciar() {
+      const acesso = await exigirAcesso();
+      if (!acesso) return;
+
+      await montarNavegacaoComPapel(sb);
+      document.getElementById('usuario-nome').textContent = acesso.nome;
+      document.getElementById('topo-usuario').hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+
+      // Erro da RPC vira "não pode": um bloco a menos é falha segura, e quem
+      // recusa de verdade a criação é a policy de INSERT (migração 022).
+      const { data: podeRedigir } = await sb.rpc('pode_redigir_ata');
+      document.getElementById('bloco-nova').hidden = podeRedigir !== true;
+
+      await carregarAtas();
+    }
+
+    document.getElementById('btn-sair').addEventListener('click', sair);
+
+    // -------------------------------------------------------------------------
+    // Lista
+    // -------------------------------------------------------------------------
+    async function carregarAtas() {
+      const { data, error } = await sb.from('atas')
+        .select('id, numero, data_reuniao, tipo, presidida_por, redigida_por, status, saldo_atual')
+        .order('numero', { ascending: false })
+        .limit(500);
+
+      if (error) {
+        mostrarAviso(avisoPainel, mensagemDeErro(error, 'Erro ao carregar as atas.'), 'erro');
+        return;
+      }
+      atasCache = data || [];
+
+      // Sugestão do próximo número: o maior já registrado mais um. Na primeira
+      // ata do sistema não há de onde tirar — o campo fica em branco e a
+      // secretária digita o número do livro de papel (o último foi o 243).
+      const proximo = atasCache.length ? Math.max(...atasCache.map(a => a.numero)) + 1 : '';
+      document.getElementById('na-numero').value = proximo;
+      document.getElementById('na-data').value = new Date().toISOString().slice(0, 10);
+
+      renderizarLista();
+    }
+
+    document.querySelectorAll('#filtros-status .filtro').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('#filtros-status .filtro')
+          .forEach(o => o.classList.toggle('ativo', o === b));
+        filtroStatus = b.dataset.status;
+        renderizarLista();
+      });
+    });
+    document.getElementById('busca').addEventListener('input', renderizarLista);
+
+    function renderizarLista() {
+      const lista = document.getElementById('lista-atas');
+      const termo = document.getElementById('busca').value.trim().toLowerCase();
+
+      let filtradas = atasCache;
+      if (filtroStatus !== 'todas') filtradas = filtradas.filter(a => a.status === filtroStatus);
+      if (termo) {
+        filtradas = filtradas.filter(a =>
+          String(a.numero).includes(termo) ||
+          (a.presidida_por || '').toLowerCase().includes(termo) ||
+          (a.redigida_por || '').toLowerCase().includes(termo));
+      }
+
+      if (!filtradas.length) {
+        lista.innerHTML = '<div class="vazio"><i class="fa-regular fa-folder-open"></i>' +
+          '<p>Nenhuma ata encontrada com este filtro.</p></div>';
+        return;
+      }
+
+      lista.innerHTML = filtradas.map(a => {
+        const saldo = a.saldo_atual != null
+          ? 'R$ ' + Number(a.saldo_atual).toLocaleString('pt-BR', { minimumFractionDigits: 2 })
+          : '—';
+        const selo = a.status === 'aprovada'
+          ? '<span class="selo selo--aprovado">Aprovada</span>'
+          : '<span class="selo selo--pendente">Rascunho</span>';
+
+        return '<a class="cartao cartao-link" href="ata.html?id=' + escapar(a.id) + '">' +
+          '<div class="cartao-topo">' +
+            '<div>' + selo + '</div>' +
+            '<span class="cartao-data">' + escapar(formatarData(a.data_reuniao)) + '</span>' +
+          '</div>' +
+          '<div class="cartao-corpo">' +
+            '<h3>Ata n&ordm; ' + escapar(a.numero) +
+              (a.tipo === 'extraordinaria' ? ' &middot; extraordin&aacute;ria' : '') + '</h3>' +
+            '<p class="cartao-texto">' +
+              (a.presidida_por ? 'Presidida por ' + escapar(a.presidida_por) : 'Sem presidente registrado') +
+            '</p>' +
+          '</div>' +
+          '<div class="cartao-interno">' +
+            (a.redigida_por ? 'Lavrada por ' + escapar(a.redigida_por) + ' &middot; ' : '') +
+            'saldo atual ' + saldo +
+          '</div>' +
+        '</a>';
+      }).join('');
+    }
+
+    // -------------------------------------------------------------------------
+    // Nova ata
+    //
+    // A linha é criada AQUI e só então a tela vai para ata.html?id=<uuid>.
+    // Não é detalhe de implementação: `destinoSeguro()` em area-vicentino.js só
+    // aceita query no formato `?id=<uuid>` (a regra que fecha o redirecionamento
+    // aberto). Uma tela de "ata nova" em branco precisaria de algo como
+    // `?nova=1`, e isso obrigaria a afrouxar aquela regex.
+    // -------------------------------------------------------------------------
+    document.getElementById('form-nova-ata').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-criar-ata');
+      const aviso = document.getElementById('aviso-nova-ata');
+      botao.disabled = true;
+
+      try {
+        const { data: { user } } = await sb.auth.getUser();
+        if (!user) { notificarErro('Sua sessão expirou. Entre novamente.'); return; }
+
+        const registro = {
+          numero: Number(document.getElementById('na-numero').value),
+          data_reuniao: document.getElementById('na-data').value,
+          tipo: document.getElementById('na-tipo').value,
+          criado_por: user.id,
+        };
+
+        const { data, error } = await sb.from('atas').insert(registro).select('id').single();
+        if (error) {
+          const t = mensagemDeErro(error, 'Não foi possível abrir a ata.');
+          mostrarAviso(aviso, t, 'erro');
+          notificarErro(t);
+          return;
+        }
+
+        notificarOk('Ata aberta. Agora preencha a reunião.');
+        mostrarAviso(aviso, 'Ata aberta. Abrindo…', 'ok');
+        setTimeout(() => { window.location.href = 'ata.html?id=' + data.id; }, 700);
+      } finally {
+        botao.disabled = false;
+      }
+    });
+
+    iniciar();
+  </script>
+</body>
+</html>

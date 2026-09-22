@@ -121,6 +121,14 @@ const MENSAGEM_POR_CONSTRAINT = {
     'O nome completo precisa ter entre 3 e 150 caracteres.',
   familias_codigo_key:
     'Já existe uma família cadastrada com esse código. Use outro para diferenciar.',
+  atas_numero_key:
+    'Já existe uma ata com esse número. Confira o último número do livro — cada reunião tem o seu.',
+  atas_aprovacao_coerente:
+    'Uma ata aprovada precisa da data de aprovação, e só ata aprovada pode tê-la.',
+  atas_presencas_situacao_check:
+    'A presença precisa ser "presente", "justificado" ou "ausente".',
+  atas_numero_check:
+    'O número da reunião precisa ser maior que zero.',
   pedidos_oracao_consentimento_check:
     'O pedido só pode ser publicado com o consentimento de quem pediu.',
   pedidos_oracao_aprovacao_coerente:
