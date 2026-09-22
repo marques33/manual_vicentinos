@@ -516,3 +516,60 @@ arquivos era risco puro, sem nenhum ganho em troca.
    corrigido pela metade). `require_pandoc()` estava em `render_pdf()`, a ultima chamada de
    `main()` — quando disparava, o script ja havia sobrescrito `build/` e 358 KB de
    intermediario. Validacao de pre-requisito vai no **inicio**, antes da primeira escrita.
+
+---
+
+## 2026-09-22 · Compus dois cadastros de papel com `and` e tranquei a porta para todos
+
+**O que aconteceu.** Na migração 022 (Livro de Atas) escrevi a policy de `UPDATE` de
+`public.atas` como
+
+```sql
+using (public.pode_redigir_ata() and (status = 'rascunho' or public.is_admin()))
+```
+
+e, no comentário ao lado, afirmei que a ata aprovada "só é alcançável por `is_admin()`, que
+é o caminho de reabertura". A afirmação era falsa. `pode_redigir_ata()` lê
+`confrades.papel`; `is_admin()` lê `public.admins`. São **cadastros independentes** — a
+própria migração 006 diz isso com todas as letras. Com o `and` por fora, reabrir exigia
+estar nos dois ao mesmo tempo:
+
+- confrade com papel `administrador` fora de `public.admins` → `is_admin()` falso, `status`
+  não é rascunho → recusado;
+- moderador em `public.admins` sem papel de redação → recusado já no primeiro operando.
+
+Resultado: **ninguém reabria**, e `ata.html` exibia o botão "Reabrir" com base só em
+`is_admin()` — um botão visível que não fazia nada. Consertado na migração 024 antes de ir
+ao ar, separando as duas perguntas em `pode_redigir_ata()` e `pode_reabrir_ata()`.
+
+**Causa raiz.** Escrevi a expressão pensando em UM usuário ("o administrador"), e não nos
+conjuntos que os dois predicados realmente descrevem. Quando duas funções consultam tabelas
+diferentes, `A and (x or B)` não é "A, com B como exceção" — é uma interseção, e a
+"exceção" `B` nunca escapa do `A`. A escape hatch tem que estar no mesmo nível do que ela
+contorna, ou não é escape hatch.
+
+O agravante foi o comentário: descrevi a intenção em vez do comportamento, e o comentário
+errado passou a defender o código errado na releitura. O que denunciou o bug não foi a
+expressão, foi comparar a policy com o `hidden` do botão na tela.
+
+**Regras preventivas.**
+1. **Antes de escrever uma policy que compõe mais de um predicado de papel, verificar se
+   eles leem a MESMA tabela.** Neste projeto não leem: `is_admin()` → `public.admins`;
+   `is_confrade_ativo()`, `pode_lancar_financeiro()`, `pode_redigir_ata()` →
+   `public.confrades`. `is_membro_area()` já é o exemplo certo: compõe com `or`.
+2. **Escape hatch entra por `or` no topo da expressão, nunca aninhada dentro de um `and`.**
+   A forma correta é `(regra_normal) or (excecao)`, e não `regra_normal and (... or excecao)`.
+3. **`using` e `with check` precisam ser conferidos como par.** `using` decide quem alcança
+   a linha antiga; `with check`, quem pode ser autor da nova. Passar num e falhar no outro
+   produz um update que falha pela metade — pior que falhar inteiro.
+4. **Toda expressão de policy vira uma tabela-verdade explícita, uma linha por tipo de
+   usuário real, antes do `db push`.** Para atas foram quatro: confrade comum, secretário,
+   confrade `administrador` e moderador de `public.admins`. Escrever as quatro linhas é o
+   que expôs o bug em um minuto — ler a expressão não expôs em nenhum.
+5. **Quando a tela mostra ou esconde um botão, ela tem que perguntar EXATAMENTE a mesma
+   função que a policy consulta.** Perguntar uma "parecida" é como o botão morto apareceu.
+   Em `ata.html`, `podeEditarAgora()` hoje espelha `ata_aberta_para_edicao()` termo a termo,
+   com o comentário dizendo que espelhar é o ponto.
+6. **Comentário de policy descreve o que a expressão FAZ, não o que eu quis que ela
+   fizesse.** Se não consigo escrever o comportamento sem usar a palavra "deveria", ainda
+   não entendi a expressão.
