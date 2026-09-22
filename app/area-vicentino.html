@@ -580,7 +580,7 @@
         <span><i class="fa-solid fa-user-check" aria-hidden="true"></i>
           Conectado como <strong id="usuario-nome"></strong></span>
         <button type="button" class="btn-sair" id="btn-alterar-senha">
-          <i class="fa-solid fa-key" aria-hidden="true"></i> Alterar senha
+          <i class="fa-solid fa-id-card" aria-hidden="true"></i> Meus dados
         </button>
         <button type="button" class="btn-sair" id="btn-sair">
           <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
@@ -588,14 +588,35 @@
       </div>
 
       <div class="login-card" id="painel-alterar-senha" style="max-width:430px; margin:0 auto 34px;" hidden>
-        <h2 style="font-size:1.3rem;">Alterar minha senha</h2>
-        <form id="form-alterar-senha">
+        <h2 style="font-size:1.3rem;">Meus dados</h2>
+        <p style="font-size:.85rem; color:#6B5747; margin:-6px 0 18px;">
+          Corrija o que for seu. Papel e categoria são definidos pela
+          Conferência — fale com o administrador para mudá-los.
+        </p>
+        <form id="form-meus-dados">
+          <div class="campo">
+            <label for="meu-nome">Nome completo</label>
+            <input type="text" id="meu-nome" minlength="3" maxlength="150" required
+                   autocomplete="name">
+          </div>
+          <div class="campo">
+            <label for="meu-email">E-mail (seu login)</label>
+            <input type="email" id="meu-email" maxlength="200" required
+                   autocomplete="email">
+            <span style="display:block; font-size:.78rem; color:#9A8470; margin-top:5px;">
+              Trocar aqui vale na hora. A próxima entrada já é por este
+              endereço — confira antes de salvar.
+            </span>
+          </div>
           <div class="campo">
             <label for="nova-senha">Nova senha</label>
-            <input type="text" id="nova-senha" minlength="8" required>
+            <input type="text" id="nova-senha" minlength="8" autocomplete="new-password">
+            <span style="display:block; font-size:.78rem; color:#9A8470; margin-top:5px;">
+              Deixe em branco para manter a senha atual.
+            </span>
           </div>
-          <button type="submit" class="btn-ouro">
-            <i class="fa-solid fa-check" aria-hidden="true"></i> Salvar nova senha
+          <button type="submit" class="btn-ouro" id="btn-salvar-meus-dados">
+            <i class="fa-solid fa-check" aria-hidden="true"></i> Salvar meus dados
           </button>
           <p class="aviso-login" id="aviso-alterar-senha" role="status"></p>
         </form>
@@ -826,33 +847,114 @@
     document.getElementById('btn-sair').addEventListener('click', sair);
 
     // ------------------------------------------------------------------------
-    // Alterar a própria senha. Diferente de criar usuário ou redefinir senha
-    // de terceiro, isto não precisa de service_role nem de Edge Function:
-    // sb.auth.updateUser() vale para a sessão já autenticada de qualquer
-    // confrade/admin, sobre a própria conta.
+    // Meus dados — o vicentino corrige o que é dele.
+    //
+    // Três campos, três caminhos DIFERENTES, e a diferença não é acidente:
+    //
+    //   nome  → UPDATE direto em `confrades`. A migração 027 dá ao
+    //           `authenticated` um grant de UPDATE **só da coluna
+    //           nome_completo**, mais a policy do próprio dono. Sem o grant de
+    //           coluna, a policy sozinha deixaria o confrade escrever
+    //           `papel = 'administrador'` na própria linha.
+    //   e-mail→ Edge Function. E-mail mora em `auth.users`, que nenhuma policy
+    //           deste schema alcança, e o caminho padrão
+    //           (sb.auth.updateUser({email})) manda confirmação por e-mail —
+    //           que não chega, porque o projeto não tem SMTP próprio.
+    //   senha → sb.auth.updateUser(). Esta sim a sessão resolve sozinha, sem
+    //           service_role e sem e-mail.
     // ------------------------------------------------------------------------
-    const painelSenha = document.getElementById('painel-alterar-senha');
-    document.getElementById('btn-alterar-senha').addEventListener('click', () => {
-      painelSenha.hidden = !painelSenha.hidden;
-      if (!painelSenha.hidden) document.getElementById('nova-senha').focus();
+    const painelDados = document.getElementById('painel-alterar-senha');
+    const avisoDados = document.getElementById('aviso-alterar-senha');
+
+    document.getElementById('btn-alterar-senha').addEventListener('click', async () => {
+      painelDados.hidden = !painelDados.hidden;
+      if (painelDados.hidden) return;
+
+      avisoDados.textContent = '';
+      document.getElementById('nova-senha').value = '';
+
+      // Preenche com o que está gravado AGORA. Um formulário em branco faria o
+      // confrade redigitar o nome para trocar só o e-mail — e um nome
+      // redigitado é um nome com chance de sair diferente.
+      const { data: { user } } = await sb.auth.getUser();
+      document.getElementById('meu-email').value = user?.email ?? '';
+
+      const { data: meuCadastro } = await sb.from('confrades')
+        .select('nome_completo').eq('user_id', user?.id ?? '').maybeSingle();
+      document.getElementById('meu-nome').value = meuCadastro?.nome_completo ?? '';
+
+      document.getElementById('meu-nome').focus();
     });
 
-    document.getElementById('form-alterar-senha').addEventListener('submit', async (ev) => {
+    document.getElementById('form-meus-dados').addEventListener('submit', async (ev) => {
       ev.preventDefault();
-      const avisoSenha = document.getElementById('aviso-alterar-senha');
-      const campoSenha = document.getElementById('nova-senha');
-      avisoSenha.textContent = '';
+      const botao = document.getElementById('btn-salvar-meus-dados');
+      botao.disabled = true;
+      avisoDados.textContent = '';
 
-      if (campoSenha.value.length < 8) {
-        avisoSenha.textContent = 'A senha precisa ter ao menos 8 caracteres.';
-        return;
+      const nome = document.getElementById('meu-nome').value.trim();
+      const email = document.getElementById('meu-email').value.trim();
+      const senha = document.getElementById('nova-senha').value;
+
+      const { data: { user } } = await sb.auth.getUser();
+      const feito = [];
+
+      try {
+        // --- nome ------------------------------------------------------------
+        const { data: meuCadastro } = await sb.from('confrades')
+          .select('nome_completo').eq('user_id', user.id).maybeSingle();
+
+        if (meuCadastro && nome && nome !== meuCadastro.nome_completo) {
+          const { error } = await sb.from('confrades')
+            .update({ nome_completo: nome }).eq('user_id', user.id);
+          if (error) {
+            avisoDados.textContent = 'Não foi possível salvar o nome.';
+            return;
+          }
+          feito.push('nome');
+          // O topo diz "Conectado como ___" — deixá-lo com o nome antigo faria
+          // a tela contradizer o que acabou de ser salvo.
+          document.getElementById('usuario-nome').textContent = nome;
+        }
+
+        // --- e-mail ----------------------------------------------------------
+        if (email && email.toLowerCase() !== (user.email ?? '').toLowerCase()) {
+          const { data, error } = await sb.functions.invoke('gerenciar-usuarios', {
+            body: { acao: 'atualizar_meu_email', email },
+          });
+          // FunctionsHttpError traz a resposta em error.context — é onde está o
+          // {ok:false, erro:"..."} que a function devolveu.
+          const corpo = data ?? await error?.context?.json?.().catch(() => null);
+          if (!corpo?.ok) {
+            avisoDados.textContent = corpo?.erro === 'email_ja_cadastrado'
+              ? 'Já existe uma conta com este e-mail.'
+              : 'Não foi possível trocar o e-mail.';
+            return;
+          }
+          feito.push('e-mail');
+        }
+
+        // --- senha -----------------------------------------------------------
+        if (senha) {
+          if (senha.length < 8) {
+            avisoDados.textContent = 'A senha precisa ter ao menos 8 caracteres.';
+            return;
+          }
+          const { error } = await sb.auth.updateUser({ password: senha });
+          if (error) {
+            avisoDados.textContent = 'Não foi possível alterar a senha.';
+            return;
+          }
+          document.getElementById('nova-senha').value = '';
+          feito.push('senha');
+        }
+
+        avisoDados.textContent = feito.length
+          ? `Salvo: ${feito.join(', ')}.`
+          : 'Nada mudou.';
+      } finally {
+        botao.disabled = false;
       }
-
-      const { error } = await sb.auth.updateUser({ password: campoSenha.value });
-      campoSenha.value = '';
-      avisoSenha.textContent = error
-        ? 'Não foi possível alterar a senha. Tente novamente.'
-        : 'Senha alterada com sucesso.';
     });
 
     if (CONFIGURADO) {

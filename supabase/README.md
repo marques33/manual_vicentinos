@@ -55,6 +55,7 @@ sem leitura pública alguma. Acesso exige `authenticated` + estar em
    | `20260922130200_atas_reabertura.sql` | `pode_reabrir_ata()` + conserto da reabertura da ata aprovada |
    | `20260922140000_atas_movimento_caixa.sql` | as 36 linhas do Movimento de Caixa + contadores, em `public.atas` |
    | `20260922140100_confrades_categoria.sql` | `confrades.categoria` e a cópia congelada em `atas_presencas.categoria` |
+   | `20260922150000_confrades_autosservico.sql` | grant de coluna `nome_completo` + policy do próprio dono + trigger de `atualizado_em` |
 
    Ou, com a CLI: `npx supabase db push`.
 
@@ -200,6 +201,39 @@ o que a prosa da ata recita — mas saem das 36 linhas na hora de salvar (o mapa
 está no cabeçalho da migração 025). Enquanto a folha estiver em branco eles
 seguem digitados, que é o que mantém editável a ata lavrada antes dela existir.
 
+**Quem edita o quê, no cadastro de confrade**
+
+| Campo | Onde mora | Quem altera |
+|---|---|---|
+| `nome_completo` | `public.confrades` | **o próprio** (grant de coluna, migração 027) e o administrador |
+| e-mail de acesso | `auth.users` | **o próprio** (`atualizar_meu_email`) e o administrador (`atualizar_confrade`) |
+| senha | `auth.users` | **o próprio** (`sb.auth.updateUser`) e o administrador (`redefinir_senha`) |
+| `papel`, `categoria` | `public.confrades` | **só o administrador** — são decisão da Conferência |
+| `ativo` | `public.confrades` | ninguém pela UI ainda; só SQL |
+
+**A trava que sustenta isso é privilégio de COLUNA, não policy.** `confrades`
+tem `grant update (nome_completo) to authenticated` mais a policy
+`user_id = auth.uid()`. Uma policy sozinha deixaria o confrade rodar
+`update confrades set papel = 'administrador' where user_id = auth.uid()` — a
+linha é dele, a policy passa. RLS escolhe LINHAS; o grant escolhe COLUNAS, e
+aqui são necessários os dois. Provado por
+`node supabase/verificar-cadastro-confrades.mjs`, que tenta a escalação de
+propósito (e tenta também `papel` de carona no mesmo `UPDATE` do nome).
+
+**A troca de e-mail não passa por confirmação**, porque o projeto **não tem
+SMTP próprio** e `mailer_autoconfirm` é `false` (medido em 22/09/2026 no
+`/auth/v1/settings`). O fluxo padrão `sb.auth.updateUser({ email })` mandaria
+uma mensagem pelo mailer default do Supabase (~2/hora, não-produção) que na
+prática não chega. Por isso as duas pontas passam pela Edge Function, com
+`email_confirm: true`. Consequência aceita: ninguém prova a posse do novo
+endereço, e um erro de digitação tranca o confrade fora — recuperável pelo
+administrador em `admin.html`.
+
+**`atualizar_meu_email` é a única ação da Edge Function que um confrade comum
+alcança**, e o alvo dela sai do **JWT**, nunca do corpo da requisição. Mandar
+`user_id` no corpo não desvia nada — o verificador testa isso apontando para
+outro confrade e exigindo que o e-mail do outro fique intacto.
+
 **A categoria do associado (migração 026)** — `confrade` / `consocia` /
 `aspirante` — alimenta os contadores de presença do cabeçalho da folha. É
 diferente de `papel`, que é função na Conferência: uma consócia pode ser
@@ -220,6 +254,12 @@ da folha de papel de 22/08/2026 (Ata 240: linha 13 = 107,00, linha 15 =
 `node supabase/verificar-rls-atas.mjs` (instruções no topo do arquivo) — precisa
 de contas de teste com os papéis para provar o lado positivo e a trava; cria
 atas com `numero >= 990000` e diz no fim como limpá-las.
+
+`SUPABASE_SERVICE_ROLE_KEY=... node supabase/verificar-cadastro-confrades.mjs` —
+prova as travas do autosserviço contra o banco de verdade. Ao contrário dos
+outros, **cria e apaga as contas descartáveis de que precisa**, então não
+depende de conta de teste versionada. A `service_role` vem só do ambiente:
+`npx supabase projects api-keys --project-ref <ref>`, nunca gravada em arquivo.
 
 ## Controle Orçamentário
 

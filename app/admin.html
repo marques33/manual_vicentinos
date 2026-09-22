@@ -228,16 +228,6 @@
       margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
     }
 
-    /* Categoria do associado (confrade / consócia / aspirante). Grava na troca,
-       sem botão — por isso fica junto das ações, e não no corpo do cartão. */
-    .rotulo-inline {
-      align-self: center; font-size: 0.82rem; color: var(--text-soft);
-    }
-    .sel-categoria {
-      padding: 6px 10px; border: 1px solid var(--border); border-radius: 7px;
-      background: #fff; font-size: 0.86rem; font-family: inherit;
-    }
-    .sel-categoria:disabled { opacity: .6; cursor: progress; }
 
     .grade-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .caixa-linha { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
@@ -553,6 +543,57 @@
             <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Criar usuário
           </button>
           <p class="aviso" id="aviso-novo-usuario" role="status"></p>
+        </form>
+      </div>
+
+      <div class="editor" id="painel-editar" hidden>
+        <h2>Editar cadastro de <span id="editar-nome-atual"></span></h2>
+        <p class="dica" style="margin:-8px 0 16px;">
+          O e-mail é o login do vicentino. Trocá-lo aqui vale na hora, sem
+          confirmação por e-mail — a próxima entrada dele já é pelo endereço
+          novo. A senha não muda.
+        </p>
+        <form id="form-editar-confrade">
+          <input type="hidden" id="editar-user-id">
+          <div class="grade-2">
+            <div class="campo">
+              <label for="editar-nome">Nome completo *</label>
+              <input type="text" id="editar-nome" maxlength="150" minlength="3" required>
+            </div>
+            <div class="campo">
+              <label for="editar-email">E-mail (login) *</label>
+              <input type="email" id="editar-email" maxlength="200" required>
+            </div>
+          </div>
+          <div class="grade-2">
+            <div class="campo">
+              <label for="editar-papel">Papel</label>
+              <select id="editar-papel">
+                <option value="vicentino">Vicentino</option>
+                <option value="presidente">Presidente</option>
+                <option value="vice_presidente">Vice-presidente</option>
+                <option value="tesoureiro">Tesoureiro</option>
+                <option value="secretario">Secretário</option>
+                <option value="confrade_espiritual">Confrade espiritual</option>
+                <option value="administrador">Administrador (técnico do site)</option>
+              </select>
+              <span class="dica">Função na Conferência: decide quem lavra ata e quem lança dinheiro.</span>
+            </div>
+            <div class="campo">
+              <label for="editar-categoria">Categoria</label>
+              <select id="editar-categoria">
+                <option value="confrade">Confrade</option>
+                <option value="consocia">Consócia</option>
+                <option value="aspirante">Aspirante</option>
+              </select>
+              <span class="dica">Condição na Sociedade — conta no cabeçalho do Movimento de Caixa.</span>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="submit" class="btn btn-ouro" id="btn-confirmar-editar">Salvar cadastro</button>
+            <button type="button" class="btn btn-neutro" id="btn-cancelar-editar">Cancelar</button>
+          </div>
+          <p class="aviso" id="aviso-editar" role="status"></p>
         </form>
       </div>
 
@@ -1087,6 +1128,23 @@
     // chave de serviço do lado dela; o navegador nunca vê essa chave.
     // sb.functions.invoke() já manda o JWT da sessão atual sozinho.
     // -------------------------------------------------------------------------
+    // Uma tabela só para criar e editar: os dois caminhos passam pelas mesmas
+    // validações na Edge Function, e duas listas divergiriam na primeira
+    // mensagem nova.
+    const ERRO_CADASTRO = {
+      email_ja_cadastrado: 'Já existe uma conta com este e-mail.',
+      email_invalido: 'E-mail inválido.',
+      senha_curta: 'A senha precisa ter ao menos 8 caracteres.',
+      nome_invalido: 'Informe o nome completo (ao menos 3 caracteres).',
+      papel_invalido: 'Papel inválido.',
+      categoria_invalida: 'Categoria inválida.',
+      user_id_invalido: 'Usuário inválido.',
+      confrade_nao_encontrado: 'Este usuário não tem cadastro de confrade.',
+      nada_a_atualizar: 'Nada foi alterado.',
+      falha_trocar_email: 'Não foi possível trocar o e-mail.',
+      acesso_negado: 'Sua sessão não tem permissão para isto.',
+    };
+
     const CATEGORIA_ROTULO = {
       confrade: 'Confrade', consocia: 'Consócia', aspirante: 'Aspirante',
     };
@@ -1142,16 +1200,15 @@
               ${u.confrade_ativo ? '<span class="selo selo--pendente">Confrade ativo</span>' : ''}
             </span>
           </div>
-          <p class="cartao-texto">${escapar(u.email)}${u.papel ? ' · ' + escapar(PAPEL_ROTULO[u.papel] || u.papel) : ''}</p>
+          <p class="cartao-texto">${escapar(u.email)}${u.papel ? ' · ' + escapar(PAPEL_ROTULO[u.papel] || u.papel) : ''}${u.categoria ? ' · ' + escapar(CATEGORIA_ROTULO[u.categoria] || u.categoria) : ''}</p>
           <div class="cartao-acoes">
-            ${u.categoria ? `
-            <label class="rotulo-inline" for="cat-${escapar(u.user_id)}">Categoria</label>
-            <select class="sel-categoria" id="cat-${escapar(u.user_id)}"
-              data-id="${escapar(u.user_id)}" data-atual="${escapar(u.categoria)}">
-              ${Object.entries(CATEGORIA_ROTULO).map(([valor, rotulo]) =>
-                `<option value="${valor}"${u.categoria === valor ? ' selected' : ''}>${rotulo}</option>`
-              ).join('')}
-            </select>` : ''}
+            ${u.papel ? `
+            <button type="button" class="btn btn-neutro btn-pequeno btn-editar"
+              data-id="${escapar(u.user_id)}" data-nome="${escapar(u.nome)}"
+              data-email="${escapar(u.email || '')}" data-papel="${escapar(u.papel)}"
+              data-categoria="${escapar(u.categoria || 'confrade')}">
+              <i class="fa-solid fa-pen" aria-hidden="true"></i> Editar cadastro
+            </button>` : ''}
             <button type="button" class="btn btn-neutro btn-pequeno btn-redefinir"
               data-id="${escapar(u.user_id)}" data-nome="${escapar(u.nome)}">
               <i class="fa-solid fa-key" aria-hidden="true"></i> Redefinir senha
@@ -1160,28 +1217,22 @@
         </article>
       `).join('');
 
-      // A categoria grava na hora: é um campo só, e um botão "salvar" por
-      // cartão obrigaria a lembrar de clicar em cada um dos que precisam ser
-      // revistos depois da migração 026.
-      lista.querySelectorAll('.sel-categoria').forEach((seletor) => {
-        seletor.addEventListener('change', async () => {
-          const anterior = seletor.dataset.atual;
-          seletor.disabled = true;
-          const resultado = await chamarGerenciarUsuarios({
-            acao: 'atualizar_categoria',
-            user_id: seletor.dataset.id,
-            categoria: seletor.value,
-          });
-          seletor.disabled = false;
-          if (!resultado.ok) {
-            // Voltar ao valor anterior é o ponto: um seletor que mostra a
-            // escolha nova depois de o banco a recusar mente sobre o cadastro.
-            seletor.value = anterior;
-            notificarErro('Não foi possível mudar a categoria.');
-            return;
-          }
-          seletor.dataset.atual = seletor.value;
-          notificarOk('Categoria atualizada.');
+      // O painel de edição é preenchido a partir dos `data-` do botão, e não
+      // de uma nova consulta: a lista já veio do servidor com tudo, e reler
+      // abriria a janela em que a tela mostra um dado e grava outro.
+      lista.querySelectorAll('.btn-editar').forEach((botao) => {
+        botao.addEventListener('click', () => {
+          document.getElementById('editar-user-id').value = botao.dataset.id;
+          document.getElementById('editar-nome-atual').textContent = botao.dataset.nome;
+          document.getElementById('editar-nome').value = botao.dataset.nome;
+          document.getElementById('editar-email').value = botao.dataset.email;
+          document.getElementById('editar-papel').value = botao.dataset.papel;
+          document.getElementById('editar-categoria').value = botao.dataset.categoria;
+          document.getElementById('aviso-editar').className = 'aviso';
+          const painel = document.getElementById('painel-editar');
+          document.getElementById('painel-redefinir').hidden = true;
+          painel.hidden = false;
+          painel.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
 
@@ -1191,6 +1242,7 @@
           document.getElementById('redefinir-nome').textContent = botao.dataset.nome;
           document.getElementById('redefinir-senha').value = '';
           document.getElementById('aviso-redefinir').className = 'aviso';
+          document.getElementById('painel-editar').hidden = true;
           const painel = document.getElementById('painel-redefinir');
           painel.hidden = false;
           painel.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1223,15 +1275,7 @@
       botao.disabled = false;
       const avisoEl = document.getElementById('aviso-novo-usuario');
       if (!resultado.ok) {
-        const mensagens = {
-          email_ja_cadastrado: 'Já existe uma conta com este e-mail.',
-          email_invalido: 'E-mail inválido.',
-          senha_curta: 'A senha precisa ter ao menos 8 caracteres.',
-          nome_invalido: 'Informe o nome completo (ao menos 3 caracteres).',
-          papel_invalido: 'Papel inválido.',
-          categoria_invalida: 'Categoria inválida.',
-        };
-        mostrarAviso(avisoEl, mensagens[resultado.erro] || 'Não foi possível criar o usuário.', 'erro');
+        mostrarAviso(avisoEl, ERRO_CADASTRO[resultado.erro] || 'Não foi possível criar o usuário.', 'erro');
         return;
       }
 
@@ -1243,6 +1287,41 @@
 
     document.getElementById('btn-cancelar-redefinir').addEventListener('click', () => {
       document.getElementById('painel-redefinir').hidden = true;
+    });
+
+    document.getElementById('btn-cancelar-editar').addEventListener('click', () => {
+      document.getElementById('painel-editar').hidden = true;
+    });
+
+    // Os quatro campos vão JUNTOS, num `atualizar_confrade` só. Mandar um por
+    // campo alterado deixaria o cadastro meio salvo quando o segundo falhasse —
+    // e o que falha é justamente o e-mail, por duplicidade.
+    document.getElementById('form-editar-confrade').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-confirmar-editar');
+      const avisoEl = document.getElementById('aviso-editar');
+      botao.disabled = true;
+
+      const resultado = await chamarGerenciarUsuarios({
+        acao: 'atualizar_confrade',
+        user_id: document.getElementById('editar-user-id').value,
+        nome: document.getElementById('editar-nome').value.trim(),
+        email: document.getElementById('editar-email').value.trim(),
+        papel: document.getElementById('editar-papel').value,
+        categoria: document.getElementById('editar-categoria').value,
+      });
+
+      botao.disabled = false;
+      if (!resultado.ok) {
+        mostrarAviso(avisoEl, ERRO_CADASTRO[resultado.erro] || 'Não foi possível salvar o cadastro.', 'erro');
+        notificarErro('Não foi possível salvar o cadastro.');
+        return;
+      }
+
+      mostrarAviso(avisoEl, 'Cadastro salvo. Se o e-mail mudou, a próxima entrada já é pelo endereço novo.', 'ok');
+      notificarOk('Cadastro salvo.');
+      document.getElementById('painel-editar').hidden = true;
+      await carregarUsuarios();
     });
 
     document.getElementById('form-redefinir-senha').addEventListener('submit', async (ev) => {

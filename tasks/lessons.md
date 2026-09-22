@@ -617,3 +617,78 @@ correta.
 chegar no Python: a busca por uma string contendo `\n` literal não casou e o
 `assert` morreu sem explicar. Para casar texto com barra invertida, usar a
 ferramenta Edit (que recebe a string literal) em vez de heredoc.
+
+---
+
+## RLS escolhe linhas; GRANT escolhe colunas — e o autosserviço precisa dos dois
+
+**2026-09-22 · autosserviço de cadastro (migração 027)**
+
+Para deixar o confrade corrigir o próprio nome, a policy óbvia é
+
+```sql
+for update using (user_id = auth.uid())
+```
+
+e ela é uma **escalação de privilégio**. Com o `grant update` na tabela inteira,
+qualquer confrade roda, no console do navegador,
+
+```js
+sb.from('confrades').update({ papel: 'administrador' }).eq('user_id', meuId)
+```
+
+— a linha é dele, a policy passa, e ele acabou de se eleger. `papel` é o que
+decide quem lavra ata e quem lança dinheiro.
+
+A trava certa é `grant update (nome_completo) on confrades to authenticated`:
+o Postgres confere privilégio de coluna contra a lista do `SET` e recusa antes
+de consultar a policy. As duas camadas são necessárias e nenhuma substitui a
+outra — o grant diz QUAIS COLUNAS, a policy diz QUAIS LINHAS.
+
+**Regras preventivas.**
+1. **Toda vez que um usuário comum ganhar UPDATE numa tabela que também guarda
+   autorização, o grant é de COLUNA.** A pergunta é "quais colunas?", nunca
+   "qual linha?".
+2. **Testar a escalação de propósito**, e testar também a coluna proibida **de
+   carona junto com a permitida, no mesmo comando** — é o caso que passaria se
+   o privilégio fosse por linha.
+3. **Ação de autosserviço tira o alvo do JWT, nunca do corpo.** Sem senha e sem
+   confirmação por e-mail, um `user_id` no corpo é permissão para trocar o
+   login de qualquer outro. Testar mandando o corpo envenenado.
+4. **Lista de permissão explícita para o portão por ação.** Ação fora da lista
+   cai no portão de administrador — inclusive a desconhecida e a que alguém
+   acrescentar depois sem ler o comentário.
+
+## SDK que achata erro esconde a causa; o endpoint cru não
+
+Mesma sessão. E-mail duplicado respondia "não foi possível trocar o e-mail" em
+vez de "já existe uma conta com este e-mail". Duas tentativas de casar frases
+na mensagem falharam.
+
+Sonda direta ao endpoint mostrou por quê: o GoTrue devolve
+`{"code":"23505","message":"duplicate key value violates unique constraint
+\"users_email_partial_key\"","detail":"... already exists."}` — e
+`supabase.auth.admin.updateUserById()` achatava isso em algo sem o código e sem
+o `detail`. Trocado o SDK por `fetch` no endpoint: `23505` é sinal exato.
+
+**Regras preventivas.**
+1. **Antes de adivinhar a frase de erro de um serviço, medir a resposta CRUA**
+   com uma sonda descartável. Duas rodadas de deploy-e-testar custaram mais que
+   a sonda de trinta segundos.
+2. **Quando classificar o erro faz parte do comportamento** (mensagem diferente
+   na tela), não passar por camada que reempacota o erro. Código de erro
+   estável > texto de mensagem.
+3. **Teste de caminho infeliz é teste de primeira classe.** O caminho feliz
+   passou nas duas rodadas; quem pegou o defeito foi a asserção de que o e-mail
+   duplicado responde `email_ja_cadastrado`.
+
+## Fundir uma ação de API abre janela entre o deploy do backend e o do front
+
+`atualizar_categoria` foi fundida em `atualizar_confrade` horas depois de
+publicada. Entre implantar a function e dar push no front, a produção chamava
+uma ação que já não existia. Foi assumido conscientemente (o seletor tinha
+horas de vida e ninguém o usara), mas é dívida.
+
+**Regra preventiva.** Renomear ou fundir ação de API tem duas ordens seguras:
+manter a ação antiga como apelido da nova por um deploy, **ou** combinar a
+janela com o usuário antes. Nunca deduzir que "ninguém está usando".
