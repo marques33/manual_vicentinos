@@ -40,11 +40,16 @@ sem leitura pública alguma. Acesso exige `authenticated` + estar em
    | `20260915120300_prontuario_necessidades_intervencoes.sql` | `public.necessidades`, `public.intervencoes` |
    | `20260915120400_prontuario_parentescos_cruzados.sql` | `public.parentescos_cruzados` (vínculo entre famílias) |
    | `20260915120500_parametros_beneficios.sql` | `public.parametros_beneficios`, `calcular_elegibilidade_pessoa()` |
+   | `20260915120600_confrades_papel_administrador.sql` | papel `administrador` em `confrades.papel` |
+   | `20260916120000_area_vicentino_acesso_unico.sql` | `is_membro_area()` — autorização única da Área do Vicentino |
+   | `20260916130000_fix_vw_renda_familiar_rls_bypass.sql` | `vw_renda_familiar` com `security_invoker` |
    | `20260916150000_financeiro_categorias.sql` | `public.categorias_financeiras`, `pode_lancar_financeiro()` |
    | `20260916150100_financeiro_lancamentos.sql` | `public.lancamentos_financeiros` + RLS + soft delete |
    | `20260916150200_financeiro_saldo_inicial.sql` | `public.saldo_inicial_financeiro` (linha única) |
    | `20260916150300_financeiro_conciliacoes.sql` | `public.conciliacoes_financeiras`, `vw_saldo_financeiro` |
    | `20260916150400_financeiro_storage.sql` | bucket privado `comprovantes-financeiros` + policies |
+   | `20260916150500_financeiro_revoke_consistencia.sql` | `revoke` nas funções do financeiro + trigger de consistência |
+   | `20260920120000_prontuario_sem_campos_obrigatorios.sql` | remove obrigatoriedade dos campos do prontuário |
 
    Ou, com a CLI: `npx supabase db push`.
 
