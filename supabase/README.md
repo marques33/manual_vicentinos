@@ -53,6 +53,8 @@ sem leitura pública alguma. Acesso exige `authenticated` + estar em
    | `20260922130000_atas.sql` | `public.atas`, `pode_redigir_ata()` + RLS (trava da ata aprovada) |
    | `20260922130100_atas_presencas.sql` | `public.atas_presencas`, `ata_aberta_para_edicao()` |
    | `20260922130200_atas_reabertura.sql` | `pode_reabrir_ata()` + conserto da reabertura da ata aprovada |
+   | `20260922140000_atas_movimento_caixa.sql` | as 36 linhas do Movimento de Caixa + contadores, em `public.atas` |
+   | `20260922140100_confrades_categoria.sql` | `confrades.categoria` e a cópia congelada em `atas_presencas.categoria` |
 
    Ou, com a CLI: `npx supabase db push`.
 
@@ -168,14 +170,56 @@ select id, 'Nome da secretária', 'secretario' from auth.users where email = 'se
 uma sequence: a última ata manuscrita é a 243, e a primeira ata do sistema
 recebe o número à mão. Daí em diante a tela sugere `max(numero) + 1`.
 
-**Os nove valores da tesouraria são gravados na ata, não calculados.** A tela
+**Os valores da tesouraria são gravados na ata, não calculados.** A tela
 sugere a partir de `lancamentos_financeiros`, mas o que fica é o retrato do que
 a tesoureira apresentou naquele dia — corrigir um lançamento meses depois não
 pode reescrever uma ata já lida e aprovada.
 
-Conferir com `node supabase/verificar-rls-atas.mjs` (instruções no topo do
-arquivo). Ele precisa de contas de teste com os papéis para provar o lado
-positivo e a trava; cria atas com `numero >= 990000` e diz no fim como limpá-las.
+### Movimento de Caixa (migração 025)
+
+A Conferência preenche **dois** impressos por reunião: a minuta da ata (a prosa)
+e o **Movimento de Caixa** do Conselho Metropolitano — 36 linhas numeradas, que
+é a folha ENVIADA ao Conselho Particular. As 36 linhas moram em `public.atas`,
+ao lado da minuta: é a mesma reunião, a mesma gravação e a mesma trava de
+aprovação.
+
+Sete linhas são conta e não se digitam: **6** (base da décima, linhas 1 a 5),
+**13** (6 a 12), **15** (13+14), **28** (16 a 27), **29** (15−28), **30** (28+29)
+e **36** (29+34+35). A conferência do impresso — **a linha 15 tem que bater com
+a 30** — aparece na tela, em vermelho quando não fecha.
+
+Três linhas *parecem* conta e não são: a **24** (o papel orienta 10% da linha 6),
+a **26** (linha 8) e a **27** (linha 12). O impresso traz a fórmula como
+orientação; o que se grava é o que foi **de fato pago**, e a diferença entre o
+devido e o pago é justamente o que a **linha 34** registra.
+
+**Os nove campos da minuta viraram derivados.** `saldo_anterior`, `coleta`,
+`outras_fontes`, `soma_receita`, `auxilio_assistidos`, `despesas_diversas`,
+`decima`, `soma_despesa` e `saldo_atual` continuam existindo e continuam sendo
+o que a prosa da ata recita — mas saem das 36 linhas na hora de salvar (o mapa
+está no cabeçalho da migração 025). Enquanto a folha estiver em branco eles
+seguem digitados, que é o que mantém editável a ata lavrada antes dela existir.
+
+**A categoria do associado (migração 026)** — `confrade` / `consocia` /
+`aspirante` — alimenta os contadores de presença do cabeçalho da folha. É
+diferente de `papel`, que é função na Conferência: uma consócia pode ser
+tesoureira. A migração preenche os cadastros existentes com `confrade`, e
+**eles precisam ser revistos** em `app/admin.html` (o seletor no cartão de cada
+usuário) — até lá a folha conta toda a Conferência numa linha só. A escrita
+passa pela Edge Function `gerenciar-usuarios` (ação `atualizar_categoria`),
+porque `confrades` só tem grant de `SELECT`.
+
+### Como conferir
+
+`node supabase/verificar-movimento-caixa.mjs` — **não precisa de banco nem de
+rede**: cruza as colunas da migração 025 com o módulo
+`app/assets/ata-movimento-caixa.js` e com o formulário, e reproduz a aritmética
+da folha de papel de 22/08/2026 (Ata 240: linha 13 = 107,00, linha 15 =
+6.446,70, linha 28 = 510,70, linha 29 = 5.936,00, linha 30 = 6.446,70).
+
+`node supabase/verificar-rls-atas.mjs` (instruções no topo do arquivo) — precisa
+de contas de teste com os papéis para provar o lado positivo e a trava; cria
+atas com `numero >= 990000` e diz no fim como limpá-las.
 
 ## Controle Orçamentário
 

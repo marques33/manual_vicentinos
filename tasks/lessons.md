@@ -573,3 +573,47 @@ expressão, foi comparar a policy com o `hidden` do botão na tela.
 6. **Comentário de policy descreve o que a expressão FAZ, não o que eu quis que ela
    fizesse.** Se não consigo escrever o comportamento sem usar a palavra "deveria", ainda
    não entendi a expressão.
+
+---
+
+## Valor derivado que sobrevive à fonte vira mentira gravada
+
+**2026-09-22 · Movimento de Caixa (migração 025)**
+
+Os nove campos de caixa da minuta passaram a ser DERIVADOS das 36 linhas do
+Movimento de Caixa, e travados (`readOnly`) enquanto a folha tem algo escrito.
+Com a folha em branco eles voltam a ser digitados — é o que mantém editável a
+ata lavrada antes de a folha existir.
+
+O defeito estava na TRANSIÇÃO de volta. Ao esvaziar a folha, os nove
+destravavam **mantendo o último valor derivado**. Como `ataDaTela()` lê os nove
+da tela quando a folha está vazia, a ata passaria a GRAVAR números que ninguém
+digitou e cuja origem acabara de ser apagada. Nenhuma tela ficava vermelha:
+os campos estavam preenchidos, os totais somavam, tudo parecia certo.
+
+Achei rodando a tela de verdade no navegador — digitar 25 em "coleta" e ver o
+total dizer 168,30, porque "outras fontes" guardava 143,30 de uma derivação que
+não existia mais. O teste estático não pegaria: cada função, isolada, estava
+correta.
+
+**Regras preventivas.**
+1. **Campo derivado que volta a ser editável precisa ser LIMPO, não herdado.**
+   O valor derivado é uma projeção da fonte; sem a fonte ele não é um valor
+   inicial razoável, é um resíduo que se apresenta como dado.
+2. **Toda ligação derivado ↔ digitado tem DUAS transições, e a de volta é a que
+   esquece.** Ao escrever a de ida, escrever a de volta na mesma função — e
+   guardar o estado anterior (aqui, `derivandoCaixa`), porque "está vazio agora"
+   não distingue "sempre esteve" de "acabou de esvaziar".
+3. **Perguntar de cada campo da tela: se isto for salvo, quem afirmou este
+   número?** Se a resposta for "ninguém, sobrou", o campo está errado mesmo que
+   a aritmética esteja certa.
+4. **Estado de transição só aparece exercitando a tela.** Verificação estática
+   e render em Node provaram as 36 linhas, a aritmética e o XML — e passaram
+   por cima deste defeito. Tela com dublê de rede (servidor local + dublês de
+   `supabase-client`/`area-vicentino`/`ui-comum`) custa pouco e é onde ele
+   apareceu.
+
+**Nota de ambiente.** O heredoc `<<'PY'` do Bash **não preservou `\n`** ao
+chegar no Python: a busca por uma string contendo `\n` literal não casou e o
+`assert` morreu sem explicar. Para casar texto com barra invertida, usar a
+ferramenta Edit (que recebe a string literal) em vez de heredoc.

@@ -202,6 +202,241 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Movimento de Caixa — o formulário das 36 linhas
+
+   A grade imita o impresso: número à esquerda, discriminação no meio, valor à
+   direita. É o que permite conferir a tela contra o papel linha a linha, que é
+   o trabalho que a tesoureira de fato faz.
+   -------------------------------------------------------------------------- */
+.mc-titulo {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--wine-deep, #4A1818);
+  margin: 26px 0 10px;
+}
+
+.mc-sub {
+  font-weight: 400;
+  font-size: .72em;
+  color: #6b5a5a;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.mc-bloco + .mc-bloco { margin-top: 4px; }
+
+.mc-linhas {
+  border: 1px solid #e3d9d9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mc-linha {
+  display: grid;
+  /* número | discriminação | valor — a mesma ordem do papel. */
+  grid-template-columns: 2.4rem 1fr 11rem;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-top: 1px solid #f0e8e8;
+}
+
+.mc-linha:first-child { border-top: 0; }
+.mc-linha:nth-child(even) { background: #fcfafa; }
+
+.mc-numero {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  color: #9b8f8f;
+  text-align: right;
+}
+
+.mc-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.mc-rotulo {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .86rem;
+  line-height: 1.3;
+  color: #2a2020;
+}
+
+/* As linhas que o impresso deixa em branco (10, 11, 21, 22, 25): o rótulo é
+   campo de texto, discreto para não competir com os rótulos impressos. */
+.mc-rotulo-livre {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .86rem;
+  padding: 3px 6px;
+  border: 1px dashed #d8cccc;
+  border-radius: 4px;
+  background: transparent;
+  width: 100%;
+}
+
+.mc-nota {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .72rem;
+  color: #9b8f8f;
+}
+
+.mc-valor {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mc-unidade {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .74rem;
+  color: #9b8f8f;
+  flex: none;
+  width: 1.6rem;
+  text-align: right;
+}
+
+.mc-valor input {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  padding: 4px 8px;
+}
+
+/* Linha de conta: mesmo tratamento dos totais da minuta (.ata-calculado), para
+   que "isto o sistema calcula" tenha uma aparência só na página inteira. */
+.mc-calculada { background: #f7f3f3; }
+.mc-calculada .mc-rotulo { font-weight: 600; }
+.mc-calculada .mc-valor input {
+  background: #efe8e8;
+  font-weight: 700;
+}
+
+/* --- contadores do cabeçalho do impresso --------------------------------- */
+.mc-contadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.mc-contador {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Os rótulos têm comprimentos muito diferentes ("Total de famílias assistidas"
+   x "Famílias assistidas com ajuda espiritual (ou não material)"), e o que
+   passa de uma linha empurraria só o seu campo para baixo. `margin-top: auto`
+   joga todos os campos para o rodapé do cartão, e o grid já iguala as alturas —
+   a fileira de campos fica reta qualquer que seja o rótulo. */
+.mc-contador input { margin-top: auto; }
+
+.mc-contador label,
+.mc-contador-rotulo {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .78rem;
+  color: #6b5a5a;
+  line-height: 1.3;
+}
+
+/* Contador lido da lista de presença: não é campo, é resultado. */
+.mc-contador-lido {
+  background: #f7f3f3;
+  border: 1px solid #e3d9d9;
+  border-radius: 6px;
+  padding: 8px 10px;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mc-contador-valor {
+  font-size: 1.15rem;
+  color: var(--wine-deep, #4A1818);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- a conferência do balanço (linha 15 x linha 30) ---------------------- */
+.mc-conferencia {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin: 16px 0 0;
+}
+
+.mc-conferencia.bate     { background: #dff0e0; color: #1f5c28; }
+.mc-conferencia.nao-bate { background: #f6e0e0; color: #8a2020; }
+
+@media (max-width: 640px) {
+  /* Três colunas não cabem no telefone; a discriminação sobe e o par
+     número/valor fica embaixo, que é a leitura natural em coluna estreita. */
+  .mc-linha {
+    grid-template-columns: 2.4rem 1fr;
+    row-gap: 6px;
+  }
+  .mc-valor { grid-column: 2; }
+}
+
+/* ---------------------------------------------------------------------------
+   Movimento de Caixa — a grade dentro do DOCUMENTO
+   -------------------------------------------------------------------------- */
+.ata-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 20px;
+  /* A grade tem 36 linhas: reduzir aqui é o que a faz caber na folha sem
+     empurrar o verso da ata para uma terceira página. */
+  font-size: .82em;
+}
+
+.ata-tabela-titulo {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  font-size: .95em;
+  padding-bottom: 5px;
+}
+
+.ata-tabela th,
+.ata-tabela td {
+  border: 1px solid #b9a9a9;
+  padding: 3px 7px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.32;
+}
+
+.ata-tabela thead th {
+  background: #efe8e8;
+  font-weight: 700;
+}
+
+.ata-tabela-numero {
+  width: 2.2em;
+  text-align: right;
+  font-weight: 600;
+  color: #6b5a5a;
+}
+
+.ata-tabela-valor {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------------------
    IMPRESSÃO — é isto que vira o PDF
    -------------------------------------------------------------------------- */
 @media print {
@@ -260,6 +495,26 @@
   /* O fundo da bandeira é imagem: sem isto o Chrome a omite por padrão
      ("Gráficos de segundo plano" desmarcado). */
   .ata-bandeira {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* A grade do Movimento de Caixa não pode ser fatiada em qualquer ponto: o
+     cabeçalho ("Nº · Discriminação · Valor") precisa reaparecer na página
+     seguinte, senão a segunda metade das despesas vira uma coluna de números
+     sem nome. `thead` repetido é o comportamento padrão da impressão de
+     tabela; o que falta é impedir que uma LINHA seja cortada ao meio. */
+  .ata-tabela { break-inside: auto; page-break-inside: auto; }
+  .ata-tabela thead { display: table-header-group; }
+  .ata-tabela tr { break-inside: avoid; page-break-inside: avoid; }
+
+  /* O título da grade sozinho no pé da página tem o mesmo defeito do título de
+     seção — e aqui separaria "DESPESAS" das despesas. */
+  .ata-tabela-titulo { break-after: avoid; page-break-after: avoid; }
+
+  /* O cinza do cabeçalho da grade é o que separa rótulo de dado de relance na
+     folha impressa; sem isto o Chrome o descarta junto com os outros fundos. */
+  .ata-tabela thead th {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }

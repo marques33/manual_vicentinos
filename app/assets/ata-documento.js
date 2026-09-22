@@ -24,6 +24,10 @@
 // ============================================================================
 
 import { escapar } from './supabase-client.js';
+import {
+  LINHAS, TITULO_BLOCO, CONTADORES_ASSISTENCIA, CATEGORIA_ROTULO,
+  movimentoPreenchido, contarPresencas,
+} from './ata-movimento-caixa.js';
 
 // ---------------------------------------------------------------------------
 // O que é fixo na minuta impressa da Conferência.
@@ -193,6 +197,13 @@ export function blocosDaAta(ata = {}, presencas = []) {
       `saldo atual ${formatarMoeda(ata.saldo_atual)}.`,
   });
 
+  // --- Movimento de Caixa --------------------------------------------------
+  // A folha da tesouraria que vai ao Conselho Particular. Só aparece quando há
+  // o que mostrar: ata lavrada antes desta folha existir tem os nove campos da
+  // minuta (que a prosa acima já recitou) e nenhuma das 36 linhas — imprimir
+  // 36 lacunas não diria nada a ninguém.
+  if (movimentoPreenchido(ata)) empurrarMovimento(b, ata, presencas);
+
   // --- Verso ---------------------------------------------------------------
   b.push({ tipo: 'secao', texto: 'Notícias das famílias e outras notícias:' });
   empurrarLivre(b, ata.noticias_familias);
@@ -226,6 +237,109 @@ export function blocosDaAta(ata = {}, presencas = []) {
   return b;
 }
 
+// ---------------------------------------------------------------------------
+// O Movimento de Caixa dentro do documento
+//
+// Sai como TABELA, e não como prosa. O formulário do Conselho é uma grade
+// numerada, e o número da linha é como ele é lido — "a linha 24 está em branco"
+// é a frase que a tesoureira ouve do Conselho Particular. Uma versão em prosa
+// perderia exatamente o que faz a folha ser conferível.
+//
+// O bloco `tabela` carrega a grade em `tabela: { cabecalho, linhas }`, ainda em
+// TEXTO PURO — o escape é de quem renderiza, como todo o resto deste módulo.
+// ---------------------------------------------------------------------------
+
+/** Uma quantidade da folha (linhas 31 a 33), ou a lacuna. */
+function formatarQuantidade(valor, unidade) {
+  if (valor === null || valor === undefined || valor === '') return LACUNA;
+  const n = Number(valor);
+  if (!Number.isFinite(n)) return LACUNA;
+  // Sem casa decimal quando é contagem redonda: "12 un", não "12,00 un".
+  const texto = Number.isInteger(n) ? String(n) : n.toLocaleString('pt-BR', {
+    minimumFractionDigits: 2, maximumFractionDigits: 2,
+  });
+  return `${texto} ${unidade === 'kg' ? 'kg' : 'un'}`;
+}
+
+function empurrarMovimento(blocos, ata, presencas) {
+  blocos.push({ tipo: 'secao', texto: 'Movimento de Caixa' });
+
+  // --- O cabeçalho do impresso: assistência e presença --------------------
+  const p = contarPresencas(presencas);
+  blocos.push({
+    tipo: 'tabela',
+    texto: 'Assistência e presença na semana',
+    tabela: {
+      cabecalho: ['', 'Nº', '', 'Nº'],
+      linhas: emPares(
+        CONTADORES_ASSISTENCIA.map(c => [c.rotulo, contador(ata[c.campo])]),
+        [
+          ['Presentes na reunião', String(p.presentes)],
+          [CATEGORIA_ROTULO.confrade, String(p.confrade)],
+          [CATEGORIA_ROTULO.consocia, String(p.consocia)],
+          [CATEGORIA_ROTULO.aspirante, String(p.aspirante)],
+          ['Visitantes', contador(ata.visitantes_qtd)],
+        ]),
+    },
+  });
+
+  // --- As 36 linhas, um bloco por seção do impresso -----------------------
+  for (const bloco of ['receita', 'despesa', 'bens', 'resumo']) {
+    const linhas = LINHAS.filter(l => l.bloco === bloco)
+      .filter(l => !linhaVazia(l, ata))
+      .map(l => [
+        String(l.n),
+        l.rotuloCampo ? (String(ata[l.rotuloCampo] ?? '').trim() || l.rotulo || LACUNA) : l.rotulo,
+        l.unidade ? formatarQuantidade(ata[l.campo], l.unidade) : formatarMoeda(ata[l.campo]),
+      ]);
+    if (!linhas.length) continue;
+    blocos.push({
+      tipo: 'tabela',
+      texto: TITULO_BLOCO[bloco],
+      tabela: {
+        cabecalho: ['Nº', 'Discriminação', bloco === 'bens' ? 'Quantidade' : 'Valor (R$)'],
+        linhas,
+      },
+    });
+  }
+}
+
+/**
+ * Linha em branco do impresso que ninguém usou.
+ *
+ * As linhas 10, 11, 21, 22 e 25 vêm sem rótulo no papel, para a Conferência
+ * escrever o que precisar. Quando ficam em branco, some — ao contrário das
+ * linhas com rótulo impresso, que aparecem com a lacuna porque o Conselho
+ * espera vê-las. A 33 ("Outros") tem rótulo impresso e segue essa regra.
+ */
+function linhaVazia(l, ata) {
+  if (!l.rotuloCampo || l.rotulo) return false;
+  const valor = ata[l.campo];
+  const rotulo = String(ata[l.rotuloCampo] ?? '').trim();
+  return !rotulo && (valor === null || valor === undefined || valor === '');
+}
+
+/** Um contador do cabeçalho, ou a lacuna curta que o impresso traz. */
+function contador(valor) {
+  return valor === null || valor === undefined || valor === '' ? '—' : String(valor);
+}
+
+/**
+ * Duas listas de pares lado a lado, como as duas colunas do cabeçalho impresso.
+ *
+ * A lista mais curta recebe células vazias no fim — uma tabela com linhas de
+ * larguras diferentes quebraria o ODF, que exige o mesmo número de células em
+ * toda linha da tabela.
+ */
+function emPares(esquerda, direita) {
+  const total = Math.max(esquerda.length, direita.length);
+  const linhas = [];
+  for (let i = 0; i < total; i++) {
+    linhas.push([...(esquerda[i] ?? ['', '']), ...(direita[i] ?? ['', ''])]);
+  }
+  return linhas;
+}
+
 /** Campo de texto livre: uma linha por parágrafo, ou a lacuna se vier vazio. */
 function empurrarLivre(blocos, texto) {
   const paragrafos = emParagrafos(texto);
@@ -256,6 +370,7 @@ export function htmlDocumento(ata = {}, presencas = []) {
   const partes = blocosDaAta(ata, presencas).map(bloco => {
     const t = escapar(bloco.texto);
     switch (bloco.tipo) {
+      case 'tabela':     return htmlTabela(bloco);
       case 'cabecalho':
         // A bandeira só existe na tela e no papel; o ODT leva o cabeçalho em
         // texto (embutir imagem em ODF exigiria membro binário no pacote).
@@ -281,6 +396,47 @@ export function htmlDocumento(ata = {}, presencas = []) {
   });
 
   return `<article class="ata-documento">${partes.join('')}</article>`;
+}
+
+/**
+ * Um bloco `tabela` como <table>.
+ *
+ * `<caption>` e não um parágrafo antes da tabela: o título PERTENCE à tabela, e
+ * é assim que um leitor de tela o anuncia ao entrar nela. A célula de número da
+ * linha é `<th scope="row">` pelo mesmo motivo — o número é o nome da linha no
+ * formulário do Conselho, não um dado dela.
+ *
+ * Célula vazia (as do preenchimento de `emPares`) sai sem conteúdo em vez de
+ * sumir: tabela com linhas de larguras diferentes não é tabela.
+ */
+function htmlTabela(bloco) {
+  const { cabecalho = [], linhas = [] } = bloco.tabela || {};
+  const temNumero = cabecalho[0] === 'Nº';
+
+  const thead = cabecalho.length
+    ? `<thead><tr>${cabecalho.map(c =>
+        `<th scope="col">${escapar(c)}</th>`).join('')}</tr></thead>`
+    : '';
+
+  // Alinhar número à direita é o que deixa a coluna conferível de relance, que
+  // é para o que a folha serve. A coluna é "de número" quando o cabeçalho dela
+  // diz que é — no bloco de contadores há duas, e não só a última.
+  const numerica = cabecalho.map(c => c === 'Nº' || c === 'Valor (R$)' || c === 'Quantidade');
+
+  const tbody = linhas.map(linha => {
+    const celulas = linha.map((celula, i) => {
+      if (temNumero && i === 0) {
+        return `<th scope="row" class="ata-tabela-numero">${escapar(celula)}</th>`;
+      }
+      const classe = numerica[i] ? ' class="ata-tabela-valor"' : '';
+      return `<td${classe}>${escapar(celula)}</td>`;
+    }).join('');
+    return `<tr>${celulas}</tr>`;
+  }).join('');
+
+  return `<table class="ata-tabela">` +
+    `<caption class="ata-tabela-titulo">${escapar(bloco.texto)}</caption>` +
+    `${thead}<tbody>${tbody}</tbody></table>`;
 }
 
 /**

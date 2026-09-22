@@ -29,6 +29,10 @@ const PAPEIS_VALIDOS = [
   "tesoureiro", "secretario", "confrade_espiritual", "administrador",
 ];
 
+// Condição do associado na Sociedade (migração 026). Diferente de PAPEIS,
+// que é função na Conferência: uma consócia pode ser tesoureira.
+const CATEGORIAS_VALIDAS = ["confrade", "consocia", "aspirante"];
+
 const origensPermitidas = (Deno.env.get("ORIGENS_PERMITIDAS") ?? "")
   .split(",")
   .map((o) => o.trim())
@@ -118,7 +122,7 @@ Deno.serve(async (req: Request) => {
     }
 
     const { data: confrades } = await servico.from("confrades")
-      .select("user_id, nome_completo, papel, ativo");
+      .select("user_id, nome_completo, papel, categoria, ativo");
     const { data: admins } = await servico.from("admins").select("user_id, nome");
 
     const confradePorId = new Map((confrades ?? []).map((c) => [c.user_id, c]));
@@ -132,6 +136,7 @@ Deno.serve(async (req: Request) => {
         email: u.email,
         nome: confrade?.nome_completo || admin?.nome || u.email,
         papel: confrade?.papel ?? null,
+        categoria: confrade?.categoria ?? null,
         confrade_ativo: confrade?.ativo ?? false,
         admin: !!admin,
       };
@@ -148,6 +153,7 @@ Deno.serve(async (req: Request) => {
     const senha = typeof dados.senha === "string" ? dados.senha : "";
     const nome = normalizarTexto(dados.nome, 150);
     const papel = normalizarTexto(dados.papel, 40) || "vicentino";
+    const categoria = normalizarTexto(dados.categoria, 20) || "confrade";
     const tambemAdmin = dados.tambem_admin === true;
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -161,6 +167,9 @@ Deno.serve(async (req: Request) => {
     }
     if (!PAPEIS_VALIDOS.includes(papel)) {
       return responder({ ok: false, erro: "papel_invalido" }, 400, origem);
+    }
+    if (!CATEGORIAS_VALIDAS.includes(categoria)) {
+      return responder({ ok: false, erro: "categoria_invalida" }, 400, origem);
     }
 
     const { data: criado, error: erroCriar } = await servico.auth.admin.createUser({
@@ -177,7 +186,7 @@ Deno.serve(async (req: Request) => {
     const userId = criado.user.id;
 
     const { error: erroConfrade } = await servico.from("confrades")
-      .insert({ user_id: userId, nome_completo: nome, papel, ativo: true });
+      .insert({ user_id: userId, nome_completo: nome, papel, categoria, ativo: true });
 
     const { error: erroAdminInsert } = tambemAdmin
       ? await servico.from("admins").insert({ user_id: userId, nome })
@@ -211,6 +220,48 @@ Deno.serve(async (req: Request) => {
     if (erroSenha) {
       console.error("updateUserById falhou:", erroSenha.message);
       return responder({ ok: false, erro: "falha_redefinir" }, 500, origem);
+    }
+    return responder({ ok: true }, 200, origem);
+  }
+
+  // ---------------------------------------------------------------------
+  // atualizar_categoria
+  //
+  // A categoria do associado (confrade / consócia / aspirante) alimenta os
+  // contadores do Movimento de Caixa. A migração 026 a criou com default
+  // "confrade" para poder preencher as linhas que já existiam — sem esta ação
+  // esses cadastros ficariam presos nesse default, e a folha nasceria contando
+  // toda a Conferência numa linha só.
+  //
+  // Passa por aqui, e não por um UPDATE do cliente, porque `confrades` só tem
+  // grant de SELECT (migração 011): abrir UPDATE da tabela para editar uma
+  // coluna daria de brinde a edição de `papel`, que é o que decide quem lavra
+  // ata e quem lança dinheiro. O escopo desta ação é UMA coluna.
+  // ---------------------------------------------------------------------
+  if (acao === "atualizar_categoria") {
+    const userId = normalizarTexto(dados.user_id, 40);
+    const categoria = normalizarTexto(dados.categoria, 20);
+
+    if (!/^[0-9a-f-]{36}$/i.test(userId)) {
+      return responder({ ok: false, erro: "user_id_invalido" }, 400, origem);
+    }
+    if (!CATEGORIAS_VALIDAS.includes(categoria)) {
+      return responder({ ok: false, erro: "categoria_invalida" }, 400, origem);
+    }
+
+    const { data: alterado, error: erroCategoria } = await servico.from("confrades")
+      .update({ categoria })
+      .eq("user_id", userId)
+      .select("user_id");
+
+    if (erroCategoria) {
+      console.error("update de categoria falhou:", erroCategoria.message);
+      return responder({ ok: false, erro: "falha_atualizar" }, 500, origem);
+    }
+    // UPDATE que não alcança linha nenhuma não é erro no Postgres — e aqui
+    // significa user_id que não é confrade. Responder "ok" esconderia isso.
+    if (!alterado?.length) {
+      return responder({ ok: false, erro: "confrade_nao_encontrado" }, 404, origem);
     }
     return responder({ ok: true }, 200, origem);
   }

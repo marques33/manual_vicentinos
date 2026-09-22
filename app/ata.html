@@ -155,17 +155,51 @@
       </div>
 
       <div class="editor">
-        <h2>Estado do caixa</h2>
+        <h2>Movimento de Caixa</h2>
         <p class="ata-dica">
-          Os valores ficam gravados nesta ata. Corrigir um lançamento no
-          Controle Orçamentário depois <strong>não</strong> altera ata já
+          As 36 linhas da folha do Conselho Metropolitano, na ordem do
+          impresso. Os valores ficam gravados nesta ata. Corrigir um lançamento
+          no Controle Orçamentário depois <strong>não</strong> altera ata já
           lavrada — é o registro do que a tesoureira apresentou no dia.
         </p>
         <button type="button" class="btn btn-claro btn-pequeno" id="btn-sugerir-caixa"
-                style="margin-bottom:16px;">
+                style="margin-bottom:18px;">
           <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
           Sugerir a partir do Financeiro
         </button>
+
+        <h3 class="mc-titulo">Assistência da semana</h3>
+        <div class="mc-contadores" id="mc-assistencia"></div>
+
+        <h3 class="mc-titulo">Presença na reunião</h3>
+        <p class="ata-dica">
+          Contado a partir da lista de presença acima. Só os visitantes são
+          digitados — visitante não tem cadastro para ser marcado.
+        </p>
+        <div class="mc-contadores" id="mc-presenca"></div>
+        <div class="mc-contadores">
+          <!-- Estático, e não redesenhado com os contadores ao lado: um campo
+               recriado a cada marcação de presença perderia o foco no meio da
+               digitação. -->
+          <div class="mc-contador">
+            <label for="mc-visitantes_qtd">Visitantes</label>
+            <input type="number" id="mc-visitantes_qtd" min="0" step="1" inputmode="numeric">
+          </div>
+        </div>
+
+        <div id="mc-blocos"></div>
+
+        <p class="mc-conferencia" id="mc-conferencia" role="status" hidden></p>
+      </div>
+
+      <div class="editor">
+        <h2>Estado do caixa <span class="mc-sub">(o que a minuta recita)</span></h2>
+        <p class="ata-dica" id="caixa-derivado-aviso" hidden>
+          <i class="fa-solid fa-link" aria-hidden="true"></i>
+          Estes valores estão sendo <strong>derivados do Movimento de Caixa</strong>
+          acima e não se digitam aqui. É o mesmo caixa, resumido nas palavras
+          que a ata recita.
+        </p>
 
         <div class="grade-3">
           <div class="campo">
@@ -255,8 +289,13 @@
     import { escapar, mensagemDeErro } from './assets/supabase-client.js';
     import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
     import { montarNavegacaoComPapel, notificarOk, notificarErro } from './assets/ui-comum.js';
-    import { htmlDocumento, nomeDoArquivo } from './assets/ata-documento.js';
+    import { htmlDocumento, nomeDoArquivo, formatarMoeda } from './assets/ata-documento.js';
     import { baixarOdt } from './assets/ata-odt.js';
+    import {
+      LINHAS, LINHAS_DIGITADAS, TITULO_BLOCO, CONTADORES_ASSISTENCIA, CATEGORIA_ROTULO,
+      calcularMovimento, decimaEsperada, conferirBalanco, movimentoPreenchido,
+      derivarCaixaDaMinuta, contarPresencas,
+    } from './assets/ata-movimento-caixa.js';
 
     const telaLogin = document.getElementById('tela-login');
     const telaPainel = document.getElementById('tela-painel');
@@ -334,7 +373,7 @@
       const [resAta, resPresencas, resConfrades] = await Promise.all([
         sb.from('atas').select('*').eq('id', ID).maybeSingle(),
         sb.from('atas_presencas').select('*').eq('ata_id', ID),
-        sb.from('confrades').select('user_id, nome_completo')
+        sb.from('confrades').select('user_id, nome_completo, categoria')
           .eq('ativo', true).order('nome_completo'),
       ]);
 
@@ -349,8 +388,13 @@
 
       document.title = `Ata ${ata.numero} · Conferência N. S. do Carmo`;
 
-      preencherFormulario();
+      // A ordem não é livre: `montarMovimento` cria os campos que
+      // `preencherFormulario` preenche, e `preencherFormulario` recalcula a
+      // folha — o que inclui contar a presença, que só existe depois de
+      // `montarPresencas`.
+      montarMovimento();
       montarPresencas();
+      preencherFormulario();
       aplicarPermissoes();
       // Ata aprovada abre no documento (é o que se quer dela); rascunho abre
       // no editor, que é o trabalho pendente.
@@ -391,7 +435,20 @@
       pôr('f-escala', ata.escala_visitas);
       pôr('f-privilegiados', ata.privilegiados);
       pôr('f-redigida', ata.redigida_por);
-      recalcularCaixa();
+
+      // O Movimento de Caixa: valor de cada linha, rótulo das linhas que o
+      // impresso deixa em branco, e os contadores do cabeçalho.
+      for (const l of LINHAS) {
+        pôr(idDe(l.campo), ata[l.campo]);
+        if (l.rotuloCampo) pôr(idDe(l.rotuloCampo), ata[l.rotuloCampo]);
+      }
+      for (const c of CONTADORES_ASSISTENCIA) pôr(idDe(c.campo), ata[c.campo]);
+      pôr(idDe('visitantes_qtd'), ata.visitantes_qtd);
+
+      // Recalcula a folha inteira — e é ela que decide se os nove campos da
+      // minuta ficam derivados ou digitados, e que chama recalcularCaixa()
+      // quando ficam digitados.
+      recalcularMovimento();
     }
 
     // -------------------------------------------------------------------------
@@ -423,7 +480,8 @@
         }).join('');
 
         return `<div class="ata-presenca-linha" data-confrade="${escapar(c.user_id)}" ` +
-          `data-nome="${escapar(c.nome_completo)}">` +
+          `data-nome="${escapar(c.nome_completo)}" ` +
+          `data-categoria="${escapar(c.categoria || 'confrade')}">` +
           `<span class="ata-presenca-nome">${escapar(c.nome_completo)}</span>` +
           `<span class="ata-presenca-opcoes">${opcoes}</span></div>`;
       }).join('');
@@ -440,6 +498,10 @@
           // O nome é copiado agora, de propósito: renomear o confrade depois
           // não pode reescrever esta ata (migração 023).
           nome: linha.dataset.nome,
+          // A categoria também é copiada agora, e pelo mesmo motivo: efetivar
+          // um aspirante depois não pode reescrever os contadores do
+          // Movimento de Caixa desta ata (migração 026).
+          categoria: linha.dataset.categoria || 'confrade',
           situacao: escolhido.value,
         };
       }).filter(Boolean);
@@ -450,12 +512,16 @@
         const r = l.querySelector('input[value="presente"]');
         if (r && !r.disabled) r.checked = true;
       });
+      // `.checked = true` por código não dispara 'change' — a recontagem do
+      // cabeçalho do Movimento de Caixa não viria sozinha.
+      atualizarContadoresPresenca();
     });
 
     document.getElementById('btn-limpar-presencas').addEventListener('click', () => {
       document.querySelectorAll('.ata-presenca-linha input').forEach(r => {
         if (!r.disabled) r.checked = false;
       });
+      atualizarContadoresPresenca();
     });
 
     // -------------------------------------------------------------------------
@@ -463,6 +529,14 @@
     // -------------------------------------------------------------------------
     const CAMPOS_CAIXA = ['f-saldo-anterior', 'f-coleta', 'f-outras-fontes',
       'f-auxilio', 'f-despesas', 'f-decima'];
+
+    /** Os nove campos da minuta, na ordem em que a prosa da ata os recita. */
+    const CAIXA_POR_COLUNA = {
+      saldo_anterior: 'f-saldo-anterior', coleta: 'f-coleta',
+      outras_fontes: 'f-outras-fontes', soma_receita: 'f-soma-receita',
+      auxilio_assistidos: 'f-auxilio', despesas_diversas: 'f-despesas',
+      decima: 'f-decima', soma_despesa: 'f-soma-despesa', saldo_atual: 'f-saldo-atual',
+    };
 
     /**
      * Os três totais, recalculados a cada digitação.
@@ -493,6 +567,197 @@
     CAMPOS_CAIXA.forEach(id =>
       document.getElementById(id).addEventListener('input', recalcularCaixa));
 
+    // -------------------------------------------------------------------------
+    // Movimento de Caixa — as 36 linhas
+    //
+    // O formulário é GERADO a partir de LINHAS (ata-movimento-caixa.js), e não
+    // escrito à mão. Trinta e seis blocos de HTML copiados seria trinta e seis
+    // lugares onde um rótulo pode divergir do que o documento imprime — e o
+    // documento lê da mesma lista.
+    //
+    // O `id` de cada campo é `mc-` + o nome da coluna. Não é economia de
+    // digitação: é o que faz o mapa id↔coluna deixar de existir, e com ele a
+    // classe de defeito em que a tela grava um número na coluna do vizinho.
+    // -------------------------------------------------------------------------
+    const idDe = (campo) => `mc-${campo}`;
+
+    /** Um campo numérico do Movimento de Caixa; vazio vira null. */
+    const numMc = (campo) => {
+      const el = document.getElementById(idDe(campo));
+      if (!el) return null;
+      return el.value === '' ? null : Number(el.value);
+    };
+
+    function montarMovimento() {
+      document.getElementById('mc-assistencia').innerHTML =
+        CONTADORES_ASSISTENCIA.map(c => contadorHtml(c.campo, c.rotulo)).join('');
+
+      document.getElementById('mc-blocos').innerHTML =
+        ['receita', 'despesa', 'bens', 'resumo'].map(bloco => {
+          const linhas = LINHAS.filter(l => l.bloco === bloco).map(linhaHtml).join('');
+          return `<section class="mc-bloco">` +
+            `<h3 class="mc-titulo">${escapar(TITULO_BLOCO[bloco])}</h3>` +
+            `<div class="mc-linhas">${linhas}</div></section>`;
+        }).join('');
+    }
+
+    function contadorHtml(campo, rotulo) {
+      const id = idDe(campo);
+      return `<div class="mc-contador">` +
+        `<label for="${id}">${escapar(rotulo)}</label>` +
+        `<input type="number" id="${id}" min="0" step="1" inputmode="numeric"></div>`;
+    }
+
+    function linhaHtml(l) {
+      const id = idDe(l.campo);
+      // Linha que o impresso deixa em branco: o rótulo é campo de texto, e o
+      // `aria-label` existe porque não há <label> visível para ele.
+      const rotulo = l.rotuloCampo
+        ? `<input type="text" class="mc-rotulo-livre" id="${idDe(l.rotuloCampo)}"` +
+          ` maxlength="120" placeholder="${escapar(l.rotulo || 'Descreva a linha')}"` +
+          ` aria-label="Descrição da linha ${l.n}">`
+        : `<label class="mc-rotulo" for="${id}">${escapar(l.rotulo)}</label>`;
+
+      // A orientação impressa entre parênteses no papel; nas linhas de conta,
+      // de onde a conta sai. A 24 recebe o valor esperado em tempo real.
+      const dica = l.calculado || l.nota || '';
+      const nota = dica
+        ? `<span class="mc-nota" id="nota-${id}">${escapar(dica)}</span>` : '';
+
+      const unidade = l.unidade === 'kg' ? 'kg' : l.unidade === 'un' ? 'un' : 'R$';
+
+      return `<div class="mc-linha${l.calculado ? ' mc-calculada' : ''}">` +
+        `<span class="mc-numero" aria-hidden="true">${l.n}</span>` +
+        `<span class="mc-texto">${rotulo}${nota}</span>` +
+        `<span class="mc-valor"><span class="mc-unidade" aria-hidden="true">${unidade}</span>` +
+        `<input type="number" id="${id}" step="0.01" inputmode="decimal"` +
+        // `readonly` e não `disabled`: campo desabilitado não é lido por
+        // leitor de tela nem sai no formulário, e estes números são o
+        // resultado que a tesoureira confere.
+        `${l.calculado ? ' readonly tabindex="-1"' : ''}` +
+        `${l.rotuloCampo ? ` aria-label="Valor da linha ${l.n}"` : ''}></span></div>`;
+    }
+
+    /** As 36 linhas como estão na tela, no formato das colunas de `atas`. */
+    function folhaDaTela() {
+      const folha = {};
+      for (const l of LINHAS) {
+        folha[l.campo] = numMc(l.campo);
+        if (l.rotuloCampo) {
+          const el = document.getElementById(idDe(l.rotuloCampo));
+          folha[l.rotuloCampo] = el?.value.trim() || null;
+        }
+      }
+      for (const c of CONTADORES_ASSISTENCIA) folha[c.campo] = numMc(c.campo);
+      folha.visitantes_qtd = numMc('visitantes_qtd');
+      return folha;
+    }
+
+    /**
+     * Recalcula a folha inteira: as sete linhas de conta, a dica da décima, a
+     * conferência do balanço, os contadores de presença e — quando a folha tem
+     * algo escrito — os nove campos da minuta.
+     */
+    function recalcularMovimento() {
+      const folha = folhaDaTela();
+      const calc = calcularMovimento(folha);
+      for (const [campo, valor] of Object.entries(calc)) {
+        pôr(idDe(campo), valor === null ? '' : valor);
+      }
+
+      // Linha 24: o impresso orienta 10% da linha 6. Mostrar o esperado sem
+      // preencher — o que a Conferência pagou é o que ela pagou, e a diferença
+      // é justamente o que a linha 34 registra.
+      const esperada = decimaEsperada(folha);
+      const notaDecima = document.getElementById('nota-' + idDe('des_decima_conselho'));
+      if (notaDecima) {
+        notaDecima.textContent = esperada === null
+          ? '10% da linha 6'
+          : `10% da linha 6 = ${formatarMoeda(esperada)}`;
+      }
+
+      mostrarConferencia(conferirBalanco(folha));
+      aplicarCaixaDerivado(folha);
+      atualizarContadoresPresenca();
+    }
+
+    /**
+     * A conferência embutida no formulário: a linha 15 tem que bater com a 30.
+     *
+     * No papel é a checagem que a tesoureira faz de cabeça antes de assinar.
+     * Aqui ela aparece sozinha — e em vermelho quando não fecha, que é o único
+     * momento em que alguém precisa olhar para ela.
+     */
+    function mostrarConferencia(conf) {
+      const el = document.getElementById('mc-conferencia');
+      if (!conf) { el.hidden = true; return; }
+      el.hidden = false;
+      el.className = 'mc-conferencia ' + (conf.bate ? 'bate' : 'nao-bate');
+      el.textContent = conf.bate
+        ? `Confere: linha 15 e linha 30 fecham em ${formatarMoeda(conf.balancoReceita)}.`
+        : `Não fecha: linha 15 = ${formatarMoeda(conf.balancoReceita)} e ` +
+          `linha 30 = ${formatarMoeda(conf.balancoDespesa)}.`;
+    }
+
+    /**
+     * Liga (ou desliga) a derivação dos nove campos da minuta.
+     *
+     * Enquanto o Movimento de Caixa estiver em branco os nove seguem digitados,
+     * como sempre foram — é o que mantém editável a ata lavrada antes desta
+     * folha existir. Basta uma linha preenchida para eles passarem a sair dela,
+     * e aí travam: dois lugares para o mesmo número, livres para divergir, é
+     * exatamente o que esta derivação existe para impedir.
+     */
+    let derivandoCaixa = false;
+
+    function aplicarCaixaDerivado(folha) {
+      const derivando = movimentoPreenchido(folha);
+      document.getElementById('caixa-derivado-aviso').hidden = !derivando;
+
+      if (derivando) {
+        const caixa = derivarCaixaDaMinuta(folha);
+        for (const [coluna, id] of Object.entries(CAIXA_POR_COLUNA)) {
+          pôr(id, caixa[coluna] === null ? '' : caixa[coluna]);
+        }
+      } else {
+        // Saindo da derivação (a tesoureira apagou a folha), os nove voltam a
+        // ZERO e não ao último valor derivado. O resíduo seria pior do que
+        // parece: destravados, eles passam a ser o que a ata GRAVA — e a ata
+        // sairia afirmando um caixa que ninguém digitou e cuja origem acabou
+        // de ser apagada.
+        if (derivandoCaixa) for (const id of CAMPOS_CAIXA) pôr(id, '');
+        recalcularCaixa();
+      }
+      derivandoCaixa = derivando;
+
+      // Os três totais da minuta já eram readonly; aqui entram os seis de
+      // entrada quando a folha assume.
+      for (const id of CAMPOS_CAIXA) document.getElementById(id).readOnly = derivando;
+    }
+
+    /** O bloco de presença do cabeçalho, contado da lista marcada na tela. */
+    function atualizarContadoresPresenca() {
+      const c = contarPresencas(presencasDaTela());
+      const caixa = (rotulo, valor) =>
+        `<div class="mc-contador mc-contador-lido">` +
+        `<span class="mc-contador-rotulo">${escapar(rotulo)}</span>` +
+        `<strong class="mc-contador-valor">${valor}</strong></div>`;
+
+      document.getElementById('mc-presenca').innerHTML =
+        caixa('Presentes na reunião', c.presentes) +
+        caixa(CATEGORIA_ROTULO.confrade, c.confrade) +
+        caixa(CATEGORIA_ROTULO.consocia, c.consocia) +
+        caixa(CATEGORIA_ROTULO.aspirante, c.aspirante);
+    }
+
+    // Delegação, e não um listener por campo: os campos de `mc-blocos` e
+    // `mc-assistencia` são gerados, e a delegação continua valendo depois de
+    // qualquer remontagem.
+    document.getElementById('mc-blocos').addEventListener('input', recalcularMovimento);
+    document.getElementById('mc-assistencia').addEventListener('input', recalcularMovimento);
+    // Marcar presença muda os contadores do cabeçalho do Movimento de Caixa.
+    document.getElementById('lista-presencas').addEventListener('change', atualizarContadoresPresenca);
+
     /**
      * Sugere o caixa a partir do Controle Orçamentário.
      *
@@ -501,13 +766,31 @@
      * havendo ata anterior, o saldo inicial vem de vw_saldo_financeiro e o
      * período começa no primeiro lançamento.
      */
+    /**
+     * Categoria do Controle Orçamentário → linha do Movimento de Caixa.
+     *
+     * As categorias são cadastro aberto (migração 014), e a folha é fixa: o
+     * mapa liga as que vieram no seed às linhas que lhes correspondem. Uma
+     * categoria criada depois pela UI e não mapeada cai no balde genérico do
+     * próprio tipo — some no total certo em vez de sumir da folha.
+     *
+     * "Ajuda a família" vai para a linha 16 (cestas básicas) porque é o caso
+     * de longe mais comum, mas o impresso separa cesta (16), moradia (17) e
+     * conta paga (18) — e a categoria não distingue. Por isso a sugestão avisa
+     * que precisa de conferência: é sugestão, não lançamento.
+     */
     const MAPA_CATEGORIA = {
-      'Coleta em reunião': 'f-coleta',
-      'Ajuda a família': 'f-auxilio',
-      'Repasse ao Conselho Particular': 'f-decima',
-      'Despesa administrativa': 'f-despesas',
-      'Outra': 'f-despesas',
+      'Coleta em reunião':              'rec_coleta_reuniao',      // 1
+      'Doação avulsa':                  'rec_outras_doacoes',      // 3
+      'Doação PIX do site':             'rec_outras_doacoes',      // 3
+      'Repasse recebido':               'rec_para_repasses',       // 12
+      'Ajuda a família':                'des_cestas_basicas',      // 16
+      'Despesa administrativa':         'des_administrativas',     // 23
+      'Repasse ao Conselho Particular': 'des_decima_conselho',     // 24
+      'Outra':                          'des_administrativas',     // 23
     };
+
+    const CAMPO_GENERICO = { entrada: 'rec_outras_doacoes', saida: 'des_administrativas' };
 
     document.getElementById('btn-sugerir-caixa').addEventListener('click', async () => {
       const botao = document.getElementById('btn-sugerir-caixa');
@@ -516,13 +799,17 @@
         const dataAtual = document.getElementById('f-data').value;
         if (!dataAtual) { notificarErro('Informe a data da reunião primeiro.'); return; }
 
+        // O saldo anterior é a linha 29 da folha anterior — "saldo final da
+        // semana atual" de lá é "saldo final da semana anterior" aqui. Em ata
+        // lavrada antes desta folha existir a coluna está vazia, e aí vale o
+        // `saldo_atual` da minuta, que é o mesmo número pelo mapa da 025.
         const { data: anterior } = await sb.from('atas')
-          .select('data_reuniao, saldo_atual')
+          .select('data_reuniao, saldo_atual, des_saldo_semana_atual')
           .lt('numero', Number(document.getElementById('f-numero').value || 0))
           .order('numero', { ascending: false })
           .limit(1).maybeSingle();
 
-        let saldoAnterior = anterior?.saldo_atual ?? null;
+        let saldoAnterior = anterior?.des_saldo_semana_atual ?? anterior?.saldo_atual ?? null;
         if (saldoAnterior === null) {
           const { data: saldo } = await sb.from('vw_saldo_financeiro')
             .select('saldo_inicial').maybeSingle();
@@ -538,21 +825,25 @@
         const { data: lancamentos, error } = await consulta;
         if (error) { notificarErro(mensagemDeErro(error, 'Não foi possível ler o financeiro.')); return; }
 
-        const soma = { 'f-coleta': 0, 'f-outras-fontes': 0, 'f-auxilio': 0, 'f-despesas': 0, 'f-decima': 0 };
+        const soma = {};
         for (const l of lancamentos || []) {
-          const nome = l.categorias_financeiras?.nome;
-          // Categoria criada depois pela UI e não mapeada aqui cai no balde
-          // genérico do próprio tipo — some no total certo em vez de sumir.
-          const campo = MAPA_CATEGORIA[nome]
-            || (l.tipo === 'entrada' ? 'f-outras-fontes' : 'f-despesas');
-          soma[campo] += Number(l.valor);
+          const campo = MAPA_CATEGORIA[l.categorias_financeiras?.nome] || CAMPO_GENERICO[l.tipo];
+          if (!campo) continue;
+          soma[campo] = (soma[campo] || 0) + Number(l.valor);
         }
 
-        pôr('f-saldo-anterior', saldoAnterior === null ? '' : Number(saldoAnterior));
-        for (const [campo, valor] of Object.entries(soma)) pôr(campo, Number(valor.toFixed(2)));
-        recalcularCaixa();
+        // Só as linhas que o financeiro tem o que dizer são tocadas — zerar as
+        // demais apagaria o que a tesoureira já tivesse digitado à mão.
+        for (const l of LINHAS_DIGITADAS) {
+          if (soma[l.campo] !== undefined) pôr(idDe(l.campo), Number(soma[l.campo].toFixed(2)));
+        }
+        pôr(idDe('rec_saldo_semana_anterior'),
+          saldoAnterior === null ? '' : Number(saldoAnterior));
+        recalcularMovimento();
 
-        notificarOk(`Sugestão a partir de ${(lancamentos || []).length} lançamento(s). Confira antes de salvar.`);
+        notificarOk(`Sugestão a partir de ${(lancamentos || []).length} lançamento(s). ` +
+          `Confira antes de salvar — a ajuda a famílias cai toda na linha 16, e o ` +
+          `impresso separa cesta, moradia e contas.`);
       } finally {
         botao.disabled = false;
       }
@@ -615,10 +906,26 @@
     document.getElementById('btn-modo-ver').addEventListener('click', () => trocarModo('ver'));
     document.getElementById('btn-modo-editar').addEventListener('click', () => trocarModo('editar'));
 
-    /** A ata como está no formulário agora (sem passar pelo banco). */
+    /**
+     * A ata como está no formulário agora (sem passar pelo banco).
+     *
+     * A ordem do espalhamento importa: `folha` traz as 36 linhas digitadas,
+     * `calcularMovimento` sobrescreve as sete de conta, e `caixa` fecha com os
+     * nove campos da minuta — derivados da folha quando ela tem algo escrito,
+     * e digitados quando está em branco (ata anterior a esta folha existir).
+     */
     function ataDaTela() {
+      const folha = folhaDaTela();
+      const caixa = movimentoPreenchido(folha)
+        ? derivarCaixaDaMinuta(folha)
+        : Object.fromEntries(
+            Object.entries(CAIXA_POR_COLUNA).map(([coluna, id]) => [coluna, num(id)]));
+
       return {
         ...ata,
+        ...folha,
+        ...calcularMovimento(folha),
+        ...caixa,
         numero: num('f-numero'),
         data_reuniao: document.getElementById('f-data').value || null,
         hora: document.getElementById('f-hora').value || null,
@@ -629,15 +936,6 @@
         justificativas: texto('f-justificativas'),
         leitura_obra: texto('f-leitura-obra'),
         leitura_trecho: texto('f-leitura-trecho'),
-        saldo_anterior: num('f-saldo-anterior'),
-        coleta: num('f-coleta'),
-        outras_fontes: num('f-outras-fontes'),
-        soma_receita: num('f-soma-receita'),
-        auxilio_assistidos: num('f-auxilio'),
-        despesas_diversas: num('f-despesas'),
-        decima: num('f-decima'),
-        soma_despesa: num('f-soma-despesa'),
-        saldo_atual: num('f-saldo-atual'),
         noticias_familias: texto('f-noticias'),
         expediente: texto('f-expediente'),
         escala_visitas: texto('f-escala'),

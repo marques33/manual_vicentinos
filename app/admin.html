@@ -228,6 +228,17 @@
       margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
     }
 
+    /* Categoria do associado (confrade / consócia / aspirante). Grava na troca,
+       sem botão — por isso fica junto das ações, e não no corpo do cartão. */
+    .rotulo-inline {
+      align-self: center; font-size: 0.82rem; color: var(--text-soft);
+    }
+    .sel-categoria {
+      padding: 6px 10px; border: 1px solid var(--border); border-radius: 7px;
+      background: #fff; font-size: 0.86rem; font-family: inherit;
+    }
+    .sel-categoria:disabled { opacity: .6; cursor: progress; }
+
     .grade-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .caixa-linha { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
     .caixa-linha input { width: 17px; height: 17px; accent-color: var(--gold-deep); cursor: pointer; }
@@ -514,6 +525,17 @@
                 <option value="administrador">Administrador (técnico do site)</option>
               </select>
             </div>
+            <div class="campo">
+              <label for="nu-categoria">Categoria</label>
+              <select id="nu-categoria">
+                <option value="confrade">Confrade</option>
+                <option value="consocia">Consócia</option>
+                <option value="aspirante">Aspirante</option>
+              </select>
+              <span class="dica">Condição na Sociedade — conta no cabeçalho do Movimento de Caixa. Diferente do papel.</span>
+            </div>
+          </div>
+          <div class="grade-2">
             <div class="campo">
               <label for="nu-senha">Senha inicial *</label>
               <div style="display:flex; gap:8px;">
@@ -1065,6 +1087,10 @@
     // chave de serviço do lado dela; o navegador nunca vê essa chave.
     // sb.functions.invoke() já manda o JWT da sessão atual sozinho.
     // -------------------------------------------------------------------------
+    const CATEGORIA_ROTULO = {
+      confrade: 'Confrade', consocia: 'Consócia', aspirante: 'Aspirante',
+    };
+
     const PAPEL_ROTULO = {
       vicentino: 'Vicentino', presidente: 'Presidente', vice_presidente: 'Vice-presidente',
       tesoureiro: 'Tesoureiro', secretario: 'Secretário',
@@ -1118,6 +1144,14 @@
           </div>
           <p class="cartao-texto">${escapar(u.email)}${u.papel ? ' · ' + escapar(PAPEL_ROTULO[u.papel] || u.papel) : ''}</p>
           <div class="cartao-acoes">
+            ${u.categoria ? `
+            <label class="rotulo-inline" for="cat-${escapar(u.user_id)}">Categoria</label>
+            <select class="sel-categoria" id="cat-${escapar(u.user_id)}"
+              data-id="${escapar(u.user_id)}" data-atual="${escapar(u.categoria)}">
+              ${Object.entries(CATEGORIA_ROTULO).map(([valor, rotulo]) =>
+                `<option value="${valor}"${u.categoria === valor ? ' selected' : ''}>${rotulo}</option>`
+              ).join('')}
+            </select>` : ''}
             <button type="button" class="btn btn-neutro btn-pequeno btn-redefinir"
               data-id="${escapar(u.user_id)}" data-nome="${escapar(u.nome)}">
               <i class="fa-solid fa-key" aria-hidden="true"></i> Redefinir senha
@@ -1125,6 +1159,31 @@
           </div>
         </article>
       `).join('');
+
+      // A categoria grava na hora: é um campo só, e um botão "salvar" por
+      // cartão obrigaria a lembrar de clicar em cada um dos que precisam ser
+      // revistos depois da migração 026.
+      lista.querySelectorAll('.sel-categoria').forEach((seletor) => {
+        seletor.addEventListener('change', async () => {
+          const anterior = seletor.dataset.atual;
+          seletor.disabled = true;
+          const resultado = await chamarGerenciarUsuarios({
+            acao: 'atualizar_categoria',
+            user_id: seletor.dataset.id,
+            categoria: seletor.value,
+          });
+          seletor.disabled = false;
+          if (!resultado.ok) {
+            // Voltar ao valor anterior é o ponto: um seletor que mostra a
+            // escolha nova depois de o banco a recusar mente sobre o cadastro.
+            seletor.value = anterior;
+            notificarErro('Não foi possível mudar a categoria.');
+            return;
+          }
+          seletor.dataset.atual = seletor.value;
+          notificarOk('Categoria atualizada.');
+        });
+      });
 
       lista.querySelectorAll('.btn-redefinir').forEach((botao) => {
         botao.addEventListener('click', () => {
@@ -1156,6 +1215,7 @@
         nome: document.getElementById('nu-nome').value.trim(),
         email: document.getElementById('nu-email').value.trim(),
         papel: document.getElementById('nu-papel').value,
+        categoria: document.getElementById('nu-categoria').value,
         senha,
         tambem_admin: document.getElementById('nu-tambem-admin').checked,
       });
@@ -1169,6 +1229,7 @@
           senha_curta: 'A senha precisa ter ao menos 8 caracteres.',
           nome_invalido: 'Informe o nome completo (ao menos 3 caracteres).',
           papel_invalido: 'Papel inválido.',
+          categoria_invalida: 'Categoria inválida.',
         };
         mostrarAviso(avisoEl, mensagens[resultado.erro] || 'Não foi possível criar o usuário.', 'erro');
         return;

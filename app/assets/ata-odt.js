@@ -87,6 +87,9 @@ const NS = [
   'xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"',
   'xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"',
   'xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"',
+  // O Movimento de Caixa sai como tabela ODF — sem este namespace o
+  // LibreOffice recusa o ARQUIVO INTEIRO, não só a tabela.
+  'xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"',
 ].join(' ');
 
 /** Um <style:style> de parágrafo, com as propriedades que interessam. */
@@ -113,21 +116,112 @@ const ESTILOS = [
   estilo('AtaNota', { alinhar: 'justify', italico: true, tamanho: '10pt', depois: '0.2cm' }),
   estilo('AtaLivre', { alinhar: 'justify', depois: '0.15cm' }),
   estilo('AtaFecho', { alinhar: 'justify', antes: '0.5cm', depois: '0.3cm' }),
+  // Parágrafos DENTRO das células da folha: menores que o corpo, porque a
+  // grade tem 36 linhas e precisa caber sem estourar a página.
+  estilo('AtaCelula', { alinhar: 'left', tamanho: '9pt', depois: '0cm' }),
+  estilo('AtaCelulaNum', { alinhar: 'right', tamanho: '9pt', depois: '0cm' }),
+  estilo('AtaCelulaCab', { alinhar: 'left', tamanho: '9pt', negrito: true, depois: '0cm' }),
 ].join('');
+
+// ---------------------------------------------------------------------------
+// A tabela — o Movimento de Caixa
+//
+// ODF não tem "largura automática de coluna": cada coluna carrega um estilo
+// próprio, com a medida em centímetros. A soma tem que dar 17 cm, que é o A4
+// menos as duas margens de 2 cm definidas em stylesXml() — passar disso faz o
+// LibreOffice empurrar a tabela para fora da mancha de texto, sem avisar.
+// ---------------------------------------------------------------------------
+const coluna = (nome, largura) =>
+  `<style:style style:name="${nome}" style:family="table-column">` +
+  `<style:table-column-properties style:column-width="${largura}"/></style:style>`;
+
+const celula = (nome, { fundo = null } = {}) =>
+  `<style:style style:name="${nome}" style:family="table-cell">` +
+  `<style:table-cell-properties fo:border="0.05pt solid #000000" fo:padding="0.08cm"` +
+  `${fundo ? ` fo:background-color="${fundo}"` : ''}/></style:style>`;
+
+const ESTILOS_TABELA = [
+  `<style:style style:name="TabMC" style:family="table">` +
+    `<style:table-properties style:width="17cm" table:align="margins" ` +
+      `fo:margin-top="0.2cm" fo:margin-bottom="0.4cm"/></style:style>`,
+  coluna('ColNum', '1.2cm'),   // o número da linha do impresso
+  coluna('ColDesc', '12.3cm'), // a discriminação
+  coluna('ColVal', '3.5cm'),   // o valor
+  coluna('ColRot', '6.3cm'),   // cabeçalho de contadores: rótulo…
+  coluna('ColQtd', '2.2cm'),   // …e o número, duas vezes lado a lado
+  celula('CelMC'),
+  celula('CelMCCab', { fundo: '#e8e8e8' }),
+].join('');
+
+/**
+ * As larguras de coluna, pela FORMA da tabela.
+ *
+ * Três colunas é a grade das 36 linhas; quatro é o cabeçalho de contadores, que
+ * o impresso traz em duas colunas de rótulo + número lado a lado.
+ */
+const COLUNAS_POR_FORMA = {
+  3: ['ColNum', 'ColDesc', 'ColVal'],
+  4: ['ColRot', 'ColQtd', 'ColRot', 'ColQtd'],
+};
+
+/** Um bloco `tabela` de ata-documento.js como <table:table>. */
+function tabelaOdf(bloco, indice) {
+  const { cabecalho = [], linhas = [] } = bloco.tabela || {};
+  const forma = cabecalho.length || linhas[0]?.length || 3;
+  const colunas = COLUNAS_POR_FORMA[forma]
+    // Forma inesperada não pode derrubar a exportação inteira: divide o espaço
+    // e segue. Uma ata sem ODT por causa de uma coluna a mais seria troca ruim.
+    || Array.from({ length: forma }, () => 'ColDesc');
+
+  // A coluna é "de número" quando o cabeçalho dela diz que é — o mesmo critério
+  // de htmlTabela(), para que o ODT e o PDF alinhem igual.
+  const numerica = cabecalho.map(c => c === 'Nº' || c === 'Valor (R$)' || c === 'Quantidade');
+
+  const celulaXml = (texto, { ehCabecalho = false, direita = false } = {}) => {
+    const estiloP = ehCabecalho ? 'AtaCelulaCab' : (direita ? 'AtaCelulaNum' : 'AtaCelula');
+    return `<table:table-cell table:style-name="${ehCabecalho ? 'CelMCCab' : 'CelMC'}" ` +
+      `office:value-type="string">` +
+      `<text:p text:style-name="${estiloP}">${escaparXml(texto)}</text:p>` +
+      `</table:table-cell>`;
+  };
+
+  const linhaXml = (celulas, ehCabecalho) =>
+    `<table:table-row>` +
+    celulas.map((c, i) => celulaXml(c, { ehCabecalho, direita: !!numerica[i] })).join('') +
+    `</table:table-row>`;
+
+  // `table:table-header-rows` faz o LibreOffice repetir o cabeçalho quando a
+  // grade quebra de página — e a grade das despesas quebra.
+  const thead = cabecalho.length
+    ? `<table:table-header-rows>${linhaXml(cabecalho, true)}</table:table-header-rows>`
+    : '';
+
+  return `<text:p text:style-name="AtaSecao">${escaparXml(bloco.texto)}</text:p>` +
+    `<table:table table:name="MovimentoCaixa${indice}" table:style-name="TabMC">` +
+    colunas.map(c => `<table:table-column table:style-name="${c}"/>`).join('') +
+    thead +
+    linhas.map(l => linhaXml(l, false)).join('') +
+    `</table:table>`;
+}
 
 // ---------------------------------------------------------------------------
 // Os quatro (cinco) membros do pacote
 // ---------------------------------------------------------------------------
 
 function contentXml(ata, presencas) {
+  let tabelas = 0;
   const paragrafos = blocosDaAta(ata, presencas).map(bloco => {
+    // Uma tabela NÃO é um parágrafo: em ODF ela é irmã dele dentro de
+    // <office:text>, e um <table:table> dentro de um <text:p> é justamente o
+    // tipo de XML que o LibreOffice recusa sem dizer onde.
+    if (bloco.tipo === 'tabela') return tabelaOdf(bloco, ++tabelas);
     const nome = ESTILO_POR_TIPO[bloco.tipo] || 'AtaCorpo';
     return `<text:p text:style-name="${nome}">${escaparXml(bloco.texto)}</text:p>`;
   }).join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<office:document-content ${NS} office:version="1.2">` +
-      `<office:automatic-styles>${ESTILOS}</office:automatic-styles>` +
+      `<office:automatic-styles>${ESTILOS}${ESTILOS_TABELA}</office:automatic-styles>` +
       `<office:body><office:text>${paragrafos}</office:text></office:body>` +
     `</office:document-content>`;
 }
