@@ -518,7 +518,26 @@ app 5.025 (diferença = 116 − 110).
 - **`app/ata.html:782` `MAPA_CATEGORIA` não conhece as 4 categorias novas.** O
   "Sugerir a partir do Financeiro" cai no `CAMPO_GENERICO`: moradia (17), contas
   (18) e repasse Ozanam (26) iriam para a linha 23 (administrativas), e
-  subscritores (2) para a linha 3. Correção proposta: 4 entradas no mapa. **Só
-  registrado.** Mexe na ata e exige deploy.
+  subscritores (2) para a linha 3. **Corrigido** em `3e3d3b6`: o mapa foi para
+  `ata-movimento-caixa.js` (`campoDoLancamento`), com a seção 11 do verificador.
 - **Saldo inicial não tem tela** (`financeiro.html:70` só exibe). O tesoureiro
-  não consegue ajustá-lo sem SQL ou console. **Só registrado.**
+  não consegue ajustá-lo sem SQL ou console. **Corrigido** em `13727a9`: há um
+  formulário para tesoureiro/admin, com upsert por id=true.
+
+## Revisão das correções (06/10/2026)
+
+Evidência:
+- `node supabase/verificar-movimento-caixa.mjs`: a seção 11 falhou antes da
+  mudança e passou depois ("Tudo conferido.").
+- `node --check` nos scripts inline de ata.html e financeiro.html e no módulo.
+- Produção, depois do deploy, logado: a tela de saldo inicial carregou
+  6183,00 / 01/08/2026 e salvou ("Saldo inicial salvo.", `atualizado_em`
+  mudou); a view seguiu em 578 / 1736 / 5025.
+- Produção, ata.html: sem erro no console; os lançamentos reais de agosto
+  passados por `campoDoLancamento` caem nas linhas 1, 2, 12, 16, 17, 18, 24 e
+  26 e fecham em 578 / 1.736 / 5.025.
+
+Risco residual: as 4 categorias novas existem só no banco de produção (criadas
+pela UI), não no seed da migração 014. Num banco novo, o mapa tem chaves que
+ninguém usa, o que não causa dano. O botão "Sugerir" não foi clicado numa ata
+real; a lógica foi exercida pelo mesmo módulo, com os dados reais.
