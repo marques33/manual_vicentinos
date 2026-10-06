@@ -179,6 +179,30 @@
       </table>
     </div>
 
+    <!-- ---------- Saldo inicial (só tesoureiro/admin) ---------- -->
+    <div class="editor" id="editor-saldo-inicial" hidden>
+      <h2>Saldo inicial</h2>
+      <form id="form-saldo-inicial">
+        <div class="grade-2">
+          <div class="campo">
+            <label for="si-valor">Saldo na conta (R$) *</label>
+            <input type="number" id="si-valor" step="0.01" required>
+          </div>
+          <div class="campo">
+            <label for="si-data">A partir de *</label>
+            <input type="date" id="si-data" required>
+            <span class="dica">Lançamentos com data anterior a esta não entram no saldo.</span>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="si-observacoes">Observações</label>
+          <textarea id="si-observacoes" maxlength="500"></textarea>
+        </div>
+        <button type="submit" class="btn btn-ouro btn-pequeno"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Salvar saldo inicial</button>
+        <p class="aviso" id="aviso-saldo-inicial" role="status"></p>
+      </form>
+    </div>
+
     <!-- ---------- Conciliação (só tesoureiro/admin) ---------- -->
     <div class="editor" id="editor-conciliacao" hidden>
       <h2>Conciliação com o extrato do BRB</h2>
@@ -268,6 +292,7 @@
       document.getElementById('editor-lancamento').hidden = !souLancador;
       document.getElementById('editor-categorias').hidden = !souLancador;
       document.getElementById('editor-conciliacao').hidden = !souLancador;
+      document.getElementById('editor-saldo-inicial').hidden = !souLancador;
 
       document.getElementById('lf-data').valueAsDate = new Date();
       document.getElementById('cc-data').valueAsDate = new Date();
@@ -275,7 +300,7 @@
 
       await carregarCategorias();
       await carregarSaldoEExtrato();
-      if (souLancador) await carregarConciliacoes();
+      if (souLancador) await Promise.all([carregarConciliacoes(), carregarSaldoInicial()]);
     }
 
     // -------------------------------------------------------------------------
@@ -630,6 +655,34 @@
       document.getElementById('cc-data').valueAsDate = new Date();
       mostrarAviso(aviso, 'Conciliação registrada.', 'ok');
       await carregarConciliacoes();
+    });
+
+    // -------------------------------------------------------------------------
+    // Saldo inicial — linha única (migração 016): upsert por id=true.
+    // -------------------------------------------------------------------------
+    async function carregarSaldoInicial() {
+      const { data, error } = await sb.from('saldo_inicial_financeiro').select('*').maybeSingle();
+      if (error) { mostrarAviso(document.getElementById('aviso-saldo-inicial'), 'Erro ao carregar o saldo inicial: ' + error.message, 'erro'); return; }
+      document.getElementById('si-valor').value = data ? Number(data.valor).toFixed(2) : '';
+      document.getElementById('si-data').value = data?.data_referencia || '';
+      document.getElementById('si-observacoes').value = data?.observacoes || '';
+    }
+
+    document.getElementById('form-saldo-inicial').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const aviso = document.getElementById('aviso-saldo-inicial');
+
+      const { error } = await sb.from('saldo_inicial_financeiro').upsert({
+        id: true,
+        valor: parseFloat(document.getElementById('si-valor').value),
+        data_referencia: document.getElementById('si-data').value,
+        observacoes: document.getElementById('si-observacoes').value.trim() || null,
+        atualizado_por: usuario.id,
+      });
+      if (error) { mostrarAviso(aviso, 'Não foi possível salvar: ' + error.message, 'erro'); return; }
+
+      mostrarAviso(aviso, 'Saldo inicial salvo.', 'ok');
+      await Promise.all([carregarSaldoEExtrato(), carregarSaldoInicial()]);
     });
 
     verificarSessao();
