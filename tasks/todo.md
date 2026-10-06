@@ -491,3 +491,34 @@ Risco residual: notícia longa que quebra linha tem régua só debaixo da últim
 linha (nos dois formatos). Fluxo logado de "Exportar PDF/ODT" em ata.html não
 foi clicado (exige conta); os handlers mudaram só para `async` + espera de
 fonte/imagem.
+
+# Mapa do Movimento Mensal de ago/2026 lançado no Controle Orçamentário (06/10/2026)
+
+Pedido: incluir no financeiro.html (produção) os dados da folha
+`mapa do movimento mensal para conferências- agosto de 2026.jpeg`.
+
+- [x] Saldo inicial R$ 6.183,00 em 01/08/2026 (linha 14) — upsert em
+      `saldo_inicial_financeiro` pelo cliente Supabase da página (não há tela).
+- [x] 4 categorias novas pela tela: Subscritores e benfeitores (entrada);
+      Moradia dos assistidos, Contas dos assistidos, Repasse da Solidariedade e
+      Coleta de Ozanam (saída).
+- [x] 9 lançamentos datados de 31/08/2026 pelo formulário, descrição com a linha do mapa.
+- Decisão do usuário: repasses detalhados sem duplicar (linhas 10 e 11, linha 12 vazia).
+
+Evidência: `vw_saldo_financeiro` → saldo_inicial 6183, entradas 578, saídas
+1736, saldo_atual 5025; a tela mostra os mesmos valores depois de recarregada.
+
+Divergências da folha (não corrigidas, a tesouraria precisa ver): linha 13 = 462
+deixou de fora 10/11/12; linha 28 = 1.626 deixou de fora a 26 (110); recebidos
+116 x repassados 110; décima 46,00 x 10% de 462 = 46,20. Saldo do papel 5.019 x
+app 5.025 (diferença = 116 − 110).
+
+## Achados fora do escopo
+
+- **`app/ata.html:782` `MAPA_CATEGORIA` não conhece as 4 categorias novas.** O
+  "Sugerir a partir do Financeiro" cai no `CAMPO_GENERICO`: moradia (17), contas
+  (18) e repasse Ozanam (26) iriam para a linha 23 (administrativas), e
+  subscritores (2) para a linha 3. Correção proposta: 4 entradas no mapa. **Só
+  registrado.** Mexe na ata e exige deploy.
+- **Saldo inicial não tem tela** (`financeiro.html:70` só exibe). O tesoureiro
+  não consegue ajustá-lo sem SQL ou console. **Só registrado.**

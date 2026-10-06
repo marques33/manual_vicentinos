@@ -294,7 +294,7 @@
     import {
       LINHAS, LINHAS_DIGITADAS, TITULO_BLOCO, CONTADORES_ASSISTENCIA, CATEGORIA_ROTULO,
       calcularMovimento, decimaEsperada, conferirBalanco, movimentoPreenchido,
-      derivarCaixaDaMinuta, contarPresencas,
+      derivarCaixaDaMinuta, contarPresencas, campoDoLancamento,
     } from './assets/ata-movimento-caixa.js';
 
     const telaLogin = document.getElementById('tela-login');
@@ -766,32 +766,6 @@
      * havendo ata anterior, o saldo inicial vem de vw_saldo_financeiro e o
      * período começa no primeiro lançamento.
      */
-    /**
-     * Categoria do Controle Orçamentário → linha do Movimento de Caixa.
-     *
-     * As categorias são cadastro aberto (migração 014), e a folha é fixa: o
-     * mapa liga as que vieram no seed às linhas que lhes correspondem. Uma
-     * categoria criada depois pela UI e não mapeada cai no balde genérico do
-     * próprio tipo — some no total certo em vez de sumir da folha.
-     *
-     * "Ajuda a família" vai para a linha 16 (cestas básicas) porque é o caso
-     * de longe mais comum, mas o impresso separa cesta (16), moradia (17) e
-     * conta paga (18) — e a categoria não distingue. Por isso a sugestão avisa
-     * que precisa de conferência: é sugestão, não lançamento.
-     */
-    const MAPA_CATEGORIA = {
-      'Coleta em reunião':              'rec_coleta_reuniao',      // 1
-      'Doação avulsa':                  'rec_outras_doacoes',      // 3
-      'Doação PIX do site':             'rec_outras_doacoes',      // 3
-      'Repasse recebido':               'rec_para_repasses',       // 12
-      'Ajuda a família':                'des_cestas_basicas',      // 16
-      'Despesa administrativa':         'des_administrativas',     // 23
-      'Repasse ao Conselho Particular': 'des_decima_conselho',     // 24
-      'Outra':                          'des_administrativas',     // 23
-    };
-
-    const CAMPO_GENERICO = { entrada: 'rec_outras_doacoes', saida: 'des_administrativas' };
-
     document.getElementById('btn-sugerir-caixa').addEventListener('click', async () => {
       const botao = document.getElementById('btn-sugerir-caixa');
       botao.disabled = true;
@@ -827,7 +801,7 @@
 
         const soma = {};
         for (const l of lancamentos || []) {
-          const campo = MAPA_CATEGORIA[l.categorias_financeiras?.nome] || CAMPO_GENERICO[l.tipo];
+          const campo = campoDoLancamento(l.categorias_financeiras?.nome, l.tipo);
           if (!campo) continue;
           soma[campo] = (soma[campo] || 0) + Number(l.valor);
         }

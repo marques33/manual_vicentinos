@@ -227,5 +227,67 @@ if (!html.includes("categoria: linha.dataset.categoria")) {
 }
 console.log('  categoria criada, copiada na presença e gravada');
 
+// ---------------------------------------------------------------------------
+secao('11 · Categoria do Controle Orçamentário → linha da folha');
+
+const { MAPA_CATEGORIA, CAMPO_GENERICO, campoDoLancamento } =
+  await import('../app/assets/ata-movimento-caixa.js');
+
+if (!MAPA_CATEGORIA || !CAMPO_GENERICO || typeof campoDoLancamento !== 'function') {
+  erro('o modulo nao exporta MAPA_CATEGORIA, CAMPO_GENERICO e campoDoLancamento');
+} else {
+  // Um campo que não é linha digitada grava em coluna que não existe, ou é
+  // sobrescrito pela conta, e a sugestão some sem erro.
+  const digitadas = new Map(LINHAS_DIGITADAS.map(l => [l.campo, l]));
+  for (const [nome, campo] of Object.entries({ ...MAPA_CATEGORIA, ...CAMPO_GENERICO })) {
+    if (!digitadas.has(campo)) erro('"' + nome + '" aponta para ' + campo + ', que nao e linha digitada');
+  }
+  if (digitadas.get(CAMPO_GENERICO.entrada)?.bloco !== 'receita') erro('balde generico de entrada fora da receita');
+  if (digitadas.get(CAMPO_GENERICO.saida)?.bloco !== 'despesa') erro('balde generico de saida fora da despesa');
+
+  // A linha impressa de cada categoria em uso. As quatro últimas foram criadas
+  // ao lançar o Mapa Mensal de agosto/2026: antes delas, moradia e contas
+  // caíam na 16 ou na 23, e o repasse de Ozanam virava despesa administrativa.
+  const esperado = {
+    'Coleta em reunião': 1, 'Repasse recebido': 12, 'Ajuda a família': 16,
+    'Despesa administrativa': 23, 'Repasse ao Conselho Particular': 24,
+    'Subscritores e benfeitores': 2, 'Moradia dos assistidos': 17,
+    'Contas dos assistidos': 18, 'Repasse da Solidariedade e Coleta de Ozanam': 26,
+  };
+  for (const [nome, n] of Object.entries(esperado)) {
+    const linha = digitadas.get(campoDoLancamento(nome, 'saida'));
+    if (linha?.n !== n) erro('"' + nome + '" foi para a linha ' + linha?.n + ', o impresso pede a ' + n);
+  }
+  if (campoDoLancamento('Categoria criada depois', 'entrada') !== CAMPO_GENERICO.entrada ||
+      campoDoLancamento('Categoria criada depois', 'saida') !== CAMPO_GENERICO.saida) {
+    erro('categoria nao mapeada nao caiu no balde generico do proprio tipo');
+  }
+
+  // Os nove lançamentos do Mapa Mensal de agosto/2026, como estão no
+  // financeiro: a folha sugerida tem de fechar no saldo que o financeiro mostra.
+  const agosto = [
+    ['Coleta em reunião', 'entrada', 62], ['Subscritores e benfeitores', 'entrada', 400],
+    ['Repasse recebido', 'entrada', 80], ['Repasse recebido', 'entrada', 36],
+    ['Ajuda a família', 'saida', 145], ['Moradia dos assistidos', 'saida', 500],
+    ['Contas dos assistidos', 'saida', 935], ['Repasse ao Conselho Particular', 'saida', 46],
+    ['Repasse da Solidariedade e Coleta de Ozanam', 'saida', 110],
+  ];
+  const folha = { rec_saldo_semana_anterior: 6183 };
+  for (const [nome, tipo, valor] of agosto) {
+    const campo = campoDoLancamento(nome, tipo);
+    folha[campo] = (folha[campo] || 0) + valor;
+  }
+  const conta = calcularMovimento(folha);
+  if (conta.rec_soma_semana !== 578 || conta.des_soma_semana !== 1736 ||
+      conta.des_saldo_semana_atual !== 5025) {
+    erro('agosto/2026: receita ' + conta.rec_soma_semana + ', despesa ' + conta.des_soma_semana +
+      ', saldo ' + conta.des_saldo_semana_atual + ' — o financeiro mostra 578, 1736 e 5025');
+  }
+
+  if (html.includes('const MAPA_CATEGORIA')) erro('ata.html ainda tem copia propria do mapa');
+  if (!html.includes('campoDoLancamento(')) erro('ata.html nao usa campoDoLancamento');
+}
+console.log('  cada categoria na sua linha; agosto/2026 fecha em 578 / 1.736 / 5.025');
+
 console.log(falhas ? '\n' + falhas + ' FALHA(S)' : '\nTudo conferido.');
 process.exit(falhas ? 1 : 0);

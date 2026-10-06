@@ -139,6 +139,42 @@ export const LINHAS_CALCULADAS = LINHAS.filter(l => l.calculado);
 /** Índice campo → descritor, para quem tem a coluna e quer a linha. */
 export const LINHA_POR_CAMPO = new Map(LINHAS.map(l => [l.campo, l]));
 
+/**
+ * Categoria do Controle Orçamentário → linha do Movimento de Caixa.
+ *
+ * As categorias são cadastro aberto (migração 014), e a folha é fixa: o mapa
+ * liga cada categoria em uso à linha que lhe corresponde. Uma categoria criada
+ * depois pela UI e não mapeada cai no balde genérico do próprio tipo — some no
+ * total certo em vez de sumir da folha.
+ *
+ * "Ajuda a família" vai para a linha 16 (cestas básicas). Moradia (17) e conta
+ * paga (18) têm categoria própria desde o Mapa Mensal de agosto/2026; ajuda
+ * desse tipo lançada antes, como "Ajuda a família", ainda cai na 16 — por isso
+ * a sugestão avisa que precisa de conferência: é sugestão, não lançamento.
+ */
+export const MAPA_CATEGORIA = {
+  'Coleta em reunião':                           'rec_coleta_reuniao',           // 1
+  'Subscritores e benfeitores':                  'rec_subscritores_benfeitores', // 2
+  'Doação avulsa':                               'rec_outras_doacoes',           // 3
+  'Doação PIX do site':                          'rec_outras_doacoes',           // 3
+  'Repasse recebido':                            'rec_para_repasses',            // 12
+  'Ajuda a família':                             'des_cestas_basicas',           // 16
+  'Moradia dos assistidos':                      'des_moradia_assistidos',       // 17
+  'Contas dos assistidos':                       'des_contas_assistidos',        // 18
+  'Despesa administrativa':                      'des_administrativas',          // 23
+  'Repasse ao Conselho Particular':              'des_decima_conselho',          // 24
+  'Repasse da Solidariedade e Coleta de Ozanam': 'des_repasse_solidariedade',    // 26
+  'Outra':                                       'des_administrativas',          // 23
+};
+
+/** O balde de quem não está no mapa: outras doações (3) ou administrativas (23). */
+export const CAMPO_GENERICO = { entrada: 'rec_outras_doacoes', saida: 'des_administrativas' };
+
+/** A coluna da folha onde entra um lançamento, pelo nome da categoria e o tipo. */
+export function campoDoLancamento(nomeCategoria, tipo) {
+  return MAPA_CATEGORIA[nomeCategoria] || CAMPO_GENERICO[tipo];
+}
+
 // ---------------------------------------------------------------------------
 // Aritmética
 // ---------------------------------------------------------------------------
