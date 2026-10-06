@@ -18,6 +18,14 @@
 // se este módulo já devolvesse HTML, o ODT receberia `&amp;` dentro de um
 // `<text:p>` e o LibreOffice mostraria "&amp;" na tela, literalmente.
 //
+// O LEIAUTE é o da minuta impressa (fotos `ata- frente.jpeg` e `ata- verso.jpeg`
+// na raiz do repositório): frente e verso em páginas separadas, o valor de cada
+// campo escrito em cima do pontilhado, o verso em linhas pautadas. Por isso o
+// parágrafo não é uma string só — é uma lista de `partes` (texto impresso x
+// campo preenchido), e cada renderizador desenha o campo do jeito do seu
+// formato. O PONTILHADO, porém, já sai pronto daqui: é texto, e texto é deste
+// módulo — assim o PDF e o ODT têm os mesmos pontos no mesmo lugar.
+//
 // Este módulo não toca no DOM nem no Supabase de propósito — recebe a linha da
 // tabela e a lista de presenças, e devolve dados. É o que o torna testável sem
 // navegador.
@@ -48,13 +56,65 @@ export const CONFERENCIA = {
 const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho',
   'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 
-/** O traço que ocupa, no documento, o lugar de um campo não preenchido. */
+/**
+ * O traço que os auxiliares de formatação devolvem para "não informado".
+ *
+ * Continua existindo porque formatarMoeda() e companhia servem também à tela
+ * (ata.html) e às células do Movimento de Caixa. Dentro do texto da minuta ele
+ * NÃO aparece: lá o campo vazio é o pontilhado do impresso — ver semLacuna().
+ */
 const LACUNA = '____________';
 
-/** Valor, ou a lacuna — para que a ata impressa mostre onde falta algo. */
-function ou(valor, lacuna = LACUNA) {
-  const texto = String(valor ?? '').trim();
-  return texto || lacuna;
+/** Desfaz a lacuna dos auxiliares: na minuta, campo vazio é pontilhado. */
+const semLacuna = (v) => (v === LACUNA ? '' : String(v ?? '').trim());
+
+// ---------------------------------------------------------------------------
+// As partes de um parágrafo
+//
+// Três tipos, que são as três coisas que existem na folha impressa:
+//
+//   texto   o que vem impresso no formulário ("Aos", "dias do mês de")
+//   campo   o pontilhado da frente, com o valor escrito em cima dele
+//   linha   o traço contínuo do verso ("Eu ______ lavrei a presente ata")
+//
+// Cada parte leva `texto` já pronto para ser posto na página; o renderizador só
+// escapa e, no caso de `linha`, sublinha. `valor` vai junto, cru, para os testes.
+// ---------------------------------------------------------------------------
+
+/** Espaço de largura zero: deixa a linha quebrar no meio do pontilhado. */
+const ZWSP = '​';
+/** Espaço que não quebra — e que, ao contrário do espaço comum, se sublinha. */
+const NBSP = ' ';
+
+/**
+ * O pontilhado de um campo da frente, com o valor no meio: "...243...".
+ *
+ * Vazio, vira uma fileira de pontos do tamanho que o campo tem no papel, com
+ * uma oportunidade de quebra a cada cinco — sem isso a fileira inteira seria
+ * uma "palavra" só, empurrada inteira para a linha de baixo, e o pontilhado não
+ * correria até a margem como corre no impresso.
+ */
+export function pontilhado(valor, tamanho = 12) {
+  const v = String(valor ?? '').trim();
+  if (v) return `${ZWSP}...${v}...${ZWSP}`;
+  let pontos = '';
+  for (let i = 0; i < tamanho; i++) pontos += (i % 5 === 0 ? ZWSP : '') + '.';
+  return pontos + ZWSP;
+}
+
+/** O traço do verso: o valor sublinhado, ou espaços sublinhados se vazio. */
+export function sublinhado(valor, tamanho = 40) {
+  const v = String(valor ?? '').trim();
+  return v ? `${NBSP}${v}${NBSP}` : NBSP.repeat(tamanho);
+}
+
+const impresso = (t, extra = {}) => ({ tipo: 'texto', texto: t, ...extra });
+const campo = (valor, tamanho) => ({ tipo: 'campo', valor: String(valor ?? '').trim(), texto: pontilhado(valor, tamanho) });
+const linha = (valor, tamanho) => ({ tipo: 'linha', valor: String(valor ?? '').trim(), texto: sublinhado(valor, tamanho) });
+
+/** Um bloco de parágrafo a partir das partes; `texto` é a versão corrida. */
+function paragrafo(tipo, partes) {
+  return { tipo, partes, texto: partes.map(p => p.texto).join('') };
 }
 
 /**
@@ -126,35 +186,37 @@ export function emParagrafos(texto) {
 /**
  * A ata inteira como uma lista de blocos, na ordem do formulário impresso.
  *
- * Tipos de bloco:
- *   cabecalho   — o Conselho Metropolitano (na tela vem com a bandeira)
- *   titulo      — "MINUTA DA ATA DA CONFERÊNCIA"
+ * Tipos de bloco (os de parágrafo trazem `partes`; todos trazem `texto`):
+ *   cabecalho   — a bandeira e o Conselho Metropolitano
+ *   titulo      — "MINUTA DA ATA DA CONFERÊNCIA", itálico sublinhado
  *   subtitulo   — o nome da Conferência
- *   corpo       — parágrafo corrido do texto da minuta
- *   secao       — título em negrito do verso ("Notícias das famílias…")
- *   nota        — a instrução impressa em letra miúda do formulário
- *   livre       — uma linha de campo de texto livre preenchido
- *   vazio       — campo livre sem conteúdo (vira a lacuna pontilhada)
+ *   corpo       — parágrafo corrido da frente, com os campos pontilhados
+ *   pagina      — quebra de página: a frente acaba, começa o verso
+ *   secao       — título em negrito do verso (pode seguir texto comum)
+ *   pauta       — uma linha pautada do verso, escrita ou em branco
+ *   item        — "Escalas de visitas…: ____", "Privilegiados…: ____"
  *   fecho       — as duas frases finais
+ *   tabela      — a grade do Movimento de Caixa (anexo, página própria)
  *
  * @param {object} ata        linha de public.atas
  * @param {Array}  presencas  linhas de public.atas_presencas desta ata
- * @returns {Array<{tipo: string, texto: string}>}
+ * @returns {Array<{tipo: string, texto: string, partes?: Array}>}
  */
 export function blocosDaAta(ata = {}, presencas = []) {
   const b = [];
   const { dia, mes } = diaEMes(ata.data_reuniao);
   const presentes = nomesPorSituacao(presencas, 'presente');
   const justificados = nomesPorSituacao(presencas, 'justificado');
+  const moeda = (v) => campo(semLacuna(formatarMoeda(v)), 14);
 
+  // ========================== FRENTE ======================================
   b.push({ tipo: 'cabecalho', texto: CONFERENCIA.conselhoMetropolitano });
   b.push({ tipo: 'titulo', texto: CONFERENCIA.titulo });
   b.push({ tipo: 'subtitulo', texto: CONFERENCIA.nome });
 
-  // --- Abertura: um parágrafo só, como no papel ----------------------------
   // "Justificativas" reúne o texto livre do campo e os nomes marcados como
-  // justificados na lista de presença — no papel é uma linha só, e quem lê a
-  // ata quer os dois na mesma frase.
+  // justificados na lista de presença — no papel é um pontilhado só, e quem lê
+  // a ata quer os dois no mesmo lugar.
   const justificativas = [
     justificados.join(', '),
     String(ata.justificativas ?? '').trim(),
@@ -162,79 +224,119 @@ export function blocosDaAta(ata = {}, presencas = []) {
 
   const tipoReuniao = ata.tipo === 'extraordinaria' ? 'extraordinária' : 'ordinária';
 
-  b.push({
-    tipo: 'corpo',
-    texto:
-      `Fundada em ${CONFERENCIA.fundacao} e agregada em ${CONFERENCIA.agregacao}. ` +
+  // O texto abaixo é o do impresso, palavra por palavra, inclusive onde ele
+  // cola o campo na palavra seguinte ("número....Louvado"). As únicas emendas
+  // são de ortografia ("consócia", "seguintes", "auxílio"), na mesma linha da
+  // correção de "esse foi aprovada" no verso.
+  b.push(paragrafo('corpo', [
+    impresso(`Fundada em ${CONFERENCIA.fundacao} e agregada em ${CONFERENCIA.agregacao}. ` +
       `Vinculada ao ${CONFERENCIA.conselhoParticular}. ` +
-      `Ata da reunião ${tipoReuniao} de número ${ou(ata.numero)}. ` +
-      `Louvado Seja Nosso Senhor Jesus Cristo! ` +
-      `Aos ${dia} dias do mês de ${mes} às ${horaPorExtenso(ata.hora)} horas, ` +
-      `na sala ${ou(ata.local)} iniciou-se mais uma reunião dessa Conferência, ` +
-      `presidida pela (confrade ou consócia) ${ou(ata.presidida_por)}. ` +
-      `Com a presença dos seguintes associados: ${ou(presentes.join(', '))}. ` +
-      `Visitantes: ${ou(ata.visitantes)}. ` +
-      `Justificativas: ${ou(justificativas)}.`,
-  });
+      `Ata da reunião ${tipoReuniao} de número`),
+    campo(ata.numero, 10),
+    impresso('Louvado Seja Nosso Senhor Jesus Cristo! Aos'),
+    campo(semLacuna(dia), 6),
+    impresso(' dias do mês de '),
+    campo(semLacuna(mes), 12),
+    impresso('às '),
+    campo(semLacuna(horaPorExtenso(ata.hora)), 5),
+    impresso('horas, na sala'),
+    campo(ata.local, 40),
+    impresso(' iniciou-se mais uma reunião dessa Conferência, presidida pela ' +
+      '(confrade ou consócia) '),
+    campo(ata.presidida_por, 34),
+    impresso(' Com a presença dos seguintes associados'),
+    campo(presentes.join(', '), 90),
+    impresso('Visitantes'),
+    campo(ata.visitantes, 30),
+    impresso('Justificativas:'),
+    campo(justificativas, 70),
+  ]));
 
-  // --- Leitura espiritual e caixa ------------------------------------------
-  b.push({
-    tipo: 'corpo',
-    texto:
-      `Aberta a reunião com as orações tradicionais, em seguida foi feita a leitura ` +
-      `${ou(ata.leitura_obra)} retirada: ${ou(ata.leitura_trecho)} ` +
-      `a qual foi comentada pelos presentes. Em seguida foi feita a leitura da Ata ` +
-      `da reunião anterior, a mesma foi posta em discussão, sendo aprovada sem ` +
-      `ressalvas. A tesoureira apresentou o estado do caixa, que foi o seguinte: ` +
-      `saldo anterior ${formatarMoeda(ata.saldo_anterior)}, ` +
-      `coleta ${formatarMoeda(ata.coleta)}, ` +
-      `outras fontes ${formatarMoeda(ata.outras_fontes)}, ` +
-      `soma da receita ${formatarMoeda(ata.soma_receita)}, ` +
-      `auxílio financeiro aos assistidos ${formatarMoeda(ata.auxilio_assistidos)}, ` +
-      `despesas diversas ${formatarMoeda(ata.despesas_diversas)}, ` +
-      `décima ${formatarMoeda(ata.decima)}, ` +
-      `soma da despesa ${formatarMoeda(ata.soma_despesa)}, ` +
-      `saldo atual ${formatarMoeda(ata.saldo_atual)}.`,
-  });
+  b.push(paragrafo('corpo', [
+    impresso('Aberta a reunião com as orações tradicionais, em seguida foi feita a leitura '),
+    campo(ata.leitura_obra, 60),
+    impresso('retirada:'),
+    campo(ata.leitura_trecho, 40),
+    impresso('a qual foi comentada pelos presentes. Em seguida foi feita a leitura ' +
+      'da Ata da reunião anterior, a mesma foi posta em discussão, sendo aprovada ' +
+      'sem ressalvas. A tesoureira apresentou o estado do caixa, que foi o ' +
+      'seguinte: saldo anterior '),
+    moeda(ata.saldo_anterior),
+    impresso(' coleta'), moeda(ata.coleta),
+    impresso('outras fontes'), moeda(ata.outras_fontes),
+    impresso('soma da receita'), moeda(ata.soma_receita),
+    impresso('auxílio financeiro aos assistidos'), moeda(ata.auxilio_assistidos),
+    impresso('despesas diversas'), moeda(ata.despesas_diversas),
+    impresso('décima '), moeda(ata.decima),
+    impresso(' soma da despesa:'), moeda(ata.soma_despesa),
+    impresso('saldo atual'), moeda(ata.saldo_atual),
+  ]));
 
-  // --- Movimento de Caixa --------------------------------------------------
-  // A folha da tesouraria que vai ao Conselho Particular. Só aparece quando há
-  // o que mostrar: ata lavrada antes desta folha existir tem os nove campos da
-  // minuta (que a prosa acima já recitou) e nenhuma das 36 linhas — imprimir
-  // 36 lacunas não diria nada a ninguém.
-  if (movimentoPreenchido(ata)) empurrarMovimento(b, ata, presencas);
+  // =========================== VERSO ======================================
+  b.push({ tipo: 'pagina', texto: '' });
 
-  // --- Verso ---------------------------------------------------------------
-  b.push({ tipo: 'secao', texto: 'Notícias das famílias e outras notícias:' });
-  empurrarLivre(b, ata.noticias_familias);
+  b.push(paragrafo('secao', [impresso('Notícias das famílias e outras notícias:', { negrito: true })]));
+  empurrarPautas(b, ata.noticias_familias, 7);
 
-  b.push({ tipo: 'secao', texto: 'Expediente da Conferência' });
-  // A instrução impressa no formulário. O papel traz "esse foi aprovada ou
-  // não", que é erro de digitação do impresso — a leitura correta é "e se foi
-  // aprovada ou não", e é ela que vai para o documento gerado.
-  b.push({
-    tipo: 'nota',
-    texto:
-      '(resumo das notícias dos Conselhos e fatos ocorridos e decididos na ' +
-      'Conferência). Quando houver sindicância, não deixar de anotar o nome, ' +
-      'endereço, e se foi aprovada ou não.',
-  });
-  empurrarLivre(b, ata.expediente);
+  // A instrução impressa. O papel traz "esse foi aprovada ou não", que é erro de
+  // digitação do impresso — a leitura correta é "e se foi aprovada ou não", e é
+  // ela que vai para o documento gerado.
+  b.push(paragrafo('secao', [
+    impresso('Expediente da Conferência', { negrito: true }),
+    impresso(' (resumo das notícias dos Conselhos e fatos ocorridos e decididos ' +
+      'na Conferência). Quando houver sindicância, não deixar de anotar o nome, ' +
+      'endereço, e se foi aprovada ou não.'),
+  ]));
+  empurrarPautas(b, ata.expediente, 3);
 
-  b.push({ tipo: 'secao', texto: 'Escalas de visitas às famílias:' });
-  empurrarLivre(b, ata.escala_visitas);
+  empurrarItem(b, [impresso('Escalas de visitas às famílias: ')], ata.escala_visitas, 62);
+  // Só "Privilegiados" em negrito: é como está no impresso.
+  empurrarItem(b, [impresso('Privilegiados', { negrito: true }), impresso(' da semana: ')],
+    ata.privilegiados, 70);
 
-  b.push({ tipo: 'secao', texto: 'Privilegiados da semana:' });
-  empurrarLivre(b, ata.privilegiados);
+  b.push(paragrafo('fecho', [
+    impresso('Nada mais havendo a tratar, a reunião foi encerrada com as orações.'),
+  ]));
+  b.push(paragrafo('fecho', [
+    impresso('Eu '),
+    linha(ata.redigida_por, 56),
+    impresso('lavrei a presente ata, que após lida e aprovada, será assinada pelos presentes.'),
+  ]));
 
-  b.push({ tipo: 'fecho', texto: 'Nada mais havendo a tratar, a reunião foi encerrada com as orações.' });
-  b.push({
-    tipo: 'fecho',
-    texto: `Eu ${ou(ata.redigida_por)} lavrei a presente ata, que após lida e ` +
-      `aprovada, será assinada pelos presentes.`,
-  });
+  // ==================== ANEXO: Movimento de Caixa =========================
+  // A folha da tesouraria que vai ao Conselho Particular NÃO faz parte da
+  // minuta impressa — é outro formulário. Sai depois do verso, em página
+  // própria, para a minuta ficar idêntica ao papel sem que a folha se perca.
+  // E só quando há o que mostrar: ata lavrada antes desta folha existir tem os
+  // nove campos da minuta (que a frente já recitou) e nenhuma das 36 linhas.
+  if (movimentoPreenchido(ata)) {
+    b.push({ tipo: 'pagina', texto: '' });
+    empurrarMovimento(b, ata, presencas);
+  }
 
   return b;
+}
+
+/**
+ * As linhas pautadas do verso: uma por parágrafo do texto, e linhas em branco
+ * até completar o mínimo que o impresso oferece — a ata impressa continua
+ * servindo para acrescentar à mão, como o papel servia.
+ */
+function empurrarPautas(blocos, texto, minimo) {
+  const linhas = emParagrafos(texto);
+  for (const l of linhas) blocos.push({ tipo: 'pauta', texto: l });
+  for (let i = linhas.length; i < minimo; i++) blocos.push({ tipo: 'pauta', texto: '' });
+}
+
+/**
+ * "Rótulo: ______" do verso. A primeira linha do texto vai sobre o traço, ao
+ * lado do rótulo; as seguintes descem para linhas pautadas — no papel, quem
+ * escreve a escala de três duplas continua na linha de baixo.
+ */
+function empurrarItem(blocos, rotulo, texto, tamanho) {
+  const [primeira = '', ...resto] = emParagrafos(texto);
+  blocos.push(paragrafo('item', [...rotulo, linha(primeira, tamanho)]));
+  for (const l of resto) blocos.push({ tipo: 'pauta', texto: l });
 }
 
 // ---------------------------------------------------------------------------
@@ -262,7 +364,10 @@ function formatarQuantidade(valor, unidade) {
 }
 
 function empurrarMovimento(blocos, ata, presencas) {
-  blocos.push({ tipo: 'secao', texto: 'Movimento de Caixa' });
+  // Página solta precisa dizer de que ata é — o anexo pode ser grampeado ou
+  // conferido separado da minuta.
+  const titulo = `Anexo à ata nº ${ata.numero ?? '___'} — Movimento de Caixa`;
+  blocos.push(paragrafo('secao', [impresso(titulo, { negrito: true })]));
 
   // --- O cabeçalho do impresso: assistência e presença --------------------
   const p = contarPresencas(presencas);
@@ -340,19 +445,22 @@ function emPares(esquerda, direita) {
   return linhas;
 }
 
-/** Campo de texto livre: uma linha por parágrafo, ou a lacuna se vier vazio. */
-function empurrarLivre(blocos, texto) {
-  const paragrafos = emParagrafos(texto);
-  if (!paragrafos.length) {
-    blocos.push({ tipo: 'vazio', texto: LACUNA });
-    return;
-  }
-  for (const p of paragrafos) blocos.push({ tipo: 'livre', texto: p });
-}
-
 // ---------------------------------------------------------------------------
 // Renderização em HTML — usada na visualização E na impressão em PDF
 // ---------------------------------------------------------------------------
+
+/** A bandeira do cabeçalho — o mesmo PNG que o ODT embute em Pictures/. */
+export const URL_BANDEIRA = new URL('./bandeira-brasil.png', import.meta.url).href;
+
+/** As partes de um parágrafo como HTML (ver "As partes de um parágrafo"). */
+function htmlPartes(partes = []) {
+  return partes.map(p => {
+    const t = escapar(p.texto);
+    if (p.tipo === 'campo') return `<span class="ata-campo">${t}</span>`;
+    if (p.tipo === 'linha') return `<span class="ata-linha">${t}</span>`;
+    return p.negrito ? `<strong>${t}</strong>` : t;
+  }).join('');
+}
 
 /**
  * O documento como HTML.
@@ -363,39 +471,50 @@ function empurrarLivre(blocos, texto) {
  * segundo layout desenhado numa API de PDF, que seria a segunda fonte de
  * verdade que este módulo existe para evitar.
  *
+ * Cada página do impresso (frente, verso e, se houver, o anexo) é uma
+ * `.ata-folha`: na tela, folhas separadas; no papel, `break-before: page`.
+ *
  * Todo texto passa por escapar(): ele vem do banco, digitado por uma pessoa,
  * e a regra do projeto não tem exceção.
  */
 export function htmlDocumento(ata = {}, presencas = []) {
-  const partes = blocosDaAta(ata, presencas).map(bloco => {
-    const t = escapar(bloco.texto);
-    switch (bloco.tipo) {
-      case 'tabela':     return htmlTabela(bloco);
-      case 'cabecalho':
-        // A bandeira só existe na tela e no papel; o ODT leva o cabeçalho em
-        // texto (embutir imagem em ODF exigiria membro binário no pacote).
-        //
-        // `div`, e não `header`: várias páginas deste site trazem um <style>
-        // grande com regra para o seletor de elemento `header` (em
-        // area-vicentino.html ele é fixo no topo, com fundo vinho). Um
-        // documento que se deforma conforme a página que o exibe não serve —
-        // e a classe já diz o que o bloco é.
-        return `<div class="ata-cabecalho">` +
-          `<span class="ata-bandeira" aria-hidden="true"></span>` +
-          `<span class="ata-conselho">${t}</span></div>`;
-      case 'titulo':     return `<h1 class="ata-titulo">${t}</h1>`;
-      case 'subtitulo':  return `<p class="ata-subtitulo">${t}</p>`;
-      case 'corpo':      return `<p class="ata-corpo">${t}</p>`;
-      case 'secao':      return `<h2 class="ata-secao">${t}</h2>`;
-      case 'nota':       return `<p class="ata-nota">${t}</p>`;
-      case 'livre':      return `<p class="ata-livre">${t}</p>`;
-      case 'vazio':      return `<p class="ata-livre ata-lacuna">${t}</p>`;
-      case 'fecho':      return `<p class="ata-fecho">${t}</p>`;
-      default:           return `<p>${t}</p>`;
-    }
-  });
+  const folhas = [[]];
+  for (const bloco of blocosDaAta(ata, presencas)) {
+    if (bloco.tipo === 'pagina') { folhas.push([]); continue; }
+    folhas[folhas.length - 1].push(htmlBloco(bloco));
+  }
+  return `<article class="ata-documento">` +
+    folhas.map(f => `<section class="ata-folha">${f.join('')}</section>`).join('') +
+    `</article>`;
+}
 
-  return `<article class="ata-documento">${partes.join('')}</article>`;
+function htmlBloco(bloco) {
+  const t = escapar(bloco.texto);
+  switch (bloco.tipo) {
+    case 'tabela':     return htmlTabela(bloco);
+    case 'cabecalho':
+      // `div`, e não `header`: várias páginas deste site trazem um <style>
+      // grande com regra para o seletor de elemento `header` (em
+      // area-vicentino.html ele é fixo no topo, com fundo vinho). Um
+      // documento que se deforma conforme a página que o exibe não serve —
+      // e a classe já diz o que o bloco é.
+      //
+      // <img> e não fundo CSS: imagem de conteúdo sai na impressão mesmo com
+      // "Gráficos de segundo plano" desmarcado no diálogo do Chrome.
+      return `<div class="ata-cabecalho">` +
+        `<img class="ata-bandeira" src="${escapar(URL_BANDEIRA)}" alt="">` +
+        `<span class="ata-conselho">${t}</span></div>`;
+    case 'titulo':     return `<h1 class="ata-titulo">${t}</h1>`;
+    case 'subtitulo':  return `<p class="ata-subtitulo">${t}</p>`;
+    case 'corpo':      return `<p class="ata-corpo">${htmlPartes(bloco.partes)}</p>`;
+    case 'secao':      return `<h2 class="ata-secao">${htmlPartes(bloco.partes)}</h2>`;
+    // Linha em branco leva um espaço que não quebra: parágrafo vazio tem
+    // altura zero, e a pauta sumiria.
+    case 'pauta':      return `<p class="ata-pauta">${t || '&nbsp;'}</p>`;
+    case 'item':       return `<p class="ata-item">${htmlPartes(bloco.partes)}</p>`;
+    case 'fecho':      return `<p class="ata-fecho">${htmlPartes(bloco.partes)}</p>`;
+    default:           return `<p>${t}</p>`;
+  }
 }
 
 /**

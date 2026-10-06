@@ -950,9 +950,9 @@
     /** O que sai no arquivo é o que está na tela — igual ao modo "ver". */
     const paraExportar = () => [ataDaTela(), presencasDaTela()];
 
-    document.getElementById('btn-odt').addEventListener('click', () => {
+    document.getElementById('btn-odt').addEventListener('click', async () => {
       try {
-        baixarOdt(...paraExportar());
+        await baixarOdt(...paraExportar());
         notificarOk('Arquivo ODT gerado.');
       } catch (erro) {
         notificarErro('Não foi possível gerar o ODT: ' + erro.message);
@@ -968,12 +968,22 @@
      *    diálogo "Salvar como PDF", então ele vira o nome da ata e volta ao
      *    normal depois;
      *  - `afterprint` também dispara quando o usuário CANCELA o diálogo, que é
-     *    justamente o caso em que restaurar o título importa.
+     *    justamente o caso em que restaurar o título importa;
+     *  - a bandeira e a DejaVu Serif só começam a carregar quando o documento
+     *    entra no DOM. Imprimir antes disso sai sem a bandeira e na letra de
+     *    reserva — então espera as duas (falha de rede não trava: imprime
+     *    assim mesmo).
      */
-    document.getElementById('btn-pdf').addEventListener('click', () => {
+    document.getElementById('btn-pdf').addEventListener('click', async () => {
       const [a, p] = paraExportar();
       telaDocumento.innerHTML = htmlDocumento(a, p);
       telaDocumento.hidden = false;
+
+      await Promise.all([
+        ...[...telaDocumento.querySelectorAll('img')].map(img => img.decode().catch(() => {})),
+        ...['12pt', 'bold 12pt', 'italic 12pt'].map(f =>
+          document.fonts.load(`${f} "DejaVu Serif"`).catch(() => {})),
+      ]);
 
       const tituloOriginal = document.title;
       const voltar = () => {

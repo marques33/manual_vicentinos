@@ -1,13 +1,14 @@
 // ============================================================================
 // A ata como arquivo ODT (OpenDocument Text).
 //
-// Um .odt não é um formato de texto: é um ZIP com quatro membros —
+// Um .odt não é um formato de texto: é um ZIP com estes membros —
 //
-//   mimetype                 (a string do tipo, sem compressão, PRIMEIRO)
-//   META-INF/manifest.xml    (o índice do pacote)
-//   content.xml              (o texto)
-//   styles.xml               (a página e as fontes)
-//   meta.xml                 (título e autor, opcional — vai junto)
+//   mimetype                   (a string do tipo, sem compressão, PRIMEIRO)
+//   META-INF/manifest.xml      (o índice do pacote)
+//   content.xml                (o texto)
+//   styles.xml                 (a página, a fonte e os estilos "Ata …")
+//   meta.xml                   (título e autor, opcional — vai junto)
+//   Pictures/bandeira-brasil.png  (a bandeira do cabeçalho)
 //
 // Duas armadilhas do formato, que produzem um arquivo que o LibreOffice
 // RECUSA a abrir e que nenhum teste de status HTTP pegaria:
@@ -20,24 +21,27 @@
 //   2. `content.xml` é XML, não HTML. "\n" no meio de um `<text:p>` não quebra
 //      parágrafo — vira espaço. Por isso os campos de texto livre chegam aqui
 //      já partidos em um bloco por linha (emParagrafos(), em ata-documento.js);
-//      sem isso, as três notícias das famílias sairiam grudadas numa linha só.
+//      sem isso, as notícias das famílias sairiam grudadas numa linha só.
+//
+// O LEIAUTE é o da minuta impressa, o mesmo do PDF (ver ata-documento.css):
+// bandeira e Conselho no topo, frente e verso em páginas separadas, campos
+// pontilhados, verso pautado. Nos dois, a régua do verso é a borda de baixo
+// do parágrafo: uma notícia comprida que quebra em duas linhas tem régua só
+// debaixo da segunda. ODF não tem "fundo pautado" que acompanhe a entrelinha,
+// e o fundo em gradiente do navegador saía serrilhado no PDF — a borda é
+// linha de verdade nos dois formatos.
 //
 // Por que fflate e não JSZip: são ~8 KB contra ~100 KB, e fflate é ESM nativo
 // — este projeto não tem bundler, cada `<script type="module">` importa a
 // biblioteca direto. `esm.sh` é o mesmo CDN de onde supabase-client.js já
 // carrega o supabase-js, então não entra origem nova no site.
-//
-// Limitação conhecida e deliberada: o cabeçalho sai em TEXTO, sem a bandeira
-// que aparece na tela e na impressão. Embutir imagem em ODF exige um membro
-// binário em Pictures/, entrada própria no manifesto e um <draw:frame> — custo
-// que não se paga aqui, já que o ODT existe justamente para ser aberto e
-// ajustado no LibreOffice. Registrado em tasks/todo.md.
 // ============================================================================
 
 import { zipSync, strToU8 } from 'https://esm.sh/fflate@0.8.2';
-import { blocosDaAta, nomeDoArquivo, CONFERENCIA } from './ata-documento.js';
+import { blocosDaAta, nomeDoArquivo, CONFERENCIA, URL_BANDEIRA } from './ata-documento.js';
 
 const MIME = 'application/vnd.oasis.opendocument.text';
+const CAMINHO_BANDEIRA = 'Pictures/bandeira-brasil.png';
 
 /**
  * Escapa texto para dentro de um nó XML.
@@ -65,9 +69,10 @@ export function escaparXml(texto) {
 // ---------------------------------------------------------------------------
 // Estilos
 //
-// Cada tipo de bloco de ata-documento.js tem um estilo de parágrafo aqui. Os
-// nomes viajam para dentro do arquivo: quem abrir no LibreOffice vê "Ata
-// Corpo" na lista de estilos e consegue mudar a ata inteira de uma vez.
+// Cada tipo de bloco de ata-documento.js tem um estilo de parágrafo aqui. Eles
+// moram em styles.xml como estilos COMUNS (não automáticos): é o que faz "Ata
+// Corpo" aparecer na lista de estilos do LibreOffice, para quem abrir o
+// arquivo mudar a ata inteira de uma vez. Estilo automático não aparece lá.
 // ---------------------------------------------------------------------------
 const ESTILO_POR_TIPO = {
   cabecalho: 'AtaCabecalho',
@@ -75,9 +80,8 @@ const ESTILO_POR_TIPO = {
   subtitulo: 'AtaSubtitulo',
   corpo:     'AtaCorpo',
   secao:     'AtaSecao',
-  nota:      'AtaNota',
-  livre:     'AtaLivre',
-  vazio:     'AtaLivre',
+  pauta:     'AtaPauta',
+  item:      'AtaItem',
   fecho:     'AtaFecho',
 };
 
@@ -87,41 +91,79 @@ const NS = [
   'xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"',
   'xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"',
   'xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"',
-  // O Movimento de Caixa sai como tabela ODF — sem este namespace o
-  // LibreOffice recusa o ARQUIVO INTEIRO, não só a tabela.
+  // O Movimento de Caixa sai como tabela ODF e a bandeira como desenho — sem
+  // estes namespaces o LibreOffice recusa o ARQUIVO INTEIRO, não só a parte.
   'xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"',
+  'xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"',
+  'xmlns:xlink="http://www.w3.org/1999/xlink"',
 ].join(' ');
 
 /** Um <style:style> de parágrafo, com as propriedades que interessam. */
-function estilo(nome, { alinhar = 'justify', tamanho = '12pt', negrito = false,
-  italico = false, sublinhado = false, antes = '0cm', depois = '0.25cm' } = {}) {
+function estilo(nome, rotulo, { alinhar = 'start', tamanho = '12pt', negrito = false,
+  italico = false, sublinhado = false, antes = '0cm', depois = '0cm',
+  entrelinha = null, extra = '' } = {}) {
   const texto =
     `<style:text-properties fo:font-size="${tamanho}"` +
     (negrito ? ' fo:font-weight="bold"' : '') +
     (italico ? ' fo:font-style="italic"' : '') +
-    (sublinhado ? ' style:text-underline-style="solid" style:text-underline-width="auto"' : '') +
+    (sublinhado ? ' style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"' : '') +
     '/>';
-  return `<style:style style:name="${nome}" style:family="paragraph" style:parent-style-name="Standard">` +
-    `<style:paragraph-properties fo:text-align="${alinhar}" fo:margin-top="${antes}" fo:margin-bottom="${depois}"/>` +
+  return `<style:style style:name="${nome}" style:display-name="${rotulo}" ` +
+    `style:family="paragraph" style:parent-style-name="Standard">` +
+    `<style:paragraph-properties fo:text-align="${alinhar}" fo:margin-top="${antes}" fo:margin-bottom="${depois}"` +
+    (entrelinha ? ` fo:line-height="${entrelinha}"` : '') + `${extra}/>` +
     texto +
     `</style:style>`;
 }
 
-const ESTILOS = [
-  estilo('AtaCabecalho', { alinhar: 'center', negrito: true, tamanho: '13pt', depois: '0.1cm' }),
-  estilo('AtaTitulo', { alinhar: 'center', negrito: true, italico: true, sublinhado: true, tamanho: '14pt', antes: '0.2cm', depois: '0.2cm' }),
-  estilo('AtaSubtitulo', { alinhar: 'center', tamanho: '12pt', depois: '0.5cm' }),
-  estilo('AtaCorpo', { alinhar: 'justify', depois: '0.4cm' }),
-  estilo('AtaSecao', { alinhar: 'left', negrito: true, antes: '0.5cm', depois: '0.2cm' }),
-  estilo('AtaNota', { alinhar: 'justify', italico: true, tamanho: '10pt', depois: '0.2cm' }),
-  estilo('AtaLivre', { alinhar: 'justify', depois: '0.15cm' }),
-  estilo('AtaFecho', { alinhar: 'justify', antes: '0.5cm', depois: '0.3cm' }),
+// As medidas espelham ata-documento.css (entrelinha 2 na frente, pauta de
+// 1,05 cm no verso, títulos em 12 pt) — PDF e ODT têm de sair parecidos.
+const ESTILOS_PARAGRAFO = [
+  estilo('AtaCabecalho', 'Ata Cabeçalho'),
+  estilo('AtaTitulo', 'Ata Título', { italico: true, sublinhado: true, entrelinha: '200%', antes: '0.25cm', depois: '0.4cm' }),
+  estilo('AtaSubtitulo', 'Ata Subtítulo', { entrelinha: '200%', depois: '0.25cm' }),
+  estilo('AtaCorpo', 'Ata Corpo', { entrelinha: '200%', depois: '0.3cm' }),
+  estilo('AtaSecao', 'Ata Seção', { entrelinha: '160%', antes: '0.9cm', depois: '0.1cm',
+    // Título de seção não fica sozinho no pé da página.
+    extra: ' fo:keep-with-next="always"' }),
+  // A linha pautada: a régua é a borda de baixo, e o vão até a régua de cima
+  // fica TODO em cima do texto (padding-top), para a letra assentar na régua
+  // — a mesma conta de .ata-pauta no CSS (1,05 cm = 150% de 12 pt + vão).
+  // `join-border="false"` é indispensável: sem ele o LibreOffice funde as
+  // bordas de parágrafos vizinhos de mesmo estilo e só a ÚLTIMA pauta da
+  // seção ganha régua.
+  estilo('AtaPauta', 'Ata Pauta', { entrelinha: '150%',
+    extra: ' fo:padding-top="0.34cm" fo:padding-bottom="0.07cm" ' +
+      'fo:border-bottom="0.6pt solid #333333" style:join-border="false"' }),
+  estilo('AtaItem', 'Ata Item', { entrelinha: '180%', antes: '0.7cm' }),
+  estilo('AtaFecho', 'Ata Fecho', { entrelinha: '180%', antes: '0.6cm' }),
   // Parágrafos DENTRO das células da folha: menores que o corpo, porque a
   // grade tem 36 linhas e precisa caber sem estourar a página.
-  estilo('AtaCelula', { alinhar: 'left', tamanho: '9pt', depois: '0cm' }),
-  estilo('AtaCelulaNum', { alinhar: 'right', tamanho: '9pt', depois: '0cm' }),
-  estilo('AtaCelulaCab', { alinhar: 'left', tamanho: '9pt', negrito: true, depois: '0cm' }),
+  estilo('AtaCelula', 'Ata Célula', { tamanho: '9pt' }),
+  estilo('AtaCelulaNum', 'Ata Célula Número', { alinhar: 'end', tamanho: '9pt' }),
+  estilo('AtaCelulaCab', 'Ata Célula Cabeçalho', { tamanho: '9pt', negrito: true }),
+  estilo('AtaLegenda', 'Ata Legenda da Grade', { tamanho: '10pt', negrito: true, antes: '0.3cm',
+    extra: ' fo:keep-with-next="always"' }),
 ].join('');
+
+/** Estilos de trecho: o negrito do verso e o traço de "Eu ____ lavrei". */
+const ESTILOS_TRECHO = [
+  `<style:style style:name="AtaNegrito" style:family="text">` +
+    `<style:text-properties fo:font-weight="bold"/></style:style>`,
+  `<style:style style:name="AtaSublinhado" style:family="text">` +
+    `<style:text-properties style:text-underline-style="solid" ` +
+    `style:text-underline-width="auto" style:text-underline-color="font-color"/></style:style>`,
+].join('');
+
+/**
+ * A bandeira "como caractere": ela entra na linha do Conselho como uma letra
+ * muito alta, com o pé na linha de base — e o texto que vem depois dela
+ * assenta no pé da bandeira, como no impresso.
+ */
+const ESTILO_BANDEIRA =
+  `<style:style style:name="frBandeira" style:family="graphic">` +
+    `<style:graphic-properties style:vertical-pos="top" style:vertical-rel="baseline" ` +
+    `fo:border="none" fo:padding="0cm"/></style:style>`;
 
 // ---------------------------------------------------------------------------
 // A tabela — o Movimento de Caixa
@@ -165,7 +207,7 @@ const COLUNAS_POR_FORMA = {
 };
 
 /** Um bloco `tabela` de ata-documento.js como <table:table>. */
-function tabelaOdf(bloco, indice) {
+function tabelaOdf(bloco, indice, paragrafo) {
   const { cabecalho = [], linhas = [] } = bloco.tabela || {};
   const forma = cabecalho.length || linhas[0]?.length || 3;
   const colunas = COLUNAS_POR_FORMA[forma]
@@ -196,7 +238,9 @@ function tabelaOdf(bloco, indice) {
     ? `<table:table-header-rows>${linhaXml(cabecalho, true)}</table:table-header-rows>`
     : '';
 
-  return `<text:p text:style-name="AtaSecao">${escaparXml(bloco.texto)}</text:p>` +
+  // A legenda tem estilo próprio, e não `AtaSecao`: a margem de 0,9 cm do
+  // verso, repetida entre as cinco grades, empurraria o anexo para outra página.
+  return paragrafo('AtaLegenda', escaparXml(bloco.texto)) +
     `<table:table table:name="MovimentoCaixa${indice}" table:style-name="TabMC">` +
     colunas.map(c => `<table:table-column table:style-name="${c}"/>`).join('') +
     thead +
@@ -205,39 +249,97 @@ function tabelaOdf(bloco, indice) {
 }
 
 // ---------------------------------------------------------------------------
-// Os quatro (cinco) membros do pacote
+// Os membros do pacote
 // ---------------------------------------------------------------------------
 
-function contentXml(ata, presencas) {
+/** As partes de um parágrafo (ver ata-documento.js) como conteúdo de <text:p>. */
+function partesXml(partes = []) {
+  return partes.map(p => {
+    const t = escaparXml(p.texto);
+    if (p.tipo === 'linha') return `<text:span text:style-name="AtaSublinhado">${t}</text:span>`;
+    if (p.negrito) return `<text:span text:style-name="AtaNegrito">${t}</text:span>`;
+    return t;
+  }).join('');
+}
+
+/** O cabeçalho: a bandeira (se veio) e o Conselho em negrito colado nela. */
+function cabecalhoXml(bloco, comBandeira) {
+  const bandeira = comBandeira
+    ? `<draw:frame draw:style-name="frBandeira" draw:name="Bandeira" ` +
+        `text:anchor-type="as-char" svg:width="4cm" svg:height="2.8cm" draw:z-index="0">` +
+        `<draw:image xlink:href="${CAMINHO_BANDEIRA}" xlink:type="simple" ` +
+          `xlink:show="embed" xlink:actuate="onLoad"/>` +
+      `</draw:frame>`
+    : '';
+  return bandeira + `<text:span text:style-name="AtaNegrito">${escaparXml(bloco.texto)}</text:span>`;
+}
+
+function contentXml(ata, presencas, comBandeira) {
+  // Quebra de página em ODF não é elemento: é propriedade do parágrafo que
+  // COMEÇA a página nova (fo:break-before). Um bloco `pagina` só arma a
+  // quebra; quem a consome é o próximo parágrafo emitido, por um estilo
+  // automático "Q_<estilo>" filho do estilo dele.
+  let quebrar = false;
+  const quebras = new Set();
+  const paragrafo = (estiloNome, conteudo) => {
+    let nome = estiloNome;
+    if (quebrar) {
+      nome = `Q_${estiloNome}`;
+      quebras.add(estiloNome);
+      quebrar = false;
+    }
+    return conteudo
+      ? `<text:p text:style-name="${nome}">${conteudo}</text:p>`
+      : `<text:p text:style-name="${nome}"/>`;
+  };
+
   let tabelas = 0;
-  const paragrafos = blocosDaAta(ata, presencas).map(bloco => {
+  const corpo = blocosDaAta(ata, presencas).map(bloco => {
+    if (bloco.tipo === 'pagina') { quebrar = true; return ''; }
     // Uma tabela NÃO é um parágrafo: em ODF ela é irmã dele dentro de
     // <office:text>, e um <table:table> dentro de um <text:p> é justamente o
     // tipo de XML que o LibreOffice recusa sem dizer onde.
-    if (bloco.tipo === 'tabela') return tabelaOdf(bloco, ++tabelas);
+    if (bloco.tipo === 'tabela') return tabelaOdf(bloco, ++tabelas, paragrafo);
     const nome = ESTILO_POR_TIPO[bloco.tipo] || 'AtaCorpo';
-    return `<text:p text:style-name="${nome}">${escaparXml(bloco.texto)}</text:p>`;
+    if (bloco.tipo === 'cabecalho') return paragrafo(nome, cabecalhoXml(bloco, comBandeira));
+    return paragrafo(nome, bloco.partes ? partesXml(bloco.partes) : escaparXml(bloco.texto));
   }).join('');
+
+  // A margem de cima some no topo da página nova: o verso começa rente à
+  // margem, como a frente.
+  const estilosQuebra = [...quebras].map(base =>
+    `<style:style style:name="Q_${base}" style:family="paragraph" style:parent-style-name="${base}">` +
+    `<style:paragraph-properties fo:break-before="page" fo:margin-top="0cm"/></style:style>`).join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<office:document-content ${NS} office:version="1.2">` +
-      `<office:automatic-styles>${ESTILOS}${ESTILOS_TABELA}</office:automatic-styles>` +
-      `<office:body><office:text>${paragrafos}</office:text></office:body>` +
+      `<office:automatic-styles>${estilosQuebra}${ESTILOS_TABELA}${ESTILO_BANDEIRA}</office:automatic-styles>` +
+      `<office:body><office:text>${corpo}</office:text></office:body>` +
     `</office:document-content>`;
 }
 
 function stylesXml() {
   // A4 retrato com margem de 2 cm — a mesma medida do @media print de
   // ata-documento.css, para que o ODT impresso e o PDF do navegador saiam com
-  // a mesma mancha de texto.
+  // a mesma mancha de texto. DejaVu Serif é a letra do impresso; o LibreOffice
+  // a traz junto na instalação, e o PDF a carrega de assets/fonts/.
   return `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<office:document-styles ${NS} office:version="1.2">` +
+      `<office:font-face-decls>` +
+        `<style:font-face style:name="DejaVu Serif" svg:font-family="'DejaVu Serif'" ` +
+          `style:font-family-generic="roman" style:font-pitch="variable"/>` +
+      `</office:font-face-decls>` +
       `<office:styles>` +
         `<style:default-style style:family="paragraph">` +
-          `<style:text-properties style:font-name="Liberation Serif" fo:font-size="12pt" ` +
+          // Viúva/órfã de 2: sem isto a última linha do fecho ("pelos
+          // presentes.") podia ir sozinha para uma página nova.
+          `<style:paragraph-properties fo:orphans="2" fo:widows="2"/>` +
+          `<style:text-properties style:font-name="DejaVu Serif" fo:font-size="12pt" ` +
             `fo:language="pt" fo:country="BR"/>` +
         `</style:default-style>` +
         `<style:style style:name="Standard" style:family="paragraph" style:class="text"/>` +
+        ESTILOS_PARAGRAFO +
+        ESTILOS_TRECHO +
       `</office:styles>` +
       `<office:automatic-styles>` +
         `<style:page-layout style:name="pm1">` +
@@ -266,7 +368,7 @@ function metaXml(ata) {
     `</office:document-meta>`;
 }
 
-function manifestXml() {
+function manifestXml(comBandeira) {
   const entrada = (caminho, tipo) =>
     `<manifest:file-entry manifest:full-path="${caminho}" manifest:media-type="${tipo}"/>`;
   return `<?xml version="1.0" encoding="UTF-8"?>\n` +
@@ -277,6 +379,9 @@ function manifestXml() {
       entrada('content.xml', 'text/xml') +
       entrada('styles.xml', 'text/xml') +
       entrada('meta.xml', 'text/xml') +
+      // Membro do zip fora do manifesto é motivo para o LibreOffice oferecer
+      // "reparar o arquivo" — os dois andam juntos ou nenhum.
+      (comBandeira ? entrada(CAMINHO_BANDEIRA, 'image/png') : '') +
     `</manifest:manifest>`;
 }
 
@@ -291,18 +396,40 @@ function manifestXml() {
  * ser o primeiro membro do zip. `zipSync` respeita a ordem de inserção do
  * objeto — não reordenar.
  *
+ * @param {object} [opcoes]
+ * @param {Uint8Array|null} [opcoes.bandeira]  bytes do PNG da bandeira; sem
+ *   eles o cabeçalho sai só com o texto (ver baixarOdt()).
  * @returns {Blob}
  */
-export function odtDaAta(ata = {}, presencas = []) {
-  const zip = zipSync({
+export function odtDaAta(ata = {}, presencas = [], { bandeira = null } = {}) {
+  const comBandeira = bandeira instanceof Uint8Array && bandeira.length > 0;
+  const membros = {
     // level 0 = armazenado, sem compressão. Exigência do OpenDocument.
     'mimetype': [strToU8(MIME), { level: 0 }],
-    'META-INF/manifest.xml': strToU8(manifestXml()),
-    'content.xml': strToU8(contentXml(ata, presencas)),
+    'META-INF/manifest.xml': strToU8(manifestXml(comBandeira)),
+    'content.xml': strToU8(contentXml(ata, presencas, comBandeira)),
     'styles.xml': strToU8(stylesXml()),
     'meta.xml': strToU8(metaXml(ata)),
-  });
-  return new Blob([zip], { type: MIME });
+  };
+  // PNG já é comprimido: comprimir de novo só gasta tempo.
+  if (comBandeira) membros[CAMINHO_BANDEIRA] = [bandeira, { level: 0 }];
+  return new Blob([zipSync(membros)], { type: MIME });
+}
+
+/**
+ * Os bytes da bandeira, ou null.
+ *
+ * Falhar aqui não derruba a exportação: a bandeira é enfeite do cabeçalho, e
+ * a ata é o texto. Sem rede no meio da reunião, sai o ODT sem a imagem.
+ */
+async function bytesDaBandeira() {
+  try {
+    const resposta = await fetch(URL_BANDEIRA);
+    if (!resposta.ok) return null;
+    return new Uint8Array(await resposta.arrayBuffer());
+  } catch {
+    return null;
+  }
 }
 
 /**
@@ -312,8 +439,8 @@ export function odtDaAta(ata = {}, presencas = []) {
  * aba até o recarregamento, e a ata é um documento que a secretária exporta
  * várias vezes seguidas enquanto ajusta o texto.
  */
-export function baixarOdt(ata = {}, presencas = []) {
-  const blob = odtDaAta(ata, presencas);
+export async function baixarOdt(ata = {}, presencas = []) {
+  const blob = odtDaAta(ata, presencas, { bandeira: await bytesDaBandeira() });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;

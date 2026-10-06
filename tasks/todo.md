@@ -449,3 +449,45 @@ DELETE, **imprime no fim o SQL de limpeza** — ou limpa sozinho se receber
   `prontuario_sem_campos_obrigatorios`). Quem seguisse aquelas instruções
   montaria um banco **sem `is_membro_area()`**, de que a Área inteira depende.
   Trivial e contido → **corrigido**, em commit separado.
+
+# Ata exportada (PDF e ODT) no leiaute do formulário de papel (06/10/2026)
+
+Pedido: manter o formulário de edição como está e mudar SÓ o documento
+exportado (PDF e ODT) para ficar como as fotos `ata- frente.jpeg` / `ata- verso.jpeg`.
+
+- [x] `ata-documento.js`: parágrafos com `partes` (texto impresso x campo);
+      campo vira `...valor...` sobre o pontilhado; texto palavra por palavra do
+      impresso (emendas só de ortografia: consócia, seguintes, auxílio, CONFERÊNCIA).
+- [x] Frente e verso em páginas separadas (bloco `pagina`); verso pautado
+      (notícias ≥ 7 linhas, expediente ≥ 3), "Escalas…: ____",
+      "**Privilegiados** da semana: ____", "Eu ____ lavrei…".
+- [x] Bandeira oficial (SVG do Wikimedia, domínio público → PNG 6,8 KB em
+      `app/assets/bandeira-brasil.png`), também embutida no ODT (`Pictures/`).
+- [x] DejaVu Serif (a letra do impresso) servida em `app/assets/fonts/`
+      (recorte latino, 56 KB, licença junto); ODT pede a mesma fonte.
+- [x] Movimento de Caixa: não existe na minuta → ANEXO em página própria.
+- [x] Estilos do ODT movidos para styles.xml como estilos comuns — antes eram
+      automáticos e NÃO apareciam na lista do LibreOffice, ao contrário do que
+      dizia o comentário do arquivo.
+
+## Revisão
+
+Evidência (scripts em scratchpad, nada gravado em app/):
+- Chromium (Playwright) gerou o PDF de impressão com "Gráficos de segundo
+  plano" desligado: 2 páginas (4 com anexo), bandeira e DejaVu carregadas.
+- LibreOffice headless converteu os ODT: mesmas 2/4 páginas, bandeira, réguas
+  e quebra de página; comparação visual lado a lado PDF x ODT x fotos.
+- 17/17 checagens: conteúdo hostil (`<img onerror>`, `&`, , )
+  escapado no HTML e no XML, XML bem formado, mimetype primeiro/armazenado,
+  ODT sem bandeira sem imagem órfã, `ata.html` carrega sem erro de módulo.
+- `node supabase/verificar-movimento-caixa.mjs` → "Tudo conferido".
+
+Ajustes feitos durante a verificação: régua em gradiente saía serrilhada no
+PDF → virou borda de parágrafo (igual ao ODT); `h1,h2 {Cormorant}` de
+prontuario.css vazava para a folha; verso cheio estourava 1 linha no ODT
+(pauta 1,15 → 1,05 cm + viúvas/órfãs).
+
+Risco residual: notícia longa que quebra linha tem régua só debaixo da última
+linha (nos dois formatos). Fluxo logado de "Exportar PDF/ODT" em ata.html não
+foi clicado (exige conta); os handlers mudaram só para `async` + espera de
+fonte/imagem.

@@ -16,86 +16,165 @@
    ========================================================================== */
 
 /* ---------------------------------------------------------------------------
-   A folha
+   A folha — o leiaute da minuta impressa
+
+   O modelo é o formulário de papel (fotos `ata- frente.jpeg` e `ata- verso.jpeg`
+   na raiz do repositório): tudo alinhado à esquerda, entrelinha larga, o valor
+   escrito em cima do pontilhado, o verso em linhas pautadas. As medidas estão
+   em cm e pt, e não em rem, porque são medidas DE PAPEL — a tela mostra a
+   folha no tamanho em que ela vai sair.
    -------------------------------------------------------------------------- */
-.ata-documento {
-  background: #fff;
-  color: #1a1a1a;
-  /* Serifada de propósito: é um documento institucional, lido e assinado em
-     papel — não uma tela do sistema. */
-  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  font-size: 1.12rem;
-  line-height: 1.6;
-  /* 21cm − 2cm de margem de cada lado = a mancha de texto que o @page produz;
-     o que se vê na tela é a largura que vai sair impressa. */
-  max-width: 17cm;
-  margin: 0 auto;
-  padding: 2cm 1.6cm;
-  border: 1px solid #e3d9d9;
-  border-radius: 6px;
-  box-shadow: 0 6px 28px rgba(74, 24, 24, .10);
+
+/* DejaVu Serif é a letra do impresso, e é também a que o ODT pede (ver
+   stylesXml() em ata-odt.js). Vem do próprio site, e não do sistema: quase
+   nenhum Windows a tem instalada, e sem ela o PDF sairia em Times New Roman.
+   Recorte só do latim (56 KB os três arquivos); licença em fonts/. */
+@font-face {
+  font-family: 'DejaVu Serif';
+  src: url('fonts/DejaVuSerif.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'DejaVu Serif';
+  src: url('fonts/DejaVuSerif-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'DejaVu Serif';
+  src: url('fonts/DejaVuSerif-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
 }
 
+/* O contêiner não desenha nada: quem é folha é cada `.ata-folha`. */
+.ata-documento { margin: 0 auto; }
+
+.ata-folha {
+  /* Entrelinha da frente e altura de cada linha pautada do verso. */
+  --entrelinha: 2;
+  --pauta: 1.05cm;
+
+  box-sizing: border-box;
+  background: #fff;
+  color: #000;
+  font-family: 'DejaVu Serif', 'Bitstream Vera Serif', Georgia, serif;
+  font-size: 12pt;
+  line-height: var(--entrelinha);
+  text-align: left;
+  /* A4 com 2 cm de margem — o mesmo @page da impressão e o mesmo
+     <style:page-layout> do ODT. */
+  width: 100%;
+  max-width: 21cm;
+  min-height: 29.7cm;
+  margin: 0 auto 24px;
+  padding: 2cm;
+  border: 1px solid #e3d9d9;
+  box-shadow: 0 6px 28px rgba(74, 24, 24, .10);
+  /* Nome longo sem espaço não pode empurrar a folha para fora da tela. */
+  overflow-wrap: break-word;
+}
+
+/* Zera o que prontuario.css e as páginas dão a p/h1/h2 — inclusive a fonte:
+   `h1, h2, h3 { font-family: 'Cormorant Garamond' }` de lá ganharia da herança
+   da folha e poria as seções do verso noutra letra. As regras abaixo são todas
+   `.ata-folha .x`, para vencer esta pela especificidade sem !important. */
+.ata-folha p,
+.ata-folha h1,
+.ata-folha h2 {
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* --- frente ---------------------------------------------------------------- */
+
+/* A bandeira à esquerda e o Conselho em negrito colado nela, com a linha de
+   base no pé da imagem — exatamente como no impresso. */
 .ata-cabecalho {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 4px;
+  align-items: flex-end;
+  gap: 2px;
 }
 
-/* A bandeira do formulário impresso, como SVG embutido — sem requisição e sem
-   arquivo novo em assets/. Ela existe só aqui e na impressão: o ODT leva o
-   cabeçalho em texto (ver o comentário no topo de ata-odt.js). */
 .ata-bandeira {
-  width: 46px;
-  height: 32px;
+  display: block;
   flex: none;
-  border: 1px solid rgba(0, 0, 0, .15);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 70'%3E%3Crect width='100' height='70' fill='%23009B3A'/%3E%3Cpath d='M50 7 L93 35 L50 63 L7 35 Z' fill='%23FFCC29'/%3E%3Ccircle cx='50' cy='35' r='16' fill='%23002776'/%3E%3C/svg%3E");
+  width: 4cm;
+  height: 2.8cm;
 }
 
-.ata-conselho { font-weight: 700; font-size: 1.25rem; }
-
-.ata-titulo {
-  text-align: center;
-  font-size: 1.45rem;
+.ata-conselho {
   font-weight: 700;
+  line-height: 1;
+  /* Descer até a linha de base encostar no pé da bandeira. */
+  margin-bottom: -0.05em;
+}
+
+.ata-folha .ata-titulo {
+  font-size: 12pt;
+  font-weight: 400;
   font-style: italic;
   text-decoration: underline;
-  margin: 10px 0 6px;
+  text-decoration-thickness: 0.6pt;
+  text-underline-offset: 0.15em;
+  margin: 0.25cm 0 0.4cm;
 }
 
-.ata-subtitulo { text-align: center; margin: 0 0 22px; }
+.ata-folha .ata-subtitulo { margin-bottom: 0.25cm; }
 
-.ata-corpo,
-.ata-livre,
-.ata-fecho { text-align: justify; margin: 0 0 12px; }
+.ata-folha .ata-corpo + .ata-corpo { margin-top: 0.3cm; }
 
-.ata-secao {
-  font-family: Inter, system-ui, sans-serif;
-  font-size: .98rem;
-  font-weight: 700;
-  margin: 22px 0 8px;
+/* --- verso ----------------------------------------------------------------- */
+
+.ata-folha .ata-secao {
+  font-size: 12pt;
+  font-weight: 400;     /* o negrito vem do <strong> — no Expediente, só o
+                           nome da seção é negrito, a instrução não */
+  line-height: 1.6;
+  margin-bottom: 0.1cm;
 }
 
-.ata-nota {
-  font-family: Inter, system-ui, sans-serif;
-  font-size: .82rem;
-  font-style: italic;
-  color: #5a4a4a;
-  margin: 0 0 10px;
-  text-align: justify;
+.ata-folha .ata-pauta + .ata-secao { margin-top: 0.9cm; }
+
+/* Linha pautada: a régua é a borda de baixo do parágrafo — linha de verdade,
+   que sai igual em qualquer impressora e não depende de "Gráficos de segundo
+   plano". É também o que o ODT faz (AtaPauta), então os dois saem iguais.
+   O vão de 1,05 cm fica todo EM CIMA do texto (padding-top), para a letra
+   assentar na régua como a escrita à mão assenta, em vez de flutuar no meio.
+   Notícia comprida que quebra continua com entrelinha folgada e ganha régua
+   debaixo da última linha. */
+.ata-folha .ata-pauta {
+  line-height: 1.5;
+  padding-top: calc(var(--pauta) - 1.5em - 2pt);
+  padding-bottom: 2pt;
+  border-bottom: 0.6pt solid #333;
 }
 
-.ata-fecho { margin-top: 18px; }
+.ata-folha .ata-item {
+  line-height: 1.8;
+  margin-top: 0.7cm;
+}
 
-/* Campo que ficou em branco. Discreto na tela, mas visível — a ata impressa
-   precisa mostrar ONDE falta preencher, que é o que a linha pontilhada do
-   formulário de papel faz. */
-.ata-lacuna { color: #9b8f8f; letter-spacing: .04em; }
+.ata-folha .ata-fecho { line-height: 1.8; margin-top: 0.5cm; }
+.ata-folha .ata-fecho + .ata-fecho { margin-top: 0.7cm; }
+
+/* O traço contínuo do verso ("Eu ______ lavrei"). Espaços que não quebram,
+   sublinhados — é o que o ODT também faz, então os dois saem iguais. */
+.ata-linha {
+  text-decoration: underline;
+  text-decoration-thickness: 0.6pt;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 22cm) {
+  /* No telefone a folha vira coluna: sem altura de A4, margem menor. */
+  .ata-folha { min-height: 0; padding: 1cm 0.6cm; }
+}
 
 /* ---------------------------------------------------------------------------
    Barra de ações (fora do documento — não vai para o papel)
@@ -469,34 +548,28 @@
     padding: 0 !important;
   }
 
-  /* A folha na tela tem sombra, borda e margem; no papel, a margem é do @page
-     e o resto só gastaria tinta. */
-  .ata-documento {
+  /* A folha na tela tem sombra, borda, margem e altura de A4; no papel, a
+     margem é do @page, a altura é a da página, e o resto só gastaria tinta. */
+  .ata-folha {
     max-width: none;
+    min-height: 0;
     margin: 0;
     padding: 0;
     border: 0;
-    border-radius: 0;
     box-shadow: none;
-    font-size: 12pt;
   }
+
+  /* Frente, verso e anexo: cada um começa numa página, como no papel. */
+  .ata-folha + .ata-folha { break-before: page; page-break-before: always; }
 
   /* Deixar um título de seção sozinho no pé da página, com o texto dele na
      página seguinte, é o defeito clássico de impressão — e numa ata ele
      separaria "Notícias das famílias" das notícias. */
   .ata-secao { break-after: avoid; page-break-after: avoid; }
-  .ata-corpo, .ata-livre, .ata-fecho, .ata-nota {
+  .ata-corpo { orphans: 2; widows: 2; }
+  .ata-pauta, .ata-item, .ata-fecho {
     break-inside: avoid;
     page-break-inside: avoid;
-    orphans: 2;
-    widows: 2;
-  }
-
-  /* O fundo da bandeira é imagem: sem isto o Chrome a omite por padrão
-     ("Gráficos de segundo plano" desmarcado). */
-  .ata-bandeira {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
   }
 
   /* A grade do Movimento de Caixa não pode ser fatiada em qualquer ponto: o
