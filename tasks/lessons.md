@@ -692,3 +692,43 @@ horas de vida e ninguém o usara), mas é dívida.
 **Regra preventiva.** Renomear ou fundir ação de API tem duas ordens seguras:
 manter a ação antiga como apelido da nova por um deploy, **ou** combinar a
 janela com o usuário antes. Nunca deduzir que "ninguém está usando".
+
+## 2026-10-26 · Despensa: quatro armadilhas achadas pelos próprios testes
+
+Nenhuma veio de correção do usuário; todas apareceram na verificação antes
+do commit. Registradas porque cada uma se repete em qualquer módulo novo.
+
+**1. Gatilho BEFORE roda antes do CHECK.** O teste "entrada negativa é
+recusada pelo `estoque_movimentos_sinal_check`" passou pelo motivo errado:
+com saldo 0, o gatilho de saldo disparou primeiro e recusou com
+`estoque_saldo_insuficiente`. A linha foi recusada, mas o CHECK nunca foi
+exercitado. *Regra:* teste de CHECK em tabela com gatilho BEFORE precisa de
+um estado em que o gatilho passe; e a asserção é pelo NOME da constraint,
+nunca só "deu erro".
+
+**2. `revoke ... from public, anon` não alcança `authenticated` no
+Supabase.** As default privileges do schema `public` concedem EXECUTE direto
+a `authenticated`. A função de gatilho `security definer` ficou exposta em
+`/rpc/` até o Security Advisor apontar (migração 031; mesma lacuna da 019).
+*Regra:* função de gatilho ou interna leva `revoke all ... from public, anon,
+authenticated`; conferir com `has_function_privilege` e com
+`supabase db advisors --type security` antes do commit.
+
+**3. `<dialog>` modal fica acima dos toasts.** O erro de gravação aparecia
+apagado atrás do fundo escuro — o teste só passou porque fechava o diálogo
+antes de procurar o toast. Só a captura de tela mostrou. *Regra:* erro de
+uma ação feita dentro de um diálogo é exibido DENTRO dele; e teste de UI
+olha a tela (screenshot), não só o DOM.
+
+**4. Cormorant Garamond usa algarismos antigos.** No resumo, "0" e "1"
+pareciam "O" e "I". *Regra:* número que é contagem ou dado vai em Inter
+(`font-variant-numeric: lining-nums tabular-nums`); a Cormorant fica para
+títulos.
+
+**O que funcionou e vale repetir:** provar migrações no banco de produção
+SEM aplicá-las — `supabase db query --linked -f` com `begin;` + migrações +
+testes que simulam cada perfil por `set local role` + `request.jwt.claims`,
+terminando num `raise exception` proposital que desfaz tudo e traz o
+relatório na mensagem. Não precisa de conta de teste, e foi conferido por
+controle negativo (expectativa errada de propósito → FALHA aparece) e por
+varredura depois (`to_regclass` nulo). Virou `supabase/verificar-estoque.sql`.
