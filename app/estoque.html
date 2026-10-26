@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4A1818">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Despensa · Conferência N. S. do Carmo</title>
+  <link rel="icon" type="image/png" href="assets/logo-ssvp.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/prontuario.css">
+  <link rel="stylesheet" href="assets/ui-comum.css">
+  <style>
+    /* ===== Extras só desta página — resumo, tabela do estoque e diálogos. ===== */
+    .resumo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
+    .resumo-item { padding: 16px 18px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); font-family: inherit; text-align: left; cursor: pointer; transition: var(--transition); }
+    .resumo-item:hover, .resumo-item[aria-pressed="true"] { border-color: var(--gold); box-shadow: var(--shadow); }
+    .resumo-item[aria-pressed="true"] { background: var(--cream-light); }
+    .resumo-item span { display: block; font-size: 0.76rem; color: var(--text-muted); }
+    .resumo-item strong { display: block; font-size: 1.7rem; font-weight: 700; font-variant-numeric: lining-nums tabular-nums; color: var(--wine-deep); line-height: 1.3; }
+    .resumo-item--alerta { border-left-color: var(--alerta); }
+    .resumo-item--erro { border-left-color: var(--erro); }
+
+    .aviso-estimado { padding: 12px 16px; margin-bottom: 20px; border-radius: var(--radius); background: rgba(180,114,26,0.1); border: 1px solid rgba(180,114,26,0.3); color: var(--alerta); font-size: 0.87rem; }
+
+    .estoque-tabela { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    .estoque-tabela td { vertical-align: top; }
+    .estoque-tabela .grupo td { background: var(--cream-light); font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--wine-deep); padding-top: 12px; }
+    .item-nome { font-weight: 600; color: var(--wine-deep); background: none; border: 0; padding: 0; font: inherit; text-align: left; cursor: pointer; }
+    .item-nome:hover { text-decoration: underline; }
+    .item-meta { display: block; font-size: 0.76rem; color: var(--text-muted); }
+    .saldo { font-weight: 700; white-space: nowrap; }
+    .saldo--zero { color: var(--text-muted); }
+    .selos { display: flex; flex-wrap: wrap; gap: 4px; }
+    .selo--neutro { background: rgba(154,132,112,0.14); color: var(--text-muted); }
+    .acoes { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+    .historico td { background: var(--ivory); }
+    .historico .subtabela { margin: 4px 0 8px; font-size: 0.8rem; }
+    .qtd-mais { color: var(--ok); font-weight: 700; }
+    .qtd-menos { color: var(--erro); font-weight: 700; }
+    .totais { margin-top: 14px; font-size: 0.82rem; color: var(--text-soft); }
+
+    dialog.editor { width: min(560px, calc(100% - 32px)); max-height: calc(100vh - 32px); overflow: auto; margin: auto; border: 1px solid var(--border); }
+    dialog.editor::backdrop { background: rgba(42,27,20,0.45); }
+    .dialogo-sub { margin: -10px 0 18px; color: var(--text-soft); font-size: 0.9rem; }
+    .previa { padding: 10px 14px; margin-bottom: 16px; border-radius: var(--radius); background: var(--cream-light); font-size: 0.86rem; color: var(--text-soft); }
+    .botoes { display: flex; flex-wrap: wrap; gap: 9px; }
+    dialog .aviso { margin: 0 0 14px; }
+
+    @media (max-width: 760px) {
+      .resumo { grid-template-columns: 1fr 1fr; }
+    }
+    /* No celular cada linha vira um cartão; o rótulo da coluna vem do data-rotulo. */
+    @media (max-width: 640px) {
+      .estoque-tabela thead { display: none; }
+      .estoque-tabela, .estoque-tabela tbody, .estoque-tabela tr, .estoque-tabela td { display: block; width: 100%; }
+      .estoque-tabela tr { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+      .estoque-tabela td { border: 0; padding: 3px 0; }
+      .estoque-tabela td[data-rotulo]::before { content: attr(data-rotulo) ': '; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+      .estoque-tabela .acoes { justify-content: flex-start; margin-top: 6px; }
+      .historico .subtabela, .historico .subtabela tr, .historico .subtabela td { display: revert; }
+      .historico { overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topo">
+    <div class="wrap topo-inner">
+      <div class="topo-marca">
+        <img src="assets/logo-ssvp.png" alt="">
+        <div>
+          <strong>Despensa</strong>
+          <span>Conferência N. S. do Carmo</span>
+        </div>
+      </div>
+      <div class="topo-usuario" id="topo-usuario" hidden>
+        <span id="usuario-nome"></span>
+        <button class="btn btn-claro btn-pequeno" id="btn-sair">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= ACESSO ============= -->
+  <section class="login" id="tela-login">
+    <p>Verificando seu acesso…</p>
+  </section>
+
+  <!-- ============= PAINEL ============= -->
+  <main class="painel wrap" id="tela-painel" hidden>
+
+    <p class="aviso" id="aviso-painel" role="status"></p>
+
+    <!-- Cada número é também um filtro da lista abaixo. -->
+    <div class="resumo" id="resumo">
+      <button type="button" class="resumo-item" data-situacao="cestas" aria-pressed="false">
+        <span>Cestas disponíveis</span><strong id="r-cestas">—</strong>
+      </button>
+      <button type="button" class="resumo-item resumo-item--alerta" data-situacao="estimado" aria-pressed="false">
+        <span>Aguardando conferência</span><strong id="r-estimado">—</strong>
+      </button>
+      <button type="button" class="resumo-item resumo-item--erro" data-situacao="validade" aria-pressed="false">
+        <span>Validade vencida ou em até 30 dias</span><strong id="r-validade">—</strong>
+      </button>
+      <button type="button" class="resumo-item" data-situacao="zerado" aria-pressed="false">
+        <span>Itens zerados</span><strong id="r-zerado">—</strong>
+      </button>
+    </div>
+
+    <p class="aviso-estimado" id="aviso-estimado" hidden>
+      <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+      <span id="aviso-estimado-texto"></span>
+    </p>
+
+    <div class="barra">
+      <div class="campo" style="flex:1;min-width:220px;margin-bottom:0;">
+        <label for="busca">Buscar</label>
+        <input type="text" id="busca" placeholder="Item, marca ou local">
+      </div>
+      <button type="button" class="btn btn-ouro" id="btn-novo-item" hidden>
+        <i class="fa-solid fa-plus" aria-hidden="true"></i> Novo item
+      </button>
+    </div>
+    <div class="filtros" id="filtros-categoria" style="margin-bottom:16px;">
+      <button class="filtro ativo" data-categoria="todas">Todas</button>
+      <button class="filtro" data-categoria="cestas">Cestas básicas</button>
+      <button class="filtro" data-categoria="alimentos">Alimentos</button>
+      <button class="filtro" data-categoria="higiene_limpeza">Higiene e limpeza</button>
+      <button class="filtro" data-categoria="utensilios_outros">Utensílios e outros</button>
+    </div>
+
+    <div id="lista-estoque"></div>
+    <p class="totais" id="totais"></p>
+  </main>
+
+  <!-- ============= MOVIMENTO (entrada / saída / conferência) ============= -->
+  <dialog class="editor" id="dlg-movimento" aria-labelledby="mv-titulo">
+    <h2 id="mv-titulo">Movimento</h2>
+    <p class="dialogo-sub" id="mv-item-nome"></p>
+    <form id="form-movimento" method="dialog">
+      <input type="hidden" id="mv-item-id">
+      <input type="hidden" id="mv-modo">
+
+      <div class="campo" id="bloco-mv-tipo">
+        <label for="mv-tipo">Tipo</label>
+        <select id="mv-tipo"></select>
+      </div>
+      <div class="grade-2">
+        <div class="campo">
+          <label for="mv-quantidade" id="mv-quantidade-rotulo">Quantidade</label>
+          <input type="number" id="mv-quantidade" min="0" step="0.01" inputmode="decimal" required>
+        </div>
+        <div class="campo" id="bloco-mv-data">
+          <label for="mv-data">Data</label>
+          <input type="date" id="mv-data">
+        </div>
+        <div class="campo" id="bloco-mv-validade" hidden>
+          <label for="mv-validade">Validade mais próxima</label>
+          <input type="date" id="mv-validade">
+        </div>
+      </div>
+      <div class="campo" id="bloco-mv-familia" hidden>
+        <label for="mv-familia">Família</label>
+        <select id="mv-familia"></select>
+        <span class="dica">Famílias ativas ou em avaliação do Prontuário.</span>
+      </div>
+      <div class="previa" id="mv-previa"></div>
+      <div class="campo">
+        <label for="mv-observacao">Observação</label>
+        <textarea id="mv-observacao" maxlength="500" placeholder="Opcional — ex.: quem doou, motivo do descarte"></textarea>
+      </div>
+      <p class="aviso" id="mv-aviso" role="alert"></p>
+      <div class="botoes">
+        <button type="submit" class="btn btn-ouro" id="btn-salvar-movimento" value="salvar">
+          <i class="fa-solid fa-check" aria-hidden="true"></i> Registrar
+        </button>
+        <button type="button" class="btn btn-neutro" data-fechar>Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ============= ITEM (novo / editar) ============= -->
+  <dialog class="editor" id="dlg-item" aria-labelledby="it-titulo">
+    <h2 id="it-titulo">Novo item</h2>
+    <form id="form-item" method="dialog">
+      <input type="hidden" id="it-id">
+      <div class="grade-2">
+        <div class="campo">
+          <label for="it-categoria">Categoria</label>
+          <select id="it-categoria" required></select>
+        </div>
+        <div class="campo">
+          <label for="it-unidade">Contado em</label>
+          <select id="it-unidade" required></select>
+        </div>
+      </div>
+      <div class="campo">
+        <label for="it-nome">Item</label>
+        <input type="text" id="it-nome" minlength="2" maxlength="120" required placeholder="Ex.: Feijão 1 kg">
+      </div>
+      <div class="grade-2">
+        <div class="campo">
+          <label for="it-marcas">Marca(s)</label>
+          <input type="text" id="it-marcas" maxlength="120">
+        </div>
+        <div class="campo">
+          <label for="it-conteudo">Conteúdo de cada unidade</label>
+          <input type="text" id="it-conteudo" maxlength="60" placeholder="Ex.: 20 × 500 g">
+        </div>
+      </div>
+      <div class="grade-2">
+        <div class="campo">
+          <label for="it-local">Local</label>
+          <input type="text" id="it-local" maxlength="160" placeholder="Ex.: Estante cinza (topo)">
+        </div>
+        <div class="campo">
+          <label for="it-validade">Validade mais próxima</label>
+          <input type="date" id="it-validade">
+        </div>
+      </div>
+      <div class="caixa-linha">
+        <input type="checkbox" id="it-perecivel">
+        <label for="it-perecivel">Perecível (estraga rápido — ovos, frutas, verduras)</label>
+      </div>
+      <div class="campo">
+        <label for="it-observacoes">Observações</label>
+        <textarea id="it-observacoes" maxlength="500"></textarea>
+      </div>
+      <div class="grade-2" id="bloco-it-entrada">
+        <div class="campo">
+          <label for="it-quantidade">Quantidade que está entrando agora</label>
+          <input type="number" id="it-quantidade" min="0" step="0.01" inputmode="decimal" placeholder="Opcional">
+        </div>
+        <div class="campo">
+          <label for="it-origem">Origem</label>
+          <select id="it-origem">
+            <option value="entrada_doacao">Doação recebida</option>
+            <option value="entrada_compra">Compra</option>
+          </select>
+        </div>
+      </div>
+      <p class="aviso" id="it-aviso" role="alert"></p>
+      <div class="botoes">
+        <button type="submit" class="btn btn-ouro" id="btn-salvar-item" value="salvar">
+          <i class="fa-solid fa-check" aria-hidden="true"></i> Salvar item
+        </button>
+        <button type="button" class="btn btn-neutro" data-fechar>Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module">
+    import { escapar, mensagemDeErro, formatarData } from './assets/supabase-client.js';
+    import { sb, exigirAcesso, sair } from './assets/area-vicentino.js';
+    import { montarNavegacaoComPapel, notificarOk, notificarErro } from './assets/ui-comum.js';
+
+    // Rótulos dos valores aceitos pelos CHECKs da migração 028/029.
+    const CATEGORIAS = {
+      cestas: 'Cestas básicas',
+      alimentos: 'Alimentos',
+      higiene_limpeza: 'Higiene e limpeza',
+      utensilios_outros: 'Utensílios e outros',
+    };
+    const UNIDADES = {
+      cesta: ['cesta', 'cestas'], pacote: ['pacote', 'pacotes'], fardo: ['fardo', 'fardos'],
+      caixa: ['caixa', 'caixas'], garrafa: ['garrafa', 'garrafas'], bandeja: ['bandeja', 'bandejas'],
+      saco: ['saco', 'sacos'], lata: ['lata', 'latas'], rolo: ['rolo', 'rolos'],
+      unidade: ['unidade', 'unidades'], peca: ['peça', 'peças'], volume: ['volume', 'volumes'],
+      kg: ['kg', 'kg'], litro: ['litro', 'litros'],
+    };
+    const TIPOS = {
+      carga_inicial: 'Carga inicial',
+      entrada_doacao: 'Doação recebida',
+      entrada_compra: 'Compra',
+      saida_familia: 'Entregue a família',
+      saida_outra: 'Saída (outra)',
+      descarte: 'Descarte (vencido/estragado)',
+      ajuste_conferencia: 'Ajuste de conferência',
+    };
+    const TIPOS_POR_MODO = {
+      entrada: ['entrada_doacao', 'entrada_compra'],
+      saida: ['saida_familia', 'saida_outra', 'descarte'],
+    };
+    const DIAS_ALERTA_VALIDADE = 30;
+
+    const telaLogin = document.getElementById('tela-login');
+    const telaPainel = document.getElementById('tela-painel');
+    const avisoPainel = document.getElementById('aviso-painel');
+    const dlgMovimento = document.getElementById('dlg-movimento');
+    const dlgItem = document.getElementById('dlg-item');
+
+    let itens = [];
+    let familias = [];
+    let nomesConfrades = new Map();
+    let podeGerir = false;
+    let filtroCategoria = 'todas';
+    let filtroSituacao = null;
+    const historicosAbertos = new Set();
+
+    function mostrarAviso(el, texto, tipo) {
+      el.textContent = texto;
+      el.className = 'aviso visivel ' + tipo;
+    }
+
+    // Data local (não UTC): à noite em Brasília o toISOString() já é amanhã.
+    function hoje() {
+      const d = new Date();
+      d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+      return d.toISOString().slice(0, 10);
+    }
+
+    // Usuário da sessão, ou null já com o aviso na tela (sessão expirada).
+    async function usuarioAtual() {
+      const { data: { user } } = await sb.auth.getUser();
+      if (!user) notificarErro('Sua sessão expirou. Entre novamente.');
+      return user;
+    }
+
+    function numero(n) {
+      return Number(n).toLocaleString('pt-BR', { maximumFractionDigits: 2 });
+    }
+
+    function comUnidade(qtd, unidade) {
+      const [singular, plural] = UNIDADES[unidade] || [unidade, unidade];
+      return numero(qtd) + ' ' + (Math.abs(Number(qtd)) === 1 ? singular : plural);
+    }
+
+    function diasAteValidade(item) {
+      if (!item.validade_proxima) return null;
+      return Math.round((new Date(item.validade_proxima) - new Date(hoje())) / 86400000);
+    }
+
+    function validadeEmAlerta(item) {
+      const dias = diasAteValidade(item);
+      return dias !== null && dias <= DIAS_ALERTA_VALIDADE && Number(item.saldo) > 0;
+    }
+
+    // -------------------------------------------------------------------------
+    // Sessão
+    // -------------------------------------------------------------------------
+    async function iniciar() {
+      const acesso = await exigirAcesso();
+      if (!acesso) return;
+
+      await montarNavegacaoComPapel(sb);
+      document.getElementById('usuario-nome').textContent = acesso.nome;
+      document.getElementById('topo-usuario').hidden = false;
+      telaLogin.hidden = true;
+      telaPainel.hidden = false;
+
+      // Erro da RPC vira "não pode": botão a menos é falha segura, e quem
+      // recusa de verdade a gravação é a RLS (migrações 028/029).
+      const { data: pode } = await sb.rpc('pode_gerir_estoque');
+      podeGerir = pode === true;
+      document.getElementById('btn-novo-item').hidden = !podeGerir;
+
+      await carregar();
+    }
+
+    document.getElementById('btn-sair').addEventListener('click', sair);
+
+    async function carregar() {
+      const consultas = [
+        sb.from('vw_estoque_saldos').select('*').order('categoria').order('nome').limit(1000),
+        sb.from('confrades').select('user_id, nome_completo'),
+      ];
+      if (podeGerir) {
+        consultas.push(sb.from('familias').select('id, codigo, endereco_bairro')
+          .in('status', ['ativa', 'em_avaliacao']).order('codigo').limit(500));
+      }
+      const [rItens, rConfrades, rFamilias] = await Promise.all(consultas);
+
+      if (rItens.error) {
+        mostrarAviso(avisoPainel, mensagemDeErro(rItens.error, 'Erro ao carregar a despensa.'), 'erro');
+        return;
+      }
+      avisoPainel.className = 'aviso';
+      itens = rItens.data || [];
+      nomesConfrades = new Map((rConfrades.data || []).map(c => [c.user_id, c.nome_completo]));
+      if (rFamilias && !rFamilias.error) familias = rFamilias.data || [];
+
+      renderizarResumo();
+      renderizarLista();
+    }
+
+    // -------------------------------------------------------------------------
+    // Resumo
+    // -------------------------------------------------------------------------
+    const SITUACOES = {
+      cestas: i => i.unidade === 'cesta' && Number(i.saldo) > 0,
+      estimado: i => i.estimado,
+      validade: validadeEmAlerta,
+      zerado: i => Number(i.saldo) === 0,
+    };
+
+    function renderizarResumo() {
+      const cestas = itens.filter(SITUACOES.cestas).reduce((s, i) => s + Number(i.saldo), 0);
+      const estimados = itens.filter(SITUACOES.estimado).length;
+      document.getElementById('r-cestas').textContent = numero(cestas);
+      document.getElementById('r-estimado').textContent = estimados;
+      document.getElementById('r-validade').textContent = itens.filter(SITUACOES.validade).length;
+      document.getElementById('r-zerado').textContent = itens.filter(SITUACOES.zerado).length;
+
+      document.getElementById('aviso-estimado').hidden = estimados === 0;
+      document.getElementById('aviso-estimado-texto').textContent =
+        `${estimados} ${estimados === 1 ? 'item ainda tem' : 'itens ainda têm'} quantidade ESTIMADA ` +
+        '(o inventário inicial foi feito por fotos). Os números valem como referência até a ' +
+        'conferência física, item a item' + (podeGerir ? ' — botão "Conferir".' : '.');
+    }
+
+    document.querySelectorAll('#resumo .resumo-item').forEach(b => {
+      b.addEventListener('click', () => {
+        filtroSituacao = filtroSituacao === b.dataset.situacao ? null : b.dataset.situacao;
+        document.querySelectorAll('#resumo .resumo-item').forEach(o =>
+          o.setAttribute('aria-pressed', String(o.dataset.situacao === filtroSituacao)));
+        renderizarLista();
+      });
+    });
+
+    // -------------------------------------------------------------------------
+    // Lista
+    // -------------------------------------------------------------------------
+    document.querySelectorAll('#filtros-categoria .filtro').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('#filtros-categoria .filtro')
+          .forEach(o => o.classList.toggle('ativo', o === b));
+        filtroCategoria = b.dataset.categoria;
+        renderizarLista();
+      });
+    });
+    document.getElementById('busca').addEventListener('input', renderizarLista);
+
+    function filtrados() {
+      const termo = document.getElementById('busca').value.trim().toLowerCase();
+      return itens.filter(i =>
+        (filtroCategoria === 'todas' || i.categoria === filtroCategoria) &&
+        (!filtroSituacao || SITUACOES[filtroSituacao](i)) &&
+        (!termo || [i.nome, i.marcas, i.local].some(t => (t || '').toLowerCase().includes(termo))));
+    }
+
+    function selosDoItem(i) {
+      const selos = [];
+      if (i.estimado) selos.push('<span class="selo selo--pendente" title="Quantidade estimada, ainda não conferida">Estimado</span>');
+      if (Number(i.saldo) === 0) selos.push('<span class="selo selo--neutro">Zerado</span>');
+      const dias = diasAteValidade(i);
+      if (dias !== null && Number(i.saldo) > 0) {
+        if (dias < 0) selos.push('<span class="selo selo--rejeitado">Vencido</span>');
+        else if (dias <= DIAS_ALERTA_VALIDADE) selos.push(`<span class="selo selo--pendente">Vence em ${dias} dia${dias === 1 ? '' : 's'}</span>`);
+      }
+      if (i.perecivel) selos.push('<span class="selo selo--destaque">Perecível</span>');
+      return selos.join('');
+    }
+
+    function linhaDoItem(i) {
+      const meta = [i.marcas, i.conteudo_por_unidade && 'cada ' + UNIDADES[i.unidade][0] + ': ' + i.conteudo_por_unidade]
+        .filter(Boolean).map(escapar).join(' · ');
+      const acoes = podeGerir
+        ? '<div class="acoes">' +
+            `<button class="btn btn-ok btn-pequeno" data-acao="entrada" title="Registrar entrada"><i class="fa-solid fa-plus" aria-hidden="true"></i> Entrada</button>` +
+            `<button class="btn btn-neutro btn-pequeno" data-acao="saida" title="Registrar saída"${Number(i.saldo) > 0 ? '' : ' disabled'}><i class="fa-solid fa-minus" aria-hidden="true"></i> Saída</button>` +
+            `<button class="btn btn-neutro btn-pequeno" data-acao="conferir" title="Conferência física"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Conferir</button>` +
+            `<button class="btn btn-neutro btn-pequeno" data-acao="editar" title="Editar item" aria-label="Editar ${escapar(i.nome)}"><i class="fa-solid fa-pen" aria-hidden="true"></i></button>` +
+            `<button class="btn btn-erro btn-pequeno" data-acao="remover" title="Remover item" aria-label="Remover ${escapar(i.nome)}"><i class="fa-solid fa-trash" aria-hidden="true"></i></button>` +
+          '</div>'
+        : '';
+      const validade = i.validade_proxima ? escapar(formatarData(i.validade_proxima)) : '—';
+
+      return `<tr data-id="${escapar(i.id)}">` +
+        '<td>' +
+          `<button type="button" class="item-nome" data-acao="historico" aria-expanded="${historicosAbertos.has(i.id)}">${escapar(i.nome)}</button>` +
+          (meta ? `<span class="item-meta">${meta}</span>` : '') +
+        '</td>' +
+        `<td data-rotulo="Saldo"><span class="saldo${Number(i.saldo) === 0 ? ' saldo--zero' : ''}">${escapar(comUnidade(i.saldo, i.unidade))}</span></td>` +
+        `<td data-rotulo="Local">${escapar(i.local || '—')}</td>` +
+        `<td data-rotulo="Validade">${validade}</td>` +
+        `<td><div class="selos">${selosDoItem(i)}</div></td>` +
+        (podeGerir ? `<td class="col-acao">${acoes}</td>` : '') +
+      '</tr>' +
+      (historicosAbertos.has(i.id)
+        ? `<tr class="historico" data-historico="${escapar(i.id)}"><td colspan="${podeGerir ? 6 : 5}">Carregando histórico…</td></tr>`
+        : '');
+    }
+
+    function renderizarLista() {
+      const lista = document.getElementById('lista-estoque');
+      const visiveis = filtrados();
+
+      if (!visiveis.length) {
+        lista.innerHTML = '<div class="vazio"><i class="fa-solid fa-box-open"></i>' +
+          (itens.length ? '<p>Nenhum item com este filtro.</p>' : '<p>A despensa ainda não tem itens cadastrados.</p>') +
+          '</div>';
+        document.getElementById('totais').textContent = '';
+        return;
+      }
+
+      let corpo = '';
+      let categoriaAtual = null;
+      for (const i of visiveis) {
+        if (filtroCategoria === 'todas' && i.categoria !== categoriaAtual) {
+          categoriaAtual = i.categoria;
+          corpo += `<tr class="grupo"><td colspan="${podeGerir ? 6 : 5}">${escapar(CATEGORIAS[i.categoria])}</td></tr>`;
+        }
+        corpo += linhaDoItem(i);
+      }
+
+      lista.innerHTML =
+        '<table class="subtabela estoque-tabela">' +
+          '<thead><tr><th>Item</th><th>Saldo</th><th>Local</th><th>Validade</th><th>Situação</th>' +
+            (podeGerir ? '<th class="col-acao">Ações</th>' : '') + '</tr></thead>' +
+          `<tbody>${corpo}</tbody>` +
+        '</table>';
+
+      // Totais só por unidade: somar cesta com pacote não diz nada.
+      const porUnidade = new Map();
+      for (const i of visiveis) porUnidade.set(i.unidade, (porUnidade.get(i.unidade) || 0) + Number(i.saldo));
+      document.getElementById('totais').textContent =
+        `${visiveis.length} ${visiveis.length === 1 ? 'item' : 'itens'} · ` +
+        [...porUnidade].filter(([, q]) => q > 0).map(([u, q]) => comUnidade(q, u)).join(' · ');
+
+      historicosAbertos.forEach(id => {
+        if (visiveis.some(i => i.id === id)) carregarHistorico(id);
+      });
+    }
+
+    document.getElementById('lista-estoque').addEventListener('click', (ev) => {
+      const botao = ev.target.closest('[data-acao]');
+      if (!botao) return;
+      const id = botao.closest('tr')?.dataset.id;
+      const item = itens.find(i => i.id === id);
+
+      const acao = botao.dataset.acao;
+      if (acao === 'remover-movimento') return removerMovimento(botao.dataset.movimento, botao.dataset.item);
+      if (!item) return;
+      if (acao === 'historico') {
+        if (historicosAbertos.has(id)) historicosAbertos.delete(id); else historicosAbertos.add(id);
+        return renderizarLista();
+      }
+      if (acao === 'editar') return abrirItem(item);
+      if (acao === 'remover') return removerItem(item);
+      abrirMovimento(acao, item);
+    });
+
+    // -------------------------------------------------------------------------
+    // Histórico de um item
+    // -------------------------------------------------------------------------
+    async function carregarHistorico(itemId) {
+      const celula = document.querySelector(`tr[data-historico="${CSS.escape(itemId)}"] td`);
+      if (!celula) return;
+
+      const { data, error } = await sb.from('estoque_movimentos')
+        .select('id, tipo, quantidade, data_movimento, observacao, familia_id, criado_por, criado_em')
+        .eq('item_id', itemId)
+        .is('removido_em', null)
+        .order('data_movimento', { ascending: false })
+        .order('criado_em', { ascending: false })
+        .limit(200);
+
+      if (error) {
+        celula.textContent = mensagemDeErro(error, 'Erro ao carregar o histórico.');
+        return;
+      }
+      if (!data.length) {
+        celula.textContent = 'Nenhum movimento registrado.';
+        return;
+      }
+
+      const item = itens.find(i => i.id === itemId);
+      const familiaPorId = new Map(familias.map(f => [f.id, f]));
+      celula.innerHTML =
+        '<table class="subtabela"><thead><tr><th>Data</th><th>Movimento</th><th>Qtd.</th><th>Detalhe</th><th>Por</th>' +
+          (podeGerir ? '<th></th>' : '') + '</tr></thead><tbody>' +
+        data.map(m => {
+          const f = familiaPorId.get(m.familia_id);
+          const detalhe = [m.familia_id && ('Família ' + (f ? (f.codigo || f.endereco_bairro || '') : '(do Prontuário)')), m.observacao]
+            .filter(Boolean).map(escapar).join(' · ');
+          const qtd = Number(m.quantidade);
+          return '<tr>' +
+            `<td>${escapar(formatarData(m.data_movimento))}</td>` +
+            `<td>${escapar(TIPOS[m.tipo] || m.tipo)}</td>` +
+            `<td class="${qtd > 0 ? 'qtd-mais' : 'qtd-menos'}">${qtd > 0 ? '+' : '−'}${escapar(numero(Math.abs(qtd)))}</td>` +
+            `<td>${detalhe || '—'}</td>` +
+            `<td>${escapar(nomesConfrades.get(m.criado_por) || '—')}</td>` +
+            (podeGerir
+              ? `<td class="col-acao"><button class="btn btn-erro btn-pequeno" data-acao="remover-movimento" data-movimento="${escapar(m.id)}" data-item="${escapar(itemId)}" title="Desfazer este movimento" aria-label="Desfazer movimento"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></button></td>`
+              : '') +
+          '</tr>';
+        }).join('') +
+        '</tbody></table>' +
+        (item?.conferido_em ? `<span class="item-meta">Última conferência física: ${escapar(formatarData(item.conferido_em))}</span>` : '');
+    }
+
+    async function removerMovimento(movimentoId, itemId) {
+      if (!confirm('Desfazer este movimento? Ele sai do saldo, mas continua guardado no banco como removido.')) return;
+      const user = await usuarioAtual();
+      if (!user) return;
+      const { error } = await sb.from('estoque_movimentos')
+        .update({ removido_em: new Date().toISOString(), removido_por: user.id })
+        .eq('id', movimentoId);
+      if (error) { notificarErro(mensagemDeErro(error, 'Não foi possível desfazer o movimento.')); return; }
+      notificarOk('Movimento desfeito.');
+      historicosAbertos.add(itemId);
+      await carregar();
+    }
+
+    // -------------------------------------------------------------------------
+    // Diálogos
+    // -------------------------------------------------------------------------
+    document.querySelectorAll('dialog [data-fechar]').forEach(b =>
+      b.addEventListener('click', () => b.closest('dialog').close()));
+
+    // O diálogo modal fica na camada do topo do navegador, ACIMA dos toasts:
+    // um erro só no toast apareceria apagado atrás do fundo escuro. Por isso o
+    // erro de gravação vai também para o aviso dentro do diálogo.
+    function erroNoDialogo(idAviso, error, alternativa) {
+      const texto = mensagemDeErro(error, alternativa);
+      mostrarAviso(document.getElementById(idAviso), texto, 'erro');
+      notificarErro(texto);
+    }
+
+    function preencherSelect(select, opcoes) {
+      select.innerHTML = opcoes.map(([v, r]) => `<option value="${escapar(v)}">${escapar(r)}</option>`).join('');
+    }
+
+    function abrirMovimento(modo, item) {
+      document.getElementById('mv-modo').value = modo;
+      document.getElementById('mv-item-id').value = item.id;
+      document.getElementById('mv-titulo').textContent =
+        { entrada: 'Registrar entrada', saida: 'Registrar saída', conferir: 'Conferência física' }[modo];
+      document.getElementById('mv-item-nome').textContent =
+        `${item.nome} — saldo atual: ${comUnidade(item.saldo, item.unidade)}` + (item.estimado ? ' (estimado)' : '');
+
+      const conferir = modo === 'conferir';
+      document.getElementById('bloco-mv-tipo').hidden = conferir;
+      document.getElementById('bloco-mv-data').hidden = conferir;
+      document.getElementById('bloco-mv-validade').hidden = !conferir;
+      if (!conferir) preencherSelect(document.getElementById('mv-tipo'), TIPOS_POR_MODO[modo].map(t => [t, TIPOS[t]]));
+      preencherSelect(document.getElementById('mv-familia'),
+        familias.map(f => [f.id, [f.codigo, f.endereco_bairro].filter(Boolean).join(' — ') || 'Família sem código']));
+
+      const quantidade = document.getElementById('mv-quantidade');
+      document.getElementById('mv-quantidade-rotulo').textContent =
+        conferir ? `Quantidade contada (${UNIDADES[item.unidade][1]})` : `Quantidade (${UNIDADES[item.unidade][1]})`;
+      quantidade.min = conferir ? '0' : '0.01';
+      quantidade.max = modo === 'saida' ? String(Number(item.saldo)) : '';
+      quantidade.value = '';
+      document.getElementById('mv-data').value = hoje();
+      document.getElementById('mv-validade').value = item.validade_proxima || '';
+      document.getElementById('mv-observacao').value = '';
+
+      document.getElementById('mv-aviso').className = 'aviso';
+      atualizarFormMovimento();
+      dlgMovimento.showModal();
+      quantidade.focus();
+    }
+
+    function atualizarFormMovimento() {
+      const modo = document.getElementById('mv-modo').value;
+      const item = itens.find(i => i.id === document.getElementById('mv-item-id').value);
+      const tipo = document.getElementById('mv-tipo').value;
+      const bruto = document.getElementById('mv-quantidade').value;
+      const qtd = Number(bruto);
+
+      document.getElementById('bloco-mv-familia').hidden = !(modo === 'saida' && tipo === 'saida_familia');
+
+      const previa = document.getElementById('mv-previa');
+      if (!item || bruto === '' || Number.isNaN(qtd)) { previa.hidden = true; return; }
+      previa.hidden = false;
+      const saldo = Number(item.saldo);
+      if (modo === 'conferir') {
+        const ajuste = qtd - saldo;
+        previa.textContent = ajuste === 0
+          ? 'A contagem bate com o saldo: nenhum ajuste será lançado, e o item passa a contar como conferido.'
+          : `O sistema tem ${comUnidade(saldo, item.unidade)}; será lançado um ajuste de ` +
+            `${ajuste > 0 ? '+' : '−'}${numero(Math.abs(ajuste))} e o saldo passa a ${comUnidade(qtd, item.unidade)}.`;
+      } else {
+        const novo = modo === 'entrada' ? saldo + qtd : saldo - qtd;
+        previa.textContent = novo < 0
+          ? `Não há saldo para isso: o saldo atual é ${comUnidade(saldo, item.unidade)}.`
+          : `Saldo passa de ${comUnidade(saldo, item.unidade)} para ${comUnidade(novo, item.unidade)}.`;
+      }
+    }
+
+    ['mv-tipo', 'mv-quantidade'].forEach(id =>
+      document.getElementById(id).addEventListener('input', atualizarFormMovimento));
+
+    document.getElementById('form-movimento').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-salvar-movimento');
+      const modo = document.getElementById('mv-modo').value;
+      const itemId = document.getElementById('mv-item-id').value;
+      const qtd = Number(document.getElementById('mv-quantidade').value);
+      const observacao = document.getElementById('mv-observacao').value.trim() || null;
+      botao.disabled = true;
+
+      try {
+        const user = await usuarioAtual();
+        if (!user) return;
+
+        let error;
+        if (modo === 'conferir') {
+          ({ error } = await sb.rpc('conferir_item_estoque', {
+            p_item_id: itemId,
+            p_contado: qtd,
+            p_validade: document.getElementById('mv-validade').value || null,
+            p_observacao: observacao,
+          }));
+        } else {
+          const tipo = document.getElementById('mv-tipo').value;
+          if (tipo === 'saida_familia' && !document.getElementById('mv-familia').value) {
+            mostrarAviso(document.getElementById('mv-aviso'), 'Escolha a família que recebeu.', 'erro');
+            return;
+          }
+          ({ error } = await sb.from('estoque_movimentos').insert({
+            item_id: itemId,
+            tipo,
+            quantidade: modo === 'entrada' ? qtd : -qtd,
+            data_movimento: document.getElementById('mv-data').value || hoje(),
+            familia_id: tipo === 'saida_familia' ? document.getElementById('mv-familia').value : null,
+            observacao,
+            criado_por: user.id,
+          }));
+        }
+
+        if (error) { erroNoDialogo('mv-aviso', error, 'Não foi possível registrar.'); return; }
+        notificarOk(modo === 'conferir' ? 'Conferência registrada.' : 'Movimento registrado.');
+        dlgMovimento.close();
+        await carregar();
+      } finally {
+        botao.disabled = false;
+      }
+    });
+
+    function abrirItem(item) {
+      const novo = !item;
+      document.getElementById('it-titulo').textContent = novo ? 'Novo item' : 'Editar item';
+      preencherSelect(document.getElementById('it-categoria'), Object.entries(CATEGORIAS));
+      preencherSelect(document.getElementById('it-unidade'), Object.entries(UNIDADES).map(([v, [s]]) => [v, s]));
+      document.getElementById('it-id').value = item?.id || '';
+      document.getElementById('it-categoria').value = item?.categoria || (filtroCategoria !== 'todas' ? filtroCategoria : 'alimentos');
+      document.getElementById('it-unidade').value = item?.unidade || 'pacote';
+      document.getElementById('it-nome').value = item?.nome || '';
+      document.getElementById('it-marcas').value = item?.marcas || '';
+      document.getElementById('it-conteudo').value = item?.conteudo_por_unidade || '';
+      document.getElementById('it-local').value = item?.local || '';
+      document.getElementById('it-validade').value = item?.validade_proxima || '';
+      document.getElementById('it-perecivel').checked = !!item?.perecivel;
+      document.getElementById('it-observacoes').value = item?.observacoes || '';
+      document.getElementById('it-quantidade').value = '';
+      // Quantidade de item existente só muda por movimento — por isso o campo
+      // de entrada existe só no cadastro.
+      document.getElementById('bloco-it-entrada').hidden = !novo;
+      document.getElementById('it-aviso').className = 'aviso';
+      dlgItem.showModal();
+      document.getElementById('it-nome').focus();
+    }
+
+    document.getElementById('btn-novo-item').addEventListener('click', () => abrirItem(null));
+
+    document.getElementById('form-item').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const botao = document.getElementById('btn-salvar-item');
+      const id = document.getElementById('it-id').value;
+      const texto = campo => document.getElementById(campo).value.trim() || null;
+      botao.disabled = true;
+
+      try {
+        const user = await usuarioAtual();
+        if (!user) return;
+
+        const registro = {
+          categoria: document.getElementById('it-categoria').value,
+          unidade: document.getElementById('it-unidade').value,
+          nome: texto('it-nome'),
+          marcas: texto('it-marcas'),
+          conteudo_por_unidade: texto('it-conteudo'),
+          local: texto('it-local'),
+          validade_proxima: document.getElementById('it-validade').value || null,
+          perecivel: document.getElementById('it-perecivel').checked,
+          observacoes: texto('it-observacoes'),
+        };
+
+        if (id) {
+          registro.atualizado_por = user.id;
+          const { error } = await sb.from('estoque_itens').update(registro).eq('id', id);
+          if (error) { erroNoDialogo('it-aviso', error, 'Não foi possível salvar o item.'); return; }
+          notificarOk('Item atualizado.');
+        } else {
+          registro.criado_por = user.id;
+          const { data, error } = await sb.from('estoque_itens').insert(registro).select('id').single();
+          if (error) { erroNoDialogo('it-aviso', error, 'Não foi possível cadastrar o item.'); return; }
+
+          const qtd = Number(document.getElementById('it-quantidade').value);
+          if (qtd > 0) {
+            const { error: erroEntrada } = await sb.from('estoque_movimentos').insert({
+              item_id: data.id,
+              tipo: document.getElementById('it-origem').value,
+              quantidade: qtd,
+              data_movimento: hoje(),
+              criado_por: user.id,
+            });
+            if (erroEntrada) {
+              // O item já existe; só a entrada falhou — dizer exatamente isso.
+              notificarErro('Item cadastrado, mas a entrada não foi registrada: ' +
+                mensagemDeErro(erroEntrada) + ' Use o botão "Entrada" do item.');
+              dlgItem.close();
+              await carregar();
+              return;
+            }
+          }
+          notificarOk('Item cadastrado.');
+        }
+        dlgItem.close();
+        await carregar();
+      } finally {
+        botao.disabled = false;
+      }
+    });
+
+    async function removerItem(item) {
+      const aviso = Number(item.saldo) > 0
+        ? ` Ele ainda tem ${comUnidade(item.saldo, item.unidade)} no sistema — se isso saiu da despensa, registre a saída antes.`
+        : '';
+      if (!confirm(`Remover "${item.nome}" da despensa?${aviso}`)) return;
+      const user = await usuarioAtual();
+      if (!user) return;
+      const { error } = await sb.from('estoque_itens')
+        .update({ removido_em: new Date().toISOString(), removido_por: user.id })
+        .eq('id', item.id);
+      if (error) { notificarErro(mensagemDeErro(error, 'Não foi possível remover o item.')); return; }
+      notificarOk('Item removido.');
+      historicosAbertos.delete(item.id);
+      await carregar();
+    }
+
+    iniciar();
+  </script>
+</body>
+</html>

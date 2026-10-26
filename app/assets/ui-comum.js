@@ -29,6 +29,7 @@ const DESTINOS = [
   { href: 'atas.html', rotulo: 'Atas', icone: 'fa-file-signature' },
   { href: 'financeiro.html', rotulo: 'Financeiro', icone: 'fa-sack-dollar' },
   { href: 'financeiro-relatorio.html', rotulo: 'Relatório', icone: 'fa-chart-line' },
+  { href: 'estoque.html', rotulo: 'Despensa', icone: 'fa-box-open' },
   { href: 'admin.html', rotulo: 'Moderação', icone: 'fa-shield-halved' },
   { href: 'prontuario-dashboard.html', rotulo: 'Dashboard', icone: 'fa-chart-column', somenteAdmin: true },
   { href: 'manual.html', rotulo: 'Manual', icone: 'fa-book-open' },

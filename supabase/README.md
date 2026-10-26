@@ -56,6 +56,10 @@ sem leitura pública alguma. Acesso exige `authenticated` + estar em
    | `20260922140000_atas_movimento_caixa.sql` | as 36 linhas do Movimento de Caixa + contadores, em `public.atas` |
    | `20260922140100_confrades_categoria.sql` | `confrades.categoria` e a cópia congelada em `atas_presencas.categoria` |
    | `20260922150000_confrades_autosservico.sql` | grant de coluna `nome_completo` + policy do próprio dono + trigger de `atualizado_em` |
+   | `20261026120000_estoque_itens.sql` | `public.estoque_itens`, `pode_gerir_estoque()` + RLS (Despensa) |
+   | `20261026120100_estoque_movimentos.sql` | `public.estoque_movimentos`, gatilho de saldo, `vw_estoque_saldos`, `conferir_item_estoque()` |
+   | `20261026120200_estoque_carga_inicial.sql` | carga inicial da Despensa (gerada de planilha — ver seção Despensa) |
+   | `20261026120300_estoque_revoke_gatilho.sql` | `revoke` da função de gatilho do saldo para `authenticated` |
 
    Ou, com a CLI: `npx supabase db push`.
 
@@ -297,3 +301,35 @@ on conflict (id) do update set
 Conferir com `node supabase/verificar-rls-financeiro.mjs` (instruções no topo
 do arquivo) — precisa de um confrade de teste com papel `tesoureiro` (ou
 `administrador`) e outro com papel comum, para provar os dois lados do RBAC.
+
+## Despensa (estoque de doações em espécie)
+
+`app/estoque.html`. Cestas básicas, alimentos, higiene/limpeza e utensílios —
+o par do Controle Orçamentário (lá o dinheiro, aqui os bens). Leitura para
+qualquer confrade ativo; cadastrar item e movimentar exige
+`pode_gerir_estoque()`, hoje os mesmos papéis do financeiro (`tesoureiro`,
+`administrador`), mas função própria para poder mudar sem abrir o dinheiro.
+
+- **O saldo não é uma coluna:** é a soma de `estoque_movimentos` (quantidade
+  com sinal; saída negativa), exposta em `vw_estoque_saldos`. Um gatilho
+  recusa qualquer movimento — ou remoção de movimento — que deixe o saldo
+  negativo.
+- **Movimento não se edita:** o grant de UPDATE é só de `removido_em` e
+  `removido_por`. Lançou errado, desfaz (remoção lógica) e lança de novo.
+- **Conferência física** é `conferir_item_estoque(item, contado, validade)`:
+  calcula o ajuste no banco, com o item travado, e desliga a marca
+  `estimado`.
+
+**Carga inicial.** A migração 030 é gerada por
+`python supabase/gerar_carga_estoque.py Inventario_Despensa_Vicentinos.ods`
+(planilha de 26/10/2026, quantidades estimadas por fotos). As regras —
+exclusões, a linha mista arroz/açúcar — estão no topo do script e travadas em
+`tests/test_carga_estoque.py`. Não editar a 030 à mão: o teste
+`test_migration_versionada_esta_em_dia` falha se ela divergir do script.
+
+**Como conferir** — `supabase db query --linked -f supabase/verificar-estoque.sql`.
+Não precisa de conta de teste: simula gestor, confrade comum, não-confrade e
+anônimo por `set local role` + `request.jwt.claims`, e termina com um erro
+proposital que desfaz tudo — o relatório (`RESULTADO n/n OK`) vem na
+mensagem desse erro. Para provar migrações novas **antes** do push, concatene
+`begin;` + as migrações + o arquivo (instruções no topo dele).

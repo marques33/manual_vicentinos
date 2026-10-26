@@ -49,6 +49,7 @@ const DESTINOS = new Set([
   'prontuario-dashboard.html',
   'financeiro.html',
   'financeiro-relatorio.html',
+  'estoque.html',
   'atas.html',
   'ata.html',
 ]);

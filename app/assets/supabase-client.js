@@ -142,6 +142,21 @@ const MENSAGEM_POR_CONSTRAINT = {
   mural_posts_organizacao_check: 'A organização precisa ter entre 2 e 120 caracteres.',
   mural_posts_link_externo_check:
     'O link precisa começar com https:// e não pode conter espaços.',
+  // Despensa (migrações 028–029). As três primeiras são a mensagem de um
+  // `raise exception` dos gatilhos/funções, não nome de constraint — a busca
+  // por trecho do texto vale igual.
+  estoque_saldo_insuficiente:
+    'O saldo do item ficaria negativo. Confira a quantidade — se o saldo registrado estiver errado, faça a conferência física do item.',
+  estoque_item_removido:
+    'Este item foi removido da despensa e não aceita mais movimentos.',
+  estoque_contagem_invalida:
+    'A quantidade contada precisa ser zero ou mais.',
+  estoque_movimentos_sinal_check:
+    'A quantidade precisa ser maior que zero.',
+  estoque_movimentos_familia_check:
+    'Só a saída "entregue a família" pode indicar uma família.',
+  estoque_itens_nome_check:
+    'O nome do item precisa ter entre 2 e 120 caracteres.',
 };
 
 const MENSAGEM_POR_CODIGO = {
