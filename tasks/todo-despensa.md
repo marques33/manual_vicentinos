@@ -90,3 +90,10 @@ conferência física.
    Advisor: `auth_leaked_password_protection`). Anterior a esta tarefa; é
    configuração do painel (Authentication → Policies/Passwords), não código.
    Recomendado ligar — **apenas registrado e reportado**, não alterado.
+   → **26/10, tentativa a pedido do usuário**: `PATCH /v1/projects/{ref}/config/auth`
+   com `password_hibp_enabled: true` foi recusado pela API — "available on Pro
+   Plans and up". O projeto está no plano Free; nada mudou (`false`). Ligar
+   exige assinar o Pro (decisão de custo do usuário). No Free, o que dá para
+   endurecer: `password_min_length` está em **6** no servidor, enquanto a tela
+   e a function `gerenciar-usuarios` exigem 8 — alinhar para 8 fecha a brecha
+   de quem troca senha chamando a API direto.
