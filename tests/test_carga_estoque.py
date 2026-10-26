@@ -102,9 +102,13 @@ def test_origem_ref_unica(carga):
 
 @precisa_planilha
 def test_migration_versionada_esta_em_dia(carga):
-    """A 030 do repositório é exatamente o que o script gera hoje."""
+    """A 030 do repositório é exatamente o que o script gera hoje.
+
+    Compara sem o fim de linha: com core.autocrlf, o checkout no Windows grava
+    CRLF, e o arquivo continua sendo o mesmo SQL.
+    """
     esperado = g.gerar_sql(carga, PLANILHA.name)
-    assert g.MIGRATION.read_bytes().decode("utf-8") == esperado
+    assert g.MIGRATION.read_bytes().decode("utf-8").replace("\r\n", "\n") == esperado
 
 
 def test_sql_escapa_aspas():
